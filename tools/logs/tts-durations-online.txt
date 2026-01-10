@@ -1,0 +1,45 @@
+
+
+path     : C:\Users\tmier\source\repos\SzkoleniaAI\training\shared\audio-online\ai-fundamentals.mp3
+duration :   Duration: 00:02:07.61, start: 0.022042, bitrate: 64 kb/s
+bitrate  :   Duration: 00:02:07.61, start: 0.022042, bitrate: 64 kb/s
+
+path     : C:\Users\tmier\source\repos\SzkoleniaAI\training\shared\audio-online\builder-tools.mp3
+duration :   Duration: 00:01:26.95, start: 0.022042, bitrate: 64 kb/s
+bitrate  :   Duration: 00:01:26.95, start: 0.022042, bitrate: 64 kb/s
+
+path     : C:\Users\tmier\source\repos\SzkoleniaAI\training\shared\audio-online\cursor-chatgpt-perplexity.mp3
+duration :   Duration: 00:01:37.80, start: 0.022042, bitrate: 64 kb/s
+bitrate  :   Duration: 00:01:37.80, start: 0.022042, bitrate: 64 kb/s
+
+path     : C:\Users\tmier\source\repos\SzkoleniaAI\training\shared\audio-online\governance-safety.mp3
+duration :   Duration: 00:01:50.11, start: 0.022042, bitrate: 64 kb/s
+bitrate  :   Duration: 00:01:50.11, start: 0.022042, bitrate: 64 kb/s
+
+path     : C:\Users\tmier\source\repos\SzkoleniaAI\training\shared\audio-online\pega-workflow-ai.mp3
+duration :   Duration: 00:01:33.74, start: 0.022042, bitrate: 64 kb/s
+bitrate  :   Duration: 00:01:33.74, start: 0.022042, bitrate: 64 kb/s
+
+path     : C:\Users\tmier\source\repos\SzkoleniaAI\training\shared\audio-online\productivity-recipes.mp3
+duration :   Duration: 00:01:45.74, start: 0.022042, bitrate: 64 kb/s
+bitrate  :   Duration: 00:01:45.74, start: 0.022042, bitrate: 64 kb/s
+
+path     : C:\Users\tmier\source\repos\SzkoleniaAI\training\shared\audio-online\prompting-power.mp3
+duration :   Duration: 00:01:44.66, start: 0.022042, bitrate: 64 kb/s
+bitrate  :   Duration: 00:01:44.66, start: 0.022042, bitrate: 64 kb/s
+
+path     : C:\Users\tmier\source\repos\SzkoleniaAI\training\pega-poland\audio-online\pega-builder-demos.mp3
+duration :   Duration: 00:01:21.86, start: 0.022042, bitrate: 64 kb/s
+bitrate  :   Duration: 00:01:21.86, start: 0.022042, bitrate: 64 kb/s
+
+path     : C:\Users\tmier\source\repos\SzkoleniaAI\training\pega-poland\audio-online\pega-productivity.mp3
+duration :   Duration: 00:01:34.54, start: 0.022042, bitrate: 64 kb/s
+bitrate  :   Duration: 00:01:34.54, start: 0.022042, bitrate: 64 kb/s
+
+path     : C:\Users\tmier\source\repos\SzkoleniaAI\training\pega-poland\audio-online\pega-workflow-ai.mp3
+duration :   Duration: 00:01:24.89, start: 0.022042, bitrate: 64 kb/s
+bitrate  :   Duration: 00:01:24.89, start: 0.022042, bitrate: 64 kb/s
+
+
+
+
