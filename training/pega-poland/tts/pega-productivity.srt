@@ -1,0 +1,23 @@
+1
+00:00:00,000 --> 00:00:10,000
+Welcome to Productivity Recipes for Pega Poland. Fast wins for BAs, consultants, sales engineers, and system architects.
+
+2
+00:00:10,000 --> 00:00:20,000
+BAs and consultants: draft stage descriptions, user stories, ACs, and risk logs. Polish labels only for user-facing text; specs in English.
+
+3
+00:00:20,000 --> 00:00:30,000
+Sales engineers: build persona scripts, demo storylines with cases, decisioning, and GenAI summaries, plus concise follow-up emails.
+
+4
+00:00:30,000 --> 00:00:40,000
+System architects: explain rules, propose safer refactors, and add focused tests. Keep diffs small and reviewed.
+
+5
+00:00:40,000 --> 00:00:52,000
+Tool pairing: Cursor for rules and tests, ChatGPT for drafts, Perplexity for cited facts. Checklist: define ACs, run prompt, review, and log.
+
+6
+00:00:52,000 --> 00:01:10,000
+Q and A. One: How do we keep bilingual outputs consistent? Specs in English; Polish for user text only. Two: How to avoid over-sharing in demos? Use fictional datasets and remove PII. Three: Where to store good prompts? In the shared prompt cookbook, tagged by role and use case.

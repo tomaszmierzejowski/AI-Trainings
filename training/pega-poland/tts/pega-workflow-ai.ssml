@@ -1,0 +1,7 @@
+<speak>
+  <p>Welcome to Pega Workflow AI for the Krakow hub. We focus on intake, triage, next best action, fulfillment, and feedback.</p>
+  <p>At intake, an LLM classifies and extracts fields from email or form using fictional Polish and English text. At triage, a prediction scores urgency. Decisioning selects the next best action with constraints. Action drafts the response or note. Feedback logs outcomes for improvement.</p>
+  <p>Use App Studio templates first, then add Prediction Studio scores and Decision strategies. Keep LLM outputs bounded: JSON for routing and concise summaries.</p>
+  <p>Governance: access groups, masked data pages, audit logs, and approved endpoints. No real client data.</p>
+  <p>Q and A. One: Can the LLM decide routing? It can propose, but rules or decision tables finalize. Two: How do we keep it bilingual? Specs in English; user-facing text can include Polish variants. Three: What logs do we keep? Prompts, responses, model version, user, and decision without PII.</p>
+</speak>

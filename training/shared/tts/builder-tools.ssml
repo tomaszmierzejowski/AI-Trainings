@@ -1,0 +1,8 @@
+<speak>
+  <p>Welcome to Builder Tools: MagicUI and Lovable. Use them to draft UI mocks quickly, then harden in Pega.</p>
+  <p>Provide clear inputs: fields, types, validation rules, layout hints, and fictional sample values. Keep prompts concise and include helper text.</p>
+  <p>Flow: generate the UI mock, export, review for accessibility and security, then map to Pega views or sections in App Studio.</p>
+  <p>Safety: no real data, check accessibility, align to design system, validate masks and error states. Treat generated code as a reference, not production.</p>
+  <p>Mapping: document what to rebuild in Pega, keep reusable prompts for intake, review, and approvals, and log prompts and outputs.</p>
+  <p>Q and A. One: Can we ship the generated UI directly? No, rebuild or verify in Pega under governance. Two: How detailed should the prompt be? Include fields, types, validation, layout hints, and fictional data—concise. Three: What about accessibility? Check labels, focus order, contrast, and error messaging before mapping.</p>
+</speak>

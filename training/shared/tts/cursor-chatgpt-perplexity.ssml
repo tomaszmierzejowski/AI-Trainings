@@ -1,0 +1,10 @@
+<speak>
+  <p>Welcome to the Cursor, ChatGPT, and Perplexity power stack. Use each tool for its strength.</p>
+  <p>Perplexity is for public, cited research. Use it to ground prompts with sources.</p>
+  <p>ChatGPT is for drafting: emails, meeting notes, rationales, and prompt experiments. Keep instructions clear and outputs structured.</p>
+  <p>Cursor is for implementation: reading rules, proposing edits, and generating focused tests. Keep diffs small and review every change.</p>
+  <p>Safety setup: fictional data only, approved endpoints, small batches, and prompt logging. Respect VPN or SSO requirements.</p>
+  <p>Pega tie-ins include explaining rules, suggesting stage or routing changes, drafting persona scripts, and creating test data.</p>
+  <p>Next steps: research with Perplexity, draft with ChatGPT, implement and review with Cursor, and log prompts and results.</p>
+  <p>Q and A. One: When should I avoid Perplexity? When data is confidential; use internal sources only. Two: How do I keep Cursor changes safe? Make small diffs, review, and avoid secrets. Three: What if ChatGPT is verbose? Add word limits and structured formats, and request a short rationale plus final answer.</p>
+</speak>

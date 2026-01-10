@@ -1,0 +1,26 @@
+## Governance Checklist (Pega Poland)
+
+- Scope & Data
+  - [ ] Fictional/scrubbed data only; no client PII/secrets.
+  - [ ] Approved LLM endpoints list confirmed (client + Pega policy).
+  - [ ] Access groups set; data pages masked; least privilege applied.
+- Design & Risk
+  - [ ] Use case risk level defined; HITL steps marked (routing/NBA changes).
+  - [ ] Outputs bounded (JSON/table) for routing/eligibility; no free-text decisions.
+  - [ ] Abuse cases/prompt-injection tests prepared (URLs/HTML stripped).
+- Testing
+  - [ ] Golden set (10–20 cases) with expected outputs per domain.
+  - [ ] Regression prompts and abuse cases logged; failures tracked.
+  - [ ] Offline eval complete; inline monitors planned.
+- Logging & Audit
+  - [ ] Log prompt, response, model/version, user, decision, case id (if allowed).
+  - [ ] Retention/access per client policy; no PII in logs.
+  - [ ] Change tickets + rollback path recorded.
+- Deployment
+  - [ ] Approvals: risk, security, data, legal (if required), delivery lead.
+  - [ ] RACI documented; roles for build/review/ops assigned.
+  - [ ] Fallbacks: human handoff, deterministic rules, outage mode.
+- Operations
+  - [ ] Monitoring for drift/toxicity/policy hits live.
+  - [ ] Incident/rollback playbook ready; contacts listed.
+  - [ ] Review cadence set (e.g., quarterly) with owners.

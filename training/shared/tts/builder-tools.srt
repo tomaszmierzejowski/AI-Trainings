@@ -1,0 +1,23 @@
+1
+00:00:00,000 --> 00:00:08,000
+Welcome to Builder Tools: MagicUI and Lovable. Use them to draft UI mocks quickly, then harden in Pega.
+
+2
+00:00:08,000 --> 00:00:18,000
+Provide clear inputs: fields, types, validation rules, layout hints, and fictional sample values. Keep prompts concise and include helper text.
+
+3
+00:00:18,000 --> 00:00:28,000
+Flow: generate the UI mock, export, review for accessibility and security, then map to Pega views or sections in App Studio.
+
+4
+00:00:28,000 --> 00:00:38,000
+Safety: no real data, check accessibility, align to design system, validate masks and error states. Treat generated code as a reference, not production.
+
+5
+00:00:38,000 --> 00:00:50,000
+Mapping: document what to rebuild in Pega, keep reusable prompts for intake, review, and approvals, and log prompts and outputs.
+
+6
+00:00:50,000 --> 00:01:10,000
+Q and A. One: Can we ship the generated UI directly? No, rebuild or verify in Pega under governance. Two: How detailed should the prompt be? Include fields, types, validation, layout hints, and fictional data—concise. Three: What about accessibility? Check labels, focus order, contrast, and error messaging before mapping.

@@ -1,0 +1,39 @@
+1
+00:00:00,000 --> 00:00:12,000
+Welcome to AI Fundamentals for enterprise workflows. We focus on how AI and low-code combine for faster, governed change.
+
+2
+00:00:12,000 --> 00:00:22,000
+Large language models excel at understanding text, but they are not databases. Keep truth in systems of record and fetch facts with retrieval.
+
+3
+00:00:22,000 --> 00:00:32,000
+Blend LLMs for understanding with predictive models for scoring, and decisioning to arbitrate actions.
+
+4
+00:00:32,000 --> 00:00:42,000
+Prefer grounding over fine-tuning. Fine-tune only for narrow, stable, high-volume tasks with approvals.
+
+5
+00:00:42,000 --> 00:00:52,000
+Common patterns: classify, extract, summarize, route, recommend, and draft. Use structured outputs like JSON or tables.
+
+6
+00:00:52,000 --> 00:01:02,000
+Risks include hallucination, prompt injection, leakage, and bias. Mitigate with redaction, allow and deny lists, filters, and human review.
+
+7
+00:01:02,000 --> 00:01:14,000
+Evaluate both quality and business impact: precision, recall, factuality, plus cycle time and SLA adherence. Maintain golden test sets and inline monitors.
+
+8
+00:01:14,000 --> 00:01:24,000
+In Pega, Process AI provides signals, Decisioning selects the next best action, and GenAI connectors draft or summarize with bounded outputs.
+
+9
+00:01:24,000 --> 00:01:34,000
+Next steps: pick one friction point, design a bounded LLM task with structured output, and log everything.
+
+10
+00:01:34,000 --> 00:01:52,000
+Q and A. One: When do we fine-tune instead of retrieve? Only when the task is narrow, data is stable, volume is high, and approvals exist. Two: How do we prevent leakage? Redact PII, constrain prompts, use approved endpoints, and log all interactions. Three: How do we measure success? Track accuracy and business KPIs, test offline, and monitor inline.

@@ -1,0 +1,27 @@
+1
+00:00:00,000 --> 00:00:08,000
+Welcome to Productivity Recipes by Role. We deliver quick wins for BAs, consultants, sales engineers, and system architects.
+
+2
+00:00:08,000 --> 00:00:18,000
+BAs and consultants: generate stage descriptions, user stories, ACs, risk logs, and playbacks. Keep specs English; Polish only for user text.
+
+3
+00:00:18,000 --> 00:00:28,000
+Sales engineers: create persona scripts, demo storylines, objection handling, and concise follow-up emails with fictional data.
+
+4
+00:00:28,000 --> 00:00:38,000
+System architects: explain rules, propose safer refactors, and add focused edge-case tests. Keep changes small and reviewed.
+
+5
+00:00:38,000 --> 00:00:48,000
+Tool pairing: Cursor for rules and tests, ChatGPT for drafts, Perplexity for cited facts. Checklist: ACs, prompt, review, log.
+
+6
+00:00:48,000 --> 00:00:58,000
+Next steps: pick one recurring task per role, apply the recipe, and store the prompt version that works best.
+
+7
+00:00:58,000 --> 00:01:18,000
+Q and A. One: How do we keep outputs consistent? Use a shared prompt cookbook. Two: How much detail in a prompt? Provide role, context, constraints, and output format. Three: Can prompts be reused across clients? Yes; swap domain terms and fictional data and align to policies.

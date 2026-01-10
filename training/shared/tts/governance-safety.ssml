@@ -1,0 +1,10 @@
+<speak>
+  <p>Welcome to Governance and Safety. Safety is designed in, not bolted on.</p>
+  <p>Principles: least privilege, data minimization, and auditability. Use only approved endpoints and never send real customer data.</p>
+  <p>Risks include hallucination, prompt injection, leakage, bias, and overreliance. Mitigate with redaction, allow and deny lists, filters, and human review for high-risk steps.</p>
+  <p>Process: define approvals and RACI, record change tickets, keep golden and abuse test sets, and have a rollback path.</p>
+  <p>Logging: capture prompt, response, model version, user, and decision taken. Enforce retention and access controls. No PII in logs.</p>
+  <p>Pega tie-ins: access groups, masked data pages, decisioning governance, guardrail warnings, and centralized connectors with audit trails.</p>
+  <p>Next steps: align on approved endpoints, run golden and abuse tests, enable logging, and document HITL checkpoints.</p>
+  <p>Q and A. One: What if someone pastes sensitive data? Redact, block outbound, and train users. Two: How do we audit AI decisions? Log prompts, responses, model version, and decisions tied to cases. Three: How do we test against prompt injection? Include abuse cases, strip untrusted HTML and URLs, constrain inputs, and validate outputs.</p>
+</speak>

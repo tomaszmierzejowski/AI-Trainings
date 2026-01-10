@@ -1,0 +1,31 @@
+1
+00:00:00,000 --> 00:00:08,000
+Welcome to Prompting Power Skills. We make prompts repeatable and safe.
+
+2
+00:00:08,000 --> 00:00:18,000
+Use the formula: instruction, context, output format, constraints, and examples when structure matters. Keep it concise.
+
+3
+00:00:18,000 --> 00:00:28,000
+Effective patterns include short chain of thought then a clean answer, critique and revise, delimiting inputs, and few-shot examples.
+
+4
+00:00:28,000 --> 00:00:38,000
+Build prompt ladders: start coarse, test on five to ten cases, note failures, and tighten constraints. Log versions in your prompt cookbook.
+
+5
+00:00:38,000 --> 00:00:48,000
+Safety first: no real customer data, use placeholders, redact PII, stick to approved endpoints, and log prompts and responses.
+
+6
+00:00:48,000 --> 00:00:58,000
+In Pega contexts, use prompts for intake classification, routing suggestions, stage summaries, decision table drafts, and meeting notes.
+
+7
+00:00:58,000 --> 00:01:08,000
+Next steps: pick a use case, draft a structured prompt, test with a small set, and store the winning version in the cookbook.
+
+8
+00:01:08,000 --> 00:01:24,000
+Q and A. One: How many examples should I include? Two to three fictional examples when you need deterministic formatting. Two: How do I reduce hallucinations? Provide facts, constrain output, and validate. Three: Should I always use chain of thought? Use brief reasoning for complex tasks, then request a concise final answer.

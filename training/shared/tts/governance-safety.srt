@@ -1,0 +1,31 @@
+1
+00:00:00,000 --> 00:00:08,000
+Welcome to Governance and Safety. Safety is designed in, not bolted on.
+
+2
+00:00:08,000 --> 00:00:18,000
+Principles: least privilege, data minimization, and auditability. Use only approved endpoints and never send real customer data.
+
+3
+00:00:18,000 --> 00:00:28,000
+Risks include hallucination, prompt injection, leakage, bias, and overreliance. Mitigate with redaction, allow and deny lists, filters, and human review for high-risk steps.
+
+4
+00:00:28,000 --> 00:00:38,000
+Process: define approvals and RACI, record change tickets, keep golden and abuse test sets, and have a rollback path.
+
+5
+00:00:38,000 --> 00:00:48,000
+Logging: capture prompt, response, model version, user, and decision taken. Enforce retention and access controls. No PII in logs.
+
+6
+00:00:48,000 --> 00:00:58,000
+Pega tie-ins: access groups, masked data pages, decisioning governance, guardrail warnings, and centralized connectors with audit trails.
+
+7
+00:00:58,000 --> 00:01:10,000
+Next steps: align on approved endpoints, run golden and abuse tests, enable logging, and document HITL checkpoints.
+
+8
+00:01:10,000 --> 00:01:28,000
+Q and A. One: What if someone pastes sensitive data? Redact, block outbound, and train users. Two: How do we audit AI decisions? Log prompts, responses, model version, and decisions tied to cases. Three: How do we test against prompt injection? Include abuse cases, strip untrusted HTML and URLs, constrain inputs, and validate outputs.

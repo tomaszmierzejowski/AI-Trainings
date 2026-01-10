@@ -1,0 +1,8 @@
+<speak>
+  <p>Welcome to Productivity Recipes for Pega Poland. We focus on fast wins for BAs, consultants, sales engineers, and system architects.</p>
+  <p>BAs and consultants: draft stage descriptions, user stories, acceptance criteria, and risk logs. Use Polish labels only for user-facing text; keep specs in English.</p>
+  <p>Sales engineers: build persona scripts, demo storylines that show cases, decisioning, and GenAI summaries, plus concise follow-up emails.</p>
+  <p>System architects: explain rules, propose safer refactors, and add focused tests. Keep diffs small and reviewed.</p>
+  <p>Tool pairing: Cursor for rules and tests, ChatGPT for drafts, Perplexity for cited facts. Checklist: define acceptance criteria, run prompt, review, and log in the cookbook.</p>
+  <p>Q and A. One: How do we keep bilingual outputs consistent? Specs in English; add Polish for user text only and note language in the prompt. Two: How to avoid over-sharing in demos? Use fictional datasets, remove PII, and keep examples minimal. Three: Where to store good prompts? In the shared prompt cookbook, tagged by role and use case.</p>
+</speak>

@@ -1,0 +1,9 @@
+<speak>
+  <p>Welcome to Productivity Recipes by Role. We deliver quick wins for business analysts, consultants, sales engineers, and system architects.</p>
+  <p>For BAs and consultants, generate stage descriptions, user stories, acceptance criteria, risk logs, and workshop playbacks. Keep specs in English and add Polish only for user-facing text.</p>
+  <p>For sales engineers, create persona scripts, demo storylines, objection handling notes, and concise follow-up emails with fictional data.</p>
+  <p>For system architects, explain rules, propose safer refactors, and add focused edge-case tests. Keep changes small and review diffs.</p>
+  <p>Tool pairing: Cursor for rules and tests, ChatGPT for drafts, Perplexity for cited facts. Checklist: set acceptance criteria, run the prompt, review critically, and log good prompts in the cookbook.</p>
+  <p>Next steps: pick one recurring task per role, apply the recipe, and store the prompt version that works best.</p>
+  <p>Q and A. One: How do we keep outputs consistent? Use a shared prompt cookbook with formats and examples. Two: How much detail in a prompt? Provide role, context, constraints, and output format without long narratives. Three: Can prompts be reused across clients? Yes; swap domain terms and fictional data and align to each client’s policies.</p>
+</speak>

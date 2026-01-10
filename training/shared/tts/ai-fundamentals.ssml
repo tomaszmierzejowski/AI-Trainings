@@ -1,0 +1,12 @@
+<speak>
+  <p>Welcome to AI Fundamentals for enterprise workflows. We focus on how AI and low-code combine for faster, governed change.</p>
+  <p>Large language models excel at understanding text, but they are not databases. Keep truth in systems of record and fetch facts with retrieval.</p>
+  <p>Blend LLMs for understanding with predictive models for scoring, and decisioning to arbitrate actions.</p>
+  <p>Prefer grounding over fine-tuning. Fine-tune only for narrow, stable, high-volume tasks with approvals.</p>
+  <p>Common patterns: classify, extract, summarize, route, recommend, and draft. Use structured outputs like JSON or tables.</p>
+  <p>Risks include hallucination, prompt injection, leakage, and bias. Mitigate with redaction, allow and deny lists, filters, and human review.</p>
+  <p>Evaluate both quality and business impact: precision, recall, factuality, plus cycle time and SLA adherence. Maintain golden test sets and inline monitors.</p>
+  <p>In Pega, Process AI provides signals, Decisioning selects the next best action, and GenAI connectors draft or summarize with bounded outputs.</p>
+  <p>Next steps: pick one friction point, design a bounded LLM task with structured output, and log everything.</p>
+  <p>Q and A. One: When do we fine-tune instead of retrieve? Only when the task is narrow, data is stable, volume is high, and approvals exist. Two: How do we prevent leakage? Redact PII, constrain prompts, use approved endpoints, and log all interactions. Three: How do we measure success? Track accuracy and business KPIs, test offline, and monitor inline.</p>
+</speak>

@@ -1,0 +1,8 @@
+<speak>
+  <p>Welcome to Builder Demos for Pega Poland using MagicUI and Lovable. Draft intake and review UIs fast, then harden in Pega.</p>
+  <p>Keep prompts concise: fields, types, validation, layout hints, and fictional sample values. Add Polish labels only for user-facing text.</p>
+  <p>Flow: generate the UI mock, export, review for accessibility and security, then map to Pega views or sections in App Studio.</p>
+  <p>Safety: no real data, align to design system, check masks and error states. Treat generated code as reference only.</p>
+  <p>Handoff: document mapping notes, rebuild or verify in Pega, and log prompts and outputs for reuse.</p>
+  <p>Q and A. One: Can we reuse generated code? Treat as reference; rebuild or verify in Pega. Two: How much Polish localization? Polish where user-facing; keep specs and logic in English. Three: What checks before showing a client? Verify no real data, accessibility basics, branding alignment, and log prompts.</p>
+</speak>

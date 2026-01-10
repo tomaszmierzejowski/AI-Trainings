@@ -1,0 +1,26 @@
+## Governance Checklist (Shared)
+
+- Scope & Data
+  - [ ] Use fictional/scrubbed data only; no PII or secrets.
+  - [ ] Approved endpoints only (LLM, research); note version/date.
+  - [ ] Access control set (who can run prompts, who can deploy).
+- Design & Risk
+  - [ ] Define use case, risk level, and human-in-loop points.
+  - [ ] Bounded outputs (JSON/table) for routing/eligibility.
+  - [ ] Abuse cases/prompt-injection tests prepared.
+- Testing
+  - [ ] Golden set (10–20 cases) with expected outputs.
+  - [ ] Regression prompts captured; track failures.
+  - [ ] Offline eval run; inline monitoring planned.
+- Logging & Audit
+  - [ ] Log prompt, response, model/version, user, decision taken.
+  - [ ] Retention and access to logs defined; no PII stored.
+  - [ ] Change tickets recorded; rollback path defined.
+- Deployment
+  - [ ] Approvals captured (risk, security, data, legal if needed).
+  - [ ] RACI documented (who approves, builds, reviews, operates).
+  - [ ] Fallbacks defined (human handoff, deterministic rules).
+- Operations
+  - [ ] Monitoring for drift/toxicity/policy hits in place.
+  - [ ] Playbooks for incident/rollback ready.
+  - [ ] Periodic review cadence set (e.g., quarterly) with owners.

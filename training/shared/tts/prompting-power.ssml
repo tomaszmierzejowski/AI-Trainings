@@ -1,0 +1,10 @@
+<speak>
+  <p>Welcome to Prompting Power Skills. We make prompts repeatable and safe.</p>
+  <p>Use the formula: instruction, context, output format, constraints, and examples when structure matters. Keep it concise.</p>
+  <p>Effective patterns include short chain of thought followed by a clean answer, critique and revise loops, delimiting inputs, and few-shot examples for structure.</p>
+  <p>Build prompt ladders: start coarse, test on five to ten cases, note failures, and tighten constraints. Log versions in your prompt cookbook.</p>
+  <p>Safety first: no real customer data, use placeholders, redact PII, stick to approved endpoints, and log prompts and responses. Cap rationales to reduce leakage.</p>
+  <p>In Pega contexts, use prompts for intake classification, routing suggestions, stage summaries, decision table drafts, and meeting notes to actions and owners.</p>
+  <p>Next steps: pick a use case, draft a structured prompt, test with a small set, and store the winning version in the cookbook.</p>
+  <p>Q and A. One: How many examples should I include? Two to three fictional examples only when you need deterministic formatting. Two: How do I reduce hallucinations? Provide grounding facts, constrain the output, and validate. Three: Should I always use chain of thought? Use brief reasoning for complex tasks, then request a concise final answer.</p>
+</speak>

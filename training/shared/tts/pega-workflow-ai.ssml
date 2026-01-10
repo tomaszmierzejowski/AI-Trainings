@@ -1,0 +1,8 @@
+<speak>
+  <p>Welcome to Pega Workflow AI, the reusable pattern: intake, triage, decision, action, and feedback.</p>
+  <p>At intake, an LLM classifies and extracts key fields. At triage, a prediction scores urgency or value. At decision, real-time decisioning selects the next best action with constraints. At action, a GenAI connector drafts the email or note. Feedback logs outcomes to improve prompts and models.</p>
+  <p>Use Process AI for predictions, Decisioning for arbitration, and GenAI connectors for bounded language tasks.</p>
+  <p>Keep outputs structured—JSON for routing and concise summaries for people. Start fast with App Studio templates, then attach Prediction or Decision strategies.</p>
+  <p>Next steps: pick one friction point, define structured outputs, connect to fictional datasets, and log prompts and results.</p>
+  <p>Q and A. One: How do we pick where to start? Target the highest-friction KPI step. Two: Can LLMs decide routing? They can propose, but rules or decision tables should finalize. Three: How do we improve over time? Capture feedback, grow golden sets, refine prompts, and retrain predictions as data shifts.</p>
+</speak>

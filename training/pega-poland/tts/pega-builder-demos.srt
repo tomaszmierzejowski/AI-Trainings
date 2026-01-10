@@ -1,0 +1,23 @@
+1
+00:00:00,000 --> 00:00:08,000
+Welcome to Builder Demos for Pega Poland using MagicUI and Lovable. Draft intake and review UIs fast, then harden in Pega.
+
+2
+00:00:08,000 --> 00:00:18,000
+Keep prompts concise: fields, types, validation, layout hints, and fictional sample values. Add Polish labels only for user-facing text.
+
+3
+00:00:18,000 --> 00:00:28,000
+Flow: generate the UI mock, export, review for accessibility and security, then map to Pega views or sections in App Studio.
+
+4
+00:00:28,000 --> 00:00:38,000
+Safety: no real data, align to design system, check masks and error states. Treat generated code as reference only.
+
+5
+00:00:38,000 --> 00:00:54,000
+Handoff: document mapping notes, rebuild or verify in Pega, and log prompts and outputs for reuse.
+
+6
+00:00:54,000 --> 00:01:12,000
+Q and A. One: Can we reuse generated code? Treat as reference; rebuild or verify in Pega. Two: How much Polish localization? Polish where user-facing; keep specs and logic in English. Three: What checks before showing a client? Verify no real data, accessibility basics, branding alignment, and log prompts.
