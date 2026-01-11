@@ -7,10 +7,13 @@ const ffmpegPath = require("ffmpeg-static");
 const googleTTS = require("google-tts-api");
 
 const logPath = path.join("tools", "logs", "tts-online.log");
-const chunkLimit = 200; // google-tts-api limit is typically small per req
+const chunkLimit = 200;
 
 function log(line) {
   const stamp = new Date().toISOString();
+  // Ensure log directory exists
+  const logDir = path.dirname(logPath);
+  if (!fs.existsSync(logDir)) fs.mkdirSync(logDir, { recursive: true });
   fs.appendFileSync(logPath, `${stamp} ${line}\r\n`, "utf8");
 }
 
@@ -21,7 +24,6 @@ function readSSMLFiles(dir) {
 function ssmlToText(ssml) {
   return ssml
     .replace(/<break[^>]*time=['"](\d+)(m?s)['"][^>]*>/gi, (m, val, unit) => {
-      // rough pause mapping: insert punctuation to force pause
       return unit === 's' ? '. '.repeat(Math.ceil(val)) : '. ';
     })
     .replace(/<[^>]+>/g, " ")
@@ -55,15 +57,14 @@ function concatMp3(files, output) {
   });
 }
 
-async function synthesizeChunk(text, outPath, attempt=1) {
+async function synthesizeChunk(text, outPath, lang, attempt=1) {
   const backoffs = [1000, 2000, 4000];
   try {
     const url = googleTTS.getAudioUrl(text, {
-      lang: 'en',
+      lang: lang,
       slow: false,
       host: 'https://translate.google.com',
     });
-    // fetch base64/buffer
     const res = await fetch(url);
     if (!res.ok) throw new Error(`Fetch failed ${res.status}`);
     const buf = await res.arrayBuffer();
@@ -73,7 +74,7 @@ async function synthesizeChunk(text, outPath, attempt=1) {
     if (attempt <= backoffs.length) {
       log(`chunk retry attempt=${attempt} err=${err.message}`);
       await new Promise(r => setTimeout(r, backoffs[attempt-1]));
-      return synthesizeChunk(text, outPath, attempt+1);
+      return synthesizeChunk(text, outPath, lang, attempt+1);
     }
     log(`chunk fail final err=${err.message}`);
     return false;
@@ -87,7 +88,13 @@ async function processFile(ssmlDir, audioDir, file) {
   const text = ssmlToText(content);
   const chunks = chunkText(text);
   
-  log(`start alt file=${ssmlPath} chunks=${chunks.length} service=google-tts-api`);
+  // Detect language from filename or content
+  let lang = 'en';
+  if (file.toLowerCase().includes(".pl.") || content.includes('xml:lang="pl-PL"')) {
+    lang = 'pl';
+  }
+
+  log(`start alt file=${ssmlPath} lang=${lang} chunks=${chunks.length} service=google-tts-api`);
   const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), "tts-alt-"));
   const chunkFiles = [];
   let allOk = true;
@@ -95,7 +102,7 @@ async function processFile(ssmlDir, audioDir, file) {
   for (let i = 0; i < chunks.length; i++) {
     if (!chunks[i].length) continue;
     const chunkOut = path.join(tempDir, `chunk-${i}.mp3`);
-    const ok = await synthesizeChunk(chunks[i], chunkOut);
+    const ok = await synthesizeChunk(chunks[i], chunkOut, lang);
     if (!ok) { allOk = false; break; }
     chunkFiles.push(chunkOut);
   }

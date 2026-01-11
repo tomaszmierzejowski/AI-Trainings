@@ -1,64 +1,62 @@
 ---
 marp: true
-theme: default
+theme: gaia
+class: lead
 paginate: true
+backgroundColor: #fff
 ---
 
-# Pega Workflow AI (Shared Pattern)
-- Intake → triage → decision → action → feedback
-- Fictional data only
-Notes: Pattern reusable across domains.
+# Pega Workflow Acceleration
+## Outcomes & ROI
 
 ---
-# Agenda
-- Workflow map
-- AI touchpoints
-- Process AI & Decisioning
-- Low-code accelerators
-- GenAI connectors
-- Example flow
-Notes: 45–60 minutes.
+
+# The Friction Points
+
+1. **Intake**: Slow reading/classifying.
+2. **Triage**: Expert bottlenecks.
+3. **Action**: Repetitive typing.
+
+> "AI solves the Blank Page and Data Entry problems."
 
 ---
-# Workflow Map (Mapa)
-- Intake, triage, decision, action, feedback
-- Find friction tied to KPI
-Notes: Anchor every AI step to KPI.
+
+# Pattern 1: Intelligent Intake
+
+- **Input**: Unstructured email.
+- **AI Task**: Extract Entities -> JSON.
+- **Result**: Case created instantly.
 
 ---
-# AI Touchpoints (Punkty)
-- Classify, extract, summarize, route, recommend, draft
-- Structured outputs (JSON/table)
-Notes: Keep routing/eligibility deterministic where possible.
+
+# Pattern 2: Confidence-Based Triage
+
+- **AI Task**: Predict Routing.
+- **Logic**: 
+  - If Confidence > 90% -> Auto-route.
+  - Else -> Human Review.
+- **Result**: Experts focus on hard cases.
 
 ---
-# Process AI & Decisioning
-- Process AI: signals/predictions
-- Decisioning: NBA arbitration with constraints
-Notes: Prediction answers "how valuable/risky"; decisioning answers "what to do".
+
+# Pattern 3: Generative Action
+
+- **AI Task**: Draft Response / Summary.
+- **Context**: Case History + Policy.
+- **Result**: AHT reduced by 30%.
 
 ---
-# Low-Code Accelerators
-- App Studio templates, data objects, personas
-- Start fast; wire AI later
-Notes: Template first, intelligence second.
+
+# The ROI Model
+
+- **Formula**: Time Saved x Hourly Rate x Volume.
+- **Example**: 5 min x $50 x 10k cases.
+- **Result**: Massive savings.
 
 ---
-# GenAI Connectors
-- Draft emails; summarize interactions
-- Suggest rules; classification/extraction
-Notes: Bound outputs; avoid free text for routing.
 
----
-# Example Flow (Przykład)
-- Email intake → case type + routing
-- NBA offer → summary note
-- Feedback logged for improvement
-Notes: Show with fictional claim + service example.
+# Governance Overlay
 
----
-# Wrap
-- Start where friction is highest
-- Keep structured outputs + logging
-- Iterate with feedback and golden sets
-Notes: Link to labs and prompt packs.
+- Audit every decision.
+- Version control prompts.
+- **Pega is the Brain; AI is the Muscle.**

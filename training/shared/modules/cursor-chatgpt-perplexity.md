@@ -1,47 +1,58 @@
-## Cursor / ChatGPT / Perplexity Power Use
+## Tool Selection & Business Workflows
 
 ### Slides
-- Slide 1 — Right Tool, Right Task (Polish: Właściwe narzędzie)  
-  - Cursor: code/rule edits, diffs, explanations.  
-  - ChatGPT: drafts, prompts, meeting/email notes.  
-  - Perplexity: cited research, public policy lookup.  
-  - Speaker notes: Position them as a stack—research → draft → implement/review.
+- Slide 1 — The AI Stack (Polish: Stos technologiczny)
+  - **Perplexity**: The Knowledge Engine (Research, Citations).
+  - **ChatGPT**: The Reasoning Engine (Drafting, Logic, Strategy).
+  - **Cursor**: The Build Engine (Code, Config, Refactoring).
+  - Speaker notes: "Stop using the wrong tool. You wouldn't hammer a nail with a screwdriver."
 
-- Slide 2 — Safe Setup (Polish: Bezpieczne środowisko)  
-  - No real customer data; use fictional sets.  
-  - Keep repos clean; review diffs; small batches.  
-  - Respect VPN/SSO/approved LLM endpoints.  
-  - Speaker notes: Remind to log prompts and responses.
+- Slide 2 — Decision Matrix (Polish: Macierz decyzyjna)
+  - Need facts/news? -> Perplexity.
+  - Need text/summary? -> ChatGPT.
+  - Need file edits? -> Cursor.
+  - Need UI mock? -> MagicUI/Lovable (optional).
+  - Speaker notes: "Memorize this matrix. It saves hours of frustration."
 
-- Slide 3 — Cursor Workflows (Polish: Cursor)  
-  - Explain-this-rule; propose refactor; generate tests.  
-  - Inline edits with review; TODO traces.  
-  - Speaker notes: Demo reading a Pega-like rule and adding validation.
+- Slide 3 — Business Use Case: Document Mgmt (Polish: Dokumentacja)
+  - **Problem**: Scattered specs and wikis.
+  - **Tool**: Notion AI or ChatGPT Projects.
+  - **Action**: "Summarize these 5 PDFs into a single feature spec."
+  - **ROI**: 5-10 hours/week saved.
 
-- Slide 4 — ChatGPT Workflows (Polish: ChatGPT)  
-  - Draft emails, decision rationales, meeting notes.  
-  - Test prompts and formatting; add acceptance criteria.  
-  - Speaker notes: Use clear roles and formats; ask for short rationale + final answer.
+- Slide 4 — Business Use Case: Data Extraction (Polish: Ekstrakcja danych)
+  - **Problem**: Manual entry from emails/forms.
+  - **Tool**: ChatGPT (with RTF prompt) or Cursor (scripting).
+  - **Action**: "Extract Client, Policy#, and Claim Amount to JSON."
+  - **ROI**: 90% faster than manual entry.
 
-- Slide 5 — Perplexity Workflows (Polish: Perplexity)  
-  - Retrieve public policy text with citations.  
-  - Summaries of docs; compare options with sources.  
-  - Speaker notes: Emphasize cited outputs; keep scope to public info.
+- Slide 5 — Business Use Case: Coding & Config (Polish: Kod i Konfiguracja)
+  - **Problem**: Legacy rules, missing tests.
+  - **Tool**: Cursor.
+  - **Action**: "Explain this Java step. Write a JUnit test for it."
+  - **ROI**: 2-4x faster development cycle.
 
-- Slide 6 — Pega Tie-ins (Polish: Pega kontekst)  
-  - Rule explanations, stage suggestions, routing drafts, persona scripts.  
-  - Integration stubs and test data generation (fictional).  
-  - Speaker notes: Map tasks to case lifecycle; stress governance.
+- Slide 6 — Pega Alignment (Polish: Kontekst Pega)
+  - Research Pega 8.8 syntax (Perplexity).
+  - Draft User Stories (ChatGPT).
+  - Implement Unit Tests (Cursor).
+  - Speaker notes: "This stack accelerates the entire Pega delivery lifecycle."
 
-### Audiobook Script (6–7 min + Q&A)
-"Use each tool for its strength. Perplexity is your research front-end: pull public, cited guidance you can ground into prompts. ChatGPT is your drafting engine: emails, meeting notes, rationales, and prompt experiments. Cursor is your implementation partner: reading rules, proposing edits, and generating tests—with diffs you can review.  
-Keep it safe: no real customer data, work in small batches, and review diffs. Log prompts and responses for reuse and audit.  
-In practice: start with Perplexity to gather cited public policy on PII handling. Feed that into ChatGPT to draft a client email or a prompt. Then use Cursor to explain an existing rule and propose a safer refactor, generating a small test set. This stack lets you research, draft, and implement quickly while staying governed."  
+### Audiobook Script (7 min + Q&A)
+"Let's talk tools. The biggest productivity killer is using the wrong AI for the job.
+**Perplexity** is your researcher. It browses the live web. Use it to find the latest Pega documentation, compliance laws, or industry news. It cites its sources.
+**ChatGPT** is your strategist. Use it to draft emails, summarize meeting notes, or brainstorm architecture. It is the best at pure reasoning.
+**Cursor** is your builder. It lives in your code editor. It sees your files. Use it to refactor legacy code, write unit tests, or explain complex logic.
+Let's look at real business cases.
+For **Document Management**, stop reading every page. Upload your PDFs to ChatGPT and ask for a synthesis. You just saved 5 hours.
+For **Data Extraction**, paste a messy email into ChatGPT and ask for JSON output. You just replaced manual data entry.
+For **Coding**, open a legacy file in Cursor and hit Command-K. Type 'Explain this and add comments'. You just documented your technical debt in seconds.
+The ROI comes from picking the right engine for the task."
 
 Likely Q&A:
-- Q: When should I not use Perplexity?  
-  A: When data is confidential or not public—keep to approved internal sources only.  
-- Q: How do I keep Cursor changes safe?  
-  A: Small diffs, review every change, avoid committing secrets, and use fictional data in examples/tests.  
-- Q: What if ChatGPT output is verbose?  
-  A: Add format constraints, word limits, and ask for a short rationale plus a clean final answer.  
+- Q: Can I paste code into ChatGPT?
+  A: For small snippets, yes. For whole files or project context, use Cursor—it's safer and context-aware.
+- Q: Is Perplexity better than Google?
+  A: For work, yes. It gives you the answer + citation, not just a list of links to click.
+- Q: What about free tools?
+  A: ChatGPT Free is great for text. Perplexity Free is great for search. Cursor has a free tier. You can start with zero budget.

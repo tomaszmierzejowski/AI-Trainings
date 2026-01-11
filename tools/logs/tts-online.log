@@ -68,3 +68,33 @@
 2026-01-10T22:27:27.445Z success file=training\pega-poland\tts\pega-productivity.ssml output=training\pega-poland\audio-online\pega-productivity.mp3
 2026-01-10T22:27:27.448Z start alt file=training\pega-poland\tts\pega-workflow-ai.ssml chunks=5 service=google-tts-api
 2026-01-10T22:27:31.550Z success file=training\pega-poland\tts\pega-workflow-ai.ssml output=training\pega-poland\audio-online\pega-workflow-ai.mp3
+2026-01-11T18:46:55.653Z start alt file=training\shared\tts\ai-fundamentals.pl.ssml lang=pl chunks=3 service=google-tts-api
+2026-01-11T18:46:58.013Z success file=training\shared\tts\ai-fundamentals.pl.ssml output=training\shared\audio-online\ai-fundamentals.pl.mp3
+2026-01-11T18:46:58.016Z start alt file=training\shared\tts\ai-fundamentals.ssml lang=en chunks=8 service=google-tts-api
+2026-01-11T18:47:04.203Z success file=training\shared\tts\ai-fundamentals.ssml output=training\shared\audio-online\ai-fundamentals.mp3
+2026-01-11T18:47:04.210Z start alt file=training\shared\tts\builder-tools.ssml lang=en chunks=5 service=google-tts-api
+2026-01-11T18:47:08.336Z success file=training\shared\tts\builder-tools.ssml output=training\shared\audio-online\builder-tools.mp3
+2026-01-11T18:47:08.339Z start alt file=training\shared\tts\cursor-chatgpt-perplexity.pl.ssml lang=pl chunks=6 service=google-tts-api
+2026-01-11T18:47:11.664Z success file=training\shared\tts\cursor-chatgpt-perplexity.pl.ssml output=training\shared\audio-online\cursor-chatgpt-perplexity.pl.mp3
+2026-01-11T18:47:11.668Z start alt file=training\shared\tts\cursor-chatgpt-perplexity.ssml lang=en chunks=6 service=google-tts-api
+2026-01-11T18:47:16.795Z success file=training\shared\tts\cursor-chatgpt-perplexity.ssml output=training\shared\audio-online\cursor-chatgpt-perplexity.mp3
+2026-01-11T18:47:16.798Z start alt file=training\shared\tts\governance-safety.pl.ssml lang=pl chunks=3 service=google-tts-api
+2026-01-11T18:47:18.453Z success file=training\shared\tts\governance-safety.pl.ssml output=training\shared\audio-online\governance-safety.pl.mp3
+2026-01-11T18:47:18.456Z start alt file=training\shared\tts\governance-safety.ssml lang=en chunks=7 service=google-tts-api
+2026-01-11T18:47:24.071Z success file=training\shared\tts\governance-safety.ssml output=training\shared\audio-online\governance-safety.mp3
+2026-01-11T18:47:24.075Z start alt file=training\shared\tts\pega-workflow-ai.pl.ssml lang=pl chunks=5 service=google-tts-api
+2026-01-11T18:47:26.636Z success file=training\shared\tts\pega-workflow-ai.pl.ssml output=training\shared\audio-online\pega-workflow-ai.pl.mp3
+2026-01-11T18:47:26.639Z start alt file=training\shared\tts\pega-workflow-ai.ssml lang=en chunks=5 service=google-tts-api
+2026-01-11T18:47:32.146Z success file=training\shared\tts\pega-workflow-ai.ssml output=training\shared\audio-online\pega-workflow-ai.mp3
+2026-01-11T18:47:32.149Z start alt file=training\shared\tts\productivity-recipes.ssml lang=en chunks=7 service=google-tts-api
+2026-01-11T18:47:36.711Z success file=training\shared\tts\productivity-recipes.ssml output=training\shared\audio-online\productivity-recipes.mp3
+2026-01-11T18:47:36.715Z start alt file=training\shared\tts\prompting-power.pl.ssml lang=pl chunks=6 service=google-tts-api
+2026-01-11T18:47:39.801Z success file=training\shared\tts\prompting-power.pl.ssml output=training\shared\audio-online\prompting-power.pl.mp3
+2026-01-11T18:47:39.805Z start alt file=training\shared\tts\prompting-power.ssml lang=en chunks=6 service=google-tts-api
+2026-01-11T18:47:45.216Z success file=training\shared\tts\prompting-power.ssml output=training\shared\audio-online\prompting-power.mp3
+2026-01-11T18:47:45.220Z start alt file=training\pega-poland\tts\pega-builder-demos.ssml lang=en chunks=5 service=google-tts-api
+2026-01-11T18:47:49.377Z success file=training\pega-poland\tts\pega-builder-demos.ssml output=training\pega-poland\audio-online\pega-builder-demos.mp3
+2026-01-11T18:47:49.380Z start alt file=training\pega-poland\tts\pega-productivity.ssml lang=en chunks=6 service=google-tts-api
+2026-01-11T18:47:53.266Z success file=training\pega-poland\tts\pega-productivity.ssml output=training\pega-poland\audio-online\pega-productivity.mp3
+2026-01-11T18:47:53.269Z start alt file=training\pega-poland\tts\pega-workflow-ai.ssml lang=en chunks=5 service=google-tts-api
+2026-01-11T18:47:57.828Z success file=training\pega-poland\tts\pega-workflow-ai.ssml output=training\pega-poland\audio-online\pega-workflow-ai.mp3

@@ -1,0 +1,15 @@
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xml:lang="pl-PL">
+    <voice name="pl-PL-MarekNeural">
+        Porozmawiajmy o narzędziach. Największym zabójcą produktywności jest używanie niewłaściwego AI do zadania.
+        <break time="500ms"/>
+        Perplexity to twój badacz. Przegląda żywy internet. Używaj go do znajdowania najnowszej dokumentacji Pega, przepisów zgodności lub wiadomości branżowych. Cytuje swoje źródła.
+        ChatGPT to twój strateg. Używaj go do szkicowania e-maili, podsumowywania notatek ze spotkań lub burzy mózgów na temat architektury. Jest najlepszy w czystym rozumowaniu.
+        Cursor to twój budowniczy. Żyje w twoim edytorze kodu. Widzi twoje pliki. Używaj go do refaktoryzacji starego kodu, pisania testów jednostkowych lub wyjaśniania złożonej logiki.
+        <break time="500ms"/>
+        Spójrzmy na prawdziwe przypadki biznesowe.
+        W Zarządzaniu Dokumentacją przestań czytać każdą stronę. Prześlij swoje PDF-y do ChatGPT i poproś o syntezę. Właśnie zaoszczędziłeś 5 godzin.
+        W Ekstrakcji Danych wklej nieuporządkowany e-mail do ChatGPT i poproś o wyjście JSON. Właśnie zastąpiłeś ręczne wprowadzanie danych.
+        W Kodowaniu otwórz stary plik w Cursor i naciśnij Command K. Wpisz Wyjaśnij to i dodaj komentarze. Właśnie udokumentowałeś swój dług techniczny w sekundy.
+        Zwrot z inwestycji bierze się z wyboru właściwego silnika do zadania.
+    </voice>
+</speak>

@@ -1,45 +1,52 @@
-## Pega Workflow AI (Generic Pattern)
+## Pega Workflow Acceleration (Business Outcomes)
 
 ### Slides
-- Slide 1 — Workflow Map (Polish: Mapa przepływu)  
-  - Intake → triage → decision → action → feedback.  
-  - Identify friction: slow routing, missing data, unclear notes.  
-  - Speaker notes: Anchor every AI idea to a workflow step.
+- Slide 1 — The Friction Points (Polish: Punkty tarcia)
+  - Intake (Reading/Classifying): Slow, manual, error-prone.
+  - Triage (Routing): Bottleneck of expertise.
+  - Action (Response): Repetitive typing.
+  - Speaker notes: "AI solves the 'Blank Page' problem and the 'Data Entry' problem."
 
-- Slide 2 — AI Touchpoints (Polish: Punkty AI)  
-  - Classify, extract, summarize, route, recommend, draft.  
-  - Keep outputs structured (JSON/table).  
-  - Speaker notes: Stress bounded outputs; avoid free-form for routing/eligibility.
+- Slide 2 — Pattern 1: Intelligent Intake (Polish: Inteligentny wlot)
+  - **Input**: Unstructured email/PDF.
+  - **AI Task**: Extract Entities (Name, ID, Intent) -> JSON.
+  - **Pega Action**: Map JSON to Clipboard.
+  - **Result**: Case created in milliseconds, not minutes.
 
-- Slide 3 — Process AI & Decisioning (Polish: Process AI i decyzje)  
-  - Process AI: signals/predictions from history.  
-  - Decisioning: NBA with constraints and arbitration.  
-  - Speaker notes: Prediction = “how risky/valuable”; Decisioning = “what to do.”
+- Slide 3 — Pattern 2: Confidence-Based Triage (Polish: Triage)
+  - **AI Task**: Predict Case Type & Routing.
+  - **Constraint**: If Confidence > 90%, Auto-route. Else, Human Workbasket.
+  - **Safety**: Human-in-the-loop for low confidence.
+  - **Result**: Experts focus only on hard cases.
 
-- Slide 4 — Low-Code Accelerators (Polish: Low-code)  
-  - App Studio case templates, data objects, personas.  
-  - Quick stages; wire AI later.  
-  - Speaker notes: Start with template, then attach Prediction/Decision strategies.
+- Slide 4 — Pattern 3: Generative Action (Polish: Generatywna akcja)
+  - **AI Task**: Draft "Apology Email" or "Approval Note".
+  - **Context**: Case History + Policy.
+  - **User**: Reviews and clicks "Send".
+  - **Result**: AHT (Average Handle Time) reduced by 30%.
 
-- Slide 5 — GenAI Connectors (Polish: GenAI)  
-  - Draft emails, summarize interactions, suggest rules.  
-  - Keep fictional data; enforce short formats.  
-  - Speaker notes: Show example prompt for case summary with JSON output.
+- Slide 5 — The ROI Model (Polish: Model zwrotu z inwestycji)
+  - Time Saved x Hourly Rate x Volume.
+  - Example: 5 min/case x $50/hr x 10,000 cases = Massive savings.
+  - Speaker notes: "Show this slide to your stakeholders. This is why we do AI."
 
-- Slide 6 — Example Flow (Polish: Przykład)  
-  - Email intake → case type + routing → NBA offer → summary note.  
-  - Feedback: log outcome to improve prompts/models.  
-  - Speaker notes: Walk through end-to-end with 2 sample cases.
+- Slide 6 — Governance Overlay (Polish: Nadzór)
+  - Audit every AI decision.
+  - Version control your prompts.
+  - Never bypass Pega security rules.
 
-### Audiobook Script (7–8 min + Q&A)
-"Think in steps: intake, triage, decision, action, feedback. Intake uses an LLM to classify and extract key fields. Triage applies a prediction to score urgency or value. Decisioning chooses the next best action with constraints. Action uses a GenAI connector to draft the email or case note. Feedback logs outcomes to improve prompts and models.  
-Process AI is your prediction engine—great when you have historical signals. Real-time decisioning arbitrates what to do given constraints. GenAI handles the language tasks but stays bounded with structured outputs.  
-Start fast with App Studio templates for stages and data objects, then plug in Prediction or Decision strategies. Keep everything fictional for demos, and log prompts and results. This pattern repeats across claims, onboarding, sales ops, and service—swap the data, keep the structure."  
+### Audiobook Script (6 min + Q&A)
+"We don't use AI just to be cool. We use it to smash friction points in the Pega workflow.
+The first friction is **Intake**. Humans hate data entry. We use LLMs to read unstructured emails and extract clean JSON. Case creation becomes instant.
+The second friction is **Triage**. Why should a senior agent route simple tickets? We use AI to classify. If the model is 90% confident, we auto-route. If not, we ask a human. This keeps your experts on expert work.
+The third friction is **Action**. Drafting responses takes time. We use GenAI to draft the email based on the case history. The agent just reviews and sends. We slash Average Handle Time.
+Calculate the ROI: Save 5 minutes per case. Multiply by your volume. The business case writes itself.
+But remember: Pega is the brain. AI is the muscle. Pega holds the state, the security, and the audit trail. AI just does the heavy lifting."
 
 Likely Q&A:
-- Q: How do we pick where to start?  
-  A: Find the slowest/highest-friction step tied to a KPI (cycle time/SLA); start with a bounded LLM task there.  
-- Q: Can LLMs make routing decisions?  
-  A: They can propose, but keep final routing in rules/decision tables; use LLM for classification and justification.  
-- Q: How do we improve over time?  
-  A: Capture feedback, expand golden sets, refine prompts, and retrain predictions when data shifts.  
+- Q: What if the AI misclassifies?
+  A: That's why we have confidence thresholds. Low confidence always goes to a human. And we audit the logs to retrain.
+- Q: Is this hard to build?
+  A: No. With Pega GenAI Connectors, it's a drag-and-drop integration. The hard part is the prompt, not the code.
+- Q: Does this replace agents?
+  A: No, it upgrades them. They stop being data entry clerks and start being problem solvers.

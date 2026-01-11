@@ -1,66 +1,64 @@
 ---
 marp: true
-theme: default
+theme: gaia
+class: lead
 paginate: true
+backgroundColor: #fff
 ---
 
-# Cursor / ChatGPT / Perplexity
-- Right tool, right task
-- English-first; Polish only for user text
-Notes: Position stack: research → draft → implement.
+# Tool Selection & Setup
+## The AI Stack
 
 ---
-# Agenda
-- Tool roles
-- Safe setup
-- Workflows per tool
-- Pega tie-ins
-Notes: Keep concise; emphasize safety.
+
+# The AI Stack
+
+1. **Perplexity**: The Knowledge Engine (Research).
+2. **ChatGPT**: The Reasoning Engine (Drafting).
+3. **Cursor**: The Build Engine (Code).
+
+> "Don't hammer a nail with a screwdriver."
 
 ---
-# Tool Roles
-- Perplexity: public, cited research
-- ChatGPT: drafts, prompts, notes
-- Cursor: code/rule edits, diffs, tests
-Notes: Stack them; cite sources with Perplexity.
+
+# Decision Matrix
+
+- **Need facts/citations?** -> Perplexity.
+- **Need text/logic?** -> ChatGPT.
+- **Need code/files?** -> Cursor.
+- **Need UI mock?** -> MagicUI / Lovable.
 
 ---
-# Safe Setup (Bezpieczeństwo)
-- Fictional data only; no secrets
-- Small diffs; review every change
-- VPN/SSO; approved endpoints
-Notes: Log prompts/responses for audit.
+
+# Use Case: Document Management
+
+- **Problem**: Scattered specs and wikis.
+- **Tool**: Notion AI or ChatGPT Projects.
+- **Action**: "Summarize these 5 PDFs into one spec."
+- **ROI**: 5-10 hours saved/week.
 
 ---
-# Cursor Workflows
-- Explain-this-rule; propose safer version
-- Generate focused tests
-- Inline edits with diff review
-Notes: Keep changes small; use TODOs as anchors.
+
+# Use Case: Data Extraction
+
+- **Problem**: Manual entry from emails.
+- **Tool**: ChatGPT (with RTF prompt).
+- **Action**: "Extract Client, Policy#, Amount to JSON."
+- **ROI**: 90% faster.
 
 ---
-# ChatGPT Workflows
-- Meeting notes, emails, rationales
-- Prompt testing with formats
-- Word limits + rationale caps
-Notes: Use roles and constraints for clarity.
+
+# Use Case: Coding & Config
+
+- **Problem**: Legacy rules, missing tests.
+- **Tool**: Cursor.
+- **Action**: "Explain this rule. Write a unit test."
+- **ROI**: 2-4x faster dev cycle.
 
 ---
-# Perplexity Workflows
-- Pull public policy text with citations
-- Summaries and comparisons with sources
-Notes: Keep scope public only.
 
----
-# Pega Tie-ins
-- Rule explanations; stage suggestions
-- Routing drafts; persona scripts
-- Test data generation (fictional)
-Notes: Map to case lifecycle and labs.
+# Pega Alignment
 
----
-# Wrap
-- Choose tool by task
-- Constrain outputs; review diffs
-- Log and reuse good prompts
-Notes: Direct to cookbook and lab packs.
+- **Research**: Pega 8.8 syntax (Perplexity).
+- **Draft**: User Stories (ChatGPT).
+- **Implement**: Unit Tests (Cursor).

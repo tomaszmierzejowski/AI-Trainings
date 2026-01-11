@@ -1,0 +1,16 @@
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xml:lang="pl-PL">
+    <voice name="pl-PL-MarekNeural">
+        Witamy na kursie mistrzowskim inżynierii promptów. Przechodzimy od czatowania do inżynierii.
+        Kluczową ramą jest RTF: Rola, Zadanie, Format.
+        <break time="500ms"/>
+        Rola: Przypisz personę. Działaj jako Starszy Architekt Systemowy Pega. To przygotowuje słownictwo modelu.
+        Zadanie: Bądź konkretny. Zrefaktoryzuj tę aktywność, aby zmniejszyć liczbę wywołań bazy danych.
+        Format: Zdefiniuj wyjście. Zwróć tabelę markdown z kolumnami: Problem, Naprawa, Wpływ.
+        <break time="500ms"/>
+        Następnie używamy Few-Shot Prompting. Jeśli potrzebujesz konkretnego formatu JSON dla interfejsu Pega, wklej dwa przykłady poprawnego JSON przed swoim żądaniem. Model idealnie skopiuje strukturę.
+        Do złożonej logiki użyj Chain-of-Thought. Po prostu dodanie "Myśl krok po kroku" wymusza na modelu przemyślenie problemu, drastycznie redukując błędy logiczne w regułach routingu lub kwalifikowalności.
+        <break time="500ms"/>
+        Na koniec ćwicz Dekompozycję. Nie proś o całą aplikację. Poproś o Model Danych. Potem o Etapy Sprawy. Potem o UI. Złóż elementy w całość.
+        Bezpieczeństwo nie podlega negocjacjom. Nigdy nie wklejaj prawdziwych danych klientów. Używaj zamienników. Jeśli nie wysłałbyś tego mailem do konkurencji, nie wklejaj tego do promptu.
+    </voice>
+</speak>

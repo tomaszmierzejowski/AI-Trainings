@@ -1,40 +1,23 @@
-## Pega Workflow AI (Poland Delivery)
+## Pega Workflow Acceleration (Outcomes)
 
-### Slides
-- Slide 1 — Target Flow (Polish: Docelowy przepływ)  
-  - Intake → triage → NBA → fulfillment → feedback.  
-  - Domains: claims, onboarding, service (fictional).  
-  - Speaker notes: Tie to Krakow delivery patterns.
+### Slide Outline
+- **The Goal**: Remove friction from Intake, Triage, and Action.
+- **KPIs**: Reduce AHT by 20%, improve Classification Accuracy to 90%.
+- **Pattern**:
+  1. **Intake**: LLM extracts structured data (JSON) from messy text.
+  2. **Triage**: Pega rules + LLM confidence score routing.
+  3. **Action**: GenAI drafts the response/summary for human review.
 
-- Slide 2 — Pega Assets (Polish: Zasoby Pega)  
-  - App Studio templates, data objects, personas.  
-  - Prediction Studio for scoring; Decisioning for arbitration.  
-  - Speaker notes: Start template first; AI later.
+### Speaker Notes
+- **Friction**: "Where does the process stall? Usually reading/classifying or writing responses."
+- **Intake**: "Don't just OCR. Extract intent. 'I want a refund' vs 'Where is my refund'."
+- **Triage**: "Use the LLM to suggest, but let Pega rules decide. If Confidence < 0.8, route to human."
+- **Action**: "Never auto-send without review. Draft the email, let the agent click send."
 
-- Slide 3 — GenAI Touchpoints (Polish: GenAI)  
-  - Classify intake, extract fields, draft notes, summarize interactions.  
-  - Outputs bounded: JSON for routing; short summaries.  
-  - Speaker notes: No irreversible decisions by LLM; keep humans for high risk.
-
-- Slide 4 — Governance (Polish: Nadzór)  
-  - Access groups, masked data pages, audit logs, approved LLM endpoints.  
-  - Logging of prompts/responses; no real data.  
-  - Speaker notes: Mention client-specific endpoint list.
-
-- Slide 5 — Demo Plan (Polish: Plan demo)  
-  - Email intake → case type + routing → NBA suggestion → summary note.  
-  - KPI lens: cycle time, SLA hits, CSAT.  
-  - Speaker notes: Use Polish examples for end-user text; keep specs in English.
-
-### Audiobook Script (6–7 min + Q&A)
-"For the Krakow teams, we focus on fast, governed delivery. The flow is intake, triage, decision, action, and feedback. Intake uses an LLM to classify and extract fields from an email or form. Triage uses a prediction to score urgency. Decisioning runs next-best-action with constraints. Action drafts the response or case note. Feedback logs the outcome to improve prompts and models.  
-We start in App Studio with a case template, then attach Prediction Studio scores and Decision strategies. GenAI connectors classify and summarize but never make irreversible choices; keep outputs structured as JSON for routing and short summaries for people.  
-Use fictional Polish/English data for demos. Access groups, masked data pages, logging, and approved LLM endpoints keep us compliant. This pattern fits claims, onboarding, and service and can be adapted quickly per client."  
-
-Likely Q&A:
-- Q: Can the LLM decide routing?  
-  A: It can propose routing with confidence, but final routing should be in rules/decision tables.  
-- Q: How do we keep it bilingual?  
-  A: Specs and logic in English; user-facing text can include Polish variants; keep prompts clear about language.  
-- Q: What logs do we keep?  
-  A: Prompts, responses, model version, user, decision taken; store without PII and under approved retention.  
+### Audiobook Script (5 min)
+"We apply AI to accelerate the Pega workflow, not replace it.
+Focus on three points: Intake, Triage, and Action.
+At Intake, use an LLM to turn unstructured emails into structured JSON data. Extract the Intent, the Entities, and the Urgency.
+At Triage, combine Pega's deterministic rules with the LLM's confidence score. If the model is 95% sure, automate. If 60%, route to a human expert.
+At Action, use GenAI to draft the reply or the case summary. This saves the agent 5 minutes per case.
+Multiply that by 1000 cases, and you have massive ROI. Always keep a human in the loop for the final click."

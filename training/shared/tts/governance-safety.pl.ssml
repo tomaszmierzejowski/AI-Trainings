@@ -1,0 +1,10 @@
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xml:lang="pl-PL">
+    <voice name="pl-PL-MarekNeural">
+        Bezpieczeństwo jest wbudowane, a nie dodane na końcu. Zacznij od najmniejszych uprawnień i minimalizacji danych.
+        Ryzyka to halucynacje, wstrzykiwanie promptów i wycieki. Przeciwdziałamy im listami dozwolonych, redakcją i ludzką kontrolą.
+        <break time="500ms"/>
+        W Pega polegaj na Grupach Dostępu, maskowanych stronach danych i nadzorze decyzji.
+        Pytanie: Co jeśli użytkownik wklei wrażliwe dane? Użyj redakcji, wymuś zamienniki i blokuj połączenia wychodzące z PII.
+        Pytanie: Jak audytować decyzje AI? Loguj prompty, odpowiedzi, wersję modelu i podjętą decyzję.
+    </voice>
+</speak>

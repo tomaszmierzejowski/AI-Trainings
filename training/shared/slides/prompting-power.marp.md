@@ -1,63 +1,59 @@
 ---
 marp: true
-theme: default
+theme: gaia
+class: lead
 paginate: true
+backgroundColor: #fff
 ---
 
-# Prompting Power Skills
-- Structure > luck
-- English-first; Polish only for user-facing text
-Notes: Focus on repeatable patterns and safety.
+# Prompt Mastery Quickstart
+## The Engineering Approach
 
 ---
-# Agenda (Porządek)
-- Prompt formula
-- Patterns that work
-- Prompt ladders
-- Safety
-- Pega examples
-Notes: 45–60 minutes; hands-on friendly.
+
+# The Foundation: RTF Framework
+
+- **Role**: Who is the AI? (e.g., Senior Architect)
+- **Task**: What must it do? (e.g., Draft Code)
+- **Format**: How should it look? (e.g., JSON)
+
+> "If you only learn one thing, learn RTF."
 
 ---
-# Prompt Formula (Formuła)
-- Instruction → context → format → constraints → examples (optional)
-- Keep concise; state role and audience
-- Ask for structured outputs (JSON/table)
-Notes: Show template; stress minimal but clear context.
+
+# Technique 1: Few-Shot Prompting
+
+- Don't just tell; **show**.
+- Provide 2-3 examples of Input -> Output.
+- Critical for JSON, SQL, or Pega Rule formats.
 
 ---
-# Patterns (Wzorce)
-- Short chain-of-thought then clean answer
-- Critique-and-revise loop
-- Delimit inputs with fences
-- Few-shot only when structure matters
-Notes: Demo a short reasoning + final answer pattern.
+
+# Technique 2: Chain-of-Thought
+
+- Ask the model to **"Think step-by-step"**.
+- Forces reasoning before the answer.
+- Reduces logic errors by 40%+.
 
 ---
-# Prompt Ladders (Drabinka)
-- Start coarse → test 5–10 cases → tighten
-- Log versions in prompt cookbook
-- Measure failures; fix one at a time
-Notes: Encourage iteration with golden cases.
+
+# Technique 3: Iterative Refinement
+
+- Never accept the first draft.
+- **The "Refusal" Check**: "If you lack info, state it."
+- Ask AI to critique its own output.
 
 ---
-# Safety (Bezpieczeństwo)
-- No real data; use placeholders
-- Redact PII; approved endpoints only
-- Log prompts/responses; cap rationale length
-Notes: Remind audit and word limits reduce leakage.
+
+# Advanced: Ladders & Decomposition
+
+- **Laddering**: Start simple -> Verify -> Add Constraints.
+- **Decomposition**: Break big tasks (Build App) into small steps (Define Data -> Define Stages).
 
 ---
-# Pega Examples (Przykłady)
-- Intake classification + routing JSON
-- Stage summaries and AC drafts
-- Decision table candidates
-- Meeting notes to actions/owners
-Notes: Tie each to labs and cookbook entries.
 
----
-# Wrap
-- Templates + ladders = reliability
-- Keep outputs structured and short
-- Store good prompts in the cookbook
-Notes: Point to lab and prompt packs.
+# Safety & Governance
+
+- **No PII**: Use placeholders like `[Client_ID]`.
+- **Approved Endpoints**: Don't paste secrets into public web UIs.
+- Treat the prompt window like a billboard.

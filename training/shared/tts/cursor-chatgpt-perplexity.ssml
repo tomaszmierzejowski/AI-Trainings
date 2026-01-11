@@ -1,10 +1,15 @@
-<speak>
-  <p>Welcome to the Cursor, ChatGPT, and Perplexity power stack. Use each tool for its strength.</p>
-  <p>Perplexity is for public, cited research. Use it to ground prompts with sources.</p>
-  <p>ChatGPT is for drafting: emails, meeting notes, rationales, and prompt experiments. Keep instructions clear and outputs structured.</p>
-  <p>Cursor is for implementation: reading rules, proposing edits, and generating focused tests. Keep diffs small and review every change.</p>
-  <p>Safety setup: fictional data only, approved endpoints, small batches, and prompt logging. Respect VPN or SSO requirements.</p>
-  <p>Pega tie-ins include explaining rules, suggesting stage or routing changes, drafting persona scripts, and creating test data.</p>
-  <p>Next steps: research with Perplexity, draft with ChatGPT, implement and review with Cursor, and log prompts and results.</p>
-  <p>Q and A. One: When should I avoid Perplexity? When data is confidential; use internal sources only. Two: How do I keep Cursor changes safe? Make small diffs, review, and avoid secrets. Three: What if ChatGPT is verbose? Add word limits and structured formats, and request a short rationale plus final answer.</p>
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xml:lang="en-US">
+    <voice name="en-US-JennyNeural">
+        Let's talk tools. The biggest productivity killer is using the wrong AI for the job.
+        <break time="500ms"/>
+        Perplexity is your researcher. It browses the live web. Use it to find the latest Pega documentation, compliance laws, or industry news. It cites its sources.
+        ChatGPT is your strategist. Use it to draft emails, summarize meeting notes, or brainstorm architecture. It is the best at pure reasoning.
+        Cursor is your builder. It lives in your code editor. It sees your files. Use it to refactor legacy code, write unit tests, or explain complex logic.
+        <break time="500ms"/>
+        Let's look at real business cases.
+        For Document Management, stop reading every page. Upload your PDFs to ChatGPT and ask for a synthesis. You just saved 5 hours.
+        For Data Extraction, paste a messy email into ChatGPT and ask for JSON output. You just replaced manual data entry.
+        For Coding, open a legacy file in Cursor and hit Command K. Type Explain this and add comments. You just documented your technical debt in seconds.
+        The ROI comes from picking the right engine for the task.
+    </voice>
 </speak>

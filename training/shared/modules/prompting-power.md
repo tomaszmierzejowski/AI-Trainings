@@ -1,42 +1,53 @@
-## Prompting Power Skills
+## Prompting Power Skills (The Masterclass)
 
 ### Slides
-- Slide 1 — Prompt Formula (Polish: Formuła promptu)  
-  - Instruction → context → format → constraints → examples (optional).  
-  - Example: “You are a Pega consultant. Classify the email into a case type and routing. Output JSON.”  
-  - Speaker notes: Show the template and stress brevity plus clarity.
+- Slide 1 — The Foundation: RTF Framework (Polish: Model RTF)
+  - **Role**: Who is the AI? (Senior Pega Architect, Data Scientist).
+  - **Task**: What must it do? (Draft code, Summarize logic).
+  - **Format**: How should it look? (JSON, Table, Markdown list).
+  - Speaker notes: "If you only learn one thing, learn Role-Task-Format. It solves 80% of bad outputs."
 
-- Slide 2 — Patterns that Work (Polish: Wzorce)  
-  - Chain-of-thought (short), critique-and-revise, delimitation with ``` fences, retries with changes.  
-  - Few-shot when you need strict structure; keep examples fictional.  
-  - Speaker notes: Demonstrate a short reasoning step then a clean final answer.
+- Slide 2 — Technique 1: Few-Shot Prompting (Polish: Few-Shot)
+  - Don't just tell; show.
+  - Provide 2-3 examples of Input -> Desired Output.
+  - Use for: JSON structures, specific Pega rule formats.
+  - Speaker notes: "The model mimics patterns. Give it the pattern."
 
-- Slide 3 — Prompt Ladders (Polish: Drabinka promptów)  
-  - Start coarse → test on 5–10 cases → tighten constraints.  
-  - Log each version in a prompt cookbook.  
-  - Speaker notes: Encourage small iterations; keep failures to learn.
+- Slide 3 — Technique 2: Chain-of-Thought (Polish: Łańcuch Myśli)
+  - Ask the model to "Think step-by-step".
+  - Reduces logic errors in complex routing or decisioning tasks.
+  - Speaker notes: "Forcing reasoning before the answer increases accuracy by 40%+."
 
-- Slide 4 — Safety & Data Handling (Polish: Bezpieczeństwo)  
-  - No real customer data; use placeholders/masking.  
-  - Redact PII; avoid copying secrets; log prompts/responses.  
-  - Speaker notes: Mention audit trails and approved endpoints.
+- Slide 4 — Technique 3: Iterative Refinement (Polish: Iteracja)
+  - "Critique this code for security flaws, then rewrite it."
+  - The "Refusal" check: "If you lack info, state what is missing."
+  - Speaker notes: "Don't accept the first draft. Make the AI be its own editor."
 
-- Slide 5 — Pega Use Cases (Polish: Przykłady Pega)  
-  - Intake clarification, email triage, stage summaries, routing suggestions.  
-  - Decision table drafts, meeting-note generation.  
-  - Speaker notes: Tie each to case lifecycle; emphasize format outputs (JSON/table).
+- Slide 5 — Advanced: Prompt Ladders & Decomp (Polish: Drabinka i Dekompozycja)
+  - Break big tasks (Build App) into small steps (Define Data -> Define Stages -> Define UI).
+  - Laddering: Start simple, verify, then add constraints.
+  - Speaker notes: "Don't eat the elephant in one bite. Prompt for components."
 
-### Audiobook Script (6–7 min + Q&A)
-"Prompting becomes reliable when it is systematic. Use a simple formula: clear instruction, the minimal context, the output format, constraints, and examples when structure matters. Example: ‘You are a Pega consultant. Classify the email into a case type and suggest routing. Output JSON with type, confidence, and reason.’  
-Patterns: add a short chain-of-thought so the model reasons, then ask for a clean final answer. Use critique-and-revise when the first draft is weak. Delimit inputs with fences to avoid confusion.  
-Build prompt ladders: start broad, test on a handful of real cases, note failure modes, and tighten constraints. Capture every version in a prompt cookbook so teams reuse the good ones.  
-Safety: never paste real customer data. Use placeholders, redact PII, and log prompts/responses for audit. Stick to approved endpoints.  
-Pega workflows benefit directly: classify intake, extract entities, generate stage summaries, draft decision table candidates, and produce concise meeting notes. Consistency and safety make prompting a reusable capability."  
+- Slide 6 — Safety & Governance (Polish: Bezpieczeństwo)
+  - No PII (Names, IDs). Use placeholders ([Client_ID]).
+  - Approved endpoints only.
+  - Speaker notes: "Treat the prompt window like a public billboard."
+
+### Audiobook Script (8 min + Q&A)
+"Welcome to the Prompt Engineering Masterclass. We are moving beyond 'chatting' to 'engineering'.
+The core framework is RTF: Role, Task, Format.
+**Role**: Assign a persona. 'Act as a Senior Pega System Architect.' This primes the model's vocabulary.
+**Task**: Be specific. 'Refactor this activity to reduce database calls.'
+**Format**: Define the output. 'Return a markdown table with columns: Issue, Fix, Impact.'
+Next, we use 'Few-Shot Prompting'. If you need a specific JSON format for a Pega interface, paste two examples of valid JSON before your request. The model will copy the structure perfectly.
+For complex logic, use 'Chain-of-Thought'. Simply adding 'Think step-by-step' forces the model to reason through the problem, drastically reducing logic errors in routing or eligibility rules.
+Finally, practice 'Decomposition'. Don't ask for a whole application. Ask for the Data Model. Then the Case Stages. Then the UI. Assemble the pieces.
+Safety is non-negotiable. Never paste real customer data. Use placeholders. If you wouldn't email it to a competitor, don't paste it in a prompt."
 
 Likely Q&A:
-- Q: How many examples should I include?  
-  A: Only when you need deterministic formatting—start with 2–3 fictional, concise examples.  
-- Q: How to reduce hallucinations?  
-  A: Provide grounding facts, constrain output format, and keep the task narrow; add validation checks.  
-- Q: Should I always use chain-of-thought?  
-  A: Use brief reasoning for complex tasks; avoid long reasoning that bloats tokens—ask for a short rationale plus a clean final answer.  
+- Q: What is the biggest mistake beginners make?
+  A: Assuming the AI knows the context. It doesn't. You must provide the 'Role' and the 'Context' explicitly.
+- Q: When do I use Few-Shot?
+  A: Whenever the output format is strict (e.g., JSON, SQL, specific Pega XML).
+- Q: Does "please" help?
+  A: Surprisingly, yes. It sets a cooperative tone. But clarity (RTF) matters far more than politeness.
