@@ -7,28 +7,30 @@ Resources: slide decks in `training/shared/slides/`, TTS in `training/shared/tts
 *Goal: Leave with working prompts, a configured tool stack, and an ROI model.*
 
 - **09:00–09:30 — Kickoff: The AI Opportunity.**
-  - Why now? Market landscape.
-  - KPI focus: Cycle time, AHT, CSAT.
+  - **Show**: Market trends, "Why Now?" slide.
+  - **Discuss**: Friction in current workflows (typing, reading).
+  - **KPIs**: Cycle time reduction, AHT (Average Handle Time).
 - **09:30–10:45 — Module: Prompt Mastery (RTF & CoT).**
-  - The RTF Formula (Role-Task-Format).
-  - Chain-of-Thought reasoning.
-  - Exercise: Laddering a prompt from "vague" to "production-ready".
+  - **Teach**: The RTF Formula (Role-Task-Format).
+  - **Demo**: Bad prompt vs. RTF prompt (Live in ChatGPT).
+  - **Exercise**: "Laddering" — iterate a prompt 3 times (Base -> +Context -> +Constraints).
 - **11:00–12:00 — Module: Tool Selection Matrix.**
-  - Perplexity (Research) vs ChatGPT (Draft) vs Cursor (Build).
-  - Business Use Cases: Document Mgmt, Data Extraction, Coding.
-  - Exercise: Tool setup and "Hello World".
+  - **Matrix**: Perplexity (Research) vs ChatGPT (Drafting) vs Cursor (Building).
+  - **Demo**: Find a specific Pega regulation using Perplexity (verify citation).
+  - **Setup**: Ensure everyone has accounts logged in.
 - **12:00–13:00 — Lunch.**
 - **13:00–14:30 — Lab 1: Intelligent Intake & Triage.**
-  - Scenario: Inbound Support Emails.
-  - Task: Extract JSON entities and classify intent.
-  - Success Metric: 90% accuracy on test set.
+  - **Asset**: `service.csv` (10 emails).
+  - **Task**: Write a prompt to extract JSON entities (Intent, Sentiment) from row 1.
+  - **Challenge**: Handle a "confused" customer email correctly.
+  - **Validation**: Does the JSON parse?
 - **14:45–16:00 — Module: Pega Workflow Acceleration.**
-  - Patterns: Intake, Triage, Generative Action.
-  - The ROI Calculation.
-  - Demo: End-to-end friction removal.
+  - **Concepts**: Intake -> Triage -> Generative Action.
+  - **Activity**: Calculate ROI for a hypothetical process (Time saved * Volume).
+  - **Demo**: Show a "Generative Reply" workflow concept.
 - **16:00–17:00 — Governance & Action Plan.**
-  - Safety checklist (PII, Hallucination).
-  - "Monday Morning" deployment plan.
+  - **Safety**: The "Billboard Rule" (No PII).
+  - **Plan**: What will you build on Monday?
 
 ### 3-Day: Deep Dive & Builder Pods
 *Goal: Build a deployable prototype, a prompt library, and trained champions.*
@@ -36,18 +38,20 @@ Resources: slide decks in `training/shared/slides/`, TTS in `training/shared/tts
 - **Day 1**: Fast-Start (Same as above).
 - **Day 2**: Builder Mode.
   - 09:00–10:30 — **Module: Advanced Prompting**.
-    - Few-shot, Iterative Refinement, Decomposition.
+    - Techniques: Few-shot, Iterative Refinement, Decomposition.
   - 10:45–12:00 — **Module: Productivity Recipes**.
-    - Role-based prompts (BA, SE, SA, QA).
+    - Role-based prompts: BAs (User Stories), SEs (Demos), SAs (Refactoring).
   - 13:00–16:00 — **Lab 2: Pod Build (Domain Specific)**.
-    - Teams pick a domain (Claims/Onboarding).
-    - Build: Intake → Triage → NBA → UI Mock (MagicUI).
-  - 16:00–17:00 — Review & Refine (Peer critique).
+    - Teams pick a domain: Claims (Fraud check) or Onboarding (KYC).
+    - Build chain: Intake Prompt -> Decision Matrix -> Rejection/Approval Email.
+  - 16:00–17:00 — Review & Refine (Peer critique of prompts).
 - **Day 3**: Scale & Governance.
   - 09:00–10:30 — **Module: Evaluation & Testing**.
-    - Golden sets, regression testing, drift detection.
+    - Concepts: Golden sets (test cases), Regression testing (did the prompt break?).
   - 10:45–12:30 — **Lab 3: Final Polish & Audit**.
-    - Stress-testing prompts. Adding safety guardrails.
+    - Stress-testing: "Adversarial" prompts (try to break the bot).
   - 13:30–15:30 — **Demo Day**.
-    - Present solution + business case (ROI).
+    - Teams present their Pod Build.
+    - Must show: The Prompt, The Output, The Business Value (ROI).
   - 15:30–17:00 — **Governance Deep Dive & Roadmap**.
+    - Audit logs, Pega "Human in the loop" patterns.

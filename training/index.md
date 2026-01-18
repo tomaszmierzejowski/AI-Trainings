@@ -1,35 +1,44 @@
-# Training Asset Index (Unified Practical Kit)
+# AI Training Kit: Master Index
 
-**Status**: Production-Ready (EN & PL).
-**Updated**: Perplexity Integration Complete.
+**Status**: Production-Ready
+**Updated**: 2026-01-11
 
-## Core Documentation
-- **`training/presenter-guide.md`**: The master playbook (Narrative, Scripts, Q&A).
-- **`training/shared/agendas.md`**: 1-Day & 3-Day tracks.
-- **`training/shared/labs.md`**: Hands-on workshop guides.
+## 🏁 Start Here
+*   **Participants**: Read `training/USER_GUIDE.md`.
+*   **Trainers**: Read `training/TRAINER_GUIDE.md`.
 
-## Shared Modules (Assets)
+## 📦 Core Assets
 
-| Module | Slides (EN) | Slides (PL) | Audio (EN) | Audio (PL) |
-| --- | --- | --- | --- | --- |
-| **AI Fundamentals** | `shared/pptx/ai-fundamentals.pptx` | `shared/pptx-pl/ai-fundamentals.pl.marp.pptx` | `shared/audio-online/ai-fundamentals.mp3` | `shared/audio-online/ai-fundamentals.pl.mp3` |
-| **Prompt Mastery** | `shared/pptx/prompting-power.pptx` | `shared/pptx-pl/prompting-power.pl.marp.pptx` | `shared/audio-online/prompting-power.mp3` | `shared/audio-online/prompting-power.pl.mp3` |
-| **Tool Selection** | `shared/pptx/cursor-chatgpt-perplexity.pptx` | `shared/pptx-pl/cursor-chatgpt-perplexity.pl.marp.pptx` | `shared/audio-online/cursor-chatgpt-perplexity.mp3` | `shared/audio-online/cursor-chatgpt-perplexity.pl.mp3` |
-| **Pega Outcomes** | `shared/pptx/pega-workflow-ai.pptx` | `shared/pptx-pl/pega-workflow-ai.pl.marp.pptx` | `shared/audio-online/pega-workflow-ai.mp3` | `shared/audio-online/pega-workflow-ai.pl.mp3` |
-| **Governance** | `shared/pptx/governance-safety.pptx` | `shared/pptx-pl/governance-safety.pl.marp.pptx` | `shared/audio-online/governance-safety.mp3` | `shared/audio-online/governance-safety.pl.mp3` |
-| **Productivity** | `shared/pptx/productivity-recipes.pptx` | `shared/pptx-pl/productivity-recipes.pl.marp.pptx` | `shared/audio-online/productivity-recipes.mp3` | *Use EN or Offline* |
-| **Builder Tools** | `shared/pptx/builder-tools.pptx` | `shared/pptx-pl/builder-tools.pl.marp.pptx` | `shared/audio-online/builder-tools.mp3` | *Use EN or Offline* |
-| **All-Hands** | `shared/pptx/all-hands.pptx` | `shared/pptx-pl/all-hands.pl.marp.pptx` | N/A | N/A |
+### Documentation
+*   **Agendas**: `training/shared/agendas.md` (1-Day & 3-Day tracks)
+*   **Labs**: `training/shared/labs.md` (Workshop instructions)
+*   **Cookbooks**: `training/shared/prompt-cookbook.md` & `training/pega-poland/prompt-cookbook.md`
 
-## Pega Poland Modules (Assets)
+### Presentation Decks (PPTX)
+| Module | English | Polish |
+|---|---|---|
+| **AI Fundamentals** | `training/shared/pptx/ai-fundamentals.pptx` | `training/shared/pptx-pl/ai-fundamentals.pl.marp.pptx` |
+| **Prompt Mastery** | `training/shared/pptx/prompting-power.pptx` | `training/shared/pptx-pl/prompting-power.pl.marp.pptx` |
+| **Tool Selection** | `training/shared/pptx/cursor-chatgpt-perplexity.pptx` | `training/shared/pptx-pl/cursor-chatgpt-perplexity.pl.marp.pptx` |
+| **Pega Outcomes** | `training/shared/pptx/pega-workflow-ai.pptx` | `training/shared/pptx-pl/pega-workflow-ai.pl.marp.pptx` |
+| **Governance** | `training/shared/pptx/governance-safety.pptx` | `training/shared/pptx-pl/governance-safety.pl.marp.pptx` |
+| **Productivity** | `training/shared/pptx/productivity-recipes.pptx` | `training/shared/pptx-pl/productivity-recipes.pl.marp.pptx` |
+| **Builder Tools** | `training/shared/pptx/builder-tools.pptx` | `training/shared/pptx-pl/builder-tools.pl.marp.pptx` |
+| **All-Hands** | `training/shared/pptx/all-hands.pptx` | `training/shared/pptx-pl/all-hands.pl.marp.pptx` |
 
-| Module | Slides (EN) | Slides (PL) | Audio (EN) | Audio (PL) |
-| --- | --- | --- | --- | --- |
-| **Pega Workflow** | `pega-poland/pptx/pega-workflow-ai.pptx` | `pega-poland/pptx-pl/pega-workflow-ai.pl.marp.pptx` | `pega-poland/audio-online/pega-workflow-ai.mp3` | `pega-poland/audio-online/pega-workflow-ai.pl.mp3` |
-| **Productivity** | `pega-poland/pptx/pega-productivity.pptx` | `pega-poland/pptx-pl/pega-productivity.pl.marp.pptx` | `pega-poland/audio-online/pega-productivity.mp3` | *Use EN or Offline* |
-| **Builder Demos** | `pega-poland/pptx/pega-builder-demos.pptx` | `pega-poland/pptx-pl/pega-builder-demos.pl.marp.pptx` | `pega-poland/audio-online/pega-builder-demos.mp3` | *Use EN or Offline* |
-| **All-Hands** | `pega-poland/pptx/all-hands.pptx` | `pega-poland/pptx-pl/all-hands.pl.marp.pptx` | N/A | N/A |
+*Pega Poland specifics are in `training/pega-poland/pptx/` and `pptx-pl/`.*
 
-## Tooling
-- **Audio Generation**: `tools/ssml-to-mp3-online-alt.js` (Google TTS with Language Detection).
-- **Slide Generation**: `marp-cli` (Markdown -> PPTX).
+### Audiobooks (MP3)
+Located in `training/shared/audio-online/` and `training/pega-poland/audio-online/`.
+*   Files ending in `.mp3` are English.
+*   Files ending in `.pl.mp3` are Polish.
+
+### Datasets (Fictional)
+Located in `training/shared/assets/fictional-datasets/`.
+*   `claims.csv`
+*   `onboarding.csv`
+*   `service.csv`
+
+## 🛠️ Tooling
+*   **Scripts**: `tools/` (contains generation logic for slides and audio).
+*   **Logs**: `tools/logs/` (generation history).

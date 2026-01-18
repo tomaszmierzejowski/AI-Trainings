@@ -3,14 +3,14 @@
         Witamy na kursie mistrzowskim inżynierii promptów. Przechodzimy od czatowania do inżynierii.
         Kluczową ramą jest RTF: Rola, Zadanie, Format.
         <break time="500ms"/>
-        Rola: Przypisz personę. Działaj jako Starszy Architekt Systemowy Pega. To przygotowuje słownictwo modelu.
-        Zadanie: Bądź konkretny. Zrefaktoryzuj tę aktywność, aby zmniejszyć liczbę wywołań bazy danych.
-        Format: Zdefiniuj wyjście. Zwróć tabelę markdown z kolumnami: Problem, Naprawa, Wpływ.
+        Rola: Przypisz personę. Działaj jako Starszy Architekt Systemowy Pega.
+        Zadanie: Bądź konkretny. Zrefaktoryzuj tę aktywność.
+        Format: Zdefiniuj wyjście. Zwróć tabelę markdown.
         <break time="500ms"/>
-        Następnie używamy Few-Shot Prompting. Jeśli potrzebujesz konkretnego formatu JSON dla interfejsu Pega, wklej dwa przykłady poprawnego JSON przed swoim żądaniem. Model idealnie skopiuje strukturę.
-        Do złożonej logiki użyj Chain-of-Thought. Po prostu dodanie "Myśl krok po kroku" wymusza na modelu przemyślenie problemu, drastycznie redukując błędy logiczne w regułach routingu lub kwalifikowalności.
+        Używaj Iteracji. Nie akceptuj pierwszego szkicu. Poproś AI o krytykę własnej pracy.
+        Do złożonej logiki użyj Chain-of-Thought. "Myśl krok po kroku" drastycznie redukuje błędy.
         <break time="500ms"/>
-        Na koniec ćwicz Dekompozycję. Nie proś o całą aplikację. Poproś o Model Danych. Potem o Etapy Sprawy. Potem o UI. Złóż elementy w całość.
-        Bezpieczeństwo nie podlega negocjacjom. Nigdy nie wklejaj prawdziwych danych klientów. Używaj zamienników. Jeśli nie wysłałbyś tego mailem do konkurencji, nie wklejaj tego do promptu.
+        Na koniec: Drabinka Promptów. Zacznij prosto, testuj, i dodawaj ograniczenia jedno po drugim.
+        Bezpieczeństwo: Nigdy nie wklejaj prawdziwych danych klientów. Używaj zamienników. Traktuj okno promptu jak publiczny billboard.
     </voice>
 </speak>

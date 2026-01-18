@@ -3,10 +3,10 @@
         We don't use AI just to be cool. We use it to smash friction points in the Pega workflow.
         <break time="500ms"/>
         The first friction is Intake. Humans hate data entry. We use LLMs to read unstructured emails and extract clean JSON. Case creation becomes instant.
-        The second friction is Triage. Why should a senior agent route simple tickets? We use AI to classify. If the model is 90% confident, we auto-route. If not, we ask a human. This keeps your experts on expert work.
-        The third friction is Action. Drafting responses takes time. We use GenAI to draft the email based on the case history. The agent just reviews and sends. We slash Average Handle Time.
+        The second friction is Triage. Why should a senior agent route simple tickets? We use AI to classify. If the model is 90% confident, we auto-route.
+        The third friction is Action. Drafting responses takes time. We use GenAI to draft the email based on the case history.
         <break time="500ms"/>
-        Calculate the ROI: Save 5 minutes per case. Multiply by your volume. The business case writes itself.
+        Let's talk ROI. If you save 5 minutes per case, and you handle 10,000 cases a month, that is over 800 hours saved. The business case writes itself.
         But remember: Pega is the brain. AI is the muscle. Pega holds the state, the security, and the audit trail. AI just does the heavy lifting.
     </voice>
 </speak>

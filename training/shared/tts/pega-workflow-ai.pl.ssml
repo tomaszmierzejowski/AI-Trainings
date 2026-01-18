@@ -1,12 +1,12 @@
 <speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xml:lang="pl-PL">
     <voice name="pl-PL-MarekNeural">
-        Nie używamy AI tylko po to, żeby być fajnym. Używamy jej, aby zmiażdżyć punkty tarcia w przepływie pracy Pega.
+        Używamy AI, aby zmiażdżyć punkty tarcia w Pega.
         <break time="500ms"/>
-        Pierwszym tarciem jest Wlot. Ludzie nienawidzą wprowadzania danych. Używamy LLM do czytania nieustrukturyzowanych e-maili i ekstrakcji czystego JSON. Tworzenie spraw staje się natychmiastowe.
-        Drugim tarciem jest Triage. Dlaczego starszy agent ma routować proste zgłoszenia? Używamy AI do klasyfikacji. Jeśli model jest w 90% pewny, routujemy automatycznie. Jeśli nie, pytamy człowieka. To pozwala ekspertom skupić się na pracy eksperckiej.
-        Trzecim tarciem jest Akcja. Szkicowanie odpowiedzi zajmuje czas. Używamy GenAI do szkicowania e-maila na podstawie historii sprawy. Agent tylko sprawdza i wysyła. Tniemy Średni Czas Obsługi.
+        Pierwsze tarcie: Wlot (Intake). LLM czyta e-maile i tworzy czysty JSON.
+        Drugie tarcie: Triage. Jeśli model jest pewny w 90%, routujemy automatycznie.
+        Trzecie tarcie: Akcja. GenAI szkicuje odpowiedź, agent tylko zatwierdza.
         <break time="500ms"/>
-        Oblicz ROI: Zaoszczędź 5 minut na sprawie. Pomnóż przez swój wolumen. Uzasadnienie biznesowe pisze się samo.
-        Ale pamiętaj: Pega to mózg. AI to mięśnie. Pega trzyma stan, bezpieczeństwo i ścieżkę audytu. AI wykonuje tylko ciężką pracę.
+        Policzmy ROI. Jeśli zaoszczędzisz 5 minut na sprawie przy 10 tysiącach spraw, zyskujesz ponad 800 godzin miesięcznie. To się opłaca.
+        Pamiętaj: Pega to mózg (stan i bezpieczeństwo). AI to mięśnie (ciężka praca).
     </voice>
 </speak>

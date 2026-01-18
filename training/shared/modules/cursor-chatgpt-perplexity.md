@@ -5,38 +5,47 @@
   - **Perplexity**: The Knowledge Engine (Research, Citations).
   - **ChatGPT**: The Reasoning Engine (Drafting, Logic, Strategy).
   - **Cursor**: The Build Engine (Code, Config, Refactoring).
-  - Speaker notes: "Stop using the wrong tool. You wouldn't hammer a nail with a screwdriver."
+  - Speaker notes: "Stop using the wrong tool. You wouldn't hammer a nail with a screwdriver.
+    - **Analogy**: Perplexity is your Librarian. ChatGPT is your Ghostwriter. Cursor is your Mechanic."
 
 - Slide 2 — Decision Matrix (Polish: Macierz decyzyjna)
   - Need facts/news? -> Perplexity.
   - Need text/summary? -> ChatGPT.
   - Need file edits? -> Cursor.
-  - Need UI mock? -> MagicUI/Lovable (optional).
-  - Speaker notes: "Memorize this matrix. It saves hours of frustration."
+  - Speaker notes: "Memorize this matrix. It saves hours of frustration.
+    - **Walkthrough**: Ask audience 'I need to find a Pega Hotfix.' (Answer: Perplexity). 'I need to draft a user story.' (Answer: ChatGPT)."
 
 - Slide 3 — Business Use Case: Document Mgmt (Polish: Dokumentacja)
   - **Problem**: Scattered specs and wikis.
   - **Tool**: Notion AI or ChatGPT Projects.
   - **Action**: "Summarize these 5 PDFs into a single feature spec."
   - **ROI**: 5-10 hours/week saved.
+  - Speaker notes: "Show a 'before' (pile of PDFs) and 'after' (clean summary)."
 
 - Slide 4 — Business Use Case: Data Extraction (Polish: Ekstrakcja danych)
   - **Problem**: Manual entry from emails/forms.
   - **Tool**: ChatGPT (with RTF prompt) or Cursor (scripting).
   - **Action**: "Extract Client, Policy#, and Claim Amount to JSON."
   - **ROI**: 90% faster than manual entry.
+  - Speaker notes: "This is the #1 'Quick Win' for operations teams."
 
 - Slide 5 — Business Use Case: Coding & Config (Polish: Kod i Konfiguracja)
   - **Problem**: Legacy rules, missing tests.
   - **Tool**: Cursor.
   - **Action**: "Explain this Java step. Write a JUnit test for it."
   - **ROI**: 2-4x faster development cycle.
+  - Speaker notes: "Developers love this. It removes the 'fear of legacy code'."
 
 - Slide 6 — Pega Alignment (Polish: Kontekst Pega)
   - Research Pega 8.8 syntax (Perplexity).
   - Draft User Stories (ChatGPT).
   - Implement Unit Tests (Cursor).
   - Speaker notes: "This stack accelerates the entire Pega delivery lifecycle."
+
+### Deep Dive: How to Demo
+1.  **Perplexity**: Search "Latest Pega Infinity release notes". Show the citations. Click one to prove it's real.
+2.  **ChatGPT**: Paste a messy meeting transcript. Ask for "Action Items in a table". Show the speed.
+3.  **Cursor**: Open a dummy Java file. Highlight a method. Cmd+K: "Add comments and error handling." Show the diff.
 
 ### Audiobook Script (7 min + Q&A)
 "Let's talk tools. The biggest productivity killer is using the wrong AI for the job.

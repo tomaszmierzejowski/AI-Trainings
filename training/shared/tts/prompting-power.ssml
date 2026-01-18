@@ -7,10 +7,10 @@
         Task: Be specific. Refactor this activity to reduce database calls.
         Format: Define the output. Return a markdown table with columns: Issue, Fix, Impact.
         <break time="500ms"/>
-        Next, we use Few-Shot Prompting. If you need a specific JSON format for a Pega interface, paste two examples of valid JSON before your request. The model will copy the structure perfectly.
-        For complex logic, use Chain-of-Thought. Simply adding Think step-by-step forces the model to reason through the problem, drastically reducing logic errors in routing or eligibility rules.
+        Next, use Iterative Refinement. Don't accept the first draft. Ask the AI to critique its own work before giving the final answer.
+        For complex logic, use Chain-of-Thought. Simply adding Think step-by-step forces the model to reason through the problem, drastically reducing logic errors.
         <break time="500ms"/>
-        Finally, practice Decomposition. Don't ask for a whole application. Ask for the Data Model. Then the Case Stages. Then the UI. Assemble the pieces.
+        Finally, practice Laddering. Start with a simple prompt, test it, then add constraints one by one until it breaks or gets perfect.
         Safety is non-negotiable. Never paste real customer data. Use placeholders. If you wouldn't email it to a competitor, don't paste it in a prompt.
     </voice>
 </speak>

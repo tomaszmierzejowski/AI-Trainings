@@ -1,22 +1,67 @@
-## Tool Selection & Setup (Decision Tree)
+## Tool Selection & Business Workflows
 
-### Slide Outline
-- **The Stack**: Perplexity (Know) → ChatGPT (Draft) → Cursor (Build).
-- **Decision Tree**:
-  - Need facts/citations? -> Perplexity.
-  - Need text/creative/logic? -> ChatGPT.
-  - Need code/diffs/files? -> Cursor.
-- **Setup**: Config for privacy (Turn off training where possible).
+### Slides
+- Slide 1 — The AI Stack (Polish: Stos technologiczny)
+  - **Perplexity**: The Knowledge Engine (Research, Citations).
+  - **ChatGPT**: The Reasoning Engine (Drafting, Logic, Strategy).
+  - **Cursor**: The Build Engine (Code, Config, Refactoring).
+  - Speaker notes: "Stop using the wrong tool. You wouldn't hammer a nail with a screwdriver.
+    - **Analogy**: Perplexity is your Librarian. ChatGPT is your Ghostwriter. Cursor is your Mechanic."
 
-### Speaker Notes
-- **Perplexity**: "It's your research assistant that cites sources. Use it to find Pega documentation or public compliance rules."
-- **ChatGPT**: "The engine for drafting emails, user stories, and logic. Great for 'reasoning' tasks."
-- **Cursor**: "Your IDE on steroids. It sees your codebase. Use it to refactor rules, write tests, or explain legacy code."
-- **MagicUI/Lovable**: "Specialists for rapid UI prototyping. Use sparingly for demos, not production code."
+- Slide 2 — Decision Matrix (Polish: Macierz decyzyjna)
+  - Need facts/news? -> Perplexity.
+  - Need text/summary? -> ChatGPT.
+  - Need file edits? -> Cursor.
+  - Speaker notes: "Memorize this matrix. It saves hours of frustration.
+    - **Walkthrough**: Ask audience 'I need to find a Pega Hotfix.' (Answer: Perplexity). 'I need to draft a user story.' (Answer: ChatGPT)."
 
-### Audiobook Script (5 min)
-"Stop guessing which tool to use. Here is the decision tree.
-If you need facts, citations, or recent news—like 'What are the latest GDPR fines?'—use Perplexity. It searches the web and cites sources.
-If you need to draft content, summarize notes, or brainstorm logic—use ChatGPT. It's your reasoning engine.
-If you are touching code, files, or configuration—use Cursor. It understands your project context and can apply diffs directly.
-Don't paste code into ChatGPT if you can use Cursor. Don't ask Cursor for recent news. Use the right tool for the job to move fast and stay safe."
+- Slide 3 — Business Use Case: Document Mgmt (Polish: Dokumentacja)
+  - **Problem**: Scattered specs and wikis.
+  - **Tool**: Notion AI or ChatGPT Projects.
+  - **Action**: "Summarize these 5 PDFs into a single feature spec."
+  - **ROI**: 5-10 hours/week saved.
+  - Speaker notes: "Show a 'before' (pile of PDFs) and 'after' (clean summary)."
+
+- Slide 4 — Business Use Case: Data Extraction (Polish: Ekstrakcja danych)
+  - **Problem**: Manual entry from emails/forms.
+  - **Tool**: ChatGPT (with RTF prompt) or Cursor (scripting).
+  - **Action**: "Extract Client, Policy#, and Claim Amount to JSON."
+  - **ROI**: 90% faster than manual entry.
+  - Speaker notes: "This is the #1 'Quick Win' for operations teams."
+
+- Slide 5 — Business Use Case: Coding & Config (Polish: Kod i Konfiguracja)
+  - **Problem**: Legacy rules, missing tests.
+  - **Tool**: Cursor.
+  - **Action**: "Explain this Java step. Write a JUnit test for it."
+  - **ROI**: 2-4x faster development cycle.
+  - Speaker notes: "Developers love this. It removes the 'fear of legacy code'."
+
+- Slide 6 — Pega Alignment (Polish: Kontekst Pega)
+  - Research Pega 8.8 syntax (Perplexity).
+  - Draft User Stories (ChatGPT).
+  - Implement Unit Tests (Cursor).
+  - Speaker notes: "This stack accelerates the entire Pega delivery lifecycle."
+
+### Deep Dive: How to Demo
+1.  **Perplexity**: Search "Latest Pega Infinity release notes". Show the citations. Click one to prove it's real.
+2.  **ChatGPT**: Paste a messy meeting transcript. Ask for "Action Items in a table". Show the speed.
+3.  **Cursor**: Open a dummy Java file. Highlight a method. Cmd+K: "Add comments and error handling." Show the diff.
+
+### Audiobook Script (7 min + Q&A)
+"Let's talk tools. The biggest productivity killer is using the wrong AI for the job.
+**Perplexity** is your researcher. It browses the live web. Use it to find the latest Pega documentation, compliance laws, or industry news. It cites its sources.
+**ChatGPT** is your strategist. Use it to draft emails, summarize meeting notes, or brainstorm architecture. It is the best at pure reasoning.
+**Cursor** is your builder. It lives in your code editor. It sees your files. Use it to refactor legacy code, write unit tests, or explain complex logic.
+Let's look at real business cases.
+For **Document Management**, stop reading every page. Upload your PDFs to ChatGPT and ask for a synthesis. You just saved 5 hours.
+For **Data Extraction**, paste a messy email into ChatGPT and ask for JSON output. You just replaced manual data entry.
+For **Coding**, open a legacy file in Cursor and hit Command-K. Type 'Explain this and add comments'. You just documented your technical debt in seconds.
+The ROI comes from picking the right engine for the task."
+
+Likely Q&A:
+- Q: Can I paste code into ChatGPT?
+  A: For small snippets, yes. For whole files or project context, use Cursor—it's safer and context-aware.
+- Q: Is Perplexity better than Google?
+  A: For work, yes. It gives you the answer + citation, not just a list of links to click.
+- Q: What about free tools?
+  A: ChatGPT Free is great for text. Perplexity Free is great for search. Cursor has a free tier. You can start with zero budget.
