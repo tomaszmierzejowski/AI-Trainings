@@ -18,5 +18,8 @@
     "microsoft-cognitiveservices-speech-sdk": "^1.47.0",
     "say": "^0.16.0",
     "ws": "^8.19.0"
+  },
+  "dependencies": {
+    "msedge-tts": "^2.0.4"
   }
 }

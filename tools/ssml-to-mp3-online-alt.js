@@ -122,7 +122,8 @@ async function processFile(ssmlDir, audioDir, file) {
 async function main() {
   const jobs = [
     { src: "training/shared/tts", dest: "training/shared/audio-online" },
-    { src: "training/pega-poland/tts", dest: "training/pega-poland/audio-online" }
+    { src: "training/pega-poland/tts", dest: "training/pega-poland/audio-online" },
+    { src: "training/business-ai-masterclass/tts", dest: "training/business-ai-masterclass/audio-online" }
   ];
   for (const job of jobs) {
     if (!fs.existsSync(job.dest)) fs.mkdirSync(job.dest, { recursive: true });

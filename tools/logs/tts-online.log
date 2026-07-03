@@ -98,3 +98,260 @@
 2026-01-11T18:47:53.266Z success file=training\pega-poland\tts\pega-productivity.ssml output=training\pega-poland\audio-online\pega-productivity.mp3
 2026-01-11T18:47:53.269Z start alt file=training\pega-poland\tts\pega-workflow-ai.ssml lang=en chunks=5 service=google-tts-api
 2026-01-11T18:47:57.828Z success file=training\pega-poland\tts\pega-workflow-ai.ssml output=training\pega-poland\audio-online\pega-workflow-ai.mp3
+2026-01-26T07:53:47.547Z start file=training\shared\tts\ai-fundamentals.pl.ssml chunks=1 service=edge
+2026-01-26T07:53:47.845Z chunk fail service=edge attempt=1 err=Unexpected server response: 403
+2026-01-26T07:53:50.048Z chunk fail service=edge attempt=2 err=Unexpected server response: 403
+2026-01-26T07:53:54.240Z chunk fail service=edge attempt=3 err=Unexpected server response: 403
+2026-01-26T07:53:54.241Z failed file=training\shared\tts\ai-fundamentals.pl.ssml
+2026-01-26T07:53:54.243Z start file=training\shared\tts\ai-fundamentals.ssml chunks=1 service=edge
+2026-01-26T07:53:54.443Z chunk fail service=edge attempt=1 err=Unexpected server response: 403
+2026-01-26T07:53:56.661Z chunk fail service=edge attempt=2 err=Unexpected server response: 403
+2026-01-26T07:54:00.858Z chunk fail service=edge attempt=3 err=Unexpected server response: 403
+2026-01-26T07:54:00.859Z failed file=training\shared\tts\ai-fundamentals.ssml
+2026-01-26T07:54:00.861Z start file=training\shared\tts\builder-tools.ssml chunks=1 service=edge
+2026-01-26T07:54:01.068Z chunk fail service=edge attempt=1 err=Unexpected server response: 403
+2026-01-26T07:54:03.262Z chunk fail service=edge attempt=2 err=Unexpected server response: 403
+2026-01-26T07:54:07.470Z chunk fail service=edge attempt=3 err=Unexpected server response: 403
+2026-01-26T07:54:07.470Z failed file=training\shared\tts\builder-tools.ssml
+2026-01-26T07:54:07.473Z start file=training\shared\tts\cursor-chatgpt-perplexity.pl.ssml chunks=1 service=edge
+2026-01-26T07:54:07.697Z chunk fail service=edge attempt=1 err=Unexpected server response: 403
+2026-01-26T07:54:09.893Z chunk fail service=edge attempt=2 err=Unexpected server response: 403
+2026-01-26T07:54:14.107Z chunk fail service=edge attempt=3 err=Unexpected server response: 403
+2026-01-26T07:54:14.108Z failed file=training\shared\tts\cursor-chatgpt-perplexity.pl.ssml
+2026-01-26T07:54:14.110Z start file=training\shared\tts\cursor-chatgpt-perplexity.ssml chunks=1 service=edge
+2026-01-26T07:54:14.293Z chunk fail service=edge attempt=1 err=Unexpected server response: 403
+2026-01-26T07:54:16.556Z chunk fail service=edge attempt=2 err=Unexpected server response: 403
+2026-01-26T07:54:20.746Z chunk fail service=edge attempt=3 err=Unexpected server response: 403
+2026-01-26T07:54:20.746Z failed file=training\shared\tts\cursor-chatgpt-perplexity.ssml
+2026-01-26T07:54:20.748Z start file=training\shared\tts\governance-safety.pl.ssml chunks=1 service=edge
+2026-01-26T07:54:20.931Z chunk fail service=edge attempt=1 err=Unexpected server response: 403
+2026-01-26T07:54:23.126Z chunk fail service=edge attempt=2 err=Unexpected server response: 403
+2026-01-26T07:54:27.327Z chunk fail service=edge attempt=3 err=Unexpected server response: 403
+2026-01-26T07:54:27.328Z failed file=training\shared\tts\governance-safety.pl.ssml
+2026-01-26T07:54:27.329Z start file=training\shared\tts\governance-safety.ssml chunks=1 service=edge
+2026-01-26T07:54:27.538Z chunk fail service=edge attempt=1 err=Unexpected server response: 403
+2026-01-26T07:54:29.766Z chunk fail service=edge attempt=2 err=Unexpected server response: 403
+2026-01-26T07:54:33.998Z chunk fail service=edge attempt=3 err=Unexpected server response: 403
+2026-01-26T07:54:33.999Z failed file=training\shared\tts\governance-safety.ssml
+2026-01-26T07:54:34.000Z start file=training\shared\tts\pega-workflow-ai.pl.ssml chunks=1 service=edge
+2026-01-26T07:54:34.195Z chunk fail service=edge attempt=1 err=Unexpected server response: 403
+2026-01-26T07:54:36.404Z chunk fail service=edge attempt=2 err=Unexpected server response: 403
+2026-01-26T07:54:40.680Z chunk fail service=edge attempt=3 err=Unexpected server response: 403
+2026-01-26T07:54:40.681Z failed file=training\shared\tts\pega-workflow-ai.pl.ssml
+2026-01-26T07:54:40.685Z start file=training\shared\tts\pega-workflow-ai.ssml chunks=1 service=edge
+2026-01-26T07:54:40.875Z chunk fail service=edge attempt=1 err=Unexpected server response: 403
+2026-01-26T07:54:43.089Z chunk fail service=edge attempt=2 err=Unexpected server response: 403
+2026-01-26T07:54:47.337Z chunk fail service=edge attempt=3 err=Unexpected server response: 403
+2026-01-26T07:54:47.337Z failed file=training\shared\tts\pega-workflow-ai.ssml
+2026-01-26T07:54:47.339Z start file=training\shared\tts\productivity-recipes.ssml chunks=1 service=edge
+2026-01-26T07:54:47.527Z chunk fail service=edge attempt=1 err=Unexpected server response: 403
+2026-01-26T07:54:49.773Z chunk fail service=edge attempt=2 err=Unexpected server response: 403
+2026-01-26T07:54:53.975Z chunk fail service=edge attempt=3 err=Unexpected server response: 403
+2026-01-26T07:54:53.975Z failed file=training\shared\tts\productivity-recipes.ssml
+2026-01-26T07:54:53.977Z start file=training\shared\tts\prompting-power.pl.ssml chunks=1 service=edge
+2026-01-26T07:54:54.192Z chunk fail service=edge attempt=1 err=Unexpected server response: 403
+2026-01-26T07:54:56.414Z chunk fail service=edge attempt=2 err=Unexpected server response: 403
+2026-01-26T07:55:00.617Z chunk fail service=edge attempt=3 err=Unexpected server response: 403
+2026-01-26T07:55:00.618Z failed file=training\shared\tts\prompting-power.pl.ssml
+2026-01-26T07:55:00.619Z start file=training\shared\tts\prompting-power.ssml chunks=1 service=edge
+2026-01-26T07:55:00.807Z chunk fail service=edge attempt=1 err=Unexpected server response: 403
+2026-01-26T07:55:03.017Z chunk fail service=edge attempt=2 err=Unexpected server response: 403
+2026-01-26T07:55:07.212Z chunk fail service=edge attempt=3 err=Unexpected server response: 403
+2026-01-26T07:55:07.214Z failed file=training\shared\tts\prompting-power.ssml
+2026-01-26T07:55:07.215Z start file=training\pega-poland\tts\pega-builder-demos.ssml chunks=1 service=edge
+2026-01-26T07:55:07.411Z chunk fail service=edge attempt=1 err=Unexpected server response: 403
+2026-01-26T07:55:09.613Z chunk fail service=edge attempt=2 err=Unexpected server response: 403
+2026-01-26T07:55:13.822Z chunk fail service=edge attempt=3 err=Unexpected server response: 403
+2026-01-26T07:55:13.823Z failed file=training\pega-poland\tts\pega-builder-demos.ssml
+2026-01-26T07:55:13.824Z start file=training\pega-poland\tts\pega-productivity.ssml chunks=1 service=edge
+2026-01-26T07:55:14.018Z chunk fail service=edge attempt=1 err=Unexpected server response: 403
+2026-01-26T07:55:16.233Z chunk fail service=edge attempt=2 err=Unexpected server response: 403
+2026-01-26T07:55:20.479Z chunk fail service=edge attempt=3 err=Unexpected server response: 403
+2026-01-26T07:55:20.480Z failed file=training\pega-poland\tts\pega-productivity.ssml
+2026-01-26T07:55:20.481Z start file=training\pega-poland\tts\pega-workflow-ai.ssml chunks=1 service=edge
+2026-01-26T07:55:20.687Z chunk fail service=edge attempt=1 err=Unexpected server response: 403
+2026-01-26T07:55:22.888Z chunk fail service=edge attempt=2 err=Unexpected server response: 403
+2026-01-26T07:55:27.098Z chunk fail service=edge attempt=3 err=Unexpected server response: 403
+2026-01-26T07:55:27.099Z failed file=training\pega-poland\tts\pega-workflow-ai.ssml
+2026-01-26T07:55:27.100Z start file=training\business-ai-masterclass\tts\day1-script.ssml chunks=1 service=edge
+2026-01-26T07:55:27.295Z chunk fail service=edge attempt=1 err=Unexpected server response: 403
+2026-01-26T07:55:29.492Z chunk fail service=edge attempt=2 err=Unexpected server response: 403
+2026-01-26T07:55:33.697Z chunk fail service=edge attempt=3 err=Unexpected server response: 403
+2026-01-26T07:55:33.698Z failed file=training\business-ai-masterclass\tts\day1-script.ssml
+2026-01-26T07:55:33.700Z start file=training\business-ai-masterclass\tts\day2-script.ssml chunks=1 service=edge
+2026-01-26T07:55:33.909Z chunk fail service=edge attempt=1 err=Unexpected server response: 403
+2026-01-26T07:55:36.106Z chunk fail service=edge attempt=2 err=Unexpected server response: 403
+2026-01-26T07:55:40.309Z chunk fail service=edge attempt=3 err=Unexpected server response: 403
+2026-01-26T07:55:40.310Z failed file=training\business-ai-masterclass\tts\day2-script.ssml
+2026-01-26T07:55:40.311Z start file=training\business-ai-masterclass\tts\day3-script.ssml chunks=1 service=edge
+2026-01-26T07:55:40.492Z chunk fail service=edge attempt=1 err=Unexpected server response: 403
+2026-01-26T07:55:42.695Z chunk fail service=edge attempt=2 err=Unexpected server response: 403
+2026-01-26T07:55:46.892Z chunk fail service=edge attempt=3 err=Unexpected server response: 403
+2026-01-26T07:55:46.892Z failed file=training\business-ai-masterclass\tts\day3-script.ssml
+2026-01-26T07:56:23.685Z start alt file=training\shared\tts\ai-fundamentals.pl.ssml lang=pl chunks=3 service=google-tts-api
+2026-01-26T07:56:26.680Z success file=training\shared\tts\ai-fundamentals.pl.ssml output=training\shared\audio-online\ai-fundamentals.pl.mp3
+2026-01-26T07:56:26.684Z start alt file=training\shared\tts\ai-fundamentals.ssml lang=en chunks=8 service=google-tts-api
+2026-01-26T07:56:32.641Z success file=training\shared\tts\ai-fundamentals.ssml output=training\shared\audio-online\ai-fundamentals.mp3
+2026-01-26T07:56:32.645Z start alt file=training\shared\tts\builder-tools.ssml lang=en chunks=5 service=google-tts-api
+2026-01-26T07:56:36.684Z success file=training\shared\tts\builder-tools.ssml output=training\shared\audio-online\builder-tools.mp3
+2026-01-26T07:56:36.687Z start alt file=training\shared\tts\cursor-chatgpt-perplexity.pl.ssml lang=pl chunks=6 service=google-tts-api
+2026-01-26T07:56:39.525Z success file=training\shared\tts\cursor-chatgpt-perplexity.pl.ssml output=training\shared\audio-online\cursor-chatgpt-perplexity.pl.mp3
+2026-01-26T07:56:39.529Z start alt file=training\shared\tts\cursor-chatgpt-perplexity.ssml lang=en chunks=6 service=google-tts-api
+2026-01-26T07:56:45.021Z success file=training\shared\tts\cursor-chatgpt-perplexity.ssml output=training\shared\audio-online\cursor-chatgpt-perplexity.mp3
+2026-01-26T07:56:45.024Z start alt file=training\shared\tts\governance-safety.pl.ssml lang=pl chunks=3 service=google-tts-api
+2026-01-26T07:56:46.406Z success file=training\shared\tts\governance-safety.pl.ssml output=training\shared\audio-online\governance-safety.pl.mp3
+2026-01-26T07:56:46.408Z start alt file=training\shared\tts\governance-safety.ssml lang=en chunks=7 service=google-tts-api
+2026-01-26T07:56:51.548Z success file=training\shared\tts\governance-safety.ssml output=training\shared\audio-online\governance-safety.mp3
+2026-01-26T07:56:51.552Z start alt file=training\shared\tts\pega-workflow-ai.pl.ssml lang=pl chunks=3 service=google-tts-api
+2026-01-26T07:56:53.111Z success file=training\shared\tts\pega-workflow-ai.pl.ssml output=training\shared\audio-online\pega-workflow-ai.pl.mp3
+2026-01-26T07:56:53.115Z start alt file=training\shared\tts\pega-workflow-ai.ssml lang=en chunks=5 service=google-tts-api
+2026-01-26T07:56:58.715Z success file=training\shared\tts\pega-workflow-ai.ssml output=training\shared\audio-online\pega-workflow-ai.mp3
+2026-01-26T07:56:58.717Z start alt file=training\shared\tts\productivity-recipes.ssml lang=en chunks=7 service=google-tts-api
+2026-01-26T07:57:03.513Z success file=training\shared\tts\productivity-recipes.ssml output=training\shared\audio-online\productivity-recipes.mp3
+2026-01-26T07:57:03.516Z start alt file=training\shared\tts\prompting-power.pl.ssml lang=pl chunks=4 service=google-tts-api
+2026-01-26T07:57:05.822Z success file=training\shared\tts\prompting-power.pl.ssml output=training\shared\audio-online\prompting-power.pl.mp3
+2026-01-26T07:57:05.824Z start alt file=training\shared\tts\prompting-power.ssml lang=en chunks=5 service=google-tts-api
+2026-01-26T07:57:11.014Z success file=training\shared\tts\prompting-power.ssml output=training\shared\audio-online\prompting-power.mp3
+2026-01-26T07:57:11.017Z start alt file=training\pega-poland\tts\pega-builder-demos.ssml lang=en chunks=5 service=google-tts-api
+2026-01-26T07:57:15.035Z success file=training\pega-poland\tts\pega-builder-demos.ssml output=training\pega-poland\audio-online\pega-builder-demos.mp3
+2026-01-26T07:57:15.037Z start alt file=training\pega-poland\tts\pega-productivity.ssml lang=en chunks=6 service=google-tts-api
+2026-01-26T07:57:19.618Z success file=training\pega-poland\tts\pega-productivity.ssml output=training\pega-poland\audio-online\pega-productivity.mp3
+2026-01-26T07:57:19.621Z start alt file=training\pega-poland\tts\pega-workflow-ai.ssml lang=en chunks=5 service=google-tts-api
+2026-01-26T07:57:24.864Z success file=training\pega-poland\tts\pega-workflow-ai.ssml output=training\pega-poland\audio-online\pega-workflow-ai.mp3
+2026-01-26T07:57:24.867Z start alt file=training\business-ai-masterclass\tts\day1-script.ssml lang=en chunks=11 service=google-tts-api
+2026-01-26T07:57:33.835Z success file=training\business-ai-masterclass\tts\day1-script.ssml output=training\business-ai-masterclass\audio-online\day1-script.mp3
+2026-01-26T07:57:33.841Z start alt file=training\business-ai-masterclass\tts\day2-script.ssml lang=en chunks=9 service=google-tts-api
+2026-01-26T07:57:42.961Z success file=training\business-ai-masterclass\tts\day2-script.ssml output=training\business-ai-masterclass\audio-online\day2-script.mp3
+2026-01-26T07:57:42.964Z start alt file=training\business-ai-masterclass\tts\day3-script.ssml lang=en chunks=7 service=google-tts-api
+2026-01-26T07:57:49.647Z success file=training\business-ai-masterclass\tts\day3-script.ssml output=training\business-ai-masterclass\audio-online\day3-script.mp3
+2026-01-26T11:29:12.452Z start alt file=training\shared\tts\ai-fundamentals.pl.ssml lang=pl chunks=3 service=google-tts-api
+2026-01-26T11:29:14.953Z success file=training\shared\tts\ai-fundamentals.pl.ssml output=training\shared\audio-online\ai-fundamentals.pl.mp3
+2026-01-26T11:29:14.960Z start alt file=training\shared\tts\ai-fundamentals.ssml lang=en chunks=8 service=google-tts-api
+2026-01-26T11:29:21.851Z success file=training\shared\tts\ai-fundamentals.ssml output=training\shared\audio-online\ai-fundamentals.mp3
+2026-01-26T11:29:21.863Z start alt file=training\shared\tts\builder-tools.ssml lang=en chunks=5 service=google-tts-api
+2026-01-26T11:29:26.998Z success file=training\shared\tts\builder-tools.ssml output=training\shared\audio-online\builder-tools.mp3
+2026-01-26T11:29:27.002Z start alt file=training\shared\tts\cursor-chatgpt-perplexity.pl.ssml lang=pl chunks=6 service=google-tts-api
+2026-01-26T11:29:30.530Z success file=training\shared\tts\cursor-chatgpt-perplexity.pl.ssml output=training\shared\audio-online\cursor-chatgpt-perplexity.pl.mp3
+2026-01-26T11:29:30.535Z start alt file=training\shared\tts\cursor-chatgpt-perplexity.ssml lang=en chunks=6 service=google-tts-api
+2026-01-26T11:29:36.834Z success file=training\shared\tts\cursor-chatgpt-perplexity.ssml output=training\shared\audio-online\cursor-chatgpt-perplexity.mp3
+2026-01-26T11:29:36.843Z start alt file=training\shared\tts\governance-safety.pl.ssml lang=pl chunks=3 service=google-tts-api
+2026-01-26T11:29:39.683Z success file=training\shared\tts\governance-safety.pl.ssml output=training\shared\audio-online\governance-safety.pl.mp3
+2026-01-26T11:29:39.691Z start alt file=training\shared\tts\governance-safety.ssml lang=en chunks=7 service=google-tts-api
+2026-01-26T11:29:45.593Z success file=training\shared\tts\governance-safety.ssml output=training\shared\audio-online\governance-safety.mp3
+2026-01-26T11:29:45.599Z start alt file=training\shared\tts\pega-workflow-ai.pl.ssml lang=pl chunks=3 service=google-tts-api
+2026-01-26T11:29:48.299Z success file=training\shared\tts\pega-workflow-ai.pl.ssml output=training\shared\audio-online\pega-workflow-ai.pl.mp3
+2026-01-26T11:29:48.308Z start alt file=training\shared\tts\pega-workflow-ai.ssml lang=en chunks=5 service=google-tts-api
+2026-01-26T11:29:53.326Z success file=training\shared\tts\pega-workflow-ai.ssml output=training\shared\audio-online\pega-workflow-ai.mp3
+2026-01-26T11:29:53.330Z start alt file=training\shared\tts\productivity-recipes.ssml lang=en chunks=7 service=google-tts-api
+2026-01-26T11:29:58.956Z success file=training\shared\tts\productivity-recipes.ssml output=training\shared\audio-online\productivity-recipes.mp3
+2026-01-26T11:29:58.962Z start alt file=training\shared\tts\prompting-power.pl.ssml lang=pl chunks=4 service=google-tts-api
+2026-01-26T11:30:01.241Z success file=training\shared\tts\prompting-power.pl.ssml output=training\shared\audio-online\prompting-power.pl.mp3
+2026-01-26T11:30:01.245Z start alt file=training\shared\tts\prompting-power.ssml lang=en chunks=5 service=google-tts-api
+2026-01-26T11:30:06.219Z success file=training\shared\tts\prompting-power.ssml output=training\shared\audio-online\prompting-power.mp3
+2026-01-26T11:30:06.226Z start alt file=training\pega-poland\tts\pega-builder-demos.ssml lang=en chunks=5 service=google-tts-api
+2026-01-26T11:30:10.490Z success file=training\pega-poland\tts\pega-builder-demos.ssml output=training\pega-poland\audio-online\pega-builder-demos.mp3
+2026-01-26T11:30:10.494Z start alt file=training\pega-poland\tts\pega-productivity.ssml lang=en chunks=6 service=google-tts-api
+2026-01-26T11:30:15.331Z success file=training\pega-poland\tts\pega-productivity.ssml output=training\pega-poland\audio-online\pega-productivity.mp3
+2026-01-26T11:30:15.339Z start alt file=training\pega-poland\tts\pega-workflow-ai.ssml lang=en chunks=5 service=google-tts-api
+2026-01-26T11:30:20.567Z success file=training\pega-poland\tts\pega-workflow-ai.ssml output=training\pega-poland\audio-online\pega-workflow-ai.mp3
+2026-01-26T11:30:20.574Z start alt file=training\business-ai-masterclass\tts\day1-script.ssml lang=en chunks=9 service=google-tts-api
+2026-01-26T11:30:29.869Z success file=training\business-ai-masterclass\tts\day1-script.ssml output=training\business-ai-masterclass\audio-online\day1-script.mp3
+2026-01-26T11:30:29.875Z start alt file=training\business-ai-masterclass\tts\day2-script.ssml lang=en chunks=7 service=google-tts-api
+2026-01-26T11:30:36.784Z success file=training\business-ai-masterclass\tts\day2-script.ssml output=training\business-ai-masterclass\audio-online\day2-script.mp3
+2026-01-26T11:30:36.791Z start alt file=training\business-ai-masterclass\tts\day3-script.ssml lang=en chunks=6 service=google-tts-api
+2026-01-26T11:30:43.684Z success file=training\business-ai-masterclass\tts\day3-script.ssml output=training\business-ai-masterclass\audio-online\day3-script.mp3
+2026-01-30T09:54:44.416Z start file=training\shared\tts\ai-fundamentals.pl.ssml chunks=1 service=edge
+2026-01-30T09:54:44.762Z chunk fail service=edge attempt=1 err=Unexpected server response: 403
+2026-01-30T09:54:46.972Z chunk fail service=edge attempt=2 err=Unexpected server response: 403
+2026-01-30T09:54:51.176Z chunk fail service=edge attempt=3 err=Unexpected server response: 403
+2026-01-30T09:54:51.178Z failed file=training\shared\tts\ai-fundamentals.pl.ssml
+2026-01-30T09:54:51.181Z start file=training\shared\tts\ai-fundamentals.ssml chunks=1 service=edge
+2026-01-30T09:54:51.374Z chunk fail service=edge attempt=1 err=Unexpected server response: 403
+2026-01-30T09:54:53.568Z chunk fail service=edge attempt=2 err=Unexpected server response: 403
+2026-01-30T09:54:57.792Z chunk fail service=edge attempt=3 err=Unexpected server response: 403
+2026-01-30T09:54:57.792Z failed file=training\shared\tts\ai-fundamentals.ssml
+2026-01-30T09:54:57.795Z start file=training\shared\tts\builder-tools.ssml chunks=1 service=edge
+2026-01-30T09:54:57.982Z chunk fail service=edge attempt=1 err=Unexpected server response: 403
+2026-01-30T09:55:00.198Z chunk fail service=edge attempt=2 err=Unexpected server response: 403
+2026-01-30T09:55:04.430Z chunk fail service=edge attempt=3 err=Unexpected server response: 403
+2026-01-30T09:55:04.431Z failed file=training\shared\tts\builder-tools.ssml
+2026-01-30T09:55:04.433Z start file=training\shared\tts\cursor-chatgpt-perplexity.pl.ssml chunks=1 service=edge
+2026-01-30T09:55:04.625Z chunk fail service=edge attempt=1 err=Unexpected server response: 403
+2026-01-30T09:55:06.822Z chunk fail service=edge attempt=2 err=Unexpected server response: 403
+2026-01-30T09:55:11.028Z chunk fail service=edge attempt=3 err=Unexpected server response: 403
+2026-01-30T09:55:11.029Z failed file=training\shared\tts\cursor-chatgpt-perplexity.pl.ssml
+2026-01-30T09:55:11.030Z start file=training\shared\tts\cursor-chatgpt-perplexity.ssml chunks=1 service=edge
+2026-01-30T09:55:11.224Z chunk fail service=edge attempt=1 err=Unexpected server response: 403
+2026-01-30T09:55:13.422Z chunk fail service=edge attempt=2 err=Unexpected server response: 403
+2026-01-30T09:55:17.675Z chunk fail service=edge attempt=3 err=Unexpected server response: 403
+2026-01-30T09:55:17.676Z failed file=training\shared\tts\cursor-chatgpt-perplexity.ssml
+2026-01-30T09:55:17.679Z start file=training\shared\tts\governance-safety.pl.ssml chunks=1 service=edge
+2026-01-30T09:55:17.989Z chunk fail service=edge attempt=1 err=Unexpected server response: 403
+2026-01-30T09:55:20.198Z chunk fail service=edge attempt=2 err=Unexpected server response: 403
+2026-01-30T09:55:24.405Z chunk fail service=edge attempt=3 err=Unexpected server response: 403
+2026-01-30T09:55:24.406Z failed file=training\shared\tts\governance-safety.pl.ssml
+2026-01-30T09:55:24.409Z start file=training\shared\tts\governance-safety.ssml chunks=1 service=edge
+2026-01-30T09:55:24.617Z chunk fail service=edge attempt=1 err=Unexpected server response: 403
+2026-01-30T09:55:26.940Z chunk fail service=edge attempt=2 err=Unexpected server response: 403
+2026-01-30T09:55:31.151Z chunk fail service=edge attempt=3 err=Unexpected server response: 403
+2026-01-30T09:55:31.152Z failed file=training\shared\tts\governance-safety.ssml
+2026-01-30T09:55:31.153Z start file=training\shared\tts\pega-workflow-ai.pl.ssml chunks=1 service=edge
+2026-01-30T09:55:31.372Z chunk fail service=edge attempt=1 err=Unexpected server response: 403
+2026-01-30T09:55:33.568Z chunk fail service=edge attempt=2 err=Unexpected server response: 403
+2026-01-30T09:55:37.765Z chunk fail service=edge attempt=3 err=Unexpected server response: 403
+2026-01-30T09:55:37.766Z failed file=training\shared\tts\pega-workflow-ai.pl.ssml
+2026-01-30T09:55:37.768Z start file=training\shared\tts\pega-workflow-ai.ssml chunks=1 service=edge
+2026-01-30T09:55:38.007Z chunk fail service=edge attempt=1 err=Unexpected server response: 403
+2026-01-30T09:55:40.253Z chunk fail service=edge attempt=2 err=Unexpected server response: 403
+2026-01-30T09:55:44.549Z chunk fail service=edge attempt=3 err=Unexpected server response: 403
+2026-01-30T09:55:44.550Z failed file=training\shared\tts\pega-workflow-ai.ssml
+2026-01-30T09:55:44.552Z start file=training\shared\tts\productivity-recipes.ssml chunks=1 service=edge
+2026-01-30T09:55:44.733Z chunk fail service=edge attempt=1 err=Unexpected server response: 403
+2026-01-30T09:55:46.990Z chunk fail service=edge attempt=2 err=Unexpected server response: 403
+2026-01-30T09:55:51.204Z chunk fail service=edge attempt=3 err=Unexpected server response: 403
+2026-01-30T09:55:51.205Z failed file=training\shared\tts\productivity-recipes.ssml
+2026-01-30T09:55:51.206Z start file=training\shared\tts\prompting-power.pl.ssml chunks=1 service=edge
+2026-01-30T09:55:51.398Z chunk fail service=edge attempt=1 err=Unexpected server response: 403
+2026-01-30T09:55:53.628Z chunk fail service=edge attempt=2 err=Unexpected server response: 403
+2026-01-30T09:55:57.843Z chunk fail service=edge attempt=3 err=Unexpected server response: 403
+2026-01-30T09:55:57.844Z failed file=training\shared\tts\prompting-power.pl.ssml
+2026-01-30T09:55:57.846Z start file=training\shared\tts\prompting-power.ssml chunks=1 service=edge
+2026-01-30T09:55:58.042Z chunk fail service=edge attempt=1 err=Unexpected server response: 403
+2026-01-30T09:56:00.258Z chunk fail service=edge attempt=2 err=Unexpected server response: 403
+2026-01-30T09:56:04.527Z chunk fail service=edge attempt=3 err=Unexpected server response: 403
+2026-01-30T09:56:04.528Z failed file=training\shared\tts\prompting-power.ssml
+2026-01-30T09:56:04.530Z start file=training\shared\tts\test.ssml chunks=1 service=edge
+2026-01-30T09:56:04.780Z chunk fail service=edge attempt=1 err=Unexpected server response: 403
+2026-01-30T09:56:07.059Z chunk fail service=edge attempt=2 err=Unexpected server response: 403
+2026-01-30T09:56:11.270Z chunk fail service=edge attempt=3 err=Unexpected server response: 403
+2026-01-30T09:56:11.272Z failed file=training\shared\tts\test.ssml
+2026-01-30T09:56:11.274Z start file=training\pega-poland\tts\pega-builder-demos.ssml chunks=1 service=edge
+2026-01-30T09:56:11.478Z chunk fail service=edge attempt=1 err=Unexpected server response: 403
+2026-01-30T09:56:13.690Z chunk fail service=edge attempt=2 err=Unexpected server response: 403
+2026-01-30T09:56:17.879Z chunk fail service=edge attempt=3 err=Unexpected server response: 403
+2026-01-30T09:56:17.880Z failed file=training\pega-poland\tts\pega-builder-demos.ssml
+2026-01-30T09:56:17.882Z start file=training\pega-poland\tts\pega-productivity.ssml chunks=1 service=edge
+2026-01-30T09:56:18.089Z chunk fail service=edge attempt=1 err=Unexpected server response: 403
+2026-01-30T09:56:20.274Z chunk fail service=edge attempt=2 err=Unexpected server response: 403
+2026-01-30T09:56:24.511Z chunk fail service=edge attempt=3 err=Unexpected server response: 403
+2026-01-30T09:56:24.512Z failed file=training\pega-poland\tts\pega-productivity.ssml
+2026-01-30T09:56:24.514Z start file=training\pega-poland\tts\pega-workflow-ai.ssml chunks=1 service=edge
+2026-01-30T09:56:24.724Z chunk fail service=edge attempt=1 err=Unexpected server response: 403
+2026-01-30T09:56:26.924Z chunk fail service=edge attempt=2 err=Unexpected server response: 403
+2026-01-30T09:56:31.155Z chunk fail service=edge attempt=3 err=Unexpected server response: 403
+2026-01-30T09:56:31.156Z failed file=training\pega-poland\tts\pega-workflow-ai.ssml
+2026-01-30T09:56:31.158Z start file=training\business-ai-masterclass\tts\day1-script.ssml chunks=1 service=edge
+2026-01-30T09:56:31.360Z chunk fail service=edge attempt=1 err=Unexpected server response: 403
+2026-01-30T09:56:33.571Z chunk fail service=edge attempt=2 err=Unexpected server response: 403
+2026-01-30T09:56:37.795Z chunk fail service=edge attempt=3 err=Unexpected server response: 403
+2026-01-30T09:56:37.796Z failed file=training\business-ai-masterclass\tts\day1-script.ssml
+2026-01-30T09:56:37.799Z start file=training\business-ai-masterclass\tts\day2-script.ssml chunks=1 service=edge
+2026-01-30T09:56:38.011Z chunk fail service=edge attempt=1 err=Unexpected server response: 403
+2026-01-30T09:56:40.249Z chunk fail service=edge attempt=2 err=Unexpected server response: 403
+2026-01-30T09:56:44.508Z chunk fail service=edge attempt=3 err=Unexpected server response: 403
+2026-01-30T09:56:44.509Z failed file=training\business-ai-masterclass\tts\day2-script.ssml
+2026-01-30T09:56:44.511Z start file=training\business-ai-masterclass\tts\day3-script.ssml chunks=1 service=edge
+2026-01-30T09:56:44.713Z chunk fail service=edge attempt=1 err=Unexpected server response: 403
+2026-01-30T09:56:46.958Z chunk fail service=edge attempt=2 err=Unexpected server response: 403
+2026-01-30T09:56:51.153Z chunk fail service=edge attempt=3 err=Unexpected server response: 403
+2026-01-30T09:56:51.155Z failed file=training\business-ai-masterclass\tts\day3-script.ssml
