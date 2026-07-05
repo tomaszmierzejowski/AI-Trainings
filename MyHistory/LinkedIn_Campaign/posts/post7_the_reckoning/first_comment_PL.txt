@@ -1,0 +1,9 @@
+Ten post zamyka 7-częściową serię "Kod, którego nikt nie przeczytał" — ale nie kończy rozmowy.
+
+Od przyszłego tygodnia publikuję w każdy czwartek o tym, co pełna analiza kodu zmienia w praktyce: metoda tydzień po tygodniu, pytania, które warto zadać każdemu dostawcy audytu, i jak liczby z tego posta wyglądają od środka projektu.
+
+Jeśli śledziliście serię: komentarze i wiadomości były jej najlepszą częścią. Dziękuję.
+
+Jeśli dopiero tu trafiliście: każdy post jest samodzielny. Zacznijcie od tego, którego tytuł opisuje Waszą platformę.
+
+I jeszcze słowo o stronie komercyjnej, bo wolę to powiedzieć, niż żebyście się domyślali: jestem architektem, nie handlowcem. Gdy rozmowa jest warta wyceny, angażuję właściwy zespół Sopra Steria. Pierwsza rozmowa jest zawsze moja — i zawsze szczera, także wtedy, gdy szczera odpowiedź brzmi "nie jesteśmy właściwym wyborem".

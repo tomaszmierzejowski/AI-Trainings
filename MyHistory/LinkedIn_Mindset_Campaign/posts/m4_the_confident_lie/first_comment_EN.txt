@@ -1,0 +1,7 @@
+The pattern behind error #3, for anyone who wants the mechanism:
+
+An inverted conclusion works because it recruits three allies — fluent prose (signals competence), a true statistic (signals rigor), and our own hope (nobody WANTS the numbers to be bad). Psychologists call the umbrella effect automation bias: we under-scrutinize output that arrives looking authoritative.
+
+The defense is structural, not motivational. You can't tell people "be more careful" — carefulness doesn't survive a busy Tuesday. You give them an order of checking that catches the worst first. That 60-second sequence is next week's post.
+
+(And no, I won't publish the exercise document itself — walking a live room through it is the point. But the three-error taxonomy above is yours to use: number, source, conclusion. Audit your last AI summary against it.)

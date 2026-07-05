@@ -1,0 +1,11 @@
+TRIGGER 1 — paste as reply to any engineering comment:
+"'Unable to deploy for two years' — in my experience, the root cause is almost never technical complexity alone. It's documentation loss compounding over time. Has anyone here diagnosed a similar situation? What was the actual root cause when you found it?"
+
+TRIGGER 2 — paste as reply to any leadership comment:
+"The team that handed us this system wasn't failing. They were working without a complete map of what they'd built over time. That distinction matters: the solution wasn't better developers or better processes. It was a complete read of the code. The knowledge of how to deploy it was in there — it had never been lost, just unread."
+
+TRIGGER 3 — paste to start a thread if no substantive comment after 90 minutes:
+"For CTOs and VPs Engineering: how confident are you that your team could fully redeploy your most critical system if the three people who know it best left next month? That question has a specific answer hiding in your source code."
+
+FOLLOW-UP if no response after 2h:
+Add a comment describing the environment reconstruction process technically — this attracts engineers who amplify to their networks.

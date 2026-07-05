@@ -1,0 +1,11 @@
+TRIGGER 1 — paste as reply to any security-focused comment:
+"For anyone managing enterprise platforms: have you had a full authentication surface audit against source code — not just API documentation or network-layer scanning? Genuinely curious how common this is in practice, because the methodological difference is what produced the 529."
+
+TRIGGER 2 — paste as reply to any CTO/VP Eng comment:
+"The uncomfortable question: who in your organization is responsible for knowing the total number of API endpoints your platform currently exposes? If there's no single clean answer, that gap is the answer."
+
+TRIGGER 3 — paste to start a thread if no substantive comment after 90 minutes:
+"To any CISO or security lead reading this: does 'security assessment' in your organization typically include full code analysis, or API and network layer testing? There's a methodological gap between those two approaches. The 529 number lives in that gap."
+
+FOLLOW-UP if no response after 2h:
+Personally DM the 10 highest-value connections with CISO/CTO/VP Eng titles: "Shared something today about what code analysis finds that security scans miss. The number is specific and verified — not a marketing claim. Thought it was worth surfacing directly. [link]"

@@ -1,0 +1,25 @@
+Dostaliśmy 20 połączonych aplikacji. Nikt nie wiedział, jak wszystkie są ze sobą powiązane.
+
+Ani architekci. Ani dostawcy. Ani zespół, który utrzymywał je przez lata.
+
+Mieli dokumentację. Mieli diagramy architektury.
+
+Diagramy były błędne.
+
+Oto co znaleźliśmy:
+
+187 endpointów API — odkrytych i sklasyfikowanych w całej platformie.
+98 połączeń integracyjnych — zmapowanych w 7+ różnych protokołach.
+3 tygodnie — od pierwszego skanu kodu do kompletnej mapy drogowej modernizacji.
+
+Dla porównania: tradycyjne discovery dla takiego zakresu zajmuje 8–14 tygodni, z 3–5 starszymi konsultantami pokrywającymi ułamek kodu. Koszt tego podejścia dla tego zakresu: 2,3 mln NOK. Nasze zaangażowanie: 500 tys. NOK.
+
+Pokryliśmy całą platformę. Każdą aplikację. Każde połączenie.
+
+Produktem końcowym nie był slajd. Był to interaktywny raport, w którym każde odkrycie jest powiązane z konkretną linią kodu źródłowego. Klient może zweryfikować każde twierdzenie. Dowody są.
+
+Co objęło Twoje ostatnie discovery?
+
+Każda liczba zweryfikowana. Każde odkrycie powiązane z kodem źródłowym.
+
+#AnalizaKodu #ModernizacjaAplikacji #LegacySystems #SopraSteria #ArchitekturaKorporacyjna

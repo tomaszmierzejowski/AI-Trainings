@@ -1,0 +1,9 @@
+This closes the 7-part series "The Code Nobody Read" — but not the conversation.
+
+Starting next week, I'm publishing every Thursday on what full codebase analysis changes in practice: the method, week by week; the questions to ask any assessment vendor; and what the numbers above look like from inside an engagement.
+
+If you've followed the series: the comments and DMs have been the best part. Thank you.
+
+If you've just arrived: every post stands alone. Start with the one whose title describes your platform.
+
+And a note on how this works commercially, since I'd rather say it than have you wonder: I'm an architect, not a salesperson. When a conversation is worth scoping, I bring in the right Sopra Steria team. The first conversation is always mine, and it's always honest — including when the honest answer is "we're not the right fit."

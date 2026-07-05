@@ -1,0 +1,32 @@
+For two years, a government research team could not deploy their own system.
+
+Not "deployed slowly." Not "deployed with problems."
+
+Could not deploy. At all.
+
+Every attempt failed at a different point. Undocumented dependencies. Missing configurations. Changes nobody recorded. The failures weren't consistent — which made them nearly impossible to diagnose.
+
+The team wasn't incompetent. They were working without a map.
+
+We were brought in. Here is what we did differently:
+
+We didn't read the documentation. We read the code.
+
+→ Mapped the environment from source code outward
+→ Traced every dependency
+→ Reconstructed every configuration
+→ Surfaced 200+ security vulnerabilities along the way
+
+One month later: a working production deployment.
+
+Two years blocked. One month of systematic analysis. That ratio is not about talent. It's about method.
+
+The system is mission-critical in the literal sense — when it can't deploy, national research stops. Estimated 16x ROI through prevented failure. "Estimated," because prevented losses are projected, not measured. Every other number in this post is verified.
+
+Here's my question for you:
+
+What is the longest something has stayed "temporarily blocked" in your organization — and what was the real reason?
+
+Every number verified. Every finding traced to source code.
+
+#LegacyModernization #EnterpriseIT #SopraSteria

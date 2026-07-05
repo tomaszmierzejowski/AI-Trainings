@@ -1,0 +1,13 @@
+VARIANT A (primary — v2):
+For 14 years, I read maybe 20% of any codebase I assessed. Everyone did. That's what an enterprise assessment was.
+
+VARIANT B (test):
+Enterprise architects ask me one question more than any other: "Doesn't AI hallucinate?" Yes. Constantly. And I still use it on every engagement.
+
+VARIANT C (stat-led):
+A peer-reviewed study of 4,867 developers: 26% more completed tasks with AI. But that's not the number that changed my career. This one is: 20%.
+
+RECOMMENDATION: Use A. It's a first-person confession — the single highest-performing hook pattern on LinkedIn for expert audiences, because it costs the author something. It also implicates the reader's own vendors ("everyone did") without attacking anyone. B was the old primary; it frames the post as an AI debate, which invites generic AI-skeptic comments instead of architect war stories. Keep B as the pivot line INSIDE the post (it's there in v2). C for a data-driven audience retry.
+
+WHY THE OLD HOOK UNDERPERFORMED (learning from Posts 0–4):
+Opening with a question about AI hallucination makes the post about AI. Voice rule 3 says AI is a tool, never the subject — the old hook broke the campaign's own rule. The confession hook makes the post about the reader's unread codebase again.

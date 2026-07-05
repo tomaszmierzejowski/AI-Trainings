@@ -1,0 +1,14 @@
+GRAPHIC — S2-4 THE 10 QUESTIONS
+
+Preferred format: 11-slide DOCUMENT POST (PDF), not a single image. Slide skeleton:
+- Slide 1 (cover): dark purple-black (#1A0A2E), huge white text "10 questions that make assessment vendors uncomfortable.", orange (#E8640A) subline "Ask all 10 anyway." Small footer: "from the team that answers all 10 · Sopra Steria".
+- Slides 2–11: one question each. Layout per slide: giant orange question number (01–10) top-left, question in large white sans-serif center, and at the bottom a thin purple divider with a one-line "What a good answer sounds like:" hint in gray italic. Example slide 2 hint: "A percentage. Stated without hesitation."
+- Slide 11 footer adds: "Question 10 is the one that matters." + CTA "Save this for your next vendor meeting."
+
+Build with carousels/generate_all.py patterns (brand.py constants) or Canva. Export PDF 1080×1350 per page.
+
+SINGLE-IMAGE ALTERNATIVE (if document post not possible):
+PRIMARY PROMPT (text-capable model):
+A clean checklist card pinned on a dark purple-black background (#1A0A2E): a white rounded rectangle titled in dark purple bold "10 QUESTIONS FOR YOUR NEXT ASSESSMENT VENDOR", listing three visible sample lines in dark gray — "1. What % of our codebase will you actually READ?", "2. Will every finding cite file and line?", "3. What will you list as NOT examined?" — followed by a soft fade and an orange (#E8640A) banner across the lower edge reading "7 more in the post ↓". Flat editorial style, subtle drop shadow, no people, no logos. 4:5 vertical, 1080×1350.
+
+ALT TEXT: Checklist card titled "10 questions for your next assessment vendor", first three questions visible, seven more in the post.

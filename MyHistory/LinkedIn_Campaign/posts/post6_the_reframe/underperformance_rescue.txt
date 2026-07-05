@@ -1,0 +1,18 @@
+THRESHOLD: Under 300 impressions at hour 6, OR under 4 meaningful comments at hour 8.
+
+ACTION 1 — Add a technical comment at hour 4:
+"For the engineers in my network — I want to be concrete about what 'verify every finding' means in practice.
+
+When the AI-accelerated analysis produces a finding — say, 'endpoint X has no authentication' — the verification step is:
+1. Locate the exact line reference in the source code.
+2. Read the handler or controller code at that location.
+3. Confirm the authentication check is absent (not just that the AI said so).
+4. Check if there's a middleware layer or gateway that applies authentication upstream.
+5. Document the finding with the file name, line number, and the specific code pattern.
+
+Only after step 5 does the finding enter the client report. This is what 'every finding traces to source code' means. It's not a slogan."
+
+ACTION 2 — DM 10 Senior Architect / VP Eng / CTO connections:
+"Shared a post today about what AI actually does in modernization work — and what it doesn't replace. The verification step is where the value sits. [link]"
+
+ACTION 3 — If video format was used and underperforms: publish the text fallback version as a new post 48h later, noting "For those who prefer reading."

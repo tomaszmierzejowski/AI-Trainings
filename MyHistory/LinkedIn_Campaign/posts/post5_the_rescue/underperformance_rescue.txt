@@ -1,0 +1,19 @@
+THRESHOLD: Under 250 impressions at hour 6, OR under 4 meaningful comments at hour 8.
+
+ACTION 1 — Add a technical comment at hour 3:
+"Several people have asked how you reconstruct a deployment environment from source code when the documentation is missing or wrong.
+
+The process in this engagement:
+
+1. Static analysis of all build files, dependency manifests, and configuration references in the source code — not the deployed environment.
+2. Dependency graph construction: every library, version pin, and transitive dependency traced to its declaration.
+3. Environment variable mapping: every reference to environment configuration traced to where it was consumed and what values were valid.
+4. Deployment sequence reconstruction: order-of-operations inferred from code dependencies and startup initialization logic.
+
+None of this required access to the broken environment. Everything was in the code. That's the principle."
+
+ACTION 2 — DM 10 VP Engineering / CTO / Head of Platform connections:
+"Shared something today about a system that was unable to deploy for two years — and what it took to fix it. The root cause is more common than people admit. [link]"
+
+ACTION 3 — Day 2 if still underperforming:
+Boost £25–50, target VP Engineering, DevOps, Platform Engineering, Enterprise Architecture functions.

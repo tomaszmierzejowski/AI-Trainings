@@ -1,0 +1,12 @@
+VARIANT A (primary):
+My kids wanted a playhouse. I don't know how to design buildings. An hour later I was holding architectural drawings.
+
+VARIANT B (test):
+"My kids want a little house." One sentence to an AI. One hour. Professional blueprints. Zero architecture knowledge.
+
+VARIANT C (reflection-led):
+Everyone has a "little house" — the thing they never started because starting required expertise they don't have. Mine was an actual little house.
+
+RECOMMENDATION: Use A — personal, visual, zero jargon, and the gap (how?) resolves only past the fold. B was already used in Post 0 of the Modernization campaign — DO NOT reuse if the audiences overlap heavily; A retells the story fresh for people who saw Post 0. C is the most shareable framing and the best closing line — it's used in the body instead.
+
+PHOTO NOTE: This post should use a REAL photo (the actual playhouse, or the drawings next to it) if one exists — authentic beats generated 10:1 on personal stories, and this is the campaign's personal-trust anchor. Generated fallback in graphic_brief.txt.

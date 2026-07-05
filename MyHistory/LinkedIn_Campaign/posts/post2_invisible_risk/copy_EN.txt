@@ -1,0 +1,25 @@
+529 endpoints with no authentication.
+
+That is what we found in a single enterprise platform. No production access. No penetration testing. Just reading the code.
+
+Nobody on the team knew they were there.
+
+I want to be careful here because this is not a story about negligence. The team that built this platform was skilled. The people maintaining it were diligent. They ran security scans. They followed their processes.
+
+The problem is that security scans test what they're pointed at. They don't read code. And when a platform grows across years and teams and acquisitions, endpoints accumulate in corners that nobody maps back to the security perimeter.
+
+You can only find them by reading everything.
+
+We also found: 100 business rules extracted from code across 17 modules. Rules embedded so deep that no single person could enumerate them manually. A compliance posture that, under GDPR Article 83(5), carried potential exposure of up to €20 million or 4% of annual global turnover.
+
+Not theoretical risks. Real findings. Verified against source code, line by line.
+
+Your development team is not hiding these problems. They cannot see them at scale. Nobody can — manually.
+
+How many unauthenticated endpoints are in your platform?
+
+If you're not certain, that uncertainty is worth examining.
+
+Every number verified. Every finding traced to source code.
+
+#CyberSecurity #GDPRCompliance #LegacyCode #SopraSteria #EnterpriseArchitecture

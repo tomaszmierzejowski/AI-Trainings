@@ -1,0 +1,12 @@
+GRAPHIC — M5 THE FRICTION MAP
+
+The one idea the image must carry: four invisible walls between a capable person and the tool — none of them made of knowledge.
+
+PRIMARY PROMPT (text-capable model):
+A conceptual top-down diagram on light background (#F8F6FC): a small purple (#4D1D82) human figure icon on the left, a glowing orange (#E8640A) AI spark icon on the right, and between them four tall vertical wall segments in different shades of gray-purple, each labeled in white text on the wall: "FEAR — 'what if I look incompetent?'", "IDENTITY — 'then what am I for?'", "TRUST — 'it lied to me once'", "HABIT — 'my old way just… runs'". The HABIT wall is visibly the thickest. A small annotation arrow pointing at all four walls with dark-purple text: "none of these is a knowledge gap". Headline top in bold dark purple: "Why your best people quietly don't use AI." Flat vector, clean, generous white space, no logos. 4:5 vertical, 1080×1350.
+
+NO-TEXT FALLBACK (Midjourney):
+Top-down minimalist diagram of a small purple figure separated from a glowing orange orb by four parallel walls of increasing thickness in muted violet-gray tones, on a pale lavender-white background, flat vector illustration style, conceptual, clean, no text, no faces --ar 4:5 --v 6 --style raw
+Then overlay the four wall labels + headline in Canva per copy above.
+
+ALT TEXT: Diagram of four walls between a person and AI — fear of looking incompetent, identity threat, miscalibrated trust, and habit inertia — annotated "none of these is a knowledge gap."

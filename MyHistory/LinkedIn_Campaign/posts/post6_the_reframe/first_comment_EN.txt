@@ -1,0 +1,8 @@
+Research links for anyone who wants to check the numbers (please do — that's the point of this series):
+
+— Cui, Demirer, Jaffe, Musolff, Peng, Salz. "Generative AI and the Automation of Knowledge Work." Management Science. Peer-reviewed RCT, 4,867 developers: https://pubsonline.informs.org/doi/10.1287/mnsc.2025.00535
+— National Australia Bank + Cursor, 6,000 developers, legacy modernization 3x faster: https://cursor.com/blog/nab
+
+Worth noting from the Cui study: the productivity gains varied enormously between developers. What predicted the benefit wasn't seniority — it was adoption behavior. The tool didn't make people better. The workflow did.
+
+"AI-augmented architect" is how I describe what I do because it's literally accurate. The AI amplifies coverage. The architect provides judgment. Neither works without the other.

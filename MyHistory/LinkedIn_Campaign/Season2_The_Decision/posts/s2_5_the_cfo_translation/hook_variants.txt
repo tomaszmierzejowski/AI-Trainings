@@ -1,0 +1,12 @@
+VARIANT A (primary):
+Your CFO doesn't reject modernization budgets. Your CFO rejects unpriced uncertainty.
+
+VARIANT B (test):
+The engineer says: "We need an assessment." The CFO hears: "Give me money to find out if I need more money." Here's the translation that fixes it.
+
+VARIANT C (steal-this led):
+Steal this paragraph for your next budget meeting. It has funded more assessments than any slide deck I've written.
+
+RECOMMENDATION: Use A — a crisp reframe in the first line, and it flatters the CFO rather than attacking finance (CFOs and CIOs both reshare it). B dramatizes the misunderstanding and is the natural video hook. C works only if the claim is defensible — soften to "It's the framing that has worked best in my experience" if not.
+
+GRAPHIC: see graphic_brief.txt — the translation card.

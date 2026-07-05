@@ -1,0 +1,29 @@
+Najdroższy slajd w korporacyjnym IT zawiera jedno ciche założenie, o którym nikt Ci nie mówi.
+
+Zakłada, że konsultanci przeczytali Twój kod.
+
+Nie przeczytali. Nie cały.
+
+Tak nie działa discovery w korporacjach. Zespoły starszych konsultantów, rozliczanych po 1500–2000 euro za dzień, rozmawiają z Twoimi architektami. Przeglądają dokumentację. Próbkują fragmenty kodu. Osiem do dwunastu tygodni. Produkują raport.
+
+Raport jest mniej więcej prawdziwy.
+
+„Mniej więcej" robi w tym zdaniu ogromną pracę.
+
+W ciągu ostatnich 18 miesięcy przeanalizowaliśmy sześć korporacyjnych platform z pełnym pokryciem kodu. Nie próbki. Nie dokumentacja. Każda linia. Każdy endpoint. Każda integracja. Każdy przepływ danych.
+
+Oto fragment tego, co znaleźliśmy — a czego tradycyjne analizy nie wykryły:
+
+— 529 endpointów API bez uwierzytelniania. Na jednej platformie. Nikt w zespole nie wiedział, że istnieją.
+— 98 połączeń integracyjnych na platformie, w której dokumentacja wymieniała 30.
+— Logika biznesowa osadzona w 17 modułach, której żadna jedna osoba nie mogła ręcznie wyliczyć.
+
+To nie przypadki brzegowe. To typowe odkrycia.
+
+Twoja platforma prawie na pewno zawiera podobne. Pytanie nie brzmi, czy tam są.
+
+Pytanie brzmi: kto przeczyta je pierwszy.
+
+[Przewiń, żeby zobaczyć metodologię — i zweryfikowane wyniki.]
+
+#ModernizacjaIT #ModernizacjaAplikacji #ArchitekturaKorporacyjna #SopraSteria #DługTechniczny

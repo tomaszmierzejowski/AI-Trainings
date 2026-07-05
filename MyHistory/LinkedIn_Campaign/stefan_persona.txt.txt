@@ -1,0 +1,18 @@
+Stefan is 47. VP Engineering at a 2,800-person Nordic financial 
+services or industrial enterprise. His platform has been running 
+for 20 years. He has a 160-slide consulting deck that describes 
+his legacy system. Nobody actually read all the code.
+
+He has tried: code analysis tooling subscriptions (unactionable 
+dashboards), a 3-week discovery sprint covering 12% of the 
+codebase, a partial rewrite abandoned at month 5.
+
+What he wants: certainty about what is actually in his platform.
+What stops him: every vendor tells a story. Nobody shows the code.
+
+His LinkedIn behavior: reads in the morning, skips anything that 
+sounds like marketing, stops for a specific uncomfortable number 
+or a story that contains the exact kind of failure he recognizes.
+
+His 3am fear: the senior engineer who knows the dangerous parts 
+is 57 and talking about retirement.

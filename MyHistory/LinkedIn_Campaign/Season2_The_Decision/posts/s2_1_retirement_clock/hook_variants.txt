@@ -1,0 +1,12 @@
+VARIANT A (primary):
+Somewhere in your company there is one engineer who knows where the bodies are buried. You know the name. You just thought of it.
+
+VARIANT B (test):
+The most expensive retirement in enterprise IT hasn't happened yet. It's on a calendar in your HR system.
+
+VARIANT C (number-led):
+20 years of platform. 17 modules of business logic. 1 person who could explain them. What happens when the 1 retires?
+
+RECOMMENDATION: Use A. "You just thought of it" is a direct-address trap — the reader involuntarily complies, which creates the strongest possible open. B is the best video hook (save for TikTok). C for the analytics-minded retry.
+
+GRAPHIC: see graphic_brief.txt — the calendar-page visual.

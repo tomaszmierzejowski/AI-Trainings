@@ -1,0 +1,29 @@
+W styczniu otrzymałem przekazaną wiadomość.
+
+Napisała ją badaczka o imieniu Birgit. Napisała ją w chwili, gdy dowiedziała się, że jej aplikacja znów działa.
+
+To była Wigilia.
+
+Nie przypadkowa data. Wigilia w Polsce — i dla norweskich rodzin — to wieczór, kiedy wszystko, co ważne, powinno być na swoim miejscu. Wiadomość Birgit dotarła właśnie wtedy.
+
+Barnas Plattform. Ogólnokrajowy norweski program badawczy wspierający poczucie własnej wartości dzieci w przedszkolach. Zbudowany na Xamarin — platformie, która osiągnęła koniec wsparcia w 2024 roku. Pod koniec 2025 roku Google Play blokował aktualizacje. Styczniowe uruchomienie było na wyciągnięcie ręki. Setki rodzin miały stracić dostęp do czegoś, co naprawdę miało znaczenie.
+
+Mieliśmy cztery dni.
+
+Nie będę udawać, że drugiego dnia nie było momentu, gdy build się wysypał i cztery dni poczuły się jak zła obietnica.
+
+Dostarczyliśmy. 92% istniejącego kodu zachowane. Ponad 1200 automatycznych transformacji. 23 punkty decyzyjne zwalidowane ręcznie przez starszego architekta. Oba sklepy z aplikacjami — przy pierwszym zgłoszeniu. Zero regresji. 15% poprawa wydajności.
+
+Oto co napisała Birgit:
+
+„Trudno opisać, jak wielką ulgę i radość poczułam w tamtej chwili. To oznacza, że nasz wielki projekt badawczy 'Dorastanie z dobrą samooceną w plecaku!' może teraz przebiegać zgodnie z planem."
+
+Nie każdy projekt dotyczy architektury korporacyjnej i redukcji kosztów. Czasem chodzi o to, żeby dzieci i rodziny nie straciły dostępu do czegoś, co naprawdę ma znaczenie.
+
+Uniknięty koszt: ponad 80 000 EUR na przepisanie kodu od zera. Termin platformy, który zniszczyłby program badawczy — dotrzymany.
+
+Cztery dni.
+
+Każda liczba zweryfikowana. Każde odkrycie powiązane z kodem źródłowym.
+
+#MigracjaAplikacji #Xamarin #ModernizacjaMobilna #SopraSteria #TechnologiaDlaLudzi

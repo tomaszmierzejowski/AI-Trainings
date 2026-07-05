@@ -1,0 +1,7 @@
+Źródło: RODO artykuł 83(5) o progach kar — https://gdpr-info.eu/art-83-gdpr/
+
+Liczba 529 pochodzi z jednego projektu korporacyjnego. Plik źródłowy: ComplianceIssuesSummary. Cytaty w liniach 29, 54, 336 i 434. Podaję te referencje nie dlatego, że ktokolwiek je sprawdzi — ale dlatego, że możliwość ich podania jest sednem sprawy.
+
+100 reguł biznesowych to zdeduplikowana liczba z 1_TSP_MasterPresentation (linia 291). Liczba przed deduplikacją była wyższa — używam konserwatywnej, zweryfikowanej wartości.
+
+Jeśli zarządzasz platformą legacy i nie masz pewności co do powierzchni uwierzytelniania: napisz do mnie. Nie żeby Ci coś sprzedać — żeby powiedzieć szczerze, czy to co robimy jest adekwatne do Twojej sytuacji. Czasem nie jest. Gdy jest — pierwsza rozmowa jest bezpłatna.

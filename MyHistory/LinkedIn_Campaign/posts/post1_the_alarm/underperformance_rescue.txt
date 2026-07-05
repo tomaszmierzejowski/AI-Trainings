@@ -1,0 +1,17 @@
+THRESHOLD: Under 200 impressions at hour 4, OR under 5 meaningful comments at hour 8.
+
+ACTION 1 — Add a comment immediately (hour 4):
+"Expanding on the authentication surface finding because it's the one I get asked about most.
+
+Security scans test what they're pointed at. They're configured to scan known endpoints, perimeter APIs, documented services. They don't read code. When a platform grows across years and teams and acquisitions, endpoints accumulate in modules nobody maps back to the security perimeter. You can only find them by reading everything.
+
+The 529 endpoints came from a single enterprise engagement. The source reference is ComplianceIssuesSummary. This is not a theoretical number."
+
+ACTION 2 — DM 10 connections directly (hour 4–6):
+Send to CTO/VP Eng/CISO titles only:
+"Posted something this morning about why enterprise legacy assessments are structurally incomplete — thought it would land differently for someone in your position. [paste post link]"
+
+ACTION 3 — Paid boost (day 2 if still under 300 impressions):
+LinkedIn Campaign Manager: £25–50, target Followers + their 1st-degree networks, 48-hour run, carousel format.
+
+DO NOT: Repost or delete. The algorithm penalizes deletions and reposts reset all engagement signals.

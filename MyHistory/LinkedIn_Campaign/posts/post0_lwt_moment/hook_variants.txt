@@ -1,0 +1,11 @@
+VARIANT A (primary — concrete micro-story):
+One sentence to an AI: "My kids want a little house."
+Output: professional architectural blueprints. Real dimensions. One hour. Zero architecture knowledge required.
+
+VARIANT B (spectrum framing):
+Most people in enterprise IT are at Level 1 or 2 on the AI maturity spectrum. The results I keep showing came from Level 3.
+
+VARIANT C (core phrase as hook — use if event resonance fades after 48h):
+AI doesn't replace knowledge. It removes excuses for not having it. Here is what that looks like in practice — at personal scale and at enterprise scale.
+
+RECOMMENDATION: Use A for the first 24 hours — the concrete micro-story stops the scroll better than the abstract framing, and freshness amplifies the "this just happened" signal. Use B if you reuse this post in a later cycle or want to A/B test with a more senior technical audience who responds to maturity models. Use C only as a standalone repost 2–3 weeks later if the core phrase is still generating comments.

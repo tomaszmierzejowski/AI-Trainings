@@ -1,0 +1,23 @@
+Two people. Same job. Same AI tools. One gets 10x more out of them.
+
+I've watched this for two years in training rooms, and the difference is never what people expect.
+
+It's not prompting skill. Not technical background. Not age.
+
+It's the order.
+
+Person A finishes the draft, then asks AI to polish it. The report, the offer, the plan — built the hard way first, AI invited in at the end, as decoration.
+
+Person B asks AI for the draft first — then applies their judgment, expertise, and taste to it.
+
+Same tools. Opposite sequence. Radically different economics: Person A saves minutes. Person B saves the part of the work that was never the valuable part anyway — the blank page.
+
+Here's the phrase I teach: AI is your first step to everything. Not the only step. The first.
+
+The research backs the pattern. A field study across 4,867 developers found ~26% more completed tasks with AI — but the gains varied enormously, and what predicted them wasn't seniority. It was adoption behavior (Cui et al., Management Science).
+
+The tools will change again next quarter. The order is yours to keep.
+
+So, honestly: which person are you — draft-first, or polish-last?
+
+#AIMindset #FutureOfWork #SopraSteria

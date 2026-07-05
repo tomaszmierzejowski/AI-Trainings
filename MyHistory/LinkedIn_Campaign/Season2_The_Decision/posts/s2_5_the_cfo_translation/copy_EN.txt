@@ -1,0 +1,19 @@
+Your CFO doesn't reject modernization budgets. Your CFO rejects unpriced uncertainty.
+
+I've watched VP Engineerings lose the same budget conversation for years. The engineer says: "The platform is risky, we need an assessment." The CFO hears: "Give me money to find out if I need more money."
+
+Here is the same request, translated into CFO:
+
+"We are operating an asset nobody has fully inventoried. Last year, a comparable enterprise found 529 API endpoints with no authentication in a platform their audits had covered for years — each one a potential regulatory event. GDPR fines alone reach 4% of global revenue.
+
+The inventory costs 500K NOK — a comparable engagement quoted 2.3M the traditional way. Three weeks, fixed scope. It produces an asset register: every endpoint, every integration, every business rule, with evidence. Whatever we decide afterward — modernize, replace, or do nothing — we decide it on inventory instead of folklore.
+
+The alternative isn't saving 500K. It's continuing to carry an unpriced liability on infrastructure that runs our revenue."
+
+Notice what the translation does: it never asks the CFO to fund a fix. It asks them to price a risk — which is literally their job description.
+
+VP Engineerings and architects: what's the phrase that has actually worked for you in a budget room?
+
+Every number verified. Every finding traced to source code.
+
+#CIO #EnterpriseIT #SopraSteria

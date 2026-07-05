@@ -1,0 +1,12 @@
+GRAPHIC — M4 THE CONFIDENT LIE
+
+The one idea the image must carry: the most polished paragraph is the poisoned one.
+
+PRIMARY PROMPT (text-capable model):
+A realistic printed report page on a desk, photographed straight-on, on a dark moody background (#1A0A2E vignette). The page shows an executive summary in clean typography with blurred/greeked body text — except three zones: one small number circled in thin red pen with a checkmark beside it ("found"), one citation line circled in red with a checkmark ("found"), and one full paragraph highlighted in glowing orange (#E8640A) — the ONLY vivid element — with handwritten red annotation next to it: "everyone believed this one." The highlighted paragraph is visibly the most elegant block on the page. Headline overlaid at top in bold white on the dark vignette: "Fluency masks falsehood." Footer small gray: "3 planted errors. Smart people. Guess which survives." Photoreal editorial style, shallow depth of field, no people, no logos. 4:5 vertical, 1080×1350.
+
+NO-TEXT FALLBACK (Midjourney):
+A printed business report page on a dark desk, two small red pen circles with checkmarks on a number and a footnote, one entire paragraph glowing warm orange like a highlighter of light, moody editorial photography, dramatic vignette, shallow depth of field, greeked unreadable text, no people --ar 4:5 --v 6 --style raw
+Then overlay headline + annotations in Canva per copy above.
+
+ALT TEXT: A report page with two caught errors circled in red and one elegant paragraph highlighted orange, annotated "everyone believed this one" — fluency masks falsehood.

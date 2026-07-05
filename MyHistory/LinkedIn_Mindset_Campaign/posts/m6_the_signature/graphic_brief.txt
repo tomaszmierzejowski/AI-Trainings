@@ -1,0 +1,12 @@
+GRAPHIC — M6 THE SIGNATURE
+
+The one idea the image must carry: verification is a 60-second procedure with a fixed order — not a vague virtue.
+
+PRIMARY PROMPT (text-capable model):
+A stopwatch-style circular dial dominating the frame on dark purple-black (#1A0A2E). The dial face is divided into three 20-second arc segments in ascending brightness: first arc muted purple (#4D1D82) labeled "0–20s · NAMES, NUMBERS, DATES", second arc brighter violet labeled "20–40s · DO THE SOURCES EXIST?", third arc glowing orange (#E8640A) labeled "40–60s · COVER THE CONCLUSION. CHECK THE DATA." A slim elegant second-hand pointing into the orange arc. Beneath the dial, a handwritten-style signature line in white with a pen icon, captioned in orange: "your signature is the claim." Headline top in bold white: "The 60-second spot-check." Flat vector with subtle glow, precise, no people, no logos. 4:5 vertical, 1080×1350.
+
+NO-TEXT FALLBACK (Midjourney):
+A minimalist stopwatch dial on a dark purple void, face divided into three arc segments — two violet tones and one glowing orange — elegant thin second hand, beneath it a blank signature line with a fountain pen, dramatic soft glow, flat vector-3D hybrid render, clean, no text --ar 4:5 --v 6 --style raw
+Then overlay the three arc labels + headline + signature caption in Canva per copy above.
+
+ALT TEXT: A 60-second verification stopwatch — 0–20s check names, numbers, dates; 20–40s check sources exist; 40–60s cover the conclusion and check it against the data. Your signature is the claim.

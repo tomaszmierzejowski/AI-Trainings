@@ -1,0 +1,16 @@
+THRESHOLD: Under 300 impressions at hour 6, OR under 3 comments from target titles (CISO, CTO, VP Eng, Head of Security, Enterprise Architect).
+
+ACTION 1 — Add a comment at hour 3:
+"A few people have asked how code analysis finds authentication gaps that security scans miss. Here is the specific mechanism:
+
+Security scans operate on the network or API layer — they test endpoints that are registered, documented, or discoverable through standard enumeration. They don't read source code.
+
+When we analyze source code, we trace every HTTP handler, every route registration, every service binding — regardless of whether it appears in documentation or configuration. Endpoints that were created by developers, used briefly, never formally registered, and never decommissioned are invisible to network-layer scanning. They're readable in the code.
+
+529 is the verified count from one engagement. The methodology produces this class of finding consistently."
+
+ACTION 2 — DM 10 CISO/Head of Security/VP Eng connections:
+"Shared something today about what code analysis finds that security scans miss. Not a pitch — a specific verified finding I thought worth surfacing for someone in your position. [link]"
+
+ACTION 3 — Day 2 if still underperforming:
+LinkedIn boost £25–50, targeting IT Security, Enterprise Architecture, and Engineering Management job functions. 48-hour run.

@@ -1,0 +1,12 @@
+GRAPHIC — S2-3 THE METHOD
+
+The one idea the image must carry: full analysis is a calendar, not magic — three named weeks.
+
+PRIMARY PROMPT (text-capable model):
+Horizontal three-panel timeline poster on dark purple-black (#1A0A2E). Three tall rounded rectangles side by side, connected by a thin orange (#E8640A) progress line. Panel 1, deep purple (#4D1D82) fill: header "WEEK 1 — READ", subtext "every file, every endpoint · 187 endpoints mapped", icon of stacked documents flowing into a funnel. Panel 2, slightly brighter purple: header "WEEK 2 — VERIFY", subtext "every claim checked against source · wrong conclusions die here", icon of a magnifying glass over a checkmark. Panel 3, orange fill with dark text: header "WEEK 3 — PROVE", subtext "312 evidence-tagged citations · walkthrough, not slideshow", icon of a document with a link chain to a code bracket. Top headline in large white bold sans-serif: "No magic. A calendar." Bottom footer small gray: "3 weeks. Traditional scope: ~14 weeks." Flat vector style, crisp, no people, no logos. 4:5 vertical, 1080×1350.
+
+NO-TEXT FALLBACK (Midjourney):
+Three glowing vertical panels in a row on a dark purple void, first two panels deep violet, third panel bright orange, connected by a thin glowing progress line, minimalist flat 3D render, clean geometric, professional, no text, no people --ar 4:5 --v 6 --style raw
+Then overlay all panel text in Canva per the copy above.
+
+ALT TEXT: Three-week method timeline — Week 1 read everything (187 endpoints mapped), Week 2 verify every claim, Week 3 prove with 312 evidence-tagged citations. Three weeks versus a traditional fourteen.

@@ -1,0 +1,33 @@
+Two weeks ago I offered this list privately to anyone who DMed me. Today it goes public.
+
+10 questions to ask any modernization assessment vendor — including us:
+
+1. What percentage of our codebase will you actually read? (Not "review." Read.)
+
+2. Will every finding cite the file and line it came from?
+
+3. What will you explicitly list as NOT examined?
+
+4. How do you verify AI-generated findings before they reach us? Who signs them?
+
+5. Can we challenge any number in the report and get walked to its source?
+
+6. What happens to findings that can't be verified — published, flagged, or dropped?
+
+7. How do you distinguish measured results from estimates in your own marketing?
+
+8. Which of our business rules will you extract, and at what stated confidence?
+
+9. What do you need from our team, in hours per week?
+
+10. If your approach doesn't fit our situation, will you say so — in writing?
+
+A vendor who answers all ten crisply is worth your budget, whoever they are. A vendor who gets uncomfortable at question 1 has already answered it.
+
+Save this for your next vendor meeting. Then tell me:
+
+Which question do you predict gets the longest silence?
+
+Every number verified. Every finding traced to source code.
+
+#TechDueDiligence #VendorManagement #SopraSteria

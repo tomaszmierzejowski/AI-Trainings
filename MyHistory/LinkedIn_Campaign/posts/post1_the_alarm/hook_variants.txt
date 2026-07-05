@@ -1,0 +1,7 @@
+VARIANT A (primary):
+The most expensive slide deck in enterprise IT contains one quiet assumption nobody tells you about.
+
+VARIANT B (test):
+I've analyzed 100+ enterprise codebases. Here is what full code analysis finds that standard assessments miss.
+
+RECOMMENDATION: Use A if your audience skews toward decision-makers (CTO, VP Eng, CIO) — it creates tension without requiring prior context. Use B if Post 1 impressions are lower than expected after 48h and you want a more direct credibility anchor on first publishing.

@@ -1,0 +1,7 @@
+Wzorzec z każdego projektu, w którym to ryzyko wypłynęło: organizacja zawsze wiedziała. Nie formalnie — żadnego wpisu w rejestrze ryzyk, żadnej pozycji w budżecie. Ale kiedy pytaliśmy „kto rozumie moduł X?”, wszyscy w sali bez wahania wymieniali to samo nazwisko.
+
+Jeśli każdy potrafi wskazać tę osobę, ryzyko jest już wycenione emocjonalnie. Tylko nie operacyjnie.
+
+Sama ekstrakcja jest mechaniczna, gdy kod zostanie przeczytany w całości: każda reguła biznesowa dostaje ocenę pewności i odwołanie do źródła. Te 94% pewności oznacza: 94% zweryfikowane z kodem przez architekta-człowieka — pozostałe 6% zostało oznaczone do potwierdzenia przez zespół, a nie po cichu zgadnięte.
+
+Jaki był Wasz najbliższy moment, w którym wiedza prawie wyszła z organizacji drzwiami?

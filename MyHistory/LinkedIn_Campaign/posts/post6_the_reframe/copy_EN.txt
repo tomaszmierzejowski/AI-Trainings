@@ -1,0 +1,35 @@
+For 14 years, I read maybe 20% of any codebase I assessed.
+
+Everyone did. That's what an enterprise assessment was: read what you can, sample the rest, estimate from experience.
+
+Nobody called it "20% coverage." We called it "discovery."
+
+Then the ceiling moved.
+
+Enterprise architects ask me one question more than any other: "Doesn't AI hallucinate?"
+
+Yes. Constantly. And I still use it on every engagement.
+
+Here is the actual division of labor:
+
+AI reads the code. Thousands of files. Every endpoint. Every connection. Every data flow. Work that took 3–5 senior consultants 8–14 weeks — done in days.
+
+Then I read the findings.
+
+I check every line reference. I separate signal from artifact. I make every trade-off decision. Nothing reaches a client that I haven't verified against the source.
+
+The cognitive requirement didn't decrease. The coverage limit did.
+
+The research agrees: a peer-reviewed study of 4,867 developers measured a 26% increase in completed tasks with AI assistance (Cui et al., Management Science). National Australia Bank put 6,000 developers on AI tooling — legacy modernization 3x faster.
+
+But the moment that convinced me wasn't a statistic. It was the first time I finished reading a complete enterprise codebase — not a sample — and understood what was actually in it.
+
+The expertise matters more now, not less. It's just pointed at 100% of the picture instead of 20%.
+
+Honest question for the architects here:
+
+What percentage of the platform you're responsible for have you personally read?
+
+Every number verified. Every finding traced to source code.
+
+#SoftwareArchitecture #LegacyCode #SopraSteria

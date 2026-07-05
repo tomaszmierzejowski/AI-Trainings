@@ -1,0 +1,13 @@
+THRESHOLD: Under 400 impressions at hour 6, OR under 5 meaningful comments at hour 8.
+
+ACTION 1 — Self-reply at hour 4 with the transparency slide context:
+"The 'estimated' ROI slide is the one I've been asked about most across this series.
+
+Here's the distinction I'm drawing: the specific project metrics (4 days, 92%, 500K NOK, 187 endpoints) are verified — I can show you the source file and line for every one. The 8–10x ROI is calculated backward from what it would have cost if those engagements had gone the traditional route — longer timeline, higher cost, partial coverage. That calculation involves assumptions about what 'traditional' means and what the alternative outcome would have been.
+
+I'd rather name that uncertainty than present a clean multiplier that implies more precision than I have."
+
+ACTION 2 — DM all prior series engagers who haven't seen Post 7:
+Identify anyone who liked, commented on, or shared Posts 1–6. DM them: "Finished the series today with the full track record — thought you'd want to see it given you engaged with [the specific post they reacted to]. [link]"
+
+ACTION 3 — This is the conversion post. If engagement is low, the issue is likely audience reach, not content. Boost £50, target CTO/CIO/VP Eng/Enterprise Architect, 72-hour run. This is the one post where paid distribution is worth the higher investment.

@@ -1,0 +1,23 @@
+Your smartest people are the ones quietly not using AI. That's not a paradox. That's the diagnosis.
+
+Eight months after the licenses arrived, every leader sees the same curve: enthusiasm in week one, silence by month two. The standard explanation — "they need more training on the tools" — buys another feature tour and changes nothing.
+
+Because none of the four real blockers is a knowledge gap:
+
+FRICTION 1 — Fear of looking incompetent.
+Asking AI feels like admitting you couldn't do it yourself. Seniors feel this hardest — they have the most competence to protect.
+
+FRICTION 2 — Identity threat.
+"If AI drafts it, what exactly am I for?" The better someone is at the old way, the more the new way feels like demotion.
+
+FRICTION 3 — Trust miscalibration.
+One bad hallucination in week one and the verdict is in: "unreliable." (The same person forwards unverified email chains, but never mind.)
+
+FRICTION 4 — Habit inertia.
+No opinion at all. The old workflow simply runs, the way it has for fifteen years. The strongest force on this list, because it doesn't feel like resistance. It feels like Tuesday.
+
+Notice: not one of these is solved by showing more features. Fear isn't a knowledge gap. Identity isn't a knowledge gap. Yet "more tool training" is the only lever most organizations pull.
+
+Leaders — look at your quiet non-users this week. Which friction are you actually looking at?
+
+#AIAdoption #ChangeManagement #SopraSteria

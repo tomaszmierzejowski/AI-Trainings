@@ -1,0 +1,5 @@
+To be fair to the consulting industry: sampling was a rational response to a real constraint. When reading code cost €1,500–2,000 per consultant-day, full coverage genuinely didn't fit any budget. The dishonesty was never the sampling — it was the silence about it.
+
+What changed: AI-accelerated analysis reads every line, and a senior architect verifies the findings. In one engagement that meant 529 REST endpoints documented and 312 evidence-tagged citations — each finding walkable to its source line. Coverage stopped being a luxury.
+
+The three-point self-test above works on any vendor's report, including ours. If you run it on one of our reports, you'll find all three items on the first pages. That's the point of publishing the test.

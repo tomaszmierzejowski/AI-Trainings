@@ -1,0 +1,9 @@
+The fastest jump from each level — since I promised:
+
+1 → 2: Pick ONE recurring task (weekly report, client email, meeting summary) and route it through AI every time. One task, zero exceptions. Don't "explore the tool" — marry it to a task.
+
+2 → 3: The when-then rule, borrowed from habit science (implementation intentions, Gollwitzer & Sheeran — one of the strongest effects in behavioral psychology): "When I open a new document, I first ask AI for a draft." The trigger does the work your willpower won't.
+
+3 → 4: Stop improving single tasks and write down the whole process — inputs, steps, checks, outputs. What you can specify, AI can increasingly run. What you can't specify, you've just discovered you don't fully understand yet. Valuable either way.
+
+And yes — this spectrum is the opening module of a training program I run. The self-diagnosis is free; it's above. The behavior change is the program.

@@ -1,0 +1,12 @@
+GRAPHIC — M1 THE ORDER
+
+The one idea the image must carry: identical steps, opposite sequence, different outcome.
+
+PRIMARY PROMPT (text-capable model — GPT-Image / Ideogram):
+A clean two-row process diagram on light background (#F8F6FC). Top row labeled in gray "MOST PEOPLE": three connected pill-shaped steps in muted purple (#4D1D82) — "blank page" → "hours of drafting" → small faded pill "AI polish"; a tired gray annotation under it: "AI saves minutes". Bottom row labeled in gray "THE AI MINDSET": three pills — first pill glowing orange (#E8640A) "AI draft (10 min)" → "your judgment" → "your standards"; confident annotation under it: "AI saves the blank page". Big headline top center in bold dark purple: "Same tools. Different order." Footer small gray: "AI is your first step. Not the only step. The first." Flat vector, generous white space, subtle arrows, no people, no logos. 4:5 vertical, 1080×1350.
+
+NO-TEXT FALLBACK (Midjourney):
+Two horizontal rows of three connected pill shapes on a pale lavender-white background, top row entirely muted purple with the last pill small and faded, bottom row starting with a glowing orange pill followed by two solid purple pills, minimal flat vector infographic style, clean, elegant, no text, no people --ar 4:5 --v 6 --style raw
+Then overlay all labels in Canva per copy above.
+
+ALT TEXT: Two work sequences compared — drafting alone then polishing with AI versus starting from an AI draft and applying your judgment. Same tools, different order.

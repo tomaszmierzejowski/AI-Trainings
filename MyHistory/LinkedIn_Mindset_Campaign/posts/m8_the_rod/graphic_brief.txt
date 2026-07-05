@@ -1,0 +1,12 @@
+GRAPHIC — M8 THE ROD
+
+The one idea the image must carry: the choice between being supplied and being capable.
+
+PRIMARY PROMPT (text-capable model):
+A minimal two-shelf still life on dark purple-black (#1A0A2E). Upper shelf: a neat row of identical tinned fish cans in muted purple (#4D1D82) labeling, one can slightly open; small gray label above the shelf: "WHAT MOST TRAINING SELLS", with a tiny subline "(you'll be back next month)". Lower shelf: a single elegant fishing rod laid horizontally, glowing warm orange (#E8640A) along its line; label above: "WHAT BEHAVIOR CHANGE LEAVES YOU WITH", subline "(you won't need the fisherman)". Headline top in bold white: "Daję wędkę." with orange subline "I give you the rod." Museum-lighting, clean, metaphorical, photoreal-minimal, no people, no logos. 4:5 vertical, 1080×1350.
+
+NO-TEXT FALLBACK (Midjourney):
+Two museum display shelves on a dark purple wall, upper shelf holding a row of identical dull tinned fish cans, lower shelf holding one elegant fishing rod with its line glowing warm orange, dramatic gallery spot lighting, minimalist metaphorical still life, photorealistic, no people, no text --ar 4:5 --v 6 --style raw
+Then overlay labels + headline in Canva per copy above.
+
+ALT TEXT: Two shelves — a row of tinned fish labeled "what most training sells" and a single glowing fishing rod labeled "what behavior change leaves you with." Daję wędkę: I give you the rod.

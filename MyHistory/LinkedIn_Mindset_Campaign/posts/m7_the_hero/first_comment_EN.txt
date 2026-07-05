@@ -1,0 +1,5 @@
+To be clear about the hero themselves: they're usually the best person in the building, and none of this is their fault. Punishing or sidelining them is the dumbest possible response.
+
+The move is to change their job description from doing to teaching: their new deliverable is "who did this without me this month." Same status, same visibility — pointed at multiplication instead of accumulation. Most heroes are relieved; being the only one was never comfortable.
+
+And a measurement note for leaders: if you track anything, track behavior, not sentiment. First-step rate (what share of tasks start with AI), verification rate (what share of AI output gets checked before it ships). If people game the first-step rate by... using AI first on real tasks — congratulations, that's adoption.

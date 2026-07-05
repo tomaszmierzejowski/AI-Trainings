@@ -1,0 +1,31 @@
+I'm about to do something consultants don't do: publish the numbers.
+
+Not "up to." Not "in our experience." Not an industry benchmark with an asterisk.
+
+Every number below comes from a real engagement with a real client. Every finding traces to a line in source code. Where a number is estimated, I say so — and explain why.
+
+The track record, 18 months of enterprise modernization:
+
+→ 6+ enterprise engagements
+→ 100+ codebases analyzed
+→ Zero regressions across every transformation
+→ 100% on-time delivery
+→ 100% first-submission app store approval
+→ 500K NOK vs. 2.3M NOK — verified cost on one discovery engagement (78% below the traditional quote)
+→ 4 days for a platform migration the industry standard puts at 4–6 weeks
+→ 1 month to restore a deployment blocked for 2 years
+→ Estimated 8–10x average ROI — "estimated," because we separate what is measured from what is projected
+
+Why publish this?
+
+Because every vendor in this market tells a story, and Stefan — the VP Engineering this series was written for — has heard all of them. Stories are cheap. Numbers you're willing to be challenged on are not.
+
+So challenge them. Ask me in the comments how any number above was measured. That's not a rhetorical invitation.
+
+And if you manage a legacy platform and this series described your situation:
+
+DM me one sentence about your platform. I'll send you the 10 questions we answer before touching any codebase — the same list we use to qualify engagements. If our approach doesn't fit your situation, I'll tell you that in the first reply.
+
+Every number verified. Every finding traced to source code.
+
+#AppModernization #EnterpriseArchitecture #SopraSteria

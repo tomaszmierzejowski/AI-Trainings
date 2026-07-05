@@ -1,0 +1,25 @@
+We were given 20 interconnected applications. Nobody knew how they all connected.
+
+Not the architects. Not the vendors. Not the team that had been maintaining them for years.
+
+They had documentation. They had architecture diagrams.
+
+The diagrams were wrong.
+
+Here is what we found:
+
+187 API endpoints — discovered and classified across the full platform.
+98 integration connections — mapped across 7+ different protocols.
+3 weeks — from first code scan to complete modernization roadmap.
+
+For context: traditional discovery for this scope takes 8–14 weeks, with 3–5 senior consultants covering a fraction of the codebase. The cost of that approach for this scope: 2.3M NOK. Our engagement: 500K NOK.
+
+We covered the whole platform. Every application. Every connection.
+
+The deliverable was not a slide deck. It was an interactive report where every finding traces to a line in the source code. The client can interrogate any claim. The evidence is there.
+
+What did your last discovery cover?
+
+Every number verified. Every finding traced to source code.
+
+#LegacyPlatform #EnterpriseDiscovery #ApplicationModernization #SopraSteria #CodeAnalysis

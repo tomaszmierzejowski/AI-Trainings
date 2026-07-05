@@ -1,0 +1,12 @@
+GRAPHIC — M7 THE HERO
+
+The one idea the image must carry: the organization's whole AI capability fits in one departing bag.
+
+PRIMARY PROMPT (text-capable model):
+A cinematic minimal scene on dark purple-black (#1A0A2E): an office doorway lit from beyond, a laptop bag standing alone in the doorway, and a superhero cape draped over the bag, both rendered in muted purple (#4D1D82) with the bag's interior glowing warm orange (#E8640A) light leaking from the zipper — the capability inside. Long dramatic shadow toward the viewer. Headline in bold white, upper third: "The day the AI hero leaves," second line in orange: "the capability leaves in their laptop bag." Footer small gray: "Heroes accumulate. Leaders distribute." Moody, metaphorical, high contrast, no people, no faces, no logos. 4:5 vertical, 1080×1350.
+
+NO-TEXT FALLBACK (Midjourney):
+A superhero cape draped over a lone laptop bag standing in a dim office doorway, warm orange light leaking from the bag's zipper, deep purple-black shadows, cinematic rim lighting, minimalist metaphorical still life, melancholic, photorealistic, no people, no text --ar 4:5 --v 6 --style raw
+Then overlay headline + footer in Canva per copy above.
+
+ALT TEXT: A superhero cape over a laptop bag glowing from inside, in an office doorway — when the AI hero leaves, the capability leaves with them.

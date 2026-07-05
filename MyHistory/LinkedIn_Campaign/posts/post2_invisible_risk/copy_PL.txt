@@ -1,0 +1,25 @@
+529 endpointów bez uwierzytelniania.
+
+To właśnie znaleźliśmy na jednej korporacyjnej platformie. Bez dostępu do produkcji. Bez testów penetracyjnych. Tylko czytając kod.
+
+Nikt w zespole nie wiedział, że tam są.
+
+Chcę być tutaj ostrożny, bo to nie jest historia o zaniedbaniu. Zespół, który zbudował tę platformę, był kompetentny. Ludzie, którzy ją utrzymywali, pracowali sumiennie. Przeprowadzali skany bezpieczeństwa. Przestrzegali procedur.
+
+Problem w tym, że skany bezpieczeństwa testują to, na co je skierujemy. Nie czytają kodu. A gdy platforma rozrasta się przez lata, przez kolejne zespoły i akwizycje, endpointy narastają w miejscach, których nikt nie mapuje z powrotem do perimetru bezpieczeństwa.
+
+Można je znaleźć tylko czytając wszystko.
+
+Znaleźliśmy też: 100 reguł biznesowych wyekstrahowanych z kodu w 17 modułach. Reguły osadzone tak głęboko, że żadna jedna osoba nie mogła ich ręcznie wyliczyć. Poziom zgodności, który zgodnie z RODO artykuł 83(5) oznaczał potencjalne narażenie do 20 milionów EUR lub 4% rocznego globalnego obrotu.
+
+Nie ryzyka teoretyczne. Realne odkrycia. Zweryfikowane w kodzie źródłowym, linia po linii.
+
+Twój zespół deweloperski nie ukrywa tych problemów. Nie jest w stanie zobaczyć ich w tej skali. Nikt nie jest — ręcznie.
+
+Ile nieuwierzytelnionych endpointów jest na Twojej platformie?
+
+Jeśli nie masz pewności, ta niepewność jest warta zbadania.
+
+Każda liczba zweryfikowana. Każde odkrycie powiązane z kodem źródłowym.
+
+#BezpieczeństwoIT #RODO #LegacySystems #SopraSteria #ArchitekturaKorporacyjna

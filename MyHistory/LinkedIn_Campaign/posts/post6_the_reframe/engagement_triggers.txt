@@ -1,0 +1,8 @@
+TRIGGER 1 — paste as reply to any architect or engineer comment:
+"For architects using AI tools: what's the quality control step you've found most essential? Mine is: every finding must cite the source line before it leaves my desk. Without that, there's no way to distinguish a real finding from a confident hallucination."
+
+TRIGGER 2 — paste as reply to any skeptical comment about AI:
+"The 'AI hallucination' concern is the right question to ask — and the answer isn't 'AI doesn't hallucinate.' It does. The answer is: here is the specific verification step that catches it before it reaches you. For us, that's a senior architect checking every line reference in the output. That step is what makes the 529 endpoints a real number and not an AI estimate."
+
+TRIGGER 3 — paste to start a thread if no substantive comment after 90 minutes:
+"What changed when I started doing full-codebase analysis wasn't my methodology. It was the completeness of the picture I could give a client before they committed €500K to a direction. The question I get now is not 'what do you think is in our code?' It's 'what is in our code?' That's a different conversation."

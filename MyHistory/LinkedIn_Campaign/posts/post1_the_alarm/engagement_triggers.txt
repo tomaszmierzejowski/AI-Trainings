@@ -1,0 +1,11 @@
+TRIGGER 1 — paste as reply to any practitioner comment:
+"What's the largest gap you've seen between what documentation described and what the code actually contained? Asking because the pattern we keep seeing is that the gap grows proportionally with platform age and team turnover."
+
+TRIGGER 2 — paste as reply to any decision-maker comment:
+"Has anyone here had a legacy assessment that went back to actual source code — not documentation, not interviews — as the primary evidence? I'm curious how often people know to ask for it specifically."
+
+TRIGGER 3 — paste to start a thread if no substantive comment after 90 minutes:
+"For CTOs and VPs Engineering reading this: when you commission a legacy assessment, do you specify full-codebase coverage, or is that left to the vendor's methodology? The answer tells you something important about the risk surface you've been working with."
+
+FOLLOW-UP if no response after 2h on Trigger 3:
+Tag 2–3 architects from your network directly: "[Name] — curious what your experience has been with this."

@@ -1,0 +1,12 @@
+GRAPHIC — S2-2 THE 12% DISCOVERY
+
+The one idea the image must carry: your assessment read a sliver and reported on the whole.
+
+PRIMARY PROMPT (text-capable model):
+Split-panel editorial graphic on light background (#F8F6FC). Left panel: a tall stack of paper representing a codebase, drawn flat-vector style; only the bottom 12% of the stack is highlighted solid deep purple (#4D1D82), the upper 88% is pale gray outline; orange (#E8640A) bracket marking the purple sliver with the label "read: 12%". Right panel: a thick consulting report with a confident cover, stamped diagonally in orange: "CONCLUSIONS: 100%". Headline across the top in bold dark-purple sans-serif: "The coverage nobody discloses." Footer line in small gray: "Ask your vendor one question: what % of the code did you read?" Clean, flat, generous white space, no people, no logos. 4:5 vertical, 1080×1350.
+
+NO-TEXT FALLBACK (Midjourney):
+A tall stack of thousands of paper sheets on a pale background, only a thin bottom slice glowing purple while the rest stays pale and untouched, next to it a thick glossy bound report with a confident cover, flat lay editorial photography, minimalist, high key lighting, no legible text, no people --ar 4:5 --v 6 --style raw
+Then overlay: "read: 12%" bracket + "CONCLUSIONS: 100%" stamp + headline in Canva.
+
+ALT TEXT: A codebase stack with only 12% highlighted as read, beside an assessment report stamped "conclusions: 100%" — the coverage gap nobody discloses.

@@ -1,0 +1,31 @@
+Zrobię coś, czego konsultanci nie robią: opublikuję liczby.
+
+Nie "do". Nie "z naszego doświadczenia". Nie branżowy benchmark z gwiazdką.
+
+Każda liczba poniżej pochodzi z realnego projektu dla realnego klienta. Każde ustalenie prowadzi do linii kodu źródłowego. Tam, gdzie liczba jest szacunkiem — mówię to wprost i wyjaśniam dlaczego.
+
+Track record z 18 miesięcy modernizacji korporacyjnej:
+
+→ Ponad 6 projektów enterprise
+→ Ponad 100 przeanalizowanych baz kodu
+→ Zero regresji we wszystkich transformacjach
+→ 100% dostaw w terminie
+→ 100% akceptacji w sklepach z aplikacjami za pierwszym podejściem
+→ 500 tys. NOK vs 2,3 mln NOK — zweryfikowany koszt jednego discovery (78% poniżej tradycyjnej wyceny)
+→ 4 dni na migrację platformy, którą standard branżowy wycenia na 4–6 tygodni
+→ 1 miesiąc na przywrócenie wdrożenia zablokowanego przez 2 lata
+→ Szacunkowo 8–10x średniego ROI — "szacunkowo", bo oddzielamy to, co zmierzone, od tego, co prognozowane
+
+Po co to publikować?
+
+Bo każdy dostawca na tym rynku opowiada historię, a Stefan — VP Engineering, dla którego napisałem tę serię — słyszał już wszystkie. Historie są tanie. Liczby, które można podważyć publicznie — nie.
+
+Więc podważajcie. Zapytajcie w komentarzu, jak zmierzono dowolną liczbę powyżej. To nie jest retoryczne zaproszenie.
+
+A jeśli zarządzacie platformą legacy i ta seria opisała Waszą sytuację:
+
+Napiszcie mi w wiadomości jedno zdanie o Waszej platformie. Odeślę 10 pytań, na które odpowiadamy, zanim dotkniemy jakiegokolwiek kodu — tę samą listę, której używamy do kwalifikacji projektów. Jeśli nasze podejście nie pasuje do Waszej sytuacji, powiem to w pierwszej odpowiedzi.
+
+Każda liczba zweryfikowana. Każde ustalenie prowadzi do linii kodu.
+
+#ModernizacjaAplikacji #ArchitekturaKorporacyjna #SopraSteria

@@ -1,0 +1,9 @@
+Feel free to steal the translation verbatim — that's why it's written as a quote. Swap the numbers for your own context; keep the structure:
+
+1. Name the unpriced liability (not the technology)
+2. One concrete, external example with a number (borrow ours: 529 unauthenticated endpoints, found under audited coverage)
+3. Fixed price, fixed time, and what artifact the money buys
+4. Frame the output as decision-grade inventory, not a project pre-payment
+5. Close on the cost of NOT knowing, not the discount
+
+The deepest change is #4. An assessment framed as "step 1 of modernization" commits the CFO to steps 2 through N, so they say no. An assessment framed as inventory commits them to nothing except knowing. CFOs fund knowing.

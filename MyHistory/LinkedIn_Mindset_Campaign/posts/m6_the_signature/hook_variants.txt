@@ -1,0 +1,12 @@
+VARIANT A (primary):
+Last week I showed you the lie that survives every audit. Here's the 60 seconds that catches it.
+
+VARIANT B (test):
+Your team "carefully reviews" AI output the one way guaranteed to miss the worst error: top to bottom, nodding along.
+
+VARIANT C (identity-led):
+Verification isn't distrust of AI. It's the thing that makes your signature mean something.
+
+RECOMMENDATION: Use A — it pays off M4's cliffhanger and rewards returning readers (retention is how a weekly series compounds). If M4 underperformed and few readers will catch the reference, switch to B, which stands alone. C is the most quotable line in the campaign — use it as the closing line, the graphic footer, and the standalone reshare text, not the hook.
+
+GRAPHIC: see graphic_brief.txt — the 60-second dial.

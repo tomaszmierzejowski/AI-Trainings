@@ -1,0 +1,7 @@
+Source: GDPR Article 83(5) on fine thresholds — https://gdpr-info.eu/art-83-gdpr/
+
+The 529 number is from a single enterprise engagement. The source file is ComplianceIssuesSummary. Citations at lines 29, 54, 336, and 434. I include these not because anyone will verify them — but because being able to include them is the point.
+
+The 100 business rules figure is the deduplicated count from 1_TSP_MasterPresentation (line 291). The pre-deduplication count was higher — I use the conservative verified number.
+
+If you manage a legacy platform and you're not certain about your full authentication surface: DM me. Not to sell you something — to tell you honestly whether what we do is relevant to your situation. Sometimes it isn't. When it is, the first conversation is free.

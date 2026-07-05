@@ -1,0 +1,12 @@
+GRAPHIC — S2-5 THE CFO TRANSLATION
+
+The one idea the image must carry: the same request in two languages — engineer vs CFO.
+
+PRIMARY PROMPT (text-capable model):
+A two-column "translation card" on light background (#F8F6FC), styled like a language phrasebook page. Left column header in gray: "ENGINEER SAYS", with a speech bubble in muted purple (#4D1D82) containing: "The platform is risky. We need an assessment." Right column header in gray: "CFO HEARS", with a speech bubble in pale gray containing: "Give me money to find out if I need more money." Below both, spanning full width, a third larger speech bubble outlined in orange (#E8640A) headed "THE TRANSLATION" containing: "We carry an unpriced liability on infrastructure that runs our revenue. 500K buys the inventory. Three weeks. Then we decide on facts." Headline at top in bold dark purple: "Why modernization budgets die in translation." Clean flat editorial style, phrasebook aesthetic, no people, no logos. 4:5 vertical, 1080×1350.
+
+NO-TEXT FALLBACK (Midjourney):
+An open bilingual phrasebook on a pale desk, left page printed in purple ink, right page in gray ink, one phrase highlighted with an orange marker line spanning both pages, minimalist editorial flat-lay photography, soft daylight, no legible text, no people --ar 4:5 --v 6 --style raw
+Then overlay the three speech bubbles in Canva per copy above.
+
+ALT TEXT: Phrasebook-style card translating "we need an assessment" from engineer language into CFO language: an unpriced liability, a fixed-price inventory, a fact-based decision.

@@ -1,0 +1,11 @@
+TRIGGER 1 — paste as reply to any PM or delivery-focused comment:
+"For anyone who has managed a deadline-critical migration: what made the difference between delivery and missed deadline in your experience? Asking because the answer affects how I scope future engagements — I want to understand what the field considers the critical variable."
+
+TRIGGER 2 — paste as reply to any skeptical comment about the 4-day timeline:
+"The skepticism is fair and exactly the right question. The industry standard for Xamarin-to-MAUI at this complexity is 4–6 weeks. The reason 4 days was possible: AI-accelerated automated transformation covered 92% of the codebase, with a senior architect validating 23 explicit decision points. The AI didn't replace judgment — it removed the manual scaffolding that makes migrations slow. Happy to walk through the methodology in detail."
+
+TRIGGER 3 — paste to start a thread if no substantive comment after 90 minutes:
+"Birgit works in children's welfare research. The users affected weren't enterprise stakeholders — they were families. I think that's worth holding onto in a field that tends to abstract users into 'stakeholders' and 'affected parties.' If you work in a domain where technology touches people directly — curious how that shapes how you think about deadlines."
+
+ACTION IF BIRGIT DOES NOT COMMENT WITHIN FIRST 2 HOURS:
+Add a self-reply with her extended quote (already in first_comment_EN.txt). Tag her if possible. This post depends on her voice appearing — it changes the engagement character significantly.

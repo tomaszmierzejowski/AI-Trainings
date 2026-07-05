@@ -1,0 +1,23 @@
+One sentence to an AI: "My kids want a little house."
+
+Output: professional architectural blueprints. Real dimensions. Structural considerations. One hour. Zero architecture knowledge required.
+
+That was one of two examples I walked through at LWT Katowice yesterday — Sopra Steria's internal Learning World Tour. Two talks: one on the AI Augmented Mindset, one on what that mindset produces at enterprise scale.
+
+The mindset talk introduced a spectrum most people recognize immediately:
+
+Level 1 — AI-Curious. Level 2 — AI-Assisted. Level 3 — AI-Augmented. Level 4 — AI-Native.
+
+The target is Level 3: AI is your first step to everything. Not the only step. The first.
+
+The second talk showed what Level 3 behavior produces when the problem is 20 interconnected enterprise applications and an 8–14-week discovery timeline. We covered it in 3 weeks with 100% code coverage — and found 529 unauthenticated endpoints that manual audit had missed entirely.
+
+One person building an entire children's book business infrastructure in a day. One team finding what no manual audit could see.
+
+Same pattern. Different scale.
+
+AI doesn't replace knowledge. It removes excuses for not having it.
+
+Where are you on this spectrum?
+
+#AIAugmented #AIStrategy #AppModernization #SopraSteria #LearningWorldTour

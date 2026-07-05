@@ -1,0 +1,7 @@
+VARIANT A (primary):
+529 endpoints with no authentication.
+
+VARIANT B (test):
+When did your platform last have every endpoint verified against source code — not API documentation, the actual source code?
+
+RECOMMENDATION: Use A for maximum scroll-stop impact — the number is visceral and specific. Use B if A underperforms after 48h or if you want to reuse this post in a later cycle targeting a more sophisticated technical audience who may have already seen the "529" statistic.

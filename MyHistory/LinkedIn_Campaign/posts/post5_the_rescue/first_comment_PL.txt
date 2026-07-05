@@ -1,0 +1,9 @@
+Najbardziej niewygodna część tej historii: zespół miał wszystko, czego potrzebował. Kod cały czas tam był. Nie mieli tylko sposobu, żeby przeczytać go w całości.
+
+Ten wzorzec powtarza się w każdym projekcie ratunkowym, jaki robiliśmy — odpowiedź nigdy nie zaginęła. Była po prostu nieprzeczytana.
+
+Jeśli macie teraz u siebie system "tymczasowo zablokowany", pierwsze pytanie nie brzmi "kto to naprawi?", tylko "kto naprawdę przeczytał, co tam jest?".
+
+(Dla osób od bezpieczeństwa: ponad 200 podatności to znane CVE w przestarzałych zależnościach — wykryte przy okazji pełnego mapowania zależności, nie w osobnym audycie. To dostajecie "gratis" przy analizie pełnego pokrycia.)
+
+Jeśli Wasz zespół nie może czegoś wdrożyć na produkcję — albo jedyna osoba, która rozumie środowisko, myśli o emeryturze — napiszcie do mnie. Dokładnie dla takiego scenariusza powstało nasze podejście.

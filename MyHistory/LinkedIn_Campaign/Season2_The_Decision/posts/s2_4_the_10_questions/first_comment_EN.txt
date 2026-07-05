@@ -1,0 +1,7 @@
+Why publish the qualification list we use ourselves? Two reasons.
+
+First: everyone who DMed after the track-record post got this list, as promised. Public now means nobody needed to DM to get it — the offer was a head start, not a gate.
+
+Second, the self-interested reason, stated openly: these questions favor any vendor who reads code completely and cites sources. We built our method around them, so we like being asked them. If the questions become the market's standard, the market moves toward verifiable assessments. We win in that market, but so do you — whoever you hire.
+
+Our answers to all ten, for the record: 100% · yes, every finding · full exclusion list in every report · AI reads, a senior architect verifies and signs · yes, any number · flagged, never silently published · "estimated" is labeled in the report AND in our marketing · scoped per engagement with stated confidence (143 rules at 94% in the most recent) · ~2 hours of one senior engineer per week · yes, in writing.

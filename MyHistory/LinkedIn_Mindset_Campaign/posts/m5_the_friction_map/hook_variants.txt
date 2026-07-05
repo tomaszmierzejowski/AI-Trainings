@@ -1,0 +1,12 @@
+VARIANT A (primary):
+Your smartest people are the ones quietly not using AI. That's not a paradox. That's the diagnosis.
+
+VARIANT B (test):
+Eight months after the AI licenses arrived: enthusiasm in week one, silence by month two. The standard fix — "more tool training" — treats the one thing that isn't broken.
+
+VARIANT C (list-led):
+Four reasons your team doesn't use AI. None of them is "they don't know how." All of them get treated with training that assumes it is.
+
+RECOMMENDATION: Use A — it's counterintuitive AND flattering to the reader's team, a rare combination (most adoption content insults the laggards; this defends them, which earns leader reshares). B names the exact experience every buyer of AI licenses has had — strongest for the Renata persona; use it if the audience data shows more director-level readers. C is the cleanest carousel skeleton.
+
+GRAPHIC: see graphic_brief.txt — the four-wall map.

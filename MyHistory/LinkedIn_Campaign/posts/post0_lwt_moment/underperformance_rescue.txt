@@ -1,0 +1,25 @@
+THRESHOLD: Under 150 impressions at hour 4, OR under 3 comments at hour 6.
+
+Note: this post has a natural structural advantage — internal colleagues who attended the event will see it as a direct reference to shared experience. That drives early engagement. Low performance here usually means the photo is missing, the post published outside of peak hours, or the connection between the two talks was not clear enough. Address those first.
+
+ACTION 1 — If no photo was attached at publish time:
+Edit the post and add a photo immediately. A photo of you presenting at the event increases impression rate significantly for event posts — it changes the visual footprint in the feed. If you do not have a photo yet, ask a colleague who attended to send one directly. Even a candid mid-talk photo is better than no photo.
+
+ACTION 2 — Self-reply at hour 3 with the Lidka story extended:
+"One more example from the AI Mindset talk that I didn't include in the post because it's harder to compress:
+
+A colleague built the entire publishing infrastructure for a children's book — 'Lidka' — in one day using AI. Not the book itself. The business: online store, payment processing, shipping integration, email marketing setup, social profile configuration. One person. One day. No prior e-commerce experience.
+
+The point isn't that it was fast. The point is that the decision to try was the only variable. She didn't need to hire anyone, wait for budget, or learn a new profession. She just had to believe it was worth attempting.
+
+That's what Level 3 looks like at personal scale."
+
+ACTION 3 — DM 10 colleagues who attended LWT Katowice:
+"Just posted a reflection from yesterday's talks — curious where you'd put yourself on the 4-level spectrum now that you've seen it. [link]"
+Do not ask them to like or share. Ask them to answer the spectrum question. A genuine response from someone who was in the room is the highest-credibility comment this post can receive.
+
+ACTION 4 — Day 2 if still under 200 impressions:
+Add a comment connecting Post 0 to the upcoming series:
+"Context for anyone who just found this post: I'm starting a 7-part series next week on what the enterprise results I mentioned — the 529 endpoints, the 3-week discovery, the 4-day migration — actually looked like from the inside. The mindset talk is the why. The series is the what."
+
+DO NOT boost this post with paid promotion. It is an internal event post — paid reach to strangers produces the wrong audience for this content. Let organic and colleague networks do the work.

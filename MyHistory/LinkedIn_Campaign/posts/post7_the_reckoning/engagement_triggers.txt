@@ -1,0 +1,11 @@
+TRIGGER 1 — paste as reply to any comment from a series follower:
+"If you've followed this series: which post was most relevant to your situation? I'm asking because it shapes what I write next. The series continues — the format depends on what landed."
+
+TRIGGER 2 — paste as reply to any ROI-related comment:
+"The 'estimated' qualifier on the ROI figure is intentional and important. ROI on legacy modernization is real — but it's typically calculated as avoided cost (avoided rewrite, avoided downtime, avoided regulatory exposure) rather than a clean measurement. Presenting it without that qualifier would be misleading. Every other number on these slides has a source file and line reference."
+
+TRIGGER 3 — paste as a standalone comment if engagement is strong but no direct DMs yet:
+"Final ask for this series: is there someone in your network who manages a legacy platform and would benefit from knowing this approach exists? A tag or share means more here than a like. The people who need this conversation most are often the ones who haven't seen it yet."
+
+FOLLOW-UP if no DMs after 48h post-publication:
+Identify the 20 highest-value connections (CTO/VP Eng/CIO at 500+ person companies) who engaged with any earlier post in this series. DM each personally: "You engaged with [specific post] a few weeks ago. I've just published the full verified track record from all the engagements — thought you'd want to see it before I move on to the next series. [link]"

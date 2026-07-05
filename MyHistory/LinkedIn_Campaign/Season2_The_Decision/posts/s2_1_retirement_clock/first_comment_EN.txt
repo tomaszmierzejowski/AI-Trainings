@@ -1,0 +1,7 @@
+A pattern from every engagement where this risk came up: the organization always knew. Not formally — no risk register entry, no line item. But when we asked "who understands module X?", every person in the room said the same name without hesitating.
+
+If everyone can name the person, the risk is already priced in emotionally. It's just not priced in operationally.
+
+The extraction is mechanical once the code is fully read: every business rule gets a confidence score and a source reference. The 94% confidence figure means 94% verified against code by a human architect — the remaining 6% were flagged for the team to confirm, not silently guessed.
+
+What's the closest call your organization has had with knowledge walking out the door?

@@ -1,0 +1,14 @@
+THRESHOLD: Under 300 impressions at hour 6, OR under 5 meaningful comments at hour 8.
+
+ACTION 1 — Add a comment at hour 4:
+"A detail worth making explicit about the 'diagrams were wrong' slide:
+
+The architecture diagrams for this platform were produced by skilled architects using standard documentation practices. They weren't wrong because anyone made a mistake. They were wrong because documenting a complex, long-lived platform from memory and interviews produces a story about the platform — not the platform itself.
+
+The diagrams showed the platform as it was designed and as people understood it. The code showed the platform as it actually ran. In this engagement, that gap included 98 integration connections that no diagram had captured — across 7 different protocols."
+
+ACTION 2 — DM 10 Enterprise Architect / Head of Platform / VP Eng connections:
+"Shared something today about what happens when you analyze all 20 applications in a legacy platform instead of sampling. The architecture diagram finding is the one that usually stops people. [link]"
+
+ACTION 3 — Paid boost (day 2):
+LinkedIn: £25–50, target Enterprise Architect, Solution Architect, VP Engineering, Head of Platform job titles. 48-hour run.

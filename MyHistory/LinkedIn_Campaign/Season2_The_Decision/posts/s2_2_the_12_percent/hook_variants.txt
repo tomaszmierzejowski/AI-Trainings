@@ -1,0 +1,12 @@
+VARIANT A (primary):
+Here's a question your last assessment vendor hoped you'd never ask: "What percentage of the codebase did you actually read?"
+
+VARIANT B (test):
+Imagine an auditor who checked 12% of transactions and signed off on the whole ledger. You'd fire them. IT calls it "discovery."
+
+VARIANT C (self-test led):
+Pull up your last assessment report. Look for three things. Most reports score zero out of three.
+
+RECOMMENDATION: Use A — it hands the reader a weapon (a question they can actually ask), which is the most-saved content type for buyers. B is the sharpest reshare bait and the TikTok hook. C works as a retry if A's reach is low; checklist-framed hooks get saves.
+
+GRAPHIC: see graphic_brief.txt — the 12% pie/ledger visual.

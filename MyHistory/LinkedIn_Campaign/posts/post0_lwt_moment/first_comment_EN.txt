@@ -1,0 +1,13 @@
+The 4 levels I described:
+
+Level 1 — AI-Curious: "I've heard of ChatGPT"
+Level 2 — AI-Assisted: "I use it occasionally"
+Level 3 — AI-Augmented: "AI is my first step to everything" ← target
+Level 4 — AI-Native: "I can't work without it"
+
+Most people in enterprise IT are at Level 1 or 2.
+Most of the results I showed today came from Level 3 behavior.
+
+The gap is not skill. It is habit.
+
+Where are you on this spectrum?

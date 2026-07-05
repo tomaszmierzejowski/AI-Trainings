@@ -1,0 +1,15 @@
+TRIGGER 1 — paste as reply to any comment from a colleague who attended:
+"[Name] — glad it landed. The moment I'm most curious about from your perspective: the 'Domek' example or the 529 endpoints? They're the same argument at different scales — but people tend to feel one more than the other, and it usually tells you something about where they sit on the spectrum."
+
+TRIGGER 2 — paste as reply to any comment placing themselves on the spectrum:
+"Level [X] is honest — and the Level 2→3 transition is the hardest one. Level 1→2 happens naturally with curiosity. Level 3 requires a decision: is this the first place I go, or the last resort? The people I've seen make that switch describe it less as a skill change and more like a habit that compounds. What would Level 3 look like specifically for your current role?"
+
+TRIGGER 3 — paste as reply to any skeptical or "but AI makes mistakes" comment:
+"That's the right objection. Level 3 doesn't mean trusting AI blindly — it means using AI to produce coverage and speed that weren't previously possible, then applying your own judgment to verify. The 529 endpoints came from AI reading code. I verified every one before it entered the report. Both steps were necessary. That's what augmented means."
+
+TRIGGER 4 — paste to start a thread if no substantive comment after 90 minutes:
+"The example from the talk that surprised people most wasn't the enterprise one — it was Lidka. One person, one children's book, one day to build the entire online business infrastructure: store, payments, shipping, email, marketing. Nobody paid for that work except the person who decided to try. The only variable was whether they believed AI was worth attempting before hiring someone. What would the equivalent of that decision look like in your context?"
+
+FOLLOW-UP if no engagement after 2 hours:
+DM 5–8 colleagues who attended LWT Katowice: "Just posted somethi  ng from yesterday's talks. Would mean a lot if you weighed in — especially where you see yourself on the spectrum. [link]"
+Their comment turns this from a monologue into a conversation, which changes the algorithm signal entirely.

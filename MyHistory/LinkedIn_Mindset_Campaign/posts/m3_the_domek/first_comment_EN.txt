@@ -1,0 +1,7 @@
+For the skeptics (rightly) asking "cute story, but does it scale?":
+
+The same pattern — start with AI, verify with judgment — is how I run enterprise codebase analysis in my day job: 20 interconnected applications mapped in 3 weeks, work that traditionally takes a quarter. Thursday posts on this profile cover that side.
+
+Same behavior. A garden playhouse and a 20-application enterprise platform. The scale changes; the order doesn't.
+
+That's the entire thesis of this series: the mindset transfers. The tools are almost irrelevant.

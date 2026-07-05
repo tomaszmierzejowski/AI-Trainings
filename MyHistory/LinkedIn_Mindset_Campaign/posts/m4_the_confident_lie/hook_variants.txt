@@ -1,0 +1,14 @@
+VARIANT A (primary):
+I plant three lies in a report and hand it to smart people. The most dangerous lie survives almost every time.
+
+VARIANT B (test):
+The best-written paragraph in the report carried the worst error. That's not a coincidence. That's the mechanism.
+
+VARIANT C (challenge):
+Three errors are hidden in every AI summary your team accepted this month: a number, a source, a conclusion. Guess which one nobody caught.
+
+RECOMMENDATION: Use A — "I plant lies" is an irresistible confession-of-mischief open, and "survives almost every time" is a challenge to the reader's self-image. B is the thesis line and the best pull-quote/reshare text. C generalizes to the reader's team immediately — strong retry, and the best TikTok hook of the whole campaign ("I hide three lies in reports for a living").
+
+SERIES MECHANIC: This post sets up M6 (THE SIGNATURE) explicitly — "the fix is next Tuesday." Cliffhangers between weekly posts train return visits; keep the promise precisely.
+
+GRAPHIC: see graphic_brief.txt — the highlighted-paragraph visual.

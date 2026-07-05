@@ -1,0 +1,15 @@
+THRESHOLD: Under 400 impressions at hour 6, OR under 8 comments total at hour 8 (this post should be the highest-engagement post in the series).
+
+ACTION 1 — Self-reply at hour 4:
+"Birgit has added a few words from her perspective that I want to share in full:
+
+'Thank you very much for taking the time to investigate the possibilities — and for choosing to make both human expertise and AI resources available to get this in place. It means a lot to BP — and not least to all the children and families who now have access to an offer that strengthens self-esteem, prevents exclusion and provides a stronger and safer foundation in everyday life.'
+
+The response to this post has been [actual metric]. The conversation I most want is with anyone facing a Xamarin end-of-life or platform deadline before Q1 2027."
+
+ACTION 2 — Direct outreach to 5 researchers/academics/NGO technology leads in your network:
+"Shared something this week about technology built for children's welfare research. Birgit's story is worth reading regardless of the technical angle — thought you might find it meaningful. [link]"
+
+This cross-industry reach is the post's primary amplification lever. Researchers and educators sharing it reaches municipal decision-makers and procurement officers.
+
+ACTION 3 — Ask Birgit to post 3–5 sentences on her own LinkedIn profile tagging you. Her network (researchers, educators, municipalities) is entirely different from yours. This is the single highest-leverage move available to this post.

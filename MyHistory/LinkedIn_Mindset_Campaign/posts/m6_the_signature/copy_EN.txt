@@ -1,0 +1,24 @@
+Last week I showed you the lie that survives every audit. Here's the 60 seconds that catches it.
+
+The order matters more than the effort. When people "carefully review" AI output, they read it like an essay — top to bottom, nodding along with the prose. That's exactly how the confident lie gets signed.
+
+Read it like an auditor instead. Sixty seconds, fixed sequence:
+
+SECONDS 0–20 — Names, numbers, dates.
+Highest fabrication density in any AI output. Check them against the source, not against your memory. A wrong number is the easiest catch and the fastest credibility test of the whole document.
+
+SECONDS 20–40 — Sources.
+Every citation: does it exist? One invented benchmark poisons every real one around it.
+
+SECONDS 40–60 — Conclusion vs. data.
+Cover the conclusion paragraph. Look only at the underlying numbers. Now ask: what conclusion would I draw? Uncover. If yours and the document's disagree — you've just caught the error that survives every training room I run.
+
+Then one rule on top: no citation, no claim. Truth lives in your systems of record; AI is the understanding layer on top of them. Anything that can't show its receipt doesn't get forwarded.
+
+Sixty seconds. Not paranoia — procedure.
+
+And here's the reframe I insist on: verification isn't distrust of AI. It's the thing that makes your signature mean something. When you sign, YOU are the claim.
+
+What's your team's current procedure between "AI wrote it" and "we sent it"? One honest sentence.
+
+#AIMindset #QualityOfWork #SopraSteria

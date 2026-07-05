@@ -1,0 +1,14 @@
+GRAPHIC — S2-1 THE RETIREMENT CLOCK
+
+The one idea the image must carry: an entire platform's knowledge has a retirement date.
+
+PRIMARY PROMPT (text-capable model — GPT-Image / Ideogram):
+A single paper desk-calendar page pinned against a deep purple-black background (#1A0A2E), photorealistic, dramatic side light. The calendar page is mostly empty except one date circled thickly in orange (#E8640A) marker, with a handwritten orange annotation next to it: "Marek's last day". Below the calendar, in clean white sans-serif print: "20 years of platform. 17 modules. 1 person who understands them." Bottom corner, small orange text: "What's your plan for this date?" Moody, still-life photography, shallow depth of field, no people, no logos. 4:5 vertical, 1080×1350.
+
+NO-TEXT FALLBACK (Midjourney):
+A single paper desk calendar page pinned to a dark wall, one date circled in orange marker, dramatic side lighting against deep purple-black shadows, photorealistic still life, melancholic and tense atmosphere, no legible text, no people --ar 4:5 --v 6 --style raw
+Then overlay the copy above in Canva (white sans-serif + orange annotation font).
+
+ALT TEXT: A calendar with one date circled in orange labeled as a key engineer's last day, captioned "20 years of platform. 17 modules. 1 person who understands them."
+
+NOTE: "Marek" is deliberately a common Polish name with no client link. For the EN-market version you may swap to "Lars". Never use a real employee's name.

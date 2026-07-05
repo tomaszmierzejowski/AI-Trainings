@@ -1,0 +1,44 @@
+VIDEO SCRIPT — 30-45 seconds
+Record in a real workspace. No intro graphic. No logo overlay. Start speaking immediately.
+Add captions — 80% of LinkedIn video is watched muted.
+
+---
+
+Your modernization project doesn't need more developers.
+
+It needs a more complete picture.
+
+[PAUSE — 2 seconds. Look directly at camera.]
+
+I've analyzed over a hundred enterprise codebases in the last year.
+Every endpoint. Every connection. Every data flow.
+Work that used to take teams of three to five consultants
+two to four months.
+
+But here is what didn't change:
+The hardest problems still require human judgment.
+Business context. Trade-off decisions. Designing for what comes next.
+
+What changed is the ceiling on how much a senior architect can see at once.
+Before: twenty percent of the codebase, in depth.
+Now: all of it.
+
+[PAUSE — 1 second.]
+
+We call this AI-augmented architecture.
+Not because it sounds impressive.
+Because it honestly describes what changed — and what didn't.
+
+The expertise matters more. Not less.
+
+---
+
+PRODUCTION NOTES:
+- Total target: 35–42 seconds
+- No intro card or logo animation — start with your face and voice
+- Shoot in landscape (16:9) or square (1:1) — both work on LinkedIn
+- Authentic workspace background preferred over blank wall
+- Minimum 1080p
+- Upload natively to LinkedIn — never a YouTube link
+- LinkedIn auto-captions are acceptable; burn-in captions are better
+- Rehearse 3–4 times before recording — natural delivery, not memorized

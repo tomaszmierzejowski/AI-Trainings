@@ -1,0 +1,12 @@
+VARIANT A (primary):
+Two people. Same job. Same AI tools. One gets 10x more out of them. The difference is never what people expect.
+
+VARIANT B (test):
+The difference isn't in the tools. It's in the order. (whole hook — let the white space work)
+
+VARIANT C (confession):
+For a year I used AI wrong. Not bad prompts — wrong order. I finished my work first, then asked AI to polish it.
+
+RECOMMENDATION: Use A — the two-person contrast is the most robust curiosity structure and survives the fold on every device. B is the purest expression of the campaign flag and the strongest carousel/TikTok title, but as a text hook it risks being too abstract before the audience knows you. C is the retry — confession hooks outperform when the audience is warm.
+
+GRAPHIC: see graphic_brief.txt — the two-sequence diagram.

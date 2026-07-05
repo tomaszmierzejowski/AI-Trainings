@@ -1,0 +1,9 @@
+Chcę być konkretny co do metodologii, bo to pierwsze pytanie sceptyka.
+
+Pełna analiza kodu nie jest standardem branżowym, bo jest droga i czasochłonna. Tradycyjna ocena pokrywa 10–15% kodu przez próbkowanie, uzupełnione wywiadami i przeglądem dokumentacji. Daje to wyniki mniej więcej poprawne — wystarczające na slajd z mapą drogową, niewystarczające do decyzji ryzykowych dotyczących milionów użytkowników.
+
+Używamy analizy przyspieszonej przez AI, żeby przeczytać każdą linię. Nie dlatego, że AI jest imponujące, ale dlatego, że eliminuje problem próbkowania. Każde odkrycie jest następnie weryfikowane przez starszego architekta zanim dotrze do klienta. Każde twierdzenie prowadzi do konkretnej linii kodu źródłowego.
+
+529 endpointów i 98 połączeń to wyniki z zweryfikowanych raportów z referencjami do plików i linii. Chętnie omówię, jak to wygląda w praktyce.
+
+Napisz do mnie.

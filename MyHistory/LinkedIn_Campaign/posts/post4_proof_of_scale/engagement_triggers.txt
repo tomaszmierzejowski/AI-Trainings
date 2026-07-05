@@ -1,0 +1,11 @@
+TRIGGER 1 — paste as reply to any enterprise architect comment:
+"For enterprise architects: has a discovery ever revealed connections or endpoints your architecture diagrams didn't show? I'm curious how significant the gap was — and whether it changed the modernization strategy that followed."
+
+TRIGGER 2 — paste as reply to any comment questioning the timeline:
+"The 8–14 week traditional timeline comes from line 564 of our own source analysis of comparable engagements — it's not a marketing benchmark. The 500K NOK figure is verified cost data from this specific engagement. The comparison is structural: full coverage within a traditional billing model requires too many consultant hours. AI-accelerated analysis changes the unit economics."
+
+TRIGGER 3 — paste to start a thread if no substantive comment after 90 minutes:
+"The most important slide in this carousel is the question on the last content slide — not the numbers. 'What would your platform reveal if someone read all of it?' That question has a specific answer hiding in your source code. What would you most want to know?"
+
+FOLLOW-UP if no response after 2h:
+Boost to followers + their networks for £25. Carousel posts respond well to paid distribution because the swipe mechanic is a measurable engagement signal.

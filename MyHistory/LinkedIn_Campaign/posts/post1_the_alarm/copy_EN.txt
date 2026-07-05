@@ -1,0 +1,29 @@
+The most expensive slide deck in enterprise IT contains one quiet assumption nobody tells you about.
+
+It assumes the consultants read your code.
+
+They didn't. Not all of it.
+
+Enterprise discovery doesn't work that way. Teams of senior consultants, billing €1,500–2,000 a day, interview your architects. Review your documentation. Sample sections of your codebase. Eight to twelve weeks. They produce findings.
+
+The findings are approximately true.
+
+"Approximately" is doing enormous work in that sentence.
+
+In the last 18 months, we analyzed six enterprise platforms with full codebase coverage. Not samples. Not documentation. Every line. Every endpoint. Every integration. Every data flow.
+
+Here is a sample of what that found — that traditional assessments had missed:
+
+— 529 API endpoints with no authentication. In one platform. Nobody on the team knew they existed.
+— 98 integration connections on a platform documented as having 30.
+— Business logic embedded in 17 modules that no single person could enumerate manually.
+
+These are not edge cases. They are typical.
+
+Your platform almost certainly contains findings like this. The question is not whether they are there.
+
+The question is who gets to read them first.
+
+[Swipe for the methodology — and the verified results.]
+
+#LegacyModernization #AppModernization #EnterpriseArchitecture #SopraSteria #TechDebt

@@ -1,0 +1,11 @@
+The one-move-per-friction cheat sheet, since diagnosis without treatment is just complaining:
+
+Fear of looking incompetent → the leader goes first, publicly, with imperfections showing. Once a week: "I delegated X to AI — here's what I had to correct." The correction is the medicine; it makes verification look senior, not junior. (More on this in two weeks — it deserves its own post.)
+
+Identity threat → reframe the role upward: your judgment is now applied to ten drafts instead of one. Nobody's craft is deleted; its leverage changed.
+
+Trust miscalibration → replace the verdict with a rule: never trust, never dismiss — always verify the three highest-stakes claims. Calibration is a skill, not an attitude.
+
+Habit inertia → don't fight the old habit; attach the new one to an existing trigger. "When I open a blank document, I first ask for a draft." Implementation intentions carry one of the strongest effect sizes in behavioral science (Gollwitzer & Sheeran, d≈0.65).
+
+McKinsey's finding on generative-AI productivity says the quiet part: the gains materialize only with training and practice — behavior, not access.

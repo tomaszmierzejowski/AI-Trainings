@@ -1,0 +1,7 @@
+A few specifics worth noting: the 187 endpoints trace to line 477 of the source report (MASTER_CONSOLIDATED_REPORT), the 98 connections to line 478, and the 8–14 week traditional timeline to line 564. The 3–5 consultants benchmark is at line 566. I cite these because being able to cite them is the point.
+
+The 2.3M NOK vs. 500K NOK comparison is verified cost data from the same engagement. A 4x cost reduction with full coverage rather than partial.
+
+The comparison to traditional discovery is not a criticism of the consultants who do it. It is a structural observation: full-codebase analysis within a traditional billing model is economically irrational. Teams don't sample because they're lazy — they sample because reading everything wasn't feasible until AI-accelerated tooling changed the economics. The need hasn't changed. The feasibility has.
+
+DM me if you want to discuss what full-coverage discovery looks like for your platform.

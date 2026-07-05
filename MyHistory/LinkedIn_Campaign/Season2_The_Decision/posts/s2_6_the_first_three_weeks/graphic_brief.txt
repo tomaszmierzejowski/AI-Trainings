@@ -1,0 +1,12 @@
+GRAPHIC — S2-6 THE FIRST THREE WEEKS
+
+The one idea the image must carry: a two-sided commitment, stated like a contract — and visibly unequal (they commit little, we commit everything).
+
+PRIMARY PROMPT (text-capable model):
+A two-column ledger card on dark purple-black (#1A0A2E), styled like a minimal term sheet. Left column, narrow, headed in gray "YOU COMMIT": three short lines in white — "repo access (read-only)", "1 engineer · 2h/week", "a decision-maker at week 3". Right column, wider, headed in orange (#E8640A) "WE COMMIT": five lines in white — "100% of the code read", "every finding cited to file + line", "not-examined list, explicit", "estimates labeled as estimates", "'not a fit' said in writing, free". A thin vertical divider between columns; the right column subtly glows. Headline top in large white bold: "The whole offer. Both directions." Footer small gray: "3 weeks → an inventory you own." Flat, contractual, elegant, no people, no logos. 4:5 vertical, 1080×1350.
+
+NO-TEXT FALLBACK (Midjourney):
+A minimal dark term-sheet document split into two columns by a thin glowing line, left column short, right column longer and softly glowing orange, on a deep purple-black desk, dramatic overhead light, photorealistic minimalist still life, no legible text, no people --ar 4:5 --v 6 --style raw
+Then overlay both columns in Canva per copy above.
+
+ALT TEXT: Two-column commitment ledger — the client commits access and two hours a week; we commit 100% code coverage, cited findings, explicit exclusions, labeled estimates, and an honest "not a fit" in writing.

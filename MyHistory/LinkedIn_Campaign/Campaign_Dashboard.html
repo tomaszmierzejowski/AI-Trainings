@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LinkedIn Campaign Dashboard — App Modernization Factory</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --purple-dark: #4D1D82;
+    --orange: #E8640A;
+    --dark-bg: #1A0A2E;
+    --light-bg: #F8F6FC;
+    --white: #FFFFFF;
+    --purple-mid: #6B2FAF;
+    --purple-light: #EDE3F7;
+    --green: #1A7A3A;
+    --green-light: #D4EDDA;
+    --yellow: #856404;
+    --yellow-light: #FFF3CD;
+    --red: #842029;
+    --red-light: #F8D7DA;
+    --grey: #6C757D;
+    --grey-light: #E9ECEF;
+    --border: #D4C9E8;
+    --text: #1A0A2E;
+    --text-muted: #6B5E87;
+    --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --shadow: 0 2px 8px rgba(77,29,130,0.12);
+    --shadow-lg: 0 8px 32px rgba(77,29,130,0.18);
+    --radius: 10px;
+    --radius-sm: 6px;
+  }
+
+  body {
+    font-family: var(--font);
+    background: var(--light-bg);
+    color: var(--text);
+    min-height: 100vh;
+  }
+
+  /* ---- HEADER ---- */
+  header {
+    background: linear-gradient(135deg, var(--dark-bg) 0%, var(--purple-dark) 100%);
+    color: var(--white);
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  }
+  .header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .header-brand {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 260px;
+  }
+  .header-brand h1 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--white);
+    line-height: 1.2;
+  }
+  .header-brand .tagline {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.65);
+    margin-top: 3px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .header-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .last-updated {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.55);
+    white-space: nowrap;
+  }
+  .lang-toggle {
+    display: flex;
+    background: rgba(255,255,255,0.1);
+    border-radius: 24px;
+    padding: 3px;
+    gap: 2px;
+  }
+  .lang-toggle button {
+    border: none;
+    background: transparent;
+    color: rgba(255,255,255,0.65);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 5px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: var(--font);
+    letter-spacing: 0.05em;
+  }
+  .lang-toggle button.active {
+    background: var(--orange);
+    color: var(--white);
+  }
+  .lang-toggle button:hover:not(.active) {
+    background: rgba(255,255,255,0.15);
+    color: var(--white);
+  }
+  .header-accent {
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--orange) 0%, var(--purple-mid) 60%, transparent 100%);
+  }
+
+  /* ---- LAYOUT ---- */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  /* ---- SECTION TITLE ---- */
+  .section-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--purple-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  .section-title::after {
+    content: '';
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(90deg, var(--border), transparent);
+  }
+
+  /* ---- CARD ---- */
+  .card {
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+  .card-body {
+    padding: 20px;
+  }
+
+  /* ---- CALENDAR ---- */
+  #calendar .card-body { padding: 0; overflow-x: auto; }
+  .calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 560px;
+  }
+  .calendar-table th {
+    background: var(--dark-bg);
+    color: rgba(255,255,255,0.9);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 10px 14px;
+    text-align: center;
+  }
+  .calendar-table th:first-child {
+    text-align: left;
+    width: 88px;
+    padding-left: 18px;
+    background: var(--purple-dark);
+  }
+  .calendar-table td {
+    border: 1px solid var(--border);
+    padding: 10px 10px;
+    vertical-align: top;
+    min-height: 60px;
+    font-size: 0.8rem;
+    text-align: center;
+    width: calc((100% - 88px)/5);
+  }
+  .calendar-table td:first-child {
+    background: var(--purple-dark);
+    color: rgba(255,255,255,0.9);
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    text-align: left;
+    padding-left: 18px;
+    border-color: rgba(255,255,255,0.08);
+  }
+  .cal-cell-empty { color: var(--grey); font-size: 0.7rem; opacity: 0.4; }
+  .cal-post-chip {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 8px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: transform 0.15s;
+    width: 100%;
+  }
+  .cal-post-chip:hover { transform: scale(1.03); }
+  .cal-post-chip .chip-name {
+    font-weight: 700;
+    font-size: 0.72rem;
+    line-height: 1.2;
+  }
+  .cal-post-chip .chip-fmt {
+    font-size: 0.65rem;
+    opacity: 0.8;
+    font-weight: 500;
+  }
+  .chip-upcoming { background: var(--grey-light); color: var(--grey); }
+  .chip-published { background: var(--green-light); color: var(--green); }
+  .chip-scheduled { background: #D0E8FF; color: #0A4F8A; }
+  .chip-boosted { background: #FFF0D6; color: #7A4000; }
+  .chip-today { background: #FFE8D4; color: var(--orange); border: 1px solid var(--orange); }
+
+  /* ---- ACCORDION ---- */
+  .accordion { display: flex; flex-direction: column; gap: 8px; }
+  .acc-item {
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    border-left: 4px solid var(--border);
+    transition: border-color 0.2s;
+  }
+  .acc-item.perf-green { border-left-color: var(--green); }
+  .acc-item.perf-yellow { border-left-color: #F0C429; }
+  .acc-item.perf-red { border-left-color: #DC3545; }
+  .acc-item.perf-upcoming { border-left-color: var(--purple-dark); }
+
+  .acc-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 18px;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.15s;
+    flex-wrap: wrap;
+  }
+  .acc-header:hover { background: var(--purple-light); }
+  .acc-num {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--purple-dark);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+  }
+  .acc-num.poll-num { background: var(--orange); }
+  .acc-titles { flex: 1; min-width: 160px; }
+  .acc-codename {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--purple-dark);
+    letter-spacing: 0.01em;
+  }
+  .acc-week-day {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    margin-top: 1px;
+  }
+  .acc-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+    flex-wrap: wrap;
+  }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 9px;
+    border-radius: 20px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .badge-format { background: #EDE3F7; color: var(--purple-dark); }
+  .badge-green { background: var(--green-light); color: var(--green); }
+  .badge-yellow { background: var(--yellow-light); color: var(--yellow); }
+  .badge-red { background: var(--red-light); color: var(--red); }
+  .badge-grey { background: var(--grey-light); color: var(--grey); }
+  .badge-blue { background: #D0E8FF; color: #0A4F8A; }
+  .acc-arrow {
+    color: var(--purple-dark);
+    font-size: 0.8rem;
+    transition: transform 0.25s;
+    flex-shrink: 0;
+  }
+  .acc-item.open .acc-arrow { transform: rotate(180deg); }
+
+  .acc-body {
+    display: none;
+    padding: 0 18px 18px;
+    border-top: 1px solid var(--border);
+  }
+  .acc-item.open .acc-body { display: block; }
+
+  /* ---- FORM GRID ---- */
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 14px;
+    margin-top: 16px;
+  }
+  .form-group { display: flex; flex-direction: column; gap: 5px; }
+  .form-group label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 7px 10px;
+    font-size: 0.85rem;
+    color: var(--text);
+    background: var(--white);
+    font-family: var(--font);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--purple-dark);
+    box-shadow: 0 0 0 3px rgba(77,29,130,0.1);
+  }
+  .form-group textarea { resize: vertical; min-height: 70px; }
+  .form-group.span-2 { grid-column: span 2; }
+  .form-group.span-full { grid-column: 1 / -1; }
+
+  /* ---- STATUS SELECT COLORS ---- */
+  select option { background: var(--white); }
+
+  /* ---- PERF BADGE ---- */
+  .perf-badge-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+    padding: 10px 14px;
+    border-radius: var(--radius-sm);
+    font-size: 0.8rem;
+  }
+  .perf-badge-row.green { background: var(--green-light); color: var(--green); }
+  .perf-badge-row.yellow { background: var(--yellow-light); color: var(--yellow); }
+  .perf-badge-row.red { background: var(--red-light); color: var(--red); }
+  .perf-badge-row.upcoming { background: var(--grey-light); color: var(--grey); }
+  .perf-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .green .perf-dot { background: #1A7A3A; }
+  .yellow .perf-dot { background: #F0C429; }
+  .red .perf-dot { background: #DC3545; }
+  .upcoming .perf-dot { background: var(--grey); }
+
+  /* ---- FILE PATHS ---- */
+  .files-toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--purple-dark);
+    padding: 8px 0 2px;
+    font-family: var(--font);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .files-toggle:hover { color: var(--orange); }
+  .files-panel { display: none; margin-top: 8px; }
+  .files-panel.open { display: block; }
+  .file-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background: var(--dark-bg);
+    border-radius: var(--radius-sm);
+    padding: 12px 14px;
+  }
+  .file-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.76rem;
+    color: rgba(255,255,255,0.8);
+  }
+  .file-row .file-icon { color: var(--orange); flex-shrink: 0; }
+  .copy-btn {
+    margin-left: auto;
+    background: rgba(255,255,255,0.1);
+    border: none;
+    color: rgba(255,255,255,0.7);
+    font-size: 0.65rem;
+    padding: 2px 7px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: var(--font);
+    transition: background 0.15s;
+    white-space: nowrap;
+  }
+  .copy-btn:hover { background: var(--orange); color: var(--white); }
+  .copy-btn.copied { background: var(--green); color: var(--white); }
+
+  /* ---- TOTALS ---- */
+  .totals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 16px;
+  }
+  .total-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 18px 16px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .total-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+  }
+  .total-value {
+    font-size: 1.9rem;
+    font-weight: 800;
+    color: var(--purple-dark);
+    line-height: 1;
+  }
+  .total-sub {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+  }
+  .total-card.highlight { background: var(--purple-dark); }
+  .total-card.highlight .total-label { color: rgba(255,255,255,0.65); }
+  .total-card.highlight .total-value { color: var(--white); }
+  .total-card.highlight .total-sub { color: rgba(255,255,255,0.55); }
+  .total-card.orange { background: var(--orange); }
+  .total-card.orange .total-label { color: rgba(255,255,255,0.75); }
+  .total-card.orange .total-value { color: var(--white); }
+  .total-card.orange .total-sub { color: rgba(255,255,255,0.65); }
+
+  /* ---- DIVIDER ---- */
+  .inner-divider {
+    height: 1px;
+    background: var(--border);
+    margin: 14px 0;
+  }
+
+  /* ---- RESPONSIVE ---- */
+  @media (max-width: 600px) {
+    .container { padding: 16px 12px; }
+    .header-inner { padding: 12px 14px; }
+    .header-brand h1 { font-size: 1.05rem; }
+    .form-grid { grid-template-columns: 1fr 1fr; }
+    .totals-grid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="header-brand">
+      <h1>App Modernization Factory &mdash; LinkedIn Campaign</h1>
+      <div class="tagline">Sopra Steria &middot; Campaign Tracker &middot; 4-Week Rollout</div>
+    </div>
+    <div class="header-meta">
+      <span class="last-updated" id="lastUpdatedLabel">Last saved: —</span>
+      <div class="lang-toggle">
+        <button id="btnEN" onclick="setLang('EN')">EN</button>
+        <button id="btnPL" onclick="setLang('PL')">PL</button>
+      </div>
+    </div>
+  </div>
+  <div class="header-accent"></div>
+</header>
+
+<div class="container">
+
+  <!-- CALENDAR -->
+  <section id="calendar">
+    <div class="section-title">4-Week Campaign Calendar</div>
+    <div class="card">
+      <div class="card-body">
+        <table class="calendar-table" id="calendarTable">
+          <thead>
+            <tr>
+              <th>Week</th>
+              <th>Mon</th>
+              <th>Tue</th>
+              <th>Wed</th>
+              <th>Thu</th>
+              <th>Fri</th>
+            </tr>
+          </thead>
+          <tbody id="calendarBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- POSTS -->
+  <section id="posts">
+    <div class="section-title">Post Tracker</div>
+    <div class="accordion" id="accordion"></div>
+  </section>
+
+  <!-- TOTALS -->
+  <section id="totals">
+    <div class="section-title">Campaign Totals</div>
+    <div class="totals-grid" id="totalsGrid"></div>
+  </section>
+
+</div>
+
+<script>
+// =====================================================================
+// DATA
+// =====================================================================
+const POSTS = [
+  {
+    id: 'p1',
+    num: '1',
+    enName: 'THE ALARM',
+    plName: 'ALARM',
+    week: 'W1',
+    day: 'Tue',
+    format: 'Carousel',
+    impThreshold: 200,
+    commentThreshold: 5,
+    isPoll: false,
+    folder: 'post1_the_alarm'
+  },
+  {
+    id: 'p2',
+    num: '2',
+    enName: 'INVISIBLE RISK',
+    plName: 'NIEWIDZIALNE RYZYKO',
+    week: 'W1',
+    day: 'Thu',
+    format: 'Text+Graphic',
+    impThreshold: 300,
+    commentThreshold: 3,
+    isPoll: false,
+    folder: 'post2_invisible_risk'
+  },
+  {
+    id: 'poll',
+    num: 'P',
+    enName: 'LEGACY RISK POLL',
+    plName: 'ANKIETA LEGACY',
+    week: 'W2',
+    day: 'Mon',
+    format: 'Poll',
+    impThreshold: 100,
+    commentThreshold: null,
+    isPoll: true,
+    folder: 'poll_legacy_risk'
+  },
+  {
+    id: 'p3',
+    num: '3',
+    enName: 'PROOF OF SPEED',
+    plName: 'DOWÓD SZYBKOŚCI',
+    week: 'W2',
+    day: 'Tue',
+    format: 'Text+Graphic',
+    impThreshold: 400,
+    commentThreshold: 8,
+    isPoll: false,
+    folder: 'post3_proof_of_speed'
+  },
+  {
+    id: 'p4',
+    num: '4',
+    enName: 'PROOF OF SCALE',
+    plName: 'DOWÓD SKALI',
+    week: 'W2',
+    day: 'Thu',
+    format: 'Carousel',
+    impThreshold: 300,
+    commentThreshold: 5,
+    isPoll: false,
+    folder: 'post4_proof_of_scale'
+  },
+  {
+    id: 'p5',
+    num: '5',
+    enName: 'THE RESCUE',
+    plName: 'RATUNEK',
+    week: 'W3',
+    day: 'Tue',
+    format: 'Text',
+    impThreshold: 250,
+    commentThreshold: 4,
+    isPoll: false,
+    folder: 'post5_the_rescue'
+  },
+  {
+    id: 'p6',
+    num: '6',
+    enName: 'THE REFRAME',
+    plName: 'REFRAMING',
+    week: 'W3',
+    day: 'Thu',
+    format: 'Text/Video',
+    impThreshold: 300,
+    commentThreshold: 4,
+    isPoll: false,
+    folder: 'post6_the_reframe'
+  },
+  {
+    id: 'p7',
+    num: '7',
+    enName: 'THE RECKONING',
+    plName: 'ROZLICZENIE',
+    week: 'W4',
+    day: 'Tue',
+    format: 'Carousel',
+    impThreshold: 400,
+    commentThreshold: 5,
+    isPoll: false,
+    folder: 'post7_the_reckoning'
+  }
+];
+
+const WEEKS = ['W1', 'W2', 'W3', 'W4'];
+const DAYS  = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'];
+
+const DAY_LABELS_EN = { Mon: 'Monday', Tue: 'Tuesday', Wed: 'Wednesday', Thu: 'Thursday', Fri: 'Friday' };
+const DAY_LABELS_PL = { Mon: 'Pon', Tue: 'Wt', Wed: 'Śr', Thu: 'Czw', Fri: 'Pt' };
+
+// =====================================================================
+// LOCAL STORAGE
+// =====================================================================
+const LS_LANG    = 'llc_lang';
+const LS_UPDATED = 'llc_updated';
+
+function lsKey(id) { return 'llc_post_' + id; }
+
+function getPostData(id) {
+  try {
+    const raw = localStorage.getItem(lsKey(id));
+    if (raw) return JSON.parse(raw);
+  } catch(e) {}
+  return {
+    status: 'Upcoming',
+    publish_date: '',
+    impressions_4h: '',
+    impressions_final: '',
+    likes: '',
+    comments: '',
+    dms_sent: '',
+    dms_replied: '',
+    notes: ''
+  };
+}
+
+function savePostData(id, data) {
+  localStorage.setItem(lsKey(id), JSON.stringify(data));
+  const now = new Date().toISOString();
+  localStorage.setItem(LS_UPDATED, now);
+  document.getElementById('lastUpdatedLabel').textContent = 'Last saved: ' + formatDateTime(now);
+}
+
+function getLang() {
+  return localStorage.getItem(LS_LANG) || 'EN';
+}
+
+function setLang(lang) {
+  localStorage.setItem(LS_LANG, lang);
+  applyLang(lang);
+}
+
+function applyLang(lang) {
+  document.getElementById('btnEN').classList.toggle('active', lang === 'EN');
+  document.getElementById('btnPL').classList.toggle('active', lang === 'PL');
+  // Update all codename elements
+  POSTS.forEach(function(p) {
+    const el = document.getElementById('codename_' + p.id);
+    if (el) el.textContent = lang === 'EN' ? p.enName : p.plName;
+    const calEl = document.getElementById('cal_name_' + p.id);
+    if (calEl) calEl.textContent = lang === 'EN' ? p.enName : p.plName;
+  });
+}
+
+function formatDateTime(iso) {
+  if (!iso) return '—';
+  try {
+    const d = new Date(iso);
+    return d.toLocaleDateString('en-GB') + ' ' + d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+  } catch(e) { return iso; }
+}
+
+// =====================================================================
+// PERFORMANCE LOGIC
+// =====================================================================
+function getPerformance(postId) {
+  const data = getPostData(postId);
+  const post = POSTS.find(function(p) { return p.id === postId; });
+  const threshold = post.impThreshold;
+  if (data.status !== 'Published' && data.status !== 'Boosted') return 'upcoming';
+  const imp = parseInt(data.impressions_4h) || 0;
+  if (imp === 0) return 'red';
+  if (imp >= threshold) return 'green';
+  if (imp >= threshold * 0.6) return 'yellow';
+  return 'red';
+}
+
+function perfLabel(perf, imp4h, threshold) {
+  if (perf === 'upcoming') return 'Not yet published';
+  if (perf === 'green')    return 'On Track — ' + imp4h + ' impr ≥ ' + threshold + ' target';
+  if (perf === 'yellow')   return 'Watch — ' + imp4h + ' impr (target: ' + threshold + ')';
+  return 'Underperforming — ' + imp4h + ' impr (target: ' + threshold + ')';
+}
+
+// =====================================================================
+// CALENDAR
+// =====================================================================
+function buildCalendar() {
+  const lang = getLang();
+  const tbody = document.getElementById('calendarBody');
+  tbody.innerHTML = '';
+
+  WEEKS.forEach(function(week) {
+    const tr = document.createElement('tr');
+
+    // week label cell
+    const tdWeek = document.createElement('td');
+    tdWeek.textContent = week;
+    tr.appendChild(tdWeek);
+
+    DAYS.forEach(function(day) {
+      const td = document.createElement('td');
+      const post = POSTS.find(function(p) { return p.week === week && p.day === day; });
+
+      if (!post) {
+        td.innerHTML = '<span class="cal-cell-empty">—</span>';
+      } else {
+        const data = getPostData(post.id);
+        let chipClass = 'chip-upcoming';
+        const status = data.status || 'Upcoming';
+        if (status === 'Published') chipClass = 'chip-published';
+        else if (status === 'Scheduled') chipClass = 'chip-scheduled';
+        else if (status === 'Boosted') chipClass = 'chip-published';
+
+        const name = lang === 'EN' ? post.enName : post.plName;
+        td.innerHTML = '<div class="cal-post-chip ' + chipClass + '" onclick="openAccordion(\'' + post.id + '\')">'
+          + '<span class="chip-name" id="cal_name_' + post.id + '">' + name + '</span>'
+          + '<span class="chip-fmt">' + post.format + '</span>'
+          + '</div>';
+      }
+      tr.appendChild(td);
+    });
+
+    tbody.appendChild(tr);
+  });
+}
+
+function openAccordion(id) {
+  const item = document.getElementById('acc_' + id);
+  if (!item) return;
+  item.classList.add('open');
+  item.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// =====================================================================
+// FILE PATHS
+// =====================================================================
+function buildFilePaths(post) {
+  const base = 'posts/' + post.folder + '/';
+  const files = [];
+  if (!post.isPoll) {
+    files.push(base + 'copy_EN.txt');
+    files.push(base + 'copy_PL.txt');
+    files.push(base + 'first_comment_EN.txt');
+    files.push(base + 'first_comment_PL.txt');
+    files.push(base + 'hashtags.txt');
+  } else {
+    files.push(base + 'poll_EN.txt');
+    files.push(base + 'poll_PL.txt');
+  }
+  return files;
+}
+
+// =====================================================================
+// ACCORDION BUILD
+// =====================================================================
+function buildAccordion() {
+  const lang = getLang();
+  const container = document.getElementById('accordion');
+  container.innerHTML = '';
+
+  POSTS.forEach(function(post) {
+    const data = getPostData(post.id);
+    const perf = getPerformance(post.id);
+    const perfClass = 'perf-' + perf;
+
+    const item = document.createElement('div');
+    item.className = 'acc-item ' + perfClass;
+    item.id = 'acc_' + post.id;
+
+    const name = lang === 'EN' ? post.enName : post.plName;
+
+    // Perf badge html
+    let perfBadgeHtml = '';
+    if (perf === 'green') perfBadgeHtml = '<span class="badge badge-green">&#10003; On Track</span>';
+    else if (perf === 'yellow') perfBadgeHtml = '<span class="badge badge-yellow">&#9651; Watch</span>';
+    else if (perf === 'red') perfBadgeHtml = '<span class="badge badge-red">&#9679; Under</span>';
+    else perfBadgeHtml = '<span class="badge badge-grey">Upcoming</span>';
+
+    const numClass = post.isPoll ? 'acc-num poll-num' : 'acc-num';
+
+    item.innerHTML =
+      '<div class="acc-header" onclick="toggleAccordion(\'' + post.id + '\')">'
+        + '<div class="' + numClass + '">' + post.num + '</div>'
+        + '<div class="acc-titles">'
+          + '<div class="acc-codename" id="codename_' + post.id + '">' + name + '</div>'
+          + '<div class="acc-week-day">' + post.week + ' &middot; ' + post.day + ' &middot; ' + post.format + '</div>'
+        + '</div>'
+        + '<div class="acc-right">'
+          + '<span class="badge badge-format">' + post.format + '</span>'
+          + perfBadgeHtml
+          + '<span class="acc-arrow">&#9660;</span>'
+        + '</div>'
+      + '</div>'
+      + '<div class="acc-body" id="body_' + post.id + '">'
+        + buildAccordionBody(post, data, perf)
+      + '</div>';
+
+    container.appendChild(item);
+  });
+}
+
+function buildAccordionBody(post, data, perf) {
+  const imp4h = parseInt(data.impressions_4h) || 0;
+  const perfText = perfLabel(perf, imp4h, post.impThreshold);
+
+  const perfRowClass = perf === 'upcoming' ? 'upcoming' : perf;
+
+  let commentThresholdInfo = '';
+  if (post.commentThreshold) {
+    commentThresholdInfo = ' &middot; Comment target: ' + post.commentThreshold;
+  }
+
+  const files = buildFilePaths(post);
+  let fileRowsHtml = '';
+  files.forEach(function(f) {
+    fileRowsHtml += '<div class="file-row">'
+      + '<span class="file-icon">&#128196;</span>'
+      + '<span>' + f + '</span>'
+      + '<button class="copy-btn" onclick="copyPath(this, \'' + f.replace(/'/g, "\\'") + '\')" title="Copy path">Copy</button>'
+      + '</div>';
+  });
+
+  return '<div class="perf-badge-row ' + perfRowClass + '">'
+      + '<div class="perf-dot"></div>'
+      + '<strong>' + perfText + '</strong>'
+      + '<span style="margin-left:8px;font-size:0.72em;opacity:0.75;">Impression target (4h): ' + post.impThreshold + commentThresholdInfo + '</span>'
+    + '</div>'
+    + '<div class="form-grid">'
+      + '<div class="form-group">'
+        + '<label>Status</label>'
+        + '<select id="status_' + post.id + '" onchange="handleChange(\'' + post.id + '\')">'
+          + '<option value="Upcoming"'   + (data.status === 'Upcoming'   ? ' selected' : '') + '>Upcoming</option>'
+          + '<option value="Scheduled"'  + (data.status === 'Scheduled'  ? ' selected' : '') + '>Scheduled</option>'
+          + '<option value="Published"'  + (data.status === 'Published'  ? ' selected' : '') + '>Published</option>'
+          + '<option value="Boosted"'    + (data.status === 'Boosted'    ? ' selected' : '') + '>Boosted</option>'
+        + '</select>'
+      + '</div>'
+      + '<div class="form-group">'
+        + '<label>Publish Date</label>'
+        + '<input type="date" id="publish_date_' + post.id + '" value="' + (data.publish_date || '') + '" onchange="handleChange(\'' + post.id + '\')">'
+      + '</div>'
+      + '<div class="form-group">'
+        + '<label>Impressions (4h)</label>'
+        + '<input type="number" id="impressions_4h_' + post.id + '" value="' + (data.impressions_4h || '') + '" placeholder="0" min="0" oninput="handleChange(\'' + post.id + '\')">'
+      + '</div>'
+      + '<div class="form-group">'
+        + '<label>Impressions (Final)</label>'
+        + '<input type="number" id="impressions_final_' + post.id + '" value="' + (data.impressions_final || '') + '" placeholder="0" min="0" oninput="handleChange(\'' + post.id + '\')">'
+      + '</div>'
+      + '<div class="form-group">'
+        + '<label>Likes</label>'
+        + '<input type="number" id="likes_' + post.id + '" value="' + (data.likes || '') + '" placeholder="0" min="0" oninput="handleChange(\'' + post.id + '\')">'
+      + '</div>'
+      + '<div class="form-group">'
+        + '<label>Comments</label>'
+        + '<input type="number" id="comments_' + post.id + '" value="' + (data.comments || '') + '" placeholder="0" min="0" oninput="handleChange(\'' + post.id + '\')">'
+      + '</div>'
+      + '<div class="form-group">'
+        + '<label>DMs Sent</label>'
+        + '<input type="number" id="dms_sent_' + post.id + '" value="' + (data.dms_sent || '') + '" placeholder="0" min="0" oninput="handleChange(\'' + post.id + '\')">'
+      + '</div>'
+      + '<div class="form-group">'
+        + '<label>DMs Replied</label>'
+        + '<input type="number" id="dms_replied_' + post.id + '" value="' + (data.dms_replied || '') + '" placeholder="0" min="0" oninput="handleChange(\'' + post.id + '\')">'
+      + '</div>'
+      + '<div class="form-group span-full">'
+        + '<label>Notes</label>'
+        + '<textarea id="notes_' + post.id + '" placeholder="Post notes, observations, follow-ups..." oninput="handleChange(\'' + post.id + '\')">' + (data.notes || '') + '</textarea>'
+      + '</div>'
+    + '</div>'
+    + '<div class="inner-divider"></div>'
+    + '<button class="files-toggle" onclick="toggleFiles(\'' + post.id + '\')">'
+      + '&#128193; File Paths <span id="files_arrow_' + post.id + '">&#9654;</span>'
+    + '</button>'
+    + '<div class="files-panel" id="files_panel_' + post.id + '">'
+      + '<div class="file-list">' + fileRowsHtml + '</div>'
+    + '</div>';
+}
+
+// =====================================================================
+// ACCORDION INTERACTIONS
+// =====================================================================
+function toggleAccordion(id) {
+  const item = document.getElementById('acc_' + id);
+  item.classList.toggle('open');
+}
+
+function toggleFiles(id) {
+  const panel = document.getElementById('files_panel_' + id);
+  const arrow = document.getElementById('files_arrow_' + id);
+  const isOpen = panel.classList.toggle('open');
+  arrow.innerHTML = isOpen ? '&#9660;' : '&#9654;';
+}
+
+// =====================================================================
+// CHANGE HANDLER
+// =====================================================================
+function handleChange(id) {
+  const data = {
+    status:            document.getElementById('status_' + id).value,
+    publish_date:      document.getElementById('publish_date_' + id).value,
+    impressions_4h:    document.getElementById('impressions_4h_' + id).value,
+    impressions_final: document.getElementById('impressions_final_' + id).value,
+    likes:             document.getElementById('likes_' + id).value,
+    comments:          document.getElementById('comments_' + id).value,
+    dms_sent:          document.getElementById('dms_sent_' + id).value,
+    dms_replied:       document.getElementById('dms_replied_' + id).value,
+    notes:             document.getElementById('notes_' + id).value
+  };
+  savePostData(id, data);
+
+  // Refresh performance badge in header
+  const perf = getPerformance(id);
+  const item = document.getElementById('acc_' + id);
+  item.classList.remove('perf-green', 'perf-yellow', 'perf-red', 'perf-upcoming');
+  item.classList.add('perf-' + perf);
+
+  // Update inline perf badge
+  const right = item.querySelector('.acc-right');
+  if (right) {
+    let oldBadge = right.querySelector('.badge:not(.badge-format)');
+    let newBadge = document.createElement('span');
+    if (perf === 'green') { newBadge.className = 'badge badge-green'; newBadge.innerHTML = '&#10003; On Track'; }
+    else if (perf === 'yellow') { newBadge.className = 'badge badge-yellow'; newBadge.innerHTML = '&#9651; Watch'; }
+    else if (perf === 'red') { newBadge.className = 'badge badge-red'; newBadge.innerHTML = '&#9679; Under'; }
+    else { newBadge.className = 'badge badge-grey'; newBadge.textContent = 'Upcoming'; }
+    if (oldBadge) right.replaceChild(newBadge, oldBadge);
+  }
+
+  // Update perf row inside body
+  const body = document.getElementById('body_' + id);
+  if (body) {
+    const perfRow = body.querySelector('.perf-badge-row');
+    if (perfRow) {
+      const imp4h = parseInt(data.impressions_4h) || 0;
+      const post = POSTS.find(function(p) { return p.id === id; });
+      perfRow.className = 'perf-badge-row ' + (perf === 'upcoming' ? 'upcoming' : perf);
+      const strong = perfRow.querySelector('strong');
+      if (strong) strong.textContent = perfLabel(perf, imp4h, post.impThreshold);
+    }
+  }
+
+  // Refresh calendar chip
+  buildCalendarChip(id);
+
+  // Refresh totals
+  buildTotals();
+}
+
+function buildCalendarChip(id) {
+  const post = POSTS.find(function(p) { return p.id === id; });
+  if (!post) return;
+  const data = getPostData(id);
+  const lang = getLang();
+  const calEl = document.getElementById('cal_name_' + id);
+  if (calEl) {
+    calEl.textContent = lang === 'EN' ? post.enName : post.plName;
+    const chip = calEl.closest('.cal-post-chip');
+    if (chip) {
+      chip.className = 'cal-post-chip';
+      const status = data.status || 'Upcoming';
+      if (status === 'Published' || status === 'Boosted') chip.classList.add('chip-published');
+      else if (status === 'Scheduled') chip.classList.add('chip-scheduled');
+      else chip.classList.add('chip-upcoming');
+    }
+  }
+}
+
+// =====================================================================
+// COPY PATH
+// =====================================================================
+function copyPath(btn, path) {
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(path).then(function() {
+      btn.textContent = 'Copied!';
+      btn.classList.add('copied');
+      setTimeout(function() { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 1800);
+    });
+  } else {
+    // Fallback
+    var ta = document.createElement('textarea');
+    ta.value = path;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    btn.textContent = 'Copied!';
+    btn.classList.add('copied');
+    setTimeout(function() { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 1800);
+  }
+}
+
+// =====================================================================
+// TOTALS
+// =====================================================================
+function buildTotals() {
+  const grid = document.getElementById('totalsGrid');
+  let totalImpFinal = 0;
+  let totalImp4h    = 0;
+  let totalLikes    = 0;
+  let totalComments = 0;
+  let totalDmsSent  = 0;
+  let totalDmsReplied = 0;
+  let publishedCount  = 0;
+
+  POSTS.forEach(function(post) {
+    const data = getPostData(post.id);
+    if (data.status === 'Published' || data.status === 'Boosted') {
+      publishedCount++;
+      totalImpFinal   += parseInt(data.impressions_final) || 0;
+      totalImp4h      += parseInt(data.impressions_4h)    || 0;
+      totalLikes      += parseInt(data.likes)             || 0;
+      totalComments   += parseInt(data.comments)          || 0;
+      totalDmsSent    += parseInt(data.dms_sent)          || 0;
+      totalDmsReplied += parseInt(data.dms_replied)       || 0;
+    }
+  });
+
+  const dmRate = totalDmsSent > 0 ? Math.round((totalDmsReplied / totalDmsSent) * 100) : 0;
+
+  grid.innerHTML =
+    '<div class="total-card highlight">'
+      + '<div class="total-label">Posts Published</div>'
+      + '<div class="total-value">' + publishedCount + ' / ' + POSTS.length + '</div>'
+      + '<div class="total-sub">of 7 posts + poll</div>'
+    + '</div>'
+    + '<div class="total-card">'
+      + '<div class="total-label">Total Impressions (Final)</div>'
+      + '<div class="total-value">' + totalImpFinal.toLocaleString() + '</div>'
+      + '<div class="total-sub">all published posts</div>'
+    + '</div>'
+    + '<div class="total-card">'
+      + '<div class="total-label">Total Impressions (4h)</div>'
+      + '<div class="total-value">' + totalImp4h.toLocaleString() + '</div>'
+      + '<div class="total-sub">early performance signal</div>'
+    + '</div>'
+    + '<div class="total-card">'
+      + '<div class="total-label">Total Likes</div>'
+      + '<div class="total-value">' + totalLikes.toLocaleString() + '</div>'
+      + '<div class="total-sub">reactions across posts</div>'
+    + '</div>'
+    + '<div class="total-card">'
+      + '<div class="total-label">Total Comments</div>'
+      + '<div class="total-value">' + totalComments.toLocaleString() + '</div>'
+      + '<div class="total-sub">engagement depth</div>'
+    + '</div>'
+    + '<div class="total-card">'
+      + '<div class="total-label">DMs Sent</div>'
+      + '<div class="total-value">' + totalDmsSent.toLocaleString() + '</div>'
+      + '<div class="total-sub">outbound outreach</div>'
+    + '</div>'
+    + '<div class="total-card">'
+      + '<div class="total-label">DMs Replied</div>'
+      + '<div class="total-value">' + totalDmsReplied.toLocaleString() + '</div>'
+      + '<div class="total-sub">responses received</div>'
+    + '</div>'
+    + '<div class="total-card orange">'
+      + '<div class="total-label">DM Reply Rate</div>'
+      + '<div class="total-value">' + dmRate + '%</div>'
+      + '<div class="total-sub">' + totalDmsReplied + ' replied / ' + totalDmsSent + ' sent</div>'
+    + '</div>';
+}
+
+// =====================================================================
+// INIT
+// =====================================================================
+function init() {
+  const lang = getLang();
+  applyLang(lang);
+
+  const savedTs = localStorage.getItem(LS_UPDATED);
+  document.getElementById('lastUpdatedLabel').textContent = savedTs
+    ? 'Last saved: ' + formatDateTime(savedTs)
+    : 'Last saved: —';
+
+  buildCalendar();
+  buildAccordion();
+  buildTotals();
+}
+
+document.addEventListener('DOMContentLoaded', init);
+</script>
+</body>
+</html>

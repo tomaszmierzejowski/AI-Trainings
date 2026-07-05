@@ -1,0 +1,12 @@
+VARIANT A (primary):
+There are four levels of working with AI. Most professionals are on Level 2 and believe they're on Level 3.
+
+VARIANT B (test):
+"I use AI daily" and "AI changed how I work" are different levels. Most people saying the first believe the second.
+
+VARIANT C (poll form — see poll_variant.txt):
+Where are you, honestly? (4 options)
+
+RECOMMENDATION: Use A — it makes a falsifiable claim about the reader, which compels the scroll-stop and the self-check. B is subtler; good retry. The POLL variant is the highest-reach format of the entire campaign (polls get outsized distribution) — consider running the poll one week and this full post the next Tuesday as the "results analysis," which doubles the content and lets you cite YOUR OWN audience data. That two-week play is the recommended default; see poll_variant.txt.
+
+GRAPHIC: see graphic_brief.txt — the staircase.

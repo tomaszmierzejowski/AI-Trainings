@@ -1,0 +1,12 @@
+VARIANT A (primary — v2):
+I'm about to do something consultants don't do: publish the numbers.
+
+VARIANT B (test):
+Everything on these slides comes from a real engagement with a real client. Every number verified. Every finding traced to source code.
+
+VARIANT C (challenge-led):
+Here is my full 18-month track record. Pick any number and ask me how it was measured. That's the whole post.
+
+RECOMMENDATION: Use A. It's nine words, fully visible on every device, and positions the post against the entire consulting industry rather than for a service — which is what earns reshares from practitioners who resent slide-deck consulting. B (the old primary) states authenticity; A performs it. C is the most aggressive and the best video hook — reserve it for the TikTok/Reels cut of this post.
+
+CONVERSION NOTE: The v2 copy replaces the bare "DM me" close with a reciprocity CTA (one sentence about your platform → the 10-question qualification list). A DM request needs a reason that benefits the sender. Deliverable required: keep the "10 Questions" one-pager ready to paste before publishing — see Season 2, post S2-4, which turns the same list into a public post.

@@ -1,0 +1,32 @@
+Przez dwa lata rządowy zespół badawczy nie był w stanie wdrożyć własnego systemu.
+
+Nie "wdrażał powoli". Nie "wdrażał z problemami".
+
+Nie był w stanie wdrożyć. W ogóle.
+
+Każda próba kończyła się błędem w innym miejscu. Nieudokumentowane zależności. Brakujące konfiguracje. Zmiany, których nikt nie zapisał. Awarie były niepowtarzalne — więc prawie niemożliwe do zdiagnozowania.
+
+Ten zespół nie był niekompetentny. Pracował bez mapy.
+
+Zostaliśmy zaproszeni do pomocy. Oto co zrobiliśmy inaczej:
+
+Nie czytaliśmy dokumentacji. Czytaliśmy kod.
+
+→ Zmapowaliśmy środowisko od kodu źródłowego w górę
+→ Prześledziliśmy każdą zależność
+→ Odtworzyliśmy każdą konfigurację
+→ Po drodze: ponad 200 podatności bezpieczeństwa
+
+Miesiąc później: działające wdrożenie produkcyjne.
+
+Dwa lata blokady. Jeden miesiąc systematycznej analizy. Ta proporcja to nie kwestia talentu. To kwestia metody.
+
+System jest krytyczny w dosłownym sensie — gdy nie można go wdrożyć, zatrzymują się badania o zasięgu krajowym. Szacowany zwrot: 16x dzięki zapobiegnięciu awarii. "Szacowany", bo unikniętych strat się nie mierzy, tylko prognozuje. Każda inna liczba w tym poście jest zweryfikowana.
+
+A teraz pytanie do Was:
+
+Co najdłużej było "tymczasowo zablokowane" w Waszej organizacji — i jaki był prawdziwy powód?
+
+Każda liczba zweryfikowana. Każde ustalenie prowadzi do linii kodu.
+
+#ModernizacjaAplikacji #EnterpriseIT #SopraSteria

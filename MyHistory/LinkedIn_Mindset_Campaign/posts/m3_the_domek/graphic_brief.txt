@@ -1,0 +1,13 @@
+GRAPHIC — M3 THE DOMEK
+
+FIRST CHOICE: a real photograph. The built playhouse in the garden (kids not identifiable — from behind or out of frame), ideally with a printed architectural drawing visible in the foreground. Phone photo quality is FINE — authenticity is the asset. Real photos of real outcomes are the rarest content on LinkedIn.
+
+SECOND CHOICE — staged real photo: the printed AI-generated drawings on a workbench next to a tape measure and pencil, garden blurred in the background.
+
+GENERATED FALLBACK (only if no photo exists):
+PRIMARY PROMPT (text-capable model):
+A warm split-frame image. Left half: a clean architectural blueprint sheet of a small children's playhouse, white lines on deep purple (#4D1D82) blueprint paper, with dimensions marked, pinned by a pencil and a folding ruler. Right half: the same playhouse realized in a sunlit garden, slightly imperfect, hand-painted in a cheerful unexpected color, golden-hour light, no people. A thin orange (#E8640A) arrow flows from blueprint to garden. Small white caption bottom-left: "one sentence → one hour → one summer". Photorealistic with blueprint stylization on the left, heartwarming but not kitschy, no faces, no logos. 4:5 vertical, 1080×1350.
+
+NEGATIVE: no children's faces, no brand logos, no cartoon style, no watermark text.
+
+ALT TEXT: A playhouse blueprint next to the finished playhouse in a garden — one sentence to an AI, one hour of drawings, one built little house.

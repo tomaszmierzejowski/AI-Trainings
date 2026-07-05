@@ -1,0 +1,9 @@
+The question I expect: "What do you need from us during those 3 weeks?"
+
+Honest answer — three things:
+
+1. Repository access (read-only) in week 0. The single most common delay is access paperwork, not analysis.
+2. One architect or senior engineer for ~2 hours per week — to confirm or contest flagged findings. Your team's knowledge makes verification faster; it is never a substitute for reading the code.
+3. A decision-maker at the week-3 readout. The walkthrough changes decisions; forwarded PDFs don't.
+
+Notice what's NOT on the list: documentation. We'll take it if it exists, but the method doesn't depend on it. That's the point.

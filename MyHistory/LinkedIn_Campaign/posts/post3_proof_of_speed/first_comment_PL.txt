@@ -1,0 +1,7 @@
+Birgit napisała również: „Dziękuję bardzo za poświęcenie czasu na zbadanie możliwości — i za to, że zdecydowaliście się udostępnić zarówno ludzką wiedzę, jak i zasoby AI, aby to zrealizować. To wiele znaczy dla BP — a przede wszystkim dla wszystkich dzieci i rodzin, które mają teraz dostęp do oferty wzmacniającej poczucie własnej wartości, zapobiegającej wykluczeniu i zapewniającej mocniejszy i bezpieczniejszy fundament w codziennym życiu."
+
+Dane techniczne: migracja Xamarin.Forms do .NET 8 MAUI. Ponad 1200 automatycznych transformacji. 23 punkty decyzyjne, w których starszy architekt oceniał kompromisy i dokonywał świadomych wyborów — udokumentowanych w dzienniku projektu. 100% zatwierdzeń przy pierwszym zgłoszeniu: App Store i Google Play. Zero regresji potwierdzone po uruchomieniu. 15% poprawa wydajności.
+
+Branżowy standard dla migracji tej złożoności: 4–6 tygodni.
+
+Jeśli stoisz przed sytuacją końca wsparcia Xamarin, migracją pod presją terminu lub pilnym przepisaniem kodu, którego się obawiasz — napisz do mnie. Powiem szczerze, czy to podejście pasuje do Twojej sytuacji. Czasem nie pasuje. Gdy pasuje — cztery dni to nie metafora.

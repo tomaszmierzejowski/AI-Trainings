@@ -1,0 +1,29 @@
+Ten posts ago I told you nobody had ever read your code. This post is about what happens if you decide someone finally should.
+
+Not a pitch. A preview of the commitment — both directions.
+
+What you commit to:
+
+→ Read-only repository access before day 1 (the paperwork is the real critical path)
+→ One senior engineer, ~2 hours a week, to confirm or contest what we flag
+→ A decision-maker in the room at week 3 — the walkthrough is where decisions happen
+
+What we commit to:
+
+→ 100% of the code read, not sampled
+→ Every finding cited to file and line — challenge any of them
+→ Anything we didn't examine, listed explicitly
+→ Estimates labeled as estimates, in the report and afterwards
+→ If, after the first conversation, our approach doesn't fit your situation — we say so in writing and you've spent nothing
+
+Three weeks later you own an inventory: every endpoint, every integration, every business rule with a confidence score. What you do with it — modernize, replace, negotiate with a vendor, or nothing — is a decision you make on facts. With us or without us.
+
+That's the whole offer. It fits in one post because honest offers do.
+
+If your platform has been on your mind through this series: DM me one sentence about it this week. Conversations, not contracts.
+
+And if you're not there yet — the Thursday posts continue. The next series starts with the question I get asked most: "Where would we even begin?"
+
+Every number verified. Every finding traced to source code.
+
+#AppModernization #EnterpriseArchitecture #SopraSteria

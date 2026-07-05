@@ -1,0 +1,12 @@
+GRAPHIC — M2 THE SPECTRUM
+
+The one idea the image must carry: four ascending levels; the reader must be able to point at one and say "that's me" in under two seconds.
+
+PRIMARY PROMPT (text-capable model):
+A four-step ascending staircase diagram on dark purple-black background (#1A0A2E), steps rising left to right. Step 1, small, dim gray-purple: "LEVEL 1 · AI-CURIOUS" with subline "tried it once". Step 2, larger, muted purple (#4D1D82): "LEVEL 2 · AI-ASSISTED" with subline "uses AI when I remember to". Step 3, larger still and glowing warm orange (#E8640A) with a subtle spotlight — clearly the hero step: "LEVEL 3 · AI-AUGMENTED" with subline "AI is my first step to everything". Step 4, tallest, cool white outline only: "LEVEL 4 · AI-NATIVE" with subline "AI runs it; I verify". A small figure silhouette standing on step 2 looking up at step 3. Headline top in bold white: "Where are you — by behavior, not aspiration?" Footer small gray: "Most people stand one step lower than they think." Flat vector, clean, elegant, no logos. 4:5 vertical, 1080×1350.
+
+NO-TEXT FALLBACK (Midjourney):
+A minimalist staircase of four ascending blocks on a dark purple void, first block dim gray, second muted violet, third glowing warm orange under a soft spotlight, fourth outlined in white only, a tiny human silhouette standing on the second block gazing at the third, flat 3D render, clean, dramatic, no text --ar 4:5 --v 6 --style raw
+Then overlay level labels in Canva per copy above.
+
+ALT TEXT: Four-level AI adoption staircase from AI-Curious to AI-Native, with Level 3 (AI-Augmented — "AI is my first step to everything") highlighted, and a figure standing one step below where most people think they are.

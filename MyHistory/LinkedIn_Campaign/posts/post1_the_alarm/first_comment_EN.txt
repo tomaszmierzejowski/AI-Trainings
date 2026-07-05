@@ -1,0 +1,9 @@
+I want to be specific about the methodology, because it's the skeptic's first question.
+
+Full codebase analysis isn't the industry standard because it's expensive and slow. Traditional assessment covers 10–15% of a codebase through sampling, combined with interviews and documentation review. This produces findings that are approximately correct — good enough for a roadmap slide, not good enough for risk decisions affecting millions of users.
+
+We use AI-accelerated analysis to read every line. Not because AI is impressive, but because it removes the sampling problem. Every finding is then verified by a senior architect before it reaches the client. Every claim traces to a line in the source code.
+
+The 529 endpoints and 98 connections are from verified reports with file and line references (ComplianceIssuesSummary and MASTER_CONSOLIDATED_REPORT respectively). I'm happy to discuss what this looks like in practice.
+
+DM me.
