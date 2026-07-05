@@ -1,0 +1,23 @@
+Dwie osoby. Ta sama praca. Te same narzędzia AI. Jedna wyciąga z nich 10x więcej.
+
+Obserwuję to od dwóch lat na salach szkoleniowych i różnica nigdy nie leży tam, gdzie ludzie się jej spodziewają.
+
+To nie umiejętność promptowania. Nie techniczne wykształcenie. Nie wiek.
+
+To kolejność.
+
+Osoba A kończy szkic, a potem prosi AI o szlif. Raport, oferta, plan — najpierw zbudowane po staremu, AI zaproszone na końcu, jako dekoracja.
+
+Osoba B prosi AI o szkic najpierw — a potem przykłada do niego swój osąd, wiedzę i smak.
+
+Te same narzędzia. Odwrotna sekwencja. Radykalnie inna ekonomia: osoba A oszczędza minuty. Osoba B oszczędza tę część pracy, która nigdy nie była tą wartościową — pustą kartkę.
+
+Oto zdanie, którego uczę: AI to Twój pierwszy krok do wszystkiego. Nie jedyny. Pierwszy.
+
+Badania potwierdzają ten wzorzec. Badanie terenowe na 4867 deweloperach wykazało ~26% więcej ukończonych zadań z AI — ale zyski ogromnie się różniły, a przewidywał je nie staż, tylko zachowanie adopcyjne (Cui i in., Management Science).
+
+Narzędzia znów się zmienią w przyszłym kwartale. Kolejność zostaje Wasza.
+
+Więc szczerze: którą osobą jesteście — szkic najpierw czy szlif na końcu?
+
+#AIMindset #PrzyszloscPracy #SopraSteria

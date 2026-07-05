@@ -1,0 +1,17 @@
+Wasz CFO nie odrzuca budżetów na modernizację. Wasz CFO odrzuca niewycenioną niepewność.
+
+Od lat patrzę, jak szefowie inżynierii przegrywają tę samą rozmowę budżetową. Inżynier mówi: "Platforma jest ryzykowna, potrzebujemy audytu". CFO słyszy: "Daj mi pieniądze, żebym sprawdził, czy będę potrzebował więcej pieniędzy".
+
+Oto ta sama prośba, przetłumaczona na język CFO:
+
+"Operujemy aktywem, którego nikt w pełni nie zinwentaryzował. W zeszłym roku porównywalne przedsiębiorstwo znalazło 529 endpointów API bez uwierzytelniania w platformie, którą audyty obejmowały od lat — każdy z nich to potencjalne zdarzenie regulacyjne. Same kary GDPR sięgają 4% globalnego przychodu.
+
+Inwentaryzacja kosztuje 500 tys. NOK — porównywalny projekt wyceniono tradycyjnie na 2,3 mln. Trzy tygodnie, stały zakres. Powstaje rejestr aktywów: każdy endpoint, każda integracja, każda reguła biznesowa, z dowodami. Cokolwiek potem zdecydujemy — modernizacja, wymiana czy nic — zdecydujemy to na podstawie inwentarza, a nie folkloru."
+
+Zauważcie, co robi to tłumaczenie: nigdzie nie prosi CFO o sfinansowanie naprawy. Prosi o wycenę ryzyka — a to jest dosłownie opis jego stanowiska.
+
+Szefowie inżynierii, architekci: jakie sformułowanie naprawdę zadziałało u Was w rozmowie budżetowej?
+
+Każda liczba zweryfikowana. Każde ustalenie prowadzi do linii kodu.
+
+#CIO #EnterpriseIT #SopraSteria

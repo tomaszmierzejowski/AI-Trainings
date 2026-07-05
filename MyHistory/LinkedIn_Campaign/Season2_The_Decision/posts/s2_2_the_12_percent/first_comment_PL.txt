@@ -1,0 +1,5 @@
+Gwoli uczciwości wobec branży konsultingowej: próbkowanie było racjonalną odpowiedzią na realne ograniczenie. Kiedy czytanie kodu kosztowało 1500–2000 EUR za dzień konsultanta, pełne pokrycie naprawdę nie mieściło się w żadnym budżecie. Nieuczciwe nigdy nie było samo próbkowanie — tylko milczenie o nim.
+
+Co się zmieniło: analiza wspierana AI czyta każdą linię, a starszy architekt weryfikuje ustalenia. W jednym projekcie oznaczało to 529 udokumentowanych endpointów REST i 312 cytowań oznaczonych dowodami — każde ustalenie można prześledzić do linii źródła. Pokrycie przestało być luksusem.
+
+Trzypunktowy autotest z posta działa na raporcie każdego dostawcy, łącznie z naszym. Jeśli uruchomicie go na naszym raporcie, wszystkie trzy elementy znajdziecie na pierwszych stronach. Właśnie po to ten test publikuję.

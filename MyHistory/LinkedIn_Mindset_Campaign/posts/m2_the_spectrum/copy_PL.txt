@@ -1,0 +1,30 @@
+Istnieją cztery poziomy pracy z AI. Większość profesjonalistów jest na poziomie 2 i wierzy, że jest na 3.
+
+Spektrum, którego używam na każdym szkoleniu:
+
+POZIOM 1 — AI-Curious.
+"Raz spróbowałem ChatGPT". Może dwa razy. Było ciekawie. Nic się nie zmieniło.
+
+POZIOM 2 — AI-Assisted.
+"Używam AI, kiedy sobie przypomnę". Szlifuje skończoną pracę. Odpowiada na okazjonalne pytania. Mądrzejsza wyszukiwarka.
+
+POZIOM 3 — AI-Augmented.
+"AI to mój pierwszy krok do wszystkiego". Każdy szkic, każda analiza, każdy plan zaczyna się tam — a każdy wynik przechodzi przez Wasz osąd, zanim się liczy. Nie jedyny krok. Pierwszy.
+
+POZIOM 4 — AI-Native.
+"Projektuję pracę, którą AI wykonuje od początku do końca. Ja weryfikuję wyniki". Już nie robicie zadania; projektujecie sposób, w jaki ono się robi.
+
+Dwie rzeczy widzę w każdej grupie bez wyjątku:
+
+1. Ludzie umieszczają się o jeden poziom wyżej niż ich faktyczne poniedziałkowe zachowanie.
+2. Skok, który zmienia kariery, to 2 → 3. Nie wymaga nowych narzędzi, budżetu ani niczyjej zgody. Tylko zmiany domyślnego odruchu.
+
+Poziom 4 nie jest celem dla większości. Poziom 3 — tak. I jest w zasięgu miesiąca dla każdego, kto to czyta — badania nad nawykami mówią o ~66 dniach do pełnego automatyzmu (Lally i in., 2010), ale ekonomia widać już w pierwszym tygodniu.
+
+Diagnozujcie się po zachowaniu, nie po aspiracji:
+
+Od czego ZACZĘŁA SIĘ Wasza ostatnia ważna praca?
+
+Poziom w komentarzu — podpowiem najszybszy skok z tego miejsca. 👇
+
+#AIMindset #AdopcjaAI #SopraSteria

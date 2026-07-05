@@ -1,0 +1,9 @@
+Najszybszy skok z każdego poziomu — bo obiecałem:
+
+1 → 2: Wybierzcie JEDNO powtarzalne zadanie (tygodniowy raport, mail do klienta, podsumowanie spotkania) i przepuszczajcie je przez AI za każdym razem. Jedno zadanie, zero wyjątków. Nie "poznawajcie narzędzia" — zwiążcie je z zadaniem.
+
+2 → 3: Reguła "kiedy–wtedy", pożyczona z nauki o nawykach (intencje implementacyjne, Gollwitzer i Sheeran — jeden z najsilniejszych efektów w psychologii behawioralnej): "Kiedy otwieram nowy dokument, najpierw proszę AI o szkic". Wyzwalacz robi robotę, której nie zrobi silna wola.
+
+3 → 4: Przestańcie ulepszać pojedyncze zadania i spiszcie cały proces — wejścia, kroki, kontrole, wyjścia. Co umiecie wyspecyfikować, to AI coraz częściej umie poprowadzić. Czego nie umiecie wyspecyfikować — właśnie odkryliście, że sami jeszcze nie do końca to rozumiecie. Cenne w obie strony.
+
+I tak — to spektrum to otwierający moduł programu szkoleniowego, który prowadzę. Autodiagnoza jest za darmo; macie ją wyżej. Zmiana zachowania to program.

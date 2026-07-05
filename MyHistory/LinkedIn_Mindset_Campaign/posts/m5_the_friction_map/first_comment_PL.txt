@@ -1,0 +1,11 @@
+Ściąga: jeden ruch na jedno tarcie — bo diagnoza bez leczenia to tylko narzekanie:
+
+Strach przed niekompetencją → lider idzie pierwszy, publicznie, z widocznymi niedoskonałościami. Raz w tygodniu: "Oddałem X do AI — oto co musiałem poprawić". Poprawka jest lekarstwem; sprawia, że weryfikacja wygląda seniorsko, nie juniorsko. (Za dwa tygodnie osobny post — zasługuje na to.)
+
+Zagrożenie tożsamości → przeramujcie rolę w górę: Wasz osąd pracuje teraz na dziesięciu szkicach zamiast na jednym. Niczyje rzemiosło nie zostało skasowane; zmieniła się jego dźwignia.
+
+Rozkalibrowane zaufanie → zamiast wyroku reguła: nigdy nie ufaj, nigdy nie skreślaj — zawsze weryfikuj trzy twierdzenia o najwyższej stawce. Kalibracja to umiejętność, nie postawa.
+
+Bezwładność nawyku → nie walczcie ze starym nawykiem; doczepcie nowy do istniejącego wyzwalacza. "Kiedy otwieram pusty dokument, najpierw proszę o szkic". Intencje implementacyjne mają jeden z najsilniejszych efektów w naukach behawioralnych (Gollwitzer i Sheeran, d≈0,65).
+
+Ustalenie McKinseya o produktywności z generatywną AI mówi cichą część na głos: zyski materializują się tylko przy treningu i praktyce — zachowanie, nie dostęp.
