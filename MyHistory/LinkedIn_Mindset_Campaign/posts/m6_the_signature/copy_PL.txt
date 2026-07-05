@@ -1,0 +1,24 @@
+Tydzień temu pokazałem Wam kłamstwo, które przeżywa każdy audyt. Oto 60 sekund, które je łapią.
+
+Kolejność znaczy więcej niż wysiłek. Kiedy ludzie "starannie sprawdzają" wynik AI, czytają go jak wypracowanie — od góry do dołu, kiwając głową w rytm prozy. Dokładnie tak podpisuje się pewne siebie kłamstwo.
+
+Czytajcie jak audytor. Sześćdziesiąt sekund, stała sekwencja:
+
+SEKUNDY 0–20 — Nazwiska, liczby, daty.
+Największe zagęszczenie fabrykacji w każdym wyniku AI. Sprawdzajcie ze źródłem, nie z własną pamięcią. Zła liczba to najłatwiejszy połów i najszybszy test wiarygodności całego dokumentu.
+
+SEKUNDY 20–40 — Źródła.
+Każdy cytat: czy istnieje? Jeden zmyślony benchmark zatruwa wszystkie prawdziwe wokół siebie.
+
+SEKUNDY 40–60 — Wniosek kontra dane.
+Zasłońcie akapit z wnioskiem. Patrzcie tylko na liczby pod spodem. Teraz pytanie: jaki wniosek JA bym wyciągnął? Odsłońcie. Jeśli Wasz i dokumentu się różnią — właśnie złapaliście błąd, który przeżywa każdą salę szkoleniową, jaką prowadzę.
+
+Do tego jedna reguła na wierzch: bez cytatu nie ma twierdzenia. Prawda mieszka w Waszych systemach źródłowych; AI jest warstwą rozumienia nad nimi. Co nie pokaże paragonu, nie idzie dalej.
+
+Sześćdziesiąt sekund. Nie paranoja — procedura.
+
+I przeformułowanie, przy którym się upieram: weryfikacja to nie brak zaufania do AI. To jest to, co sprawia, że Wasz podpis coś znaczy. Kiedy podpisujecie — twierdzeniem jesteście Wy.
+
+Jaka jest dziś procedura Waszego zespołu między "AI to napisało" a "wysłaliśmy"? Jedno szczere zdanie.
+
+#AIMindset #JakoscPracy #SopraSteria

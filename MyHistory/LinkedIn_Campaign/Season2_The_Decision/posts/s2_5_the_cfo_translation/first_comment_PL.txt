@@ -1,0 +1,9 @@
+Śmiało kradnijcie to tłumaczenie słowo w słowo — po to jest napisane jako cytat. Podmieńcie liczby na swój kontekst; zachowajcie strukturę:
+
+1. Nazwijcie niewycenione zobowiązanie (nie technologię)
+2. Jeden konkretny, zewnętrzny przykład z liczbą (pożyczcie nasz: 529 endpointów bez uwierzytelniania, znalezionych pod audytowanym pokryciem)
+3. Stała cena, stały czas i jaki artefakt kupują te pieniądze
+4. Wynik przedstawiony jako inwentarz do podejmowania decyzji, nie przedpłata za projekt
+5. Zamknięcie kosztem NIEwiedzy, nie rabatem
+
+Najgłębsza zmiana to punkt 4. Audyt przedstawiony jako "krok 1 modernizacji" zobowiązuje CFO do kroków od 2 do N — więc mówi "nie". Audyt przedstawiony jako inwentaryzacja nie zobowiązuje do niczego poza wiedzą. Wiedzę CFO finansują.

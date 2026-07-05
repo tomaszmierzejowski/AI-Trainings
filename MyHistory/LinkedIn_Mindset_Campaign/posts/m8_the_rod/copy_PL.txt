@@ -1,0 +1,19 @@
+Daję wędkę. Nie rybę. Nie abonament na ryby. Nie uzależnienie od wędkarza.
+
+Na tym zdaniu zbudowałem swoją praktykę szkoleniową — i to najuczciwsza rzecz, jaką mogę Wam powiedzieć o szkoleniach z AI: większość z nich jest zaprojektowana tak, żebyście wracali po więcej.
+
+Osiem wtorków temu zacząłem tę serię od tezy: różnica nie jest w narzędziach, jest w kolejności. Od tamtej pory — cztery poziomy spektrum, domek, podłożone kłamstwa, cztery tarcia, 60-sekundowy test, problem bohatera. Wszystko, czym się podzieliłem, działa beze mnie. O to chodziło.
+
+A oto co wędka znaczy konkretnie, bo filozofia bez mechaniki to plakat:
+
+Program to pięć modułów — psychologia, codzienny sposób pracy, zaufanie i weryfikacja, specyfikacje i orkiestracja oraz 30-dniowy plan oparty na nauce o nawykach (nowe zachowania automatyzują się średnio po ~66 dniach, więc plan jest projektowany dla niedoskonałych ludzi, nie dla plakatów motywacyjnych). Szkolenie z narzędzi to celowo najmniejsza część: narzędzia zmieniają się co kwartał; zachowanie procentuje.
+
+I jedna decyzja projektowa, z której jestem dumny: deliverable ostatniego modułu to Wasz zespół działający BEZ trenera. Liderzy wychodzą z pięciominutową cotygodniową praktyką. Zespoły — z jednym żenująco małym nawykiem na tydzień. Jeśli za pół roku musicie mnie wołać z powrotem, zrobiłem to źle.
+
+Seria leci dalej — szykuje się drugi sezon (o tym, co się dzieje, gdy agenci dostają kolegów). Ale jeśli ta seria opisała Waszą firmę bardziej, niż byście chcieli:
+
+Napiszcie mi w wiadomości słowo WĘDKA i jedno zdanie o Waszym zespole. Odeślę szczerą ocenę, czy program pasuje — łącznie z "nie pasuje, zróbcie to tańsze", którą wysłałem już nie raz.
+
+Ryby nigdy nie były ofertą.
+
+#AIMindset #SzkoleniaAI #SopraSteria

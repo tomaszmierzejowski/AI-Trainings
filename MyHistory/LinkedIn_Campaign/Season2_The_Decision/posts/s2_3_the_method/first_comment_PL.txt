@@ -1,0 +1,9 @@
+Pytanie, którego się spodziewam: "Czego potrzebujecie od nas przez te 3 tygodnie?"
+
+Szczera odpowiedź — trzech rzeczy:
+
+1. Dostęp do repozytoriów (tylko do odczytu) w tygodniu zero. Najczęstszym opóźnieniem jest papierologia dostępowa, nie analiza.
+2. Jeden architekt lub starszy inżynier na ~2 godziny tygodniowo — do potwierdzania lub kwestionowania oflagowanych ustaleń. Wiedza Waszego zespołu przyspiesza weryfikację; nigdy nie zastępuje przeczytania kodu.
+3. Osoba decyzyjna na readoucie w tygodniu 3. Przejście przez wyniki zmienia decyzje; przesyłane dalej PDF-y nie.
+
+Zwróćcie uwagę, czego NIE ma na tej liście: dokumentacji. Weźmiemy ją, jeśli istnieje, ale metoda od niej nie zależy. Na tym polega jej sens.

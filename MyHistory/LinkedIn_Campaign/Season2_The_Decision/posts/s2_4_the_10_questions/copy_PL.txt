@@ -1,0 +1,33 @@
+Dwa tygodnie temu oferowałem tę listę prywatnie każdemu, kto napisał do mnie wiadomość. Dziś publikuję ją otwarcie.
+
+10 pytań do każdego dostawcy audytu modernizacyjnego — łącznie z nami:
+
+1. Jaki procent naszej bazy kodu faktycznie przeczytacie? (Nie "przejrzycie". Przeczytacie.)
+
+2. Czy każde ustalenie będzie cytować plik i linię, z której pochodzi?
+
+3. Co wprost wymienicie jako NIEZBADANE?
+
+4. Jak weryfikujecie ustalenia wygenerowane przez AI, zanim do nas trafią? Kto się pod nimi podpisuje?
+
+5. Czy możemy podważyć dowolną liczbę w raporcie i zostać doprowadzeni do jej źródła?
+
+6. Co dzieje się z ustaleniami, których nie da się zweryfikować — publikacja, flaga czy usunięcie?
+
+7. Jak we własnym marketingu odróżniacie wyniki zmierzone od szacunków?
+
+8. Które z naszych reguł biznesowych wyodrębnicie i z jaką zadeklarowaną pewnością?
+
+9. Czego potrzebujecie od naszego zespołu, w godzinach tygodniowo?
+
+10. Jeśli Wasze podejście nie pasuje do naszej sytuacji — czy powiecie to na piśmie?
+
+Dostawca, który odpowiada na wszystkie dziesięć bez wahania, jest wart Waszego budżetu, kimkolwiek jest. Dostawca, który robi się nieswój przy pytaniu 1, właśnie na nie odpowiedział.
+
+Zapiszcie sobie na następne spotkanie z dostawcą. I napiszcie:
+
+Przy którym pytaniu przewidujecie najdłuższą ciszę?
+
+Każda liczba zweryfikowana. Każde ustalenie prowadzi do linii kodu.
+
+#AudytKodu #ZarzadzanieDostawcami #SopraSteria

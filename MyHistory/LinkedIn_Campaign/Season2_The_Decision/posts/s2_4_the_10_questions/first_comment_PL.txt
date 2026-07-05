@@ -1,0 +1,7 @@
+Po co publikować listę kwalifikacyjną, której sami używamy? Z dwóch powodów.
+
+Po pierwsze: każdy, kto napisał po poście z track recordem, dostał tę listę — zgodnie z obietnicą. Publikacja oznacza, że teraz nikt nie musi pisać, żeby ją mieć — oferta była przewagą czasową, nie bramką.
+
+Po drugie — powód interesowny, powiedziany wprost: te pytania sprzyjają każdemu dostawcy, który czyta kod w całości i cytuje źródła. Zbudowaliśmy metodę wokół nich, więc lubimy je dostawać. Jeśli te pytania staną się standardem rynku, rynek przesunie się w stronę weryfikowalnych audytów. My na takim rynku wygrywamy — ale Wy też, kogokolwiek zatrudnicie.
+
+Nasze odpowiedzi na wszystkie dziesięć, dla porządku: 100% · tak, każde ustalenie · pełna lista wyłączeń w każdym raporcie · AI czyta, starszy architekt weryfikuje i się podpisuje · tak, dowolną liczbę · flaga, nigdy cicha publikacja · "szacunek" jest oznaczony w raporcie I w marketingu · zakres ustalany per projekt z zadeklarowaną pewnością (143 reguły przy 94% w ostatnim) · ~2 godziny jednego starszego inżyniera tygodniowo · tak, na piśmie.

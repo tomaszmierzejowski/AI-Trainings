@@ -1,0 +1,29 @@
+Dziesięć postów temu napisałem, że nikt nigdy nie przeczytał Waszego kodu. Ten post jest o tym, co się dzieje, gdy zdecydujecie, że ktoś wreszcie powinien.
+
+To nie pitch. To zapowiedź zobowiązania — w obie strony.
+
+Do czego zobowiązujecie się Wy:
+
+→ Dostęp do repozytoriów (tylko odczyt) przed dniem 1 (papierologia to prawdziwa ścieżka krytyczna)
+→ Jeden starszy inżynier, ~2 godziny tygodniowo, do potwierdzania lub kwestionowania tego, co oflagujemy
+→ Osoba decyzyjna na sali w tygodniu 3 — decyzje zapadają na przejściu przez wyniki
+
+Do czego zobowiązujemy się my:
+
+→ 100% kodu przeczytane, nie próbkowane
+→ Każde ustalenie z cytatem do pliku i linii — podważajcie dowolne
+→ Wszystko, czego nie zbadaliśmy, wymienione wprost
+→ Szacunki oznaczone jako szacunki, w raporcie i po nim
+→ Jeśli po pierwszej rozmowie nasze podejście nie pasuje do Waszej sytuacji — mówimy to na piśmie, a Wy nie wydaliście ani złotówki
+
+Trzy tygodnie później macie inwentarz: każdy endpoint, każda integracja, każda reguła biznesowa z poziomem pewności. Co z nim zrobicie — modernizacja, wymiana, negocjacje z dostawcą albo nic — to decyzja, którą podejmiecie na faktach. Z nami albo bez nas.
+
+To cała oferta. Mieści się w jednym poście, bo uczciwe oferty się mieszczą.
+
+Jeśli Wasza platforma chodziła Wam po głowie przez tę serię: napiszcie mi w tym tygodniu jedno zdanie o niej. Rozmowy, nie kontrakty.
+
+A jeśli jeszcze nie ten moment — czwartkowe posty lecą dalej. Następna seria zaczyna się od pytania, które słyszę najczęściej: "Od czego w ogóle mielibyśmy zacząć?"
+
+Każda liczba zweryfikowana. Każde ustalenie prowadzi do linii kodu.
+
+#ModernizacjaAplikacji #ArchitekturaKorporacyjna #SopraSteria
