@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI-Mindset · Module 1 — The Psychology of the AI Mindset</title>
+<style>
+:root{--pg:#f9f9f7;--sf:#fcfcfb;--ink:#0b0b0b;--ink2:#52514e;--mut:#898781;--hair:#e1e0d9;--bd:rgba(11,11,11,.10);
+--acc:#2a78d6;--accT:#1c5cab;--s:1}
+*{box-sizing:border-box}html,body{margin:0;height:100%}
+body{background:var(--pg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;overflow:hidden}
+.hud{position:fixed;top:0;left:0;right:0;height:48px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;font-size:13px;color:var(--ink2);z-index:10}
+.hud .brand b{color:var(--ink)}
+.tracks{display:flex;gap:6px}
+.tracks button{font:inherit;font-size:12.5px;padding:5px 14px;border-radius:999px;border:1px solid var(--hair);background:var(--sf);color:var(--ink2);cursor:pointer}
+.tracks button.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.help{position:fixed;bottom:10px;left:0;right:0;text-align:center;font-size:12px;color:var(--mut);z-index:10}
+.slide{display:none;position:fixed;top:50%;left:50%;width:1280px;height:720px;margin-top:8px;transform:translate(-50%,-50%) scale(var(--s));
+background:var(--sf);border:1px solid var(--bd);border-radius:14px;padding:66px 84px;flex-direction:column;box-shadow:0 14px 44px rgba(11,11,11,.07)}
+.slide.on{display:flex}
+.slide[data-track="nonit"]::before,.slide[data-track="it"]::before{position:absolute;top:22px;right:26px;font-size:11.5px;font-weight:700;letter-spacing:.08em;padding:4px 12px;border-radius:999px}
+.slide[data-track="nonit"]::before{content:"NON-IT TRACK";color:#0c5c40;background:rgba(27,175,122,.14)}
+.slide[data-track="it"]::before{content:"IT / SOFTWARE TRACK";color:#3a2d86;background:rgba(74,58,167,.12)}
+.kick{font-size:15px;font-weight:700;letter-spacing:.14em;color:var(--accT);text-transform:uppercase;margin:0 0 14px}
+h1{font-size:58px;line-height:1.08;margin:0 0 18px;letter-spacing:-.015em}
+h2{font-size:42px;line-height:1.12;margin:0 0 22px;letter-spacing:-.01em}
+.lead{font-size:24px;color:var(--ink2);line-height:1.45;margin:0;max-width:980px}
+.one{flex:1;display:flex;align-items:center}.one p{font-size:52px;line-height:1.18;font-weight:700;margin:0;letter-spacing:-.015em;max-width:1050px}
+.body{flex:1;display:flex;flex-direction:column;justify-content:center}
+ul.big{font-size:24px;line-height:1.55;color:var(--ink);margin:0;padding-left:26px}ul.big li{margin:10px 0}ul.big li::marker{color:var(--acc)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:34px;flex:1;align-content:center}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:8px}
+.tile{border:1px solid var(--hair);border-radius:12px;padding:22px 24px;background:#fff}
+.tile .num{font-size:52px;font-weight:750;letter-spacing:-.02em;line-height:1}
+.tile .lab{font-size:15.5px;color:var(--ink2);margin-top:10px;line-height:1.4}
+.badge{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.09em;padding:4px 12px;border-radius:6px;vertical-align:middle}
+.badge.v{color:#006300;background:rgba(12,163,12,.12)}.badge.s{color:#1c5cab;background:rgba(42,120,214,.12)}
+.badge.f{color:#52514e;background:rgba(82,81,78,.12)}.badge.o{color:#3a2d86;background:rgba(74,58,167,.12)}
+.card{border:1px solid var(--hair);border-radius:12px;padding:24px 26px;background:#fff}
+.card h3{margin:0 0 8px;font-size:21px}.card p{margin:0;font-size:17.5px;color:var(--ink2);line-height:1.5}
+q.pull{display:block;font-size:30px;line-height:1.4;font-style:italic;color:var(--ink);quotes:"“" "”";max-width:980px}
+.att{font-size:16px;color:var(--mut);margin-top:14px}
+.foot{margin-top:auto;padding-top:18px;border-top:1px solid var(--hair);font-size:17px;color:var(--ink2)}
+.stepbox{display:flex;align-items:flex-end;gap:14px;flex:1;padding-bottom:8px}
+.step{flex:1;border:1px solid var(--hair);border-radius:12px 12px 0 0;background:#fff;padding:18px;display:flex;flex-direction:column;justify-content:flex-end}
+.step .lv{font-size:13px;font-weight:800;letter-spacing:.1em;color:var(--mut)}
+.step h3{margin:6px 0 6px;font-size:22px}.step p{margin:0;font-size:15px;color:var(--ink2);line-height:1.45}
+.step.t{border-color:var(--acc);border-width:2px;box-shadow:0 6px 20px rgba(42,120,214,.15)}
+.step.t .tgt{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.1em;color:#fff;background:var(--acc);border-radius:999px;padding:3px 10px;margin-bottom:8px;align-self:flex-start}
+.vs{display:grid;grid-template-columns:1fr 64px 1fr;align-items:center;gap:0;flex:1}
+.vs .no,.vs .yes{border-radius:14px;padding:34px;font-size:27px;line-height:1.35;font-weight:650}
+.vs .no{background:rgba(82,81,78,.07);color:var(--ink2);text-decoration:line-through;text-decoration-thickness:2px;text-decoration-color:rgba(11,11,11,.35)}
+.vs .yes{background:rgba(42,120,214,.09);color:var(--ink);border:1.5px solid var(--acc)}
+.vs .mid{text-align:center;font-size:26px;color:var(--mut)}
+.rowcards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;flex:1;align-content:center}
+@media print{body{overflow:visible}.hud,.help{display:none}.slide{display:flex;position:static;transform:none;width:1280px;height:720px;margin:8mm auto;page-break-after:always}}
+</style></head>
+<body>
+<header class="hud">
+  <div class="brand"><b>AI-Mindset</b> · Module 1 — The Psychology of the AI Mindset</div>
+  <div class="tracks"><button class="on" data-set="all">All</button><button data-set="nonit">Non-IT</button><button data-set="it">IT / Software</button></div>
+  <div class="counter" id="ctr">1 / 18</div>
+</header>
+
+<!-- 1 -->
+<section class="slide" data-track="core">
+  <p class="kick">AI-Mindset · Module 1 of 5</p>
+  <svg style="position:absolute;top:58px;right:78px" width="130" height="130" viewBox="0 0 100 100" fill="none" stroke="#2a78d6" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+    <line x1="12" y1="92" x2="76" y2="16"/><circle cx="30" cy="71" r="6"/>
+    <path d="M76,16 C 88,28 88,46 82,60" stroke-dasharray="3 4" stroke-width="1.8"/>
+    <path d="M82,60 c -5,3 -8,-1 -5,-5" stroke-width="1.8"/>
+  </svg>
+  <div class="body">
+    <h1>AI-Mindset:<br>Changing Behaviors to Thrive in an AI World</h1>
+    <p class="lead">This is not a tool training. <span style="color:var(--mut)">(There are zero feature screenshots in this program. They’d be obsolete before the coffee break.)</span></p>
+  </div>
+  <div class="foot">Tomasz Mierzejowski · tomaszmierzejowski.pl · “Daję wędkę” — I give you a fishing rod</div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-track="core">
+  <p class="kick">The wrong question</p>
+  <div class="vs">
+    <div class="no">“Which AI tool should we buy?”</div>
+    <div class="mid">→</div>
+    <div class="yes">“What will our people do differently on Monday morning?”</div>
+  </div>
+  <div class="foot">Tools change every quarter. Behavior compounds.</div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-track="core">
+  <p class="kick">Ground rules</p>
+  <h2>Evidence over opinion</h2>
+  <div class="rowcards" style="grid-template-columns:repeat(3,1fr)">
+    <div class="card"><span class="badge v">VERIFIED</span><p style="margin-top:12px">A delivered project. Traceable, auditable, ours.</p></div>
+    <div class="card"><span class="badge s">STUDY</span><p style="margin-top:12px">Cited external research — named, checkable.</p></div>
+    <div class="card"><span class="badge f">FRAMEWORK</span> <span class="badge o">OPINION</span><p style="margin-top:12px">Labeled as such. Theory or position, never dressed as fact.</p></div>
+  </div>
+  <div class="foot">If a number has no badge — challenge me. And the VERIFIED ones? Delivered engagements, my own. Challenge those too: I brought receipts, and references are available on request.</div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-track="core">
+  <p class="kick">A true story</p>
+  <svg style="position:absolute;top:54px;right:78px" width="150" height="126" viewBox="0 0 120 100" fill="none" stroke="#2a78d6" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
+    <polygon points="20,50 60,18 100,50"/><rect x="28" y="50" width="64" height="38"/>
+    <rect x="52" y="62" width="16" height="26"/><rect x="36" y="56" width="10" height="10"/><rect x="74" y="56" width="10" height="10"/>
+  </svg>
+  <h2>The Domek</h2>
+  <div class="body">
+    <q class="pull">My kids wanted a little wooden house. One AI session: architectural drawings, structural calculations, a ready shopping cart at the building store. One hour. No architect.</q>
+  </div>
+  <div class="foot">No badge on this slide — it’s a hook, not evidence. The evidence comes next. (No architect was harmed in the making of this playhouse.)</div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-track="core">
+  <p class="kick">Same pattern, professional scale &nbsp;<span class="badge v">VERIFIED</span></p>
+  <h2>Project Terrain — generative AI in physical design</h2>
+  <div class="tiles">
+    <div class="tile"><div class="num">~200</div><div class="lab">design variants generated for a real playground build</div></div>
+    <div class="tile"><div class="num">8</div><div class="lab">iteration rounds with the client</div></div>
+    <div class="tile"><div class="num">3–4×</div><div class="lab">cost reduction vs. the traditional design approach</div></div>
+  </div>
+  <div class="foot">Same behavior as the Domek. Different stakes.</div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-track="core">
+  <p class="kick">Same pattern, highest stakes &nbsp;<span class="badge v">VERIFIED</span></p>
+  <h2>The 4-day rescue</h2>
+  <p class="lead" style="margin-bottom:14px">A Norwegian children’s-research non-profit. App dead on an end-of-life framework. A national research program at risk.</p>
+  <div class="tiles" style="grid-template-columns:repeat(4,1fr)">
+    <div class="tile"><div class="num">4 days</div><div class="lab">full migration — typical estimate: 4–8 weeks</div></div>
+    <div class="tile"><div class="num">92%</div><div class="lab">of existing code preserved</div></div>
+    <div class="tile"><div class="num">0</div><div class="lab">regressions</div></div>
+    <div class="tile"><div class="num">100%</div><div class="lab">first-submission app-store approval</div></div>
+  </div>
+  <div class="foot">Project lead, Christmas Eve: <i>“It’s hard to describe how much relief and joy I felt at that moment.”</i></div>
+</section>
+
+<!-- 6b -->
+<section class="slide" data-track="core">
+  <p class="kick">Before you decide I only show the wins</p>
+  <h2>The honest asterisk *</h2>
+  <div class="body">
+    <ul class="big">
+      <li>I’ve shipped an AI analysis stakeholders <b>ignored</b> — technically correct, completely black-box. <span style="color:var(--mut)">(Fixed by evidence-tagging → Module 3.)</span></li>
+      <li>I’ve lost a whole afternoon to a task my hands would have done in 20 minutes. <span style="color:var(--mut)">(Fixed by the trust matrix → Module 3.)</span></li>
+      <li>My first prompts were terrible. Everyone’s are. <span style="color:var(--mut)">(Fixed by one framework and three weeks of habit → Module 2.)</span></li>
+    </ul>
+  </div>
+  <div class="foot">A vendor shows you the highlight reel. A teacher shows you the bloopers — and then the method that removed them.</div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-track="core">
+  <p class="kick">The model</p>
+  <h2>The AI-Augmented Spectrum</h2>
+  <div class="stepbox">
+    <div class="step" style="min-height:32%"><span class="lv">LEVEL 1</span><h3>AI-Curious</h3><p>Has tried a chatbot. No recurring use.</p></div>
+    <div class="step" style="min-height:48%"><span class="lv">LEVEL 2</span><h3>AI-Assisted</h3><p>Uses AI when they remember to — usually to polish finished work.</p></div>
+    <div class="step t" style="min-height:66%"><span class="tgt">TARGET</span><span class="lv">LEVEL 3</span><h3>AI-Augmented</h3><p>AI is the first step to everything. Not the only step. The first.</p></div>
+    <div class="step" style="min-height:84%"><span class="lv">LEVEL 4</span><h3>AI-Native</h3><p>Designs work AI executes end-to-end; the human specifies and verifies.</p></div>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-track="core">
+  <p class="kick">Self-diagnosis</p>
+  <h2>Where are you — honestly?</h2>
+  <div class="rowcards">
+    <div class="card"><h3>Level 1</h3><p>“I tried ChatGPT once. It was weird. I left.”</p></div>
+    <div class="card"><h3>Level 2</h3><p>“I use AI when I remember to.”</p></div>
+    <div class="card" style="border-color:var(--acc);border-width:2px"><h3>Level 3</h3><p>“AI is my first step to everything. Not the only step. The first.”</p></div>
+    <div class="card"><h3>Level 4</h3><p>“I design work AI does end-to-end; I verify.”</p></div>
+  </div>
+  <div class="foot">In every group so far, most of the room is at 1 or 2. That’s the point of today.</div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-track="core">
+  <div class="one"><p>The difference isn’t in the tools.<br><span style="color:var(--accT)">It’s in the order.</span></p></div>
+  <div class="foot">Level 2: “I finish the draft, then ask AI to polish.” · Level 3: “I ask AI for the draft, then apply my judgment.” Same tools. Different economics.</div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-track="core">
+  <p class="kick">Why adoption actually stalls &nbsp;<span class="badge f">FRAMEWORK</span></p>
+  <h2>The four frictions</h2>
+  <div class="rowcards">
+    <div class="card"><h3>😨 1 · Fear</h3><p>“I don’t want to be seen learning a ‘junior’ tool for my own job.”</p></div>
+    <div class="card"><h3>🎭 2 · Identity</h3><p>“I mastered this craft for 15 years — and that thing does 70% in seconds.”</p></div>
+    <div class="card"><h3>⚖️ 3 · Trust</h3><p>Burned once → never again. Or one great demo → blind trust.</p></div>
+    <div class="card"><h3>🛋️ 4 · Inertia</h3><p>The old way costs zero willpower. The new one costs willpower for weeks.</p></div>
+  </div>
+  <div class="foot">None of these are solved by a feature tour — and all four have met your gym membership before.</div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-track="core">
+  <p class="kick">The psychology &nbsp;<span class="badge f">FRAMEWORK — Kahneman &amp; Tversky</span></p>
+  <h2>Your brain is working as designed</h2>
+  <div class="body">
+    <ul class="big">
+      <li><b>Status-quo bias:</b> a proven old workflow feels safe — even when it is measurably slower.</li>
+      <li><b>Loss aversion:</b> the cost of changing is felt <i>today</i>; the payoff arrives <i>later</i>. Your brain votes today.</li>
+    </ul>
+  </div>
+  <div class="foot">The lenses are proven science. Applying them to AI adoption is my professional judgment — labeled as such.</div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-track="core">
+  <p class="kick">What the data actually says &nbsp;<span class="badge s">STUDY</span></p>
+  <h2>The tool was constant. The behavior was the variable.</h2>
+  <div class="tiles">
+    <div class="tile"><div class="num">~4,800</div><div class="lab">professionals in field experiments incl. Microsoft (Cui et al., 2024)</div></div>
+    <div class="tile"><div class="num">+26%</div><div class="lab">completed tasks on average — with <b>wide variance</b></div></div>
+    <div class="tile"><div class="num">↑ most</div><div class="lab">gains concentrated in those who <b>changed how they work</b> — not the most senior</div></div>
+  </div>
+  <div class="foot">Averages hide the story: outcomes were decided by working habits. Honest caveat: measured on software teams — the easiest profession to measure. The mechanism is habit change, and habits don’t care about your industry.</div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-track="core">
+  <p class="kick">Why tool training fails &nbsp;<span class="badge s">STUDY — McKinsey 2023</span></p>
+  <h2>The “give a fish” model</h2>
+  <div class="body">
+    <ul class="big">
+      <li>Trainer demos features → participants nod → Monday, old habits win. <span style="color:var(--mut)">(Undefeated since forever.)</span></li>
+      <li>McKinsey: productivity gains materialize only with training <b>and practice</b> —</li>
+      <li>and are minimal on complex tasks <b>without changed working patterns</b>.</li>
+    </ul>
+  </div>
+  <div class="foot">Knowledge was never the gap. The default behavior is the gap.</div>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-track="core">
+  <p class="kick">The contract of this program</p>
+  <h2>Daję wędkę — I give you a fishing rod</h2>
+  <div class="body">
+    <q class="pull">I will not leave you with my phone number as your AI strategy. You leave with habits, not dependencies. I’ll build a fish when I must — to show the water has fish in it — but you leave with the rod.</q>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-track="core">
+  <p class="kick">Why trust the messenger &nbsp;<span class="badge v">VERIFIED</span></p>
+  <h2>“Nie uczę teorii” — I don’t teach theory</h2>
+  <div class="tiles">
+    <div class="tile"><div class="num">14 yrs</div><div class="lab">of hands-on engineering before AI leadership</div></div>
+    <div class="tile"><div class="num">5+ yrs</div><div class="lab">continuous modernization of a global mission-critical platform (Project Meridian-Core)</div></div>
+    <div class="tile"><div class="num">0</div><div class="lab">operational interruptions in those five years</div></div>
+  </div>
+  <div class="foot">This advice is written by someone who carries production risk — not by a tool evangelist.</div>
+</section>
+
+<!-- 16 -->
+<section class="slide" data-track="core">
+  <div class="one"><p>AI doesn’t replace knowledge.<br><span style="color:var(--accT)">It removes excuses for not having it.</span></p></div>
+  <div class="foot">The Domek needed no architect because the knowledge became accessible. The judgment to verify it stayed human.</div>
+</section>
+
+<!-- 17 -->
+<section class="slide" data-track="core">
+  <p class="kick">Exercise · 10 minutes</p>
+  <h2>Your Level-3 commitment</h2>
+  <div class="body">
+    <ul class="big">
+      <li>Write <b>one recurring task</b> — yours, starting tomorrow — where AI becomes your <b>first step</b>.</li>
+      <li>Concrete beats noble: <i>“Every offer document I write starts with an AI draft”</i> — not <i>“I’ll use AI more.”</i></li>
+      <li>Share in pairs. Keep the card — it returns in Module 5.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 18 -->
+<section class="slide" data-track="core">
+  <p class="kick">Recap</p>
+  <h2>Three things to take out of this room</h2>
+  <div class="rowcards" style="grid-template-columns:repeat(3,1fr)">
+    <div class="card"><h3>1</h3><p>Behavior, not tools. The order of your first moves is the whole game.</p></div>
+    <div class="card"><h3>2</h3><p>Name your friction — fear, identity, trust, inertia. It’s normal, and it’s addressable.</p></div>
+    <div class="card"><h3>3</h3><p>First step. Not the only step. The first.</p></div>
+  </div>
+  <div class="foot">Next — Module 2: the first step made concrete. Fair warning: today covered maybe 5% of the map. That’s deliberate — hunger is a feature, not a bug.</div>
+</section>
+
+<footer class="help">← → navigate · choose a track above to tailor the deck · Ctrl/Cmd+P to print</footer>
+<script>
+const slides=[...document.querySelectorAll('.slide')];let track='all',i=0;
+const vis=()=>slides.filter(s=>{const t=s.dataset.track;return t==='core'||track==='all'||t===track;});
+function show(n){const v=vis();i=Math.max(0,Math.min(n,v.length-1));slides.forEach(s=>s.classList.remove('on'));v[i].classList.add('on');document.getElementById('ctr').textContent=(i+1)+' / '+v.length;history.replaceState(null,'','#'+(i+1));}
+document.querySelectorAll('.tracks button').forEach(b=>b.onclick=()=>{track=b.dataset.set;document.querySelectorAll('.tracks button').forEach(x=>x.classList.toggle('on',x===b));show(i);});
+addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();show(i+1);}else if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();show(i-1);}else if(e.key==='Home')show(0);else if(e.key==='End')show(1e4);});
+addEventListener('click',e=>{if(e.target.closest('.hud'))return;show(e.clientX>innerWidth/2?i+1:i-1);});
+function fit(){document.documentElement.style.setProperty('--s',Math.min(innerWidth/1330,(innerHeight-70)/740));}
+addEventListener('resize',fit);fit();show((parseInt(location.hash.slice(1))||1)-1);
+</script>
+</body></html>

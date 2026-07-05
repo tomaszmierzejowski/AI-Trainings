@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI-Mindset · Module 3 — Trust, Verification, and Evidence over Opinion</title>
+<style>
+:root{--pg:#f9f9f7;--sf:#fcfcfb;--ink:#0b0b0b;--ink2:#52514e;--mut:#898781;--hair:#e1e0d9;--bd:rgba(11,11,11,.10);
+--acc:#2a78d6;--accT:#1c5cab;--s:1}
+*{box-sizing:border-box}html,body{margin:0;height:100%}
+body{background:var(--pg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;overflow:hidden}
+.hud{position:fixed;top:0;left:0;right:0;height:48px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;font-size:13px;color:var(--ink2);z-index:10}
+.hud .brand b{color:var(--ink)}
+.tracks{display:flex;gap:6px}
+.tracks button{font:inherit;font-size:12.5px;padding:5px 14px;border-radius:999px;border:1px solid var(--hair);background:var(--sf);color:var(--ink2);cursor:pointer}
+.tracks button.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.help{position:fixed;bottom:10px;left:0;right:0;text-align:center;font-size:12px;color:var(--mut);z-index:10}
+.slide{display:none;position:fixed;top:50%;left:50%;width:1280px;height:720px;margin-top:8px;transform:translate(-50%,-50%) scale(var(--s));
+background:var(--sf);border:1px solid var(--bd);border-radius:14px;padding:66px 84px;flex-direction:column;box-shadow:0 14px 44px rgba(11,11,11,.07)}
+.slide.on{display:flex}
+.slide[data-track="nonit"]::before,.slide[data-track="it"]::before{position:absolute;top:22px;right:26px;font-size:11.5px;font-weight:700;letter-spacing:.08em;padding:4px 12px;border-radius:999px}
+.slide[data-track="nonit"]::before{content:"NON-IT TRACK";color:#0c5c40;background:rgba(27,175,122,.14)}
+.slide[data-track="it"]::before{content:"IT / SOFTWARE TRACK";color:#3a2d86;background:rgba(74,58,167,.12)}
+.kick{font-size:15px;font-weight:700;letter-spacing:.14em;color:var(--accT);text-transform:uppercase;margin:0 0 14px}
+h1{font-size:58px;line-height:1.08;margin:0 0 18px;letter-spacing:-.015em}
+h2{font-size:42px;line-height:1.12;margin:0 0 22px;letter-spacing:-.01em}
+.lead{font-size:24px;color:var(--ink2);line-height:1.45;margin:0;max-width:980px}
+.one{flex:1;display:flex;align-items:center}.one p{font-size:52px;line-height:1.18;font-weight:700;margin:0;letter-spacing:-.015em;max-width:1050px}
+.body{flex:1;display:flex;flex-direction:column;justify-content:center}
+ul.big{font-size:24px;line-height:1.55;margin:0;padding-left:26px}ul.big li{margin:10px 0}ul.big li::marker{color:var(--acc)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:34px;flex:1;align-content:center}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:8px}
+.tile{border:1px solid var(--hair);border-radius:12px;padding:22px 24px;background:#fff}
+.tile .num{font-size:52px;font-weight:750;letter-spacing:-.02em;line-height:1}
+.tile .lab{font-size:15.5px;color:var(--ink2);margin-top:10px;line-height:1.4}
+.badge{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.09em;padding:4px 12px;border-radius:6px;vertical-align:middle}
+.badge.v{color:#006300;background:rgba(12,163,12,.12)}.badge.s{color:#1c5cab;background:rgba(42,120,214,.12)}
+.badge.f{color:#52514e;background:rgba(82,81,78,.12)}
+.card{border:1px solid var(--hair);border-radius:12px;padding:24px 26px;background:#fff}
+.card h3{margin:0 0 8px;font-size:21px}.card p{margin:0;font-size:17.5px;color:var(--ink2);line-height:1.5}
+.rowcards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;flex:1;align-content:center}
+.foot{margin-top:auto;padding-top:18px;border-top:1px solid var(--hair);font-size:17px;color:var(--ink2)}
+q.pull{display:block;font-size:30px;line-height:1.4;font-style:italic;quotes:"“" "”";max-width:980px}
+.mx{flex:1;display:grid;grid-template-columns:46px 1fr 1fr;grid-template-rows:1fr 1fr 40px;gap:12px;margin-top:4px}
+.mx .ylab{writing-mode:vertical-rl;transform:rotate(180deg);text-align:center;font-size:14px;letter-spacing:.1em;color:var(--mut);font-weight:700}
+.mx .xlab{grid-column:2/4;text-align:center;font-size:14px;letter-spacing:.1em;color:var(--mut);font-weight:700;align-self:center}
+.mx .q{border:1px solid var(--hair);border-radius:12px;background:#fff;padding:20px 22px}
+.mx .q h3{margin:0 0 6px;font-size:20px}.mx .q p{margin:0;font-size:16.5px;color:var(--ink2);line-height:1.45}
+.mx .q em{display:block;font-style:normal;font-weight:800;font-size:13px;letter-spacing:.08em;margin-bottom:8px;color:var(--accT)}
+.mx .hot{border:2px solid var(--acc)}
+@media print{body{overflow:visible}.hud,.help{display:none}.slide{display:flex;position:static;transform:none;width:1280px;height:720px;margin:8mm auto;page-break-after:always}}
+</style></head>
+<body>
+<header class="hud">
+  <div class="brand"><b>AI-Mindset</b> · Module 3 — Trust, Verification, Evidence over Opinion</div>
+  <div class="tracks"><button class="on" data-set="all">All</button><button data-set="nonit">Non-IT</button><button data-set="it">IT / Software</button></div>
+  <div class="counter" id="ctr">1 / 15</div>
+</header>
+
+<!-- 1 -->
+<section class="slide" data-track="core">
+  <p class="kick">AI-Mindset · Module 3 of 5</p>
+  <div class="body">
+    <h1>Trust, Verification,<br>and Evidence over Opinion</h1>
+    <p class="lead">AI generates. You verify. You own.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-track="core">
+  <p class="kick">Two ways to fail &nbsp;<span class="badge f">FRAMEWORK — automation bias</span></p>
+  <h2>Under-trust wastes. Over-trust damages.</h2>
+  <div class="cols">
+    <div class="card"><h3>Under-trust</h3><p>“I checked everything twice, so AI saved me nothing.” The time saving evaporates — and AI gets blamed.</p></div>
+    <div class="card"><h3>Over-trust</h3><p>“It sounded confident, so I shipped it.” A fluent guess becomes an organizational fact.</p></div>
+  </div>
+  <div class="foot">Both are the same error: treating trust as a feeling about the tool instead of a property of the task. Calibration is trainable.</div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-track="core">
+  <p class="kick">What a hallucination actually is</p>
+  <h2>It’s not lying. It’s completing.</h2>
+  <div class="body">
+    <ul class="big">
+      <li>A language model <b>predicts plausible text</b>. It does not look facts up.</li>
+      <li>Confidence of tone is a style property — it carries <b>zero</b> information about truth.</li>
+      <li>Fabrications cluster where specificity is required: <b>names, numbers, dates, citations.</b></li>
+    </ul>
+  </div>
+  <div class="foot">Think: a confident intern with excellent grammar. You’d still check the numbers.</div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-track="core">
+  <p class="kick">Rule 1</p>
+  <h2>Truth lives in systems of record</h2>
+  <div class="rowcards" style="grid-template-columns:repeat(3,1fr)">
+    <div class="card"><h3>AI</h3><p>Understanding, synthesis, drafting.</p></div>
+    <div class="card"><h3>Systems of record</h3><p>Databases, source code, controlled documents, official portals — the facts.</p></div>
+    <div class="card"><h3>Human judgment</h3><p>Arbitrates between them. Signs the result.</p></div>
+  </div>
+  <div class="foot">The winning pattern is fusion — never AI alone as a source of record.</div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-track="core">
+  <p class="kick">Grounding in practice</p>
+  <h2>Three behaviors, cheapest first</h2>
+  <div class="body">
+    <ul class="big">
+      <li><b>1.</b> Paste the authoritative source into the prompt.</li>
+      <li><b>2.</b> Use source-grounded tools (NotebookLM, RAG) that answer only from your documents — and cite.</li>
+      <li><b>3.</b> Demand citations. Then actually <b>click them</b>.</li>
+    </ul>
+  </div>
+  <div class="foot">No citation, no claim — the same standard these slides hold themselves to.</div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-track="core">
+  <p class="kick">Case &nbsp;<span class="badge v">VERIFIED</span></p>
+  <h2>Project Axiom — protocol beats model</h2>
+  <div class="tiles">
+    <div class="tile"><div class="num">97</div><div class="lab">projects analyzed for a national infrastructure operator before an ERP decision</div></div>
+    <div class="tile"><div class="num">17</div><div class="lab">modules identified</div></div>
+    <div class="tile"><div class="num">0</div><div class="lab">erroneous conclusions in the delivered result</div></div>
+  </div>
+  <div class="foot">Not because the model was infallible — because <b>no AI finding entered the report without passing a human gate.</b> The reliability lives in the process design.</div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-track="core">
+  <p class="kick">Case &nbsp;<span class="badge v">VERIFIED</span></p>
+  <h2>Discovery you can audit<br>beats discovery you must believe</h2>
+  <div class="tiles">
+    <div class="tile"><div class="num">143</div><div class="lab">business rules extracted from ~220,000 lines of legacy code</div></div>
+    <div class="tile"><div class="num">94%</div><div class="lab">confidence — stated, not implied</div></div>
+    <div class="tile"><div class="num">312</div><div class="lab">evidence-tagged citations — every finding traces to a line of source</div></div>
+  </div>
+  <div class="foot">A Nordic transaction-processing enterprise. Challenge any finding → be shown the exact line. That’s the standard.</div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-track="core">
+  <p class="kick">Why it matters &nbsp;<span class="badge s">STUDY — Standish CHAOS 2020</span></p>
+  <h2>The unverified-assumption problem</h2>
+  <div class="body">
+    <ul class="big">
+      <li>Only <b>~31%</b> of software projects succeed outright.</li>
+      <li>A dominant cause: decisions made on <b>assumed</b> knowledge of systems nobody fully understands.</li>
+      <li>Most organizations don’t have a knowledge problem. They have an unverified-assumption problem.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-track="core">
+  <p class="kick">The instrument</p>
+  <h2>The calibrated-trust matrix</h2>
+  <div class="mx">
+    <div class="ylab">STAKES → HIGH</div>
+    <div class="q"><em>HIGH STAKES · EASY TO VERIFY</em><h3>Delegate — verify always</h3><p>Code with a test suite. A bid summary with the portal open next to it.</p></div>
+    <div class="q hot"><em>HIGH STAKES · HARD TO VERIFY</em><h3>Don’t delegate as-is</h3><p>Decompose the task until its parts become verifiable.</p></div>
+    <div class="q"><em>LOW STAKES · EASY TO VERIFY</em><h3>Delegate freely</h3><p>Brainstorms, internal drafts, formatting.</p></div>
+    <div class="q"><em>LOW STAKES · HARD TO VERIFY</em><h3>Inspiration only</h3><p>Never a source of record.</p></div>
+    <div></div><div class="xlab">VERIFIABILITY → HARD</div>
+  </div>
+  <div class="foot">Trust is not a feeling about the tool. It’s a property of the task.</div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-track="nonit">
+  <p class="kick">High stakes in plain documents</p>
+  <h2>The bid deadline is a high-stakes fact</h2>
+  <div class="body">
+    <ul class="big">
+      <li>A tender shortlist is <b>high stakes + easy to verify</b> — the portal is right there. So: delegate the search, <b>verify every deadline, budget and eligibility rule at the source.</b></li>
+      <li>One hallucinated deadline = one missed tender. One misread eligibility rule = a week of wasted proposal work.</li>
+      <li>The 60-second check, in order: <b>dates → amounts → names → conclusions vs. the source.</b></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-track="core">
+  <p class="kick">Verification as behavior, not virtue</p>
+  <h2>Four concrete habits</h2>
+  <div class="rowcards">
+    <div class="card"><h3>Citations required</h3><p>Build it into the prompt. Then click.</p></div>
+    <div class="card"><h3>60-second spot-check</h3><p>Names, numbers, dates first — highest fabrication density.</p></div>
+    <div class="card"><h3>Tests as trust</h3><p>For code: the suite is the gate. <span class="badge v" style="font-size:10px">VERIFIED</span> PresoGen AI: ~600 tests across 3 LLM providers.</p></div>
+    <div class="card"><h3>Second-model check</h3><p>Reserved for high-stakes + hard-to-verify. The smallest slice of your day.</p></div>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-track="core">
+  <p class="kick">Governance essentials</p>
+  <h2>Four rules that let you say “yes” quickly</h2>
+  <div class="rowcards">
+    <div class="card"><h3>1 · Data</h3><p>No personal data (GDPR) or client-identifying data into non-approved tools. Ever.</p></div>
+    <div class="card"><h3>2 · Access</h3><p>Least privilege for anything an agent can touch.</p></div>
+    <div class="card"><h3>3 · Injection</h3><p>External content pasted into prompts is untrusted input — instructions can hide in it.</p></div>
+    <div class="card"><h3>4 · Trace</h3><p>Record what AI touched in a deliverable — so review effort can be aimed.</p></div>
+  </div>
+  <div class="foot">Governance is an enabler, not a brake — four rules that make compliance (and the GDPR auditor) comfortable saying yes in seconds instead of weeks.</div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-track="core">
+  <p class="kick">Case &nbsp;<span class="badge v">VERIFIED</span></p>
+  <h2>Antystyki.pl — a human on the trigger</h2>
+  <div class="body">
+    <ul class="big">
+      <li>An AI content pipeline for statistics journalism — <b>17+ statistical sources</b>.</li>
+      <li>Every published item passes a <b>human-in-the-loop governance gate</b>.</li>
+      <li>Even a pipeline about <i>statistics</i> keeps a human on the trigger. So can your workflows.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-track="core">
+  <p class="kick">Exercise · 10 minutes, pairs</p>
+  <h2>Catch the confident lie</h2>
+  <div class="body">
+    <ul class="big">
+      <li>A polished AI analysis of a small dataset. <b>Three planted errors.</b></li>
+      <li>A wrong number. A fabricated citation. A subtly inverted conclusion.</li>
+      <li>Debrief question: which error survived longest — and <b>why did it sound right?</b></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-track="core">
+  <p class="kick">Recap</p>
+  <h2>Verification is what makes your signature mean something</h2>
+  <div class="rowcards" style="grid-template-columns:repeat(3,1fr)">
+    <div class="card"><h3>1</h3><p>Calibrate trust per task, not per tool — the matrix.</p></div>
+    <div class="card"><h3>2</h3><p>Ground everything. No citation, no claim.</p></div>
+    <div class="card"><h3>3</h3><p>AI generates. You verify. You own.</p></div>
+  </div>
+  <div class="foot">Next — Module 4: what happens when the thing you verify is not a paragraph, but a pipeline of agents. (Yes, that’s a real job now. No, it wasn’t in your job description. It will be.)</div>
+</section>
+
+<footer class="help">← → navigate · choose a track above to tailor the deck · Ctrl/Cmd+P to print</footer>
+<script>
+const slides=[...document.querySelectorAll('.slide')];let track='all',i=0;
+const vis=()=>slides.filter(s=>{const t=s.dataset.track;return t==='core'||track==='all'||t===track;});
+function show(n){const v=vis();i=Math.max(0,Math.min(n,v.length-1));slides.forEach(s=>s.classList.remove('on'));v[i].classList.add('on');document.getElementById('ctr').textContent=(i+1)+' / '+v.length;history.replaceState(null,'','#'+(i+1));}
+document.querySelectorAll('.tracks button').forEach(b=>b.onclick=()=>{track=b.dataset.set;document.querySelectorAll('.tracks button').forEach(x=>x.classList.toggle('on',x===b));show(i);});
+addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();show(i+1);}else if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();show(i-1);}else if(e.key==='Home')show(0);else if(e.key==='End')show(1e4);});
+addEventListener('click',e=>{if(e.target.closest('.hud'))return;show(e.clientX>innerWidth/2?i+1:i-1);});
+function fit(){document.documentElement.style.setProperty('--s',Math.min(innerWidth/1330,(innerHeight-70)/740));}
+addEventListener('resize',fit);fit();show((parseInt(location.hash.slice(1))||1)-1);
+</script>
+</body></html>

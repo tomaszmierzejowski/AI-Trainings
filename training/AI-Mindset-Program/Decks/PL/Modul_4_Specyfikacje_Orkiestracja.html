@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI-Mindset · Moduł 4 — Od pisania kodu do pisania specyfikacji</title>
+<style>
+:root{--pg:#f9f9f7;--sf:#fcfcfb;--ink:#0b0b0b;--ink2:#52514e;--mut:#898781;--hair:#e1e0d9;--bd:rgba(11,11,11,.10);
+--acc:#2a78d6;--accT:#1c5cab;--s:1}
+*{box-sizing:border-box}html,body{margin:0;height:100%}
+body{background:var(--pg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;overflow:hidden}
+.hud{position:fixed;top:0;left:0;right:0;height:48px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;font-size:13px;color:var(--ink2);z-index:10}
+.hud .brand b{color:var(--ink)}
+.tracks{display:flex;gap:6px}
+.tracks button{font:inherit;font-size:12.5px;padding:5px 14px;border-radius:999px;border:1px solid var(--hair);background:var(--sf);color:var(--ink2);cursor:pointer}
+.tracks button.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.help{position:fixed;bottom:10px;left:0;right:0;text-align:center;font-size:12px;color:var(--mut);z-index:10}
+.slide{display:none;position:fixed;top:50%;left:50%;width:1280px;height:720px;margin-top:8px;transform:translate(-50%,-50%) scale(var(--s));
+background:var(--sf);border:1px solid var(--bd);border-radius:14px;padding:64px 84px;flex-direction:column;box-shadow:0 14px 44px rgba(11,11,11,.07)}
+.slide.on{display:flex}
+.slide[data-track="nonit"]::before,.slide[data-track="it"]::before{position:absolute;top:22px;right:26px;font-size:11.5px;font-weight:700;letter-spacing:.08em;padding:4px 12px;border-radius:999px}
+.slide[data-track="nonit"]::before{content:"ŚCIEŻKA BIZNES";color:#0c5c40;background:rgba(27,175,122,.14)}
+.slide[data-track="it"]::before{content:"ŚCIEŻKA IT / SOFTWARE";color:#3a2d86;background:rgba(74,58,167,.12)}
+.kick{font-size:15px;font-weight:700;letter-spacing:.12em;color:var(--accT);text-transform:uppercase;margin:0 0 14px}
+h1{font-size:54px;line-height:1.1;margin:0 0 18px;letter-spacing:-.015em}
+h2{font-size:40px;line-height:1.12;margin:0 0 20px;letter-spacing:-.01em}
+.lead{font-size:23px;color:var(--ink2);line-height:1.45;margin:0;max-width:1000px}
+.one{flex:1;display:flex;align-items:center}.one p{font-size:48px;line-height:1.18;font-weight:700;margin:0;letter-spacing:-.015em;max-width:1060px}
+.body{flex:1;display:flex;flex-direction:column;justify-content:center}
+ul.big{font-size:22px;line-height:1.55;margin:0;padding-left:26px}ul.big li{margin:10px 0}ul.big li::marker{color:var(--acc)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:30px;flex:1;align-content:center}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:8px}
+.tile{border:1px solid var(--hair);border-radius:12px;padding:20px 22px;background:#fff}
+.tile .num{font-size:46px;font-weight:750;letter-spacing:-.02em;line-height:1}
+.tile .lab{font-size:15px;color:var(--ink2);margin-top:9px;line-height:1.4}
+.badge{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.08em;padding:4px 12px;border-radius:6px;vertical-align:middle}
+.badge.v{color:#006300;background:rgba(12,163,12,.12)}.badge.s{color:#1c5cab;background:rgba(42,120,214,.12)}
+.badge.f{color:#52514e;background:rgba(82,81,78,.12)}.badge.o{color:#3a2d86;background:rgba(74,58,167,.12)}
+.card{border:1px solid var(--hair);border-radius:12px;padding:20px 22px;background:#fff}
+.card h3{margin:0 0 8px;font-size:20px}.card p{margin:0;font-size:16.5px;color:var(--ink2);line-height:1.5}
+.rowcards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;flex:1;align-content:center}
+.foot{margin-top:auto;padding-top:16px;border-top:1px solid var(--hair);font-size:16px;color:var(--ink2)}
+.spec{background:#0b0b0b;color:#e8e8e4;border-radius:12px;padding:18px 24px;font-family:ui-monospace,Consolas,monospace;font-size:15px;line-height:1.5;white-space:pre-wrap}
+.spec b{color:#7db6f0;font-weight:700}
+.layers{flex:1;display:flex;flex-direction:column;justify-content:center;gap:8px}
+.lay{border:1px solid var(--hair);border-radius:12px;background:#fff;padding:13px 22px;display:grid;grid-template-columns:250px 1fr;gap:18px;align-items:center}
+.lay .who{font-weight:800;font-size:19px}.lay .what{font-size:16.5px;color:var(--ink2);line-height:1.4}
+.lay.you{border:2px solid var(--acc)}
+.arrow{text-align:center;color:var(--mut);font-size:16px;line-height:1;padding:1px 0}
+.pipe{flex:1;display:flex;align-items:center;gap:8px}
+.pnode{flex:1;border:1px solid var(--hair);border-radius:12px;background:#fff;padding:16px 12px;text-align:center}
+.pnode h3{margin:0 0 6px;font-size:16.5px}.pnode p{margin:0;font-size:13px;color:var(--ink2);line-height:1.35}
+.gate{width:34px;text-align:center;color:var(--accT);font-size:22px;flex:none}
+.gate small{display:block;font-size:9px;letter-spacing:.05em;color:var(--mut);margin-top:2px}
+.chart{display:flex;gap:60px;justify-content:center;align-items:flex-end;flex:1}
+@media print{body{overflow:visible}.hud,.help{display:none}.slide{display:flex;position:static;transform:none;width:1280px;height:720px;margin:8mm auto;page-break-after:always}}
+</style></head>
+<body>
+<header class="hud">
+  <div class="brand"><b>AI-Mindset</b> · Moduł 4 — Od pisania kodu do pisania specyfikacji</div>
+  <div class="tracks"><button class="on" data-set="all">Wszystkie</button><button data-set="nonit">Biznes</button><button data-set="it">IT / Software</button></div>
+  <div class="counter" id="ctr">1 / 22</div>
+</header>
+
+<!-- 1 -->
+<section class="slide" data-track="core">
+  <p class="kick">AI-Mindset · Moduł 4 z 5</p>
+  <div class="body">
+    <h1>Od pisania kodu<br>do pisania specyfikacji</h1>
+    <p class="lead">Zwrot od ręcznej produkcji do projektowania specyfikacji i orkiestracji agentów — w kodzie <i>i</i> w dokumentach.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-track="core">
+  <p class="kick">Prowokacja &nbsp;<span class="badge o">OPINIA — oznaczona wprost</span></p>
+  <div class="one"><p>Produkcja staje się towarem.<br><span style="color:var(--accT)">Produktem staje się specyfikacja.</span></p></div>
+  <div class="foot">Kod, teksty, decki, briefy — klepanie jest już tanie. Ten slajd to stanowisko, nie ustalenie. Pod koniec modułu będziecie mieli argumenty, żeby się z nim kłócić — albo ze mną.</div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-track="core">
+  <p class="kick">Analogia &nbsp;<span class="badge o">OPINIA</span></p>
+  <h2>Gutenberg 📜→🖨️</h2>
+  <div class="body">
+    <ul class="big">
+      <li>Przed drukiem: rzemiosłem skryby była <b>kaligrafia</b>.</li>
+      <li>Po druku: <b>pisanie</b> znaczyło więcej niż charakter pisma.</li>
+      <li>Praca ręczna : praca generowana przez AI :: iluminowane manuskrypty : drukowane książki.</li>
+    </ul>
+  </div>
+  <div class="foot">Skrybowie nie zniknęli. Ci, którzy zostali <b>autorami</b>, rozkwitli. (Cech skrybów nie był zachwycony. Wydawcy mieli się świetnie.)</div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-track="core">
+  <p class="kick">Umiejętności trwałe</p>
+  <h2>Co naprawdę pozostaje rzadkie</h2>
+  <div class="rowcards">
+    <div class="card"><h3>🧭 Kontekst</h3><p>Wiedzieć, czego biznes naprawdę potrzebuje.</p></div>
+    <div class="card"><h3>👁️ Ocena</h3><p>Wiedzieć, jak wygląda „dobrze”.</p></div>
+    <div class="card"><h3>✅ Weryfikacja</h3><p>Udowodnić, że jest poprawnie — Moduł 3.</p></div>
+    <div class="card"><h3>🎼 Orkiestracja</h3><p>Zaprojektować, kto — lub co — robi który krok.</p></div>
+  </div>
+  <div class="foot">Żadna z nich nie jest klepaniem.</div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-track="core">
+  <p class="kick">Rola</p>
+  <h2>Orkiestrator</h2>
+  <div class="body">
+    <ul class="big">
+      <li><b>Dzieli</b> pracę na kroki wykonywalne przez AI.</li>
+      <li><b>Pisze specyfikacje</b>, które agenci konsumują.</li>
+      <li><b>Projektuje bramki weryfikacji</b> między krokami.</li>
+      <li><b>Odpowiada</b> za wynik.</li>
+    </ul>
+  </div>
+  <div class="foot">Z maszynistki na dyrygenta.</div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-track="core">
+  <p class="kick">Nowa umiejętność bazowa</p>
+  <h2>Prompt to prośba.<br>Specyfikacja to kontrakt.</h2>
+  <div class="rowcards" style="grid-template-columns:repeat(5,1fr)">
+    <div class="card"><h3>Cel</h3><p>Jedno zdanie. Dwa cele = dwie specyfikacje.</p></div>
+    <div class="card"><h3>Ograniczenia</h3><p>Co NIE może się zmienić.</p></div>
+    <div class="card"><h3>Kryteria akceptacji</h3><p>Testy tak/nie, nie „vibe’y”.</p></div>
+    <div class="card"><h3>Przykłady</h3><p>Jedna para wejście→wyjście.</p></div>
+    <div class="card"><h3>Anty-cele</h3><p>Kusząca rzecz obok — zakazana wprost. Jak brief dla ekipy remontowej. Albo labradora.</p></div>
+  </div>
+  <div class="foot">Wszystko, co powiedziałbyś wykonawcy. Spisane. Raz.</div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-track="nonit">
+  <p class="kick">Przykład na żywo · dokumenty</p>
+  <h2>Specyfikacja streszczenia oferty przetargowej</h2>
+  <div class="spec"><b># SPEC:</b> Streszczenie zarządcze oferty do przetargu [X]
+
+<b>## Cel</b>  Jedna strona, którą CEO podpisze bez poprawek.
+<b>## Ograniczenia</b>  Maks. 400 słów · tylko fakty z naszego pliku
+  projektów referencyjnych · zero obietnic bez dowodu.
+<b>## Kryteria akceptacji</b>
+  [ ] Każde wymaganie z checklisty zamawiającego jest zaadresowane
+  [ ] Każda liczba występuje dosłownie w źródle, które posiadamy
+  [ ] Czyta się na głos w mniej niż 3 minuty
+<b>## Anty-cele</b>  Nie wymyślaj nazw partnerstw.
+  Nie streszczaj całej historii firmy — maks. 2 linie.</div>
+  <div class="foot">Checklista zamawiającego to test akceptacyjny. Wasz odruch z Modułu 2 („najpierw wyciągnij wymagania”) — sformalizowany.</div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-track="it">
+  <p class="kick">Przykład na żywo · kod</p>
+  <h2>Specyfikacja zmiany wykonywanej przez agenta</h2>
+  <div class="spec"><b># SPEC:</b> Endpoint statusu (tylko odczyt)
+
+<b>## Kontekst</b>  Serwis zamówień legacy; konsumenci zależą
+  od obecnego zachowania API.
+<b>## Cel</b>  GET /orders/{id}/status zwracający stan z cache.
+<b>## Ograniczenia</b>  Nie dotykaj publicznego API ·
+  zero nowych zależności · trzymaj się konwencji kontrolerów.
+<b>## Kryteria akceptacji</b>
+  [ ] Wszystkie istniejące testy przechodzą
+  [ ] 404 dla nieznanych id
+  [ ] p95 &lt; 50 ms na seedowanej fixturze
+<b>## Anty-cele</b>  Bez refaktoru OrderRepository —
+  kuszące, zakazane, osobna specyfikacja.
+<b>## Weryfikacja</b>  `npm test` + 3 nowe przypadki powyżej.</div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-track="core">
+  <p class="kick">Specyfikacje stałe · do zabrania</p>
+  <h2>Napisz raz. Każda sesja dziedziczy.</h2>
+  <div class="cols">
+    <div class="card"><h3>🧑‍💼 Dla każdego</h3><p><b>Custom instructions / pamięć projektu</b> w asystencie: głos marki, odbiorcy, zakazane frazy, domyślne formaty. Wasz nawyk z materiałów eventowych — na stałe.</p></div>
+    <div class="card"><h3>🧑‍💻 Dla inżynierów <span class="badge o" style="font-size:10px">IT</span></h3><p><b>CLAUDE.md · AGENTS.md · .cursorrules</b> — konwencje projektu, strefy zakazane, komendy weryfikacji. Konstytucja czytelna dla każdego agenta, jakiego kiedykolwiek „zatrudnicie”. Szablony w pakiecie.</p></div>
+  </div>
+  <div class="foot">To jest wędka — w tym tygodniu dopasujecie ją do własnej pracy (ścieżka 90 dni, krok pierwszy).</div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-track="it">
+  <p class="kick">Problem integracji</p>
+  <h2>N narzędzi × M systemów = N×M integracji na zamówienie</h2>
+  <div class="body">
+    <p class="lead" style="margin-bottom:20px">Agent jest wart tyle, ile to, do czego sięga. Bez standardów: plątanina, która zabiła dekadę integracji w korpo. Rozplątują ją dwa otwarte protokoły.</p>
+    <div style="display:flex;gap:56px;align-items:center;justify-content:center">
+      <div style="text-align:center">
+        <svg width="360" height="180" viewBox="0 0 360 190" aria-hidden="true">
+          <g stroke="#c3c2b7" stroke-width="1.6">
+            <line x1="40" y1="25" x2="320" y2="25"/><line x1="40" y1="25" x2="320" y2="75"/><line x1="40" y1="25" x2="320" y2="125"/><line x1="40" y1="25" x2="320" y2="165"/>
+            <line x1="40" y1="75" x2="320" y2="25"/><line x1="40" y1="75" x2="320" y2="75"/><line x1="40" y1="75" x2="320" y2="125"/><line x1="40" y1="75" x2="320" y2="165"/>
+            <line x1="40" y1="125" x2="320" y2="25"/><line x1="40" y1="125" x2="320" y2="75"/><line x1="40" y1="125" x2="320" y2="125"/><line x1="40" y1="125" x2="320" y2="165"/>
+            <line x1="40" y1="165" x2="320" y2="25"/><line x1="40" y1="165" x2="320" y2="75"/><line x1="40" y1="165" x2="320" y2="125"/><line x1="40" y1="165" x2="320" y2="165"/>
+          </g>
+          <g fill="#52514e"><circle cx="40" cy="25" r="9"/><circle cx="40" cy="75" r="9"/><circle cx="40" cy="125" r="9"/><circle cx="40" cy="165" r="9"/></g>
+          <g fill="#898781"><circle cx="320" cy="25" r="9"/><circle cx="320" cy="75" r="9"/><circle cx="320" cy="125" r="9"/><circle cx="320" cy="165" r="9"/></g>
+        </svg>
+        <div style="font-size:14px;color:var(--mut);font-weight:700;letter-spacing:.05em">16 ZŁĄCZY. 16 RZECZY DO ZEPSUCIA.</div>
+      </div>
+      <div style="text-align:center">
+        <svg width="360" height="180" viewBox="0 0 360 190" aria-hidden="true">
+          <g stroke="#2a78d6" stroke-width="2">
+            <line x1="40" y1="25" x2="168" y2="95"/><line x1="40" y1="75" x2="168" y2="95"/><line x1="40" y1="125" x2="168" y2="95"/><line x1="40" y1="165" x2="168" y2="95"/>
+            <line x1="192" y1="95" x2="320" y2="25"/><line x1="192" y1="95" x2="320" y2="75"/><line x1="192" y1="95" x2="320" y2="125"/><line x1="192" y1="95" x2="320" y2="165"/>
+          </g>
+          <rect x="164" y="55" width="32" height="80" rx="8" fill="#2a78d6"/>
+          <g fill="#52514e"><circle cx="40" cy="25" r="9"/><circle cx="40" cy="75" r="9"/><circle cx="40" cy="125" r="9"/><circle cx="40" cy="165" r="9"/></g>
+          <g fill="#898781"><circle cx="320" cy="25" r="9"/><circle cx="320" cy="75" r="9"/><circle cx="320" cy="125" r="9"/><circle cx="320" cy="165" r="9"/></g>
+        </svg>
+        <div style="font-size:14px;color:var(--accT);font-weight:700;letter-spacing:.05em">JEDEN PROTOKÓŁ. „MOMENT USB-C”.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-track="it">
+  <p class="kick">Warstwa 1 &nbsp;<span class="badge s">FAKT — publiczny, do sprawdzenia</span></p>
+  <h2>MCP — Model Context Protocol</h2>
+  <div class="body">
+    <ul class="big">
+      <li>Otwarty standard, Anthropic (listopad 2024); przyjęty przez głównych dostawców.</li>
+      <li>Jeden protokół łączący aplikacje AI z narzędziami, danymi, systemami — <b>„USB-C dla AI”.</b></li>
+      <li>Behawioralnie: Twój agent czyta Jirę, repo, bazę — przez jedno standardowe gniazdo, na <b>uprawnieniach, które sam nadajesz</b> (Moduł 3).</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-track="it">
+  <p class="kick">Demo</p>
+  <h2>Ugruntowanie, zindustrializowane</h2>
+  <div class="body">
+    <ul class="big">
+      <li>Agent przez serwer MCP odpytuje (fikcyjny) system ticketowy.</li>
+      <li>Wynik: raport statusu <b>cytujący prawdziwe id ticketów</b> — każde twierdzenie ma ślad.</li>
+      <li>Ta sama zasada co w Module 3: bez cytatu nie ma twierdzenia — teraz wymuszona architekturą.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-track="it">
+  <p class="kick">Warstwa 2 &nbsp;<span class="badge s">FAKT — publiczny, do sprawdzenia</span></p>
+  <h2>A2A — protokół Agent2Agent</h2>
+  <div class="body">
+    <ul class="big">
+      <li>Otwarty protokół, Google (kwiecień 2025); dziś pod Linux Foundation.</li>
+      <li>Agenci <b>odkrywają się i rozmawiają ze sobą</b>: publikują możliwości („wizytówka agenta”), wymieniają zadania, współpracują ponad granicami dostawców.</li>
+      <li><b>MCP daje agentowi ręce. A2A daje agentom kolegów.</b></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-track="it">
+  <p class="kick">Obie warstwy razem</p>
+  <h2>Zarządzasz schematem organizacyjnym, nie klepaniem</h2>
+  <div class="layers">
+    <div class="lay you"><span class="who">TY</span><span class="what">Specyfikujesz i weryfikujesz — piszesz kontrakt, odpowiadasz za wynik</span></div>
+    <div class="arrow">↓ specyfikacja</div>
+    <div class="lay"><span class="who">Agent-orkiestrator</span><span class="what">Dzieli, deleguje, składa</span></div>
+    <div class="arrow">↓ A2A — agent ↔ agent</div>
+    <div class="lay"><span class="who">Agenci-specjaliści</span><span class="what">Analiza · bezpieczeństwo · compliance · synteza — każdy robi jedną rzecz dobrze</span></div>
+    <div class="arrow">↓ MCP — agent ↔ narzędzia</div>
+    <div class="lay"><span class="who">Systemy źródłowe</span><span class="what">Repozytoria · bazy · trackery · dokumenty — tam mieszka prawda (Moduł 3)</span></div>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-track="nonit">
+  <p class="kick">Co to znaczy poza IT</p>
+  <h2>Agenci idą do pracy biurowej</h2>
+  <div class="body">
+    <ul class="big">
+      <li>Blisko i realnie: agent, który 🔎 <b>pilnuje portali przetargowych</b> i co rano składa shortlistę z cytatami · agent, który 📋 <b>szkicuje checklistę zgodności</b> z każdego nowego przetargu · agent, który 🎪 <b>składa pakiety briefów eventowych</b> Waszym głosem.</li>
+      <li>Każdy z nich potrzebuje dokładnie tego, czego nauczyliście się dziś: <b>pisanej specyfikacji</b> i <b>ludzkiej bramki weryfikacji</b>.</li>
+      <li>Nie musicie ich budować. Musicie być ludźmi, którzy umieją je <b>wyspecyfikować i zweryfikować</b>.</li>
+    </ul>
+  </div>
+  <div class="foot">Rola orkiestratora to nie zawód programistyczny. To zawód jasności.</div>
+</section>
+
+<!-- 16 -->
+<section class="slide" data-track="it">
+  <p class="kick">Nie teoria &nbsp;<span class="badge v">ZWERYFIKOWANE</span></p>
+  <h2>Pipeline discovery — maszyna stojąca za liczbami</h2>
+  <div class="pipe">
+    <div class="pnode"><h3>Ingestia</h3><p>cały kod, bez próbkowania</p></div>
+    <div class="gate">◆<small>BRAMKA</small></div>
+    <div class="pnode"><h3>Analiza semantyczna</h3><p>reguły biznesowe, przepływy</p></div>
+    <div class="gate">◆<small>BRAMKA</small></div>
+    <div class="pnode"><h3>Skan bezpieczeństwa</h3><p>CVE, poświadczenia</p></div>
+    <div class="gate">◆<small>BRAMKA</small></div>
+    <div class="pnode"><h3>Compliance</h3><p>mapowanie i ekspozycja</p></div>
+    <div class="gate">◆<small>BRAMKA</small></div>
+    <div class="pnode"><h3>Synteza</h3><p>raport z tagami dowodów</p></div>
+  </div>
+  <div class="foot">Etapowi agenci-specjaliści, ludzkie bramki między etapami. Na jego wyniki patrzycie od Modułu 1: 20 aplikacji / 3 tygodnie · 4–8× szybciej · 143 reguły @ 94% z 312 tagami dowodów.</div>
+</section>
+
+<!-- 17 -->
+<section class="slide" data-track="it">
+  <p class="kick">Ekonomia &nbsp;<span class="badge v">ZWERYFIKOWANE</span></p>
+  <h2>Po co istnieje rola orkiestratora</h2>
+  <div class="chart">
+    <svg width="470" height="230" viewBox="0 0 470 230" aria-hidden="true">
+      <text x="0" y="16" font-size="15" fill="#52514e" font-weight="700" font-family="system-ui">CZAS (ten sam zakres prac)</text>
+      <text x="0" y="48" font-size="14" fill="#52514e" font-family="system-ui">tradycyjnie: 14 tyg.</text>
+      <rect x="0" y="56" width="440" height="20" rx="4" fill="#e1e0d9"/>
+      <text x="0" y="106" font-size="14" fill="#0b0b0b" font-weight="700" font-family="system-ui">z orkiestracją: 3 tyg.</text>
+      <rect x="0" y="114" width="94" height="20" rx="4" fill="#2a78d6"/>
+      <text x="106" y="130" font-size="14" fill="#1c5cab" font-weight="700" font-family="system-ui">≈ −79% czasu</text>
+    </svg>
+    <svg width="470" height="230" viewBox="0 0 470 230" aria-hidden="true">
+      <text x="0" y="16" font-size="15" fill="#52514e" font-weight="700" font-family="system-ui">KOSZT (engagement referencyjny)</text>
+      <text x="0" y="48" font-size="14" fill="#52514e" font-family="system-ui">tradycyjnie: ~2,3 mln NOK</text>
+      <rect x="0" y="56" width="440" height="20" rx="4" fill="#e1e0d9"/>
+      <text x="0" y="106" font-size="14" fill="#0b0b0b" font-weight="700" font-family="system-ui">z orkiestracją: ~0,5 mln NOK</text>
+      <rect x="0" y="114" width="96" height="20" rx="4" fill="#2a78d6"/>
+      <text x="108" y="130" font-size="14" fill="#1c5cab" font-weight="700" font-family="system-ui">≈ −78% kosztu</text>
+    </svg>
+  </div>
+  <div class="foot">Pipeline nie uruchamia się sam. Ktoś go wyspecyfikował, obramkował i odpluskwił. Ten ktoś to nowa rola seniorska. (Plus: 4–8× szybsze zrozumienie aplikacji — Project Velocity.)</div>
+</section>
+
+<!-- 18 -->
+<section class="slide" data-track="it">
+  <p class="kick">Slajd uczciwości — z pola walki</p>
+  <h2>Gdzie orkiestracja się wykłada</h2>
+  <div class="rowcards">
+    <div class="card"><h3>🧨 Propagacja błędu</h3><p>Jedna zła ekstrakcja po cichu zatruwa wszystko dalej — <i>dlatego bramki stoją między etapami, nie tylko na końcu.</i></p></div>
+    <div class="card"><h3>📦 Przepełniony kontekst</h3><p>Bardzo duże systemy wymuszają świadomą dekompozycję.</p></div>
+    <div class="card"><h3>🕳️ Czarna skrzynka</h3><p>Interesariusze ignorują to, czego nie mogą zaudytować — <i>stąd tagowanie dowodów.</i></p></div>
+    <div class="card"><h3>🏗️ Przeinżynierowanie</h3><p>Pipeline tam, gdzie wystarczyłby jeden dobry prompt.</p></div>
+  </div>
+  <div class="foot">Wszystkie cztery leczy ta sama para dyscyplin: bramki weryfikacji i tagowanie dowodów.</div>
+</section>
+
+<!-- 19 -->
+<section class="slide" data-track="core">
+  <p class="kick">Przeramowanie kariery</p>
+  <h2>Nikogo na tej sali nie zastępuje AI.<br>Rola jest rekompilowana.</h2>
+  <div class="cols">
+    <div class="card"><h3>⬇️ Przestań przeinwestowywać w</h3><p>Tempo produkcji · biegłość w boilerplate · pamiętanie tego, co wyszukiwarka odpowiada w sekundy.</p></div>
+    <div class="card"><h3>⬆️ Dołóż do</h3><p>Kontekst domenowy · pisanie specyfikacji · projektowanie weryfikacji · dekompozycja · debugowanie zdelegowanej pracy.</p></div>
+  </div>
+  <div class="foot">Wszystko w nowym buildzie to rzeczy, które i tak robicie w najlepszych godzinach swojego tygodnia.</div>
+</section>
+
+<!-- 20 -->
+<section class="slide" data-track="core">
+  <p class="kick">Ćwiczenie · 60 minut, w parach</p>
+  <h2>Spec → agent → wymiana</h2>
+  <div class="body">
+    <ul class="big">
+      <li><b>Napisz</b> specyfikację (szablon w pakiecie): zadanie w kodzie na przykładowym repo — albo zadanie dokumentowe.</li>
+      <li><b>Uruchom:</b> podaj specyfikację agentowi dosłownie. Nie podpowiadaj w trakcie — niech pracuje specyfikacja.</li>
+      <li><b>Oceń</b> wynik <b>wyłącznie wg własnych kryteriów akceptacji</b> — nie wg gustu.</li>
+      <li><b>Wymień się</b> specyfikacjami z parą i uruchom ich wersję. Każde „formalnie zgodne, ale nie o to chodziło” to niejednoznaczność — zapisz ją. Ta lista to lekcja.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 21 -->
+<section class="slide" data-track="core">
+  <p class="kick">Omówienie</p>
+  <h2>„Przeczytaj nam linijkę specyfikacji, która na to pozwoliła”</h2>
+  <div class="body">
+    <ul class="big">
+      <li>Które niejednoznaczności agent wykorzystał?</li>
+      <li>Które kryteria akceptacji złapały prawdziwe problemy?</li>
+      <li>Co naprawiła druga iteracja specyfikacji?</li>
+    </ul>
+  </div>
+  <div class="foot">Właśnie wykonaliście tę pracę. To była orkiestracja.</div>
+</section>
+
+<!-- 22 -->
+<section class="slide" data-track="core">
+  <p class="kick">Podsumowanie · ścieżka orkiestratora na 90 dni</p>
+  <h2>Krok po kroku — inaczej wzmacnia niejednoznaczność</h2>
+  <div class="rowcards" style="grid-template-columns:repeat(3,1fr)">
+    <div class="card"><h3>Tygodnie 1–2</h3><p>Stała instrukcja w asystencie — lub plik reguł w głównym repo.</p></div>
+    <div class="card"><h3>Tygodnie 3–6</h3><p>Każde nietrywialne zadanie zaczyna się od pisanej specyfikacji.</p></div>
+    <div class="card"><h3>Tygodnie 7–12</h3><p>Jeden dwuetapowy workflow z bramką weryfikacji, na prawdziwym powtarzalnym zadaniu.</p></div>
+  </div>
+  <div class="foot">Dalej — Moduł 5: jak to wszystko ma przeżyć zderzenie z Waszym kalendarzem. (Poza dzisiejszym: floty agentów, systemy ewaluacji, pipeline’y deep-research. Ścieżka 90 dni to bilet wstępu, nie sufit.)</div>
+</section>
+
+<footer class="help">← → nawigacja · wybierz ścieżkę u góry, by dopasować talię · Ctrl/Cmd+P = wydruk</footer>
+<script>
+const slides=[...document.querySelectorAll('.slide')];let track='all',i=0;
+const vis=()=>slides.filter(s=>{const t=s.dataset.track;return t==='core'||track==='all'||t===track;});
+function show(n){const v=vis();i=Math.max(0,Math.min(n,v.length-1));slides.forEach(s=>s.classList.remove('on'));v[i].classList.add('on');document.getElementById('ctr').textContent=(i+1)+' / '+v.length;history.replaceState(null,'','#'+(i+1));}
+document.querySelectorAll('.tracks button').forEach(b=>b.onclick=()=>{track=b.dataset.set;document.querySelectorAll('.tracks button').forEach(x=>x.classList.toggle('on',x===b));show(i);});
+addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();show(i+1);}else if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();show(i-1);}else if(e.key==='Home')show(0);else if(e.key==='End')show(1e4);});
+addEventListener('click',e=>{if(e.target.closest('.hud'))return;show(e.clientX>innerWidth/2?i+1:i-1);});
+function fit(){document.documentElement.style.setProperty('--s',Math.min(innerWidth/1330,(innerHeight-70)/740));}
+addEventListener('resize',fit);fit();show((parseInt(location.hash.slice(1))||1)-1);
+</script>
+</body></html>

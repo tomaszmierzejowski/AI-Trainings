@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI-Mindset · Moduł 5 — Jak to utrwalić: 30-dniowy plan zachowań</title>
+<style>
+:root{--pg:#f9f9f7;--sf:#fcfcfb;--ink:#0b0b0b;--ink2:#52514e;--mut:#898781;--hair:#e1e0d9;--bd:rgba(11,11,11,.10);
+--acc:#2a78d6;--accT:#1c5cab;--s:1}
+*{box-sizing:border-box}html,body{margin:0;height:100%}
+body{background:var(--pg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;overflow:hidden}
+.hud{position:fixed;top:0;left:0;right:0;height:48px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;font-size:13px;color:var(--ink2);z-index:10}
+.hud .brand b{color:var(--ink)}
+.tracks{display:flex;gap:6px}
+.tracks button{font:inherit;font-size:12.5px;padding:5px 14px;border-radius:999px;border:1px solid var(--hair);background:var(--sf);color:var(--ink2);cursor:pointer}
+.tracks button.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.help{position:fixed;bottom:10px;left:0;right:0;text-align:center;font-size:12px;color:var(--mut);z-index:10}
+.slide{display:none;position:fixed;top:50%;left:50%;width:1280px;height:720px;margin-top:8px;transform:translate(-50%,-50%) scale(var(--s));
+background:var(--sf);border:1px solid var(--bd);border-radius:14px;padding:64px 84px;flex-direction:column;box-shadow:0 14px 44px rgba(11,11,11,.07)}
+.slide.on{display:flex}
+.slide[data-track="nonit"]::before,.slide[data-track="it"]::before{position:absolute;top:22px;right:26px;font-size:11.5px;font-weight:700;letter-spacing:.08em;padding:4px 12px;border-radius:999px}
+.slide[data-track="nonit"]::before{content:"ŚCIEŻKA BIZNES";color:#0c5c40;background:rgba(27,175,122,.14)}
+.slide[data-track="it"]::before{content:"ŚCIEŻKA IT / SOFTWARE";color:#3a2d86;background:rgba(74,58,167,.12)}
+.kick{font-size:15px;font-weight:700;letter-spacing:.12em;color:var(--accT);text-transform:uppercase;margin:0 0 14px}
+h1{font-size:56px;line-height:1.1;margin:0 0 18px;letter-spacing:-.015em}
+h2{font-size:41px;line-height:1.12;margin:0 0 20px;letter-spacing:-.01em}
+.lead{font-size:23px;color:var(--ink2);line-height:1.45;margin:0;max-width:1000px}
+.one{flex:1;display:flex;align-items:center}.one p{font-size:52px;line-height:1.18;font-weight:700;margin:0;letter-spacing:-.015em;max-width:1050px}
+.body{flex:1;display:flex;flex-direction:column;justify-content:center}
+ul.big{font-size:23px;line-height:1.55;margin:0;padding-left:26px}ul.big li{margin:10px 0}ul.big li::marker{color:var(--acc)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:30px;flex:1;align-content:center}
+.badge{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.08em;padding:4px 12px;border-radius:6px;vertical-align:middle}
+.badge.f{color:#52514e;background:rgba(82,81,78,.12)}
+.badge.i{color:#6b4a00;background:rgba(250,178,25,.18)}
+.card{border:1px solid var(--hair);border-radius:12px;padding:22px 24px;background:#fff}
+.card h3{margin:0 0 8px;font-size:20px}.card p{margin:0;font-size:17px;color:var(--ink2);line-height:1.5}
+.rowcards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;flex:1;align-content:center}
+.foot{margin-top:auto;padding-top:16px;border-top:1px solid var(--hair);font-size:16.5px;color:var(--ink2)}
+q.pull{display:block;font-size:29px;line-height:1.4;font-style:italic;quotes:"„" "”";max-width:1000px}
+.ladder{flex:1;display:flex;align-items:flex-end;gap:14px;padding-bottom:6px}
+.rung{flex:1;border:1px solid var(--hair);border-radius:12px 12px 0 0;background:#fff;padding:16px}
+.rung .wk{font-size:12px;font-weight:800;letter-spacing:.1em;color:var(--accT)}
+.rung h3{margin:6px 0 6px;font-size:19px}.rung p{margin:0;font-size:14px;color:var(--ink2);line-height:1.45}
+table.mt{width:100%;border-collapse:collapse;font-size:17.5px;margin-top:4px}
+table.mt th{text-align:left;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);padding:9px 12px;border-bottom:2px solid var(--hair)}
+table.mt td{padding:11px 12px;border-bottom:1px solid var(--hair);vertical-align:top;line-height:1.4}
+table.mt td:first-child{font-weight:700}
+.eq{display:flex;gap:16px;align-items:center;justify-content:center;margin:20px 0 8px}
+.eq .t{border:1px solid var(--hair);background:#fff;border-radius:12px;padding:18px 26px;text-align:center}
+.eq .t b{display:block;font-size:34px;letter-spacing:-.01em}
+.eq .t span{font-size:14px;color:var(--ink2)}
+.eq .op{font-size:34px;color:var(--mut);font-weight:700}
+@media print{body{overflow:visible}.hud,.help{display:none}.slide{display:flex;position:static;transform:none;width:1280px;height:720px;margin:8mm auto;page-break-after:always}}
+</style></head>
+<body>
+<header class="hud">
+  <div class="brand"><b>AI-Mindset</b> · Moduł 5 — Jak to utrwalić</div>
+  <div class="tracks"><button class="on" data-set="all">Wszystkie</button><button data-set="nonit">Biznes</button><button data-set="it">IT / Software</button></div>
+  <div class="counter" id="ctr">1 / 14</div>
+</header>
+
+<!-- 1 -->
+<section class="slide" data-track="core">
+  <p class="kick">AI-Mindset · Moduł 5 z 5</p>
+  <div class="body">
+    <h1>Jak to utrwalić:<br>30-dniowy plan zachowań</h1>
+    <p class="lead">Szkolenia bledną. Projekt — nie.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-track="core">
+  <p class="kick">Uczciwy problem</p>
+  <h2>Entuzjazm rozpada się przy kontakcie z kalendarzem</h2>
+  <div class="body">
+    <ul class="big">
+      <li>Wiedza nie jest już luką — wiecie teraz więcej niż większość swojej branży.</li>
+      <li>Luka: stare nawyki są wciąż tańsze <b>w tym tygodniu</b>.</li>
+      <li>A cztery tarcia — 😨 strach, 🎭 tożsamość, ⚖️ zaufanie, 🛋️ inercja — nadal siedzą na sali.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 2b -->
+<section class="slide" data-track="core">
+  <p class="kick">Dlaczego szkolenia parują &nbsp;<span class="badge f" style="color:#1c5cab;background:rgba(42,120,214,.12)">BADANIE — Ebbinghaus 1885; Cepeda 2006; Roediger 2006</span></p>
+  <h2>Krzywa zapominania — i jak ją oszukać</h2>
+  <div class="body" style="align-items:center">
+    <svg width="880" height="240" viewBox="0 0 880 250" aria-hidden="true">
+      <line x1="60" y1="215" x2="840" y2="215" stroke="#c3c2b7" stroke-width="1.5"/>
+      <path d="M60,45 C140,140 220,180 400,196 C550,206 700,210 840,212" fill="none" stroke="#c3c2b7" stroke-width="3" stroke-dasharray="7 6"/>
+      <path d="M60,45 C110,110 150,140 200,152 L200,95 C250,140 300,160 340,168 L340,110 C400,148 460,162 500,168 L500,118 C600,148 720,158 840,162" fill="none" stroke="#2a78d6" stroke-width="3.5"/>
+      <g fill="#2a78d6"><circle cx="200" cy="95" r="7"/><circle cx="340" cy="110" r="7"/><circle cx="500" cy="118" r="7"/></g>
+      <g font-family="system-ui" font-size="14" text-anchor="middle">
+        <text x="200" y="78" fill="#1c5cab" font-weight="700">rytuał</text>
+        <text x="340" y="93" fill="#1c5cab" font-weight="700">show-and-tell</text>
+        <text x="500" y="101" fill="#1c5cab" font-weight="700">przegląd dnia 30</text>
+        <text x="740" y="196" fill="#898781">jednodniowy maraton szkoleniowy</text>
+        <text x="700" y="140" fill="#1c5cab" font-weight="700">praktyka rozłożona w czasie</text>
+      </g>
+    </svg>
+  </div>
+  <div class="foot">Trzy twarde efekty: krzywa zapominania · efekt rozłożenia (praktyka w odstępach bije maraton) · efekt testowania (wydobywanie wiedzy bije ponowne słuchanie). Dlatego 5 modułów w odstępach + ćwiczenia + przegląd — a nie jeden intensywny dzień.</div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-track="core">
+  <p class="kick">Postawa projektowa &nbsp;<span class="badge f">MODEL — Fogg</span></p>
+  <h2>Nie planujemy „bardziej się starać”.<br>Przeprojektowujemy domyślne.</h2>
+  <div class="eq">
+    <div class="t"><b>Z</b><span>zachowanie</span></div>
+    <div class="op">=</div>
+    <div class="t"><b>M</b><span>motywacja<br>(zawodna!)</span></div>
+    <div class="op">×</div>
+    <div class="t" style="border-color:var(--acc);border-width:2px"><b>Ł</b><span>łatwość<br>→ zrób nawyk malutkim</span></div>
+    <div class="op">×</div>
+    <div class="t" style="border-color:var(--acc);border-width:2px"><b>W</b><span>wyzwalacz<br>→ doczep do istniejącego</span></div>
+  </div>
+  <div class="foot">Motywacja jest najbardziej zawodna z trzech — więc inżynierujemy pozostałe dwie.</div>
+</section>
+
+<!-- 3b -->
+<section class="slide" data-track="core">
+  <p class="kick">Najlepiej udokumentowana sztuczka w psychologii &nbsp;<span class="badge f" style="color:#1c5cab;background:rgba(42,120,214,.12)">BADANIE — Gollwitzer 1999; metaanaliza Gollwitzer &amp; Sheeran 2006</span></p>
+  <h2>Intencja implementacyjna</h2>
+  <div class="eq" style="margin-top:6px">
+    <div class="t" style="border-color:var(--acc);border-width:2px;padding:22px 34px"><b style="font-size:40px">KIEDY [X]</b><span>konkretna, powtarzalna sytuacja</span></div>
+    <div class="op">→</div>
+    <div class="t" style="border-color:var(--acc);border-width:2px;padding:22px 34px"><b style="font-size:40px">ZROBIĘ [Y]</b><span>konkretne zachowanie</span></div>
+  </div>
+  <div class="body" style="flex:0;margin-top:20px">
+    <ul class="big">
+      <li><b>d = 0,65</b> — średni efekt w metaanalizie <b>94 badań</b>. Jedno zapisane zdanie, efekt średnio-duży.</li>
+      <li>Mechanizm: decyzja zapada <b>teraz</b>, gdy jest tania — nie w poniedziałek o 9:00, gdy kosztuje silną wolę.</li>
+      <li>Wasz kontrakt „narzędzie + wyzwalacz” to dokładnie to. Nie motywacyjny gadżet — nauka.</li>
+    </ul>
+  </div>
+  <div class="foot">Warunek skuteczności: wyzwalacz konkretny i regularny. „Kiedy otwieram portal przetargowy” — tak. „Rano” — nie.</div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-track="core">
+  <p class="kick">Indywidualnie</p>
+  <h2>Drabina nawyków — jedno zachowanie na tydzień</h2>
+  <div class="ladder">
+    <div class="rung" style="min-height:38%"><span class="wk">TYDZIEŃ 1</span><h3>Pierwszy krok</h3><p>Twoja kartka z Modułu 1 + kontrakt z Modułu 2. Malutki, doczepiony do wyzwalacza.</p></div>
+    <div class="rung" style="min-height:55%"><span class="wk">TYDZIEŃ 2</span><h3>+ Weryfikacja</h3><p>60-sekundowy check (Moduł 3): daty, liczby, nazwy najpierw.</p></div>
+    <div class="rung" style="min-height:72%"><span class="wk">TYDZIEŃ 3</span><h3>+ Pierwsza specyfikacja</h3><p>Jedno prawdziwe zadanie spisane wg szablonu (Moduł 4).</p></div>
+    <div class="rung" style="min-height:89%"><span class="wk">TYDZIEŃ 4</span><h3>+ Przegląd</h3><p>Czego dotknęło AI? Co podpisałem? Które tarcie walczyło ze mną najmocniej?</p></div>
+  </div>
+  <div class="foot">Stos, nie skok. Ambicja w tygodniu 1 to najczęstsza przyczyna śmierci planów 30-dniowych — w dniu 4.</div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-track="core">
+  <p class="kick">Zespołowo — zróbcie z tego coś społecznego</p>
+  <h2>Trzy rytuały. Wybierzcie co najmniej jeden <i>dziś</i>.</h2>
+  <div class="rowcards" style="grid-template-columns:repeat(3,1fr)">
+    <div class="card"><h3>🎤 Moment AI na daily</h3><p>60 sekund: jedna rzecz, którą ktoś wczoraj zdelegował.</p></div>
+    <div class="card"><h3>📚 Wspólna biblioteka promptów i spec</h3><p>Żywa, tam gdzie pracujecie — nie cmentarzysko wiki.</p></div>
+    <div class="card"><h3>🍿 Comiesięczne show-and-tell</h3><p>Jeden prawdziwy workflow, z wpadkami. Porażki uczą adopcji szybciej niż sukcesy.</p></div>
+  </div>
+  <div class="foot">Wybrane na sali, nie zasugerowane. Niewybrany rytuał to sugestia.</div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-track="core">
+  <p class="kick">Do najstarszej stażem osoby na sali</p>
+  <h2>Liderzy idą pierwsi</h2>
+  <div class="body">
+    <ul class="big">
+      <li>Zespół nie przejmuje tego, co zarządzisz. <b>Przejmuje to, co widzi, że robisz.</b></li>
+      <li>Prośba: raz w tygodniu, na kanale czytanym przez wszystkich, napisz, co zdelegowałeś do AI — <b>i co musiałeś poprawić.</b></li>
+      <li>Poprawka to substancja czynna: widoczna omylność seniora zabija w całej firmie tarcie „strach przed kompromitacją”.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-track="core">
+  <p class="kick">Sieć &nbsp;<span class="badge f">MODEL — Rogers, dyfuzja innowacji</span></p>
+  <h2>Czempioni, nie policja</h2>
+  <div class="body">
+    <ul class="big">
+      <li>Jeden <b>ochotnik</b> na zespół — z <b>zabudżetowanym czasem</b>, nie „obok wszystkiego”.</li>
+      <li>Mandat: odblokowywać kolegów, zbierać sukcesy na show-and-tell.</li>
+      <li>Wyraźnie <b>nie</b>: egzekwowanie ani raportowanie na osoby.</li>
+    </ul>
+  </div>
+  <div class="foot">Adopcja rozchodzi się przez zaufanych kolegów, nie przez okólniki.</div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-track="core">
+  <p class="kick">Pomiar</p>
+  <h2>Mierz zachowania, nie nastroje</h2>
+  <table class="mt">
+    <tr><th>Wskaźnik wyprzedzający</th><th>Co mówi</th><th>Jak</th></tr>
+    <tr><td>Odsetek „pierwszego kroku”</td><td>Udział zadań, w których AI było krokiem 1 — <b>to jest cały program</b></td><td>samoraport na retro</td></tr>
+    <tr><td>Odsetek weryfikacji</td><td>Ile wyników AI dostało 60-sekundowy check — tempo <i>z</i> bezpieczeństwem</td><td>samoraport na retro</td></tr>
+    <tr><td>Reużycie specyfikacji i instrukcji</td><td>Stałe spec użyte więcej niż raz</td><td>licznik tam, gdzie żyją</td></tr>
+    <tr><td>Czas do artefaktu</td><td>Jedno zadanie wzorcowe, mierzone co miesiąc — pierwszy most do wyników biznesowych</td><td>stoper</td></tr>
+  </table>
+  <div class="foot">Ogłoszone zanim ruszy pomiar · ocenia system adopcji, nigdy osoby · nigdy nie wchodzi do oceny rocznej.</div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-track="core">
+  <p class="kick">Blok kliencki — jak to działa</p>
+  <h2>Tu wchodzi Wasz kontekst</h2>
+  <div class="body">
+    <ul class="big">
+      <li>To slajd podmienny: drabina nawyków nałożona na <b>Waszą</b> powtarzalną pracę.</li>
+      <li>Zbudowany z Waszych słów, gdy je mamy — i uczciwie oznaczony <span class="badge i">ZAŁOŻENIE</span>, gdy zgadujemy.</li>
+      <li>Każda Wasza korekta zamienia zgadywankę w fakt — i czyni ten plan <b>Waszym</b>.</li>
+    </ul>
+  </div>
+  <div class="foot">Następny slajd to żywy przykład dla zespołu z branży eventowej.</div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-track="nonit">
+  <p class="kick">Przykład · EventCo — agencja eventowo-edukacyjna</p>
+  <h2>Drabina w praktyce</h2>
+  <table class="mt">
+    <tr><th>Powtarzalna praca</th><th>Nawyk pierwszego kroku (tydz. 1)</th><th>Reguła weryfikacji (tydz. 2)</th></tr>
+    <tr><td>🎯 Szukanie przetargów <span class="badge i" style="font-size:10px">ZAŁOŻENIE</span></td><td>Asystent składa shortlistę z linkami, zanim otworzysz portal</td><td>Każdy termin i budżet sprawdzony u źródła, zanim wejdzie do pipeline’u</td></tr>
+    <tr><td>📄 Dokumenty i oferty <span class="badge i" style="font-size:10px">ZAŁOŻENIE</span></td><td>Najpierw checklista wymagań; szkic pisany pod nią</td><td>Prompt „oceniający zamawiającego” przed każdą wysyłką</td></tr>
+    <tr><td>🎪 Materiały eventowe <span class="badge i" style="font-size:10px">ZAŁOŻENIE</span></td><td>Stała instrukcja głosu marki; jeden brief → agenda, deck sponsorski, social</td><td>Nazwy, daty, ceny — spot-check przed publikacją</td></tr>
+  </table>
+  <div class="foot">Te wiersze to nasze hipotezy sprzed współpracy, nie Wasze słowa — poprawcie je teraz, na głos. Kandydat na specyfikację w tygodniu 3: Wasz szablon oferty.</div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-track="core">
+  <p class="kick">Co zabija adopcję</p>
+  <h2>Cztery antywzorce</h2>
+  <div class="rowcards">
+    <div class="card"><h3>📜 Nakaz</h3><p>„Do Q3 wszyscy używają AI” → teatr zgodności. Loginy rosną, zachowania stoją. (Loginy można nakazać. Nawyków nie.)</p></div>
+    <div class="card"><h3>🧰 Rozrost narzędzi</h3><p>Nowe narzędzie co miesiąc → dłubanie, zero nawyków.</p></div>
+    <div class="card"><h3>🦸 Bohater</h3><p>Jeden entuzjasta robi AI za wszystkich. Gdy odchodzi, kompetencja wyjeżdża w jego plecaku.</p></div>
+    <div class="card"><h3>🕵️ Cichy pomiar</h3><p>Śledzenie bez ogłoszenia → zawał zaufania. Wszystko, co mierzone, jest ogłoszone.</p></div>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-track="core">
+  <p class="kick">Blok roboczy · 40 minut ✍️</p>
+  <h2>Napisz swój kontrakt 30-dniowy</h2>
+  <div class="cols">
+    <div class="card"><h3>Każdy</h3><p>Zadanie Poziomu 3 (kartka z Modułu 1) · narzędzie + wyzwalacz (Moduł 2) · reguła weryfikacji (ćwiartka z Modułu 3) · kandydat na specyfikację (Moduł 4) · <b>imiennie</b> wskazany partner rozliczający · <b>data</b> przeglądu dnia 30.</p></div>
+    <div class="card"><h3>Liderzy</h3><p>Wybrany rytuał · wskazany czempion (ochotnik!) · trzy wskaźniki z linią bazową — i ogłoszenie zespołowi, na piśmie, z datą.</p></div>
+  </div>
+  <div class="foot">Artefakty albo się nie wydarzyło. Pusta kartka dzisiaj to ciche „nie”.</div>
+</section>
+
+<!-- 12b -->
+<section class="slide" data-track="core">
+  <p class="kick">Jeszcze jedna uczciwa rzecz</p>
+  <h2>Mapa jest większa niż dzisiaj</h2>
+  <div class="body" style="flex-direction:row;display:flex;gap:48px;align-items:center">
+    <svg width="290" height="290" viewBox="0 0 200 220" style="flex:none" aria-hidden="true">
+      <rect x="0" y="80" width="200" height="140" fill="rgba(42,120,214,.08)"/>
+      <line x1="0" y1="80" x2="200" y2="80" stroke="#2a78d6" stroke-width="2" stroke-dasharray="6 5"/>
+      <polygon points="68,80 100,28 132,80" fill="#2a78d6"/>
+      <polygon points="58,82 142,82 158,140 100,208 42,132" fill="#86b6ef" opacity=".65"/>
+      <text x="100" y="20" text-anchor="middle" font-size="11" fill="#1c5cab" font-weight="700" font-family="system-ui">TO JUŻ MACIE</text>
+      <text x="100" y="150" text-anchor="middle" font-size="11" fill="#1c5cab" font-weight="700" font-family="system-ui">TO CZEKA</text>
+    </svg>
+    <ul class="big" style="flex:1">
+      <li><b>Nad linią wody — Wasze:</b> nawyki pierwszego kroku · R·Z·F · macierz zaufania · specyfikacje i bramki.</li>
+      <li><b>Pod wodą — czeka:</b> workflow deep-research · floty agentów i A2A · systemy ewaluacji · platformy automatyzacji · modele prywatne/lokalne · pipeline’y głosowe i multimodalne…</li>
+      <li>To nie groźba. To dobra wiadomość: <b>wszystko tam na dole nagradza nawyki, które zbudowaliście w tym miesiącu.</b></li>
+    </ul>
+  </div>
+  <div class="foot">„Daję wędkę” obejmuje też mapę łowisk. Wędka, którą trzymacie, działa na wszystkich.</div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-track="core">
+  <p class="kick">Zakończenie</p>
+  <svg style="position:absolute;top:58px;right:78px" width="130" height="130" viewBox="0 0 100 100" fill="none" stroke="#2a78d6" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+    <line x1="12" y1="92" x2="76" y2="16"/><circle cx="30" cy="71" r="6"/>
+    <path d="M76,16 C 88,28 88,46 82,60" stroke-dasharray="3 4" stroke-width="1.8"/>
+    <path d="M82,60 c -5,3 -8,-1 -5,-5" stroke-width="1.8"/>
+  </svg>
+  <div class="one"><p>Daję wędkę.<br><span style="color:var(--accT)">Wędka jest Wasza.</span></p></div>
+  <div class="foot">Zachowania ponad narzędzia → nawyki pierwszego kroku → skalibrowane zaufanie → specyfikacje i orkiestracja → zaprojektowana trwałość. Jeśli przegląd dnia 30 pójdzie dobrze beze mnie na sali — to szkolenie zadziałało. O to chodziło.</div>
+</section>
+
+<footer class="help">← → nawigacja · wybierz ścieżkę u góry, by dopasować talię · Ctrl/Cmd+P = wydruk</footer>
+<script>
+const slides=[...document.querySelectorAll('.slide')];let track='all',i=0;
+const vis=()=>slides.filter(s=>{const t=s.dataset.track;return t==='core'||track==='all'||t===track;});
+function show(n){const v=vis();i=Math.max(0,Math.min(n,v.length-1));slides.forEach(s=>s.classList.remove('on'));v[i].classList.add('on');document.getElementById('ctr').textContent=(i+1)+' / '+v.length;history.replaceState(null,'','#'+(i+1));}
+document.querySelectorAll('.tracks button').forEach(b=>b.onclick=()=>{track=b.dataset.set;document.querySelectorAll('.tracks button').forEach(x=>x.classList.toggle('on',x===b));show(i);});
+addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();show(i+1);}else if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();show(i-1);}else if(e.key==='Home')show(0);else if(e.key==='End')show(1e4);});
+addEventListener('click',e=>{if(e.target.closest('.hud'))return;show(e.clientX>innerWidth/2?i+1:i-1);});
+function fit(){document.documentElement.style.setProperty('--s',Math.min(innerWidth/1330,(innerHeight-70)/740));}
+addEventListener('resize',fit);fit();show((parseInt(location.hash.slice(1))||1)-1);
+</script>
+</body></html>

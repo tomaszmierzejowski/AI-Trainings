@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI-Mindset · Moduł 3 — Zaufanie, weryfikacja i fakty ponad opinie</title>
+<style>
+:root{--pg:#f9f9f7;--sf:#fcfcfb;--ink:#0b0b0b;--ink2:#52514e;--mut:#898781;--hair:#e1e0d9;--bd:rgba(11,11,11,.10);
+--acc:#2a78d6;--accT:#1c5cab;--s:1}
+*{box-sizing:border-box}html,body{margin:0;height:100%}
+body{background:var(--pg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;overflow:hidden}
+.hud{position:fixed;top:0;left:0;right:0;height:48px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;font-size:13px;color:var(--ink2);z-index:10}
+.hud .brand b{color:var(--ink)}
+.tracks{display:flex;gap:6px}
+.tracks button{font:inherit;font-size:12.5px;padding:5px 14px;border-radius:999px;border:1px solid var(--hair);background:var(--sf);color:var(--ink2);cursor:pointer}
+.tracks button.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.help{position:fixed;bottom:10px;left:0;right:0;text-align:center;font-size:12px;color:var(--mut);z-index:10}
+.slide{display:none;position:fixed;top:50%;left:50%;width:1280px;height:720px;margin-top:8px;transform:translate(-50%,-50%) scale(var(--s));
+background:var(--sf);border:1px solid var(--bd);border-radius:14px;padding:64px 84px;flex-direction:column;box-shadow:0 14px 44px rgba(11,11,11,.07)}
+.slide.on{display:flex}
+.slide[data-track="nonit"]::before,.slide[data-track="it"]::before{position:absolute;top:22px;right:26px;font-size:11.5px;font-weight:700;letter-spacing:.08em;padding:4px 12px;border-radius:999px}
+.slide[data-track="nonit"]::before{content:"ŚCIEŻKA BIZNES";color:#0c5c40;background:rgba(27,175,122,.14)}
+.slide[data-track="it"]::before{content:"ŚCIEŻKA IT / SOFTWARE";color:#3a2d86;background:rgba(74,58,167,.12)}
+.kick{font-size:15px;font-weight:700;letter-spacing:.12em;color:var(--accT);text-transform:uppercase;margin:0 0 14px}
+h1{font-size:56px;line-height:1.1;margin:0 0 18px;letter-spacing:-.015em}
+h2{font-size:41px;line-height:1.12;margin:0 0 20px;letter-spacing:-.01em}
+.lead{font-size:23px;color:var(--ink2);line-height:1.45;margin:0;max-width:1000px}
+.one{flex:1;display:flex;align-items:center}.one p{font-size:52px;line-height:1.18;font-weight:700;margin:0;letter-spacing:-.015em;max-width:1050px}
+.body{flex:1;display:flex;flex-direction:column;justify-content:center}
+ul.big{font-size:23px;line-height:1.55;margin:0;padding-left:26px}ul.big li{margin:10px 0}ul.big li::marker{color:var(--acc)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:30px;flex:1;align-content:center}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:8px}
+.tile{border:1px solid var(--hair);border-radius:12px;padding:20px 22px;background:#fff}
+.tile .num{font-size:48px;font-weight:750;letter-spacing:-.02em;line-height:1}
+.tile .lab{font-size:15px;color:var(--ink2);margin-top:9px;line-height:1.4}
+.badge{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.08em;padding:4px 12px;border-radius:6px;vertical-align:middle}
+.badge.v{color:#006300;background:rgba(12,163,12,.12)}.badge.s{color:#1c5cab;background:rgba(42,120,214,.12)}
+.badge.f{color:#52514e;background:rgba(82,81,78,.12)}
+.card{border:1px solid var(--hair);border-radius:12px;padding:22px 24px;background:#fff}
+.card h3{margin:0 0 8px;font-size:20px}.card p{margin:0;font-size:17px;color:var(--ink2);line-height:1.5}
+.rowcards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;flex:1;align-content:center}
+.foot{margin-top:auto;padding-top:16px;border-top:1px solid var(--hair);font-size:16.5px;color:var(--ink2)}
+.mx{flex:1;display:grid;grid-template-columns:46px 1fr 1fr;grid-template-rows:1fr 1fr 40px;gap:12px;margin-top:4px}
+.mx .ylab{writing-mode:vertical-rl;transform:rotate(180deg);text-align:center;font-size:14px;letter-spacing:.1em;color:var(--mut);font-weight:700}
+.mx .xlab{grid-column:2/4;text-align:center;font-size:14px;letter-spacing:.1em;color:var(--mut);font-weight:700;align-self:center}
+.mx .q{border:1px solid var(--hair);border-radius:12px;background:#fff;padding:18px 22px}
+.mx .q h3{margin:0 0 6px;font-size:20px}.mx .q p{margin:0;font-size:16px;color:var(--ink2);line-height:1.45}
+.mx .q em{display:block;font-style:normal;font-weight:800;font-size:12.5px;letter-spacing:.08em;margin-bottom:8px;color:var(--accT)}
+.mx .hot{border:2px solid var(--acc)}
+.split{display:grid;grid-template-columns:auto 1fr;gap:44px;flex:1;align-content:center;align-items:center}
+.waffle{display:grid;grid-template-columns:repeat(10,24px);gap:5px;width:max-content}
+.waffle i{width:24px;height:24px;border-radius:5px;background:#e1e0d9}
+.waffle i.b{background:#2a78d6}
+@media print{body{overflow:visible}.hud,.help{display:none}.slide{display:flex;position:static;transform:none;width:1280px;height:720px;margin:8mm auto;page-break-after:always}}
+</style></head>
+<body>
+<header class="hud">
+  <div class="brand"><b>AI-Mindset</b> · Moduł 3 — Zaufanie, weryfikacja, fakty ponad opinie</div>
+  <div class="tracks"><button class="on" data-set="all">Wszystkie</button><button data-set="nonit">Biznes</button><button data-set="it">IT / Software</button></div>
+  <div class="counter" id="ctr">1 / 15</div>
+</header>
+
+<!-- 1 -->
+<section class="slide" data-track="core">
+  <p class="kick">AI-Mindset · Moduł 3 z 5</p>
+  <div class="body">
+    <h1>Zaufanie, weryfikacja<br>i fakty ponad opinie</h1>
+    <p class="lead">AI generuje. Ty weryfikujesz. Ty odpowiadasz.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-track="core">
+  <p class="kick">Dwa sposoby, żeby polec &nbsp;<span class="badge f">MODEL — automation bias</span></p>
+  <h2>Niedowierzanie marnuje. Nadwierzanie szkodzi.</h2>
+  <div class="cols">
+    <div class="card"><h3>⏳ Niedowierzanie</h3><p>„Sprawdziłem wszystko dwa razy, więc AI nic mi nie dało.” Oszczędność czasu wyparowuje — a winne jest AI.</p></div>
+    <div class="card"><h3>💥 Nadwierzanie</h3><p>„Brzmiało pewnie, więc wysłałem.” Płynne zgadywanie staje się faktem organizacyjnym.</p></div>
+  </div>
+  <div class="foot">Oba to ten sam błąd: zaufanie jako uczucie wobec narzędzia, zamiast właściwości zadania. Kalibrację da się wytrenować.</div>
+</section>
+
+<!-- 2b -->
+<section class="slide" data-track="core">
+  <p class="kick">Nauka o „raz poparzonym” &nbsp;<span class="badge s">BADANIE — Dietvorst i in., 2015 / 2018</span></p>
+  <h2>Awersja algorytmiczna — Twoja reakcja ma nazwę</h2>
+  <div class="body">
+    <ul class="big">
+      <li>W eksperymentach ludzie <b>porzucali algorytm po zobaczeniu jednego błędu</b> — nawet gdy wciąż był lepszy od nich i kosztowało ich to pieniądze.</li>
+      <li>Asymetria: błąd człowieka wybaczamy („każdy ma gorszy dzień”), identyczny błąd algorytmu dyskwalifikuje („zepsuty”).</li>
+      <li>Odkryty lek (2018): <b>pozwól ludziom poprawiać wynik</b> — nawet odrobinę — a chęć użycia rośnie skokowo. <span style="color:var(--mut)">Kontrola to antidotum na awersję.</span></li>
+    </ul>
+  </div>
+  <div class="foot">Dlatego każdy workflow w tym programie trzyma Twoją rękę na wyniku: iteruj-nie-losuj, smycz, uścisk „AI generuje — Ty weryfikujesz”. To nie tylko bezpieczeństwo. To mechanizm adopcji.</div>
+</section>
+
+<!-- 2c -->
+<section class="slide" data-track="it">
+  <p class="kick">Kalibracja &nbsp;<span class="badge s">BADANIE — METR, 2025 (RCT, 246 zadań)</span></p>
+  <h2>Nie czujesz, czy AI Ci pomaga. Mierzysz.</h2>
+  <div class="tiles" style="grid-template-columns:repeat(2,1fr)">
+    <div class="tile"><div class="num">−19%</div><div class="lab">wolniej z AI: doświadczeni programiści open-source na <b>własnych, dojrzałych repozytoriach</b></div></div>
+    <div class="tile"><div class="num">„+20%”</div><div class="lab">…a po fakcie szacowali, że AI ich <b>przyspieszyło</b>. 40 punktów rozjazdu — u elity.</div></div>
+  </div>
+  <div class="body" style="flex:0;margin-top:18px">
+    <ul class="big"><li>Warunki brzegowe: ekstremalna ekspertyza + kontekst, którego model nie miał. To nie „AI spowalnia” — to: <b>w strefie najgłębszej ekspertyzy percepcja zawodzi nawet najlepszym.</b></li></ul>
+  </div>
+  <div class="foot">Wniosek do Modułu 5: metryka czas-do-artefaktu istnieje, bo wrażenie tempa nie przeżywa kontaktu ze stoperem.</div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-track="core">
+  <p class="kick">Czym naprawdę jest halucynacja</p>
+  <h2>To nie kłamstwo. To dopowiadanie.</h2>
+  <div class="body">
+    <ul class="big">
+      <li>Model językowy <b>przewiduje prawdopodobny tekst</b>. Nie sprawdza faktów.</li>
+      <li>Pewny ton to cecha stylu — niesie <b>zero</b> informacji o prawdzie.</li>
+      <li>Zmyślenia kumulują się tam, gdzie trzeba konkretu: <b>nazwiska, liczby, daty, cytaty.</b></li>
+    </ul>
+  </div>
+  <div class="foot">Myśl: pewny siebie stażysta z nienaganną gramatyką. Liczby i tak byś sprawdził.</div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-track="core">
+  <p class="kick">Zasada 1</p>
+  <h2>Prawda mieszka w systemach źródłowych</h2>
+  <div class="rowcards" style="grid-template-columns:repeat(3,1fr)">
+    <div class="card"><h3>🤖 AI</h3><p>Zrozumienie, synteza, szkicowanie.</p></div>
+    <div class="card"><h3>🗄️ Systemy źródłowe</h3><p>Bazy danych, kod, dokumenty urzędowe, oficjalne portale — fakty.</p></div>
+    <div class="card"><h3>🧠 Ludzka ocena</h3><p>Rozstrzyga między nimi. Podpisuje wynik.</p></div>
+  </div>
+  <div class="foot">Wygrywa fuzja — nigdy AI solo jako źródło prawdy.</div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-track="core">
+  <p class="kick">Ugruntowanie w praktyce</p>
+  <h2>Trzy zachowania, od najtańszego</h2>
+  <div class="body">
+    <ul class="big">
+      <li><b>1.</b> Wklej źródło do prompta.</li>
+      <li><b>2.</b> Używaj narzędzi ugruntowanych w źródłach (NotebookLM, RAG), które odpowiadają tylko z Twoich dokumentów — i cytują.</li>
+      <li><b>3.</b> Żądaj cytatów. A potem naprawdę <b>w nie klikaj</b>.</li>
+    </ul>
+  </div>
+  <div class="foot">Bez cytatu nie ma twierdzenia — ten sam standard, którego trzymają się te slajdy.</div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-track="core">
+  <p class="kick">Case &nbsp;<span class="badge v">ZWERYFIKOWANE</span></p>
+  <h2>Project Axiom — protokół bije model</h2>
+  <div class="tiles">
+    <div class="tile"><div class="num">97</div><div class="lab">projektów przeanalizowanych dla krajowego operatora infrastruktury przed decyzją o ERP</div></div>
+    <div class="tile"><div class="num">17</div><div class="lab">zidentyfikowanych modułów</div></div>
+    <div class="tile"><div class="num">0</div><div class="lab">błędnych wniosków w dostarczonym wyniku</div></div>
+  </div>
+  <div class="foot">Nie dlatego, że model był nieomylny — dlatego, że <b>żaden wniosek AI nie wszedł do raportu bez ludzkiej bramki.</b> Niezawodność mieszka w projekcie procesu.</div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-track="core">
+  <p class="kick">Case &nbsp;<span class="badge v">ZWERYFIKOWANE</span></p>
+  <h2>Analiza, którą można audytować,<br>bije analizę, w którą trzeba wierzyć</h2>
+  <div class="tiles">
+    <div class="tile"><div class="num">143</div><div class="lab">reguły biznesowe wydobyte z ~220 000 linii kodu legacy</div></div>
+    <div class="tile"><div class="num">94%</div><div class="lab">pewności — podane wprost, nie zasugerowane</div></div>
+    <div class="tile"><div class="num">312</div><div class="lab">cytatów-dowodów — każdy wniosek prowadzi do linii źródła</div></div>
+  </div>
+  <div class="foot">Nordycka firma przetwarzająca transakcje. Zakwestionuj dowolny wniosek → zobaczysz dokładną linię. Taki jest standard.</div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-track="core">
+  <p class="kick">Dlaczego to ważne &nbsp;<span class="badge s">BADANIE — Standish CHAOS 2020</span></p>
+  <h2>Problem niezweryfikowanych założeń</h2>
+  <div class="split">
+    <div>
+      <div class="waffle" id="wf"></div>
+      <p style="font-size:14px;color:var(--mut);margin:12px 0 0">100 projektów software’owych: <b style="color:var(--accT)">■ 31 kończy się pełnym sukcesem</b> · ■ reszta: opóźnione, przepalone lub porzucone</p>
+    </div>
+    <ul class="big">
+      <li>Tylko <b>~31%</b> projektów kończy się pełnym sukcesem.</li>
+      <li>Dominująca przyczyna: decyzje podejmowane na <b>zakładanej</b> wiedzy o systemach, których nikt w pełni nie rozumie.</li>
+      <li>Większość organizacji nie ma problemu z wiedzą. Ma problem z niezweryfikowanymi założeniami.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-track="core">
+  <p class="kick">Instrument</p>
+  <h2>Macierz skalibrowanego zaufania</h2>
+  <div class="mx">
+    <div class="ylab">STAWKA → WYSOKA</div>
+    <div class="q"><em>WYSOKA STAWKA · ŁATWA WERYFIKACJA</em><h3>Deleguj — weryfikuj zawsze</h3><p>Kod z testami. Podsumowanie przetargu z otwartym portalem obok.</p></div>
+    <div class="q hot"><em>WYSOKA STAWKA · TRUDNA WERYFIKACJA</em><h3>Nie deleguj w całości</h3><p>Tnij zadanie, aż jego części staną się weryfikowalne.</p></div>
+    <div class="q"><em>NISKA STAWKA · ŁATWA WERYFIKACJA</em><h3>Deleguj swobodnie</h3><p>Burze mózgów, szkice wewnętrzne, formatowanie.</p></div>
+    <div class="q"><em>NISKA STAWKA · TRUDNA WERYFIKACJA</em><h3>Tylko inspiracja</h3><p>Nigdy jako źródło prawdy.</p></div>
+    <div></div><div class="xlab">WERYFIKOWALNOŚĆ → TRUDNA</div>
+  </div>
+  <div class="foot">Zaufanie to nie uczucie wobec narzędzia. To właściwość zadania.</div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-track="nonit">
+  <p class="kick">⏰ Wysoka stawka w zwykłych dokumentach</p>
+  <h2>Termin przetargu to fakt wysokiej stawki</h2>
+  <div class="body">
+    <ul class="big">
+      <li>Shortlista przetargów = <b>wysoka stawka + łatwa weryfikacja</b> — portal jest tuż obok. Więc: deleguj szukanie, <b>weryfikuj każdy termin, budżet i warunek u źródła.</b></li>
+      <li>Jeden zmyślony termin = jeden przegapiony przetarg. Jeden źle odczytany warunek udziału = tydzień pracy nad ofertą do kosza.</li>
+      <li>60-sekundowy check, w kolejności: <b>daty → kwoty → nazwy → wnioski kontra źródło.</b></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-track="core">
+  <p class="kick">Weryfikacja jako zachowanie, nie cnota</p>
+  <h2>Cztery konkretne nawyki</h2>
+  <div class="rowcards">
+    <div class="card"><h3>🔗 Cytaty obowiązkowe</h3><p>Wbuduj w prompt. Potem klikaj.</p></div>
+    <div class="card"><h3>⏱️ 60-sekundowy check</h3><p>Nazwy, liczby, daty najpierw — tam zmyśleń jest najwięcej.</p></div>
+    <div class="card"><h3>✅ Testy jako zaufanie</h3><p>Dla kodu: bramką jest suita testów. <span class="badge v" style="font-size:10px">ZWERYFIKOWANE</span> PresoGen AI: ~600 testów, 3 dostawców LLM.</p></div>
+    <div class="card"><h3>🔁 Drugi model</h3><p>Rezerwa dla ćwiartki wysoka-stawka + trudna-weryfikacja. Najmniejszy wycinek dnia.</p></div>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-track="core">
+  <p class="kick">Podstawy ładu</p>
+  <h2>Cztery zasady, dzięki którym „tak” pada szybko</h2>
+  <div class="rowcards">
+    <div class="card"><h3>1 · Dane</h3><p>Żadnych danych osobowych (RODO) ani identyfikujących klienta w niezatwierdzonych narzędziach. Nigdy.</p></div>
+    <div class="card"><h3>2 · Dostęp</h3><p>Minimalne uprawnienia dla wszystkiego, czego dotyka agent.</p></div>
+    <div class="card"><h3>3 · Wstrzyknięcia</h3><p>Zewnętrzna treść wklejona do prompta to niezaufane wejście — instrukcje potrafią się w niej ukrywać.</p></div>
+    <div class="card"><h3>4 · Ślad</h3><p>Zapisuj, czego AI dotknęło w materiale — żeby celować z przeglądem.</p></div>
+  </div>
+  <div class="foot">Ład to akcelerator, nie hamulec — cztery zasady, dzięki którym compliance (i audytor RODO) mówi „tak” w sekundy, nie w tygodnie.</div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-track="core">
+  <p class="kick">Case &nbsp;<span class="badge v">ZWERYFIKOWANE</span></p>
+  <h2>Antystyki.pl — człowiek na spuście</h2>
+  <div class="body">
+    <ul class="big">
+      <li>Pipeline treści AI dla dziennikarstwa statystycznego — <b>17+ źródeł statystycznych</b>.</li>
+      <li>Każda publikacja przechodzi <b>ludzką bramkę governance</b>.</li>
+      <li>Nawet pipeline <i>o statystykach</i> trzyma człowieka na spuście. Wasze workflow też mogą.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-track="core">
+  <p class="kick">Ćwiczenie · 10 minut, w parach 🕵️</p>
+  <h2>Złap pewne siebie kłamstwo</h2>
+  <div class="body">
+    <ul class="big">
+      <li>Dopracowana analiza AI na małym zbiorze danych. <b>Trzy podłożone błędy.</b></li>
+      <li>Zła liczba. Zmyślony cytat. Subtelnie odwrócony wniosek.</li>
+      <li>Pytanie na koniec: który błąd przeżył najdłużej — i <b>dlaczego brzmiał dobrze?</b></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-track="core">
+  <p class="kick">Podsumowanie</p>
+  <h2>Weryfikacja sprawia, że Twój podpis coś znaczy</h2>
+  <div class="rowcards" style="grid-template-columns:repeat(3,1fr)">
+    <div class="card"><h3>1️⃣</h3><p>Kalibruj zaufanie per zadanie, nie per narzędzie — macierz.</p></div>
+    <div class="card"><h3>2️⃣</h3><p>Ugruntowuj wszystko. Bez cytatu nie ma twierdzenia.</p></div>
+    <div class="card"><h3>3️⃣</h3><p>AI generuje. Ty weryfikujesz. Ty odpowiadasz.</p></div>
+  </div>
+  <div class="foot">Dalej — Moduł 4: co się dzieje, gdy weryfikujesz nie akapit, lecz cały rurociąg agentów. (Tak, to już jest prawdziwy zawód. Nie, nie było go w Twoim zakresie obowiązków. Będzie.)</div>
+</section>
+
+<footer class="help">← → nawigacja · wybierz ścieżkę u góry, by dopasować talię · Ctrl/Cmd+P = wydruk</footer>
+<script>
+const slides=[...document.querySelectorAll('.slide')];let track='all',i=0;
+const vis=()=>slides.filter(s=>{const t=s.dataset.track;return t==='core'||track==='all'||t===track;});
+function show(n){const v=vis();i=Math.max(0,Math.min(n,v.length-1));slides.forEach(s=>s.classList.remove('on'));v[i].classList.add('on');document.getElementById('ctr').textContent=(i+1)+' / '+v.length;history.replaceState(null,'','#'+(i+1));}
+document.querySelectorAll('.tracks button').forEach(b=>b.onclick=()=>{track=b.dataset.set;document.querySelectorAll('.tracks button').forEach(x=>x.classList.toggle('on',x===b));show(i);});
+addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();show(i+1);}else if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();show(i-1);}else if(e.key==='Home')show(0);else if(e.key==='End')show(1e4);});
+addEventListener('click',e=>{if(e.target.closest('.hud'))return;show(e.clientX>innerWidth/2?i+1:i-1);});
+function fit(){document.documentElement.style.setProperty('--s',Math.min(innerWidth/1330,(innerHeight-70)/740));}
+addEventListener('resize',fit);fit();
+const wf=document.getElementById('wf');if(wf){for(let k=0;k<100;k++){const d=document.createElement('i');if(k<31)d.className='b';wf.appendChild(d);}}
+show((parseInt(location.hash.slice(1))||1)-1);
+</script>
+</body></html>

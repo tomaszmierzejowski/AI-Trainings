@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI-Mindset · Moduł 2 — Przeprogramowanie codziennej pracy</title>
+<style>
+:root{--pg:#f9f9f7;--sf:#fcfcfb;--ink:#0b0b0b;--ink2:#52514e;--mut:#898781;--hair:#e1e0d9;--bd:rgba(11,11,11,.10);
+--acc:#2a78d6;--accT:#1c5cab;--s:1}
+*{box-sizing:border-box}html,body{margin:0;height:100%}
+body{background:var(--pg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;overflow:hidden}
+.hud{position:fixed;top:0;left:0;right:0;height:48px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;font-size:13px;color:var(--ink2);z-index:10}
+.hud .brand b{color:var(--ink)}
+.tracks{display:flex;gap:6px}
+.tracks button{font:inherit;font-size:12.5px;padding:5px 14px;border-radius:999px;border:1px solid var(--hair);background:var(--sf);color:var(--ink2);cursor:pointer}
+.tracks button.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.help{position:fixed;bottom:10px;left:0;right:0;text-align:center;font-size:12px;color:var(--mut);z-index:10}
+.slide{display:none;position:fixed;top:50%;left:50%;width:1280px;height:720px;margin-top:8px;transform:translate(-50%,-50%) scale(var(--s));
+background:var(--sf);border:1px solid var(--bd);border-radius:14px;padding:64px 84px;flex-direction:column;box-shadow:0 14px 44px rgba(11,11,11,.07)}
+.slide.on{display:flex}
+.slide[data-track="nonit"]::before,.slide[data-track="it"]::before{position:absolute;top:22px;right:26px;font-size:11.5px;font-weight:700;letter-spacing:.08em;padding:4px 12px;border-radius:999px}
+.slide[data-track="nonit"]::before{content:"ŚCIEŻKA BIZNES";color:#0c5c40;background:rgba(27,175,122,.14)}
+.slide[data-track="it"]::before{content:"ŚCIEŻKA IT / SOFTWARE";color:#3a2d86;background:rgba(74,58,167,.12)}
+.kick{font-size:15px;font-weight:700;letter-spacing:.12em;color:var(--accT);text-transform:uppercase;margin:0 0 14px}
+h1{font-size:56px;line-height:1.1;margin:0 0 18px;letter-spacing:-.015em}
+h2{font-size:41px;line-height:1.12;margin:0 0 20px;letter-spacing:-.01em}
+.lead{font-size:23px;color:var(--ink2);line-height:1.45;margin:0;max-width:1000px}
+.one{flex:1;display:flex;align-items:center}.one p{font-size:52px;line-height:1.18;font-weight:700;margin:0;letter-spacing:-.015em;max-width:1050px}
+.body{flex:1;display:flex;flex-direction:column;justify-content:center}
+ul.big{font-size:23px;line-height:1.55;margin:0;padding-left:26px}ul.big li{margin:10px 0}ul.big li::marker{color:var(--acc)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:30px;flex:1;align-content:center}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:8px}
+.tile{border:1px solid var(--hair);border-radius:12px;padding:20px 22px;background:#fff}
+.tile .num{font-size:48px;font-weight:750;letter-spacing:-.02em;line-height:1}
+.tile .lab{font-size:15px;color:var(--ink2);margin-top:9px;line-height:1.4}
+.badge{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.08em;padding:4px 12px;border-radius:6px;vertical-align:middle}
+.badge.v{color:#006300;background:rgba(12,163,12,.12)}
+.card{border:1px solid var(--hair);border-radius:12px;padding:22px 24px;background:#fff}
+.card h3{margin:0 0 8px;font-size:20px}.card p{margin:0;font-size:17px;color:var(--ink2);line-height:1.5}
+.rowcards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;flex:1;align-content:center}
+.foot{margin-top:auto;padding-top:16px;border-top:1px solid var(--hair);font-size:16.5px;color:var(--ink2)}
+table.map{width:100%;border-collapse:collapse;font-size:19px;margin-top:4px}
+table.map th{text-align:left;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);padding:10px 14px;border-bottom:2px solid var(--hair)}
+table.map td{padding:14px;border-bottom:1px solid var(--hair);vertical-align:top;line-height:1.4}
+table.map td:first-child{font-weight:700;white-space:nowrap}
+.ob{display:grid;grid-template-columns:1fr 56px 1fr;gap:0;align-items:stretch;margin-top:6px}
+.ob .o,.ob .n{border-radius:12px;padding:22px 24px;font-size:20px;line-height:1.45}
+.ob .o{background:rgba(82,81,78,.07);color:var(--ink2)}
+.ob .n{background:rgba(42,120,214,.09);border:1.5px solid var(--acc)}
+.ob .a{display:flex;align-items:center;justify-content:center;font-size:24px;color:var(--mut)}
+.prompt{background:#0b0b0b;color:#e8e8e4;border-radius:12px;padding:20px 24px;font-family:ui-monospace,Consolas,monospace;font-size:17px;line-height:1.55;white-space:pre-wrap}
+.prompt b{color:#7db6f0;font-weight:700}
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:20px;flex:1;align-content:center}
+.tree{display:flex;flex-direction:column;gap:12px;flex:1;justify-content:center}
+.tree .q{display:grid;grid-template-columns:400px 1fr;gap:16px;align-items:center}
+.tree .ask{font-size:21px;font-weight:700}
+.tree .ans{border:1px solid var(--hair);background:#fff;border-radius:10px;padding:13px 18px;font-size:19px}
+.tree .ans b{color:var(--accT)}
+.flow{display:flex;gap:10px;align-items:center;margin-top:14px;flex-wrap:wrap}
+.flow .st{background:rgba(42,120,214,.09);border:1px solid var(--acc);border-radius:999px;padding:8px 18px;font-size:17px;font-weight:650}
+.flow .ar{color:var(--mut);font-size:18px}
+@media print{body{overflow:visible}.hud,.help{display:none}.slide{display:flex;position:static;transform:none;width:1280px;height:720px;margin:8mm auto;page-break-after:always}}
+</style></head>
+<body>
+<header class="hud">
+  <div class="brand"><b>AI-Mindset</b> · Moduł 2 — Przeprogramowanie codziennej pracy</div>
+  <div class="tracks"><button class="on" data-set="all">Wszystkie</button><button data-set="nonit">Biznes</button><button data-set="it">IT / Software</button></div>
+  <div class="counter" id="ctr">1 / 25</div>
+</header>
+
+<!-- 1 -->
+<section class="slide" data-track="core">
+  <p class="kick">AI-Mindset · Moduł 2 z 5</p>
+  <div class="body">
+    <h1>Przeprogramowanie<br>codziennej pracy</h1>
+    <p class="lead">Cztery narzędzia. Cztery nawyki. Jedna zasada: <b>AI to Twój pierwszy krok.</b></p>
+  </div>
+  <div class="foot">Wczoraj diagnoza. Dziś okablowanie na nowo.</div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-track="core">
+  <p class="kick">Zasada</p>
+  <h2>Zmieniamy kolejność, nie skrzynkę z narzędziami</h2>
+  <div class="ob">
+    <div class="o"><b>Stare:</b> zadanie → robisz po staremu → (czasem) AI poleruje wynik</div>
+    <div class="a">→</div>
+    <div class="n"><b>Nowe:</b> zadanie → pierwszy szkic / pierwsza odpowiedź od AI → <b>Twoja ocena</b> → gotowe</div>
+  </div>
+  <div class="foot">Nie dokładamy narzędzi do Twojego dnia. Zmieniamy kolejność Twojego dnia.</div>
+</section>
+
+<!-- 2b -->
+<section class="slide" data-track="core">
+  <p class="kick">Poszarpana granica &nbsp;<span class="badge v" style="color:#1c5cab;background:rgba(42,120,214,.12)">BADANIE — Dell’Acqua i in., 2023 (BCG, 758 konsultantów)</span></p>
+  <h2>AI ma granicę możliwości — i jest poszarpana</h2>
+  <div class="tiles">
+    <div class="tile"><div class="num">+40%</div><div class="lab">jakości i +25% tempa <b>wewnątrz</b> granicy (szkice, synteza, pomysły)</div></div>
+    <div class="tile"><div class="num">−19 p.p.</div><div class="lab">trafności <b>poza</b> granicą — dopracowana, pewna siebie, błędna odpowiedź</div></div>
+    <div class="tile"><div class="num">+43%</div><div class="lab">zysku u słabszej połowy — AI podnosi podłogę szybciej niż sufit</div></div>
+  </div>
+  <div class="foot">Wniosek dnia: znajomość <b>kształtu granicy</b> to umiejętność — i właśnie jej uczą te cztery nawyki. Pierwszy krok wszędzie; podpis tylko tam, gdzie zweryfikowałeś.</div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-track="core">
+  <p class="kick">Antywzorzec</p>
+  <h2>Dziesięć narzędzi i zero nawyków<br>to gorzej niż jedno narzędzie i jeden nawyk</h2>
+  <div class="body"><p class="lead">Rozrost narzędzi = dłubanie, zmęczenie decyzyjne i nic w poniedziałek.<br><br><b>Zasada dnia:</b> wychodzisz z jednym nawykiem na narzędzie — maksymalnie cztery, i tylko dla narzędzi, które pasują do <i>Twojej</i> pracy.</p></div>
+  <div class="foot">Nikt jeszcze nie dostał awansu za rekord otwartych zakładek z AI.</div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-track="core">
+  <p class="kick">Mapa</p>
+  <h2>Cztery narzędzia, cztery zadania</h2>
+  <table class="map">
+    <tr><th>Narzędzie</th><th>Rola w Twoim dniu</th><th>Wyzwalacz pierwszego kroku</th></tr>
+    <tr><td>💬 Asystent<br><span style="font-weight:400;font-size:15px;color:var(--mut)">Claude / ChatGPT</span></td><td>Partner do myślenia: szkice, analiza, długie dokumenty</td><td>„Muszę napisać / zdecydować / przeanalizować”</td></tr>
+    <tr><td>🛠️ Cursor</td><td>Budowanie: kod z pełnym kontekstem projektu</td><td>„Muszę zmienić lub zrozumieć kod”</td></tr>
+    <tr><td>📚 NotebookLM</td><td>Nauka: synteza <b>Twoich</b> źródeł, z cytatami</td><td>„Muszę ogarnąć ten stos dokumentów”</td></tr>
+    <tr><td>🎬 Gemini</td><td>Skala i multimedia: wideo, spotkania, ogromne pliki, Workspace</td><td>„To nie jest tekst — albo jest gigantyczne”</td></tr>
+  </table>
+  <div class="foot">Pracujecie na ChatGPT? Zostańcie — nawyki się przenoszą. Jedno płatne narzędzie wystarcza na start: produktem są nawyki, nie subskrypcje.</div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-track="core">
+  <p class="kick">Nawyk 1 — promptowanie to zachowanie, nie sztuczka</p>
+  <h2>R · Z · F</h2>
+  <div class="rowcards" style="grid-template-columns:repeat(3,1fr)">
+    <div class="card"><h3>Rola</h3><p>„Jesteś analitykiem przetargów raportującym do zarządu…”</p></div>
+    <div class="card"><h3>Zadanie</h3><p>„…wskaż pięć wymagań, których dziś nie spełniamy…”</p></div>
+    <div class="card"><h3>Format</h3><p>„…jako tabelę: wymaganie, luka, cytat-dowód.”</p></div>
+  </div>
+  <div class="foot">Najbardziej opłacalny nawyk tego kursu. Jedyny schemat promptowania, którego uczymy — jeden ćwiczony bije pięć podziwianych.</div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-track="core">
+  <p class="kick">R·Z·F — przed / po (na żywo)</p>
+  <div class="vs">
+    <div>
+      <p style="font-size:14px;letter-spacing:.08em;color:var(--mut);font-weight:700">LENIWIE</p>
+      <div class="prompt">streść ten dokument</div>
+    </div>
+    <div>
+      <p style="font-size:14px;letter-spacing:.08em;color:var(--mut);font-weight:700">R·Z·F</p>
+      <div class="prompt"><b>Jesteś</b> audytorem ryzyka raportującym do CFO.
+<b>Wskaż</b> pięć największych ryzyk finansowych
+z tego dokumentu.
+<b>Dostarcz jako</b> tabelę: ryzyko,
+prawdopodobieństwo, cytat-dowód.</div>
+    </div>
+  </div>
+  <div class="foot">Różnicę zobaczycie na żywo — ten sam dokument, oba prompty. Bez wymyślonych procentów; dowodem są Wasze oczy.</div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-track="core">
+  <p class="kick">Nawyk 2</p>
+  <h2>Iteruj. Nie losuj od nowa.</h2>
+  <div class="body">
+    <ul class="big">
+      <li>Doprecyzuj: <i>„krócej · bardziej formalnie · dodaj wątek compliance”</i> — zamiast rzucać kością od nowa.</li>
+      <li>Duże prośby tnij na kroki — jak dla człowieka.</li>
+      <li>Traktuj jak genialnego nowego kolegę w pierwszym dniu pracy: <b>doprecyzuj brief, nie zwalniaj.</b> <span style="color:var(--mut)">(Zwolnienie nowego za pierwszy szkic? HR prosi na słówko.)</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-track="core">
+  <p class="kick">Narzędzie 1 · 💬 Asystent (Claude / ChatGPT)</p>
+  <h2>Partner do myślenia</h2>
+  <div class="ob">
+    <div class="o"><b>Stare:</b> gapienie się w pustą kartkę</div>
+    <div class="a">→</div>
+    <div class="n"><b>Nowe:</b> przesłuchiwanie szkicu</div>
+  </div>
+  <ul class="big" style="margin-top:24px">
+    <li>Pierwsze szkice wszystkiego · „wytłumacz mi ten dokument” · adwokat diabła dla Twojego planu · analiza wieloetapowa.</li>
+  </ul>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-track="core">
+  <p class="kick">Demo · 5 minut</p>
+  <h2>Chaotyczna notatka → rejestr decyzji</h2>
+  <div class="flow">
+    <span class="st">📋 transkrypcja (fikcyjna)</span><span class="ar">→</span>
+    <span class="st">R·Z·F</span><span class="ar">→</span>
+    <span class="st">decyzje + zadania + ryzyka</span><span class="ar">→</span>
+    <span class="st">1 poprawka</span><span class="ar">→</span>
+    <span class="st">⏱️ ~60 sekund</span>
+  </div>
+  <div class="body" style="flex:0;margin-top:26px">
+    <ul class="big"><li>Jedna runda doprecyzowania — na żywo, żebyście zobaczyli nawyk 2, a nie tylko o nim usłyszeli.</li></ul>
+  </div>
+  <div class="foot">Zwróćcie uwagę, czego <b>nie</b> wkleiłem: nazw klientów, prawdziwych danych osobowych. Ten odruch to Moduł 3.</div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-track="nonit">
+  <p class="kick">🎯 Workflow · szukanie przetargów publicznych</p>
+  <h2>Z przeglądania portali — na przesłuchiwanie portali</h2>
+  <div class="ob">
+    <div class="o"><b>Stare:</b> ręczne skanowanie portali; skimming PDF-ów; nadzieja, że nic nie umknęło</div>
+    <div class="a">→</div>
+    <div class="n"><b>Nowe:</b> asystent szuka i robi shortlistę → Ty weryfikujesz każdy termin, budżet i warunek udziału <b>u źródła</b></div>
+  </div>
+  <ul class="big" style="margin-top:22px">
+    <li>R·Z·F: <i>„Jesteś scoutem przetargowym. Znajdź otwarte przetargi publiczne na [usługi eventowe] w [region]. Tabela: tytuł, zamawiający, termin, budżet, link.”</i></li>
+    <li>Kolumna z linkiem jest <b>obowiązkowa</b> — shortlista bez źródeł to plotka z ładnym formatowaniem.</li>
+  </ul>
+  <div class="foot">Terminy, kwoty, warunki: weryfikacja zanim cokolwiek wejdzie do pipeline’u — Moduł 3 robi z tego 60-sekundowy nawyk.</div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-track="nonit">
+  <p class="kick">📄 Workflow · dokumenty i oferty</p>
+  <h2>Oferty, odpowiedzi na przetargi, raporty — AI-first</h2>
+  <div class="flow">
+    <span class="st">1 · wyciągnij wymagania</span><span class="ar">→</span>
+    <span class="st">2 · pisz pod checklistę</span><span class="ar">→</span>
+    <span class="st">3 · przesłuchaj własny szkic</span>
+  </div>
+  <div class="body" style="flex:0;margin-top:24px">
+    <ul class="big">
+      <li><b>Zanim napiszesz:</b> „Wypisz każde wymaganie z tego przetargu jako checklistę, ze stroną źródłową.”</li>
+      <li><b>Szkic pod checklistę:</b> Twój szablon + R·Z·F → pierwsza wersja w minutach, nie dniach.</li>
+      <li><b>Adwokat kupującego:</b> „Jesteś oceniającym po stronie zamawiającego. Oceń tę ofertę wg checklisty — gdzie tracimy punkty?”</li>
+    </ul>
+  </div>
+  <div class="foot">Checklista zgodności to specyfikacja — Moduł 4 zrobi z tego odruch wielokrotnego użytku.</div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-track="nonit">
+  <p class="kick">🎪 Workflow · materiały eventowe</p>
+  <h2>Agendy, decki sponsorskie, social — jeden głos</h2>
+  <div class="body">
+    <ul class="big">
+      <li><b>Stała instrukcja:</b> głos marki, odbiorcy i zakazane frazy zapisane <i>raz</i> (custom instructions / projekt) — każdy szkic je dziedziczy.</li>
+      <li><b>Jeden brief → wiele materiałów:</b> one-pager eventu → agenda, pitch sponsorski, trzy posty, skrypt prowadzącego — każde jako doprecyzowanie, nie restart.</li>
+      <li><b>„Czy to nie będzie brzmieć generycznie?”</b> Bez briefu AI produkuje beż — słuszna obawa. Lek: Twój plik głosu marki + Twój gust jako ostatnia bramka. AI poszerza opcje; <b>Ty wciąż wybierasz</b>. <span style="color:var(--mut)">(~200 wariantów w Project Terrain. Zbudowano jeden.)</span></li>
+    </ul>
+  </div>
+  <div class="foot">Stała instrukcja to Twoja pierwsza specyfikacja — zapamiętaj to na Moduł 4.</div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-track="it">
+  <p class="kick">Narzędzie 2 · 🛠️ Cursor</p>
+  <h2>Rozmowa z kodem</h2>
+  <div class="ob">
+    <div class="o"><b>Stare:</b> grep + wiedza plemienna + kawa</div>
+    <div class="a">→</div>
+    <div class="n"><b>Nowe:</b> pytasz codebase wprost — <i>zanim</i> napiszesz kod</div>
+  </div>
+  <ul class="big" style="margin-top:22px">
+    <li>Najpierw Q&amp;A z repozytorium · edycje inline · tryb agenta do zmian wieloplikowych o jasnym zakresie.</li>
+  </ul>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-track="it">
+  <p class="kick">Zasada pracy &nbsp;<span class="badge v">ZWERYFIKOWANE — kontekst</span></p>
+  <h2>Im większa zmiana, tym krótsza smycz</h2>
+  <div class="cols">
+    <div class="card"><h3>Edycja inline</h3><p>Przeglądasz każdy fragment. Każdy.</p></div>
+    <div class="card"><h3>Tryb agenta</h3><p>Cały diff czytasz jak wrogi pull request od nieznanego kontrybutora.</p></div>
+  </div>
+  <div class="foot">Ten wzorzec, zindustrializowany: <b>Project Velocity</b> — 20 aplikacji legacy zrozumianych w 3 tygodnie, 4–8× szybciej, 187 endpointów zmapowanych. (Z bramkami weryfikacji — Moduł 4 pokaże maszynę.)</div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-track="core">
+  <p class="kick">Narzędzie 3 · 📚 NotebookLM</p>
+  <h2>Nauka ugruntowana w źródłach</h2>
+  <div class="ob">
+    <div class="o"><b>Stare:</b> cmentarzysko PDF-ów, których nigdy nie przeczytasz</div>
+    <div class="a">→</div>
+    <div class="n"><b>Nowe:</b> notatnik, który odpowiada <b>tylko z Twoich źródeł</b> — z cytatami</div>
+  </div>
+  <ul class="big" style="margin-top:22px">
+    <li>Wdrożenie w nową domenę, klienta czy paczkę przetargową · audio-przegląd na dojazd · „w czym moje źródła się nie zgadzają?”</li>
+  </ul>
+</section>
+
+<!-- 16 -->
+<section class="slide" data-track="core">
+  <p class="kick">Dlaczego to ważne</p>
+  <h2>„Fakty ponad opinie” jako produkt</h2>
+  <div class="body">
+    <ul class="big">
+      <li>Odpowiada z <b>Twoich wgranych źródeł</b> i cytuje dokładny fragment.</li>
+      <li>Powierzchnia halucynacji drastycznie mniejsza <b>z konstrukcji</b>.</li>
+      <li>Uczciwe zastrzeżenie: cytaty <b>zmniejszają</b> pracę weryfikacyjną. Nie kasują jej.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 17 -->
+<section class="slide" data-track="core">
+  <p class="kick">Narzędzie 4 · 🎬 Gemini</p>
+  <h2>Skala i multimedia</h2>
+  <div class="ob">
+    <div class="o"><b>Stare:</b> „Obejrzę to 90-minutowe nagranie później” (nigdy)</div>
+    <div class="a">→</div>
+    <div class="n"><b>Nowe:</b> przesłuchujesz wideo / spotkanie / arkusz bezpośrednio</div>
+  </div>
+  <ul class="big" style="margin-top:22px">
+    <li>Ogromne pliki (wielki kontekst) · wideo i audio · Google Workspace (Docs, Sheets, Meet).</li>
+  </ul>
+</section>
+
+<!-- 18 -->
+<section class="slide" data-track="core">
+  <p class="kick">Wybór bez paraliżu</p>
+  <h2>Drzewo decyzyjne</h2>
+  <div class="tree">
+    <div class="q"><span class="ask">To kod?</span><span class="ans">→ <b>Cursor</b> <span style="color:var(--mut);font-size:15px">(ścieżka IT)</span></span></div>
+    <div class="q"><span class="ask">Stos <i>Twoich</i> dokumentów?</span><span class="ans">→ <b>NotebookLM</b></span></div>
+    <div class="q"><span class="ask">Wideo / audio / gigantyczne?</span><span class="ans">→ <b>Gemini</b></span></div>
+    <div class="q"><span class="ask">Myślenie, pisanie, decyzja?</span><span class="ans">→ <b>Asystent</b> (Claude / ChatGPT)</span></div>
+  </div>
+  <div class="foot">W razie wątpliwości: zacznij w asystencie, przenieś się, gdy specjalista na to zasłuży. Domyślna ścieżka bije debatę.</div>
+</section>
+
+<!-- 19 -->
+<section class="slide" data-track="core">
+  <p class="kick">🎧 Dowód samodzielności &nbsp;<span class="badge v">ZWERYFIKOWANE</span></p>
+  <h2>Lidka — wędka działa u nie-inżynierów</h2>
+  <div class="body">
+    <ul class="big">
+      <li>Wydawczyni bez zaplecza technicznego potrzebowała sklepu z audiobookami dla dzieci — polskie płatności i logistyka (Tpay + InPost).</li>
+      <li>Zbudowane w <b>dni</b>. Fakt decydujący: <b>prowadzi go sama, w pełni samodzielnie.</b></li>
+    </ul>
+  </div>
+  <div class="foot">Produktem była niezależność, nie zależność. Po to jest wędka.</div>
+</section>
+
+<!-- 20 -->
+<section class="slide" data-track="it">
+  <p class="kick">Dowód dyscypliny &nbsp;<span class="badge v">ZWERYFIKOWANE</span></p>
+  <h2>AI-first ≠ bieda w testach</h2>
+  <div class="tiles">
+    <div class="tile"><div class="num">~600</div><div class="lab">testów automatycznych — PresoGen AI, komercyjna aplikacja desktop, 3 dostawców LLM</div></div>
+    <div class="tile"><div class="num">~657</div><div class="lab">testów automatycznych — backend Mana Menu, 37 kontrolerów</div></div>
+    <div class="tile"><div class="num">0</div><div class="lab">kompromisów między tempem a rygorem — gdy weryfikacja jest nawykiem</div></div>
+  </div>
+</section>
+
+<!-- 21 -->
+<section class="slide" data-track="core">
+  <p class="kick">Brief do labu</p>
+  <h2>Jedno prawdziwe zadanie. Twoje.</h2>
+  <div class="cols">
+    <div class="card"><h3>Ścieżka A — techniczna</h3><p>Cursor na przygotowanym repo legacy + asystent do opisu wyników.</p></div>
+    <div class="card"><h3>Ścieżka B — biznesowa</h3><p>NotebookLM na przygotowanych dokumentach (albo paczce przetargowej) + asystent/Gemini do materiału końcowego.</p></div>
+  </div>
+  <div class="foot"><b>Sukces =</b> jeden gotowy artefakt + ślad promptów, który do niego doprowadził. Zasada danych: tylko fikcyjne lub zanonimizowane.</div>
+</section>
+
+<!-- 22 -->
+<section class="slide" data-track="core">
+  <p class="kick">Lab · ~90 minut</p>
+  <h2>Do roboty</h2>
+  <div class="rowcards" style="grid-template-columns:repeat(3,1fr)">
+    <div class="card"><h3>R · Z · F</h3><p>Rola — Zadanie — Format, w każdym prompcie.</p></div>
+    <div class="card"><h3>Iteruj</h3><p>Doprecyzowuj, nie losuj. Minimum jedna runda.</p></div>
+    <div class="card"><h3>Dokończ</h3><p>Jeden kompletny artefakt bije trzy fragmenty.</p></div>
+  </div>
+</section>
+
+<!-- 23 -->
+<section class="slide" data-track="core">
+  <p class="kick">Omówienie</p>
+  <h2>Pokaż zachowanie, nie wynik</h2>
+  <div class="body">
+    <ul class="big">
+      <li>Zadanie — jedno zdanie.</li>
+      <li>Twój pierwszy prompt — dosłownie.</li>
+      <li>Poprawka, która zrobiła różnicę — dosłownie.</li>
+      <li>Jedna rzecz, którą musiałeś <b>skorygować</b> — i jak ją wyłapałeś.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 24 -->
+<section class="slide" data-track="core">
+  <div class="one"><p>AI generuje.<br>Ty weryfikujesz.<br><span style="color:var(--accT)">Ty odpowiadasz.</span></p></div>
+  <div class="foot">Każdy dzisiejszy artefakt łączy jedno: podpisał go człowiek. Moduł 3 sprawi, że ten podpis będzie coś wart także na skali.</div>
+</section>
+
+<!-- 25 -->
+<section class="slide" data-track="core">
+  <p class="kick">Zanim wyjdziesz</p>
+  <h2>Kontrakt nawyku</h2>
+  <div class="body">
+    <ul class="big">
+      <li><b>Narzędzie</b> → <b>wyzwalacz</b> (istniejące wydarzenie w Twoim dniu) → <b>stare zachowanie, które zastępuje</b> → <b>pierwszy slot w kalendarzu w tym tygodniu</b>.</li>
+      <li>Wymień się kontraktem z partnerem — to Twój partner rozliczający do Modułu 5.</li>
+    </ul>
+  </div>
+  <div class="foot">Dziś cztery narzędzia. Na rynku są dziesiątki — i każde z nich nagradza te same cztery nawyki. Dlatego uczyliśmy nawyków.</div>
+</section>
+
+<footer class="help">← → nawigacja · wybierz ścieżkę u góry, by dopasować talię · Ctrl/Cmd+P = wydruk</footer>
+<script>
+const slides=[...document.querySelectorAll('.slide')];let track='all',i=0;
+const vis=()=>slides.filter(s=>{const t=s.dataset.track;return t==='core'||track==='all'||t===track;});
+function show(n){const v=vis();i=Math.max(0,Math.min(n,v.length-1));slides.forEach(s=>s.classList.remove('on'));v[i].classList.add('on');document.getElementById('ctr').textContent=(i+1)+' / '+v.length;history.replaceState(null,'','#'+(i+1));}
+document.querySelectorAll('.tracks button').forEach(b=>b.onclick=()=>{track=b.dataset.set;document.querySelectorAll('.tracks button').forEach(x=>x.classList.toggle('on',x===b));show(i);});
+addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();show(i+1);}else if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();show(i-1);}else if(e.key==='Home')show(0);else if(e.key==='End')show(1e4);});
+addEventListener('click',e=>{if(e.target.closest('.hud'))return;show(e.clientX>innerWidth/2?i+1:i-1);});
+function fit(){document.documentElement.style.setProperty('--s',Math.min(innerWidth/1330,(innerHeight-70)/740));}
+addEventListener('resize',fit);fit();show((parseInt(location.hash.slice(1))||1)-1);
+</script>
+</body></html>

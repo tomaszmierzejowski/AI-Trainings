@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI-Mindset · Module 4 — From Writing Code to Writing Specifications</title>
+<style>
+:root{--pg:#f9f9f7;--sf:#fcfcfb;--ink:#0b0b0b;--ink2:#52514e;--mut:#898781;--hair:#e1e0d9;--bd:rgba(11,11,11,.10);
+--acc:#2a78d6;--accT:#1c5cab;--s:1}
+*{box-sizing:border-box}html,body{margin:0;height:100%}
+body{background:var(--pg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;overflow:hidden}
+.hud{position:fixed;top:0;left:0;right:0;height:48px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;font-size:13px;color:var(--ink2);z-index:10}
+.hud .brand b{color:var(--ink)}
+.tracks{display:flex;gap:6px}
+.tracks button{font:inherit;font-size:12.5px;padding:5px 14px;border-radius:999px;border:1px solid var(--hair);background:var(--sf);color:var(--ink2);cursor:pointer}
+.tracks button.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.help{position:fixed;bottom:10px;left:0;right:0;text-align:center;font-size:12px;color:var(--mut);z-index:10}
+.slide{display:none;position:fixed;top:50%;left:50%;width:1280px;height:720px;margin-top:8px;transform:translate(-50%,-50%) scale(var(--s));
+background:var(--sf);border:1px solid var(--bd);border-radius:14px;padding:66px 84px;flex-direction:column;box-shadow:0 14px 44px rgba(11,11,11,.07)}
+.slide.on{display:flex}
+.slide[data-track="nonit"]::before,.slide[data-track="it"]::before{position:absolute;top:22px;right:26px;font-size:11.5px;font-weight:700;letter-spacing:.08em;padding:4px 12px;border-radius:999px}
+.slide[data-track="nonit"]::before{content:"NON-IT TRACK";color:#0c5c40;background:rgba(27,175,122,.14)}
+.slide[data-track="it"]::before{content:"IT / SOFTWARE TRACK";color:#3a2d86;background:rgba(74,58,167,.12)}
+.kick{font-size:15px;font-weight:700;letter-spacing:.14em;color:var(--accT);text-transform:uppercase;margin:0 0 14px}
+h1{font-size:56px;line-height:1.08;margin:0 0 18px;letter-spacing:-.015em}
+h2{font-size:40px;line-height:1.12;margin:0 0 22px;letter-spacing:-.01em}
+.lead{font-size:24px;color:var(--ink2);line-height:1.45;margin:0;max-width:1000px}
+.one{flex:1;display:flex;align-items:center}.one p{font-size:50px;line-height:1.18;font-weight:700;margin:0;letter-spacing:-.015em;max-width:1060px}
+.body{flex:1;display:flex;flex-direction:column;justify-content:center}
+ul.big{font-size:23px;line-height:1.55;margin:0;padding-left:26px}ul.big li{margin:10px 0}ul.big li::marker{color:var(--acc)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:30px;flex:1;align-content:center}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:8px}
+.tile{border:1px solid var(--hair);border-radius:12px;padding:22px 24px;background:#fff}
+.tile .num{font-size:50px;font-weight:750;letter-spacing:-.02em;line-height:1}
+.tile .lab{font-size:15.5px;color:var(--ink2);margin-top:10px;line-height:1.4}
+.badge{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.09em;padding:4px 12px;border-radius:6px;vertical-align:middle}
+.badge.v{color:#006300;background:rgba(12,163,12,.12)}.badge.s{color:#1c5cab;background:rgba(42,120,214,.12)}
+.badge.f{color:#52514e;background:rgba(82,81,78,.12)}.badge.o{color:#3a2d86;background:rgba(74,58,167,.12)}
+.card{border:1px solid var(--hair);border-radius:12px;padding:22px 24px;background:#fff}
+.card h3{margin:0 0 8px;font-size:20px}.card p{margin:0;font-size:17px;color:var(--ink2);line-height:1.5}
+.rowcards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;flex:1;align-content:center}
+.foot{margin-top:auto;padding-top:16px;border-top:1px solid var(--hair);font-size:16.5px;color:var(--ink2)}
+q.pull{display:block;font-size:29px;line-height:1.4;font-style:italic;quotes:"“" "”";max-width:1000px}
+.spec{background:#0b0b0b;color:#e8e8e4;border-radius:12px;padding:20px 26px;font-family:ui-monospace,Consolas,monospace;font-size:15.5px;line-height:1.5;white-space:pre-wrap}
+.spec b{color:#7db6f0;font-weight:700}
+.layers{flex:1;display:flex;flex-direction:column;justify-content:center;gap:8px}
+.lay{border:1px solid var(--hair);border-radius:12px;background:#fff;padding:14px 22px;display:grid;grid-template-columns:230px 1fr;gap:18px;align-items:center}
+.lay .who{font-weight:800;font-size:19px}.lay .what{font-size:17px;color:var(--ink2);line-height:1.4}
+.lay.you{border:2px solid var(--acc)}
+.arrow{text-align:center;color:var(--mut);font-size:17px;line-height:1;padding:1px 0}
+.pipe{flex:1;display:flex;align-items:center;gap:8px}
+.pnode{flex:1;border:1px solid var(--hair);border-radius:12px;background:#fff;padding:18px 14px;text-align:center}
+.pnode h3{margin:0 0 6px;font-size:17.5px}.pnode p{margin:0;font-size:13.5px;color:var(--ink2);line-height:1.35}
+.gate{width:34px;text-align:center;color:var(--accT);font-size:24px;flex:none}
+.gate small{display:block;font-size:9.5px;letter-spacing:.06em;color:var(--mut);margin-top:2px}
+@media print{body{overflow:visible}.hud,.help{display:none}.slide{display:flex;position:static;transform:none;width:1280px;height:720px;margin:8mm auto;page-break-after:always}}
+</style></head>
+<body>
+<header class="hud">
+  <div class="brand"><b>AI-Mindset</b> · Module 4 — From Writing Code to Writing Specifications</div>
+  <div class="tracks"><button class="on" data-set="all">All</button><button data-set="nonit">Non-IT</button><button data-set="it">IT / Software</button></div>
+  <div class="counter" id="ctr">1 / 22</div>
+</header>
+
+<!-- 1 -->
+<section class="slide" data-track="core">
+  <p class="kick">AI-Mindset · Module 4 of 5</p>
+  <div class="body">
+    <h1>From Writing Code<br>to Writing Specifications</h1>
+    <p class="lead">The shift from manual production to specification design and agent orchestration — for code <i>and</i> for documents.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-track="core">
+  <p class="kick">The provocation &nbsp;<span class="badge o">OPINION — clearly badged</span></p>
+  <div class="one"><p>Production is becoming a commodity.<br><span style="color:var(--accT)">The specification is becoming the product.</span></p></div>
+  <div class="foot">Code, copy, decks, briefs — the typing is cheap now. This slide is a position, not a finding. By the end you’ll have the evidence to argue with it — or with me.</div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-track="core">
+  <p class="kick">The analogy &nbsp;<span class="badge o">OPINION</span></p>
+  <h2>Gutenberg</h2>
+  <div class="body">
+    <ul class="big">
+      <li>Before print: the scribe’s craft was <b>penmanship</b>.</li>
+      <li>After print: <b>writing</b> mattered more than handwriting.</li>
+      <li>Hand-crafted work : AI-generated work :: illuminated manuscripts : printed books.</li>
+    </ul>
+  </div>
+  <div class="foot">The scribes didn’t disappear. The ones who became <b>authors</b> thrived. (The scribes’ guild was not amused. The publishers were fine.)</div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-track="core">
+  <p class="kick">The durable skills</p>
+  <h2>What actually stays scarce</h2>
+  <div class="rowcards">
+    <div class="card"><h3>Context</h3><p>Knowing what the business actually needs.</p></div>
+    <div class="card"><h3>Judgment</h3><p>Knowing what good looks like.</p></div>
+    <div class="card"><h3>Verification</h3><p>Proving it’s right — Module 3.</p></div>
+    <div class="card"><h3>Orchestration</h3><p>Designing who — or what — does which step.</p></div>
+  </div>
+  <div class="foot">None of these are typing.</div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-track="core">
+  <p class="kick">The role</p>
+  <h2>The orchestrator</h2>
+  <div class="body">
+    <ul class="big">
+      <li><b>Decomposes</b> work into steps an AI can execute.</li>
+      <li><b>Writes the specifications</b> those agents consume.</li>
+      <li><b>Designs the verification gates</b> between steps.</li>
+      <li><b>Owns</b> the result.</li>
+    </ul>
+  </div>
+  <div class="foot">From typist to conductor.</div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-track="core">
+  <p class="kick">The new core skill</p>
+  <h2>A prompt is a request.<br>A specification is a contract.</h2>
+  <div class="rowcards" style="grid-template-columns:repeat(5,1fr)">
+    <div class="card"><h3>Goal</h3><p>One sentence. Two goals = two specs.</p></div>
+    <div class="card"><h3>Constraints</h3><p>What must NOT change.</p></div>
+    <div class="card"><h3>Acceptance criteria</h3><p>Yes/no checks, not vibes.</p></div>
+    <div class="card"><h3>Examples</h3><p>One input→output pair.</p></div>
+    <div class="card"><h3>Non-goals</h3><p>The tempting adjacent thing — forbidden explicitly. Like briefing a contractor. Or a labrador.</p></div>
+  </div>
+  <div class="foot">Everything you’d tell a contractor. Written down. Once.</div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-track="nonit">
+  <p class="kick">Worked example · documents</p>
+  <h2>Spec for a tender-response section</h2>
+  <div class="spec"><b># SPEC:</b> Executive summary for tender [X]
+
+<b>## Goal</b>  One page the CEO can sign unedited.
+<b>## Constraints</b>  Max 400 words · only facts from our reference
+  projects file · no promises we can’t evidence.
+<b>## Acceptance criteria</b>
+  [ ] Every requirement from the buyer’s checklist is addressed
+  [ ] Every number appears verbatim in a source we hold
+  [ ] Reads aloud in under 3 minutes
+<b>## Non-goals</b>  Do not invent partnership names.
+  Do not restate the full company history — 2 lines max.</div>
+  <div class="foot">The buyer’s checklist is the acceptance test. Your Module 2 instinct (“extract requirements first”) — formalized.</div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-track="it">
+  <p class="kick">Worked example · code</p>
+  <h2>Spec for an agent-executed change</h2>
+  <div class="spec"><b># SPEC:</b> Add read-only status endpoint
+
+<b>## Context</b>  Legacy order service; consumers depend on
+  current API behavior.
+<b>## Goal</b>  GET /orders/{id}/status returning cached state.
+<b>## Constraints</b>  Must not touch the public API surface ·
+  no new dependencies · follow existing controller conventions.
+<b>## Acceptance criteria</b>
+  [ ] All existing tests pass
+  [ ] Returns 404 for unknown ids
+  [ ] p95 &lt; 50ms against the seeded fixture
+<b>## Non-goals</b>  No refactor of OrderRepository —
+  tempting, forbidden, separate spec.
+<b>## Verification</b>  `npm test` + the 3 new cases above.</div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-track="core">
+  <p class="kick">Standing specifications · takeaway</p>
+  <h2>Write it once. Every session inherits it.</h2>
+  <div class="cols">
+    <div class="card"><h3>Everyone</h3><p><b>Custom instructions / project memory</b> in your assistant: brand voice, audience, no-go phrases, format defaults. Your Module 2 event-materials habit — made permanent.</p></div>
+    <div class="card"><h3>Engineers <span class="badge o" style="font-size:10px">IT</span></h3><p><b>CLAUDE.md · AGENTS.md · .cursorrules</b> — project conventions, forbidden zones, verify commands. A constitution readable by every agent you’ll ever hire. Templates provided.</p></div>
+  </div>
+  <div class="foot">This is the rod — you’ll adapt it to your own work this week (90-day path, step one).</div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-track="it">
+  <p class="kick">The integration problem</p>
+  <h2>N tools × M systems = N×M custom integrations</h2>
+  <div class="body">
+    <p class="lead" style="margin-bottom:22px">Agents are only as useful as what they can reach. Without standards: the tangle that killed a decade of enterprise integrations. Two open protocols untangle it.</p>
+    <div style="display:flex;gap:56px;align-items:center;justify-content:center">
+      <div style="text-align:center">
+        <svg width="360" height="190" viewBox="0 0 360 190" aria-hidden="true">
+          <g stroke="#c3c2b7" stroke-width="1.6">
+            <line x1="40" y1="25" x2="320" y2="25"/><line x1="40" y1="25" x2="320" y2="75"/><line x1="40" y1="25" x2="320" y2="125"/><line x1="40" y1="25" x2="320" y2="165"/>
+            <line x1="40" y1="75" x2="320" y2="25"/><line x1="40" y1="75" x2="320" y2="75"/><line x1="40" y1="75" x2="320" y2="125"/><line x1="40" y1="75" x2="320" y2="165"/>
+            <line x1="40" y1="125" x2="320" y2="25"/><line x1="40" y1="125" x2="320" y2="75"/><line x1="40" y1="125" x2="320" y2="125"/><line x1="40" y1="125" x2="320" y2="165"/>
+            <line x1="40" y1="165" x2="320" y2="25"/><line x1="40" y1="165" x2="320" y2="75"/><line x1="40" y1="165" x2="320" y2="125"/><line x1="40" y1="165" x2="320" y2="165"/>
+          </g>
+          <g fill="#52514e"><circle cx="40" cy="25" r="9"/><circle cx="40" cy="75" r="9"/><circle cx="40" cy="125" r="9"/><circle cx="40" cy="165" r="9"/></g>
+          <g fill="#898781"><circle cx="320" cy="25" r="9"/><circle cx="320" cy="75" r="9"/><circle cx="320" cy="125" r="9"/><circle cx="320" cy="165" r="9"/></g>
+        </svg>
+        <div style="font-size:15px;color:var(--mut);font-weight:700;letter-spacing:.06em">16 CONNECTORS. 16 THINGS TO BREAK.</div>
+      </div>
+      <div style="text-align:center">
+        <svg width="360" height="190" viewBox="0 0 360 190" aria-hidden="true">
+          <g stroke="#2a78d6" stroke-width="2">
+            <line x1="40" y1="25" x2="168" y2="95"/><line x1="40" y1="75" x2="168" y2="95"/><line x1="40" y1="125" x2="168" y2="95"/><line x1="40" y1="165" x2="168" y2="95"/>
+            <line x1="192" y1="95" x2="320" y2="25"/><line x1="192" y1="95" x2="320" y2="75"/><line x1="192" y1="95" x2="320" y2="125"/><line x1="192" y1="95" x2="320" y2="165"/>
+          </g>
+          <rect x="164" y="55" width="32" height="80" rx="8" fill="#2a78d6"/>
+          <g fill="#52514e"><circle cx="40" cy="25" r="9"/><circle cx="40" cy="75" r="9"/><circle cx="40" cy="125" r="9"/><circle cx="40" cy="165" r="9"/></g>
+          <g fill="#898781"><circle cx="320" cy="25" r="9"/><circle cx="320" cy="75" r="9"/><circle cx="320" cy="125" r="9"/><circle cx="320" cy="165" r="9"/></g>
+        </svg>
+        <div style="font-size:15px;color:var(--accT);font-weight:700;letter-spacing:.06em">ONE PROTOCOL. THE “USB-C MOMENT.”</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-track="it">
+  <p class="kick">Layer 1 &nbsp;<span class="badge s">FACT — public, checkable</span></p>
+  <h2>MCP — Model Context Protocol</h2>
+  <div class="body">
+    <ul class="big">
+      <li>Open standard, introduced by Anthropic (Nov 2024); adopted across major vendors.</li>
+      <li>One protocol connecting AI applications to tools, data, systems — <b>“USB-C for AI.”</b></li>
+      <li>Behaviorally: your agent reads your issue tracker, repo, database — through one standard socket, under <b>least-privilege permissions you grant</b> (Module 3).</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-track="it">
+  <p class="kick">Demo</p>
+  <h2>Grounding, industrialized</h2>
+  <div class="body">
+    <ul class="big">
+      <li>An agent uses an MCP server to query a (fictional) issue tracker.</li>
+      <li>Output: a status report <b>citing real ticket ids</b> — every claim traceable.</li>
+      <li>Same rule as Module 3: no citation, no claim — now enforced by architecture.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-track="it">
+  <p class="kick">Layer 2 &nbsp;<span class="badge s">FACT — public, checkable</span></p>
+  <h2>A2A — Agent2Agent protocol</h2>
+  <div class="body">
+    <ul class="big">
+      <li>Open protocol, announced by Google (Apr 2025); now under Linux Foundation governance.</li>
+      <li>Agents <b>discover and talk to other agents</b>: publish capabilities (“agent card”), exchange tasks, cooperate across vendors.</li>
+      <li><b>MCP gives an agent hands. A2A gives agents colleagues.</b></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-track="it">
+  <p class="kick">The two layers together</p>
+  <h2>You manage the org chart, not the typing</h2>
+  <div class="layers">
+    <div class="lay you"><span class="who">YOU</span><span class="what">Specifier &amp; verifier — writes the contract, owns the result</span></div>
+    <div class="arrow">↓ specification</div>
+    <div class="lay"><span class="who">Orchestrator agent</span><span class="what">Decomposes, delegates, assembles</span></div>
+    <div class="arrow">↓ A2A — agent ↔ agent</div>
+    <div class="lay"><span class="who">Specialist agents</span><span class="what">Analysis · security · compliance · synthesis — each does one thing well</span></div>
+    <div class="arrow">↓ MCP — agent ↔ tools</div>
+    <div class="lay"><span class="who">Systems of record</span><span class="what">Repos · databases · trackers · documents — where truth lives (Module 3)</span></div>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-track="nonit">
+  <p class="kick">What this means outside IT</p>
+  <h2>Agents are coming to office work</h2>
+  <div class="body">
+    <ul class="big">
+      <li>Near-term, realistic: an agent that <b>watches bid portals</b> and files a cited shortlist every morning · an agent that <b>drafts the compliance checklist</b> from every new tender · an agent that <b>assembles event-brief packs</b> in your voice.</li>
+      <li>Every one of them needs exactly what you learned today: a <b>written spec</b> and a <b>human verification gate</b>.</li>
+      <li>You don’t need to build these. You need to be the person who can <b>specify and verify</b> them.</li>
+    </ul>
+  </div>
+  <div class="foot">The orchestrator role is not a programming job. It’s a clarity job.</div>
+</section>
+
+<!-- 16 -->
+<section class="slide" data-track="it">
+  <p class="kick">Not theory &nbsp;<span class="badge v">VERIFIED</span></p>
+  <h2>The discovery pipeline — the machine behind the numbers</h2>
+  <div class="pipe">
+    <div class="pnode"><h3>Ingestion</h3><p>full codebase, no sampling</p></div>
+    <div class="gate">◆<small>GATE</small></div>
+    <div class="pnode"><h3>Semantic analysis</h3><p>business rules, flows</p></div>
+    <div class="gate">◆<small>GATE</small></div>
+    <div class="pnode"><h3>Security scan</h3><p>CVEs, credentials</p></div>
+    <div class="gate">◆<small>GATE</small></div>
+    <div class="pnode"><h3>Compliance</h3><p>mapping &amp; exposure</p></div>
+    <div class="gate">◆<small>GATE</small></div>
+    <div class="pnode"><h3>Synthesis</h3><p>evidence-tagged report</p></div>
+  </div>
+  <div class="foot">Staged specialist agents, human verification gates between stages. You’ve been looking at its output since Module 1: 20 apps / 3 weeks · 4–8× faster · 143 rules @ 94% with 312 evidence tags.</div>
+</section>
+
+<!-- 17 -->
+<section class="slide" data-track="it">
+  <p class="kick">The economics &nbsp;<span class="badge v">VERIFIED</span></p>
+  <h2>Why the orchestrator role exists</h2>
+  <div class="tiles">
+    <div class="tile"><div class="num">3 wks</div><div class="lab">orchestrated discovery — vs. ~14 weeks traditional, same scope</div></div>
+    <div class="tile"><div class="num">≈78%</div><div class="lab">cost reduction on the reference engagement</div></div>
+    <div class="tile"><div class="num">4–8×</div><div class="lab">faster application understanding (Project Velocity)</div></div>
+  </div>
+  <div class="foot">The pipeline doesn’t run itself. Someone specified it, gated it, and debugged it. That someone is the new senior role.</div>
+</section>
+
+<!-- 18 -->
+<section class="slide" data-track="it">
+  <p class="kick">Honesty slide — field-observed</p>
+  <h2>Where orchestration fails</h2>
+  <div class="rowcards">
+    <div class="card"><h3>Error propagation</h3><p>One bad extraction quietly poisons everything downstream — <i>why gates sit between stages, not just at the end.</i></p></div>
+    <div class="card"><h3>Context overflow</h3><p>Very large systems force deliberate decomposition.</p></div>
+    <div class="card"><h3>Black-box output</h3><p>Stakeholders ignore what they can’t audit — <i>the reason evidence tagging exists.</i></p></div>
+    <div class="card"><h3>Over-engineering</h3><p>A pipeline where one good prompt would do.</p></div>
+  </div>
+  <div class="foot">All four are mitigated by the same two disciplines: verification gates and evidence tagging.</div>
+</section>
+
+<!-- 19 -->
+<section class="slide" data-track="core">
+  <p class="kick">The career reframe</p>
+  <h2>Nobody here is being replaced.<br>The role is being recompiled.</h2>
+  <div class="cols">
+    <div class="card"><h3>Stop over-investing in</h3><p>Production speed · boilerplate fluency · memorizing what a lookup answers in seconds.</p></div>
+    <div class="card"><h3>Double down on</h3><p>Domain context · specification writing · verification design · decomposition · debugging delegated work.</p></div>
+  </div>
+  <div class="foot">Everything in the new build is something you already do in the best hours of your week.</div>
+</section>
+
+<!-- 20 -->
+<section class="slide" data-track="core">
+  <p class="kick">Exercise · 60 minutes, pairs</p>
+  <h2>Spec → agent → swap</h2>
+  <div class="body">
+    <ul class="big">
+      <li><b>Write</b> a spec (template provided): code task on the sample repo — or a document task.</li>
+      <li><b>Run</b> it: hand the spec verbatim to the agent. Don’t coach mid-run — let the spec do the work.</li>
+      <li><b>Review</b> against <b>your acceptance criteria</b> — not against taste.</li>
+      <li><b>Swap</b> specs with your pair and run theirs. Every “technically-compliant-but-wrong” result is an ambiguity — write it down. That list is the lesson.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 21 -->
+<section class="slide" data-track="core">
+  <p class="kick">Debrief</p>
+  <h2>“Read us the spec line that allowed it”</h2>
+  <div class="body">
+    <ul class="big">
+      <li>Which ambiguities did the agent exploit?</li>
+      <li>Which acceptance criteria caught real problems?</li>
+      <li>What did the second iteration of the spec fix?</li>
+    </ul>
+  </div>
+  <div class="foot">You just did the job. That was orchestration.</div>
+</section>
+
+<!-- 22 -->
+<section class="slide" data-track="core">
+  <p class="kick">Recap · the 90-day orchestrator path</p>
+  <h2>Incremental, or it amplifies ambiguity</h2>
+  <div class="rowcards" style="grid-template-columns:repeat(3,1fr)">
+    <div class="card"><h3>Weeks 1–2</h3><p>Standing instructions in your assistant — or a rules file in your main repo.</p></div>
+    <div class="card"><h3>Weeks 3–6</h3><p>Every non-trivial task starts with a written spec.</p></div>
+    <div class="card"><h3>Weeks 7–12</h3><p>One two-step assisted workflow with a verification gate, on a real recurring task.</p></div>
+  </div>
+  <div class="foot">Next — Module 5: making it survive your calendar. (Beyond today: agent fleets, evaluation harnesses, deep-research pipelines. The 90-day path is the entry ticket, not the ceiling.)</div>
+</section>
+
+<footer class="help">← → navigate · choose a track above to tailor the deck · Ctrl/Cmd+P to print</footer>
+<script>
+const slides=[...document.querySelectorAll('.slide')];let track='all',i=0;
+const vis=()=>slides.filter(s=>{const t=s.dataset.track;return t==='core'||track==='all'||t===track;});
+function show(n){const v=vis();i=Math.max(0,Math.min(n,v.length-1));slides.forEach(s=>s.classList.remove('on'));v[i].classList.add('on');document.getElementById('ctr').textContent=(i+1)+' / '+v.length;history.replaceState(null,'','#'+(i+1));}
+document.querySelectorAll('.tracks button').forEach(b=>b.onclick=()=>{track=b.dataset.set;document.querySelectorAll('.tracks button').forEach(x=>x.classList.toggle('on',x===b));show(i);});
+addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();show(i+1);}else if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();show(i-1);}else if(e.key==='Home')show(0);else if(e.key==='End')show(1e4);});
+addEventListener('click',e=>{if(e.target.closest('.hud'))return;show(e.clientX>innerWidth/2?i+1:i-1);});
+function fit(){document.documentElement.style.setProperty('--s',Math.min(innerWidth/1330,(innerHeight-70)/740));}
+addEventListener('resize',fit);fit();show((parseInt(location.hash.slice(1))||1)-1);
+</script>
+</body></html>

@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI-Mindset · Module 5 — Making It Stick: The 30-Day Behavior Plan</title>
+<style>
+:root{--pg:#f9f9f7;--sf:#fcfcfb;--ink:#0b0b0b;--ink2:#52514e;--mut:#898781;--hair:#e1e0d9;--bd:rgba(11,11,11,.10);
+--acc:#2a78d6;--accT:#1c5cab;--s:1}
+*{box-sizing:border-box}html,body{margin:0;height:100%}
+body{background:var(--pg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;overflow:hidden}
+.hud{position:fixed;top:0;left:0;right:0;height:48px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;font-size:13px;color:var(--ink2);z-index:10}
+.hud .brand b{color:var(--ink)}
+.tracks{display:flex;gap:6px}
+.tracks button{font:inherit;font-size:12.5px;padding:5px 14px;border-radius:999px;border:1px solid var(--hair);background:var(--sf);color:var(--ink2);cursor:pointer}
+.tracks button.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.help{position:fixed;bottom:10px;left:0;right:0;text-align:center;font-size:12px;color:var(--mut);z-index:10}
+.slide{display:none;position:fixed;top:50%;left:50%;width:1280px;height:720px;margin-top:8px;transform:translate(-50%,-50%) scale(var(--s));
+background:var(--sf);border:1px solid var(--bd);border-radius:14px;padding:66px 84px;flex-direction:column;box-shadow:0 14px 44px rgba(11,11,11,.07)}
+.slide.on{display:flex}
+.slide[data-track="nonit"]::before,.slide[data-track="it"]::before{position:absolute;top:22px;right:26px;font-size:11.5px;font-weight:700;letter-spacing:.08em;padding:4px 12px;border-radius:999px}
+.slide[data-track="nonit"]::before{content:"NON-IT TRACK";color:#0c5c40;background:rgba(27,175,122,.14)}
+.slide[data-track="it"]::before{content:"IT / SOFTWARE TRACK";color:#3a2d86;background:rgba(74,58,167,.12)}
+.kick{font-size:15px;font-weight:700;letter-spacing:.14em;color:var(--accT);text-transform:uppercase;margin:0 0 14px}
+h1{font-size:58px;line-height:1.08;margin:0 0 18px;letter-spacing:-.015em}
+h2{font-size:42px;line-height:1.12;margin:0 0 22px;letter-spacing:-.01em}
+.lead{font-size:24px;color:var(--ink2);line-height:1.45;margin:0;max-width:1000px}
+.one{flex:1;display:flex;align-items:center}.one p{font-size:52px;line-height:1.18;font-weight:700;margin:0;letter-spacing:-.015em;max-width:1050px}
+.body{flex:1;display:flex;flex-direction:column;justify-content:center}
+ul.big{font-size:24px;line-height:1.55;margin:0;padding-left:26px}ul.big li{margin:10px 0}ul.big li::marker{color:var(--acc)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:30px;flex:1;align-content:center}
+.badge{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.09em;padding:4px 12px;border-radius:6px;vertical-align:middle}
+.badge.v{color:#006300;background:rgba(12,163,12,.12)}.badge.f{color:#52514e;background:rgba(82,81,78,.12)}
+.badge.i{color:#6b4a00;background:rgba(250,178,25,.18)}
+.card{border:1px solid var(--hair);border-radius:12px;padding:22px 24px;background:#fff}
+.card h3{margin:0 0 8px;font-size:20px}.card p{margin:0;font-size:17px;color:var(--ink2);line-height:1.5}
+.rowcards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;flex:1;align-content:center}
+.foot{margin-top:auto;padding-top:16px;border-top:1px solid var(--hair);font-size:16.5px;color:var(--ink2)}
+q.pull{display:block;font-size:30px;line-height:1.4;font-style:italic;quotes:"“" "”";max-width:1000px}
+.ladder{flex:1;display:flex;align-items:flex-end;gap:14px;padding-bottom:6px}
+.rung{flex:1;border:1px solid var(--hair);border-radius:12px 12px 0 0;background:#fff;padding:18px}
+.rung .wk{font-size:12.5px;font-weight:800;letter-spacing:.1em;color:var(--accT)}
+.rung h3{margin:6px 0 6px;font-size:20px}.rung p{margin:0;font-size:14.5px;color:var(--ink2);line-height:1.45}
+table.mt{width:100%;border-collapse:collapse;font-size:18px;margin-top:4px}
+table.mt th{text-align:left;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);padding:9px 12px;border-bottom:2px solid var(--hair)}
+table.mt td{padding:12px;border-bottom:1px solid var(--hair);vertical-align:top;line-height:1.4}
+table.mt td:first-child{font-weight:700}
+@media print{body{overflow:visible}.hud,.help{display:none}.slide{display:flex;position:static;transform:none;width:1280px;height:720px;margin:8mm auto;page-break-after:always}}
+</style></head>
+<body>
+<header class="hud">
+  <div class="brand"><b>AI-Mindset</b> · Module 5 — Making It Stick</div>
+  <div class="tracks"><button class="on" data-set="all">All</button><button data-set="nonit">Non-IT</button><button data-set="it">IT / Software</button></div>
+  <div class="counter" id="ctr">1 / 13</div>
+</header>
+
+<!-- 1 -->
+<section class="slide" data-track="core">
+  <p class="kick">AI-Mindset · Module 5 of 5</p>
+  <div class="body">
+    <h1>Making It Stick:<br>The 30-Day Behavior Plan</h1>
+    <p class="lead">Training fades. Design doesn’t.</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-track="core">
+  <p class="kick">The honest problem</p>
+  <h2>Enthusiasm decays on contact with the calendar</h2>
+  <div class="body">
+    <ul class="big">
+      <li>Knowledge isn’t the gap anymore — you now know more than most of your industry.</li>
+      <li>The gap: the old habits are still cheaper <b>this week</b>.</li>
+      <li>And the four frictions — fear, identity, trust, inertia — are still in the room.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-track="core">
+  <p class="kick">The design stance &nbsp;<span class="badge f">FRAMEWORK — Fogg: B = MAP</span></p>
+  <h2>We don’t plan to try harder.<br>We redesign the default.</h2>
+  <div class="body">
+    <ul class="big">
+      <li>Behavior happens when <b>Motivation, Ability and a Prompt</b> coincide.</li>
+      <li>Motivation is unreliable. So we engineer the other two:</li>
+      <li><b>Ability</b> — make the habit tiny. <b>Prompt</b> — attach it to an existing trigger.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-track="core">
+  <p class="kick">Individual</p>
+  <h2>The habit ladder — one behavior per week</h2>
+  <div class="ladder">
+    <div class="rung" style="min-height:38%"><span class="wk">WEEK 1</span><h3>First step</h3><p>Your Module 1 card + Module 2 contract. Tiny, attached to a trigger.</p></div>
+    <div class="rung" style="min-height:55%"><span class="wk">WEEK 2</span><h3>+ Verification</h3><p>The 60-second spot-check (Module 3): dates, numbers, names first.</p></div>
+    <div class="rung" style="min-height:72%"><span class="wk">WEEK 3</span><h3>+ First spec</h3><p>One real task specified in writing (Module 4 template).</p></div>
+    <div class="rung" style="min-height:89%"><span class="wk">WEEK 4</span><h3>+ Review</h3><p>What did AI touch? What did I sign? Which friction fought me?</p></div>
+  </div>
+  <div class="foot">A stack, not a leap. Ambition in week 1 is how 30-day plans die on day 4.</div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-track="core">
+  <p class="kick">Team — make it social</p>
+  <h2>Three rituals. Adopt at least one <i>today</i>.</h2>
+  <div class="rowcards" style="grid-template-columns:repeat(3,1fr)">
+    <div class="card"><h3>AI moment in the daily</h3><p>60 seconds: one thing someone delegated yesterday.</p></div>
+    <div class="card"><h3>Shared prompt &amp; spec library</h3><p>Living, where you work — not a wiki graveyard.</p></div>
+    <div class="card"><h3>Monthly show-and-tell</h3><p>One real workflow, warts included. Failures teach adoption faster than wins.</p></div>
+  </div>
+  <div class="foot">Chosen in the room, not suggested. An unchosen ritual is a suggestion.</div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-track="core">
+  <p class="kick">To the most senior person in the room</p>
+  <h2>Leaders go first</h2>
+  <div class="body">
+    <ul class="big">
+      <li>Your team doesn’t adopt what you mandate. <b>They adopt what they see you do.</b></li>
+      <li>The ask: once a week, in a channel everyone reads, post what you delegated to AI — <b>and what you had to correct.</b></li>
+      <li>The correction is the active ingredient: visible senior fallibility kills the fear-of-looking-incompetent friction org-wide.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-track="core">
+  <p class="kick">The network &nbsp;<span class="badge f">FRAMEWORK — Rogers, diffusion of innovations</span></p>
+  <h2>Champions, not police</h2>
+  <div class="body">
+    <ul class="big">
+      <li>One <b>volunteer</b> per team — with <b>budgeted time</b>, not “on top of everything.”</li>
+      <li>Mandate: unblock colleagues, harvest wins for the show-and-tell.</li>
+      <li>Explicitly <b>not</b>: enforcement, or reporting on individuals.</li>
+    </ul>
+  </div>
+  <div class="foot">Adoption spreads through trusted peers, not memos.</div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-track="core">
+  <p class="kick">Measurement</p>
+  <h2>Measure behavior, not sentiment</h2>
+  <table class="mt">
+    <tr><th>Leading indicator</th><th>What it tells you</th><th>How</th></tr>
+    <tr><td>First-step rate</td><td>Share of eligible tasks where AI was step one — <b>the program itself</b></td><td>self-report in retro</td></tr>
+    <tr><td>Verification rate</td><td>Share of AI output that got the 60-second check — speed <i>with</i> safety</td><td>self-report in retro</td></tr>
+    <tr><td>Spec &amp; instruction reuse</td><td>Standing specs used more than once</td><td>count where they live</td></tr>
+    <tr><td>Time-to-artifact</td><td>One benchmark task, timed monthly — the first bridge to outcomes</td><td>timed</td></tr>
+  </table>
+  <div class="foot">Announced before tracking starts · evaluates the system, never individuals · never a performance-review input.</div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-track="core">
+  <p class="kick">Customer application — how this block works</p>
+  <h2>Your context goes here</h2>
+  <div class="body">
+    <ul class="big">
+      <li>This is the swap-out slide: the habit ladder applied to <b>your</b> recurring work.</li>
+      <li>Built from your words when we have them — and honestly tagged <span class="badge i">INFERRED</span> when we’re guessing.</li>
+      <li>Every correction you make upgrades a guess to a fact — and makes the plan <b>yours</b>.</li>
+    </ul>
+  </div>
+  <div class="foot">The next slide is a live example for an events-industry team.</div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-track="nonit">
+  <p class="kick">Example · EventCo — an events &amp; education agency</p>
+  <h2>The ladder, applied</h2>
+  <table class="mt">
+    <tr><th>Recurring work</th><th>First-step habit (Week 1)</th><th>Verification rule (Week 2)</th></tr>
+    <tr><td>Finding public bids <span class="badge i" style="font-size:10px">INFERRED</span></td><td>Assistant files a cited tender shortlist before you open a portal</td><td>Every deadline &amp; budget checked at the source before it enters the pipeline</td></tr>
+    <tr><td>Documents &amp; proposals <span class="badge i" style="font-size:10px">INFERRED</span></td><td>Requirements checklist extracted first; draft written against it</td><td>“Buyer’s evaluator” review prompt before anything is sent</td></tr>
+    <tr><td>Event materials <span class="badge i" style="font-size:10px">INFERRED</span></td><td>Standing brand-voice instructions; one brief → agenda, sponsor deck, social copy</td><td>Names, dates, prices — spot-checked before publication</td></tr>
+  </table>
+  <div class="foot">These rows are our pre-engagement hypotheses, not your words — correct them now, out loud. Week 3’s spec candidate: your proposal template.</div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-track="core">
+  <p class="kick">What kills adoption</p>
+  <h2>Four anti-patterns</h2>
+  <div class="rowcards">
+    <div class="card"><h3>The mandate</h3><p>“Everyone uses AI by Q3” → compliance theater. Logins up, behavior unchanged. (You can mandate logins. You can’t mandate habits.)</p></div>
+    <div class="card"><h3>Tool sprawl</h3><p>A new tool every month → dabbling, zero habits.</p></div>
+    <div class="card"><h3>The hero</h3><p>One enthusiast does everyone’s AI work. When they leave, the capability leaves in their laptop bag.</p></div>
+    <div class="card"><h3>Silent measurement</h3><p>Tracking without announcing → trust collapse. Everything measured is announced.</p></div>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-track="core">
+  <p class="kick">Working block · 40 minutes</p>
+  <h2>Write your 30-day contract</h2>
+  <div class="cols">
+    <div class="card"><h3>Everyone</h3><p>Level-3 task (Module 1 card) · tool + trigger (Module 2) · verification rule (Module 3 quadrant) · spec candidate (Module 4) · <b>named</b> accountability partner · <b>dated</b> day-30 review.</p></div>
+    <div class="card"><h3>Leaders</h3><p>Ritual chosen · champion named (volunteer!) · three metrics baselined — and the announcement to the team, in writing, dated.</p></div>
+  </div>
+  <div class="foot">Artifacts or it didn’t happen. A blank sheet today is a silent no.</div>
+</section>
+
+<!-- 12b -->
+<section class="slide" data-track="core">
+  <p class="kick">One more honest thing</p>
+  <h2>The map is bigger than today</h2>
+  <div class="body" style="flex-direction:row;display:flex;gap:48px;align-items:center">
+    <svg width="300" height="300" viewBox="0 0 200 220" style="flex:none" aria-hidden="true">
+      <rect x="0" y="80" width="200" height="140" fill="rgba(42,120,214,.08)"/>
+      <line x1="0" y1="80" x2="200" y2="80" stroke="#2a78d6" stroke-width="2" stroke-dasharray="6 5"/>
+      <polygon points="68,80 100,28 132,80" fill="#2a78d6"/>
+      <polygon points="58,82 142,82 158,140 100,208 42,132" fill="#86b6ef" opacity=".65"/>
+      <text x="100" y="20" text-anchor="middle" font-size="11" fill="#1c5cab" font-weight="700" font-family="system-ui">WHAT YOU HAVE NOW</text>
+      <text x="100" y="150" text-anchor="middle" font-size="11" fill="#1c5cab" font-weight="700" font-family="system-ui">WHAT’S DOWN THERE</text>
+    </svg>
+    <ul class="big" style="flex:1">
+      <li><b>Above the waterline — yours now:</b> first-step habits · RTF · the trust matrix · specs &amp; gates.</li>
+      <li><b>Below — waiting:</b> deep-research workflows · agent fleets &amp; A2A · evaluation harnesses · automation platforms · private / local models · voice &amp; multimodal pipelines…</li>
+      <li>That’s not a threat. It’s the good news: <b>everything down there rewards the habits you built this month.</b></li>
+    </ul>
+  </div>
+  <div class="foot">“Daję wędkę” includes the map to more fish. The rod you’re holding works on all of them.</div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-track="core">
+  <p class="kick">Close</p>
+  <svg style="position:absolute;top:58px;right:78px" width="130" height="130" viewBox="0 0 100 100" fill="none" stroke="#2a78d6" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+    <line x1="12" y1="92" x2="76" y2="16"/><circle cx="30" cy="71" r="6"/>
+    <path d="M76,16 C 88,28 88,46 82,60" stroke-dasharray="3 4" stroke-width="1.8"/>
+    <path d="M82,60 c -5,3 -8,-1 -5,-5" stroke-width="1.8"/>
+  </svg>
+  <div class="one"><p>Daję wędkę.<br><span style="color:var(--accT)">The rod is yours.</span></p></div>
+  <div class="foot">Behavior over tools → first-step habits → calibrated trust → specs &amp; orchestration → designed persistence. If your day-30 review runs well without me in the room, this training worked. That was the point.</div>
+</section>
+
+<footer class="help">← → navigate · choose a track above to tailor the deck · Ctrl/Cmd+P to print</footer>
+<script>
+const slides=[...document.querySelectorAll('.slide')];let track='all',i=0;
+const vis=()=>slides.filter(s=>{const t=s.dataset.track;return t==='core'||track==='all'||t===track;});
+function show(n){const v=vis();i=Math.max(0,Math.min(n,v.length-1));slides.forEach(s=>s.classList.remove('on'));v[i].classList.add('on');document.getElementById('ctr').textContent=(i+1)+' / '+v.length;history.replaceState(null,'','#'+(i+1));}
+document.querySelectorAll('.tracks button').forEach(b=>b.onclick=()=>{track=b.dataset.set;document.querySelectorAll('.tracks button').forEach(x=>x.classList.toggle('on',x===b));show(i);});
+addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();show(i+1);}else if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();show(i-1);}else if(e.key==='Home')show(0);else if(e.key==='End')show(1e4);});
+addEventListener('click',e=>{if(e.target.closest('.hud'))return;show(e.clientX>innerWidth/2?i+1:i-1);});
+function fit(){document.documentElement.style.setProperty('--s',Math.min(innerWidth/1330,(innerHeight-70)/740));}
+addEventListener('resize',fit);fit();show((parseInt(location.hash.slice(1))||1)-1);
+</script>
+</body></html>

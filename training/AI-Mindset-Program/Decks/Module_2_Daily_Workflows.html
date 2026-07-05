@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI-Mindset · Module 2 — Rewiring the Daily Workflow</title>
+<style>
+:root{--pg:#f9f9f7;--sf:#fcfcfb;--ink:#0b0b0b;--ink2:#52514e;--mut:#898781;--hair:#e1e0d9;--bd:rgba(11,11,11,.10);
+--acc:#2a78d6;--accT:#1c5cab;--s:1}
+*{box-sizing:border-box}html,body{margin:0;height:100%}
+body{background:var(--pg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;overflow:hidden}
+.hud{position:fixed;top:0;left:0;right:0;height:48px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;font-size:13px;color:var(--ink2);z-index:10}
+.hud .brand b{color:var(--ink)}
+.tracks{display:flex;gap:6px}
+.tracks button{font:inherit;font-size:12.5px;padding:5px 14px;border-radius:999px;border:1px solid var(--hair);background:var(--sf);color:var(--ink2);cursor:pointer}
+.tracks button.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.help{position:fixed;bottom:10px;left:0;right:0;text-align:center;font-size:12px;color:var(--mut);z-index:10}
+.slide{display:none;position:fixed;top:50%;left:50%;width:1280px;height:720px;margin-top:8px;transform:translate(-50%,-50%) scale(var(--s));
+background:var(--sf);border:1px solid var(--bd);border-radius:14px;padding:66px 84px;flex-direction:column;box-shadow:0 14px 44px rgba(11,11,11,.07)}
+.slide.on{display:flex}
+.slide[data-track="nonit"]::before,.slide[data-track="it"]::before{position:absolute;top:22px;right:26px;font-size:11.5px;font-weight:700;letter-spacing:.08em;padding:4px 12px;border-radius:999px}
+.slide[data-track="nonit"]::before{content:"NON-IT TRACK";color:#0c5c40;background:rgba(27,175,122,.14)}
+.slide[data-track="it"]::before{content:"IT / SOFTWARE TRACK";color:#3a2d86;background:rgba(74,58,167,.12)}
+.kick{font-size:15px;font-weight:700;letter-spacing:.14em;color:var(--accT);text-transform:uppercase;margin:0 0 14px}
+h1{font-size:58px;line-height:1.08;margin:0 0 18px;letter-spacing:-.015em}
+h2{font-size:42px;line-height:1.12;margin:0 0 22px;letter-spacing:-.01em}
+.lead{font-size:24px;color:var(--ink2);line-height:1.45;margin:0;max-width:980px}
+.one{flex:1;display:flex;align-items:center}.one p{font-size:52px;line-height:1.18;font-weight:700;margin:0;letter-spacing:-.015em;max-width:1050px}
+.body{flex:1;display:flex;flex-direction:column;justify-content:center}
+ul.big{font-size:24px;line-height:1.55;margin:0;padding-left:26px}ul.big li{margin:10px 0}ul.big li::marker{color:var(--acc)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:34px;flex:1;align-content:center}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:8px}
+.tile{border:1px solid var(--hair);border-radius:12px;padding:22px 24px;background:#fff}
+.tile .num{font-size:52px;font-weight:750;letter-spacing:-.02em;line-height:1}
+.tile .lab{font-size:15.5px;color:var(--ink2);margin-top:10px;line-height:1.4}
+.badge{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.09em;padding:4px 12px;border-radius:6px;vertical-align:middle}
+.badge.v{color:#006300;background:rgba(12,163,12,.12)}.badge.s{color:#1c5cab;background:rgba(42,120,214,.12)}
+.badge.f{color:#52514e;background:rgba(82,81,78,.12)}
+.card{border:1px solid var(--hair);border-radius:12px;padding:24px 26px;background:#fff}
+.card h3{margin:0 0 8px;font-size:21px}.card p{margin:0;font-size:17.5px;color:var(--ink2);line-height:1.5}
+.rowcards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;flex:1;align-content:center}
+.foot{margin-top:auto;padding-top:18px;border-top:1px solid var(--hair);font-size:17px;color:var(--ink2)}
+table.map{width:100%;border-collapse:collapse;font-size:19px;margin-top:4px}
+table.map th{text-align:left;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);padding:10px 14px;border-bottom:2px solid var(--hair)}
+table.map td{padding:15px 14px;border-bottom:1px solid var(--hair);vertical-align:top;line-height:1.4}
+table.map td:first-child{font-weight:700;white-space:nowrap}
+.ob{display:grid;grid-template-columns:1fr 56px 1fr;gap:0;align-items:stretch;margin-top:6px}
+.ob .o,.ob .n{border-radius:12px;padding:22px 24px;font-size:20px;line-height:1.45}
+.ob .o{background:rgba(82,81,78,.07);color:var(--ink2)}
+.ob .n{background:rgba(42,120,214,.09);border:1.5px solid var(--acc)}
+.ob .a{display:flex;align-items:center;justify-content:center;font-size:24px;color:var(--mut)}
+.prompt{background:#0b0b0b;color:#e8e8e4;border-radius:12px;padding:20px 24px;font-family:ui-monospace,Consolas,monospace;font-size:17px;line-height:1.55;white-space:pre-wrap}
+.prompt b{color:#7db6f0;font-weight:700}
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:20px;flex:1;align-content:center}
+q.pull{display:block;font-size:30px;line-height:1.4;font-style:italic;quotes:"“" "”";max-width:980px}
+.tree{display:flex;flex-direction:column;gap:12px;flex:1;justify-content:center}
+.tree .q{display:grid;grid-template-columns:340px 1fr;gap:16px;align-items:center}
+.tree .ask{font-size:21px;font-weight:700}
+.tree .ans{border:1px solid var(--hair);background:#fff;border-radius:10px;padding:13px 18px;font-size:19px}
+.tree .ans b{color:var(--accT)}
+@media print{body{overflow:visible}.hud,.help{display:none}.slide{display:flex;position:static;transform:none;width:1280px;height:720px;margin:8mm auto;page-break-after:always}}
+</style></head>
+<body>
+<header class="hud">
+  <div class="brand"><b>AI-Mindset</b> · Module 2 — Rewiring the Daily Workflow</div>
+  <div class="tracks"><button class="on" data-set="all">All</button><button data-set="nonit">Non-IT</button><button data-set="it">IT / Software</button></div>
+  <div class="counter" id="ctr">1 / 25</div>
+</header>
+
+<!-- 1 -->
+<section class="slide" data-track="core">
+  <p class="kick">AI-Mindset · Module 2 of 5</p>
+  <div class="body">
+    <h1>Rewiring the Daily Workflow</h1>
+    <p class="lead">Four tools. Four habits. One rule: <b>AI is your first step.</b></p>
+  </div>
+  <div class="foot">Yesterday we diagnosed. Today we rewire.</div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-track="core">
+  <p class="kick">The principle</p>
+  <h2>Change the order, not the toolbox</h2>
+  <div class="ob">
+    <div class="o"><b>Old:</b> task → do it the old way → (maybe) ask AI to polish the result</div>
+    <div class="a">→</div>
+    <div class="n"><b>New:</b> task → AI first draft / first answer → <b>your judgment</b> → done</div>
+  </div>
+  <div class="foot">We are not adding tools to your day. We are changing the order of your day.</div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-track="core">
+  <p class="kick">Anti-pattern</p>
+  <h2>Ten tools and zero habits<br>is worse than one tool and one habit</h2>
+  <div class="body"><p class="lead">Tool sprawl produces dabbling, decision fatigue, and nothing on Monday.<br><br><b>Rule of the day:</b> leave with one habit per tool — maximum four, and only for tools that fit <i>your</i> work.</p></div>
+  <div class="foot">Nobody ever got promoted for having the most AI tabs open.</div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-track="core">
+  <p class="kick">The map</p>
+  <h2>Four tools, four jobs</h2>
+  <table class="map">
+    <tr><th>Tool</th><th>Job in your workflow</th><th>First-step trigger</th></tr>
+    <tr><td>💬 Assistant<br><span style="font-weight:400;font-size:15px;color:var(--mut)">Claude / ChatGPT</span></td><td>Thinking partner: drafting, reasoning, long documents, analysis</td><td>“I need to write / decide / analyze”</td></tr>
+    <tr><td>🛠️ Cursor</td><td>Building: code with full project context</td><td>“I need to change or understand code”</td></tr>
+    <tr><td>📚 NotebookLM</td><td>Learning: grounded synthesis of <b>your</b> sources, with citations</td><td>“I need to understand this pile of documents”</td></tr>
+    <tr><td>🎬 Gemini</td><td>Scale &amp; modality: video, meetings, huge inputs, Workspace</td><td>“The input isn’t text — or it’s enormous”</td></tr>
+  </table>
+  <div class="foot">Already on ChatGPT? Keep it — the habits transfer. One paid tool is enough to start: the habits are the product, not the subscriptions.</div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-track="core">
+  <p class="kick">Habit 1 — prompting is a behavior, not a trick</p>
+  <h2>R · T · F</h2>
+  <div class="rowcards" style="grid-template-columns:repeat(3,1fr)">
+    <div class="card"><h3>Role</h3><p>“You are a bid analyst reporting to the CEO…”</p></div>
+    <div class="card"><h3>Task</h3><p>“…extract the five requirements we cannot meet today…”</p></div>
+    <div class="card"><h3>Format</h3><p>“…as a table: requirement, gap, evidence quote.”</p></div>
+  </div>
+  <div class="foot">The single highest-leverage habit in this course. The only prompting framework we teach — one frame practiced beats five admired.</div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-track="core">
+  <p class="kick">RTF — before / after (live)</p>
+  <div class="vs">
+    <div>
+      <p style="font-size:14px;letter-spacing:.08em;color:var(--mut);font-weight:700">LAZY</p>
+      <div class="prompt">summarize this document</div>
+    </div>
+    <div>
+      <p style="font-size:14px;letter-spacing:.08em;color:var(--mut);font-weight:700">RTF</p>
+      <div class="prompt"><b>You are</b> a risk auditor reporting to a CFO.
+<b>Extract</b> the five largest financial risks
+from this document.
+<b>Deliver as</b> a table: risk, likelihood,
+evidence quote.</div>
+    </div>
+  </div>
+  <div class="foot">Watch the delta live — same document, both prompts. No invented percentages needed; your eyes are the evidence.</div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-track="core">
+  <p class="kick">Habit 2</p>
+  <h2>Iterate. Don’t regenerate.</h2>
+  <div class="body">
+    <ul class="big">
+      <li>Refine: <i>“shorter · more formal · add the compliance angle”</i> — instead of re-rolling the dice.</li>
+      <li>Decompose big asks into steps — like you would for a person.</li>
+      <li>Treat it like a brilliant new colleague on day one: <b>brief it, don’t fire it.</b> <span style="color:var(--mut)">(Firing a new hire over a first draft? HR would like a word.)</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-track="core">
+  <p class="kick">Tool 1 · Assistant (Claude / ChatGPT)</p>
+  <h2>The thinking partner</h2>
+  <div class="ob">
+    <div class="o"><b>Old behavior:</b> stare at a blank page</div>
+    <div class="a">→</div>
+    <div class="n"><b>New behavior:</b> interrogate a draft</div>
+  </div>
+  <ul class="big" style="margin-top:26px">
+    <li>First drafts of anything · “explain this document to me” · devil’s-advocate review of your plan · multi-step analysis.</li>
+  </ul>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-track="core">
+  <p class="kick">Demo · 5 minutes</p>
+  <h2>Messy transcript → decision log</h2>
+  <div class="body">
+    <ul class="big">
+      <li>Paste a (fictional) meeting transcript.</li>
+      <li>One RTF prompt → decisions, action items, open risks. ~60 seconds.</li>
+      <li>One refinement pass — live, so you see habit 2, not just hear about it.</li>
+    </ul>
+  </div>
+  <div class="foot">Notice what I did <b>not</b> paste in: client names, real personal data. That reflex is Module 3.</div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-track="nonit">
+  <p class="kick">Workflow · finding public bids &amp; tenders</p>
+  <h2>From browsing portals to interrogating them</h2>
+  <div class="ob">
+    <div class="o"><b>Old:</b> manually scan tender portals; skim PDFs; hope you didn’t miss one</div>
+    <div class="a">→</div>
+    <div class="n"><b>New:</b> assistant searches &amp; shortlists → you verify every deadline, budget and eligibility rule <b>at the source</b></div>
+  </div>
+  <ul class="big" style="margin-top:24px">
+    <li>RTF: <i>“You are a bid scout. Find open public tenders for [event services] in [region]. Table: title, buyer, deadline, budget, link.”</i></li>
+    <li>The link column is <b>mandatory</b> — a shortlist without sources is a rumor with nice formatting.</li>
+  </ul>
+  <div class="foot">Deadlines, values, eligibility: verify before anything enters your pipeline — Module 3 makes this a 60-second habit.</div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-track="nonit">
+  <p class="kick">Workflow · documents &amp; proposals</p>
+  <h2>Offers, tender responses, reports — AI-first</h2>
+  <div class="body">
+    <ul class="big">
+      <li><b>Extract before you write:</b> “List every requirement in this tender as a checklist with the page it came from.”</li>
+      <li><b>Draft against the checklist:</b> your template + RTF → first version in minutes, not days.</li>
+      <li><b>Interrogate your own draft:</b> “You are the buyer’s evaluator. Score this response against the checklist — where do we lose points?”</li>
+    </ul>
+  </div>
+  <div class="foot">The compliance checklist is the spec — Module 4 turns this instinct into a repeatable template.</div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-track="nonit">
+  <p class="kick">Workflow · event materials</p>
+  <h2>Agendas, sponsor decks, social copy — one voice</h2>
+  <div class="body">
+    <ul class="big">
+      <li><b>Standing instructions:</b> write your brand voice, audience and no-go phrases <i>once</i> (custom instructions / project) — every draft inherits it.</li>
+      <li><b>One brief → many artifacts:</b> event one-pager → agenda, sponsor pitch, three social posts, MC script — each a refinement, not a restart.</li>
+      <li><b>Image &amp; visual briefs:</b> describe the concept precisely; iterate like you iterate text.</li>
+      <li><b>“Won’t it all sound generic?”</b> Unbriefed AI produces beige — justified fear. The fix: your voice file + your taste as the final gate. AI widens the options; <b>you still pick</b>. <span style="color:var(--mut)">(~200 variants at Project Terrain. One got built.)</span></li>
+    </ul>
+  </div>
+  <div class="foot">The standing instruction is your first specification — remember this in Module 4.</div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-track="it">
+  <p class="kick">Tool 2 · Cursor</p>
+  <h2>The codebase conversation</h2>
+  <div class="ob">
+    <div class="o"><b>Old:</b> grep + tribal knowledge + coffee</div>
+    <div class="a">→</div>
+    <div class="n"><b>New:</b> ask the codebase directly — <i>before</i> writing any code</div>
+  </div>
+  <ul class="big" style="margin-top:24px">
+    <li>Codebase Q&amp;A first · inline edits · agent mode for scoped multi-file changes.</li>
+  </ul>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-track="it">
+  <p class="kick">Rule of engagement &nbsp;<span class="badge v">VERIFIED sidebar</span></p>
+  <h2>The larger the change, the smaller the leash</h2>
+  <div class="cols">
+    <div class="card"><h3>Inline edit</h3><p>Review each hunk. Every one.</p></div>
+    <div class="card"><h3>Agent mode</h3><p>Review the whole diff like a hostile PR from an unknown contributor.</p></div>
+  </div>
+  <div class="foot">This working pattern, industrialized: <b>Project Velocity</b> — 20 legacy apps understood in 3 weeks, 4–8× faster, 187 endpoints mapped. (With verification gates — Module 4 shows the machine.)</div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-track="core">
+  <p class="kick">Tool 3 · NotebookLM</p>
+  <h2>Grounded learning</h2>
+  <div class="ob">
+    <div class="o"><b>Old:</b> the PDF graveyard you’ll never read</div>
+    <div class="a">→</div>
+    <div class="n"><b>New:</b> a notebook that answers <b>only from your sources</b> — with citations</div>
+  </div>
+  <ul class="big" style="margin-top:24px">
+    <li>Onboard to a new domain, client or tender pack · audio overview for the commute · “what do my sources disagree about?”</li>
+  </ul>
+</section>
+
+<!-- 16 -->
+<section class="slide" data-track="core">
+  <p class="kick">Why it matters</p>
+  <h2>Evidence-over-opinion, as a product</h2>
+  <div class="body">
+    <ul class="big">
+      <li>It answers from <b>your uploaded sources</b> and cites the exact passage.</li>
+      <li>Hallucination surface drastically reduced <b>by design</b>.</li>
+      <li>Caveat, honestly: citations <b>shrink</b> the verification job. They don’t delete it.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 17 -->
+<section class="slide" data-track="core">
+  <p class="kick">Tool 4 · Gemini</p>
+  <h2>Scale and modality</h2>
+  <div class="ob">
+    <div class="o"><b>Old:</b> “I’ll watch the 90-minute recording later” (never)</div>
+    <div class="a">→</div>
+    <div class="n"><b>New:</b> interrogate the video / meeting / spreadsheet directly</div>
+  </div>
+  <ul class="big" style="margin-top:24px">
+    <li>Enormous inputs (huge context) · video &amp; audio · Google Workspace (Docs, Sheets, Meet).</li>
+  </ul>
+</section>
+
+<!-- 18 -->
+<section class="slide" data-track="core">
+  <p class="kick">Choosing without paralysis</p>
+  <h2>The decision tree</h2>
+  <div class="tree">
+    <div class="q"><span class="ask">Is it code?</span><span class="ans">→ <b>Cursor</b> <span style="color:var(--mut);font-size:15px">(IT track)</span></span></div>
+    <div class="q"><span class="ask">Is it a pile of <i>your</i> documents?</span><span class="ans">→ <b>NotebookLM</b></span></div>
+    <div class="q"><span class="ask">Is it video / audio / enormous?</span><span class="ans">→ <b>Gemini</b></span></div>
+    <div class="q"><span class="ask">Thinking, writing, deciding?</span><span class="ans">→ <b>Assistant</b> (Claude / ChatGPT)</span></div>
+  </div>
+  <div class="foot">When in doubt: start in the assistant, move when a specialist tool earns it. A default beats a debate.</div>
+</section>
+
+<!-- 19 -->
+<section class="slide" data-track="core">
+  <p class="kick">Proof of autonomy &nbsp;<span class="badge v">VERIFIED</span></p>
+  <h2>Lidka — the rod works for non-engineers</h2>
+  <div class="body">
+    <ul class="big">
+      <li>A non-technical publisher needed a children’s audiobook store — Polish payments &amp; logistics (Tpay + InPost).</li>
+      <li>Built in <b>days</b>. The decisive fact: <b>she operates it herself, with full autonomy.</b></li>
+    </ul>
+  </div>
+  <div class="foot">The deliverable was independence, not dependency. That’s the point of the rod.</div>
+</section>
+
+<!-- 20 -->
+<section class="slide" data-track="it">
+  <p class="kick">Proof of discipline &nbsp;<span class="badge v">VERIFIED</span></p>
+  <h2>AI-first ≠ test-poor</h2>
+  <div class="tiles">
+    <div class="tile"><div class="num">~600</div><div class="lab">automated tests — PresoGen AI, commercial desktop app across 3 LLM providers</div></div>
+    <div class="tile"><div class="num">~657</div><div class="lab">automated tests — Mana Menu backend, 37 controllers</div></div>
+    <div class="tile"><div class="num">0</div><div class="lab">trade-off between speed and rigor — when verification is a habit</div></div>
+  </div>
+</section>
+
+<!-- 21 -->
+<section class="slide" data-track="core">
+  <p class="kick">Lab briefing</p>
+  <h2>One real task. Your task.</h2>
+  <div class="cols">
+    <div class="card"><h3>Track A — technical</h3><p>Cursor on a provided legacy codebase sample + assistant for the write-up.</p></div>
+    <div class="card"><h3>Track B — business</h3><p>NotebookLM on provided source docs (or a tender pack) + assistant/Gemini for the deliverable.</p></div>
+  </div>
+  <div class="foot"><b>Success =</b> one shippable artifact + the prompt trail that produced it. Data rule: fictional or sanitized only.</div>
+</section>
+
+<!-- 22 -->
+<section class="slide" data-track="core">
+  <p class="kick">Lab · ~90 minutes</p>
+  <h2>Work</h2>
+  <div class="rowcards" style="grid-template-columns:repeat(3,1fr)">
+    <div class="card"><h3>R · T · F</h3><p>Role — Task — Format, on every prompt.</p></div>
+    <div class="card"><h3>Iterate</h3><p>Refine, don’t regenerate. At least one pass.</p></div>
+    <div class="card"><h3>Finish</h3><p>One complete artifact beats three fragments.</p></div>
+  </div>
+</section>
+
+<!-- 23 -->
+<section class="slide" data-track="core">
+  <p class="kick">Debrief</p>
+  <h2>Show the behavior, not the output</h2>
+  <div class="body">
+    <ul class="big">
+      <li>The task, in one sentence.</li>
+      <li>Your first prompt — verbatim.</li>
+      <li>The refinement that mattered — verbatim.</li>
+      <li>One thing you had to <b>correct</b> — and how you caught it.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 24 -->
+<section class="slide" data-track="core">
+  <div class="one"><p>AI generates.<br>You verify.<br><span style="color:var(--accT)">You own.</span></p></div>
+  <div class="foot">Every artifact today has one thing in common: a human signed it. Module 3 makes that trustworthy at scale.</div>
+</section>
+
+<!-- 25 -->
+<section class="slide" data-track="core">
+  <p class="kick">Before you leave</p>
+  <h2>The habit contract</h2>
+  <div class="body">
+    <ul class="big">
+      <li><b>Tool</b> → <b>trigger</b> (an existing event in your day) → <b>old behavior it replaces</b> → <b>first calendar slot this week</b>.</li>
+      <li>Exchange contracts with a partner — they’re your accountability partner until Module 5.</li>
+    </ul>
+  </div>
+  <div class="foot">Four tools today. There are dozens more out there — and every one of them rewards the same four habits. That’s why we taught habits.</div>
+</section>
+
+<footer class="help">← → navigate · choose a track above to tailor the deck · Ctrl/Cmd+P to print</footer>
+<script>
+const slides=[...document.querySelectorAll('.slide')];let track='all',i=0;
+const vis=()=>slides.filter(s=>{const t=s.dataset.track;return t==='core'||track==='all'||t===track;});
+function show(n){const v=vis();i=Math.max(0,Math.min(n,v.length-1));slides.forEach(s=>s.classList.remove('on'));v[i].classList.add('on');document.getElementById('ctr').textContent=(i+1)+' / '+v.length;history.replaceState(null,'','#'+(i+1));}
+document.querySelectorAll('.tracks button').forEach(b=>b.onclick=()=>{track=b.dataset.set;document.querySelectorAll('.tracks button').forEach(x=>x.classList.toggle('on',x===b));show(i);});
+addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();show(i+1);}else if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();show(i-1);}else if(e.key==='Home')show(0);else if(e.key==='End')show(1e4);});
+addEventListener('click',e=>{if(e.target.closest('.hud'))return;show(e.clientX>innerWidth/2?i+1:i-1);});
+function fit(){document.documentElement.style.setProperty('--s',Math.min(innerWidth/1330,(innerHeight-70)/740));}
+addEventListener('resize',fit);fit();show((parseInt(location.hash.slice(1))||1)-1);
+</script>
+</body></html>

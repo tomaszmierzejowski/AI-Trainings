@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI-Mindset · Moduł 1 — Psychologia AI-Mindset</title>
+<style>
+:root{--pg:#f9f9f7;--sf:#fcfcfb;--ink:#0b0b0b;--ink2:#52514e;--mut:#898781;--hair:#e1e0d9;--bd:rgba(11,11,11,.10);
+--acc:#2a78d6;--accT:#1c5cab;--s:1}
+*{box-sizing:border-box}html,body{margin:0;height:100%}
+body{background:var(--pg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;overflow:hidden}
+.hud{position:fixed;top:0;left:0;right:0;height:48px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;font-size:13px;color:var(--ink2);z-index:10}
+.hud .brand b{color:var(--ink)}
+.tracks{display:flex;gap:6px}
+.tracks button{font:inherit;font-size:12.5px;padding:5px 14px;border-radius:999px;border:1px solid var(--hair);background:var(--sf);color:var(--ink2);cursor:pointer}
+.tracks button.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.help{position:fixed;bottom:10px;left:0;right:0;text-align:center;font-size:12px;color:var(--mut);z-index:10}
+.slide{display:none;position:fixed;top:50%;left:50%;width:1280px;height:720px;margin-top:8px;transform:translate(-50%,-50%) scale(var(--s));
+background:var(--sf);border:1px solid var(--bd);border-radius:14px;padding:64px 84px;flex-direction:column;box-shadow:0 14px 44px rgba(11,11,11,.07)}
+.slide.on{display:flex}
+.slide[data-track="nonit"]::before,.slide[data-track="it"]::before{position:absolute;top:22px;right:26px;font-size:11.5px;font-weight:700;letter-spacing:.08em;padding:4px 12px;border-radius:999px}
+.slide[data-track="nonit"]::before{content:"ŚCIEŻKA BIZNES";color:#0c5c40;background:rgba(27,175,122,.14)}
+.slide[data-track="it"]::before{content:"ŚCIEŻKA IT / SOFTWARE";color:#3a2d86;background:rgba(74,58,167,.12)}
+.kick{font-size:15px;font-weight:700;letter-spacing:.12em;color:var(--accT);text-transform:uppercase;margin:0 0 14px}
+h1{font-size:56px;line-height:1.1;margin:0 0 18px;letter-spacing:-.015em}
+h2{font-size:41px;line-height:1.12;margin:0 0 20px;letter-spacing:-.01em}
+.lead{font-size:23px;color:var(--ink2);line-height:1.45;margin:0;max-width:1000px}
+.one{flex:1;display:flex;align-items:center}.one p{font-size:52px;line-height:1.18;font-weight:700;margin:0;letter-spacing:-.015em;max-width:1050px}
+.body{flex:1;display:flex;flex-direction:column;justify-content:center}
+ul.big{font-size:23px;line-height:1.55;margin:0;padding-left:26px}ul.big li{margin:10px 0}ul.big li::marker{color:var(--acc)}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:8px}
+.tile{border:1px solid var(--hair);border-radius:12px;padding:20px 22px;background:#fff}
+.tile .num{font-size:48px;font-weight:750;letter-spacing:-.02em;line-height:1}
+.tile .lab{font-size:15px;color:var(--ink2);margin-top:9px;line-height:1.4}
+.badge{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.08em;padding:4px 12px;border-radius:6px;vertical-align:middle}
+.badge.v{color:#006300;background:rgba(12,163,12,.12)}.badge.s{color:#1c5cab;background:rgba(42,120,214,.12)}
+.badge.f{color:#52514e;background:rgba(82,81,78,.12)}.badge.o{color:#3a2d86;background:rgba(74,58,167,.12)}
+.card{border:1px solid var(--hair);border-radius:12px;padding:22px 24px;background:#fff}
+.card h3{margin:0 0 8px;font-size:21px}.card p{margin:0;font-size:17px;color:var(--ink2);line-height:1.5}
+q.pull{display:block;font-size:29px;line-height:1.4;font-style:italic;quotes:"„" "”";max-width:960px}
+.foot{margin-top:auto;padding-top:16px;border-top:1px solid var(--hair);font-size:16.5px;color:var(--ink2)}
+.stepbox{display:flex;align-items:flex-end;gap:14px;flex:1;padding-bottom:8px}
+.step{flex:1;border:1px solid var(--hair);border-radius:12px 12px 0 0;background:#fff;padding:16px;display:flex;flex-direction:column;justify-content:flex-end}
+.step .lv{font-size:12.5px;font-weight:800;letter-spacing:.1em;color:var(--mut)}
+.step h3{margin:6px 0 6px;font-size:21px}.step p{margin:0;font-size:14.5px;color:var(--ink2);line-height:1.45}
+.step .em{font-size:30px;line-height:1;margin-bottom:8px}
+.step.t{border-color:var(--acc);border-width:2px;box-shadow:0 6px 20px rgba(42,120,214,.15)}
+.step.t .tgt{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.1em;color:#fff;background:var(--acc);border-radius:999px;padding:3px 10px;margin-bottom:8px;align-self:flex-start}
+.vs{display:grid;grid-template-columns:1fr 64px 1fr;align-items:center;gap:0;flex:1}
+.vs .no,.vs .yes{border-radius:14px;padding:32px;font-size:26px;line-height:1.35;font-weight:650}
+.vs .no{background:rgba(82,81,78,.07);color:var(--ink2);text-decoration:line-through;text-decoration-thickness:2px;text-decoration-color:rgba(11,11,11,.35)}
+.vs .yes{background:rgba(42,120,214,.09);color:var(--ink);border:1.5px solid var(--acc)}
+.vs .mid{text-align:center;font-size:26px;color:var(--mut)}
+.rowcards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;flex:1;align-content:center}
+.split{display:grid;grid-template-columns:1.2fr 1fr;gap:36px;flex:1;align-content:center;align-items:center}
+.minitiles{display:flex;flex-direction:column;gap:12px}
+.minitiles .tile{padding:14px 18px}.minitiles .num{font-size:34px}.minitiles .lab{margin-top:4px;font-size:14px}
+@media print{body{overflow:visible}.hud,.help{display:none}.slide{display:flex;position:static;transform:none;width:1280px;height:720px;margin:8mm auto;page-break-after:always}}
+</style></head>
+<body>
+<header class="hud">
+  <div class="brand"><b>AI-Mindset</b> · Moduł 1 — Psychologia AI-Mindset</div>
+  <div class="tracks"><button class="on" data-set="all">Wszystkie</button><button data-set="nonit">Biznes</button><button data-set="it">IT / Software</button></div>
+  <div class="counter" id="ctr">1 / 19</div>
+</header>
+
+<!-- 1 -->
+<section class="slide" data-track="core">
+  <p class="kick">AI-Mindset · Moduł 1 z 5</p>
+  <svg style="position:absolute;top:58px;right:78px" width="130" height="130" viewBox="0 0 100 100" fill="none" stroke="#2a78d6" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+    <line x1="12" y1="92" x2="76" y2="16"/><circle cx="30" cy="71" r="6"/>
+    <path d="M76,16 C 88,28 88,46 82,60" stroke-dasharray="3 4" stroke-width="1.8"/>
+    <path d="M82,60 c -5,3 -8,-1 -5,-5" stroke-width="1.8"/>
+  </svg>
+  <div class="body">
+    <h1>AI-Mindset:<br>zmiana zachowań, by wygrywać w&nbsp;świecie AI</h1>
+    <p class="lead">To nie jest szkolenie z narzędzi. <span style="color:var(--mut)">(W całym programie nie ma ani jednego zrzutu ekranu z funkcjami — zdezaktualizowałyby się przed przerwą kawową.)</span></p>
+  </div>
+  <div class="foot">Tomasz Mierzejowski · tomaszmierzejowski.pl · „Daję wędkę”</div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-track="core">
+  <p class="kick">Złe pytanie</p>
+  <div class="vs">
+    <div class="no">„Które narzędzie AI powinniśmy kupić?”</div>
+    <div class="mid">→</div>
+    <div class="yes">„Co nasi ludzie zrobią <b>inaczej</b> w poniedziałek rano?”</div>
+  </div>
+  <div class="foot">Narzędzia zmieniają się co kwartał. Nawyki procentują.</div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-track="core">
+  <p class="kick">Zasady gry</p>
+  <h2>Fakty ponad opinie</h2>
+  <div class="rowcards" style="grid-template-columns:repeat(3,1fr)">
+    <div class="card"><span class="badge v">ZWERYFIKOWANE</span><p style="margin-top:12px">Dostarczony projekt. Policzalny, audytowalny, nasz.</p></div>
+    <div class="card"><span class="badge s">BADANIE</span><p style="margin-top:12px">Cytowane badanie — z nazwy, do sprawdzenia.</p></div>
+    <div class="card"><span class="badge f">MODEL</span> <span class="badge o">OPINIA</span><p style="margin-top:12px">Oznaczone wprost. Teoria lub stanowisko — nigdy przebrane za fakt.</p></div>
+  </div>
+  <div class="foot">Liczba bez plakietki? Łapcie mnie za słowo. A te ZWERYFIKOWANE? Też sprawdzajcie — mam paragony, referencje na życzenie.</div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-track="core">
+  <p class="kick">Historia prawdziwa</p>
+  <svg style="position:absolute;top:54px;right:78px" width="150" height="126" viewBox="0 0 120 100" fill="none" stroke="#2a78d6" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
+    <polygon points="20,50 60,18 100,50"/><rect x="28" y="50" width="64" height="38"/>
+    <rect x="52" y="62" width="16" height="26"/><rect x="36" y="56" width="10" height="10"/><rect x="74" y="56" width="10" height="10"/>
+  </svg>
+  <h2>Domek</h2>
+  <div class="body">
+    <q class="pull">Moje dzieci chciały drewniany domek. Jedna sesja z AI: rysunki architektoniczne, obliczenia konstrukcyjne, gotowy koszyk w markecie budowlanym. Godzina. Zero architekta.</q>
+  </div>
+  <div class="foot">Ten slajd nie ma plakietki — to hak, nie dowód. Dowody za chwilę. (Przy budowie tego domku nie ucierpiał żaden architekt.)</div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-track="core">
+  <p class="kick">🛝 Ten sam wzorzec, skala zawodowa &nbsp;<span class="badge v">ZWERYFIKOWANE</span></p>
+  <h2>Project Terrain — generatywna AI w projektowaniu fizycznym</h2>
+  <div class="tiles">
+    <div class="tile"><div class="num">~200</div><div class="lab">wariantów projektu prawdziwego placu zabaw</div></div>
+    <div class="tile"><div class="num">8</div><div class="lab">rund iteracji z klientem</div></div>
+    <div class="tile"><div class="num">3–4×</div><div class="lab">niższy koszt vs podejście tradycyjne</div></div>
+  </div>
+  <div class="foot">Ten sam nawyk co przy Domku. Inna stawka.</div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-track="core">
+  <p class="kick">⛑️ Ten sam wzorzec, najwyższa stawka &nbsp;<span class="badge v">ZWERYFIKOWANE</span></p>
+  <h2>Akcja ratunkowa w 4 dni</h2>
+  <p class="lead" style="margin-bottom:10px">Norweski non-profit badający zdrowie psychiczne dzieci. Aplikacja martwa na wygaszonym frameworku. Zagrożony ogólnokrajowy program badawczy.</p>
+  <div class="split">
+    <svg width="560" height="150" viewBox="0 0 560 150" aria-hidden="true">
+      <text x="0" y="18" font-size="16" fill="#52514e" font-family="system-ui">Typowa wycena rynkowa: 4–8 tygodni</text>
+      <rect x="0" y="28" width="520" height="20" rx="4" fill="#e1e0d9"/>
+      <text x="0" y="96" font-size="16" fill="#0b0b0b" font-weight="700" font-family="system-ui">Dostarczone: 4 dni</text>
+      <rect x="0" y="106" width="50" height="20" rx="4" fill="#2a78d6"/>
+      <text x="62" y="122" font-size="15" fill="#1c5cab" font-weight="700" font-family="system-ui">≈ −90% czasu</text>
+    </svg>
+    <div class="minitiles">
+      <div class="tile"><div class="num">92%</div><div class="lab">zachowanego kodu</div></div>
+      <div class="tile"><div class="num">0</div><div class="lab">regresji</div></div>
+      <div class="tile"><div class="num">100%</div><div class="lab">akceptacja sklepów za 1. podejściem</div></div>
+    </div>
+  </div>
+  <div class="foot">Szefowa projektu, w Wigilię: <i>„Trudno opisać, jaką ulgę i radość poczułam w tamtej chwili.”</i></div>
+</section>
+
+<!-- 6b -->
+<section class="slide" data-track="core">
+  <p class="kick">Zanim uznasz, że pokazuję tylko sukcesy</p>
+  <h2>Uczciwa gwiazdka *</h2>
+  <div class="body">
+    <ul class="big">
+      <li>🙈 Dostarczyłem analizę AI, którą interesariusze <b>zignorowali</b> — poprawna technicznie, kompletna czarna skrzynka. <span style="color:var(--mut)">(Naprawione tagowaniem dowodów → Moduł 3.)</span></li>
+      <li>⏳ Straciłem całe popołudnie na zadanie, które ręcznie zrobiłbym w 20 minut. <span style="color:var(--mut)">(Naprawione macierzą zaufania → Moduł 3.)</span></li>
+      <li>📝 Moje pierwsze prompty były fatalne. Jak u każdego. <span style="color:var(--mut)">(Naprawione jednym schematem i trzema tygodniami nawyku → Moduł 2.)</span></li>
+    </ul>
+  </div>
+  <div class="foot">Sprzedawca pokazuje highlighty. Nauczyciel pokazuje wpadki — a potem metodę, która je usunęła.</div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-track="core">
+  <p class="kick">Model</p>
+  <h2>Spektrum AI-Augmented</h2>
+  <div class="stepbox">
+    <div class="step" style="min-height:34%"><div class="em">👀</div><span class="lv">POZIOM 1</span><h3>AI-Curious</h3><p>Spróbował czatbota. Bez stałego użycia.</p></div>
+    <div class="step" style="min-height:50%"><div class="em">✋</div><span class="lv">POZIOM 2</span><h3>AI-Assisted</h3><p>Używa AI, gdy sobie przypomni — zwykle do polerowania gotowej pracy.</p></div>
+    <div class="step t" style="min-height:68%"><span class="tgt">CEL</span><div class="em">⚡</div><span class="lv">POZIOM 3</span><h3>AI-Augmented</h3><p>AI to pierwszy krok do wszystkiego. Nie jedyny. Pierwszy.</p></div>
+    <div class="step" style="min-height:86%"><div class="em">🚀</div><span class="lv">POZIOM 4</span><h3>AI-Native</h3><p>Projektuje pracę wykonywaną przez AI od A do Z; człowiek specyfikuje i weryfikuje.</p></div>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-track="core">
+  <p class="kick">Autodiagnoza</p>
+  <h2>Gdzie jesteś — szczerze?</h2>
+  <div class="rowcards">
+    <div class="card"><h3>Poziom 1</h3><p>„Raz spróbowałem ChatGPT. Było dziwnie. Wyszedłem.”</p></div>
+    <div class="card"><h3>Poziom 2</h3><p>„Używam AI, kiedy sobie przypomnę.”</p></div>
+    <div class="card" style="border-color:var(--acc);border-width:2px"><h3>Poziom 3</h3><p>„AI to mój pierwszy krok do wszystkiego. Nie jedyny. Pierwszy.”</p></div>
+    <div class="card"><h3>Poziom 4</h3><p>„Projektuję pracę, którą AI wykonuje od A do Z; ja weryfikuję.”</p></div>
+  </div>
+  <div class="foot">W każdej dotychczasowej grupie większość sali to poziom 1 albo 2. Właśnie po to jest dzisiejszy dzień.</div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-track="core">
+  <div class="one"><p>Różnica nie leży w narzędziach.<br><span style="color:var(--accT)">Leży w kolejności.</span></p></div>
+  <div style="display:flex;gap:40px;margin-bottom:8px;font-size:20px">
+    <div style="flex:1;background:rgba(82,81,78,.07);border-radius:12px;padding:16px 22px">Poziom 2: &nbsp;🧠 Ty piszesz → 🤖 AI poleruje</div>
+    <div style="flex:1;background:rgba(42,120,214,.09);border:1.5px solid var(--acc);border-radius:12px;padding:16px 22px">Poziom 3: &nbsp;🤖 AI szkicuje → 🧠 Ty oceniasz</div>
+  </div>
+  <div class="foot">Te same narzędzia. Inna ekonomia.</div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-track="core">
+  <p class="kick">Dlaczego adopcja naprawdę utyka &nbsp;<span class="badge f">MODEL</span></p>
+  <h2>Cztery tarcia</h2>
+  <div class="rowcards">
+    <div class="card"><h3>😨 1 · Strach</h3><p>„Nie chcę być widziany, jak uczę się ‘juniorskiego’ narzędzia do własnej roboty.”</p></div>
+    <div class="card"><h3>🎭 2 · Tożsamość</h3><p>„15 lat szlifowałem rzemiosło — a to coś robi 70% w kilka sekund.”</p></div>
+    <div class="card"><h3>⚖️ 3 · Zaufanie</h3><p>Raz poparzony → nigdy więcej. Albo jedno świetne demo → ślepa wiara.</p></div>
+    <div class="card"><h3>🛋️ 4 · Inercja</h3><p>Stary sposób kosztuje zero silnej woli. Nowy — kosztuje ją tygodniami.</p></div>
+  </div>
+  <div class="foot">Żadnego z nich nie leczy pokaz funkcji — a wszystkie cztery znają Twój karnet na siłownię.</div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-track="core">
+  <p class="kick">Psychologia &nbsp;<span class="badge f">MODEL — Kahneman i Tversky</span></p>
+  <h2>Twój mózg działa zgodnie ze specyfikacją</h2>
+  <div class="body">
+    <ul class="big">
+      <li><b>Efekt status quo:</b> sprawdzony stary sposób pracy <i>czuje się</i> bezpieczny — nawet gdy jest mierzalnie wolniejszy.</li>
+      <li><b>Awersja do straty:</b> koszt zmiany czujesz <b>dziś</b>; zysk przychodzi <b>później</b>. Mózg głosuje na dziś.</li>
+    </ul>
+  </div>
+  <div class="foot">Te soczewki to sprawdzona nauka. Ich zastosowanie do adopcji AI to moja zawodowa ocena — oznaczona jako taka.</div>
+</section>
+
+<!-- 11b -->
+<section class="slide" data-track="core">
+  <p class="kick">Cztery profile, jedna zmiana &nbsp;<span class="badge f">MODEL — soczewka DISC</span></p>
+  <h2>Ta sama AI. Cztery różne reakcje.</h2>
+  <div class="rowcards" style="grid-template-columns:repeat(4,1fr)">
+    <div class="card" style="border-top:5px solid #e34948"><h3>D · Dominujący</h3><p><b>Słyszy:</b> „przewaga i tempo”.<br><b>Ryzyko:</b> deleguje bez weryfikacji.<br><b>Sprzedaj mu:</b> wyniki + smycz jako zarządzanie ryzykiem.</p></div>
+    <div class="card" style="border-top:5px solid #eda100"><h3>I · Wpływowy</h3><p><b>Słyszy:</b> „nowość, historia do opowiedzenia”.<br><b>Ryzyko:</b> 10 narzędzi, 0 nawyków.<br><b>Sprzedaj mu:</b> scenę — show-and-tell, rola czempiona.</p></div>
+    <div class="card" style="border-top:5px solid #1baf7a"><h3>S · Stabilny</h3><p><b>Słyszy:</b> „zaburzenie zespołu i rutyny”.<br><b>Ryzyko:</b> ciche NIE-wdrożenie (kiwa głową, nic nie zmienia).<br><b>Sprzedaj mu:</b> małe kroki + partner + dowód od kolegi.</p></div>
+    <div class="card" style="border-top:5px solid #2a78d6"><h3>C · Sumienny</h3><p><b>Słyszy:</b> „ryzyko jakości forsowane przez laików”.<br><b>Ryzyko:</b> jedna halucynacja = wieczne odrzucenie.<br><b>Sprzedaj mu:</b> dowody, tagi, protokoły — Moduł 3 to jego dom.</p></div>
+  </div>
+  <div class="foot">Uczciwie: DISC to soczewka komunikacyjna, nie diagnoza — psychometrycznie słaby. Naukowym kręgosłupem jest Wielka Piątka + skala oporu Orega (JAP 2003). Jeden program, cztery opakowania.</div>
+</section>
+
+<!-- 11c -->
+<section class="slide" data-track="core">
+  <p class="kick">Widok populacji &nbsp;<span class="badge f">MODEL — Rogers, dyfuzja innowacji (1962–2003)</span></p>
+  <h2>Nie projektuj wdrożenia dla maruderów</h2>
+  <div class="body" style="align-items:center">
+    <svg width="900" height="240" viewBox="0 0 900 250" aria-hidden="true">
+      <path d="M50,218 C200,212 290,140 375,88 C415,63 485,63 525,88 C610,140 700,212 850,218" fill="none" stroke="#2a78d6" stroke-width="3"/>
+      <line x1="50" y1="220" x2="850" y2="220" stroke="#c3c2b7" stroke-width="1.5"/>
+      <g stroke="#c3c2b7" stroke-width="1.3" stroke-dasharray="5 5">
+        <line x1="170" y1="70" x2="170" y2="220"/><line x1="300" y1="70" x2="300" y2="220"/>
+        <line x1="450" y1="70" x2="450" y2="220"/><line x1="600" y1="70" x2="600" y2="220"/>
+      </g>
+      <rect x="300" y="70" width="300" height="150" fill="rgba(42,120,214,.08)"/>
+      <g font-family="system-ui" font-size="14" fill="#52514e" text-anchor="middle">
+        <text x="110" y="243">innowatorzy 2,5%</text>
+        <text x="235" y="243">wcześni adoptujący 13,5%</text>
+        <text x="375" y="243" font-weight="800" fill="#1c5cab">wczesna większość 34%</text>
+        <text x="525" y="243" font-weight="800" fill="#1c5cab">późna większość 34%</text>
+        <text x="725" y="243">maruderzy 16%</text>
+      </g>
+      <text x="450" y="52" text-anchor="middle" font-family="system-ui" font-size="15" font-weight="700" fill="#1c5cab">TU SIĘ WYGRYWA — i większość kupuje dowód od kolegów, nie statystyki</text>
+    </svg>
+  </div>
+  <div class="foot">Nawrócenie ostatnich 16% kosztuje więcej niż pierwszych 84% razem — a próba (zwykle nakaz) psuje adopcję u wszystkich pozostałych.</div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-track="core">
+  <p class="kick">Co naprawdę mówią dane &nbsp;<span class="badge s">BADANIE — Cui i in., 2024</span></p>
+  <h2>Narzędzie było stałe. Zmienną było zachowanie.</h2>
+  <div class="split">
+    <svg width="620" height="170" viewBox="0 0 620 170" aria-hidden="true">
+      <line x1="30" y1="110" x2="600" y2="110" stroke="#c3c2b7" stroke-width="1.5"/>
+      <text x="60" y="132" font-size="13" fill="#898781" font-family="system-ui" text-anchor="middle">−20%</text>
+      <text x="170" y="132" font-size="13" fill="#898781" font-family="system-ui" text-anchor="middle">0</text>
+      <text x="447" y="132" font-size="13" fill="#898781" font-family="system-ui" text-anchor="middle">+50%</text>
+      <text x="590" y="132" font-size="13" fill="#898781" font-family="system-ui" text-anchor="middle">+80%</text>
+      <g fill="#c3c2b7">
+        <circle cx="88" cy="95" r="6"/><circle cx="126" cy="82" r="6"/><circle cx="148" cy="98" r="6"/><circle cx="187" cy="76" r="6"/>
+        <circle cx="209" cy="92" r="6"/><circle cx="236" cy="80" r="6"/><circle cx="253" cy="96" r="6"/><circle cx="269" cy="72" r="6"/>
+        <circle cx="291" cy="88" r="6"/><circle cx="308" cy="76" r="6"/><circle cx="341" cy="94" r="6"/><circle cx="368" cy="80" r="6"/>
+        <circle cx="401" cy="90" r="6"/><circle cx="434" cy="78" r="6"/><circle cx="472" cy="92" r="6"/><circle cx="516" cy="82" r="6"/><circle cx="566" cy="90" r="6"/>
+      </g>
+      <path d="M313,72 l 9,13 -9,13 -9,-13 z" fill="#2a78d6"/>
+      <text x="313" y="48" font-size="16" fill="#1c5cab" font-weight="800" font-family="system-ui" text-anchor="middle">średnia: +26%</text>
+      <text x="313" y="160" font-size="14" fill="#52514e" font-family="system-ui" text-anchor="middle">każda kropka = zespół · rozrzut od spadków po podwojenie</text>
+    </svg>
+    <div class="minitiles">
+      <div class="tile"><div class="num">~4 800</div><div class="lab">osób w eksperymentach terenowych (m.in. Microsoft)</div></div>
+      <div class="tile"><div class="num">↑ najwięcej</div><div class="lab">zyskali ci, którzy <b>zmienili sposób pracy</b> — nie najstarsi stażem</div></div>
+    </div>
+  </div>
+  <div class="foot">Uczciwie: pomiar na zespołach software’owych — najłatwiejszych do zmierzenia. Mechanizm to zmiana nawyków, a nawyki nie pytają o branżę.</div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-track="core">
+  <p class="kick">Dlaczego szkolenia z narzędzi zawodzą &nbsp;<span class="badge s">BADANIE — McKinsey 2023</span></p>
+  <h2>Model „dam ci rybę” 🐟</h2>
+  <div class="body">
+    <ul class="big">
+      <li>Trener pokazuje funkcje → sala kiwa głowami → w poniedziałek wygrywają stare nawyki. <span style="color:var(--mut)">(Niepokonane od zawsze.)</span></li>
+      <li>McKinsey: zyski produktywności pojawiają się tylko przy szkoleniu <b>i praktyce</b> —</li>
+      <li>a przy złożonych zadaniach są minimalne <b>bez zmiany sposobu pracy</b>.</li>
+    </ul>
+  </div>
+  <div class="foot">Wiedza nigdy nie była luką. Luką jest domyślne zachowanie.</div>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-track="core">
+  <p class="kick">Kontrakt tego programu</p>
+  <svg style="position:absolute;top:58px;right:78px" width="120" height="120" viewBox="0 0 100 100" fill="none" stroke="#2a78d6" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+    <line x1="12" y1="92" x2="76" y2="16"/><circle cx="30" cy="71" r="6"/>
+    <path d="M76,16 C 88,28 88,46 82,60" stroke-dasharray="3 4" stroke-width="1.8"/>
+    <path d="M82,60 c -5,3 -8,-1 -5,-5" stroke-width="1.8"/>
+  </svg>
+  <h2>Daję wędkę</h2>
+  <div class="body">
+    <q class="pull">Nie zostawię Wam mojego numeru telefonu jako strategii AI. Wychodzicie z nawykami, nie z zależnością. Czasem zbuduję rybę — żeby pokazać, że w tej wodzie są ryby — ale do domu zabieracie wędkę.</q>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-track="core">
+  <p class="kick">Dlaczego można ufać nadawcy &nbsp;<span class="badge v">ZWERYFIKOWANE</span></p>
+  <h2>„Nie uczę teorii”</h2>
+  <div class="tiles">
+    <div class="tile"><div class="num">14 lat</div><div class="lab">twardej inżynierii, zanim padło słowo „AI”</div></div>
+    <div class="tile"><div class="num">5+ lat</div><div class="lab">ciągłej modernizacji globalnej platformy krytycznej (Project Meridian-Core)</div></div>
+    <div class="tile"><div class="num">0</div><div class="lab">przerw operacyjnych przez te pięć lat</div></div>
+  </div>
+  <div class="foot">Te rady pisze ktoś, kto nosi na plecach ryzyko produkcyjne — nie ewangelista narzędzi.</div>
+</section>
+
+<!-- 16 -->
+<section class="slide" data-track="core">
+  <div class="one"><p>AI nie zastępuje wiedzy.<br><span style="color:var(--accT)">Usuwa wymówki dla jej braku.</span></p></div>
+  <div class="foot">Domek nie potrzebował architekta, bo wiedza stała się dostępna. Ocena i weryfikacja zostały ludzkie.</div>
+</section>
+
+<!-- 17 -->
+<section class="slide" data-track="core">
+  <p class="kick">Ćwiczenie · 10 minut ✍️</p>
+  <h2>Twoje zobowiązanie Poziomu 3</h2>
+  <div class="body">
+    <ul class="big">
+      <li>Zapisz <b>jedno powtarzalne zadanie</b> — Twoje, od jutra — w którym AI będzie Twoim <b>pierwszym krokiem</b>.</li>
+      <li>Konkret bije szlachetność: <i>„Każdą ofertę zaczynam od szkicu z AI”</i> — a nie <i>„będę więcej używać AI”</i>.</li>
+      <li>Podzielcie się w parach. Zachowaj kartkę — wróci w Module 5.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 18 -->
+<section class="slide" data-track="core">
+  <p class="kick">Podsumowanie</p>
+  <h2>Trzy rzeczy do wyniesienia z tej sali</h2>
+  <div class="rowcards" style="grid-template-columns:repeat(3,1fr)">
+    <div class="card"><h3>1️⃣</h3><p>Zachowania, nie narzędzia. Kolejność pierwszych ruchów to cała gra.</p></div>
+    <div class="card"><h3>2️⃣</h3><p>Nazwij swoje tarcie — strach, tożsamość, zaufanie, inercja. To normalne i do przepracowania.</p></div>
+    <div class="card"><h3>3️⃣</h3><p>Pierwszy krok. Nie jedyny. Pierwszy.</p></div>
+  </div>
+  <div class="foot">Dalej — Moduł 2: pierwszy krok w praktyce. Uwaga: dziś zobaczyliście może 5% mapy. Celowo — głód to funkcja, nie usterka.</div>
+</section>
+
+<footer class="help">← → nawigacja · wybierz ścieżkę u góry, by dopasować talię · Ctrl/Cmd+P = wydruk</footer>
+<script>
+const slides=[...document.querySelectorAll('.slide')];let track='all',i=0;
+const vis=()=>slides.filter(s=>{const t=s.dataset.track;return t==='core'||track==='all'||t===track;});
+function show(n){const v=vis();i=Math.max(0,Math.min(n,v.length-1));slides.forEach(s=>s.classList.remove('on'));v[i].classList.add('on');document.getElementById('ctr').textContent=(i+1)+' / '+v.length;history.replaceState(null,'','#'+(i+1));}
+document.querySelectorAll('.tracks button').forEach(b=>b.onclick=()=>{track=b.dataset.set;document.querySelectorAll('.tracks button').forEach(x=>x.classList.toggle('on',x===b));show(i);});
+addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();show(i+1);}else if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();show(i-1);}else if(e.key==='Home')show(0);else if(e.key==='End')show(1e4);});
+addEventListener('click',e=>{if(e.target.closest('.hud'))return;show(e.clientX>innerWidth/2?i+1:i-1);});
+function fit(){document.documentElement.style.setProperty('--s',Math.min(innerWidth/1330,(innerHeight-70)/740));}
+addEventListener('resize',fit);fit();show((parseInt(location.hash.slice(1))||1)-1);
+</script>
+</body></html>
