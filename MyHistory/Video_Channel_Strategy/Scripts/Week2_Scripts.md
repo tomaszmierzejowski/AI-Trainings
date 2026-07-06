@@ -1,15 +1,18 @@
-# TYDZIEŃ 2 — "GDZIE JESTEŚ?" | Pełne skrypty
-> Motyw: adaptacja M2 THE SPECTRUM + M3 THE DOMEK. Widz się diagnozuje i dostaje emocjonalny dowód, że skok jest możliwy.
+# Odcinki 2.1–2.4 — motyw SPEKTRUM + DOMEK | skrypty v2 (po audycie 2026-07-06)
+> Emisja wg Content_Calendar.md: 2.1 → V2 (śr 22 lip) · 2.4 → V3 (sob 1 sie) · 2.3 i 2.2 → V4 (5 i 8 sie).
+> Zmiany v2: hook ≤8 słów + overlay · sygnatura · błąd warunkowy w DEMO.
+> Sygnatura każdego filmu: **"AI to Twój pierwszy krok. Nie jedyny. Pierwszy."**
 
 ---
 
-## 2.1 MIND — "4 poziomy ludzi wobec AI"
+## 2.1 MIND — "4 poziomy ludzi wobec AI" (V2, śr 22 lip)
 
-**Format:** talking head + 4 plansze poziomów (to odcinek do SAVE'owania — plansze robią robotę).
-**Bliźniak:** karuzela IG 6 slajdów (okładka, L1–L4, pytanie diagnostyczne).
+**Format:** talking head + 4 plansze poziomów (odcinek do SAVE'owania).
+**Bliźniak:** karuzela IG 6 slajdów (niedziela 26 lip). **Sync:** LinkedIn M2-POLL startuje 21 lip — tematy się wzmacniają.
 
-**HOOK (0–3 s):**
-> Są cztery poziomy pracy z AI. Większość ludzi jest na poziomie 2 i szczerze wierzy, że jest na 3.
+**HOOK (0–3 s, mówiony):**
+> Cztery poziomy pracy z AI. Jesteś na drugim.
+**Overlay:** "…i myślisz, że na trzecim"
 
 **STAKE (3–8 s):**
 > Sprawdzisz się jednym pytaniem. Ale najpierw poziomy — szukaj swojego.
@@ -23,60 +26,60 @@
 > Diagnozuj się po zachowaniu, nie po aspiracji.
 > *(plansza: [MOJA PRAKTYKA] — na każdym szkoleniu ludzie lokują się o poziom wyżej niż ich poniedziałkowe zachowanie)*
 
-**CTA (48–60 s):**
+**CTA (48–58 s):**
 > Skok, który zmienia kariery, to 2 → 3. Zero nowych narzędzi, zero budżetu, zero niczyjej zgody.
-> Napisz swój poziom w komentarzu — odpowiem, jaki jest najszybszy skok z Twojego miejsca. *(to paliwo pod odcinki REPLY)*
+> Napisz swój poziom — odpowiem, jaki jest najszybszy skok z Twojego miejsca. *(paliwo pod REPLY)*
 
-**Warianty hooka:**
-1. "Jedno pytanie mówi mi więcej o Twojej pracy z AI niż CV. Od czego zacząłeś ostatnie ważne zadanie?"
-2. "Poziom 2 to pułapka: czujesz, że używasz AI. Nie zmienia to nic."
+**SYGNATURA:** jak zawsze.
 
-**Opisy:** TT/IG: "L1 Ciekawy → L4 Native. Który jesteś NAPRAWDĘ? Test jednym pytaniem 👇"; YT: "4 poziomy pracy z AI — sprawdź, na którym jesteś (AI-Mindset)".
+**Warianty hooka:** 1. "Cztery poziomy pracy z AI. Jesteś na drugim." 2. "Poziom 2 to pułapka. Sprawdź się." 3. "Od czego zacząłeś ostatnie ważne zadanie?"
+**Opisy:** TT/IG: "L1 Ciekawy → L4 Native. Który jesteś NAPRAWDĘ? 👇" · YT: "4 poziomy pracy z AI — sprawdź swój (AI-Mindset)".
 **Hashtagi:** #AIMindset #AIpoPolsku #rozwójosobisty #sztucznainteligencja
 
 ---
 
-## 2.2 DEMO — "Urlop zaplanowany w 15 minut"
+## 2.2 DEMO — "Urlop zaplanowany w 15 minut" (V4, sob 8 sie)
 
-**Format:** screen-recording + lektor; timer w rogu ekranu (uczciwy — realny czas, przyspieszenia oznaczone).
-**Zasada prawdy:** pokazujemy błąd AI (godziny otwarcia / ceny) i weryfikację — to celowo wpisane w odcinek.
+**Format:** screen-recording + lektor; uczciwy timer w rogu (przyspieszenia oznaczone).
 
-**HOOK (0–3 s):**
-> Plan tygodnia we Włoszech: 15 minut zamiast pięciu wieczorów z piętnastoma zakładkami.
+**HOOK (0–3 s, mówiony):**
+> Urlop zaplanowany w piętnaście minut.
+**Overlay:** "zamiast pięciu wieczorów z 15 zakładkami"
 
 **STAKE (3–10 s):**
-> I pokażę Wam w tym miejsce, gdzie AI kłamie — bo przy urlopie kłamie prawie zawsze w ten sam sposób.
+> I pokażę Wam krok, który wszyscy pomijają — weryfikację. Bo przy urlopie AI myli się najczęściej w faktach z datą.
 
 **MEAT (10–50 s):** *(ekran, kroki na żywo)*
-> Prompt nr 1: "Tydzień w Toskanii, dwoje dorosłych, dwoje dzieci 6 i 9, budżet X, mamy auto, nie lubimy muzeów powyżej godziny". Ograniczenia to połowa jakości planu.
+> Prompt nr 1: "Tydzień w Toskanii, dwoje dorosłych, dzieci 6 i 9, budżet X, mamy auto, nie lubimy muzeów powyżej godziny". Ograniczenia to połowa jakości planu.
 > *(wynik — plan dzień po dniu)*
-> Wygląda świetnie. I teraz krok, który pomijają wszyscy: weryfikacja.
-> Sprawdzam godziny otwarcia jednej atrakcji u źródła... i proszę: *(pokazujesz rozjazd — np. zamknięte w poniedziałki)*. AI podało dane, które brzmiały pewnie. Były nieaktualne.
-> Prompt nr 2: "Popraw plan: to miejsce zamknięte w poniedziałki". Trzydzieści sekund i plan stoi.
+> Wygląda świetnie. Teraz krok pomijany: sprawdzam godziny otwarcia i ceny JEDNEJ atrakcji u źródła.
+> **[WARUNKOWO:]**
+> **(a) rozjazd jest** (np. zamknięte w poniedziałki): I proszę — AI podało dane pewnie, a były nieaktualne. Prompt nr 2: "Popraw plan: to miejsce zamknięte w poniedziałki". Trzydzieści sekund.
+> **(b) wszystko się zgadza:** Dziś się zgadza — ale dane o godzinach i cenach starzeją się najszybciej. Ten jeden sprawdzian robię ZAWSZE, bo koszt pomyłki płaci się na miejscu, z dziećmi w aucie.
 > *(plansza: AI planuje. Źródła potwierdzają. Ty decydujesz.)*
 
-**CTA (50–60 s):**
-> Szkic planu: AI. Fakty: źródła. Decyzje: Wy. Dokąd jedziecie tego lata? Zrobię z tego materiał.
+**CTA (50–58 s):**
+> Szkic planu: AI. Fakty: źródła. Decyzje: Wy. Dokąd jedziecie tego lata?
 
-**Warianty hooka:**
-1. "Pięć wieczorów planowania urlopu zamieniam na jeden prompt. Ale jest haczyk."
-2. "AI zaplanowało mi urlop i skłamało w jednym miejscu. Pokazuję w którym."
+**SYGNATURA:** jak zawsze.
 
-**Opisy:** TT/IG: "Urlop z AI w 15 min — plus miejsce, w którym AI ZAWSZE kłamie ✈️"; YT: "Jak zaplanować urlop z AI (i gdzie musisz je sprawdzić)".
+**Warianty hooka:** 1. "Urlop zaplanowany w piętnaście minut." 2. "Pięć wieczorów planowania. Albo jeden prompt." 3. "AI planuje urlop. I myli się przewidywalnie."
+**Opisy:** TT/IG: "Urlop z AI w 15 min — plus krok, który wszyscy pomijają ✈️" · YT: "Jak zaplanować urlop z AI (i co koniecznie sprawdzić)".
 **Hashtagi:** #AIwpodróży #AIpoPolsku #AIMindset #wakacje
 
 ---
 
-## 2.3 LIFE — "Domek dla dzieci" ⭐ kotwica emocjonalna sezonu
+## 2.3 LIFE — "Domek dla dzieci" ⭐ (V4, śr 5 sie — dzień po M3 na LinkedIn)
 
-**Format:** talking head; jeśli domek istnieje w kadrze — nagraj PRZY nim (najsilniejsza wersja). Zdjęcia rysunków/domku jako wstawki.
-**Źródło:** M3 THE DOMEK, [MOJA PRAKTYKA]. Zasada: historia zaczyna się od dzieci, nie od prompta.
+**Format:** talking head PRZY domku (najsilniejsza wersja) + wstawki: zdjęcia rysunków/domku.
+**Źródło:** M3 THE DOMEK, [MOJA PRAKTYKA]. Historia zaczyna się od dzieci, nie od prompta.
 
-**HOOK (0–3 s):**
-> Moje dzieci chciały domek w ogrodzie. Ja nie umiem projektować budynków.
+**HOOK (0–3 s, mówiony):**
+> Dzieci chciały domek. Nie umiem projektować.
+**Overlay:** "godzinę później miałem rysunki architektoniczne"
 
 **STAKE (3–10 s):**
-> Godzinę później trzymałem w rękach rysunki. Prawdziwe wymiary. Lista zakupów do składu budowlanego.
+> Prawdziwe wymiary. Uwagi konstrukcyjne. Lista zakupów, z którą pojechałem do składu.
 
 **MEAT (10–48 s):**
 > Zaczęło się od jednego zdania: "Moje dzieci chcą mały domek".
@@ -86,52 +89,52 @@
 > *(wstawka: zdjęcie domku)*
 > Domek stoi. Dzieci przemalowały go na kolor, którego sam bym nigdy nie wybrał. Tego żadne AI nie przewidziało.
 
-**CTA (48–60 s):**
+**CTA (48–58 s):**
 > AI nie zastępuje wiedzy. Odbiera wymówki, żeby jej nie mieć.
-> Każdy ma swój domek — rzecz, której nigdy nie zaczął, bo "nie wie jak". Jaki jest Twój? Piszcie. Serio czytam wszystko.
+> Każdy ma swój domek — rzecz, której nigdy nie zaczął, bo "nie wie jak". Jaki jest Twój? Czytam wszystko.
 
-**Warianty hooka:**
-1. "Nie jestem stolarzem. Nie jestem architektem. Ten domek i tak stoi."
-2. "»Tata, zbudujesz nam domek?« Nie umiałem. Zbudowałem."
+**SYGNATURA:** jak zawsze.
 
-**Opisy:** TT/IG: "Historia, którą opowiadam na każdym szkoleniu — a zaczyna się od dzieci, nie od AI 🏠"; YT: "AI nie zastępuje wiedzy — odbiera wymówki. Historia domku".
+**Warianty hooka:** 1. "Dzieci chciały domek. Nie umiem projektować." 2. "Nie jestem stolarzem. Domek stoi." 3. "»Tata, zbudujesz nam domek?« Nie umiałem."
+**Opisy:** TT/IG: "Historia z każdego mojego szkolenia — zaczyna się od dzieci, nie od AI 🏠" · YT: "AI nie zastępuje wiedzy — odbiera wymówki. Historia domku".
 **Hashtagi:** #AIMindset #DIY #tata #AIpoPolsku #poprostuzacznij
 
 ---
 
-## 2.4 DEMO — "AI jako drugi mózg na spotkaniach"
+## 2.4 DEMO — "Drugi mózg na spotkaniach" (V3, sob 1 sie)
 
 **Format:** screen-recording (transkrypcja → obróbka) + talking head na klamrę.
-**Zasada prywatności:** demo na spotkaniu testowym/własnym, nigdy na realnym spotkaniu klienta; powiedz to w filmie — to buduje zaufanie.
+**Prywatność:** demo wyłącznie na spotkaniu testowym/własnym; mówisz to w filmie — buduje zaufanie.
 
-**HOOK (0–3 s):**
-> Notatki z tego spotkania napisały się same. Ale nie tak, jak myślisz.
+**HOOK (0–3 s, mówiony):**
+> Notatki ze spotkania napisały się same.
+**Overlay:** "ale nie tak, jak myślisz"
 
 **STAKE (3–10 s):**
 > Bo transkrypcja to nie notatki. Godzina gadania spisana co do słowa jest równie bezużyteczna jak brak notatek.
 
 **MEAT (10–48 s):** *(ekran)*
-> Krok 1: nagrywam i transkrybuję spotkanie — za zgodą uczestników, zawsze. To demo robię na własnym nagraniu.
+> Krok 1: nagrywam i transkrybuję — za zgodą uczestników, zawsze. To demo robię na własnym nagraniu.
 > Krok 2: prompt, który zmienia wszystko: "Z tej transkrypcji wyciągnij: decyzje, zadania z właścicielami i terminami, oraz pytania, które zostały BEZ odpowiedzi".
 > *(wynik na ekranie)*
 > Ta trzecia lista — pytania bez odpowiedzi — to najcenniejsza rzecz, jakiej nikt nie notuje ręcznie.
-> Krok 3: czytam i poprawiam. AI przypisało zadanie niewłaściwej osobie — poprawiam, bo ja tam byłem, a ono nie.
+> Krok 3: czytam i poprawiam.
+> **[WARUNKOWO:] (a) błąd przypisania** (zadanie u złej osoby): Poprawiam — bo ja tam byłem, a AI nie. **(b) czysto:** Dziś czysto — ale sprawdzam zawsze, bo to ja rozsyłam te notatki pod swoim nazwiskiem.
 > *(plansza: AI spisuje. Człowiek decyduje.)*
 
-**CTA (48–60 s):**
-> Jedno spotkanie w tym tygodniu potraktuj tak. Różnicę poczujesz od razu — napisz, co znalazło się na liście "bez odpowiedzi".
+**CTA (48–58 s):**
+> Jedno spotkanie w tym tygodniu potraktuj tak. Napisz, co wylądowało na liście "bez odpowiedzi".
 
-**Warianty hooka:**
-1. "Najcenniejsza część notatek ze spotkania to ta, której nikt nie zapisuje."
-2. "Godzina spotkania → 6 linijek, które faktycznie coś znaczą."
+**SYGNATURA:** jak zawsze.
 
-**Opisy:** TT/IG: "Transkrypcja ≠ notatki. Prompt, który robi różnicę 📝"; YT: "AI na spotkaniach: decyzje, zadania i pytania bez odpowiedzi".
+**Warianty hooka:** 1. "Notatki ze spotkania napisały się same." 2. "Najcenniejszej listy ze spotkań nikt nie prowadzi." 3. "Godzina spotkania. Sześć linijek, które znaczą."
+**Opisy:** TT/IG: "Transkrypcja ≠ notatki. Prompt, który robi różnicę 📝" · YT: "AI na spotkaniach: decyzje, zadania, pytania bez odpowiedzi".
 **Hashtagi:** #AIwpracy #AIMindset #produktywność #AIpoPolsku
 
 ---
 
-## Notatki produkcyjne tygodnia 2
+## Notatki produkcyjne
 
-- 2.3 (Domek) nagraj przy dobrej pogodzie przy domku — jeden dubel autentyczności > pięć w studiu.
-- Kolejność publikacji: 2.1 (diagnoza — generuje komentarze na cały tydzień) → 2.2 → 2.3 (weekend — treści emocjonalne żyją w weekendy [FRAMEWORK/OPINION]) → 2.4.
-- Komentarze pod 2.1 = surowiec na pierwszy REPLY (3.2). Odpowiadaj pisemnie krótko, najlepsze pytania zostaw na wideo.
+- 2.3 (Domek) nagraj przy dobrej pogodzie przy domku — jeden dubel autentyczności > pięć w studiu. Emisja dzień po M3 na LinkedIn (4 sie) — z realnym zdjęciem, jeśli publikowalne (dzieci nieidentyfikowalne; open item z Publishing_Strategy_v2).
+- Komentarze pod 2.1 = surowiec na REPLY#1 (3.2, emisja V7). Odpowiadaj pisemnie krótko; najlepsze pytania zostaw na wideo.
+- Weekend dla 2.3 celowo NIE — środa: kotwica emocjonalna wzmacnia LinkedIn-owy tydzień Domku. Treści emocjonalne w weekend to teza do przetestowania danymi, nie dogmat. [OPINIA]

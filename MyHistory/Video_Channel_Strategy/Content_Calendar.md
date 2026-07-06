@@ -1,104 +1,128 @@
-# Kalendarz: OBUDŹ AI-MINDSET — horyzont materiału: 12 tygodni (48 odcinków)
-## Sezon 1 (tyg. 1–8, źródło: kampania M1–M8) + Sezon 2 (tyg. 9–12, kandydaci Season-2)
-## Rotacja: MIND / DEMO / LIFE / (DEMO→REPLY od tyg. 3)
+# Kalendarz wideo: OBUDŹ AI-MINDSET — v2 (po audycie 2026-07-06)
+## Sezon 1: V1–V9 (13 lip – 13 wrz), zsynchronizowany z kampanią LinkedIn Mindset (M1–M8)
+## Kadencja: 3 filmy/tydzień — MIND · ZNAJDŹ KŁAMSTWO · LIFE/DEMO (śr / pt / sob)
 
-**Stan gotowości:** tyg. 1–3 → pełne skrypty w `Scripts/Week1–3_Scripts.md` · tyg. 4–8 → poziom odcinków (poniżej) · tyg. 9–12 → poziom motywów. Dalej materiał się kończy — sezon 3 wymaga nowych historii (zbieraj je z komentarzy i szkoleń od tygodnia 1).
+**Zmiany v2:** 4→3 filmy/tydz. (budżet czasu, patrz `../Theme_Week_Operating_System.md`) · nowy flagowy format
+tygodniowy **ZNAJDŹ KŁAMSTWO (ZK)** · daty przypięte do wtorków LinkedIn · odcinki niewchodzące w dany
+tydzień = REZERWA (wchodzą, gdy jest zapas czasu, albo zastępują słabszy filar wg danych).
 
-Konwencja: każdy odcinek = hook (pierwsze 2 sekundy) + jedna zmiana zachowania + pytanie na koniec.
-Odcinki MIND recyklingują kampanię LinkedIn M1–M8 (posty już napisane — skrypt to adaptacja, nie praca od zera).
+**Stan gotowości:** V1–V9 → **PEŁNE SKRYPTY, cały sezon 1 gotowy do produkcji** (`Scripts/Week1–3,6,8,9_Scripts.md`
++ `Scripts/ZK_Znajdz_Klamstwo.md` z materiałami ZK#1–9) · V10–V13 → poziom odcinków (skrypty = 1 sesja z Claude).
+Po V13 treść płynie z silników odnawialnych (ZK, REPLY, historie widzów, evergreen-remake, sala szkoleniowa) —
+szczegóły i matematyka zapasów: `Roadmap_24_Miesiace.md` §3.
 
----
-
-## TYDZIEŃ 1 — "Kolejność" (adaptacja M1 THE ORDER)
-
-| # | Filar | Tytuł roboczy | Hook (pierwsze zdanie) | Treść w 1 zdaniu |
-|---|---|---|---|---|
-| 1.1 | MIND | Ta sama praca, 10x różnicy | "Dwie osoby, te same narzędzia AI. Jedna wyciąga 10x więcej. Różnica nie jest tam, gdzie myślisz." | Draft-first vs polish-last; AI jako pierwszy krok. [BADANIE: Cui i in., ~26% więcej zadań] |
-| 1.2 | DEMO | Napisz maila zanim dopijesz kawę | "Ten mail zajął mi 47 sekund. Pokazuję cały ekran, bez cięć." | Realne demo: trudny mail (odmowa klientowi) — szkic AI + moja korekta na żywo. |
-| 1.3 | LIFE | Dlaczego w ogóle nagrywam | "Nigdy nie nagrywałem filmów. To jest mój pierwszy. Zbudowałem go metodą, której uczę." | Meta-odcinek: ten kanał powstaje AI-First — dowód na własnej skórze. |
-| 1.4 | DEMO | Obiad z tego, co masz w lodówce | "Zdjęcie lodówki. Jeden prompt. Trzy obiady." | AI w życiu prywatnym — najniższy próg wejścia; cel: shares poza bańką IT. |
-
-## TYDZIEŃ 2 — "Gdzie jesteś?" (adaptacja M2 THE SPECTRUM)
-
-| # | Filar | Tytuł | Hook | Treść |
-|---|---|---|---|---|
-| 2.1 | MIND | 4 poziomy ludzi wobec AI | "Jest test jednym pytaniem, który mówi, czy AI Ci pomaga, czy tylko Ci towarzyszy." | Spektrum L1 Ciekawy → L4 Native; plansza-grafika do save'owania. |
-| 2.2 | DEMO | Planowanie urlopu w 15 minut | "Plan tygodnia we Włoszech: 15 minut zamiast 5 wieczorów." | Podróż z AI: plan + budżet + weryfikacja godzin otwarcia (pokazuję błąd AI i korektę!). |
-| 2.3 | LIFE | Domek dla dzieci | "Moje dzieci chciały domek. Projekt zrobiłem w godzinę — a nie jestem stolarzem." | Historia Domku (M3, [MOJA PRAKTYKA]) — emocjonalny kotwica sezonu; start od dzieci, nie od prompta. |
-| 2.4 | DEMO | AI jako drugi mózg w pracy | "Notatki ze spotkania piszą się same. Ale nie tak, jak myślisz." | Transkrypcja → decyzje/akcje; zasada: AI spisuje, człowiek decyduje. |
-
-## TYDZIEŃ 3 — "Zaufanie" (adaptacja M4 THE CONFIDENT LIE) + start REPLY
-
-| # | Filar | Tytuł | Hook | Treść |
-|---|---|---|---|---|
-| 3.1 | MIND | AI kłamie Ci prosto w oczy | "AI właśnie podało mi 3 fakty. Jeden jest zmyślony. Płynność maskuje fałsz." | Confident lie; nawyk 60-sekundowej weryfikacji (zapowiedź M6). |
-| 3.2 | REPLY | Odpowiedź na najlepszy komentarz tyg. 1–2 | (natywne "odpowiedz wideo na komentarz") | Format społecznościowy — algorytm TT to premiuje; jeśli brak komentarzy: zapasowy DEMO. |
-| 3.3 | LIFE | Czego AI mnie nauczyło o... cierpliwości | "Najwięcej o sobie nauczyłem się nie od ludzi. Od maszyny." | Przemyślenie: iteracja > perfekcja; osobisty ton, zero narzędzi. |
-| 3.4 | DEMO | Sprawdź AI w 60 sekund | "Zanim wkleisz to do maila — 60 sekund, które ratuje Twoją reputację." | Praktyka weryfikacji (M6 THE SIGNATURE w wersji demo). |
-
-## TYDZIEŃ 4 — "Tarcie" (adaptacja M5 THE FRICTION MAP)
-
-| # | Filar | Tytuł | Hook | Treść |
-|---|---|---|---|---|
-| 4.1 | MIND | Dlaczego mądrzy ludzie unikają AI | "Nie używasz AI nie dlatego, że nie umiesz. Powód jest mądrzejszy." | 4 tarcia; widz nazywa swoje w komentarzu → paliwo REPLY. |
-| 4.2 | DEMO | Pierwsza rozmowa z AI (dla mamy/taty) | "Wyślij ten film rodzicom. Serio." | Absolutne podstawy z szacunkiem, bez protekcjonalności; cel: shares międzypokoleniowe. |
-| 4.3 | REPLY | Q&A z komentarzy | — | Rytm już ustalony. |
-| 4.4 | LIFE | Mój tydzień AI-First (vlog) | "4 filmy, plan szkolenia i projekt dla klienta. Pokazuję, ile z tego zaczęło AI." | Przezroczystość procesu — dowód, że sam żyję wg metody. |
-
-## TYDZIEŃ 5 — "Nawyk" (THE 66 DAYS) — start wyzwania społeczności
-
-| # | Filar | Tytuł | Hook | Treść |
-|---|---|---|---|---|
-| 5.1 | MIND | Motywacja Cię okłamuje | "Nowy nawyk to nie 21 dni. To ~66. I to jest DOBRA wiadomość." | [BADANIE: Lally 2010, ~66 dni do automatyzmu]; plan dla niedoskonałych ludzi, nie plakatów motywacyjnych. Start wyzwania: "1 zadanie dziennie zaczynaj od AI". |
-| 5.2 | DEMO | Kiedy X, wtedy Y | "Jedno zdanie podwaja szansę, że nowy nawyk przeżyje." | [BADANIE: Gollwitzer & Sheeran 2006, intencje implementacyjne, d=0.65]; demo: budujesz własną regułę "gdy otwieram maila → najpierw AI". |
-| 5.3 | LIFE | Dzień 1 mojego wyzwania | "Robię to wyzwanie razem z Wami. Oto mój dzień pierwszy — z wpadką." | Transparentny vlog; własna niedoskonałość jako model (senior modelujący niedoskonałość — mechanizm z M7). |
-| 5.4 | REPLY | Q&A wyzwania | — | Odpowiedzi na pierwsze relacje widzów z wyzwania. |
-
-## TYDZIEŃ 6 — "Bohater" (adaptacja M7 THE HERO) — tydzień dla liderów
-
-| # | Filar | Tytuł | Hook | Treść |
-|---|---|---|---|---|
-| 6.1 | MIND | Wasz bohater AI jest problemem | "Każda firma ma osobę, która »czai« AI. Ta osoba to pojedynczy punkt awarii w pelerynie." | Bohaterstwo się nie przekazuje — akumuluje; kompetencja odchodzi w torbie na laptopa. |
-| 6.2 | DEMO | Rytuał 5 minut lidera | "5 minut tygodniowo, które wygrywa z sześciocyfrowym budżetem szkoleniowym." | Demo posta lidera: "Oddałem X do AI. Oto co poprawiłem" — poprawka jest sednem; zabija tarcie nr 1 (strach z tyg. 4). |
-| 6.3 | LIFE | Byłem bohaterem | "Przez lata byłem tym gościem, do którego wszyscy przynosili problemy. To nie był komplement." | Osobista wersja lekcji M7 — koszt bycia niezastępowalnym. |
-| 6.4 | REPLY / DEMO | wg danych | — | Slot elastyczny: co wygrywa w metrykach. |
-
-## TYDZIEŃ 7 — "AI w domu" — najbardziej lifestyle'owy tydzień sezonu
-
-| # | Filar | Tytuł | Hook | Treść |
-|---|---|---|---|---|
-| 7.1 | MIND | AI-Mindset nie jest o pracy | "Najlepsze miejsce do ćwiczenia AI to nie biuro. To niedziela po południu." | Teza: odruch trenowany w życiu prywatnym przenosi się do pracy za darmo (odwrotnie — rzadko). [OPINIA] |
-| 7.2 | DEMO | Nauka z dzieckiem, nie za dziecko | "AI nie odrobi lekcji za Twoje dziecko. Może zrobić coś lepszego." | Demo: AI generuje pytania sprawdzające / tłumaczy na trzy sposoby; granica etyczna nazwana wprost. |
-| 7.3 | LIFE | Kolor, którego bym nie wybrał | "Wszystko, co AI zaplanowało idealnie, moja rodzina i tak zrobiła po swojemu. I o to chodzi." | Klamra do Domku (2.3): AI planuje, życie decyduje; pochwała nieprzewidywalności. |
-| 7.4 | DEMO | Budżet domowy bez arkusza wstydu | "Wrzuciłem wyciąg z konta do AI. Zobaczyłem rzeczy, których wolałem nie widzieć." | Kategoryzacja wydatków + UWAGA o prywatności: anonimizuj dane przed wklejeniem — to część lekcji. |
-
-## TYDZIEŃ 8 — "Wędka" (adaptacja M8 THE ROD) — finał sezonu 1
-
-| # | Filar | Tytuł | Hook | Treść |
-|---|---|---|---|---|
-| 8.1 | MIND | Daję wędkę | "Daję wędkę. Nie rybę. Nie abonament na ryby. Nie uzależnienie od wędkarza." | Manifest kanału: wszystko z 8 tygodni działa beze mnie — o to chodziło. Rekap sezonu w 30 s. |
-| 8.2 | LIFE | Lidka | "Osoba bez żadnego technicznego przygotowania zbudowała działający sklep z audiobookami. Znam ją." | [VERIFIED — historia Lidki]; dowód tezy sezonu na kimś innym niż ja. |
-| 8.3 | REPLY | Najlepsze domki widzów | — | Best-of odpowiedzi na CTA z 2.3 ("jaki jest Twój domek?") — społeczność jako bohater finału. |
-| 8.4 | MIND | Zapowiedź sezonu 2 | "Przez 8 tygodni uczyłem Was pracować Z AI. W sezonie 2: co się dzieje, gdy AI dostaje kolegów." | Cliffhanger: agenci, orkiestracja — po ludzku. |
+Numeracja odcinków (1.1, 2.3…) = stałe ID skryptów w `Scripts/` — nie zmienia się przy przesunięciach.
 
 ---
 
-## SEZON 2 (tyg. 9–12) — poziom motywów, doprecyzować po danych sezonu 1
+## SEZON 1 — plan emisji
 
-| Tydz. | Motyw | Źródło | Rdzeń |
+### V1 · 13–19 lip · KOLEJNOŚĆ · (LinkedIn: M1, wt 14 lip)
+| Slot | Odcinek | Hook mówiony (≤8 słów) |
+|---|---|---|
+| śr | **1.3 LIFE** — Dlaczego w ogóle nagrywam | "To mój pierwszy film w życiu." |
+| pt | **1.1 MIND** — Ta sama praca, 10x różnicy | "Te same narzędzia. Dziesięć razy więcej efektu." |
+| sob | **ZK#1** — zła liczba | "Podłożyłem tu jedno kłamstwo. Znajdziesz?" |
+| rezerwa | 1.2 DEMO mail (→ V3) | |
+
+### V2 · 20–26 lip · SPEKTRUM: DIAGNOZA · (LinkedIn: M2-POLL, wt 21 lip)
+| Slot | Odcinek | Hook |
+|---|---|---|
+| śr | **2.1 MIND** — 4 poziomy ludzi wobec AI | "Cztery poziomy pracy z AI. Jesteś na drugim." |
+| pt | **ZK#2** — zmyślone źródło (+ rozwiązanie ZK#1) | "Wygraliście? Sprawdzamy. I nowe kłamstwo." |
+| sob | **1.4 DEMO** — Obiad z lodówki | "Zdjęcie lodówki. Jeden prompt. Trzy obiady." |
+
+### V3 · 27 lip – 2 sie · SPEKTRUM: SKOK 2→3 · (LinkedIn: M2, wt 28 lip)
+| Slot | Odcinek | Hook |
+|---|---|---|
+| śr | **1.2 DEMO** — Trudny mail zanim dopijesz kawę | "Najgorszy typ maila. Zanim dopiję kawę." |
+| pt | **ZK#3** — odwrócony wniosek | "To kłamstwo przeżywa każdą salę szkoleniową." |
+| sob | **2.4 DEMO** — Drugi mózg na spotkaniach | "Notatki ze spotkania napisały się same." |
+
+### V4 · 3–9 sie · DOMEK · (LinkedIn: M3, wt 4 sie)
+| Slot | Odcinek | Hook |
+|---|---|---|
+| śr | **2.3 LIFE ⭐** — Domek dla dzieci (kotwica sezonu) | "Dzieci chciały domek. Nie umiem projektować." |
+| pt | **ZK#4** | wg formatu |
+| sob | **2.2 DEMO** — Urlop w 15 minut | "Urlop zaplanowany w piętnaście minut." |
+
+### V5 · 10–16 sie · ZAUFANIE · (LinkedIn: M4, wt 11 sie — post może wskazać na grę ZK!)
+| Slot | Odcinek | Hook |
+|---|---|---|
+| śr | **3.1 MIND** — AI kłamie Ci prosto w oczy | "Podkładam trzy kłamstwa. Mądrzy łapią dwa." |
+| pt | **ZK#5 SPECIAL** — wersja rozszerzona, z historią ze szkoleń | "Ta gra pochodzi z moich szkoleń. Naprawdę." |
+| sob | **3.3 LIFE** — Czego AI nauczyło mnie o cierpliwości | "Najwięcej nauczyła mnie o sobie maszyna." |
+
+### V6 · 17–23 sie · TARCIE · (LinkedIn: M5, wt 18 sie)
+| Slot | Odcinek | Hook |
+|---|---|---|
+| śr | **6.1 MIND** — Dlaczego mądrzy ludzie unikają AI | "Nie używasz AI z mądrego powodu." |
+| pt | **ZK#6** | wg formatu |
+| sob | **6.2 DEMO** — Pierwsza rozmowa z AI (dla mamy/taty) | "Wyślij ten film rodzicom. Serio." |
+| rezerwa | 6.3 LIFE — Mój tydzień AI-First (vlog transparentności) | |
+
+### V7 · 24–30 sie · PODPIS · (LinkedIn: M6, wt 25 sie)
+| Slot | Odcinek | Hook |
+|---|---|---|
+| śr | **3.4 DEMO** — Sprawdź AI w 60 sekund | "Sześćdziesiąt sekund. Łapie kłamstwo numer trzy." |
+| pt | **ZK#7** (klamra: gra = trening procedury z 3.4) | wg formatu |
+| sob | **3.2 REPLY#1** — pierwsza odpowiedź wideo na komentarz (skrypt w Week3_Scripts.md) | (format natywny; plan B: sparing "trudna rozmowa") |
+
+### V8 · 31 sie – 6 wrz · BOHATER · (LinkedIn: M7, wt 1 wrz)
+| Slot | Odcinek | Hook |
+|---|---|---|
+| śr | **8.1 MIND** — Wasz bohater AI jest problemem | "Firmowy bohater AI to pojedynczy punkt awarii." |
+| pt | **ZK#8** | wg formatu |
+| sob | **8.3 LIFE** — Byłem bohaterem | "Byłem niezastępowalny. To nie był komplement." |
+| rezerwa | 8.2 DEMO — Rytuał 5 minut lidera | |
+
+### V9 · 7–13 wrz · WĘDKA · finał sezonu 1 · (LinkedIn: M8, wt 8 wrz)
+| Slot | Odcinek | Hook |
+|---|---|---|
+| śr | **9.1 MIND** — Daję wędkę (manifest + rekap sezonu w 30 s) | "Daję wędkę. Nie rybę. Nie abonament." |
+| pt | **ZK#9 FINAŁ** — best-of + wyniki ligi łowców | "Dziewięć kłamstw później: kto łapał najlepiej?" |
+| sob | **9.3 LIFE** — Lidka [VERIFIED] | "Zbudowała sklep z audiobookami. Bez linijki kodu." |
+
+---
+
+## SEZON 2 WIDEO — V10–V13 (14 wrz – 11 paź), poziom odcinków
+LinkedIn Mindset zakończony; wideo jedzie na kandydatach Season-2 + materiale własnym.
+Oś sezonu: **wyzwanie #66DniAI** (startuje V10, kończy się ~19 lis — most przez cały kwartał; patrz Roadmap faza 2).
+
+### V10 · 14–20 wrz · NAWYK — start wyzwania #66DniAI
+| Slot | Odcinek | Hook (≤8 słów) | Treść |
 |---|---|---|---|
-| 9 | Zawód przekompilowany | kandydat THE RECOMPILED ROLE | Kariera w erze AI bez doomeryzmu: rola się rekompiluje, nie znika; [BADANIE: Peng 2023, 55,8% szybciej] jako kontekst, nie straszak |
-| 10 | Pierwsze 30 dni | kandydat THE FIRST WEEK | Dziennik wdrożenia dla widzów, którzy dołączyli w trakcie; kontynuacja wyzwania 66 dni z tyg. 5 |
-| 11 | Agenci dostają kolegów | kandydat THE ORG CHART | MCP/A2A przetłumaczone na ludzki: "Twój agent będzie miał współpracowników"; poziom 4 spektrum dla śmiałków |
-| 12 | Finał: kanał należy do Was | społeczność | Best-of REPLY, wyniki wyzwania, plan sezonu 3 zbudowany Z komentarzy — dosłowna realizacja wędki |
+| śr | **10.1 MIND** — Motywacja Cię okłamuje | "Nowy nawyk to nie 21 dni." | [BADANIE: Lally 2010, ~66 dni do automatyzmu — średnia, nie wyrok]; plan dla niedoskonałych ludzi; ogłoszenie wyzwania: 1 zadanie dziennie zaczynaj od AI, hashtag #66DniAI |
+| pt | **ZK#10** | wg prompta (sezon 2: trudniejsze) | |
+| sob | **10.3 DEMO** — Kiedy X, wtedy Y | "Jedno zdanie podwaja szansę nawyku." | [BADANIE: Gollwitzer & Sheeran 2006, intencje implementacyjne, d=0.65]; widz buduje własną regułę "gdy otwieram maila → najpierw AI" |
 
-**Po tygodniu 12 materiał źródłowy się wyczerpuje.** Sezon 3 = nowe historie: zbieraj od dziś (wpadki z DEMO, pytania z REPLY, historie widzów typu "mój domek", anonimizowane obserwacje ze szkoleń).
+### V11 · 21–27 wrz · WYZWANIE TRWA + AI W DOMU
+| Slot | Odcinek | Hook | Treść |
+|---|---|---|---|
+| śr | **11.1 LIFE** — Mój dzień 8 wyzwania | "Dzień ósmy. Raz już poległem." | vlog wyzwania: Ty gasz je razem z widzami; wpadka pokazana wprost (reguła błędu warunkowego: prawdziwa albo "czysto — rzadkość") |
+| pt | **ZK#11** | | |
+| sob | **11.3 DEMO** — Nauka z dzieckiem, nie za dziecko | "AI nie odrobi lekcji. Zrobi lepiej." | pytania sprawdzające / tłumaczenie na 3 sposoby; granica etyczna nazwana wprost |
+
+### V12 · 28 wrz – 4 paź · ZAWÓD PRZEKOMPILOWANY
+| Slot | Odcinek | Hook | Treść |
+|---|---|---|---|
+| śr | **12.1 MIND** — Twój zawód się nie kończy | "Zawód się rekompiluje, nie znika." | kariera bez doomeryzmu; [BADANIE: Peng i in. 2023, zadanie 55,8% szybciej z AI] jako kontekst zmiany roli, nie straszak |
+| pt | **ZK#12** | | |
+| sob | **12.3 LIFE** — Jak zmienił się mój zawód | "Robię dziś pracę, której nie było." | osobista wersja: architekt → AI-augmented; co odeszło, co przyszło, czego się bałem [MOJA PRAKTYKA] |
+
+### V13 · 5–11 paź · AGENCI DOSTAJĄ KOLEGÓW + finał kwartału
+| Slot | Odcinek | Hook | Treść |
+|---|---|---|---|
+| śr | **13.1 MIND** — Twój agent będzie miał współpracowników | "Agenci AI właśnie dostają kolegów." | MCP/A2A po ludzku, zero żargonu w ciele filmu; poziom 4 spektrum dla śmiałków |
+| pt | **ZK#13** | | |
+| sob | **13.3 REPLY/społeczność** — Kanał należy do Was | "Sezon 3 piszecie Wy." | best-of komentarzy i wyników #66DniAI (w połowie drogi); plan sezonu 3 zbudowany Z komentarzy — dosłowna wędka |
 
 ---
 
-## Reguły iteracji (ważniejsze niż kalendarz)
+## Reguły iteracji
 
-1. Po tygodniu 2: przegląd retencji pierwszych 3 sekund → przepisz hooki słabszych formatów.
-2. Filar, który wygrywa (saves+shares), dostaje +1 slot; przegrywający -1. Kalendarz służy Tobie.
-3. Każdy odcinek MIND ma bliźniaczą karuzelę IG (te same plansze z Canva/PresoGen) — 1 skrypt = 2 formaty.
-4. Nic nie publikujemy "bo kalendarz każe" — jeśli odcinek kłamie lub jest słaby, wypada slot, nie prawda.
+1. Po V2: przegląd retencji 3 s → przegrany wariant hooka ginie w 48 h; **zwycięzca zasila wtorkowy post LinkedIn** (pętla hooków, patrz Theme_Week_Operating_System.md §3).
+2. Filar wygrywający (saves+shares) dostaje slot rezerwowy; przegrywający oddaje.
+3. Każdy odcinek MIND ma bliźniaczą karuzelę IG (Canva/PresoGen) publikowaną jako pełnoprawny post IG (nie dodatek) — niedziela.
+4. ZK jest nietykalne przez 9 tygodni — formaty interaktywne potrzebują rytmu, żeby widz nauczył się gry. [OPINIA]
+5. Nic nie wychodzi "bo kalendarz każe" — słaby lub nieuczciwy odcinek wypada; slot zostaje pusty.

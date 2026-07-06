@@ -1,114 +1,103 @@
-# Video Channel Strategy — OBUDŹ AI-MINDSET
+# Video Channel Strategy — OBUDŹ AI-MINDSET (v2, po audycie 2026-07-06)
 ## TikTok + Instagram Reels + YouTube Shorts | Tomasz Mierzejowski
+### Nadrzędny system tygodnia: `../Theme_Week_Operating_System.md` — ten plik opisuje warstwę wideo.
 
 ---
 
 ## 1. The Big Idea
 
-Jeden kanał, jedna obietnica: **"AI to Twój pierwszy krok do wszystkiego. Nie jedyny. Pierwszy."**
-Kanał AI-owo-lifestylowy: uczę ludzi żyć AI-First (praca + życie prywatne), przeplatając
-lekcje własnymi przemyśleniami. Inspiracja > suche fakty. "Daję wędkę" — widz po każdym
-filmie umie zrobić coś sam, nie potrzebuje mnie do następnego kroku.
+Jeden kanał, jedna obietnica, jedna sygnatura zamykająca KAŻDY film:
+**"AI to Twój pierwszy krok do wszystkiego. Nie jedyny. Pierwszy."**
+Kanał AI-owo-lifestylowy: uczę żyć AI-First (praca + życie prywatne), przeplatając lekcje
+własnymi przemyśleniami. Inspiracja > suche fakty. "Daję wędkę" — widz po każdym filmie
+umie zrobić coś sam.
 
-**The Enemy (wideo-wersja):** "AI-guru content" — hype, screenshoty 10 narzędzi tygodniowo,
-zero zmiany zachowania. Mój kontrast: jedna zmiana zachowania na film, z dowodem.
+**The Enemy:** "AI-guru content" — hype, 10 narzędzi tygodniowo, zero zmiany zachowania.
+**Moje pozycjonowanie: ANTY-GURU.** Guru mówi "10x". Ja mówię "~26% [BADANIE]" i pokazuję źródło.
+Guru ukrywa wpadki. Ja je zostawiam w kadrze. To jest różnicowanie, nie skromność.
 
-## 2. Pozycjonowanie i widz
+## 2. Widz — JEDNA persona (decyzja z audytu)
 
-| | LinkedIn (istnieje) | TikTok/IG/YT (nowe) |
-|---|---|---|
-| Widz | Renata (MD, 41), Paweł (lead, 35) | "Młodszy Paweł" (25–40) + osoby prywatne bez IT |
-| Altitude | Enterprise + behawior | Życie codzienne + praca + behawior |
-| Ton | Ekspercki, evidence-first | Ten sam kręgosłup, luźniejszy język, więcej osobistych wstawek |
+**Paweł, 25–40** — używa AI jako polerki, nie wie, że jest na Poziomie 2; zdiagnozuje się sam,
+gdy zobaczy Spektrum. Treści domowe (lodówka, urlop, rodzice) też piszemy do Pawła — Paweł ma kuchnię.
+Renata jest obsługiwana przez LinkedIn (wtorki), Stefan przez LinkedIn (czwartki). Jedna persona na platformę.
 
-Zasada spójności: **jedna osoba, jeden światopogląd, trzy wysokości** (enterprise / praca / życie).
-Historie zaczynają się od ludzi, nie od technologii (zasada z kampanii Mindset — obowiązuje 1:1).
+## 3. Filary — 3 filmy/tydzień
 
-## 3. Cztery filary contentu (rotacja tygodniowa)
+| Filar | Kod | Slot | Cel |
+|---|---|---|---|
+| 🧠 AI-Mindset Lekcje | MIND | środa | autorytet, saves. **Reguła żelazna: żaden MIND nie wychodzi bez historii lub artefaktu** (zdjęcie, prawdziwy ekran, prawdziwa poprawka) — wykład bez historii to komodyta |
+| 🎯 ZNAJDŹ KŁAMSTWO | ZK | piątek | **format flagowy** — cotygodniowa gra: jawnie podłożony błąd, widzowie polują w komentarzach, rozwiązanie za tydzień. Uczciwa grywalizacja + silnik komentarzy + uczy dokładnie tego, co sprzedaję. Spec: `Scripts/ZK_Znajdz_Klamstwo.md` |
+| 🌱 Życie / Praktyka | LIFE / DEMO / REPLY | sobota | więź, shares, społeczność; rotacja wg kalendarza i danych |
 
-| Filar | Kod | Format | Udział | Cel |
-|---|---|---|---|---|
-| 🧠 AI-Mindset Lekcje | MIND | talking head 45–90s | 30% | autorytet, saves |
-| ⚡ AI w praktyce (demo) | DEMO | screen-recording + lektor | 30% | shares, "wow, to mogę zrobić dziś" |
-| 🌱 Życiowe wstawki | LIFE | talking head / vlog-style | 25% | więź, komentarze, "człowiek nie guru" |
-| 💬 Odpowiedzi na komentarze | REPLY | reply-to-comment (natywny format TT) | 15% | społeczność, algorytm |
-
-REPLY startuje od tygodnia 3–4 (musi być z czego odpowiadać). Do tego czasu: +1 DEMO.
+Redukcja z 4 do 3 filmów/tydz. = decyzja budżetowa (łączny system ≤8 h/tydz.), nie ambicjonalna.
+Odcinki nadmiarowe → REZERWA w kalendarzu.
 
 ## 4. Kadencja i platformy
 
-- **Nagrywasz raz w tygodniu (batch day, ~2h), publikujesz 4x/tydzień.**
-- Jedno nagranie → TikTok + IG Reels + YT Shorts (ta sama pionowa 9:16, auto-crosspost).
-- YouTube long-form: **nie wcześniej niż miesiąc 3.** Najpierw Shorts jako poligon —
-  najlepsze tematy Shorts dostają wersję 8–12 min.
-- Godziny publikacji: ustalić po 2 tygodniach z analityki, nie z guru-porad. [FRAMEWORK/OPINION]
+- **Batch we wtorek po południu (2 h): 3 nagrania.** Montaż środa (~1,5 h). Emisja śr / pt / sob.
+- Jedno nagranie → TikTok + IG Reels + YT Shorts (9:16, crosspost przez Metricool).
+- **Poniedziałek: najlepsze wideo tygodnia → LinkedIn jako natywne wideo** (luka formatu — żaden post kampanii dotąd nie używał wideo).
+- **Niedziela: karuzela IG** (bliźniak odcinka MIND; pełnoprawny post, nie dodatek).
+- YouTube long-form: nie wcześniej niż miesiąc 3; wygrane tematy Shorts dostają wersję 8–12 min.
+- Start: **tydzień 13 lipca 2026** — zsynchronizowany z LinkedIn M1 (14 lip). Mapa dat: Content_Calendar.md.
 
 ## 5. Toolstack — minimalna praca manualna
 
-Zasada: **Ty dostarczasz tylko twarz, głos i osąd. Wszystko inne robi pipeline.**
-
 | Etap | Narzędzie | Co robi za Ciebie |
 |---|---|---|
-| Scenariusz | Claude (projekt/persona w tym repo) | hooki, skrypt 60s, opis, hashtagi — z gotowych briefów M1–M8 |
-| Teleprompter | aplikacja teleprompter na telefon (np. BIGVU / Teleprompter Premium) | czytasz, nie uczysz się na pamięć |
-| Nagranie | telefon + lampa ring + mikrofon krawatowy (~300–500 zł łącznie) | jedyny w pełni manualny krok |
-| Montaż | Descript (edycja przez tekst: kasujesz zdanie w transkrypcie = wycięte z wideo) lub CapCut | usuwanie pauz/wpadek automatycznie |
-| Napisy PL | CapCut auto-captions / Submagic / Captions app | napisy = obowiązkowe (większość ogląda bez dźwięku) [FRAMEWORK/OPINION] |
-| Grafiki/diagramy | Canva + Napkin.ai; własny PresoGen AI do materiałów edukacyjnych [VERIFIED — własny produkt] | plansze, karuzele IG z tych samych skryptów |
-| Repurposing | Opus Clip / Descript (long → shorts, od miesiąca 3) | tnie długie wideo na klipy z hookami |
-| Dystrybucja | Metricool / Buffer / Postiz | 1 upload → 3 platformy + kolejka na tydzień |
-| Muzyka | biblioteka CapCut / trending sounds natywnie w TT | zero licencyjnego ryzyka |
+| Scenariusz | Claude (to repo) | skrypty z gotowych briefów M1–M8; prompt produkcyjny w Video_Script_Template.md |
+| Teleprompter | BIGVU / Teleprompter Premium | czytasz, nie uczysz się na pamięć |
+| Nagranie | telefon + ring + mikrofon krawatowy (~300–500 zł łącznie) | jedyny w pełni manualny krok |
+| Montaż | Descript (edycja przez tekst) lub CapCut | usuwanie pauz/wpadek |
+| Napisy PL | CapCut auto-captions / Submagic | napisy obowiązkowe |
+| Grafiki | Canva + Napkin.ai; PresoGen AI [VERIFIED — własny produkt] | plansze, karuzele, badge-stemple |
+| Repurposing | Opus Clip / Descript (od mies. 3) | long → shorts |
+| Dystrybucja | Metricool / Buffer / Postiz | 1 upload → 3 platformy |
+| Newsletter | Substack / beehiiv + prosty landing | aktywo własne; lead magnet: Lead_Magnet_Checklist_60s.md |
 
-Czego **nie** używać na start: awatarów AI (HeyGen itp.) do treści głównych — kanał sprzedaje
-autentyczność i AI-Mindset *człowieka*; syntetyczna twarz podważa przekaz. Dozwolone: AI-b-roll,
-AI-grafiki, AI-voiceover wyłącznie do DEMO ze screen-recordingiem, zawsze z jawnością "wygenerowane z AI".
+Awatary AI (HeyGen itp.) do treści głównych: **nie** — kanał sprzedaje autentyczność.
+AI-b-roll/grafiki/voiceover w DEMO: tak, zawsze z jawnością.
 
-## 6. Workflow tygodniowy (docelowo ≤4h/tydzień)
+## 6. Zasady rzemiosła "catchy" (z audytu — obowiązkowe)
 
-```
-PONIEDZIAŁEK (30 min, przy kawie)
-  Claude: "przygotuj 4 skrypty na ten tydzień wg kalendarza" → czytasz, poprawiasz osądem
-
-WTOREK (2h, batch day)
-  4 filmy pod rząd z telepromptera + 1 zapasowy spontaniczny (LIFE)
-
-ŚRODA (1h)
-  Descript/CapCut: cięcie + napisy → Metricool: kolejka na 4 dni
-
-CODZIENNIE (10 min)
-  Komentarze. To nie koszt — to surowiec na filmy REPLY.
-```
+1. **Hook mówiony ≤ 8 słów.** TikTok daje ~2 sekundy. Reszta kontekstu idzie na nakładkę tekstową (text overlay). Stare, długie hooki zostają jako overlay/opis.
+2. **Sygnatura zamyka każdy film:** "AI to Twój pierwszy krok. Nie jedyny. Pierwszy." Zawsze te same słowa, ten sam rytm — sygnatura audio działa jak dżingiel.
+3. **Badge jako element wizualny marki:** stempel [BADANIE] / [MOJA PRAKTYKA] / [OPINIA] w stałym miejscu ekranu, ten sam wygląd co plansze LinkedIn. Widz ma rozpoznawać stempel zanim przeczyta.
+4. Cięcie co 3–5 s; jedna idea na film; pytanie na koniec przed sygnaturą.
 
 ## 7. Zasady prawdy (niezbywalne)
 
-1. Evidence badging obowiązuje w wideo tak samo jak na LinkedIn: liczba bez źródła nie
-   wychodzi z moich ust. Na ekranie plansza: [BADANIE] / [MOJA PRAKTYKA] / [OPINIA].
-2. Zakazy z kampanii obowiązują: żadnego "73% projektów pada"; Standish CHAOS 2020: ~31% sukcesu.
-   4-day rescue = 4x (estymowane). 143 reguły @ 94% confidence. Klienci tylko jako generyczne opisy.
-3. Każde DEMO nagrywam naprawdę — jeśli narzędzie zawiodło, wpadka zostaje w filmie.
-   Wpadki AI to najlepszy content zaufania (patrz M4 THE CONFIDENT LIE).
-4. Cudzych wyników nie pokazuję jako swoich. Screenshoty wyników — tylko własne.
+1. Badge przy każdej liczbie — jak wyżej.
+2. Zakazy kampanii obowiązują: Standish CHAOS 2020 ~31% sukcesu (nigdy "73% pada"); 4-day rescue = 4x (estymowane); 143 reguły @ 94% confidence; klienci generycznie.
+3. **Reguła błędu warunkowego (nowa, krytyczna):** halucynacji nie da się zaplanować. Skrypty DEMO
+   przewidują DWA zakończenia: (a) AI się myli → pokazujesz błąd i korektę; (b) AI czyste →
+   mówisz wprost: *"Dziś czysto. Ale błędy są losowe — dlatego weryfikacja jest stała."*
+   Inscenizowanie błędu = złamanie zasady nr 1 kanału. Nigdy.
+4. Każde DEMO nagrywane naprawdę, jedno podejście; wpadki zostają w kadrze.
+5. ZK: błąd jest podłożony JAWNIE ("podłożyłem tu jedno kłamstwo") — to gra, nie manipulacja.
+   Nigdy nie publikujemy prawdziwego dokumentu ćwiczenia Confident-Lie — materiał generowany świeżo per odcinek.
+6. Cudzych wyników nie pokazuję jako swoich.
 
-## 8. Mierniki sukcesu (pierwsze 90 dni)
-
-| Metryka | Miesiąc 1 | Miesiąc 3 | Dlaczego ta |
-|---|---|---|---|
-| Konsystencja | 16 publikacji | 48+ | jedyna metryka pod moją kontrolą |
-| Watch time / retention | baseline | +hooki iterowane | uczy pisać lepsze otwarcia |
-| Saves + shares | obserwuj | > likes jako sygnał | proxy "wartość praktyczna" |
-| Komentarze merytoryczne | 5/tydz. | surowiec na REPLY | społeczność, nie vanity |
-
-Follower count świadomie poza tabelą przez 90 dni. [FRAMEWORK/OPINION]
+## 8. Mierniki — patrz zunifikowana tabela w `../Theme_Week_Operating_System.md` §5.
+Warstwa wideo raportuje: retencję 3 s (laboratorium hooków), saves+shares, komentarze pod ZK,
+zapisy do newslettera z link-in-bio. Follower count poza tablicą przez 90 dni. [OPINIA]
 
 ## 9. Struktura plików
 
 ```
 Video_Channel_Strategy/
-├── README.md                ← ten plik
-├── Content_Calendar.md      ← 12 tygodni (sezon 1: tyg. 1–8 + sezon 2: tyg. 9–12)
-├── Video_Script_Template.md ← szablon skryptu 60s
-└── Scripts/
-    ├── Week1_Scripts.md     ← 4 pełne skrypty: KOLEJNOŚĆ
-    ├── Week2_Scripts.md     ← 4 pełne skrypty: GDZIE JESTEŚ? (+ Domek)
-    └── Week3_Scripts.md     ← 4 pełne skrypty: ZAUFANIE (+ start REPLY)
+├── README.md                    ← ten plik (v2)
+├── Roadmap_24_Miesiace.md       ← droga do czołówki: 4 fazy, 10 wskazówek, bramki 90-dniowe
+├── Content_Calendar.md          ← V1–V9 z datami (sync z LinkedIn) + sezon 2 V10–V13 (odcinki)
+├── Video_Script_Template.md     ← szablon 60 s + reguły hooka/sygnatury/błędu warunkowego
+├── Lead_Magnet_Checklist_60s.md ← "Checklist 60 sekund" (PDF przez Canva/PresoGen)
+└── Scripts/                     ← SEZON 1 W CAŁOŚCI NASKRYPTOWANY (27 filmów)
+    ├── Week1_Scripts.md         ← odcinki 1.1–1.4 (V1–V3)
+    ├── Week2_Scripts.md         ← odcinki 2.1–2.4 (V2–V4, Domek ⭐)
+    ├── Week3_Scripts.md         ← odcinki 3.1–3.4 (V5, V7)
+    ├── Week6_Scripts.md         ← odcinki 6.1–6.3 (V6, TARCIE + film dla rodziców)
+    ├── Week8_Scripts.md         ← odcinki 8.1–8.3 (V8, BOHATER)
+    ├── Week9_Scripts.md         ← odcinki 9.1, 9.3 (V9, finał: manifest + Lidka)
+    └── ZK_Znajdz_Klamstwo.md    ← format flagowy + KOMPLET materiałów ZK#1–9
 ```

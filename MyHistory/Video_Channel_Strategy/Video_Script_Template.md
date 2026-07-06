@@ -1,54 +1,41 @@
-# Szablon skryptu 60s + gotowy odcinek 1.1
+# Szablon skryptu 60 s — v2 (po audycie 2026-07-06)
 
-## Anatomia filmu 60-sekundowego
+## Anatomia filmu
 
 | Sekcja | Czas | Zadanie | Zasada |
 |---|---|---|---|
-| HOOK | 0–3s | zatrzymać kciuk | konkret/napięcie, nigdy "cześć, dziś opowiem o..." |
-| STAKE | 3–10s | "dlaczego mnie to dotyczy" | widz, nie technologia |
-| MEAT | 10–45s | JEDNA zmiana zachowania | jeden film = jedna idea; badge na ekranie przy każdej liczbie |
-| PROOF | wpleciony | [BADANIE] / [MOJA PRAKTYKA] / [OPINIA] | plansza w rogu ekranu |
-| CTA | 45–60s | pytanie na 1 szczere zdanie | komentarze > "obserwuj mnie" |
+| HOOK | 0–3 s | zatrzymać kciuk | **mówiony hook ≤ 8 słów**; kontekst idzie na nakładkę tekstową (overlay), nie w usta |
+| STAKE | 3–10 s | "dlaczego mnie to dotyczy" | widz, nie technologia |
+| MEAT | 10–45 s | JEDNA zmiana zachowania | badge-stempel na ekranie przy każdej liczbie: [BADANIE] / [MOJA PRAKTYKA] / [OPINIA] |
+| CTA | 45–58 s | pytanie na 1 szczere zdanie | komentarze > "obserwuj mnie" |
+| SYGNATURA | ostatnie 2 s | dżingiel słowny | **zawsze, w każdym filmie, te same słowa:** "AI to Twój pierwszy krok. Nie jedyny. Pierwszy." |
 
-Napisy: zawsze. Cięcie: co 3–5s zmiana kadru/zbliżenia (Descript/CapCut robi to półautomatycznie).
-Opis + hashtagi: generuje Claude razem ze skryptem. Format nagrania: 9:16, telefon, światło z okna lub ring.
+## Reguły niezmienne
 
----
+1. **Hook mówiony ≤ 8 słów.** Stary, dłuższy hook nie ginie — zostaje jako text overlay i pierwsze zdanie opisu.
+2. **Sygnatura zamyka każdy film** — bez wyjątków, także LIFE i ZK. Sygnatura audio = rozpoznawalność.
+3. **Reguła błędu warunkowego (DEMO):** halucynacji nie da się zaplanować. Każdy skrypt DEMO ma dwa
+   zakończenia sekcji weryfikacji:
+   - **(a) AI się pomyliło** → pokaż błąd i korektę na ekranie;
+   - **(b) AI czyste** → powiedz wprost: *"Dziś czysto. Ale błędy są losowe — dlatego weryfikacja jest stała."*
+   Inscenizowanie błędu = zakaz absolutny.
+4. Żaden MIND bez historii lub artefaktu (zdjęcie, prawdziwy ekran, prawdziwa poprawka).
+5. Napisy zawsze; cięcie co 3–5 s; 9:16; jedna idea na film.
+6. Opis + hashtagi generuje Claude per platforma (TT luźny / YT z keywordami "AI po polsku").
 
-## ODCINEK 1.1 — "Ta sama praca, 10x różnicy" (MIND, adaptacja M1)
-
-**HOOK (na teleprompterze, patrzysz w obiektyw):**
-> Dwie osoby. Ta sama praca. Te same narzędzia AI. Jedna wyciąga z nich dziesięć razy więcej.
-> I różnica nie jest tam, gdzie myślisz.
-
-**STAKE:**
-> To nie promptowanie. Nie wykształcenie. Nie wiek. Widzę to od dwóch lat na salach szkoleniowych.
-
-**MEAT:**
-> To kolejność.
-> Osoba A kończy raport po staremu i na końcu prosi AI o szlif. AI jako dekoracja.
-> Osoba B prosi AI o szkic NAJPIERW — a potem przykłada do niego swój osąd i wiedzę.
-> Osoba A oszczędza minuty. Osoba B oszczędza pustą kartkę — tę część pracy,
-> która nigdy nie była tą wartościową.
->
-> [plansza: BADANIE — Cui i in., Management Science, 4867 deweloperów: ~26% więcej
-> ukończonych zadań; zysk przewidywało ZACHOWANIE, nie staż]
-
-**CTA:**
-> AI to Twój pierwszy krok. Nie jedyny. Pierwszy.
-> Napisz szczerze: jesteś osobą A czy B? Bez wstydu — ja też zaczynałem od A.
-
-**Opis (do wygenerowania per platforma):** wersja TT luźna, wersja YT z keywordami "AI po polsku, jak używać AI".
-**Hashtagi bazowe:** #AIMindset #AIpoPolsku #sztucznainteligencja + 2 trendowe w dniu publikacji.
+## Przykład kompletny: odcinek 1.1 — patrz `Scripts/Week1_Scripts.md`.
+## Format ZNAJDŹ KŁAMSTWO — patrz `Scripts/ZK_Znajdz_Klamstwo.md`.
 
 ---
 
 ## Prompt produkcyjny (wklej do Claude w poniedziałek)
 
 ```
-Przygotuj 4 skrypty wideo na ten tydzień wg Content_Calendar.md (tydzień N).
-Użyj szablonu z Video_Script_Template.md. Dla odcinków MIND adaptuj copy_PL
-z LinkedIn_Mindset_Campaign/posts/. Zasady: jedna idea na film, badge przy
-każdej liczbie, zakazy z README (sekcja 7). Do każdego: 3 warianty hooka,
-opis TT/IG/YT, hashtagi. Wszystko po polsku, mój ton: dowody + suchy humor.
+Przygotuj skrypty wideo na tydzień VN wg Content_Calendar.md.
+Użyj szablonu Video_Script_Template.md v2: hook mówiony ≤8 słów + overlay,
+sygnatura na końcu, reguła błędu warunkowego w DEMO, badge przy każdej liczbie,
+zakazy z README (sekcja 7). Dla MIND adaptuj copy_PL z LinkedIn_Mindset_Campaign/posts/.
+Dodatkowo: materiał ZK#N wg ZK_Znajdz_Klamstwo.md (typ błędu z rotacji, rozwiązanie ZK#N-1).
+Do każdego odcinka: 3 warianty hooka ≤8 słów, opis TT/IG/YT, hashtagi.
+Po polsku, mój ton: dowody + suchy humor.
 ```

@@ -126,3 +126,25 @@ Every post in both campaigns was written video-first: each `hook_variants.txt` f
 3. **M3 real photo** — does a publishable photo of the Domek exist (kids not identifiable)? It materially outperforms any generated image.
 4. **Poll timing** — M2-POLL on Jul 21 replaces a regular post; if you'd rather not "spend" a Tuesday on a poll, run it Monday Jul 20 instead and keep M2 on Jul 21.
 5. **Friday PL Modernization** — commit or drop? Recommendation: drop until one EN track hits "Good" KPIs, then add.
+
+---
+
+## PART 6 — v2.1 ADDENDUM (2026-07-06): Theme Week integration
+
+The video channel launched planning (see `../Theme_Week_Operating_System.md` — it is now the master weekly
+schedule; this document remains the LinkedIn-layer source of truth). Decisions adopted in the audit:
+
+1. **Friday PL Modernization: DROPPED** (resolves open item 5) until the EN track hits "Good" KPIs.
+2. **Thursday golden hour → LITE** (first comment + replies only, ~1 h). Tuesday keeps the full protocol — it is the revenue slot.
+3. **NEW Monday slot: native video.** Best-performing TikTok cut of the previous week posts to LinkedIn
+   as native video (15 min). This finally uses the video format none of the 17 posts used (Part 4's own observation).
+4. **Hook lab loop:** TikTok tests 2–3 hook variants per theme with 48 h retention data; the winning
+   pattern feeds the following Tuesday's LinkedIn hook. Add a "hook source: TT-win / new" column to the tracker.
+5. **Colleague amplification capped at 2–3**, varied timing and wording — five same-hour comments weekly
+   reads as a pod, to readers and possibly to the algorithm.
+6. **Video calendar is date-synced to this calendar** (M1 week = video week V1, Jul 13). Cross-pollination
+   planted: M4 (Aug 11) may link the running ZNAJDŹ KŁAMSTWO game in its first comment; the game gives
+   M4's training-room story a public, verifiable life.
+7. **Owned channel added to the funnel:** newsletter "Pierwszy Krok" + lead magnet "Checklist 60 sekund"
+   (from M6's procedure; file: `../Video_Channel_Strategy/Lead_Magnet_Checklist_60s.md`). New KPI row:
+   newsletter signups/week (floor 3 / good 10 / great 30+).
