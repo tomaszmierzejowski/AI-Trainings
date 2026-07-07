@@ -4,13 +4,13 @@ It was from a researcher named Birgit. She had written it the moment she found o
 
 It was Christmas Eve.
 
-Barnas Plattform. A national Norwegian research program studying children's self-esteem across kindergartens. Built on Xamarin — a platform that reached end-of-life in 2024. By late 2025, Google Play was blocking updates. The January launch was days away. Hundreds of families were about to lose access to something that genuinely mattered.
+Barnas Plattform. A national Norwegian research program studying children's self-esteem across kindergartens. An Android-only app built on Xamarin — a platform that reached end-of-life in 2024. Google Play was deprecating Xamarin support and blocking updates. The January launch was days away. Hundreds of families were about to lose access to something that genuinely mattered.
 
 We had four days.
 
 I won't pretend there wasn't a moment on day two where the build was failing and four days felt like the wrong promise.
 
-We delivered. 92% of the existing code preserved. 1,200+ automated transformations applied. 23 decision points validated manually by a senior architect. Both app stores — first submission. Zero regressions. 15% performance improvement.
+We delivered. 92% of the existing code preserved. 1,200+ automated transformations applied. 23 decision points validated manually by a senior architect. Xamarin to .NET MAUI in four days. Google Play — first submission. Zero regressions. 15% performance improvement.
 
 Here is what Birgit wrote:
 

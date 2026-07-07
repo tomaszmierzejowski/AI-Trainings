@@ -1,9 +1,9 @@
 "Analiza pełnej bazy kodu" brzmi jak magia, dopóki nie zobaczycie kalendarza.
 
-Oto jak naprawdę wyglądają te 3 tygodnie — z realnego projektu na 20 aplikacjach:
+Oto jak naprawdę wyglądają te 3 tygodnie — z realnego projektu dla globalnego importera motoryzacyjnego: 20 repozytoriów jako jeden system:
 
 TYDZIEŃ 1 — Wczytanie i mapa.
-Każde repozytorium załadowane. Analiza wspierana AI czyta każdy plik i buduje surową mapę: aplikacje, endpointy, integracje, przepływy danych. W tym projekcie: 187 endpointów zmapowanych w 20 połączonych aplikacjach. Moja praca w tym tygodniu: konfiguracja, kontrola poprawności, wczesne wyłapywanie artefaktów.
+Każde repozytorium załadowane. Analiza wspierana AI czyta każdy plik i buduje surową mapę: aplikacje, endpointy, integracje, przepływy danych. W tym projekcie: 187 endpointów zmapowanych w 20 repozytoriach jako jednym połączonym systemie. Moja praca w tym tygodniu: konfiguracja, kontrola poprawności, wczesne wyłapywanie artefaktów.
 
 TYDZIEŃ 2 — Weryfikacja i kopanie.
 Tu architekt zarabia na swoje honorarium. Każde istotne ustalenie sprawdzane ze źródłem. Twierdzenia, które nie przetrwają weryfikacji, giną — w jednej analizie 97 projektów opublikowany wynik to zero błędnych wniosków, bo właśnie po to jest tydzień 2: żeby błędne wnioski umierały w nim, nie u klienta. Teraz wychodzą niespodzianki: integracje, których nikt nie udokumentował, endpointy, których nikt nie zabezpieczył.
@@ -13,7 +13,7 @@ Reguły biznesowe wyodrębnione i ocenione poziomem pewności. Ustalenia spisane
 
 To wszystko. Żadnej magii. Metoda, maszyna, która czyta wszystko, i architekt, który niczemu nie ufa przed weryfikacją.
 
-Tradycyjny harmonogram dla tego samego zakresu: ~14 tygodni. Porównanie kosztów na porównywalnym projekcie: 500 tys. vs 2,3 mln NOK.
+Tradycyjny harmonogram dla tego samego zakresu: ~14 tygodni. Porównanie kosztów na porównywalnym projekcie: 500 tys. vs 2,3 mln NOK (redukcja o 87% wyłącznie w fazie discovery i analizy).
 
 W co tydzień 2 miałby się wgryźć najpierw na Waszej platformie?
 

@@ -2,7 +2,7 @@ Two weeks ago I offered this list privately to anyone who DMed me. Today it goes
 
 10 questions to ask any modernization assessment vendor — including us:
 
-1. What percentage of our codebase will you actually read? (Not "review." Read.)
+1. What percentage of our files will you actually scan? (Not "review." Scan.)
 
 2. Will every finding cite the file and line it came from?
 

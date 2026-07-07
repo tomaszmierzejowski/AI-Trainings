@@ -7,15 +7,19 @@
 
 ### The Big Idea
 
-Every assessment you've paid for described a story about your legacy platform. Nobody actually read the code. We do. That changes everything.
+Every assessment you've paid for described a story about your legacy platform. Nobody scanned 100% of the files. We do. That changes everything.
 
 ### The Enemy
 
-The Discovery Slide Deck — the industry practice of producing "insights" from interviews, documentation, and code samples, then presenting them as findings, when the actual codebase was never fully read.
+The Discovery Slide Deck — the industry practice of producing "insights" from interviews, documentation, and code samples, then presenting them as findings, when the actual codebase was never fully scanned.
 
 ### Target Reader
 
-Stefan Andersen, 47, VP Engineering at a 2,800-person Nordic or Central European enterprise. He has a slide deck from a consulting firm that says "complex dependencies require a phased approach." He has never had anyone read every line of his code. He doesn't know yet that this is the specific problem.
+Stefan Andersen, 47, VP Engineering at a 2,800-person Nordic or Central European enterprise. He has a slide deck from a consulting firm that says "complex dependencies require a phased approach." He has never had anyone scan 100% of his files. He doesn't know yet that this is the specific problem.
+
+### Verified Metrics (2024→2026)
+
+Two years of AI Discoveries and AI Modernization · **30+ repositories** assessed · **87% discovery cost savings** (*discovery and analysis phase only*) · **20× faster & more reliable discovery** · scanning 100% of files per engagement · Agile discovery deliverables in **15–30 days** with skilled engineers + AI-mindset
 
 ---
 
@@ -24,13 +28,13 @@ Stefan Andersen, 47, VP Engineering at a 2,800-person Nordic or Central European
 | # | Codename | Format | Job | Key Metric |
 |---|----------|--------|-----|------------|
 | 0 | LWT MOMENT | Text + event photo | Timely event post, publishes before main campaign. Establishes personal presence and AI Mindset framing. Seeds the audience for Post 1. | 4-level AI spectrum, "Domek" micro-story |
-| 1 | THE ALARM | Carousel | Create the realization that standard assessments are partial by design | 529 endpoints, 98 connections |
-| 2 | THE INVISIBLE RISK | Text + graphic | Make the consequence of unread code viscerally real | 529, GDPR €20M exposure |
-| 3 | PROOF OF SPEED | Text + graphic | Emotional proof — feel something, not just agree | 4 days, Birgit quote |
-| 4 | PROOF OF SCALE | Carousel | Logical proof — enterprise scale numbers | 20 apps, 3 weeks, 500K vs 2.3M NOK |
-| 5 | THE RESCUE | Text | Urgency — 2 years blocked, 1 month fixed | 200+ vulnerabilities, 16x ROI |
+| 1 | THE ALARM | Carousel | Create the realization that standard assessments are partial by design | 187 endpoints, 98 connections; scanning 100% of files |
+| 2 | THE INVISIBLE RISK | Text + graphic | Make the consequence of unscanned code viscerally real | 187 endpoints, GDPR €20M exposure |
+| 3 | PROOF OF SPEED | Text + graphic | Emotional proof — feel something, not just agree | 4 days, Pediatric Mobile (Android-only, Xamarin → MAUI) |
+| 4 | PROOF OF SCALE | Carousel | Logical proof — enterprise scale numbers | Global Automotive Importer: 20 repos, 460-page report, 87% discovery savings* |
+| 5 | THE RESCUE | Text | Urgency — Oceanic Research: ships at sea, 2 years blocked, 1 month fixed | 200+ vulnerabilities, 16× ROI |
 | 6 | THE REFRAME | Text/Video | AI's actual role — gets reshared by practitioners | 4,867 developer study |
-| 7 | THE RECKONING | Carousel | Conversion — full track record, DM invitation | All verified metrics |
+| 7 | THE RECKONING | Carousel | Conversion — full track record, DM invitation | 30+ repos, 87% discovery savings*, 20× discovery speed |
 
 ---
 
@@ -108,7 +112,11 @@ Graphics save to: `graphics/`
 
 - "73% of modernization projects fail" — this statistic does not exist in any Standish report
 - "200+ business rules extracted" — pre-deduplication count; use 100
-- "120+ codebases" — includes test projects; use 100+
+- "100% code coverage" / "100% code read" — replace with "scanning 100% of files" or "100% of files scanned"
+- "95% cost savings" — use **87% discovery cost savings** (*discovery and analysis phase only*)
+- "56+ repositories" / "120+ codebases" — use **30+ repositories** (2024→2026 track record)
+- "three years" of AI modernization — use **two years of AI Discoveries and AI Modernization (2024→2026)**
+- Discovery cost or speed claims without disclaimer — add *discovery and analysis phase only* where cost savings apply
 - "dealer platform / tolling / billing" — client identification risk
 - "automotive / Nordic OEM" — client identification risk
 - "maritime / fisheries / vessels" — use "government research organization"

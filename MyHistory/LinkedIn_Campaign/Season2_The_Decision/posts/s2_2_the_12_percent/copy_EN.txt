@@ -12,7 +12,7 @@ Imagine an auditor who checked 12% of transactions and issued an unqualified opi
 
 The self-test — pull up your last assessment report and look for:
 
-1. A coverage statement (what % of code was read, not "reviewed")
+1. A coverage statement (what % of files was scanned, not "reviewed")
 2. Source references (findings that cite files and lines, not interviews)
 3. A list of what was NOT examined
 

@@ -1,6 +1,6 @@
 Pytanie ukryte za każdym pytaniem: "A co, jeśli analiza znajdzie coś złego?"
 
-Znajdzie. W sześciu projektach ani razu nie oddaliśmy raportu z komunikatem "wszystko w porządku". 529 endpointów bez uwierzytelniania, 98 nieudokumentowanych integracji, dwuletnie blokady wdrożeń — każda platforma po dziesiątce lat coś w sobie nosi.
+Znajdzie. W sześciu projektach ani razu nie oddaliśmy raportu z komunikatem "wszystko w porządku". 529 endpointów bez uwierzytelniania, 98 nieudokumentowanych integracji, lata odroczonych aktualizacji na systemach, których nie można było dotknąć w trakcie eksploatacji — każda platforma po dziesiątce lat coś w sobie nosi.
 
 I tu jest przeformułowanie, które ma znaczenie: te ustalenia istniały, zanim przeczytaliśmy kod. Analiza nie tworzy ryzyka. Zamienia ryzyko nieznane — niewyceniane, nieubezpieczalne, niezarządzalne — w listę z numerami linii. Listy można triażować. Nieznanego można się tylko bać.
 

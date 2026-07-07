@@ -4,17 +4,17 @@ All client names have been replaced with project codenames (Alpha through Epsilo
 
 ---
 
-## Project Alpha — Nordic Automotive Platform
+## Project Alpha — Global Automotive Importer (Nordic Automotive Platform)
 
-**Industry:** Automotive retail (multi-brand dealer network)
+**Industry:** Automotive retail (multi-brand dealer network; global automotive importer)
 **Geography:** Norway
-**Engagement scope:** Portfolio discovery across a large dealer management platform
+**Engagement scope:** Portfolio discovery — analyzing **20 separate legacy repositories as one single system**
 
 ### Challenge
-A Nordic automotive retail organization was running 20 interconnected repositories built on obsolete technology stacks. The platform powered sales workflows, inventory, and customer management. No one in the organization had a reliable map of how the 20 repos connected to each other, what APIs were exposed externally, or what critical business logic was embedded in the legacy code.
+A global automotive importer was running 20 interconnected repositories built on obsolete technology stacks. The platform powered sales workflows, inventory, and customer management. No one in the organization had a reliable map of how the 20 repos connected to each other, what APIs were exposed externally, or what critical business logic was embedded in the legacy code.
 
 ### What the Factory Found (60-hour automated discovery)
-- **20 repositories** analyzed, **98 inter-service connections** mapped
+- **20 separate legacy repositories** analyzed as **one single system**, **98 inter-service connections** mapped
 - **Apache Struts 1.1** in production — subject to **CVE-2014-0114**, a Remote Code Execution vulnerability with CVSS score 7.5 (High). This vulnerability was publicly known since 2014 and is the same class of vulnerability that caused the Equifax breach (2017, $575M settlement)
 - **Plaintext credentials** hardcoded in configuration files and source code
 - **8,800+ SonarQube code quality violations** catalogued
@@ -23,7 +23,8 @@ A Nordic automotive retail organization was running 20 interconnected repositori
 ### Outcome
 - Full discovery report delivered in **3 weeks** (traditional estimate: 14 weeks)
 - Cost: **~500,000 NOK** (traditional estimate: **~2,300,000 NOK**)
-- Cost reduction: **78%**
+- Discovery cost reduction: **87%** *(codebase discovery and analysis phase only)*
+- **Deliverables:** unified Target Architecture blueprint, **one single cohesive mockup**, **460-page main report**
 - Modernization roadmap produced with prioritized risk remediation plan
 - Client was able to present board-level risk exposure for the first time with code-linked evidence
 
@@ -63,28 +64,28 @@ The 529 unauthenticated endpoint finding created immediate executive attention. 
 
 ---
 
-## Project Gamma — National Research Platform (Mobile)
+## Project Gamma — Sovereign Pediatric Mobile App (National Research Platform)
 
 **Industry:** Non-profit research / public health
 **Geography:** Norway
-**Engagement scope:** Emergency mobile application migration
+**Engagement scope:** Emergency **Android-only** mobile application migration
 
 ### Challenge
-A Norwegian organization running a national research project — tracking children's wellbeing and self-esteem across multiple municipalities — had their mobile application (Android and iOS) become non-functional due to the end-of-life of the Xamarin framework (Google Play API update, Q4 2024). The application was the primary data collection tool for kindergartens across Norway. Without it, a multi-year national research project could not launch its January 2026 cohort.
+A Norwegian organization running a national research project — tracking children's wellbeing and self-esteem across multiple municipalities — had their **Android-only** mobile application become non-functional due to **Google Play Store deprecating support for Xamarin** (Q4 2024). The application was the primary data collection tool for kindergartens across Norway. Without it, a multi-year national research project could not launch its January 2026 cohort.
 
 The organization had a very limited budget and a fixed deadline: **January 2, 2026**, when kindergartens across multiple Norwegian municipalities were scheduled to start.
 
 ### What the Factory Did
 - Automated analysis of existing Xamarin codebase
-- AI-assisted migration to .NET MAUI (the successor framework)
+- Migrated to **.NET MAUI in just 4 days** (the successor framework)
 - Parallel test generation to ensure functional parity
-- App Store submission (both Google Play and Apple App Store)
+- Google Play Store submission and approval
 
 ### Results
 - **Delivery time: 4 days** (industry estimate for Xamarin-to-MAUI migration: 4–8 weeks)
 - **92% of original code preserved** (no unnecessary rewrites)
 - **Zero post-launch bugs** reported
-- **First-submission approval** on both app stores (no rejection/resubmission cycle)
+- **First-submission approval** on Google Play (no rejection/resubmission cycle)
 - National research program launched on schedule, January 2, 2026
 - Kindergartens across multiple Norwegian municipalities operational on day one
 
@@ -97,14 +98,16 @@ This was the message received on Christmas Eve — the migration was completed a
 
 ---
 
-## Project Delta — Maritime Research Platform
+## Project Delta — Oceanic Research Institute (Maritime Research Platform)
 
 **Industry:** Maritime / fisheries research
 **Geography:** Norway
 **Engagement scope:** Security assessment and modernization discovery for vessel-deployed research platform
 
 ### Challenge
-A maritime research organization operated a specialized data collection and processing platform deployed across 20+ vessels. The platform ran on severely outdated infrastructure: Meteor 1.8 and Node.js version 8 — both end-of-life technologies with publicly documented critical vulnerabilities.
+An oceanic research institute operated a specialized data collection and processing platform deployed across 20+ vessels. The platform ran on severely outdated infrastructure: Meteor 1.8 and Node.js version 8 — both end-of-life technologies with publicly documented critical vulnerabilities.
+
+A critical operational constraint: the organization **could not update measuring software while ships were out at sea**. This left vessel-deployed systems running vulnerable stacks for extended periods without a safe maintenance window.
 
 The organization had no visibility into the security posture of their vessel-deployed systems or the extent of their vulnerability exposure.
 
@@ -151,10 +154,10 @@ A national data management organization needed a full architectural overhaul of 
 
 | Project | Industry | Core Finding | Delivery Time | Cost vs Traditional | ROI |
 |---------|----------|-------------|---------------|---------------------|-----|
-| Alpha | Automotive | RCE vulnerability (CVE-2014-0114), 8,800+ quality issues | 3 weeks | 78% reduction | 8x |
-| Beta | Transport | 529 exposed endpoints, 35/100 compliance, GDPR exposure | 3 weeks | 78% reduction | 8x |
+| Alpha | Automotive | RCE vulnerability (CVE-2014-0114), 8,800+ quality issues | 3 weeks | 87% discovery reduction | 8x |
+| Beta | Transport | 529 exposed endpoints, 35/100 compliance, GDPR exposure | 3 weeks | 87% discovery reduction | 8x |
 | Gamma | Research/Non-profit | Emergency 4-day migration, 0 bugs | 4 days | 85% reduction | 4x |
 | Delta | Maritime | 200+ CVEs on vessel platform | 3 weeks | — | 16x |
 | Epsilon | Public sector | Clean architecture rebuild with IaC | — | — | — |
 
-**Portfolio-level:** 100% of projects delivered on time. 0% post-launch regression rate. Average ROI: 8–16x.
+**Portfolio-level:** 100% of projects delivered on time. 0% post-launch regression rate. Average ROI: 8–16x. Discovery cost savings figures apply to the codebase discovery and analysis phase only.

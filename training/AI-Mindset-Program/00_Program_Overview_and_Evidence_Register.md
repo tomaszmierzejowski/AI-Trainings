@@ -52,10 +52,10 @@ Optional add-on track: the existing 3-day technical masterclass ("from magic to 
 - **Project Axiom:** 97 projects analyzed, 17 modules identified, zero erroneous conclusions.
 - **Project Meridian-Core:** 5+ year modernization program, zero operational interruptions.
 - **Project Terrain:** 3–4× cost reduction vs. traditional design; ~200 design variants; 8 iteration rounds.
-- **4-day rescue (anonymized):** Xamarin→MAUI in 4 days vs. 4–8 weeks typical; 92% code preservation; zero regressions; 15% faster app startup; 100% first-submission store approval. ROI: use the conservative **4× estimate**, not the 10×+ marketing figure (per the author's own banned-phrases discipline).
+- **4-day rescue (anonymized):** Android-only app; Google Play deprecating Xamarin.Forms; Xamarin→.NET MAUI in 4 days vs. 4–8 weeks typical; 92% code preservation; zero regressions; 15% faster app startup; Google Play approval on first submission. ROI: use the conservative **4× estimate**, not the 10×+ marketing figure (per the author's own banned-phrases discipline).
 - **Nordic transaction-processing enterprise:** 529 REST endpoints documented; 143 business rules extracted at 94% confidence from ~220,000 lines; 312 evidence-tagged citations; 3-week delivery vs. ~6 months traditional.
-- **Government research organization:** 200+ known CVEs surfaced; application "undeployable" for 3 years, containerized and deployed; 16× ROI (estimated).
-- **Discovery economics:** ~500,000 NOK vs. ~2,300,000 NOK traditional (≈78% reduction) — 3 weeks vs. 14 weeks.
+- **Government research organization:** 200+ known CVEs surfaced; could not update measuring software while ships were out at sea; containerized and deployed; 16× ROI (estimated).
+- **Discovery economics:** ~500,000 NOK vs. ~2,300,000 NOK traditional (≈87% reduction, discovery and analysis phase only) — 3 weeks vs. 14 weeks.
 - **PresoGen AI:** ~600 automated tests; 3 LLM providers; 3 export formats.
 - **Mana Menu:** ~657 automated tests; 37 controllers; 554 recipes.
 - **Lidka:** non-technical publisher shipped a working audiobook store in days with full owner autonomy (Tpay + InPost integrations).

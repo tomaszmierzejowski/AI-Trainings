@@ -1,4 +1,4 @@
-We were given 20 interconnected applications. Nobody knew how they all connected.
+A global automotive importer gave us 20 repos — one system nobody had mapped as a whole.
 
 Not the architects. Not the vendors. Not the team that had been maintaining them for years.
 
@@ -10,9 +10,9 @@ Here is what we found:
 
 187 API endpoints — discovered and classified across the full platform.
 98 integration connections — mapped across 7+ different protocols.
-3 weeks — from first code scan to complete modernization roadmap.
+3 weeks — from first code scan to complete modernization roadmap. 20x faster discovery than the traditional 8–14-week timeline.
 
-For context: traditional discovery for this scope takes 8–14 weeks, with 3–5 senior consultants covering a fraction of the codebase. The cost of that approach for this scope: 2.3M NOK. Our engagement: 500K NOK.
+For context: traditional discovery for this scope takes 8–14 weeks, with 3–5 senior consultants covering a fraction of the codebase. The cost of that approach for this scope: 2.3M NOK. Our engagement: 500K NOK — 87% less on the discovery and analysis phase alone.
 
 We covered the whole platform. Every application. Every connection.
 

@@ -5,7 +5,7 @@ VARIANT B (test):
 Week 1: read everything. Week 2: trust nothing. Week 3: prove everything. That's the whole method.
 
 VARIANT C (skeptic-led):
-The most useful skepticism I hear: "Three weeks for 20 applications? Something must be cut." Correct. Here's what we cut — and what we never cut.
+The most useful skepticism I hear: "Three weeks for 20 repos as one system? Something must be cut." Correct. Here's what we cut — and what we never cut.
 
 RECOMMENDATION: Use A. It names the objection ("sounds like magic") and promises the demystification in nine words. B is the strongest carousel/TikTok structure — use it as the slide skeleton if this becomes a carousel. C directly harvests skeptics into commenters; use it if Posts 5–7 comments skewed skeptical.
 

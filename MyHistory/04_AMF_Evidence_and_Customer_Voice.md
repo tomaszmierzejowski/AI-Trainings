@@ -4,7 +4,7 @@
 
 ### Project Gamma — Mobile Platform Emergency Migration
 
-**Context:** A national research organization had their mobile application fail due to framework end-of-life. The Factory completed a 4-day migration to restore functionality before the January 2, 2026 launch of a national research program.
+**Context:** A national research organization had their **Android-only** mobile application fail because **Google Play Store deprecating support for Xamarin**. The Factory completed a **4-day migration to .NET MAUI** to restore functionality before the January 2, 2026 launch of a national research program.
 
 **Direct customer message received December 24, 2025** (project sponsor, organizational leadership):
 
@@ -18,9 +18,11 @@
 - The 4-day delivery prevented a multi-year research program from failing at the starting line
 
 **Technical follow-up context:**
-- The application was migrated from Xamarin to .NET MAUI
+- The application was **Android-only**, migrated from Xamarin to .NET MAUI
+- Blocker: **Google Play Store deprecating support for Xamarin**
+- Resolution: Migrated to **.NET MAUI in just 4 days**
 - 92% of original code was preserved (no unnecessary rewrites)
-- First-submission approval on both Google Play and Apple App Store
+- First-submission approval on Google Play
 - Zero post-launch bugs reported
 
 ---

@@ -22,14 +22,14 @@
 
 ## 3. VERIFIED PROOF POINTS (my evidence register — use these instead of generic stats)
 
-- **Project Velocity** (public codename): 20 legacy Java/J2EE apps, discovery in 3 weeks, 4–8× faster application understanding, 187 endpoints mapped.
+- **Project Velocity** (public codename): 20 legacy Java/J2EE apps analyzed as one system, discovery in 3 weeks, 4–8× faster application understanding, 187 endpoints mapped, **460-page main report**, unified mockup. **87% discovery and analysis cost reduction** (discovery phase only).
 - **Project Axiom:** national infrastructure operator, pre-ERP analysis — 97 projects analyzed, 17 modules identified, **zero erroneous conclusions** (human verification gates).
 - **Project Meridian-Core:** global professional-services platform, 5+ years continuous modernization, zero operational interruptions.
 - **Project Terrain:** generative AI in physical playground design — ~200 variants, 8 iterations, 3–4× cost reduction.
-- **"4-day rescue" (anonymize client):** Norwegian children's-mental-health research non-profit; Xamarin→.NET MAUI in 4 days (typical 4–8 weeks), 92% code preserved, zero regressions, 100% first-submission store approval, 15% faster startup. Christmas-Eve gratitude quote from project lead. **ROI: use conservative 4× estimate, never the 10×+ marketing figure.**
+- **"4-day rescue" / Pediatric Mobile (anonymize client):** Norwegian children's-mental-health research non-profit; **Android-only** app blocked by **Google Play deprecating Xamarin** → **.NET MAUI in 4 days** (typical 4–8 weeks), 92% code preserved, zero regressions, 100% first-submission Google Play approval, 15% faster startup. Christmas-Eve gratitude quote from project lead. **ROI: use conservative 4× estimate, never the 10×+ marketing figure.**
 - **"Nordic transaction-processing enterprise" (anonymize):** 529 REST endpoints documented; 143 business rules @ 94% confidence from ~220,000 lines; 312 evidence-tagged citations; 3 weeks vs ~6 months.
-- **"Government research organization" (anonymize):** 200+ CVEs; app "undeployable" for 3 years → containerized & deployed; 16× ROI (estimated).
-- **Discovery economics:** ~500k vs ~2.3M NOK (≈78% cheaper), 3 vs 14 weeks.
+- **"Oceanic Research Institute" (anonymize — Fish2Data/IMR):** **Could not update measuring software while ships were out at sea.** 200+ CVEs mapped; 100,000+ lines documented; 16× ROI (estimated, discovery phase).
+- **Discovery economics:** ~500K vs ~2.3M NOK (**87% cheaper**, discovery and analysis phase only), 3 vs 14 weeks. **20x faster & more reliable discovery.** **30+ repositories** assessed (2024→2026). Two years of AI Discoveries and AI Modernization (2024→2026).
 - **My products:** PresoGen AI (~600 automated tests, 3 LLM providers) · Mana Menu (~657 tests, 37 controllers) · Lidka (non-technical publisher, audiobook store built in days, full owner autonomy, Tpay+InPost) · Antystyki.pl (AI content pipeline, human-in-the-loop governance, 17+ sources, .NET 9 + React 19).
 - **External studies I quote (with honesty caveats):** Peng 2023 (55.8% faster, scoped task) · Cui 2024 (~4,800 devs, +26%, gains follow behavior change) · Brynjolfsson 2023 (+14% avg/+34% novices, call centers) · Noy & Zhang 2023 (−40% time/+18% quality, writing) · Dell'Acqua 2023 "jagged frontier" (758 BCG consultants: +40% quality inside frontier, −19 p.p. outside, bottom half +43%) · METR 2025 (experienced devs −19% slower, felt +20% faster) · McKinsey 2023 (gains require practice; near-zero on complex tasks) · Standish CHAOS 2020 (~31% succeed).
 
@@ -48,7 +48,7 @@
 Decisions: no pre-training survey for now; program stays generic with track toggle; Module 5 EventCo slide rows tagged ZAŁOŻENIE/[INFERRED] — to be corrected live in the room.
 
 ### C. AI Modernization Factory (AMF) / AMaaS
-My flagship Sopra Steria offering: orchestrated multi-agent discovery pipeline for legacy systems (ingestion → semantic analysis → security scan → compliance → synthesis, human verification gates between stages, evidence-tagged outputs). "60-hour automated discovery," "9 specialized engines," anti-hallucination documentation framework. AMaaS pricing tiers: Self-Service €3,500 / Guided Discovery €7,500 (recommended) / Portfolio Scan €25,000. Poland/Norway delivery. Related: B+R (Polish R&D tax relief via Ayming) documentation; Norwegian grants (SkatteFUNN, Innovasjon Norge) positioning.
+My flagship Sopra Steria offering: orchestrated multi-agent discovery pipeline for legacy systems (ingestion → semantic analysis → security scan → compliance → synthesis, human verification gates between stages, evidence-tagged outputs). **Scanning 100% of files** (not sample-based review). **Two years of AI Discoveries and AI Modernization (2024→2026).** Discovery metrics: **87% cost reduction** and **20x faster & more reliable discovery** (discovery and analysis phase only); **30+ repos** assessed. Discovery phases run **15–30 days** — skilled engineers with AI-mindset + native AI-augmented pipelines; full mockup and target architecture by Day 15–30. "60-hour automated discovery," "9 specialized engines," anti-hallucination documentation framework. AMaaS pricing tiers: Self-Service €3,500 / Guided Discovery €7,500 (recommended) / Portfolio Scan €25,000. Poland/Norway delivery. Related: B+R (Polish R&D tax relief via Ayming) documentation; Norwegian grants (SkatteFUNN, Innovasjon Norge) positioning.
 
 ### D. CEO presentations (recent, in `Presentations/`)
 Latest working files: **`Impossible_On_Schedule_CEO_Deck.html`** + **`_PL.html`** (and earlier `Impossible_Made_Possible_CEO_Deck_Outline.md`) — C-level deck line built on the case studies above. Earlier C-level decks: "AI Application Modernization – Sopra C-Level," executive dashboards, Poland Discovery decks. Style: metric-heavy, verified numbers, HTML visual decks.
@@ -74,7 +74,15 @@ MoM 2026-06-25: 11 internal retro-doc initiatives across Sopra (incl. my Poland/
 - ❌ 10×+ ROI for the 4-day rescue → use **4× (estimated)**.
 - ❌ "200+ business rules" → use **143 @ 94% confidence** (evidence-tagged figure).
 - ❌ Unsourced prompting stats ("RTF solves 80%", "CoT +40%") — cut everywhere; live before/after demo is the evidence.
-- ❌ Naming anonymized clients (dealer platform/automotive, tolling/billing, maritime/vessels → use the anonymized labels in §3).
+- ❌ Naming anonymized clients (dealer platform/automotive → **Global Automotive Importer**; tolling/billing; maritime/vessels → **Oceanic Research Institute**).
+- ❌ "100% Code Coverage" or "100% Code Read" → use **"100% of files scanned"** / **"scanning 100% of files"**.
+- ❌ Discovery cost savings applied to full modernization → **87% applies to discovery and analysis phase only**.
+- ❌ "78%" or "95%" discovery savings → use **87%**.
+- ❌ "56+ repos" → use **30+ repos** (2024→2026).
+- ❌ "three years" for factory track record → use **Two years of AI Discoveries and AI Modernization (2024→2026)**.
+- ❌ €120K/WebLogic savings for Global Automotive Importer — removed; deliverables are 20 repos as one system, 460-page report, unified mockup.
+- ❌ Oceanic Research "completely offline" → **"Could not update measuring software while ships were out at sea"**.
+- ❌ Pediatric Mobile as cross-platform / both stores → **Android-only, Google Play deprecating Xamarin, .NET MAUI in 4 days**.
 - ❌ DISC/PRISM presented as science — always "communication lens," psychometrically weak, Big Five is the backbone.
 - ⚠️ Verify all study figures against original papers before print/camera.
 

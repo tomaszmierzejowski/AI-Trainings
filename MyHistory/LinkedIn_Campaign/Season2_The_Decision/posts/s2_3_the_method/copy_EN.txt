@@ -1,9 +1,9 @@
 "Full codebase analysis" sounds like magic until you see the calendar.
 
-Here is what the 3 weeks actually look like, from a real 20-application engagement:
+Here is what the 3 weeks actually look like, from a real engagement for a global automotive importer — 20 repos treated as one system:
 
 WEEK 1 — Ingest and map.
-Every repository loaded. AI-accelerated analysis reads every file and produces the raw map: applications, endpoints, integrations, data flows. In this engagement: 187 endpoints mapped across 20 interconnected applications. My job this week: configure, sanity-check, catch artifacts early.
+Every repository loaded. AI-accelerated analysis reads every file and produces the raw map: applications, endpoints, integrations, data flows. In this engagement: 187 endpoints mapped across 20 repos as one interconnected system. My job this week: configure, sanity-check, catch artifacts early.
 
 WEEK 2 — Verify and dig.
 This is where the architect earns the fee. Every significant finding gets checked against source. Claims that don't survive verification get killed — in one 97-project analysis, the published record shows zero erroneous conclusions, because dying in week 2 is what wrong conclusions are for. The surprises surface now: the integrations nobody documented, the endpoints nobody secured.
@@ -13,7 +13,7 @@ Business rules extracted and confidence-scored. Findings written up with source 
 
 That's it. No magic. A method, a machine that reads everything, and an architect who trusts nothing until verified.
 
-Traditional timeline for the same scope: ~14 weeks. Cost comparison on a comparable engagement: 500K vs 2.3M NOK.
+Traditional timeline for the same scope: ~14 weeks. Cost comparison on a comparable engagement: 500K vs 2.3M NOK (87% reduction on the discovery and analysis phase only).
 
 What would you want week 2 to dig into first on your platform?
 

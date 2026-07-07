@@ -12,7 +12,7 @@ Halucynuje. Ciągle. I mimo to używam go w każdym projekcie.
 
 Oto jak naprawdę wygląda podział pracy:
 
-AI czyta kod. Tysiące plików. Każdy endpoint. Każde połączenie. Każdy przepływ danych. Praca, która zajmowała 3–5 starszym konsultantom 8–14 tygodni — zrobiona w kilka dni.
+AI czyta kod. Tysiące plików. Każdy endpoint. Każde połączenie. Każdy przepływ danych. Praca, która zajmowała 3–5 starszym konsultantom 8–14 tygodni — zrobiona w kilka dni. W naszych projektach discovery jest 20x szybsze niż tradycyjne próbkowanie.
 
 Potem ja czytam ustalenia.
 

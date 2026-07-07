@@ -12,17 +12,17 @@ Legacy modernization is expensive. Traditional approaches are also failing at a 
 
 ### Discovery Phase
 
-| Approach | Duration | Team | Cost (NOK) | Code Coverage |
+| Approach | Duration | Team | Cost (NOK) | Files Scanned |
 |----------|----------|------|------------|---------------|
 | Traditional | 3–6 months | 3–5 senior consultants | 1,500,000–2,500,000 | 5–15% |
-| Factory V1 (consulting) | 2–4 weeks | 2–3 consultants | 300,000–500,000 | 100% |
-| Factory V2 (AI-assisted) | 1–2 weeks | 1–2 consultants | 100,000–200,000 | 100% |
-| Factory V3 Portal (self-service) | 60 hours | 0 consultants | ~35,000 | 100% |
+| Factory V1 (consulting) | 15–30 days | 2–3 consultants | 300,000–500,000 | 100% of files scanned |
+| Factory V2 (AI-assisted) | 15–30 days | 1–2 consultants | 100,000–200,000 | 100% of files scanned |
+| Factory V3 Portal (self-service) | 60 hours | 0 consultants | ~35,000 | 100% of files scanned |
 
-**Cost reduction:** 78% vs. traditional consulting approach (Factory V1 benchmark)
-**Coverage improvement:** 5–20x (5–15% sampling → 100% analysis)
+**Discovery cost reduction:** 87% vs. traditional consulting approach (Factory V1 benchmark) *(codebase discovery and analysis phase only)*
+**Discovery speed:** 20x faster & more reliable discovery (5–15% sampling → 100% of files scanned)
 
-### Why 100% Coverage Matters for Cost
+### Why Scanning 100% of Files Matters for Cost
 
 When traditional discovery samples 15% of the code:
 - 85% of hidden complexity remains undiscovered
@@ -31,13 +31,13 @@ When traditional discovery samples 15% of the code:
 - Scope creep, timeline extension, cost overruns follow
 - This is the mechanism behind the 69% failure rate
 
-When the Factory analyzes 100% of the code:
+When the Factory scans 100% of files:
 - All hidden complexity is documented before implementation begins
 - Cost estimates are based on complete information
 - Implementation teams encounter documented problems (expected) not surprise problems (unmanaged)
 - Timeline and cost estimates hold
 
-**The cost reduction is not just in the discovery phase — it is in the entire project lifecycle.**
+**The discovery cost reduction applies to the codebase discovery and analysis phase.** Broader program savings depend on acting on discovery findings during implementation.
 
 ---
 
@@ -48,7 +48,7 @@ When the Factory analyzes 100% of the code:
 **Discovery investment:** ~500,000 NOK
 **Traditional equivalent:** ~2,300,000 NOK
 
-**Direct cost savings:** 1,800,000 NOK (78% reduction)
+**Direct discovery cost savings:** 1,800,000 NOK (87% reduction) *(discovery and analysis phase only)*
 **ROI on discovery cost:** 4.6x (from cost savings alone)
 
 **Security value (estimated):**
@@ -120,7 +120,7 @@ In 2026, the Factory launched a self-service portal that changes the economics e
 | Guided Discovery | €7,500 | ~86,000 | Automated + expert review and interpretation (recommended) |
 | Portfolio Scan | €25,000 | ~287,000 | Multi-application enterprise portfolio assessment |
 
-**Market implication:** Organizations that previously could not justify €500K for discovery can now access the same 100% code coverage analysis for €3,500–€7,500. This opens the Factory's capabilities to:
+**Market implication:** Organizations that previously could not justify €500K for discovery can now access the same **100% of files scanned** analysis for €3,500–€7,500. This opens the Factory's capabilities to:
 - SME organizations evaluating legacy systems before acquisition
 - Private equity due diligence on technology assets
 - Internal IT teams building the business case for modernization investment

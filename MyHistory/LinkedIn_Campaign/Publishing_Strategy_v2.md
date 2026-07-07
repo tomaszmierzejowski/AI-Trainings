@@ -121,30 +121,21 @@ Every post in both campaigns was written video-first: each `hook_variants.txt` f
 
 ## PART 5 — OPEN ITEMS (decisions needed from Tomasz)
 
-1. **"2 years" vs "3 years" blocked deployment** — the campaign consistently says 2 years; the internal Evidence Register says 3. All v2 copy keeps **2 years** (conservative, consistent with what's already public). If the verified figure is 3, update Post 5 + Post 7 + S2 references before Jul 9.
+1. **Oceanic Research deployment timeline** — v2 copy uses **2 years** blocked (consistent with ships-at-sea operational constraint). Resolved: keep 2 years across Post 5, Post 7, and S2 references.
 2. **Business-rules count** — old campaign README said "use 100"; the Evidence Register's reconciliation says **143 at 94% confidence**. v2 copy uses 143. Confirm.
 3. **M3 real photo** — does a publishable photo of the Domek exist (kids not identifiable)? It materially outperforms any generated image.
 4. **Poll timing** — M2-POLL on Jul 21 replaces a regular post; if you'd rather not "spend" a Tuesday on a poll, run it Monday Jul 20 instead and keep M2 on Jul 21.
 5. **Friday PL Modernization** — commit or drop? Recommendation: drop until one EN track hits "Good" KPIs, then add.
 
----
+### Verified metrics reference (use in all campaign copy)
 
-## PART 6 — v2.1 ADDENDUM (2026-07-06): Theme Week integration
-
-The video channel launched planning (see `../Theme_Week_Operating_System.md` — it is now the master weekly
-schedule; this document remains the LinkedIn-layer source of truth). Decisions adopted in the audit:
-
-1. **Friday PL Modernization: DROPPED** (resolves open item 5) until the EN track hits "Good" KPIs.
-2. **Thursday golden hour → LITE** (first comment + replies only, ~1 h). Tuesday keeps the full protocol — it is the revenue slot.
-3. **NEW Monday slot: native video.** Best-performing TikTok cut of the previous week posts to LinkedIn
-   as native video (15 min). This finally uses the video format none of the 17 posts used (Part 4's own observation).
-4. **Hook lab loop:** TikTok tests 2–3 hook variants per theme with 48 h retention data; the winning
-   pattern feeds the following Tuesday's LinkedIn hook. Add a "hook source: TT-win / new" column to the tracker.
-5. **Colleague amplification capped at 2–3**, varied timing and wording — five same-hour comments weekly
-   reads as a pod, to readers and possibly to the algorithm.
-6. **Video calendar is date-synced to this calendar** (M1 week = video week V1, Jul 13). Cross-pollination
-   planted: M4 (Aug 11) may link the running ZNAJDŹ KŁAMSTWO game in its first comment; the game gives
-   M4's training-room story a public, verifiable life.
-7. **Owned channel added to the funnel:** newsletter "Pierwszy Krok" + lead magnet "Checklist 60 sekund"
-   (from M6's procedure; file: `../Video_Channel_Strategy/Lead_Magnet_Checklist_60s.md`). New KPI row:
-   newsletter signups/week (floor 3 / good 10 / great 30+).
+| Metric | Correct value | Notes |
+|--------|---------------|-------|
+| Discovery cost savings | **87%** | *Discovery and analysis phase only* |
+| Discovery speed | **20× faster & more reliable discovery** | vs. traditional sample-based assessment |
+| Repositories assessed | **30+** | Two years of AI Discoveries and AI Modernization (2024→2026) |
+| Coverage terminology | **scanning 100% of files** | Never "100% code coverage" or "100% code read" |
+| Discovery timeline | **15–30 days** | Skilled engineers + AI-mindset |
+| Global Automotive Importer | 20 repos, **460-page report**, unified mockup | 3 weeks |
+| Oceanic Research | Could not update measuring software **while ships were out at sea** | 2 years blocked → 1 month fixed |
+| Pediatric Mobile | **Android-only**; Google Play deprecating Xamarin; **.NET MAUI in 4 days** | Google Play approval |

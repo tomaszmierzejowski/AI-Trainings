@@ -4,16 +4,17 @@ Nie "do". Nie "z naszego doświadczenia". Nie branżowy benchmark z gwiazdką.
 
 Każda liczba poniżej pochodzi z realnego projektu dla realnego klienta. Każde ustalenie prowadzi do linii kodu źródłowego. Tam, gdzie liczba jest szacunkiem — mówię to wprost i wyjaśniam dlaczego.
 
-Track record z 18 miesięcy modernizacji korporacyjnej:
+Track record z dwóch lat AI discovery i modernizacji (2024→2026):
 
 → Ponad 6 projektów enterprise
-→ Ponad 100 przeanalizowanych baz kodu
+→ Ponad 30 przeanalizowanych repozytoriów
 → Zero regresji we wszystkich transformacjach
 → 100% dostaw w terminie
-→ 100% akceptacji w sklepach z aplikacjami za pierwszym podejściem
-→ 500 tys. NOK vs 2,3 mln NOK — zweryfikowany koszt jednego discovery (78% poniżej tradycyjnej wyceny)
+→ 100% akceptacji Google Play za pierwszym podejściem (migracja tylko na Androida)
+→ 500 tys. NOK vs 2,3 mln NOK — zweryfikowany koszt jednego discovery (87% poniżej tradycyjnej wyceny, wyłącznie faza discovery i analizy)
 → 4 dni na migrację platformy, którą standard branżowy wycenia na 4–6 tygodni
-→ 1 miesiąc na przywrócenie wdrożenia zablokowanego przez 2 lata
+→ 3 tygodnie na inwentaryzację platformy morskiej, której nie można było aktualizować, gdy statki były na morzu
+→ Discovery 20x szybsze niż tradycyjne oceny oparte na próbkowaniu
 → Szacunkowo 8–10x średniego ROI — "szacunkowo", bo oddzielamy to, co zmierzone, od tego, co prognozowane
 
 Po co to publikować?

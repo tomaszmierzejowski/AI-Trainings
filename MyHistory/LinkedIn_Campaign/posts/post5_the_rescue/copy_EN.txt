@@ -1,12 +1,14 @@
-For two years, a government research team could not deploy their own system.
+An oceanic research institute ran measuring software across 20+ vessels.
 
-Not "deployed slowly." Not "deployed with problems."
+They could not update it while ships were out at sea.
 
-Could not deploy. At all.
+Not "updated between seasons." Not "patched when back in port."
 
-Every attempt failed at a different point. Undocumented dependencies. Missing configurations. Changes nobody recorded. The failures weren't consistent — which made them nearly impossible to diagnose.
+Could not update. While deployed.
 
-The team wasn't incompetent. They were working without a map.
+Every deferral made the next one harder. Undocumented dependencies. Missing configurations. End-of-life stack accumulating critical CVEs. The exposure wasn't consistent — which made it nearly impossible to price.
+
+The team wasn't incompetent. They were working without a map — and without a window.
 
 We were brought in. Here is what we did differently:
 
@@ -17,15 +19,15 @@ We didn't read the documentation. We read the code.
 → Reconstructed every configuration
 → Surfaced 200+ security vulnerabilities along the way
 
-One month later: a working production deployment.
+Three weeks later: a complete security exposure picture — for the first time.
 
-Two years blocked. One month of systematic analysis. That ratio is not about talent. It's about method.
+Years of deferred updates. Three weeks of systematic analysis. That ratio is not about talent. It's about method.
 
-The system is mission-critical in the literal sense — when it can't deploy, national research stops. Estimated 16x ROI through prevented failure. "Estimated," because prevented losses are projected, not measured. Every other number in this post is verified.
+The platform is mission-critical in the literal sense — when you can't see what's running on research vessels at sea, national science stops. Estimated 16x ROI through prevented failure. "Estimated," because prevented losses are projected, not measured. Every other number in this post is verified.
 
 Here's my question for you:
 
-What is the longest something has stayed "temporarily blocked" in your organization — and what was the real reason?
+What has your organization been deferring because the update window never opens — and what would a real inventory cost you?
 
 Every number verified. Every finding traced to source code.
 

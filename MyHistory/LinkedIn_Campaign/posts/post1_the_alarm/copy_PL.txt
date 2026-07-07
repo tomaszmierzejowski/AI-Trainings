@@ -10,7 +10,7 @@ Raport jest mniej więcej prawdziwy.
 
 „Mniej więcej" robi w tym zdaniu ogromną pracę.
 
-W ciągu ostatnich 18 miesięcy przeanalizowaliśmy sześć korporacyjnych platform z pełnym pokryciem kodu. Nie próbki. Nie dokumentacja. Każda linia. Każdy endpoint. Każda integracja. Każdy przepływ danych.
+Przez dwa lata AI discovery i modernizacji (2024→2026) przeanalizowaliśmy sześć korporacyjnych platform ze 100% plików przeskanowanych. Nie próbki. Nie dokumentacja. Każda linia. Każdy endpoint. Każda integracja. Każdy przepływ danych.
 
 Oto fragment tego, co znaleźliśmy — a czego tradycyjne analizy nie wykryły:
 

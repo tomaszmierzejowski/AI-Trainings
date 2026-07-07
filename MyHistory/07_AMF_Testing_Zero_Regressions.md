@@ -52,20 +52,20 @@ Migration proceeds with continuous behavioral parity checking:
 
 ## Project Gamma: The Zero-Regression Case Study
 
-Project Gamma (National Research Platform, Mobile Migration) is the clearest demonstration of the zero-regression commitment.
+Project Gamma (Sovereign Pediatric Mobile App — **Android-only** National Research Platform) is the clearest demonstration of the zero-regression commitment.
 
-**Context:** A Xamarin mobile application — the primary data collection tool for a national research program — needed to migrate to .NET MAUI in 4 days. The organization had kindergartens across multiple municipalities ready to use the app on January 2.
+**Context:** An **Android-only** Xamarin mobile application — the primary data collection tool for a national research program — needed to migrate to **.NET MAUI in just 4 days** after **Google Play Store deprecating support for Xamarin**. The organization had kindergartens across multiple municipalities ready to use the app on January 2.
 
 **Testing approach:**
 1. Automated behavioral analysis of existing Xamarin code
 2. Test generation covering all data collection flows, user authentication, and sync operations
 3. .NET MAUI implementation verified against generated behavioral tests
-4. Both platforms (Android and iOS) tested to full behavioral parity
-5. App Store submission only after 100% test passage
+4. Android platform tested to full behavioral parity
+5. Google Play submission only after 100% test passage
 
 **Result:**
 - Zero post-launch bugs reported
-- First-submission approval on both Google Play and Apple App Store (no rejection cycle)
+- First-submission approval on Google Play (no rejection cycle)
 - 92% of original code preserved — not rewritten unnecessarily
 - National research program operational on schedule
 
@@ -118,9 +118,9 @@ AI-generated test suites for a typical engagement:
 
 ---
 
-## The 100% Test Coverage Ambition
+## The Behavioral Coverage Ambition
 
-The Factory does not set 100% code coverage as the target. Code coverage is a proxy metric that can be gamed and doesn't reflect behavioral completeness.
+The Factory does not set line-level test coverage percentages as the target. Line coverage is a proxy metric that can be gamed and doesn't reflect behavioral completeness.
 
 The target is **behavioral coverage**: every business behavior that users depend on is covered by a test that will catch regressions.
 

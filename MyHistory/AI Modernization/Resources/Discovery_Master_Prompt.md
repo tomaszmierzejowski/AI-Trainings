@@ -17,6 +17,7 @@ Analyze the application source code located in `Project/Code/` and produce a com
 - **Single-project workspace.** The AI assistant's working directory is the repository root. This repository represents **exactly one engagement, with exactly one input project and exactly one output**. There is no project selection, no per-project subfolders, and no cross-project aggregation. The complete directory layout — input paths, shared resource paths, output paths, and read/write rules — is defined in **`Code_Structure.md`** at the repository root. Read that file before beginning any analysis.
 
 - **Read-only on application code.** You never modify anything under `Project/`. All outputs go into `Outputs/` subfolders.
+- **Coverage is accounted.** Every file under `Project/Code/` appears in `Outputs/Evidence/coverage_ledger.md` with an analysis status that you keep current throughout the discovery. Any claim of the form "100% of files scanned" or "all business rules were extracted" must be backed by the ledger — never asserted (see PRD § 9.4).
 - **No runtime access.** You have no database connections, no API access, no production environment. All findings derive from static analysis of code, configuration, and documentation files.
 - **Evidence-first.** Every finding must have a `file:line` citation or an explicit `[Assumed]` label. No exceptions.
 - **English only.** All outputs are in English.
@@ -67,14 +68,14 @@ Each layer builds on the previous. Do not write the Architecture section before 
 
 ### 2.3 Confidence Scoring System
 
-The confidence-scoring system — tier labels, evidence-status scores, severity weights, the deterministic per-section formula, the CVE cap, edge cases, and presentation rules — is defined canonically in **`Resources/Discovery_PRD.md` § 4**. Read that section before computing any confidence value. Scores are **deterministic**; this prompt does not redefine the formula.
+The confidence-scoring system — tier labels, evidence status labels, the deterministic per-section ECI formula (including the ledger-based Coverage term), the CVE evidence rule, edge cases, and presentation rules — is defined canonically in **`Resources/Discovery_PRD.md` § 4**. Read that section before computing any confidence value. Scores are **deterministic**; this prompt does not redefine the formula.
 
 Operational pointers for the agent:
 
-- Per-finding evidence status, score, and severity weights: PRD § 4.2 and § 4.6.
-- Per-section confidence formula, procedure, and worked example: PRD § 4.5.
+- Per-finding evidence status labels and severity classification: PRD § 4.2 and § 4.6. **Per-finding confidence is the evidence status label only — never assign a numeric per-finding score.**
+- Per-section confidence formula (including the ledger-based Coverage term), procedure, and worked example: PRD § 4.5.
 - Overall report confidence (weighted across sections): PRD § 4.4.
-- Edge cases (empty / skipped / "Cannot Determine"-only sections): PRD § 4.7.
+- Edge cases (empty / skipped / "Cannot Determine"-only / small-sample sections): PRD § 4.7.
 - Where and how to display each score (logs, badges, callouts, verbal): PRD § 4.8.
 - Calibration scenarios used as a regression check on the formula: PRD § 4.9.
 
@@ -107,11 +108,11 @@ IDs are always zero-padded to two digits. If more than 99 items exist in a categ
    - Read the report to understand what security issues were already identified by the tool.
    - Note the key findings: vulnerability counts by severity, quality gate result, any credential detections.
    - Store these as cross-reference material for Phase 2 Security analysis (Section 5.1).
-   - Log in `Outputs/PartialReports/00_Discovery_Config.md`: `static_analysis_report: "present"`
+   - Remember the result: `static_analysis_report: "present"` is written into `Outputs/PartialReports/00_Discovery_Config.md` when Phase 0 creates that file (Section 3.3 step 4).
    - Proceed to clarifying questions (Section 3.2).
 
 3. **If the folder is empty (no report file present):**
-   - Log in `Outputs/PartialReports/00_Discovery_Config.md`: `static_analysis_report: "absent"`
+   - Remember the result: `static_analysis_report: "absent"` is written into the config file when Phase 0 creates it.
    - Note to the user: *"No static analysis report (e.g., SonarQube) found in `Project/SonarQubeReport/`. The discovery will proceed using AI-based static analysis. Security findings will reflect this in their evidence status (Assumed rather than Verified). To improve security section confidence, provide a dependency scanner or SonarQube export in `Project/SonarQubeReport/` and re-run."*
    - Proceed to Phase 0. **Do not block the discovery.**
 
@@ -130,11 +131,11 @@ Check if `Outputs/PartialReports/00_Discovery_Config.md` already exists.
 
 ### 3.2 Clarifying Questions
 
-The clarifying questions — their exact wording, answer options, and defaults — are defined canonically in **`Resources/Discovery_PRD.md` § 3**. Read that section and present all six questions to the user in order. Each has a default that applies if the user presses Enter or says "defaults are fine."
+The clarifying questions — their exact wording, answer options, and defaults — are defined canonically in **`Resources/Discovery_PRD.md` § 3**. Read that section and present all seven questions to the user in order. Each has a default that applies if the user presses Enter or says "defaults are fine."
 
 This repository represents exactly one engagement against the application in `Project/Code/`. There is no project to select.
 
-The six questions are:
+The seven questions are:
 
 1. **Time Budget** (PRD § 3.1) — 20h Quick Scan / 40h Standard / 60h Deep Discovery
 2. **Discovery Mode** (PRD § 3.2) — General / System Mapping / Business Rules / Security / Data & Integration / Custom
@@ -142,6 +143,7 @@ The six questions are:
 4. **Available Inputs** (PRD § 3.4) — Code only through Code + docs + interviews + operational data
 5. **Customer Audience** (PRD § 3.5) — C-level / Technical architects / Development team / Mixed
 6. **Known Context** (PRD § 3.6) — Free text about the application
+7. **Engagement Metadata** (PRD § 3.7) — Client name, consultant name/firm, organization label. If not provided, fill the report fields with `[TO FILL — consultant]` — never invent names.
 
 When this prompt refers to the clarifying questions, it always means the definitions in PRD § 3. If this prompt and the PRD ever appear to disagree on question wording or options, the PRD is authoritative.
 
@@ -157,7 +159,7 @@ After collecting answers, perform these steps:
 |--------|---------------|--------------|---------------------|
 | Sections covered | All, but abbreviated | All, full coverage | All, exhaustive |
 | Flow Index | Top 5 flows only | All detected flows | All flows with step-by-step cards |
-| Business Rules | Skip catalog | Summary table if >10 rules | Full catalog with per-rule assurance |
+| Business Rules | Full sweep; top 5-8 rules documented | Full sweep; summary catalog (one line per rule) | Full sweep; full catalog with per-rule evidence |
 | Mermaid diagrams | 1 (architecture overview) | 3 (architecture, integration, data flow) | 5+ (add deployment, sequence diagrams) |
 | Self-verification | Abbreviated checklist | Full checklist | Full checklist + adversarial re-check |
 | Evidence depth | File-level citations | File:line citations | File:line + code snippet citations |
@@ -190,6 +192,9 @@ available_inputs: "{code_only|code_docs|code_docs_interviews|code_docs_interview
 known_context: "{free text or 'None'}"
 customer_audience: "{c_level|technical_architects|development_team|mixed}"
 discovery_date: "{YYYY-MM-DD}"
+client_name: "{client organization or 'TO FILL — consultant'}"
+consultant_name: "{consultant / firm or 'TO FILL — consultant'}"
+organization_label: "{sidebar label — defaults to consultant firm}"
 last_completed_phase: "phase_0"
 tech_stack_detected:
   languages: []
@@ -198,18 +203,22 @@ tech_stack_detected:
   infrastructure: []
 overall_confidence: ""
 report_version: "1.0"
-sonarqube_report: "{present|absent}"
-sonarqube_vulnerabilities:
+static_analysis_report: "{present|absent}"
+static_analysis_vulnerabilities:
   critical: 0
   high: 0
   medium: 0
   low: 0
-sonarqube_quality_gate: "{passed|failed|N/A}"
+static_analysis_quality_gate: "{passed|failed|N/A}"
 sensitive_data_sanitized: true
 ---
 ```
 
 **Checkpoint:** After writing `00_Discovery_Config.md`, confirm with the user: *"Configuration complete. Discovery ID: {ID}. Mode: {mode}. Time budget: {hours}h. Ready to begin Phase 1: Codebase Reconnaissance. Proceed?"*
+
+**Checkpoint behavior (all phases):** If the user pre-answered the clarifying questions, accepted defaults, or asked for an unattended end-to-end run, checkpoints are **progress logs, not questions** — print the checkpoint text and continue without waiting for a reply. Only pause at a checkpoint when the user is actively steering the session.
+
+**Time-budget note:** Hour figures throughout this prompt (time budgets, phase allocations) are **relative depth and effort budgets**, not wall-clock measurements — you cannot measure elapsed time. Use them to proportion your thoroughness across phases.
 
 ---
 
@@ -223,10 +232,12 @@ sensitive_data_sanitized: true
 
 Execute these steps in order. After completing all steps, write the output files.
 
-### Step 1: Map the Directory Tree
+### Step 1: Inventory the Codebase and Create the Coverage Ledger
 
-- List the full project tree of `Project/Code/` to 3 levels of depth.
-- Identify top-level modules, layers, and organizational patterns (e.g., `src/main/java`, `Controllers/`, `Services/`, `Data/`).
+- Enumerate **every file** under `Project/Code/` — a full recursive listing, not a truncated tree. Record total file count and counts by extension.
+- Create **`Outputs/Evidence/coverage_ledger.md`**: one row per file with columns — Path, Type/Language, Status, Domain-Logic? (filled during Phase 2), Notes. Initial status for every file is `Not covered`.
+- Ledger statuses: `Analyzed` (read and assessed), `Skimmed` (opened; structure and purpose identified), `Excluded` (generated / vendored / binary / minified — always with a stated reason), `Not covered`. **Update statuses continuously as analysis proceeds through all phases** — the ledger is the proof behind every coverage claim in the report.
+- For the report, present the directory tree to 3 levels of depth. Identify top-level modules, layers, and organizational patterns (e.g., `src/main/java`, `Controllers/`, `Services/`, `Data/`).
 - Note the presence or absence of: test directories, documentation directories, CI/CD configuration, Docker/container files, infrastructure-as-code.
 
 ### Step 2: Detect the Technology Stack
@@ -256,6 +267,7 @@ For each detected technology, record: name, version (from manifest), and EOL sta
 - Estimate total lines of code (use file counts and sampling if the codebase is very large).
 - Note directory depth and module boundaries.
 - Identify the largest files (potential complexity hotspots).
+- Write the size and complexity summary (with full Rule 2 provenance for every count) to `Outputs/Evidence/code_metrics.md`.
 
 ### Step 4: Inventory Dependencies
 
@@ -263,6 +275,7 @@ For each detected technology, record: name, version (from manifest), and EOL sta
 - For each dependency: name, declared version (from manifest). Do NOT state the "latest available version" — you have no access to package registries and cannot determine this. Instead note: *"Latest version comparison requires checking [registry name]."*
 - Flag potentially outdated or problematic dependencies. For any EOL or version-currency claim: mark as `[Training Knowledge — verify against vendor lifecycle page]`. For universally known issues (e.g., log4j 1.x CVE-2019-17571), you may note the specific issue but must still add: *"Verify current status at NVD."* For less certain claims, use: *"[Library] version [X] was released in approximately [year]; check vendor support status."*
 - Count: total direct dependencies, total transitive (if lock files are present).
+- Write the full dependency inventory to `Outputs/Evidence/dependency_scan.md`.
 
 ### Step 5: Identify Entry Points
 
@@ -282,7 +295,18 @@ Scan for these patterns and flag any that are present:
 - No README or documentation files → flag as "No documentation detected"
 - Single-contributor git history → flag as "Single-developer knowledge risk." If git history is unavailable (zip export, shallow clone, svn migration with squashed history), state: *"[Cannot determine] Git contributor history is not available. Knowledge concentration risk cannot be assessed from the codebase alone. `[SHOULD VERIFY]`"* Flag this as a blocking gap for the Knowledge Concentration dimension.
 
-### Step 7: Detect Database Type
+### Step 7: Mine Version-Control History (If Available)
+
+If git (or other VCS) history is present in `Project/Code/`:
+
+- **Churn hotspots:** Identify the 10 most frequently changed files and cross-reference them with the largest/most complex files from Step 3. Files that are both high-churn and high-complexity are the highest-risk maintenance hotspots — carry them into Phase 2 as priority analysis targets and candidate risk-register entries.
+- **Activity profile:** Date of the last commit; commit frequency over the past 1-2 years (actively maintained vs frozen).
+- **Bus factor:** Meaningful contributors per module; flag modules with a single meaningful contributor.
+- Cite the exact commands and scope used for every count (Rule 2 provenance).
+
+If history is unavailable: state *"[Cannot determine] Version-control history is not available — churn and hotspot analysis skipped. `[SHOULD VERIFY]`"* and do not infer.
+
+### Step 8: Detect Database Type
 
 - Search for connection strings in config files.
 - Identify ORM configuration (Entity Framework, Hibernate, SQLAlchemy, etc.).
@@ -290,19 +314,19 @@ Scan for these patterns and flag any that are present:
 - Check for stored procedure files or migration scripts.
 - Note: database type, estimated schema size (table count if DDL is available), stored procedure count.
 
-### Step 8: Scan Existing Documentation and Resources
+### Step 9: Scan Existing Documentation and Resources
 
 - Scan `Project/Documentation/` for existing architecture docs, runbooks, design documents, API specs, or any customer-provided technical documentation. Summarize what is available and incorporate relevant context into your analysis.
 - Scan `Project/AdditionalResources/` for interview notes, Teams conversations, email history, or other stakeholder context. Note any business context, known issues, or domain knowledge that will inform later analysis phases.
 - If either folder is empty (only contains a placeholder `README.md`) or absent, note it as a gap: *"No existing documentation provided"* or *"No additional resources provided."*
 
-### Step 9: Note Static Analysis Findings for Cross-Reference
+### Step 10: Note Static Analysis Findings for Cross-Reference
 
 - If a static analysis report was loaded during the Pre-Flight Check (Section 2.5), summarize its key findings here: vulnerability counts by severity, quality gate result, and any notable credential or security detections.
 - Store these as cross-reference material for Phase 2 Security analysis (Section 5.1).
 - If no report was provided, note: *"Static analysis report absent — security findings will rely on AI static analysis only; evidence status will reflect this (Assumed, not Verified)."*
 
-### Step 10: Write Phase 1 Outputs
+### Step 11: Write Phase 1 Outputs
 
 Create these files:
 
@@ -313,7 +337,8 @@ Create these files:
    - Observed strengths (anything positive found)
    - Key constraints and concerns (initial risk signals)
    - Confidence score for this section
-3. **`Outputs/NewDocumentation/Discovery_PRD.md`** — Auto-generated PRD for this specific discovery, containing: scope, detected tech stack, planned analysis phases, time allocation.
+3. **`Outputs/NewDocumentation/Discovery_Plan.md`** — Auto-generated analysis plan for this specific discovery, containing: scope, detected tech stack, planned analysis phases, time allocation. (Deliberately not named `Discovery_PRD.md` — that name is reserved for `Resources/Discovery_PRD.md`, the canonical methodology document.)
+4. **`Outputs/Evidence/coverage_ledger.md`** — Statuses updated for every file read or skimmed during Phase 1; `Excluded` files justified.
 
 **Update** `Outputs/PartialReports/00_Discovery_Config.md`: set `last_completed_phase: "phase_1"`.
 
@@ -327,7 +352,7 @@ Create these files:
 
 **Time allocation:** ~50% of AI budget (10h for 20h, 20h for 40h, 30h for 60h).
 
-Execute each analysis section in the order below. After completing each section, write or update the corresponding output file and log the confidence score.
+Execute each analysis section in the order below. After completing each section, write or update the corresponding output file and log the confidence score. **Keep the coverage ledger current:** every file you read or skim during Phase 2 gets its ledger status updated — section Coverage (the ECI term) is computed from these statuses.
 
 ### 5.1 Security & Compliance Analysis
 
@@ -343,27 +368,40 @@ Execute each analysis section in the order below. After completing each section,
    - **What the code shows:** State the library name and declared version as found in the manifest file. Cite the manifest file and line. This is `[Verified]` evidence.
    - **What this may mean (training knowledge — requires external verification):** If you have knowledge from training data that this specific version has known vulnerabilities, you may note this, but you MUST: (a) Prefix with *"Based on training knowledge (may be outdated) —"*; (b) Mark evidence as `[Assumed — requires external CVE database verification]`; (c) State *"Verify against NVD (nvd.nist.gov), GitHub Advisory Database, or a dependency scanning tool."*; (d) Do NOT assign specific CVSS numeric scores (e.g., "CVSS 9.8"). Always state the general severity level (Critical/High/Medium/Low) and direct the reader to NVD for the exact score: *"Verify exact CVSS score at nvd.nist.gov."* The only exception is if a tool report in `Project/SonarQubeReport/` provides a specific score — in that case, cite the tool as the source; (e) Do NOT fabricate CVE IDs — if unsure of the exact identifier, state *"known vulnerability in [library] [version] — verify exact CVE ID externally."*
    - Assign ID: `{PREFIX}-CVE-{NN}` for each potential vulnerability noted.
-   - **Evidence status rule:** CVE claims based on training knowledge must be marked `[Assumed]` — they do not count toward V_rate or CritV_rate in the ECI formula. Only CVE findings confirmed by a tool report in `Project/SonarQubeReport/` may be marked `[Verified]`. No separate confidence cap is needed; the ECI formula handles this naturally.
-   - **Recommended action:** Include in "What would raise confidence": *"Run a dependency vulnerability scan (e.g., `npm audit`, `dotnet list package --vulnerable`, OWASP Dependency-Check) to upgrade CVE findings from Assumed to Verified (high impact on V_rate and CritV_rate)."*
+   - **Evidence status rule:** CVE claims based on training knowledge must be marked `[Assumed]` — they do not count toward Verification Rate or Critical Verification Rate in the ECI formula. Only CVE findings confirmed by a tool report in `Project/SonarQubeReport/` may be marked `[Verified]`. No separate confidence cap is needed; the ECI formula handles this naturally.
+   - **Recommended action:** Include in "What would raise confidence": *"Run a dependency vulnerability scan (e.g., `npm audit`, `dotnet list package --vulnerable`, OWASP Dependency-Check) to upgrade CVE findings from Assumed to Verified"* — with the computed ECI delta per PRD § 4.8.
 
-2. **Secrets and credentials scan.** Search for patterns: `password`, `secret`, `apikey`, `connectionstring`, `token`, `private_key` in config files, source code, and environment files. Check `.gitignore` for excluded sensitive files. Note any credentials found (redact the actual values).
+2. **Secrets and credentials scan.** Search for patterns: `password`, `secret`, `apikey`, `connectionstring`, `token`, `private_key` in config files, source code, and environment files (including `.env`, key/certificate files, and config transforms). Check `.gitignore` for excluded sensitive files. Note any credentials found (redact the actual values).
 
-3. **Authentication pattern analysis.** Identify: authentication mechanism (forms, OAuth, SAML, Windows Auth, custom), session management approach, password storage method (hashing algorithm), role-based access control implementation.
+3. **Insecure code-pattern scan.** Search the code for statically detectable vulnerability patterns, each cited with `file:line` and reported with Rule 7 claim isolation:
+   - SQL built by string concatenation or interpolation of user input (injection)
+   - Unencoded output of user input into HTML/JS (XSS)
+   - File paths constructed from user input (path traversal)
+   - Deserialization of untrusted input
+   - Weak or home-grown cryptography (MD5/SHA-1 for passwords, ECB mode, hardcoded keys/IVs)
+   - Outbound requests built from user-supplied URLs (SSRF)
+   - Object identifiers taken from requests without an authorization check (IDOR)
 
-4. **Data protection assessment.** Check for: encryption at rest (database, file storage), encryption in transit (TLS configuration), PII handling patterns, data masking or anonymization.
+   These patterns are code-observable: with a citation, the **pattern itself** qualifies as `[Verified]` evidence, while the exploitability interpretation remains Assumed/Inferred under Rule 7 ("What the code shows" vs "What this may mean").
 
-5. **Compliance signal detection.** Look for: GDPR-related patterns (consent management, data deletion, audit logging), PCI-DSS patterns (card data handling), SOC 2 patterns (access logging, change management), industry-specific patterns. **Important:** Code patterns can only suggest potential compliance relevance — they cannot confirm regulatory applicability. Label all compliance findings as `[MUST VERIFY]` and state: *"Regulatory applicability requires confirmation from legal/compliance stakeholders."*
+4. **Authentication pattern analysis.** Identify: authentication mechanism (forms, OAuth, SAML, Windows Auth, custom), session management approach, password storage method (hashing algorithm), role-based access control implementation.
 
-6. **Static analysis cross-reference (if report present).** If a static analysis report (SonarQube or equivalent) was loaded during the Pre-Flight Check (Section 2.5):
+5. **Data protection assessment.** Check for: encryption at rest (database, file storage), encryption in transit (TLS configuration), PII handling patterns, data masking or anonymization.
+
+6. **Compliance signal detection.** Look for: GDPR-related patterns (consent management, data deletion, audit logging), PCI-DSS patterns (card data handling), SOC 2 patterns (access logging, change management), industry-specific patterns. **Important:** Code patterns can only suggest potential compliance relevance — they cannot confirm regulatory applicability. Label all compliance findings as `[MUST VERIFY]` and state: *"Regulatory applicability requires confirmation from legal/compliance stakeholders."*
+
+7. **Static analysis cross-reference (if report present).** If a static analysis report (SonarQube or equivalent) was loaded during the Pre-Flight Check (Section 2.5):
    - Compare the tool's vulnerability findings with your own dependency vulnerability assessment (item 1 above). For each tool finding the AI missed, include it with evidence status `[Verified — tool output]`. For each AI finding the tool missed, note the discrepancy.
    - Cross-reference tool credential detections with your secrets scan (item 2 above).
    - Log any discrepancies as `VC-*` entries in `Outputs/NewDocumentation/VERIFICATION_LOG.md`.
    - Tool-sourced findings may use specific CVSS scores (citing the tool as the source) and can be marked Verified.
    - **If no report was provided:** Add a callout in the "What would raise confidence" section: *"Provide a static analysis or dependency scan report to upgrade CVE findings from Assumed to Verified."* Do not apply any hard cap — let ECI reflect the actual evidence distribution.
 
+8. **Write the evidence snapshot.** Write the detailed security findings inventory (with all citations) to `Outputs/Evidence/security_findings.md`, cross-referenced from `07_Security_Compliance.md`.
+
 **Confidence scoring for this section:** Computed by ECI (§ 4.5 of the PRD). The ECI score will naturally reflect the evidence quality:
-- High V_rate and CritV_rate when dependency manifests are complete, code patterns are clear, and a tool report corroborates findings.
-- Lower V_rate when CVE claims are Assumed due to absence of tool verification.
+- High Verification Rate and Critical Verification Rate when dependency manifests are complete, code patterns are clear, and a tool report corroborates findings.
+- Lower Verification Rate when CVE claims are Assumed due to absence of tool verification.
 - The presence or absence of a static analysis report is not a hard gate — it influences scores through evidence status, not through an override cap.
 
 **Mode adjustments:**
@@ -378,7 +416,7 @@ Execute each analysis section in the order below. After completing each section,
 
 **Method:**
 
-1. **Complexity analysis.** Sample two groups: (a) the 10 largest files by line count (complexity hotspots), and (b) 10 files selected from the middle 50% by size (representative sample). Assess each group separately for: method length, nesting depth, parameter counts, class size. Report findings as: "In the 10 largest files: [observations]. In the representative sample: [observations]." This prevents biased conclusions from analyzing only extreme files.
+1. **Complexity analysis.** Sample three groups: (a) the 10 largest files by line count (complexity hotspots), (b) 10 files selected from the middle 50% by size (representative sample), and (c) the churn hotspots identified in Phase 1 Step 7, if VCS history was available (high-churn × high-complexity files are the strongest maintenance-risk signal). Assess each group separately for: method length, nesting depth, parameter counts, class size. Report findings per group. This prevents biased conclusions from analyzing only extreme files.
 
 2. **Test coverage detection.** Search for test directories and test files. Count test files vs source files. Identify testing frameworks in use. Note: presence of unit tests, integration tests, end-to-end tests. If no tests exist, state this explicitly.
 
@@ -419,7 +457,7 @@ Execute each analysis section in the order below. After completing each section,
 4. **Flow mapping.** Trace the major data and business flows through the codebase. For each flow:
    - Assign ID: `{PREFIX}-FLOW-{NN}`
    - Document: scenario, direction (inbound/outbound/internal), primary modules involved, key entities
-   - Rate assurance: percentage + Verified/Partial/Assumed status
+   - Assign evidence status (Verified / Partial / Assumed / Inferred / Cannot Determine) — no numeric assurance percentages
    - List evidence: file paths with line ranges
 
 5. **Generate Mermaid diagrams:**
@@ -429,7 +467,7 @@ Execute each analysis section in the order below. After completing each section,
    - (60h only) Deployment topology diagram
    - (60h only) Sequence diagrams for critical flows
 
-**For the Flow Index table**, include all identified flows with: Flow ID, Scenario, Direction, Primary Modules, Evidence Status, Assurance %, Status.
+**For the Flow Index table**, include all identified flows with: Flow ID, Scenario, Direction, Primary Modules, Evidence (citation), Confidence (evidence status badge).
 
 **Mode adjustments:**
 - System Mapping (Mode B): This is the primary focus. Map every identifiable flow. Produce detailed integration diagrams. Trace all external system connections.
@@ -472,12 +510,14 @@ Execute each analysis section in the order below. After completing each section,
 
 **Method:**
 
-1. **Domain logic identification.** Find where business rules live: validation logic, calculation logic, workflow/state machine logic, authorization rules, pricing/billing rules, regulatory compliance logic.
+1. **Domain-logic classification (ledger-driven sweep).** Iterate the coverage ledger: classify **every** `Analyzed`/`Skimmed` file as **domain-logic** (validation, calculation, workflow/state machine, authorization, pricing/billing, regulatory compliance logic) or **non-domain** (plumbing, UI scaffolding, configuration, tests, generated code), and record the classification in the ledger's Domain-Logic column. Files still `Not covered` at this point must be read (at least skimmed) before classification. This sweep is exhaustive by construction and runs in full at **every** time tier.
 
-2. **Business rule extraction.** For significant rules found:
+2. **Business rule extraction.** Perform an extraction pass over **every** file classified as domain-logic. Each file either yields one or more rules or an explicit "no extractable business rules" note in the ledger. For each rule:
    - Assign ID: `{PREFIX}-RULE-{CAT}-{NN}` where CAT is a short category (VAL=validation, FX=financial, WF=workflow, AUTH=authorization, CALC=calculation, etc.)
    - Document: summary, trigger, conditions, data processed, outcome, exceptions
-   - Assign evidence status (Verified/Partial/Assumed/Inferred/Cannot Determine) and include the corresponding confidence score (from PRD § 4.2) in the output table
+   - Assign evidence status (Verified/Partial/Assumed/Inferred/Cannot Determine) and show it as the Confidence badge in the output table — no numeric per-rule scores
+
+   Conclude with the ledger-backed coverage statement for the report, e.g.: *"214 of 214 domain-logic files swept (100%); 87 business rules extracted."* Never claim "all business rules extracted" without this statement — the claim the report makes is that every domain-logic file was swept; recognition of implicit rules remains bounded by static analysis (PRD § 9.4).
 
 3. **Risk register compilation.** Synthesize all findings from sections 5.1-5.4 into a prioritized risk register. For each risk:
    - Assign ID: `{PREFIX}-RISK-{NN}`
@@ -498,8 +538,8 @@ Execute each analysis section in the order below. After completing each section,
    - Vendor lock-in & unsupported tooling
 
 **Mode adjustments:**
-- Business Rules Mapping (Mode C): This is the primary focus. Extract every identifiable business rule. Build a full catalog. Trace rules to flows.
-- Quick Scan (20h): Top 5-8 risks only. Skip business rule catalog.
+- Business Rules Mapping (Mode C): This is the primary focus. Build a full catalog with per-rule detail. Trace rules to flows.
+- Quick Scan (20h): Top 5-8 risks only. The rules sweep still runs in full — document only the most significant rules in the report; the complete extracted list remains in `04_Other_Findings.md` and the ledger.
 
 ### Phase 2 Completion
 
@@ -508,7 +548,7 @@ After completing all analysis sections:
 1. Update `Outputs/PartialReports/00_Discovery_Config.md`: set `last_completed_phase: "phase_2"`.
 2. Begin `Outputs/NewDocumentation/CONFIDENCE_LOG.md` with per-section confidence scores.
 
-**Checkpoint:** *"Phase 2 complete. {N} risks identified ({N} Critical, {N} High). {N} flows mapped. {N} integrations documented. {N} business rules extracted. Overall confidence trending toward {N}%. Proceeding to Phase 3: Synthesis & Scoring."*
+**Checkpoint:** *"Phase 2 complete. {N} risks identified ({N} Critical, {N} High). {N} flows mapped. {N} integrations documented. {N} business rules extracted from {N} domain-logic files. Ledger coverage: {N}%. Overall confidence trending toward {N}%. Proceeding to Phase 3: Synthesis & Scoring."*
 
 ---
 
@@ -599,7 +639,7 @@ When determining the recommended path, you MUST show your reasoning explicitly:
    - Paragraph 3: What is the recommended path and cost of inaction?
    - Include: overall risk score, issue counts by severity, overall confidence score, key takeaway sentence.
 
-2. **`Outputs/PartialReports/02_Engagement_Overview.md`** — Document: time box, team, access level, methods, coverage, deliverables, assumptions, limitations.
+2. **`Outputs/PartialReports/02_Engagement_Overview.md`** — Document: time box, team, access level, methods, coverage (including the ledger-backed coverage statement and business-rule sweep statement), deliverables, assumptions, limitations.
 
 ### 7.2 Compile Master Report
 
@@ -618,23 +658,29 @@ Create **`Outputs/FinalReport/MASTER_DISCOVERY_REPORT.html`** using the template
 
 **Instructions for filling the template:**
 
-1. **Cover section:** Fill all meta items (client, consultant, date, AI discovery hours, discovery ID, system group).
-2. **Verdict banner:** Set the class to `remediate`, `hybrid`, or `modernize` based on the recommendation. Fill the verdict title and one-sentence summary.
-3. **Section headers:** For each section, fill the confidence badge with the section's confidence score and tier. Use the appropriate CSS class: `very-high`, `high`, `medium`, `low`, or `very-low`.
-4. **Scorecard grid:** Fill all score values. Add the Overall Confidence scorecard (blue).
+1. **Cover section:** Fill all meta items (client, consultant, date, AI discovery hours, discovery ID, system group). Client, consultant, and the sidebar organization label come from the Phase 0 answers — if not provided, write `[TO FILL — consultant]`, never invented names. Set "AI Discovery Hours" to the configured budget, e.g. `40 hrs (configured)` — you cannot measure wall-clock time; the consultant records actual hours during review. Fill the **"By the numbers" KPI strip** with ledger-backed figures only (files analyzed, coverage %, LOC, rules extracted, flows, integrations) — **remove any tile you cannot back with a computed count**; never estimate.
+2. **Verdict banner:** Set the class to `remediate`, `hybrid`, or `modernize` based on the recommendation. Fill the verdict title and one-sentence summary. Position the **decision gauge marker**: `left = (score − 7) / 14 × 100%`, clamped to 2%–98%, and set its `title` to the actual score. If the Confidence Floor Rule (Section 6.2) applies, use class `preliminary` instead and uncomment the preliminary warning banner at the top of the template.
+3. **Section headers:** Fill each confidence badge with the section's ECI score and tier, using the appropriate CSS class: `very-high`, `high`, `medium`, `low`, or `very-low`. Section 1's badge shows the **overall weighted confidence**; Sections 2 and 10 carry no confidence badge (PRD § 4.4). For any section with fewer than 5 scoreable findings, show the tier label only — no percentage (PRD § 4.7).
+4. **Scorecard grid and Section 1 visuals:** Fill all scorecard values. Then fill the three Section 1 visuals, all from computed counts:
+   - **Findings by Severity bar:** one segment per severity with `style="flex-grow: {count}"`; counts go in the legend (and inside a segment only if it visibly fits). Remove zero-count segments. Totals must match the scorecards and the Risk Register (VC-02).
+   - **Risk Landscape matrix:** place one `risk-chip` per Risk Register entry into the cell matching its likelihood and impact columns. Chip count must equal register rows.
+   - **Evidence & Coverage panel:** coverage meter from the ledger; "findings backed by code evidence" meter = (Verified + Partial) / all scoreable findings across sections; evidence distribution segments = counts per status from CONFIDENCE_LOG. Set both `flex-grow` values and meter `width` percentages.
 5. **Executive Summary:** Replace all placeholder text with the synthesized summary.
-6. **Risk Register:** Replace example rows with actual findings. Use `{PREFIX}-RISK-{NN}` IDs. Fill the Confidence column with the evidence status badge and numeric score for each finding. Include evidence citations using the `.evidence-citation` component.
+6. **Risk Register:** Replace example rows with actual findings. Use `{PREFIX}-RISK-{NN}` IDs. Fill the Confidence column with the evidence status badge for each finding (evidence status only — never a numeric per-finding score). Include evidence citations using the `.evidence-citation` component, and render `[MUST VERIFY]` / `[SHOULD VERIFY]` tags with the `.verification-badge.must-verify` / `.verification-badge.should-verify` classes.
 7. **Technical Debt:** Set debt bar widths (`style="width: {score*10}%"`) and classes (`low`/`medium`/`high`). Fill the narrative.
-8. **Architecture:** Insert Mermaid diagrams (wrapped in a code block or rendered). Fill the Flow Index table.
+8. **Architecture:** Put each Mermaid diagram's source inside the `<pre class="mermaid">` block of a `diagram-card` (the template's loader renders it to SVG; follow § 8.3 syntax rules) — architecture overview and data-flow cards are pre-scaffolded; add deployment/sequence cards at 60h. Write a one-sentence caption per diagram naming the single most important thing to notice. Fill the Flow Index table (columns: Flow ID, Scenario, Direction, Primary Modules, Evidence, Confidence — the Confidence cell is the evidence status badge).
 9. **Security:** Fill CVE list, auth findings, compliance table.
-10. **Data & Integrations:** Insert integration map diagram. Fill the Integration Points table (columns: Integration ID, System, Direction, Mechanism, Frequency, Confidence, Owner) using findings from Section 5.4. Fill Data Health Observations and Integration Health Observations lists.
-11. **Recommended Path:** Fill the decision framework table, path card, pros/cons.
+10. **Data & Integrations:** Fill the integration map `diagram-card` (Mermaid source + caption). Fill the Integration Points table (columns: Integration ID, System, Direction, Mechanism, Frequency, Confidence, Owner) using findings from Section 5.4. Fill Data Health Observations and Integration Health Observations lists.
+11. **Recommended Path:** Fill the decision framework table — per dimension set the `score-dots` class (`s1`/`s2`/`s3`) to match the numeric score. Position the Section 9 gauge marker with the same formula as the verdict banner. Fill the path card and pros/cons.
 12. **Next Steps:** Fill timeline items. Fill walkthrough guide table.
-13. **Business Rules (Section 11):** If applicable, fill the rules catalog table. If not applicable (Quick Scan or <20 rules in General mode), remove the entire section.
-14. **Sidebar confidence:** Fill each sidebar confidence pill with the section's confidence percentage and appropriate class.
+13. **Business Rules (Section 11):** Unified inclusion rule (PRD § A.1): include the section when discovery mode is Business Rules Mapping (Mode C), **or** when more than 10 rules were extracted (summary rows — one line per rule); use full per-rule detail when more than 20 rules were extracted or in Deep Discovery (60h). When neither applies, remove the HTML section — the complete rule list always remains in the Markdown partial reports.
+14. **Sidebar:** Fill the organization label in the sidebar logo. Fill each sidebar confidence pill with the section's confidence percentage and appropriate class (tier only for small-sample sections). If Section 11 is present, uncomment and fill its sidebar confidence item.
 15. **Footer:** Fill client name, date, discovery ID, report version.
-16. **"What would raise confidence" callouts:** Fill each section's confidence improvement callout with specific, actionable items and estimated confidence improvement percentages.
+16. **"What would raise confidence" callouts:** Fill each section's callout with specific, actionable items. State each item's impact as a **computed** ECI delta (re-run the section's ECI with the hypothesized evidence upgrade, per PRD § 4.8): *"+N points (computed)"*. Never guess improvement percentages.
 17. **"About Confidence Scores" card:** The info card in Section 1 (Executive Summary) is pre-filled methodology text explaining the scoring system to the customer. Do not modify its content — it is static methodology, not finding-specific.
+18. **Engagement Overview (Section 2):** Fill the snapshot, methods, and coverage cards. The "Coverage & Confidence" card must include the ledger-backed coverage statement, e.g.: *"100% of 1,240 files scanned (12 excluded: generated code — see coverage ledger); 100% of 214 domain-logic files swept for business rules."*
+
+**Chart integrity rule:** Every visual in the report (KPI strip, severity bar, risk matrix, meters, evidence distribution, gauges, debt bars) is a projection of numbers that exist elsewhere in the report or logs — never a standalone estimate. If the underlying number does not exist, remove the visual element rather than inventing a value. VC-02 checks this.
 
 **Critical:** No placeholder text (`<!-- -->` or `class="placeholder"`) should remain in the final HTML. Every field must be filled with actual content or the section must be removed.
 
@@ -647,7 +693,7 @@ Run this checklist against all output files. For each item, record the result in
 | # | Check | How to Verify |
 |---|-------|---------------|
 | VC-01 | All IDs are sequential with no gaps | List all `{PREFIX}-RISK-*`, `{PREFIX}-FLOW-*`, etc. and verify sequence |
-| VC-02 | Counts in Executive Summary match detail sections | Compare: risk count, CVE count, integration count, flow count |
+| VC-02 | Counts in Executive Summary match detail sections | Compare: risk count, CVE count, integration count, flow count — including every chart figure: cover KPI strip, severity-bar segments/legend, Risk Landscape chip count, evidence-distribution segments, meter percentages, gauge marker position vs decision score |
 | VC-03 | Every finding has evidence citation or [Assumed] label | Scan all findings in risk register and other findings |
 | VC-04 | Confidence scores are justified by evidence status | For each section: if confidence is "High" but most findings are "Assumed," flag as inconsistent |
 | VC-05 | Mermaid diagrams use valid syntax | Check for common errors: spaces in node IDs, unquoted special characters, reserved keywords |
@@ -656,6 +702,7 @@ Run this checklist against all output files. For each item, record the result in
 | VC-08 | Risk severity matches evidence requirements | Critical risks with only Assumed/Inferred evidence must carry `[MUST VERIFY]` tags per Rule 8. CVE-based Critical findings are expected to have Assumed evidence (external verification needed) — this is correct behavior, not a failure |
 | VC-09 | Weighted confidence calculation is correct | Recalculate: sum of (section_confidence * weight) across all sections |
 | VC-10 | Decision framework score matches recommendation band | Verify total score falls in the stated band; verify override rules were applied correctly |
+| VC-11 | Coverage ledger is complete and coverage claims are correct | Every file from the Phase 1 inventory appears in the ledger; no unexplained `Not covered` rows remain; `Coverage = (Analyzed + Skimmed) / (total − Excluded)` matches the figure reported in the Engagement Overview; every domain-logic file has extracted rule IDs or an explicit "no rules" note; section Coverage values used in ECI match the ledger |
 
 For 60h Deep Discovery, also perform a **mechanical re-check** on the top 3 highest-severity findings:
 - Re-read the cited code files and confirm the `file:line` reference exists and is syntactically correct.
@@ -665,11 +712,14 @@ For 60h Deep Discovery, also perform a **mechanical re-check** on the top 3 high
 
 ### 7.5 Finalize Confidence and Verification Logs
 
-1. **`Outputs/NewDocumentation/CONFIDENCE_LOG.md`** — Final version with:
-   - Section name, confidence score and tier, evidence status
+1. **`Outputs/NewDocumentation/CONFIDENCE_LOG.md`** — Final version with, per section:
+   - ECI score and tier, with the three computed components: Verification Rate, Critical Verification Rate (or "N/A"), Coverage (with a reference to the ledger rows it was computed from)
+   - Evidence distribution (count per status) and small-sample flag if fewer than 5 scoreable findings
    - What evidence was used
-   - What would raise the confidence score
+   - What would raise the confidence score — each item with its computed ECI delta (PRD § 4.8)
    - Blocking gaps (items that prevent reaching 90%+)
+
+   End the log with the **Next-Phase Focus Map** (PRD § 4.3): one row per section — Coverage, Critical Verification Rate, indicated action (low Coverage → analyze more in a follow-on phase; low Critical Verification Rate → external verification needed; both high → findings can be relied on).
 
 2. **`Outputs/NewDocumentation/VERIFICATION_LOG.md`** — Final version with all VC-* entries:
    - Check ID, claim, check performed, result (Pass/Fail/Warning), action taken
@@ -747,13 +797,17 @@ flow_count: {N}
 
 ### Appendix A: Confidence Scoring Reference
 
-| Tier | Range | Evidence Standard | Typical Scenario |
-|------|-------|-------------------|------------------|
-| Very High | 90-100% | All findings Verified with file:line citations | Complete codebase with clear structure, good documentation |
-| High | 70-89% | Most findings Verified, some Partial | Standard codebase, minor gaps in config or external dependencies |
-| Medium | 50-69% | Mix of Verified, Partial, and Assumed | Complex codebase, some obfuscation, missing documentation |
-| Low | 30-49% | Mostly Assumed or Inferred | Partial codebase access, heavy external dependencies, minimal docs |
-| Very Low | 0-29% | Mostly Inferred from indirect signals | Very limited access, binary-only components, no documentation |
+The canonical definition is PRD § 4. Summary of the tiers (PRD § 4.1):
+
+| Tier | Range | Meaning |
+|------|-------|---------|
+| Very High | 90-100% | Most findings verified; no unresolved Critical/High gaps |
+| High | 70-89% | Strong evidence breadth; Critical/High largely verified |
+| Medium | 50-69% | Some Critical/High findings unverified or assumed |
+| Low | 30-49% | Significant Critical/High gaps; human review required |
+| Very Low | 0-29% | Mostly speculative; flagged for re-investigation |
+
+`ECI = 0.50 × Verification Rate + 0.35 × Critical Verification Rate + 0.15 × Coverage` (Coverage from the coverage ledger — PRD § 4.5). Sections with fewer than 5 scoreable findings display tier only. Per-finding confidence is the evidence status label — never a number.
 
 ### Appendix B: ID Scheme Quick Reference
 
@@ -822,7 +876,7 @@ Note: No infrastructure-as-code or deployment documentation found to confirm.
 | Architecture mapping | Standard | Exhaustive | Standard | Standard | Standard |
 | Flow tracing | Top 10 | All flows | All flows | Security flows | Data flows |
 | Integration mapping | Full | Exhaustive | Standard | Security-relevant | Exhaustive |
-| Business rule extraction | If >10 detected | Standard | Exhaustive | Light | Standard |
+| Business rule extraction | Full sweep | Full sweep | Exhaustive + full catalog | Full sweep | Full sweep |
 | Database schema analysis | Standard | Standard | Standard | Data protection | Exhaustive |
 | Compliance matrix | Standard | Light | Light | Exhaustive | Standard |
 | Mermaid diagrams | 3 | 5+ | 3 | 3 | 5+ |
@@ -843,10 +897,10 @@ Note: No infrastructure-as-code or deployment documentation found to confirm.
 | 08_Data_Integrations.md | Counts + top findings | Full | Full + entity mapping |
 | 09_Recommended_Path.md | Score + recommendation | Full | Full + alternative paths |
 | 10_Next_Steps.md | Timeline only | Timeline + walkthrough | Timeline + walkthrough + detailed actions |
-| Business Rules Catalog | Skip | Summary if >10 rules | Full catalog |
+| Business Rules Catalog | Sweep runs; top rules only (catalog per § 7.3 rule) | Sweep runs; summary catalog if >10 rules | Sweep runs; full catalog |
 | MASTER_DISCOVERY_REPORT.html | Full (abbreviated content) | Full | Full |
 | CONFIDENCE_LOG.md | Per-section only | Full | Full + per-finding |
-| VERIFICATION_LOG.md | Abbreviated (5 checks) | Full (10 checks) | Full + adversarial re-check |
+| VERIFICATION_LOG.md | Abbreviated (5 checks, incl. VC-11) | Full (11 checks) | Full + adversarial re-check |
 | Mermaid diagrams | 1 | 3 | 5+ |
 
 ---

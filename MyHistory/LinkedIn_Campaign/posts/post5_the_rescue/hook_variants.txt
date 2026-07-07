@@ -1,13 +1,13 @@
-VARIANT A (primary — v2):
-For two years, a government research team could not deploy their own system. Not "deployed slowly." Not "deployed with problems." Could not deploy. At all.
+VARIANT A (primary):
+An oceanic research institute could not update its measuring software while ships were out at sea. Not "updated slowly." Not "patched between voyages." Could not update. While deployed.
 
 VARIANT B (test):
-Two years blocked. One month to fix. The difference wasn't talent — it was reading the code instead of the documentation.
+Three weeks blocked by the sea. Three weeks to map 200+ CVEs. The difference wasn't talent — it was reading the code instead of the documentation.
 
-VARIANT C (question-led, use if A/B underperform on prior posts' pattern):
-What's the longest a deployment has been blocked in your organization? For one government research team, the answer was two years. Here's how it ended.
+VARIANT C (conversation-starter):
+What's the longest an update has been deferred in your organization because the window never opened? For one oceanic research institute, the answer was years. Here's how it ended.
 
-RECOMMENDATION: Use A. The three-beat escalation ("Not X. Not Y. Could not. At all.") reads fully inside LinkedIn's ~210-character above-the-fold cutoff and creates a curiosity gap that the "see more" click resolves. B is the TikTok/video hook — save it for the vertical version. C converts the post into a conversation-starter; use it if Posts 0–4 taught us the audience needs to be asked, not told.
+RECOMMENDATION: Use A. The three-beat escalation ("Not X. Not Y. Could not. While deployed.") reads fully inside LinkedIn's ~210-character above-the-fold cutoff and creates a curiosity gap that the "see more" click resolves. B is the TikTok/video hook — save it for the vertical version. C converts the post into a conversation-starter; use it if Posts 0–4 taught us the audience needs to be asked, not told.
 
-WHY THE OLD HOOK UNDERPERFORMED (learning from Posts 0–4):
-The original opened with "A government research organization had a mission-critical system…" — 14 words of context before any tension. On mobile, that's the whole visible preview spent on setup. V2 puts the impossibility (two years, cannot deploy) in the first 100 characters.
+CONVERSION NOTE:
+The original opened with "A government research organization had a mission-critical system…" — 14 words of context before any tension. On mobile, that's the whole visible preview spent on setup. V2 puts the impossibility (ships at sea, cannot update) in the first 100 characters.

@@ -30,8 +30,8 @@ Project Terrain: generative AI in physical playground design.
 One line: "Same behavior as the Domek. Different stakes."
 
 **Slide 6 — Same pattern, highest stakes** *(VERIFIED)*
-The 4-day rescue: a Norwegian children's-research non-profit, app dead on an EOL framework, national research program at risk.
-Xamarin → .NET MAUI in **4 days** (typical: 4–8 weeks) · 92% code preserved · zero regressions · 100% first-submission store approval.
+The 4-day rescue: a Norwegian children's-research non-profit; Android-only app with Google Play deprecating Xamarin.Forms; national research program at risk.
+Xamarin → .NET MAUI in **4 days** (typical: 4–8 weeks) · 92% code preserved · zero regressions · Google Play approval on first submission.
 Pull-quote (project lead, Christmas Eve): *"It's hard to describe how much relief and joy I felt at that moment."*
 
 **Slide 7 — The AI-Augmented Spectrum**

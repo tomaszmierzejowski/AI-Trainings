@@ -10,7 +10,7 @@ Do czego zobowiązujecie się Wy:
 
 Do czego zobowiązujemy się my:
 
-→ 100% kodu przeczytane, nie próbkowane
+→ 100% plików przeskanowanych, nie próbkowanych
 → Każde ustalenie z cytatem do pliku i linii — podważajcie dowolne
 → Wszystko, czego nie zbadaliśmy, wymienione wprost
 → Szacunki oznaczone jako szacunki, w raporcie i po nim

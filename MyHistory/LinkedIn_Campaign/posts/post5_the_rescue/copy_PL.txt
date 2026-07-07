@@ -1,12 +1,14 @@
-Przez dwa lata rządowy zespół badawczy nie był w stanie wdrożyć własnego systemu.
+Instytut badań oceanicznych prowadził oprogramowanie pomiarowe na ponad 20 statkach.
 
-Nie "wdrażał powoli". Nie "wdrażał z problemami".
+Nie mógł go aktualizować, gdy statki były na morzu.
 
-Nie był w stanie wdrożyć. W ogóle.
+Nie "aktualizował między sezonami". Nie "łatał po powrocie do portu".
 
-Każda próba kończyła się błędem w innym miejscu. Nieudokumentowane zależności. Brakujące konfiguracje. Zmiany, których nikt nie zapisał. Awarie były niepowtarzalne — więc prawie niemożliwe do zdiagnozowania.
+Nie mógł aktualizować. Gdy flota była w morzu.
 
-Ten zespół nie był niekompetentny. Pracował bez mapy.
+Każde odroczenie utrudniało następne. Nieudokumentowane zależności. Brakujące konfiguracje. Przestarzały stos gromadzący krytyczne CVE. Ekspozycja nie była spójna — więc prawie niemożliwa do wyceny.
+
+Ten zespół nie był niekompetentny. Pracował bez mapy — i bez okna na aktualizację.
 
 Zostaliśmy zaproszeni do pomocy. Oto co zrobiliśmy inaczej:
 
@@ -17,15 +19,15 @@ Nie czytaliśmy dokumentacji. Czytaliśmy kod.
 → Odtworzyliśmy każdą konfigurację
 → Po drodze: ponad 200 podatności bezpieczeństwa
 
-Miesiąc później: działające wdrożenie produkcyjne.
+Trzy tygodnie później: pełny obraz ekspozycji bezpieczeństwa — po raz pierwszy.
 
-Dwa lata blokady. Jeden miesiąc systematycznej analizy. Ta proporcja to nie kwestia talentu. To kwestia metody.
+Lata odroczonych aktualizacji. Trzy tygodnie systematycznej analizy. Ta proporcja to nie kwestia talentu. To kwestia metody.
 
-System jest krytyczny w dosłownym sensie — gdy nie można go wdrożyć, zatrzymują się badania o zasięgu krajowym. Szacowany zwrot: 16x dzięki zapobiegnięciu awarii. "Szacowany", bo unikniętych strat się nie mierzy, tylko prognozuje. Każda inna liczba w tym poście jest zweryfikowana.
+Platforma jest krytyczna w dosłownym sensie — gdy nie widać, co działa na statkach badawczych na morzu, zatrzymuje się nauka o zasięgu krajowym. Szacowany zwrot: 16x dzięki zapobiegnięciu awarii. "Szacowany", bo unikniętych strat się nie mierzy, tylko prognozuje. Każda inna liczba w tym poście jest zweryfikowana.
 
 A teraz pytanie do Was:
 
-Co najdłużej było "tymczasowo zablokowane" w Waszej organizacji — i jaki był prawdziwy powód?
+Co Wasza organizacja odwleka, bo okno na aktualizację nigdy się nie otwiera — i ile kosztowałby prawdziwy inwentarz?
 
 Każda liczba zweryfikowana. Każde ustalenie prowadzi do linii kodu.
 

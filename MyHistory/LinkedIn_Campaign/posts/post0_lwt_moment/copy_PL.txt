@@ -4,7 +4,7 @@ Bez architekta. Jedna, krótka sesja z AI.
 
 Pokazałem to wczoraj na Sopra Steria Learning World Tour - nie jako ciekawostkę. Jako wzorzec.
 
-Ten sam wzorzec, inna skala: 20 połączonych aplikacji korporacyjnych. 3 tygodnie. Pełne pokrycie kodu. I 529 nieuwierzytelnionych endpointów, których ręczny audyt zupełnie nie wykrył. Tradycyjnie: miesiące. Tu: tygodnie.
+Ten sam wzorzec, inna skala: 20 połączonych aplikacji korporacyjnych. 3 tygodnie. 100% plików przeskanowanych. I 529 nieuwierzytelnionych endpointów, których ręczny audyt zupełnie nie wykrył. Tradycyjnie: miesiące. Tu: tygodnie.
 Różnica nie leży w narzędziach. Leży w kolejności.
 
 Większość używa AI jako pomocy przy konkretnym zadaniu. AI-Augmented Mindset to coś innego: AI jako pierwszy krok do wszystkiego. Nie jedyny. Pierwszy. To przestawienie kolejności zmienia skalę rezultatów.

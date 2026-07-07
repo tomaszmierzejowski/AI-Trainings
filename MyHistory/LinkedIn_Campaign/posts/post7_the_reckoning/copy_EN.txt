@@ -4,16 +4,17 @@ Not "up to." Not "in our experience." Not an industry benchmark with an asterisk
 
 Every number below comes from a real engagement with a real client. Every finding traces to a line in source code. Where a number is estimated, I say so — and explain why.
 
-The track record, 18 months of enterprise modernization:
+The track record, two years of AI discovery and modernization (2024→2026):
 
 → 6+ enterprise engagements
-→ 100+ codebases analyzed
+→ 30+ repositories analyzed
 → Zero regressions across every transformation
 → 100% on-time delivery
-→ 100% first-submission app store approval
-→ 500K NOK vs. 2.3M NOK — verified cost on one discovery engagement (78% below the traditional quote)
+→ 100% first-submission Google Play approval (Android-only migration)
+→ 500K NOK vs. 2.3M NOK — verified cost on one discovery engagement (87% below the traditional quote, discovery and analysis phase only)
 → 4 days for a platform migration the industry standard puts at 4–6 weeks
-→ 1 month to restore a deployment blocked for 2 years
+→ 3 weeks to inventory a maritime platform that couldn't be updated while ships were at sea
+→ 20x faster discovery than traditional sampling-based assessment
 → Estimated 8–10x average ROI — "estimated," because we separate what is measured from what is projected
 
 Why publish this?

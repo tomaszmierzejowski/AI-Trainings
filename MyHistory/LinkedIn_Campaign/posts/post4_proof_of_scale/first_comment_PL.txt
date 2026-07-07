@@ -1,6 +1,6 @@
 Kilka konkretnych informacji: 187 endpointów jest powiązanych z linią 477 raportu źródłowego (MASTER_CONSOLIDATED_REPORT), 98 połączeń z linią 478, a tradycyjny harmonogram 8–14 tygodni z linią 564. Benchmark 3–5 konsultantów jest w linii 566. Podaję te referencje, bo możliwość ich podania jest sednem sprawy.
 
-Porównanie 2,3 mln NOK vs. 500 tys. NOK to zweryfikowane dane kosztowe z tego samego projektu. Czterokrotna redukcja kosztów przy pełnym pokryciu zamiast częściowego.
+Porównanie 2,3 mln NOK vs. 500 tys. NOK to zweryfikowane dane kosztowe z tego samego projektu. Redukcja kosztów o 87% w fazie discovery i analizy — przy pełnym pokryciu zamiast częściowego.
 
 Porównanie z tradycyjnym discovery to nie krytyka konsultantów. To strukturalna obserwacja: pełna analiza kodu w tradycyjnym modelu rozliczeniowym jest ekonomicznie nieracjonalna. Zespoły próbkują nie dlatego, że są leniwe — ale dlatego, że czytanie wszystkiego nie było wykonalne zanim narzędzia przyspieszone przez AI nie zmieniły ekonomii. Potrzeba się nie zmieniła. Wykonalność — tak.
 

@@ -48,10 +48,12 @@ Legacy code analysis is an ideal AI use case because:
 
 1. **Pattern recognition at scale:** AI can read millions of lines of code and identify patterns that human reviewers would miss or take years to find
 2. **No tribal knowledge required:** AI analyzes what the code does, not what developers remember it doing
-3. **Consistency at 100% coverage:** AI reviews every file with the same attention — humans review a sample and extrapolate
+3. **Consistency at 100% of files scanned:** AI reviews every file with the same attention — humans review a sample and extrapolate
 4. **Business rule extraction:** Natural language generation can convert code logic into readable business specifications
 
 This is not AI replacing developers — it is AI doing the work that developers find least valuable (reading thousands of files of legacy code they didn't write) so humans can do the work that requires judgment (architecture decisions, client communication, complex problem-solving).
+
+**Factory benchmark:** 20x faster & more reliable discovery vs. traditional 5–15% sampling approaches.
 
 ---
 
@@ -135,9 +137,9 @@ This positioning is significant because it signals a shift from professional ser
 
 ---
 
-## The 120-Project Pipeline
+## The 30+ Project Pipeline
 
-As of June 2026, the Factory reports 120+ applications in active discovery pipeline across Norway and Central Europe.
+As of June 2026, the Factory reports **30+** applications in active discovery pipeline across Norway and Central Europe.
 
 **What this means:**
 - Demand is confirmed — the market needs this service at scale

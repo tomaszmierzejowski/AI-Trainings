@@ -10,7 +10,7 @@ What you commit to:
 
 What we commit to:
 
-→ 100% of the code read, not sampled
+→ 100% of files scanned, not sampled
 → Every finding cited to file and line — challenge any of them
 → Anything we didn't examine, listed explicitly
 → Estimates labeled as estimates, in the report and afterwards

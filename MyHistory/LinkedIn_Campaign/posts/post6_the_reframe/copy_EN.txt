@@ -12,7 +12,7 @@ Yes. Constantly. And I still use it on every engagement.
 
 Here is the actual division of labor:
 
-AI reads the code. Thousands of files. Every endpoint. Every connection. Every data flow. Work that took 3–5 senior consultants 8–14 weeks — done in days.
+AI reads the code. Thousands of files. Every endpoint. Every connection. Every data flow. Work that took 3–5 senior consultants 8–14 weeks — done in days. On our engagements, discovery runs 20x faster than traditional sampling.
 
 Then I read the findings.
 

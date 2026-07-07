@@ -1,7 +1,7 @@
 VARIANT A (primary):
-We were given 20 interconnected applications. Nobody knew how they all connected.
+A global automotive importer gave us 20 repos — one system nobody had mapped as a whole.
 
 VARIANT B (test):
-20 applications. 187 endpoints. 98 connections. Traditional discovery would have taken 8–14 weeks and cost 2.3M NOK. We did it in 3 weeks for 500K NOK.
+20 repos, one system. 187 endpoints. 98 connections. Traditional discovery would have taken 8–14 weeks and cost 2.3M NOK. We did it in 3 weeks for 500K NOK — 87% less on the discovery and analysis phase alone.
 
 RECOMMENDATION: Use A — the mystery opening earns more scroll-depth than leading with numbers. The numbers land harder when the reader has already engaged with the problem. Use B if Post 4 is running in week 3 or later and you have warm followers who already know your methodology.

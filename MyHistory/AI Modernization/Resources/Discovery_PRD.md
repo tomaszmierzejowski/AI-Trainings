@@ -1,6 +1,6 @@
 # Discovery: Product Requirements Document
 
-**Version:** 2.0
+**Version:** 2.1
 
 ---
 
@@ -18,7 +18,8 @@ Manual legacy application discovery is expensive (200-400h per app), inconsisten
 
 - A single prompt file (`Resources/Discovery_Master_Prompt.md`) that can be loaded into any capable, workspace-aware AI coding assistant (driven by a modern large language model with long-context reasoning and multi-file read/write access) against the codebase in `Project/Code/`
 - The prompt produces a complete, customer-ready HTML report under `Outputs/FinalReport/` filling every section of the report template
-- Every finding includes a confidence score with evidence citations
+- Every finding includes an evidence status with evidence citations; every section carries a confidence score
+- Coverage is auditable — a coverage ledger (`Outputs/Evidence/coverage_ledger.md`) records the analysis status of every file, so "100% of files scanned" is backed by an artifact, never asserted
 - The output is tech-stack agnostic — the prompt auto-detects languages, frameworks, databases, and infrastructure
 - Quality matches or exceeds gold-standard discovery reports from prior engagements
 
@@ -110,6 +111,16 @@ This affects the depth of analysis per section — see § 2.2 for the tier defin
 >
 > *Default: None — the discovery will detect everything from the codebase.*
 
+### 3.7 Question 7: Engagement Metadata
+
+> Who is this report prepared for and by? (Used to fill the report cover, sidebar, and footer.)
+>
+> - **Client name** — the organization receiving the report
+> - **Consultant name / firm** — shown under "Prepared by"
+> - **Organization label** — shown in the sidebar logo (defaults to the consultant firm name)
+>
+> *Default: None — if not provided, the agent fills these fields with `[TO FILL — consultant]` markers. The agent must never invent client or consultant names.*
+
 ---
 
 ## 4. Confidence Scoring System
@@ -128,42 +139,65 @@ Every finding, section summary, and overall report carries a numeric percentage 
 ### 4.2 Evidence Status Labels
 Each finding's status drives ECI (§ 4.5). Only Critical/High findings enter Critical Verification Rate; Partial is insufficient to close a high-severity gap. All findings require a severity label (Critical, High, Medium, Low, Informational).
 
-| Status | Meaning | Verification Rate | Critical Verification Rate | Gap |
-|--------|---------|:---:|:---:|:---:|
-| **Verified** | Confirmed by code/config with file:line citation | Yes | Yes | No |
-| **Partial** | Some evidence, incomplete verification | Yes | No | No |
-| **Assumed** | Inferred from patterns or indirect signals | No | No | No |
-| **Inferred** | Derived from absence of evidence | No | No | No |
-| **Cannot Determine** | Unresolvable from codebase (Rule 6) | No | No | **Yes** |
+**Scoreable findings:** all findings except Informational. Informational findings provide context, not risk — they are excluded from every ECI ratio so a volume of easy verified observations cannot inflate a section's score.
+
+**Per-finding confidence is the evidence status label only.** There are no per-finding numeric scores (removed in the v2.0 ECI migration, § A.4). Customer-facing tables show the status badge.
+
+| Status | Meaning | Verification Rate | Critical Verification Rate |
+|--------|---------|:---:|:---:|
+| **Verified** | Confirmed by code/config with file:line citation | Yes | Yes |
+| **Partial** | Some evidence, incomplete verification | Yes | No |
+| **Assumed** | Inferred from patterns or indirect signals | No | No |
+| **Inferred** | Derived from absence of evidence | No | No |
+| **Cannot Determine** | Unresolvable from codebase (Rule 6) | No | No |
+
+Cannot Determine findings count in the Verification Rate denominator (so they pull the score down) and must each add an item to the section's "What would raise confidence" callout.
 
 ### 4.3 Confidence Tracking
-`CONFIDENCE_LOG.md` records per section: ECI score/tier, Verification Rate, Critical Verification Rate (or "N/A"), Completeness, evidence distribution, evidence used, what would raise ECI, and blocking gaps.
+`CONFIDENCE_LOG.md` records per section: ECI score/tier, Verification Rate, Critical Verification Rate (or "N/A"), Coverage (with a reference to the coverage ledger rows it was computed from), evidence distribution, evidence used, what would raise ECI (as computed deltas, § 4.8), blocking gaps, and a small-sample flag when the section has fewer than 5 scoreable findings.
+
+The log ends with a **Next-Phase Focus Map** — one row per section: Coverage, Critical Verification Rate, and the indicated action. Low Coverage → analyze more in a follow-on phase; low Critical Verification Rate → external verification needed (interviews, tool scans, ops data); both high → findings can be relied on. This table is the primary input for planning further discovery phases.
 
 ### 4.4 Weighted Overall Confidence
 | Tier | Weight | Sections |
 |------|--------|----------|
 | **Primary** | 20% | Risk Register, Security & Compliance |
-| **Standard** | 15% | Current State Assessment, Technical Debt, Data & Integrations |
-| **Supporting** | 10% | Architecture (Partial), Recommended Path |
+| **Standard** | 15% | Current State Assessment, Data & Integrations |
+| **Supporting** | 10% | Technical Debt, Architecture (Partial), Recommended Path |
 
-Skipped/empty sections: exclude and redistribute weight proportionally. Business Rules (Section 11) if present: add at 10%, redistribute so total = 100%. Formula: `overall_confidence = sum(section_ECI × section_weight)` rounded to nearest 10%.
+Weights sum to exactly 100% (2×20 + 2×15 + 3×10). Skipped/empty sections: exclude and redistribute weight proportionally. Business Rules (Section 11) if present: add at 10%, redistribute so total = 100%. Formula: `overall_confidence = sum(section_ECI × section_weight)` rounded to nearest 10%.
+
+Sections 1 (Executive Summary), 2 (Engagement Overview), and 10 (Next Steps) are not independently scored: Section 1 displays the overall weighted confidence; Sections 2 and 10 carry no confidence badge.
 
 ### 4.5 Calculation Formula — Evidence Coverage Index (ECI)
 ```
-ECI = 0.50 × Verification Rate + 0.35 × Critical Verification Rate + 0.15 × Completeness
+ECI = 0.50 × Verification Rate + 0.35 × Critical Verification Rate + 0.15 × Coverage
 ```
 
 | Term | Formula | Measures |
 |------|---------|----------|
-| **Verification Rate** | (Verified + Partial) / total findings | Evidence breadth |
+| **Verification Rate** | (Verified + Partial) / total scoreable findings | Evidence breadth |
 | **Critical Verification Rate** | Verified among Critical+High / total Critical+High | High-severity evidence strength |
-| **Completeness** | 1 − (Cannot Determine / total) | Absence of knowledge gaps |
+| **Coverage** | Analyzed relevant artifacts / total relevant artifacts | How much of the input was actually examined |
+
+**Coverage is objective, not self-graded.** It is computed from `Outputs/Evidence/coverage_ledger.md` — the per-file analysis status inventory — not from the findings list. Each section defines its relevant artifact set:
+
+| Section | Relevant artifacts (ledger subset) |
+|---------|-------------------------------------|
+| Security & Compliance | Dependency manifests, configuration files, auth/entry-point code |
+| Technical Debt | All source files |
+| Architecture | Module/source files plus infrastructure and deployment files |
+| Data & Integrations | DDL/migrations/ORM models plus integration code |
+| Risk Register, Current State | The full ledger |
+| Recommended Path | Mean Coverage of the contributing sections above |
+
+Files with ledger status `Analyzed` or `Skimmed` count as analyzed; files marked `Excluded` with a justified reason (generated, vendored, binary, minified) are removed from the denominator; `Not covered` files count against Coverage.
 
 **Weight rationale:**
 - **0.50 — Verification Rate** is the primary signal. Broad evidence coverage across all findings is the strongest predictor of whether a section's conclusions can be trusted.
 - **0.35 — Critical Verification Rate** ensures that a single unverified Critical or High finding visibly pulls the score down, even when many lower-severity findings are well-evidenced. This prevents a volume of "easy" verifications from hiding the most important gaps.
-- **0.15 — Completeness** is the lightest weight because "Cannot Determine" signals missing information (an honest gap) rather than incorrect information. It provides a floor penalty but doesn't dominate.
-- These weights are structured estimates. After 10+ engagements, they should be validated against reviewer accuracy data and adjusted if needed (see § A.4 #5).
+- **0.15 — Coverage** is the lightest weight because it measures how much input was examined, not whether conclusions are correct — but unlike the two ratios above it cannot be influenced by which findings the agent chooses to report, so it anchors the score to auditable ground truth.
+- These weights are structured estimates. After 10+ engagements, they should be validated against reviewer accuracy data and adjusted if needed (see § A.5 #5).
 
 **Critical Verification Rate special case:** If no Critical/High findings, set `Critical Verification Rate = Verification Rate`. Compute ratios → apply formula → ×100 → round to nearest 10% → tier (§ 4.1). Deterministic.
 
@@ -182,7 +216,7 @@ ECI = 0.50 × Verification Rate + 0.35 × Critical Verification Rate + 0.15 × C
 | RISK-05 (single developer) | Partial | Medium | Yes | N/A |
 | RISK-06 (no CI/CD) | Inferred | Medium | No | N/A |
 
-Verification Rate=3/6=0.50, Critical Verification Rate=2/4=0.50, Completeness=1.00 → ECI=0.575 → **60% Medium**
+Verification Rate=3/6=0.50, Critical Verification Rate=2/4=0.50, Coverage=1.00 (ledger: 100% of relevant artifacts analyzed) → ECI=0.575 → **60% Medium**
 
 ### 4.6 Severity Classification for ECI
 Critical and High enter Critical Verification Rate denominator; Medium/Low/Informational do not. See § 4.2 table.
@@ -190,35 +224,43 @@ Critical and High enter Critical Verification Rate denominator; Medium/Low/Infor
 ### 4.7 Edge Cases
 | Scenario | Rule |
 |----------|------|
-| **0 findings** | Exclude from overall average; redistribute weight. Do not interpolate. |
+| **0 scoreable findings** | Exclude from overall average; redistribute weight. Do not interpolate. |
 | **Skipped section** | Same as 0 findings. |
-| **Only Cannot Determine** | ECI ≤ 0.15. Callout: "Cannot be meaningfully assessed from codebase alone." |
-| **Only Low/Info findings** | Critical Verification Rate = Verification Rate. Note in CONFIDENCE_LOG. |
+| **Only Informational findings** | Treat as 0 scoreable findings (exclude section). |
+| **Only Cannot Determine** | Verification Rate = 0 and Critical Verification Rate = 0, so ECI = 0.15 × Coverage (≤ 15 points before rounding). Callout: "Cannot be meaningfully assessed from codebase alone." |
+| **Only Medium/Low findings** | Critical Verification Rate = Verification Rate. Note in CONFIDENCE_LOG. |
+| **< 5 scoreable findings** | Compute normally, but customer-facing badges show the **tier label only** (no percentage) — with so few findings the ±10-point precision claim would be false. CONFIDENCE_LOG records the raw components with a small-sample flag. |
 
 ### 4.8 Presentation Rules
 | Context | Format | Example |
 |---------|--------|---------|
-| CONFIDENCE_LOG.md | % + tier + components + distribution | `60% (Medium) — Verification Rate 50%, Critical Verification Rate 50%, Completeness 100% — 2 Verified, 1 Partial, 1 Assumed, 2 Inferred` |
+| CONFIDENCE_LOG.md | % + tier + components + distribution | `60% (Medium) — Verification Rate 50%, Critical Verification Rate 50%, Coverage 100% — 2 Verified, 1 Partial, 1 Assumed, 2 Inferred` |
 | HTML section badges | Tier + % | `Medium — 60%` |
 | HTML executive scorecard | Tier + % + footnote | `60% Medium` with footnote |
 | Customer verbal | Tier labels only | "moderate confidence" |
 | HTML "About" card | Methodology + precision | Static card: ECI, tiers, ±10-point precision (not modified per-report) |
 
-**Precision rule:** All ECI scores rounded to nearest 10 percentage points (±10-point precision). Verbal communication uses tier labels only.
+**Precision rule:** All ECI scores rounded to nearest 10 percentage points (±10-point precision). Verbal communication uses tier labels only. Sections with fewer than 5 scoreable findings display tier labels only (§ 4.7).
+
+**Computed improvement deltas:** Every item in a "What would raise confidence" callout must state its impact as a **computed** delta: re-run the section's ECI assuming the named evidence upgrades the affected findings to Verified (or raises Coverage), and state the result as *"+N points (computed)"*. The formula is deterministic, so these deltas are exact — never guess improvement percentages.
+
+**Section score vs finding trust:** the section ECI answers *"where should further discovery focus?"*; the per-finding evidence status answers *"can this finding be believed?"*. Never use the section score to justify trust in an individual finding.
 
 ### 4.9 Calibration Validation
-Permanent regression test — any formula change must pass all six:
+Permanent regression test — any formula change must pass all six. Coverage inputs are stated explicitly (they come from the ledger, not from the findings):
 
-| Scenario | Findings | Verification Rate | Critical Verification Rate | Completeness | ECI | Rounded | Tier |
+| Scenario | Findings | Coverage input | Verification Rate | Critical Verification Rate | ECI | Rounded | Tier |
 |----------|----------|:---:|:---:|:---:|:---:|:---:|:---:|
-| **A** — Mostly verified | 8 Verified, 1 Partial, 1 Assumed (all Medium) | 0.90 | =Verification Rate=0.90 | 1.00 | 0.915 | **90%** | Very High |
-| **B** — Mixed evidence | 3 Verified, 4 Partial, 2 Assumed, 1 Inferred (all Medium) | 0.70 | =Verification Rate=0.70 | 1.00 | 0.745 | **70%** | High |
-| **C** — Mostly unknown | 2 Assumed, 3 Cannot Determine (all Medium) | 0 | =Verification Rate=0 | 0.40 | 0.060 | **10%** | Very Low |
-| **D** — Empty | 0 findings | — | — | — | N/A | Excluded | N/A |
+| **A** — Mostly verified | 8 Verified, 1 Partial, 1 Assumed (all Medium) | 1.00 | 0.90 | =Verification Rate=0.90 | 0.915 | **90%** | Very High |
+| **B** — Mixed evidence | 3 Verified, 4 Partial, 2 Assumed, 1 Inferred (all Medium) | 1.00 | 0.70 | =Verification Rate=0.70 | 0.745 | **70%** | High |
+| **C** — Mostly unknown | 2 Assumed, 3 Cannot Determine (all Medium); only 40% of relevant artifacts analyzable | 0.40 | 0 | =Verification Rate=0 | 0.060 | **10%** | Very Low |
+| **D** — Empty | 0 scoreable findings | — | — | — | N/A | Excluded | N/A |
 | **E** — Skipped | Not executed | — | — | — | N/A | Redistributed | N/A |
-| **F** — CVE-heavy | 12 Assumed (High) + 3 Verified (High) | 0.20 | 0.20 | 1.00 | 0.320 | **30%** | Low |
+| **F** — CVE-heavy | 12 Assumed (High) + 3 Verified (High) | 1.00 | 0.20 | 0.20 | 0.320 | **30%** | Low |
 
-**Critical Gap regression:** 10× Medium Verified + 1× Critical Cannot Determine → Verification Rate=0.91, Critical Verification Rate=0, Completeness=0.91 → ECI=0.591 → **60% Medium**.
+**Critical Gap regression:** 10× Medium Verified + 1× Critical Cannot Determine, Coverage 1.00 → Verification Rate=10/11=0.91, Critical Verification Rate=0/1=0 → ECI=0.605 → **60% Medium**. (The Critical gap alone pulls a fully-covered, mostly-verified section down two tiers — this is the behavior the formula exists to guarantee.)
+
+**Gaming regression:** adding 5 Verified **Informational** findings to scenario F must not change its score (Informational findings are excluded from all ratios).
 
 ---
 
@@ -296,7 +338,7 @@ Outputs/
     MASTER_DISCOVERY_REPORT.md        # Consolidated report (key points + links to detail files)
     MASTER_DISCOVERY_REPORT.html      # Customer-ready HTML (filled report template)
   NewDocumentation/
-    Discovery_PRD.md                  # Auto-generated PRD for this specific discovery
+    Discovery_Plan.md                 # Auto-generated analysis plan for this specific discovery
     CONFIDENCE_LOG.md                 # Per-section confidence tracking
     VERIFICATION_LOG.md               # Claim verification audit trail
     README.md                         # Index of all discovery artifacts
@@ -306,10 +348,13 @@ Outputs/
       data_flow.mmd
       deployment_topology.mmd
   Evidence/                           # Supporting evidence snapshots
+    coverage_ledger.md                # Per-file analysis status — backs all coverage claims
     dependency_scan.md
     code_metrics.md
     security_findings.md
 ```
+
+> **Naming note:** the auto-generated plan is deliberately *not* named `Discovery_PRD.md` — that would collide with `Resources/Discovery_PRD.md` (this document), which the Master Prompt references as authoritative for § 3 and § 4.
 
 ### 6.2 Dual Format Requirement
 
@@ -424,6 +469,22 @@ The default is configurable, showing both AI hours and total:
 
 Add a "Confidence" section to the sidebar showing per-section confidence as a mini heatmap or list.
 
+### 7.8 Value-First Visual Components
+
+The template leads with visuals that make the engagement's value and rigor legible to a customer at a glance. All of them are **projections of computed numbers** (ledger, CONFIDENCE_LOG, Risk Register) — the Master Prompt's chart integrity rule forbids filling any of them with estimates, and VC-02 cross-checks every chart figure.
+
+| Component | Where | Shows | Fill mechanism |
+|-----------|-------|-------|----------------|
+| "By the numbers" KPI strip | Cover | Files analyzed, coverage %, LOC, rules, flows, integrations | Ledger-backed values; remove unbackable tiles |
+| Decision gauge | Verdict banner + Section 9 | Score position across Remediate / Hybrid / Modernize bands | Marker `left = (score − 7) / 14 × 100%` |
+| Findings-by-severity bar | Section 1 | Stacked severity mix with legend counts | `flex-grow: {count}` per segment |
+| Risk Landscape matrix | Section 1 | Impact × likelihood grid with one chip per risk | Chips placed per register columns |
+| Evidence & Coverage panel | Section 1 | Coverage meter, verification meter, evidence-status distribution | Ledger + CONFIDENCE_LOG values |
+| Diagram cards (Mermaid) | Sections 6, 8 | Architecture, data flow, integration map (+ deployment/sequence at 60h) | `<pre class="mermaid">` + CDN loader; offline shows readable source |
+| Score dots | Section 9 | 1–3 dot scale per decision dimension | Class `s1`/`s2`/`s3` |
+
+**Color system:** report chrome uses the brand palette — Purple Dark `#4D1D82`, Orange `#E8640A` (accents/marks; darker `#C55208` for small text on light, lighter `#F5883F` on dark), Dark BG `#1A0A2E`, Light BG `#F8F6FC`. Data marks keep the CVD-validated semantic palettes and never restate brand colors: severity `#d03b3b / #ec835a / #eda100 / #2a78d6` (Critical→Low), evidence `#0ca30c / #2a78d6 / #eda100 / #7568c9 / #d03b3b` (Verified / Partial / Assumed / Inferred / Cannot Determine). Every chart ships with a legend and labels so color never carries meaning alone; the print stylesheet preserves chart colors and hides the sidebar.
+
 ---
 
 ## 8. Discovery Execution Flow
@@ -442,7 +503,8 @@ Add a "Confidence" section to the sidebar showing per-section confidence as a mi
 3. **Size and complexity metrics** — File counts, line counts per language, directory depth, module boundaries
 4. **Dependency inventory** — Parse all manifest files, identify versions, flag EOL/deprecated
 5. **Initial risk signals** — Flag obvious issues (no tests, no CI, hardcoded credentials patterns)
-6. Output: `Outputs/NewDocumentation/Discovery_PRD.md` + `Outputs/PartialReports/00_Discovery_Config.md` + `Outputs/PartialReports/03_Current_State_Assessment.md` (draft)
+6. **Coverage Ledger creation** — Enumerate every file under `Project/Code/` into `Outputs/Evidence/coverage_ledger.md` with per-file analysis status (see § 9.4)
+7. Output: `Outputs/NewDocumentation/Discovery_Plan.md` + `Outputs/PartialReports/00_Discovery_Config.md` + `Outputs/PartialReports/03_Current_State_Assessment.md` (draft) + `Outputs/Evidence/coverage_ledger.md`
 
 ### 8.3 Phase 2: Deep Analysis (Hours 8-28)
 
@@ -501,6 +563,7 @@ Execute in this order, updating documentation after each step:
 4. Generate `Outputs/FinalReport/MASTER_DISCOVERY_REPORT.html` using the template at `Resources/Discovery_Report_Template.html`
 5. Final `Outputs/NewDocumentation/CONFIDENCE_LOG.md` and `Outputs/NewDocumentation/VERIFICATION_LOG.md`
 6. Self-QA pass: verify all claims have evidence citations, all IDs are consistent, all scores are justified
+7. Coverage verification (VC-11): confirm the coverage ledger is complete, compute the final coverage percentage, and report it in the Engagement Overview with any `Not covered` files listed by name
 
 ---
 
@@ -542,6 +605,16 @@ The prompt must include a self-verification step:
 3. Ensure all IDs are sequential and referenced correctly
 4. Verify Mermaid diagrams render correctly
 5. Check that confidence scores are justified by evidence
+
+### 9.4 Coverage Accounting
+
+The engagement promises that 100% of files are scanned and that business-rule extraction is exhaustive. These claims are backed by an auditable artifact — never by assertion:
+
+- **Phase 1** enumerates every file under `Project/Code/` into `Outputs/Evidence/coverage_ledger.md`.
+- Every file carries a status the agent updates continuously: `Analyzed` (read and assessed), `Skimmed` (opened; structure and purpose identified), `Excluded` (generated / vendored / binary / minified — always with a stated reason), or `Not covered`.
+- **Business-rule sweep:** during Phase 2 every `Analyzed`/`Skimmed` file is classified as domain-logic or non-domain (plumbing, UI scaffolding, configuration, tests, generated). Every domain-logic file receives a rule-extraction pass and records either its extracted rule IDs or an explicit "no extractable business rules" note in the ledger. The sweep runs in full at **every** time tier — tiers vary only in how deeply rules are documented, never in whether extraction happens.
+- **Phase 4** computes `Coverage = (Analyzed + Skimmed) / (total − Excluded)`, verifies the ledger (VC-11), reports the coverage statement in the Engagement Overview, and lists any `Not covered` files by name.
+- **Honest claim boundary:** the report may state "100% of files scanned" only when the ledger shows 100%. It must never claim every *implicit* rule was necessarily recognized — the coverage statement is evidence-based, e.g.: *"100% of 214 domain-logic files swept; 87 business rules extracted."*
 
 ---
 
@@ -614,9 +687,9 @@ This appendix documents key design decisions and their rationale for reference b
 
 **Decision:** Include as **optional Section 11** in the HTML template.
 
-**Rationale:** A structured business rules catalog with stable IDs, per-rule assurance percentages, and cross-references to flows adds significant value — particularly for engagements where business logic extraction is a primary goal. However, for a Quick Scan (20h) or a Security-focused discovery, this section would consume disproportionate time for limited value.
+**Rationale:** A structured business rules catalog with stable IDs, per-rule evidence status, and cross-references to flows adds significant value — particularly for engagements where business logic extraction is a primary goal. Extraction itself always runs in full (the ledger-driven sweep, § 9.4) — what varies by tier and mode is only how deeply the extracted rules are *documented* in the customer-facing report.
 
-**Implementation:** The catalog activates automatically in Business Rules Mapping mode (Mode C) or when >20 distinct business rules are detected in any mode. In Quick Scan (20h), it is omitted entirely. In Standard (40h), a summary table is included if >10 rules are found. In Deep Discovery (60h), a full catalog with per-rule assurance is produced.
+**Implementation:** One unified inclusion rule (used by the Master Prompt and the template): include Section 11 when the discovery mode is Business Rules Mapping (Mode C), **or** when more than 10 rules were extracted (summary rows: one line per rule); use full per-rule detail when more than 20 rules were extracted or in Deep Discovery (60h). When neither applies the HTML section is removed — the complete extracted rule list always remains in the Markdown partial reports and the coverage ledger.
 
 #### Flow Index
 
@@ -697,9 +770,9 @@ This appendix documents key design decisions and their rationale for reference b
 
 ---
 
-### A.5 Confidence Scoring: Migration from Severity-Weighted Average to ECI
+### A.4 Confidence Scoring: Migration from Severity-Weighted Average to ECI
 
-**Decision:** Replace the severity-weighted average formula with the Evidence Coverage Index (ECI) as of PRD v2.0.
+**Decision:** Replace the severity-weighted average formula with the Evidence Coverage Index (ECI) as of PRD v2.0. As of v2.1, the Completeness term is replaced by ledger-based Coverage (see the v2.1 addendum at the end of this section).
 
 **Problem with the prior model:**
 The prior formula (`section_confidence = Σ(evidence_score × severity_weight) / Σ(severity_weight)`) had one dominant failure mode: a section with a large number of well-evidenced low-severity findings could score as "High confidence" even when a single Critical finding was Cannot Determine. In the most extreme case — 10 Verified Medium findings plus 1 Critical Cannot Determine — the prior formula returned 79% (High), concealing the unresolved Critical gap from the report reader. This is the precise scenario that matters most: discovering that the single most important finding cannot be confirmed from the codebase alone.
@@ -720,13 +793,15 @@ Critical Verification Rate is the key structural addition. When a Critical or Hi
 - The CVE hard-cap mechanism is removed. It is replaced by the natural behavior of the formula: Assumed CVE claims do not count toward Verification Rate or Critical Verification Rate, which produces the appropriate downward pressure without a separate cap constant.
 - Backward compatibility with prior reports is broken. Reports generated under the old formula will show different percentages and, in some cases, different tiers. All new engagements use ECI from this version forward.
 
-**Calibration note:** The ECI term weights (0.50/0.35/0.15) are structured estimates, not empirically calibrated. After 10+ engagements, reviewer accuracy data should be used to validate or adjust these weights per § A.4 future improvement #5.
+**Calibration note:** The ECI term weights (0.50/0.35/0.15) are structured estimates, not empirically calibrated. After 10+ engagements, reviewer accuracy data should be used to validate or adjust these weights per § A.5 future improvement #5.
 
-**Implementation:** The Master Prompt scoring section, CONFIDENCE_LOG.md template, and HTML badge logic must all be updated to match the new formula. The CONFIDENCE_LOG must explicitly record Verification Rate, Critical Verification Rate, and Completeness as separate computed fields so the score is fully auditable.
+**Implementation:** The Master Prompt scoring section, CONFIDENCE_LOG.md template, and HTML badge logic must all be updated to match the new formula. The CONFIDENCE_LOG must explicitly record Verification Rate, Critical Verification Rate, and Coverage as separate computed fields so the score is fully auditable.
+
+**v2.1 addendum — Completeness → Coverage:** The Completeness term (`1 − CannotDetermine/total`) was replaced by ledger-based Coverage in v2.1 because it was self-graded: it only counted findings the agent itself chose to label "Cannot Determine," so an agent that simply never wrote such findings scored Completeness = 1.00 while potentially knowing nothing. Coverage is computed from the per-file inventory in `Outputs/Evidence/coverage_ledger.md` and cannot be improved by omission — the only way to raise it is to analyze more files. Cannot-Determine findings still exert downward pressure through the Verification Rate denominator. Two further v2.1 hardening changes: Informational findings are excluded from all ratios (anti-inflation), and sections with fewer than 5 scoreable findings present tier labels only (honest precision). The § 4.9 calibration scenarios were restated with explicit Coverage inputs; all scenario tiers are unchanged (the Critical Gap regression moves from 0.591 to 0.605, still 60% Medium).
 
 ---
 
-### A.4 Future Improvements
+### A.5 Future Improvements
 
 1. **Multi-agent verification.** Use a second AI agent (different model or different prompt) to independently verify the primary agent's findings. Compare results and flag disagreements. This would significantly increase confidence in the output.
 

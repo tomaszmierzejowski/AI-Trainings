@@ -5,6 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Legacy Application Discovery Report</title>
   <style>
+    /* ── Chart tokens (CVD- and lightness-validated; see PRD § 7.8) ──
+         Severity:  critical #d03b3b · high #ec835a · medium #eda100 · low #2a78d6
+         Evidence:  verified #0ca30c · partial #2a78d6 · assumed #eda100 ·
+                    inferred #7568c9 · cannot-determine #d03b3b
+         Every chart ships with a legend and labels — color never carries meaning alone. */
+    :root {
+      --c-critical: #d03b3b; --c-high: #ec835a; --c-medium: #eda100; --c-low: #2a78d6;
+      --c-verified: #0ca30c; --c-partial: #2a78d6; --c-assumed: #eda100;
+      --c-inferred: #7568c9; --c-cd: #d03b3b;
+    }
+
     /* ── Reset & base ─────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
@@ -13,7 +24,7 @@
       font-size: 15px;
       line-height: 1.7;
       color: #1a1a2e;
-      background: #f5f6fa;
+      background: #F8F6FC;
     }
 
     /* ── Layout ───────────────────────────────────────────────── */
@@ -23,8 +34,8 @@
     .sidebar {
       width: 248px;
       min-width: 248px;
-      background: #16213e;
-      color: #c8d0e7;
+      background: #1A0A2E;
+      color: #D6CCE8;
       padding: 32px 0;
       position: sticky;
       top: 0;
@@ -33,40 +44,40 @@
     }
     .sidebar-logo {
       padding: 0 24px 24px;
-      border-bottom: 1px solid #0f3460;
+      border-bottom: 1px solid #2E1052;
       margin-bottom: 16px;
     }
-    .sidebar-logo .org { font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; color: #6b7fa8; }
-    .sidebar-logo .doc-title { font-size: 14px; font-weight: 700; color: #e0e6ff; margin-top: 4px; line-height: 1.3; }
+    .sidebar-logo .org { font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; color: #8E7AAE; }
+    .sidebar-logo .doc-title { font-size: 14px; font-weight: 700; color: #EDE6F8; margin-top: 4px; line-height: 1.3; }
     .sidebar nav a {
       display: block;
       padding: 7px 24px;
-      color: #9ba8c8;
+      color: #B4A4CC;
       text-decoration: none;
       font-size: 12.5px;
       border-left: 3px solid transparent;
       transition: all 0.15s;
     }
-    .sidebar nav a:hover { color: #e0e6ff; background: rgba(255,255,255,0.05); border-left-color: #e94560; }
+    .sidebar nav a:hover { color: #EDE6F8; background: rgba(255,255,255,0.05); border-left-color: #E8640A; }
     .sidebar-section-label {
       padding: 14px 24px 3px;
       font-size: 9.5px;
       text-transform: uppercase;
       letter-spacing: 1.5px;
-      color: #3d4f72;
+      color: #6E5495;
     }
 
     /* ── Sidebar confidence heatmap ────────────────────────────── */
     .sidebar-confidence {
       padding: 16px 24px 8px;
-      border-top: 1px solid #0f3460;
+      border-top: 1px solid #2E1052;
       margin-top: 12px;
     }
     .sidebar-confidence-title {
       font-size: 9.5px;
       text-transform: uppercase;
       letter-spacing: 1.5px;
-      color: #3d4f72;
+      color: #6E5495;
       margin-bottom: 8px;
     }
     .sidebar-conf-item {
@@ -75,7 +86,7 @@
       justify-content: space-between;
       padding: 3px 0;
       font-size: 11px;
-      color: #9ba8c8;
+      color: #B4A4CC;
     }
     .sidebar-conf-item .conf-section-name {
       white-space: nowrap;
@@ -103,7 +114,7 @@
 
     /* ── Cover block ──────────────────────────────────────────── */
     .cover {
-      background: linear-gradient(135deg, #16213e 0%, #0f3460 60%, #1a1a4e 100%);
+      background: linear-gradient(135deg, #1A0A2E 0%, #2E1052 55%, #4D1D82 100%);
       color: white;
       padding: 56px 48px;
       border-radius: 12px;
@@ -116,17 +127,134 @@
       position: absolute; right: -60px; top: -60px;
       width: 300px; height: 300px;
       border-radius: 50%;
-      background: rgba(233,69,96,0.12);
+      background: rgba(232,100,10,0.14);
     }
     .cover .label {
       font-size: 11px; text-transform: uppercase; letter-spacing: 2px;
-      color: #e94560; margin-bottom: 12px;
+      color: #F5883F; margin-bottom: 12px;
     }
     .cover h1 { font-size: 32px; font-weight: 800; line-height: 1.2; margin-bottom: 8px; }
-    .cover .subtitle { font-size: 16px; color: #9bb4d8; margin-bottom: 32px; }
+    .cover .subtitle { font-size: 16px; color: #BCA9D6; margin-bottom: 32px; }
     .cover-meta { display: flex; gap: 32px; flex-wrap: wrap; }
-    .meta-item .meta-label { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: #6b8ab8; }
-    .meta-item .meta-value { font-size: 14px; font-weight: 600; color: #c8d8f0; }
+    .meta-item .meta-label { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: #9B86BE; }
+    .meta-item .meta-value { font-size: 14px; font-weight: 600; color: #DFD4EF; }
+
+    /* ── Cover "By the numbers" KPI strip ─────────────────────── */
+    .kpi-strip {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
+      gap: 14px; margin-top: 36px; padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.14); position: relative;
+    }
+    .kpi { border-left: 2px solid rgba(232,100,10,0.65); padding: 2px 0 2px 12px; }
+    .kpi .kpi-value { font-size: 27px; font-weight: 700; color: #ffffff; line-height: 1.15; }
+    .kpi .kpi-label { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: #B3A1CF; margin-top: 3px; }
+
+    /* ── Stacked distribution bar (severity / evidence mix) ─────
+         Segments are sized by count share: style="flex-grow: {count}".
+         2px surface gaps separate segments; the legend carries the counts. */
+    .dist-bar {
+      display: flex; gap: 2px; height: 22px; border-radius: 6px;
+      overflow: hidden; margin: 10px 0 8px; background: transparent;
+    }
+    .dist-seg {
+      flex-grow: 1; flex-basis: 0; min-width: 3px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 10.5px; font-weight: 700; color: #ffffff;
+    }
+    .dist-seg.critical { background: var(--c-critical); }
+    .dist-seg.high     { background: var(--c-high); }
+    .dist-seg.medium   { background: var(--c-medium); }
+    .dist-seg.low      { background: var(--c-low); }
+    .dist-seg.verified { background: var(--c-verified); }
+    .dist-seg.partial  { background: var(--c-partial); }
+    .dist-seg.assumed  { background: var(--c-assumed); }
+    .dist-seg.inferred { background: var(--c-inferred); }
+    .dist-seg.cannot-determine { background: var(--c-cd); }
+    .dist-legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 11.5px; color: #52514e; }
+    .dist-legend .key { display: inline-flex; align-items: center; gap: 6px; }
+    .dist-legend .swatch { width: 10px; height: 10px; border-radius: 3px; flex-shrink: 0; }
+
+    /* ── Meter (single ratio vs limit — coverage, verification rate) ── */
+    .meter { margin: 10px 0 14px; }
+    .meter-head { display: flex; justify-content: space-between; align-items: baseline; font-size: 12.5px; margin-bottom: 5px; }
+    .meter-head .meter-name { font-weight: 600; color: #1a1a2e; }
+    .meter-head .meter-value { font-weight: 800; color: #1A0A2E; }
+    .meter-track { height: 10px; border-radius: 5px; overflow: hidden; }
+    .meter-fill { height: 100%; border-radius: 5px; min-width: 3px; }
+    .meter.green .meter-track { background: #e3f4e3; } .meter.green .meter-fill { background: var(--c-verified); }
+    .meter.blue  .meter-track { background: #e2ecfa; } .meter.blue  .meter-fill { background: var(--c-partial); }
+    .meter.amber .meter-track { background: #fbf0d6; } .meter.amber .meter-fill { background: var(--c-medium); }
+
+    /* ── Decision gauge (score 7-21 across three verdict bands) ──
+         Marker position: left = (score − 7) / 14 × 100%, clamped to 2%–98%. */
+    .gauge { margin: 14px 0 4px; }
+    .gauge-bands {
+      position: relative; display: flex; gap: 2px;
+      height: 14px; border-radius: 7px; overflow: visible;
+    }
+    .gauge-band { flex: 1; }
+    .gauge-band.remediate { background: #dff2df; border-radius: 7px 0 0 7px; }
+    .gauge-band.hybrid    { background: #fbeed2; }
+    .gauge-band.modernize { background: #f9e2e2; border-radius: 0 7px 7px 0; }
+    .gauge-marker {
+      position: absolute; top: 50%; transform: translate(-50%, -50%);
+      width: 15px; height: 15px; border-radius: 50%;
+      background: #1A0A2E; border: 2px solid #ffffff;
+      box-shadow: 0 0 0 1px rgba(26,10,46,0.4);
+    }
+    .gauge-labels { display: flex; gap: 2px; margin-top: 5px; font-size: 10px; color: #7a859e; }
+    .gauge-labels span { flex: 1; text-align: center; text-transform: uppercase; letter-spacing: 0.5px; }
+
+    /* ── Risk heat matrix (impact × likelihood) ─────────────────
+         Semantic heat zones; each risk is a navy ID chip placed in its cell.
+         Chip count must equal the Risk Register row count (VC-02). */
+    .heat-matrix {
+      display: grid; grid-template-columns: 84px repeat(3, 1fr);
+      gap: 2px; margin: 12px 0 6px; font-size: 10.5px;
+    }
+    .hm-axis {
+      display: flex; align-items: center; justify-content: flex-end;
+      padding-right: 8px; color: #7a859e; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.4px; text-align: right;
+    }
+    .hm-axis.col { justify-content: center; padding: 4px 0; text-align: center; }
+    .hm-cell {
+      min-height: 54px; border-radius: 6px; padding: 6px 7px;
+      display: flex; flex-wrap: wrap; gap: 4px; align-content: flex-start;
+    }
+    .hm-cell.z-low  { background: #eef6ee; }
+    .hm-cell.z-med  { background: #fdf4dd; }
+    .hm-cell.z-high { background: #fbe9e9; }
+    .risk-chip {
+      background: #1A0A2E; color: #ffffff; border-radius: 4px;
+      padding: 1px 7px; font-size: 10px; font-weight: 700;
+      font-family: 'Cascadia Code', 'Consolas', monospace; white-space: nowrap;
+    }
+    .hm-note { font-size: 11px; color: #7a859e; margin-top: 6px; }
+
+    /* ── Diagram card (Mermaid) ─────────────────────────────────── */
+    .diagram-card {
+      background: white; border-radius: 10px;
+      padding: 18px 20px 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      margin-bottom: 16px; overflow-x: auto;
+    }
+    .diagram-card .diagram-title {
+      font-size: 12px; font-weight: 700; color: #1A0A2E;
+      text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px;
+    }
+    .diagram-card pre.mermaid {
+      background: transparent; font-family: 'Cascadia Code', 'Consolas', monospace;
+      font-size: 12px; line-height: 1.5; color: #2c3e50;
+      display: flex; justify-content: center;
+    }
+    .diagram-caption { font-size: 12px; color: #7a859e; margin-top: 8px; }
+
+    /* ── Score dots (decision framework 1-3 scale) ─────────────── */
+    .score-dots { display: inline-flex; gap: 3px; vertical-align: middle; margin-right: 7px; }
+    .score-dots i { width: 9px; height: 9px; border-radius: 50%; background: #EAE4F2; display: inline-block; }
+    .score-dots.s1 i:nth-child(-n+1) { background: var(--c-verified); }
+    .score-dots.s2 i:nth-child(-n+2) { background: var(--c-medium); }
+    .score-dots.s3 i:nth-child(-n+3) { background: var(--c-critical); }
 
     /* ── Verdict banner ───────────────────────────────────────── */
     .verdict-banner {
@@ -136,6 +264,14 @@
     .verdict-banner.remediate { background: #edfaf3; border-color: #2ecc71; }
     .verdict-banner.hybrid    { background: #fffbea; border-color: #f39c12; }
     .verdict-banner.modernize { background: #fdf0f0; border-color: #e74c3c; }
+    .verdict-banner.preliminary { background: #f0f2f8; border-color: #7a859e; }
+
+    /* ── Preliminary assessment warning (Confidence Floor Rule) ── */
+    .preliminary-warning {
+      background: #fde8e8; border: 2px solid #c0392b; color: #c0392b;
+      padding: 14px 20px; border-radius: 10px; margin-bottom: 24px;
+      font-weight: 700; text-align: center; letter-spacing: 0.3px;
+    }
     .verdict-icon { font-size: 36px; }
     .verdict-title { font-size: 18px; font-weight: 700; }
     .verdict-sub   { font-size: 13px; color: #555; margin-top: 2px; }
@@ -145,16 +281,16 @@
     .section-header {
       display: flex; align-items: center; gap: 12px;
       margin-bottom: 20px; padding-bottom: 12px;
-      border-bottom: 2px solid #e8eaf0;
+      border-bottom: 2px solid #EAE4F2;
       flex-wrap: wrap;
     }
     .section-number {
-      background: #e94560; color: white;
+      background: #E8640A; color: white;
       font-size: 11px; font-weight: 700;
       width: 28px; height: 28px; border-radius: 6px;
       display: flex; align-items: center; justify-content: center; flex-shrink: 0;
     }
-    .section h2 { font-size: 20px; font-weight: 700; color: #16213e; }
+    .section h2 { font-size: 20px; font-weight: 700; color: #1A0A2E; }
     .partial-badge {
       display: inline-block; padding: 2px 10px;
       background: #fff3cd; color: #856404;
@@ -163,7 +299,7 @@
       letter-spacing: 0.5px; margin-left: 8px; vertical-align: middle;
     }
     .subsection-title {
-      font-size: 14px; font-weight: 700; color: #16213e;
+      font-size: 14px; font-weight: 700; color: #1A0A2E;
       margin: 24px 0 10px; text-transform: uppercase;
       letter-spacing: 0.5px;
     }
@@ -220,7 +356,7 @@
       font-size: 12px;
       margin: 4px 0;
       border-left: 3px solid #ccc;
-      background: #f8f9fd;
+      background: #F8F5FC;
     }
     .evidence-citation .evidence-icon { font-size: 13px; flex-shrink: 0; }
     .evidence-citation code {
@@ -246,6 +382,8 @@
     .evidence-citation.assumed   .evidence-status { background: #fef9e7; color: #b7950b; }
     .evidence-citation.inferred  { border-left-color: #95a5a6; }
     .evidence-citation.inferred  .evidence-status { background: #f0f0f0; color: #666; }
+    .evidence-citation.cannot-determine { border-left-color: #c0392b; }
+    .evidence-citation.cannot-determine .evidence-status { background: #fde8e8; color: #c0392b; }
 
     /* ── Typography ───────────────────────────────────────────── */
     p { margin-bottom: 12px; color: #2c3e50; }
@@ -271,39 +409,46 @@
     .scorecard.yellow { border-top-color: #f39c12; }
     .scorecard.red    { border-top-color: #e74c3c; }
     .scorecard.blue   { border-top-color: #3498db; }
-    .scorecard .score-value { font-size: 30px; font-weight: 800; color: #16213e; line-height: 1; }
+    .scorecard .score-value { font-size: 30px; font-weight: 800; color: #1A0A2E; line-height: 1; }
     .scorecard .score-label { font-size: 11px; color: #7a859e; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.4px; }
 
     /* ── Risk register table ──────────────────────────────────── */
     .risk-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 13px; }
     .risk-table th {
-      background: #16213e; color: #c8d0e7;
+      background: #4D1D82; color: #F0E9F9;
       padding: 10px 12px; text-align: left;
       font-weight: 600; font-size: 11px;
       text-transform: uppercase; letter-spacing: 0.5px;
     }
     .risk-table td { padding: 9px 12px; border-bottom: 1px solid #eaedf5; vertical-align: top; }
     .risk-table tr:last-child td { border-bottom: none; }
-    .risk-table tr:nth-child(even) td { background: #f8f9fd; }
+    .risk-table tr:nth-child(even) td { background: #F8F5FC; }
     .badge {
       display: inline-block; padding: 2px 9px; border-radius: 20px;
       font-size: 10.5px; font-weight: 700;
       text-transform: uppercase; letter-spacing: 0.4px; white-space: nowrap;
     }
+    /* Severity badges — ordered red → orange → yellow → blue so severity reads intuitively */
     .badge.critical { background: #fde8e8; color: #c0392b; }
     .badge.high     { background: #fef3e2; color: #d68910; }
-    .badge.medium   { background: #eafaf1; color: #1e8449; }
+    .badge.medium   { background: #fef9e7; color: #b7950b; }
     .badge.low      { background: #eaf0fb; color: #2471a3; }
     .badge.open     { background: #fde8e8; color: #c0392b; }
     .badge.mitigated { background: #eafaf1; color: #1e8449; }
     .badge.accepted { background: #f0f0f0; color: #666; }
+    /* Evidence status badges (per-finding confidence) */
+    .badge.verified  { background: #eafaf1; color: #1e8449; }
+    .badge.partial   { background: #eaf0fb; color: #2471a3; }
+    .badge.assumed   { background: #fef9e7; color: #b7950b; }
+    .badge.inferred  { background: #f0f0f0; color: #666; }
+    .badge.cannot-determine { background: #fde8e8; color: #c0392b; }
 
     /* ── Debt bars ────────────────────────────────────────────── */
     .debt-item { margin-bottom: 14px; }
     .debt-label { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 4px; }
     .debt-label .area { font-weight: 600; color: #1a1a2e; }
     .debt-label .score-text { color: #7a859e; }
-    .debt-bar-bg { background: #e8eaf0; border-radius: 6px; height: 9px; overflow: hidden; }
+    .debt-bar-bg { background: #EAE4F2; border-radius: 6px; height: 9px; overflow: hidden; }
     .debt-bar { height: 100%; border-radius: 6px; }
     .debt-bar.low    { background: #2ecc71; }
     .debt-bar.medium { background: #f39c12; }
@@ -319,7 +464,7 @@
       padding: 18px 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
     }
     .info-card h4 {
-      font-size: 12px; font-weight: 700; color: #16213e;
+      font-size: 12px; font-weight: 700; color: #1A0A2E;
       margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px;
     }
     .info-card ul { padding-left: 16px; }
@@ -327,21 +472,21 @@
 
     /* ── Callout ──────────────────────────────────────────────── */
     .callout {
-      border-left: 4px solid #0f3460; background: #f0f4ff;
+      border-left: 4px solid #4D1D82; background: #F3EEFA;
       padding: 13px 17px; border-radius: 0 8px 8px 0;
       margin-bottom: 14px; font-size: 13.5px;
     }
     .callout.warning { border-left-color: #e74c3c; background: #fdf5f5; }
     .callout.success { border-left-color: #2ecc71; background: #f4fef8; }
     .callout.caution { border-left-color: #f39c12; background: #fffbea; }
-    .callout strong { color: #16213e; }
+    .callout strong { color: #1A0A2E; }
 
     /* ── Confidence improvement callout ─────────────────────────── */
     .callout.confidence-improvement {
-      border-left-color: #8e44ad;
-      background: #f8f0fc;
+      border-left-color: #4D1D82;
+      background: #F5F0FB;
     }
-    .callout.confidence-improvement strong { color: #6c3483; }
+    .callout.confidence-improvement strong { color: #4D1D82; }
 
     /* ── Scope note ───────────────────────────────────────────── */
     .scope-note {
@@ -353,7 +498,7 @@
     /* ── Findings category tag ────────────────────────────────── */
     .finding-tag {
       display: inline-block; padding: 1px 8px; border-radius: 4px;
-      font-size: 10.5px; font-weight: 600; background: #e8eaf0; color: #3d4f72;
+      font-size: 10.5px; font-weight: 600; background: #EAE4F2; color: #6E5495;
       margin-right: 4px;
     }
 
@@ -361,9 +506,9 @@
     .path-card {
       background: white; border-radius: 12px;
       padding: 26px; box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-      margin-bottom: 18px; border-left: 5px solid #e94560;
+      margin-bottom: 18px; border-left: 5px solid #E8640A;
     }
-    .path-card h3 { font-size: 17px; font-weight: 700; color: #16213e; margin-bottom: 8px; }
+    .path-card h3 { font-size: 17px; font-weight: 700; color: #1A0A2E; margin-bottom: 8px; }
     .path-card .path-rationale { font-size: 13.5px; color: #555; margin-bottom: 16px; }
     .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .pros-cons h5 { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 7px; }
@@ -377,24 +522,24 @@
     .timeline::before {
       content: ''; position: absolute;
       left: 8px; top: 6px; bottom: 6px;
-      width: 2px; background: #e8eaf0;
+      width: 2px; background: #EAE4F2;
     }
     .timeline-item { position: relative; margin-bottom: 22px; }
     .timeline-item::before {
       content: ''; position: absolute;
       left: -28px; top: 5px;
       width: 12px; height: 12px; border-radius: 50%;
-      background: #e94560; border: 2px solid white;
-      box-shadow: 0 0 0 2px #e94560;
+      background: #E8640A; border: 2px solid white;
+      box-shadow: 0 0 0 2px #E8640A;
     }
-    .step-label { font-size: 10.5px; text-transform: uppercase; letter-spacing: 1px; color: #e94560; font-weight: 700; }
-    .timeline-item h4 { font-size: 14.5px; font-weight: 700; color: #16213e; margin-top: 2px; }
+    .step-label { font-size: 10.5px; text-transform: uppercase; letter-spacing: 1px; color: #C55208; font-weight: 700; }
+    .timeline-item h4 { font-size: 14.5px; font-weight: 700; color: #1A0A2E; margin-top: 2px; }
     .timeline-item p { font-size: 13.5px; color: #555; margin-top: 4px; }
 
     /* ── Flow index table ──────────────────────────────────────── */
     .flow-index-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 12.5px; }
     .flow-index-table th {
-      background: #16213e; color: #c8d0e7;
+      background: #4D1D82; color: #F0E9F9;
       padding: 8px 10px; text-align: left;
       font-weight: 600; font-size: 10.5px;
       text-transform: uppercase; letter-spacing: 0.5px;
@@ -403,15 +548,15 @@
       padding: 7px 10px; border-bottom: 1px solid #eaedf5; vertical-align: top;
     }
     .flow-index-table tr:last-child td { border-bottom: none; }
-    .flow-index-table tr:nth-child(even) td { background: #f8f9fd; }
+    .flow-index-table tr:nth-child(even) td { background: #F8F5FC; }
     .flow-index-table .flow-id {
-      font-weight: 700; color: #16213e; white-space: nowrap; font-family: 'Cascadia Code', 'Consolas', monospace; font-size: 11.5px;
+      font-weight: 700; color: #1A0A2E; white-space: nowrap; font-family: 'Cascadia Code', 'Consolas', monospace; font-size: 11.5px;
     }
 
     /* ── Business rules catalog table ──────────────────────────── */
     .rules-catalog-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 12.5px; }
     .rules-catalog-table th {
-      background: #16213e; color: #c8d0e7;
+      background: #4D1D82; color: #F0E9F9;
       padding: 8px 10px; text-align: left;
       font-weight: 600; font-size: 10.5px;
       text-transform: uppercase; letter-spacing: 0.5px;
@@ -420,22 +565,22 @@
       padding: 7px 10px; border-bottom: 1px solid #eaedf5; vertical-align: top;
     }
     .rules-catalog-table tr:last-child td { border-bottom: none; }
-    .rules-catalog-table tr:nth-child(even) td { background: #f8f9fd; }
+    .rules-catalog-table tr:nth-child(even) td { background: #F8F5FC; }
     .rules-catalog-table .rule-id {
-      font-weight: 700; color: #16213e; white-space: nowrap; font-family: 'Cascadia Code', 'Consolas', monospace; font-size: 11.5px;
+      font-weight: 700; color: #1A0A2E; white-space: nowrap; font-family: 'Cascadia Code', 'Consolas', monospace; font-size: 11.5px;
     }
 
     /* ── Walkthrough guide ─────────────────────────────────────── */
     .walkthrough-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 13px; }
     .walkthrough-table th {
-      background: #16213e; color: #c8d0e7;
+      background: #4D1D82; color: #F0E9F9;
       padding: 9px 12px; text-align: left;
       font-weight: 600; font-size: 11px;
       text-transform: uppercase; letter-spacing: 0.5px;
     }
     .walkthrough-table td { padding: 8px 12px; border-bottom: 1px solid #eaedf5; vertical-align: top; }
     .walkthrough-table tr:last-child td { border-bottom: none; }
-    .walkthrough-table tr:nth-child(even) td { background: #f8f9fd; }
+    .walkthrough-table tr:nth-child(even) td { background: #F8F5FC; }
 
     /* ── Verification badge (inline) ───────────────────────────── */
     .verification-badge {
@@ -445,19 +590,42 @@
       font-size: 10px;
       font-weight: 700;
       font-family: 'Cascadia Code', 'Consolas', monospace;
-      background: #e8eaf0;
-      color: #3d4f72;
+      background: #EAE4F2;
+      color: #6E5495;
       vertical-align: middle;
     }
+    .verification-badge.must-verify   { background: #fde8e8; color: #c0392b; }
+    .verification-badge.should-verify { background: #fef3e2; color: #d68910; }
 
     /* ── Footer ───────────────────────────────────────────────── */
     .report-footer {
       margin-top: 64px; padding-top: 20px;
       border-top: 1px solid #e0e4f0;
       display: flex; justify-content: space-between; align-items: center;
-      color: #9ba8c8; font-size: 12px;
+      color: #B4A4CC; font-size: 12px;
       flex-wrap: wrap;
       gap: 8px;
+    }
+
+    /* ── Print / PDF export ───────────────────────────────────── */
+    @media print {
+      body { background: white; }
+      .page-wrapper { display: block; }
+      .sidebar { display: none; }
+      .main { max-width: 100%; padding: 0; }
+      .cover, .verdict-banner, .badge, .confidence-badge, .debt-bar, .scorecard,
+      .sidebar-conf-pill, .evidence-citation, .callout, .preliminary-warning,
+      .kpi-strip, .kpi, .dist-seg, .dist-legend .swatch, .meter-track, .meter-fill,
+      .gauge-band, .gauge-marker, .hm-cell, .risk-chip, .score-dots i {
+        -webkit-print-color-adjust: exact; print-color-adjust: exact;
+      }
+      .info-card, .scorecard, .path-card, .timeline-item, .debt-item,
+      .diagram-card, .heat-matrix, .gauge, .dist-bar,
+      .risk-table tr, .flow-index-table tr, .rules-catalog-table tr, .walkthrough-table tr {
+        page-break-inside: avoid;
+      }
+      .section { scroll-margin-top: 0; }
+      .cover { border-radius: 0; }
     }
   </style>
 </head>
@@ -524,11 +692,27 @@
         <span class="conf-section-name">Rec. Path</span>
         <span class="sidebar-conf-pill high"><!-- NN% --></span>
       </div>
+      <!-- Uncomment when Section 11 (Business Rules) is included:
+      <div class="sidebar-conf-item">
+        <span class="conf-section-name">Business Rules</span>
+        <span class="sidebar-conf-pill medium">NN%</span>
+      </div>
+      -->
     </div>
   </aside>
 
   <!-- ══ MAIN CONTENT ═══════════════════════════════════════════ -->
   <main class="main">
+
+    <!-- ── PRELIMINARY WARNING (Confidence Floor Rule) ──────────
+         Uncomment ONLY when overall weighted confidence < 40%.
+         Also: set the verdict banner class to "preliminary" and append
+         [Preliminary] to every section heading.
+    <div class="preliminary-warning">
+      PRELIMINARY ASSESSMENT — Overall confidence is below 40%.
+      Findings require significant additional verification before customer presentation.
+    </div>
+    ──────────────────────────────────────────────────────────── -->
 
     <!-- ── COVER ────────────────────────────────────────────── -->
     <div class="cover" id="cover">
@@ -561,6 +745,36 @@
           <div class="meta-value"><!-- e.g. Financial Platform — or "Standalone" if independent --></div>
         </div>
       </div>
+
+      <!-- ── BY THE NUMBERS — the engagement's value, in evidence-backed figures.
+           Every figure must come from the coverage ledger / verified counts (VC-02).
+           REMOVE any tile you cannot back with evidence — never fill with estimates. -->
+      <div class="kpi-strip">
+        <div class="kpi">
+          <div class="kpi-value"><!-- e.g. 1,240 --></div>
+          <div class="kpi-label">Files analyzed</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-value"><!-- e.g. 100% --></div>
+          <div class="kpi-label">Files scanned</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-value"><!-- e.g. 214K --></div>
+          <div class="kpi-label">Lines of code</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-value"><!-- e.g. 87 --></div>
+          <div class="kpi-label">Business rules extracted</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-value"><!-- e.g. 14 --></div>
+          <div class="kpi-label">Flows traced</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-value"><!-- e.g. 12 --></div>
+          <div class="kpi-label">Integrations mapped</div>
+        </div>
+      </div>
     </div>
 
     <!-- ── VERDICT BANNER ───────────────────────────────────────
@@ -568,9 +782,24 @@
     ──────────────────────────────────────────────────────────── -->
     <div class="verdict-banner hybrid">
       <div class="verdict-icon"><!-- verdict emoji --></div>
-      <div>
+      <div style="flex: 1;">
         <div class="verdict-title">Recommendation: <!-- Remediate / Hybrid Modernization / Full Modernization --></div>
         <div class="verdict-sub"><!-- One-sentence verdict --></div>
+        <!-- Decision gauge: marker left = (score − 7) / 14 × 100%, clamped to 2%–98%.
+             Examples: score 9 → 14.3% · score 14 → 50% · score 19 → 85.7% -->
+        <div class="gauge">
+          <div class="gauge-bands">
+            <div class="gauge-band remediate"></div>
+            <div class="gauge-band hybrid"></div>
+            <div class="gauge-band modernize"></div>
+            <div class="gauge-marker" style="left: 50%;" title="Decision score: X / 21"></div>
+          </div>
+          <div class="gauge-labels">
+            <span>Remediate 7&ndash;11</span>
+            <span>Hybrid 12&ndash;16</span>
+            <span>Modernize 17&ndash;21</span>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -581,6 +810,7 @@
       <div class="section-header">
         <div class="section-number">1</div>
         <h2>Executive Summary</h2>
+        <!-- Section 1 badge shows the OVERALL WEIGHTED confidence (PRD § 4.4) -->
         <div class="confidence-badge high">
           <span class="confidence-score"><!-- NN% --></span>
           <span class="confidence-tier"><!-- High Confidence --></span>
@@ -610,7 +840,57 @@
         </div>
       </div>
 
-      <div class="placeholder">
+      <!-- ── FINDINGS BY SEVERITY — stacked bar. Segment widths carry the counts:
+           set style="flex-grow: {count}" per segment; put the count in the legend
+           (and inside the segment only if it fits). Counts must match the Risk
+           Register and scorecards exactly (VC-02). Remove segments with count 0. -->
+      <div class="subsection-title">Findings by Severity</div>
+      <div class="dist-bar">
+        <div class="dist-seg critical" style="flex-grow: 2;"><!-- 2 --></div>
+        <div class="dist-seg high" style="flex-grow: 4;"><!-- 4 --></div>
+        <div class="dist-seg medium" style="flex-grow: 6;"><!-- 6 --></div>
+        <div class="dist-seg low" style="flex-grow: 3;"><!-- 3 --></div>
+      </div>
+      <div class="dist-legend" style="margin-bottom: 20px;">
+        <span class="key"><span class="swatch" style="background: var(--c-critical);"></span>Critical &middot; <!-- N --></span>
+        <span class="key"><span class="swatch" style="background: var(--c-high);"></span>High &middot; <!-- N --></span>
+        <span class="key"><span class="swatch" style="background: var(--c-medium);"></span>Medium &middot; <!-- N --></span>
+        <span class="key"><span class="swatch" style="background: var(--c-low);"></span>Low &middot; <!-- N --></span>
+      </div>
+
+      <!-- ── RISK LANDSCAPE — impact × likelihood matrix.
+           Place each PREFIX-RISK-NN chip in the cell matching its Risk Register
+           likelihood and impact. Chip count must equal Risk Register rows (VC-02).
+           Rows top→bottom: High / Medium / Low impact. Columns left→right:
+           Low / Medium / High-or-Certain likelihood. -->
+      <div class="subsection-title">Risk Landscape</div>
+      <div class="heat-matrix">
+        <div></div>
+        <div class="hm-axis col">Low likelihood</div>
+        <div class="hm-axis col">Medium</div>
+        <div class="hm-axis col">High / Certain</div>
+
+        <div class="hm-axis">High impact</div>
+        <div class="hm-cell z-med"><!-- chips --></div>
+        <div class="hm-cell z-high"><!-- chips --></div>
+        <div class="hm-cell z-high"><span class="risk-chip"><!-- RISK-01 --></span></div>
+
+        <div class="hm-axis">Medium impact</div>
+        <div class="hm-cell z-low"><!-- chips --></div>
+        <div class="hm-cell z-med"><!-- chips --></div>
+        <div class="hm-cell z-high"><!-- chips --></div>
+
+        <div class="hm-axis">Low impact</div>
+        <div class="hm-cell z-low"><!-- chips --></div>
+        <div class="hm-cell z-low"><!-- chips --></div>
+        <div class="hm-cell z-med"><!-- chips --></div>
+      </div>
+      <div class="hm-note">
+        Each chip is a risk from the Section 4 register &mdash; the top-right region is where
+        action is most urgent. Cell placement mirrors the register's likelihood and impact columns.
+      </div>
+
+      <div class="placeholder" style="margin-top: 20px;">
         [PARAGRAPH 1 — What is this application and why does it matter to the business?]
         <br/><br/>
         [PARAGRAPH 2 — What is the single most important finding, and what risk does it represent?]
@@ -622,6 +902,82 @@
         <strong>Key Takeaway:</strong>
         <!-- One-sentence verdict in business language. -->
       </div>
+
+      <!-- ── EVIDENCE & COVERAGE — the report's trust story, at a glance.
+           Coverage % from the coverage ledger; verification % and the evidence
+           distribution from CONFIDENCE_LOG (all scoreable findings, all sections).
+           These are computed values — never estimates. -->
+      <div class="info-card" style="margin-top: 16px;">
+        <h4>Evidence &amp; Coverage — Why These Findings Can Be Trusted</h4>
+        <div class="two-col" style="margin-bottom: 4px;">
+          <div>
+            <div class="meter blue">
+              <div class="meter-head">
+                <span class="meter-name">Code analyzed (coverage ledger)</span>
+                <span class="meter-value"><!-- e.g. 100% --></span>
+              </div>
+              <div class="meter-track"><div class="meter-fill" style="width: 100%;"></div></div>
+            </div>
+            <div class="meter green">
+              <div class="meter-head">
+                <span class="meter-name">Findings backed by code evidence</span>
+                <span class="meter-value"><!-- e.g. 78% --></span>
+              </div>
+              <div class="meter-track"><div class="meter-fill" style="width: 78%;"></div></div>
+            </div>
+          </div>
+          <div>
+            <div style="font-size: 12.5px; font-weight: 600; color: #1a1a2e; margin-bottom: 5px;">
+              Evidence status across all findings
+            </div>
+            <!-- Segment widths = counts (style="flex-grow: {count}"); counts in the legend. -->
+            <div class="dist-bar" style="height: 16px;">
+              <div class="dist-seg verified" style="flex-grow: 9;"></div>
+              <div class="dist-seg partial" style="flex-grow: 3;"></div>
+              <div class="dist-seg assumed" style="flex-grow: 2;"></div>
+              <div class="dist-seg inferred" style="flex-grow: 2;"></div>
+              <div class="dist-seg cannot-determine" style="flex-grow: 1;"></div>
+            </div>
+            <div class="dist-legend">
+              <span class="key"><span class="swatch" style="background: var(--c-verified);"></span>Verified &middot; <!-- N --></span>
+              <span class="key"><span class="swatch" style="background: var(--c-partial);"></span>Partial &middot; <!-- N --></span>
+              <span class="key"><span class="swatch" style="background: var(--c-assumed);"></span>Assumed &middot; <!-- N --></span>
+              <span class="key"><span class="swatch" style="background: var(--c-inferred);"></span>Inferred &middot; <!-- N --></span>
+              <span class="key"><span class="swatch" style="background: var(--c-cd);"></span>Cannot determine &middot; <!-- N --></span>
+            </div>
+          </div>
+        </div>
+        <p style="font-size: 12px; color: #7a859e; margin: 6px 0 0;">
+          Every finding in this report carries a <code style="font-size:11px">file:line</code> citation or an explicit
+          assumption label &mdash; each one can be independently checked against the codebase.
+          The full audit trail is in the coverage ledger, confidence log, and verification log.
+        </p>
+      </div>
+
+      <!-- ── ABOUT CONFIDENCE SCORES — static methodology text.
+           Do NOT modify per report (Master Prompt § 7.3 item 17). ── -->
+      <div class="info-card" style="margin-top: 16px;">
+        <h4>About Confidence Scores</h4>
+        <p style="font-size: 13px; margin-bottom: 8px;">
+          Every section of this report carries a confidence score computed with the
+          <strong>Evidence Coverage Index (ECI)</strong>: 50% evidence breadth (share of findings
+          backed by Verified or Partial evidence), 35% critical verification (share of Critical and
+          High findings fully verified in code), and 15% analysis coverage (share of relevant files
+          actually analyzed, taken from the engagement's coverage ledger). Scores are rounded to the
+          nearest 10 points (±10-point precision) and mapped to tiers:
+          Very High 90-100 &middot; High 70-89 &middot; Medium 50-69 &middot; Low 30-49 &middot; Very Low 0-29.
+          Sections with few findings show the tier label only.
+        </p>
+        <p style="font-size: 13px; margin-bottom: 0;">
+          Individual findings carry an <strong>evidence status</strong> instead of a number:
+          <em>Verified</em> (confirmed in code with file:line citation), <em>Partial</em>,
+          <em>Assumed</em>, <em>Inferred</em>, or <em>Cannot Determine</em>. Findings tagged
+          <span class="verification-badge must-verify">MUST VERIFY</span> or
+          <span class="verification-badge should-verify">SHOULD VERIFY</span> require human
+          confirmation before being relied upon. Section scores indicate where further discovery
+          should focus; per-finding evidence status indicates how much an individual finding can be trusted.
+        </p>
+      </div>
     </section>
 
     <!-- ══════════════════════════════════════════════════════════
@@ -631,10 +987,7 @@
       <div class="section-header">
         <div class="section-number">2</div>
         <h2>Engagement Overview &amp; Scope</h2>
-        <div class="confidence-badge very-high">
-          <span class="confidence-score"><!-- NN% --></span>
-          <span class="confidence-tier"><!-- Very High --></span>
-        </div>
+        <!-- No confidence badge: this section states engagement facts, not findings (PRD § 4.4) -->
       </div>
 
       <div class="two-col">
@@ -664,6 +1017,8 @@
         <div class="info-card">
           <h4>Coverage &amp; Confidence</h4>
           <ul>
+            <li><strong>Files scanned:</strong> <!-- Ledger-backed statement, e.g. "100% of 1,240 files scanned (12 excluded: generated code) — see coverage ledger" --></li>
+            <li><strong>Business-rule sweep:</strong> <!-- e.g. "100% of 214 domain-logic files swept; 87 rules extracted" --></li>
             <li><!-- e.g. High confidence: codebase structure, dependency inventory --></li>
             <li><!-- e.g. Medium confidence: runtime config and infra posture --></li>
             <li><!-- e.g. Low confidence: production usage patterns (limited telemetry) --></li>
@@ -772,9 +1127,9 @@
       <div class="callout confidence-improvement">
         <strong>What would raise confidence:</strong>
         <ul>
-          <li><!-- e.g. Access to production deployment configuration (+10%) --></li>
-          <li><!-- e.g. Interview with the original developer (+15%) --></li>
-          <li><!-- e.g. Review of incident/support ticket history (+8%) --></li>
+          <li><!-- e.g. Access to production deployment configuration (+N points, computed — PRD § 4.8) --></li>
+          <li><!-- e.g. Interview with the original developer (+N points, computed — PRD § 4.8) --></li>
+          <li><!-- e.g. Review of incident/support ticket history (+N points, computed — PRD § 4.8) --></li>
         </ul>
       </div>
     </section>
@@ -811,6 +1166,7 @@
             <th>Likelihood</th>
             <th>Impact</th>
             <th>Evidence</th>
+            <th>Confidence</th>
             <th>Mitigation (optional)</th>
             <th>Status</th>
           </tr>
@@ -829,13 +1185,14 @@
             <td>Certain</td>
             <td>Security breach; compliance failure; no vendor support path</td>
             <td>
-              <!-- e.g. Java 8 EOL confirmed; Spring MVC 4.3 EOL confirmed -->
+              <!-- e.g. Java 8 declared in manifest; EOL status is training knowledge -->
               <div class="evidence-citation verified">
                 <span class="evidence-icon">&#128196;</span>
                 <code><!-- e.g. pom.xml:15 --></code>
                 <span class="evidence-status">Verified</span>
               </div>
             </td>
+            <td><span class="badge verified">Verified</span></td>
             <td>Upgrade runtime to current LTS; plan as first phase of modernisation</td>
             <td><span class="badge open">Open</span></td>
           </tr>
@@ -852,13 +1209,18 @@
             <td>High</td>
             <td>Data breach; regulatory penalty (GDPR / PCI); reputational damage</td>
             <td>
-              <!-- e.g. 14 CVEs found; 3 rated CVSS 9.0+; library: log4j 1.2.17 -->
-              <div class="evidence-citation verified">
+              <!-- CVE claims from training knowledge are ASSUMED + [MUST VERIFY] unless a tool
+                   report in Project/SonarQubeReport/ confirms them (then Verified, cite the tool).
+                   e.g. "log4j 1.2.17 declared (pom.xml:88) — known critical vulnerability class;
+                   verify exact CVE ID and CVSS at nvd.nist.gov" -->
+              <div class="evidence-citation assumed">
                 <span class="evidence-icon">&#128196;</span>
-                <code><!-- e.g. evidence/dependency_scan.md --></code>
-                <span class="evidence-status">Verified</span>
+                <code><!-- e.g. pom.xml:88 + Outputs/Evidence/dependency_scan.md --></code>
+                <span class="evidence-status">Assumed</span>
               </div>
+              <span class="verification-badge must-verify">MUST VERIFY</span>
             </td>
+            <td><span class="badge assumed">Assumed</span></td>
             <td>Immediate dependency upgrade sprint; consider emergency patch if exploit is active</td>
             <td><span class="badge open">Open</span></td>
           </tr>
@@ -875,13 +1237,14 @@
             <td>High</td>
             <td>Frequent regressions; slow release cycle; high cost of change</td>
             <td>
-              <!-- e.g. 0% test coverage confirmed -->
+              <!-- e.g. No test directories or test framework dependencies found (state search method) -->
               <div class="evidence-citation inferred">
                 <span class="evidence-icon">&#128196;</span>
                 <code><!-- e.g. No test directories found --></code>
                 <span class="evidence-status">Inferred</span>
               </div>
             </td>
+            <td><span class="badge inferred">Inferred</span></td>
             <td>Introduce a test harness for critical paths before any modernisation work begins</td>
             <td><span class="badge open">Open</span></td>
           </tr>
@@ -893,8 +1256,8 @@
       <div class="callout confidence-improvement">
         <strong>What would raise confidence:</strong>
         <ul>
-          <li><!-- e.g. Access to incident history to validate risk likelihood (+12%) --></li>
-          <li><!-- e.g. Interview with operations team to confirm deployment practices (+10%) --></li>
+          <li><!-- e.g. Access to incident history to validate risk likelihood (+N points, computed — PRD § 4.8) --></li>
+          <li><!-- e.g. Interview with operations team to confirm deployment practices (+N points, computed — PRD § 4.8) --></li>
         </ul>
       </div>
 
@@ -1051,8 +1414,8 @@
       <div class="callout confidence-improvement">
         <strong>What would raise confidence:</strong>
         <ul>
-          <li><!-- e.g. Running SonarQube or similar static analysis tool (+15%) --></li>
-          <li><!-- e.g. Access to build/release history (+8%) --></li>
+          <li><!-- e.g. Running SonarQube or similar static analysis tool (+N points, computed — PRD § 4.8) --></li>
+          <li><!-- e.g. Access to build/release history (+N points, computed — PRD § 4.8) --></li>
         </ul>
       </div>
     </section>
@@ -1077,11 +1440,26 @@
         redesign recommendations — these are outputs of a follow-on Architecture Engagement.
       </div>
 
-      <div class="placeholder">
-        [DIAGRAM PLACEHOLDER — Insert a high-level component diagram here (Mermaid).
-        Even a simple box-and-line diagram showing: front-end, application server, database,
-        external integrations is sufficient for a Discovery report.]
+      <!-- Mermaid diagrams: put the diagram source inside <pre class="mermaid">.
+           The loader at the end of this file renders it to SVG in the browser;
+           offline, the source remains readable as text. Follow the Mermaid
+           syntax rules in Master Prompt § 8.3 (no spaces in node IDs, quote
+           special characters, no explicit colors). -->
+      <div class="diagram-card">
+        <div class="diagram-title">Architecture Overview</div>
+        <pre class="mermaid">
+flowchart LR
+  %% REPLACE with the real component diagram, e.g.:
+  %% user["Users"] --> web["Web UI"]
+  %% web --> app["Application Server"]
+  %% app --> db[("Database")]
+  %% app --> ext["External System"]
+        </pre>
+        <div class="diagram-caption"><!-- One sentence: what this diagram shows and the single most important thing to notice. --></div>
       </div>
+
+      <!-- 60h Deep Discovery: add further diagram-cards here (deployment topology,
+           sequence diagrams for critical flows). Remove this comment otherwise. -->
 
       <div class="two-col">
         <div class="info-card">
@@ -1109,7 +1487,7 @@
         <div class="subsection-title">Flow Index</div>
         <p style="font-size:13.5px; color:#555; margin-bottom:14px;">
           Identified data and business flows traced through the codebase. Each flow carries an
-          assurance percentage and evidence status indicating how thoroughly it was verified.
+          evidence citation and an evidence status indicating how thoroughly it was verified.
         </p>
         <div style="overflow-x:auto">
         <table class="flow-index-table">
@@ -1119,8 +1497,8 @@
               <th>Scenario</th>
               <th>Direction</th>
               <th>Primary Modules</th>
-              <th>Assurance</th>
-              <th>Status</th>
+              <th>Evidence</th>
+              <th>Confidence</th>
             </tr>
           </thead>
           <tbody>
@@ -1129,21 +1507,34 @@
               <td><!-- e.g. User login and session creation --></td>
               <td><!-- Inbound / Outbound / Internal --></td>
               <td><!-- e.g. AuthController, SessionManager --></td>
-              <td><!-- e.g. 85% --></td>
-              <td><span class="badge medium"><!-- Verified / Partial / Assumed --></span></td>
+              <td><code style="font-size:11px"><!-- e.g. AuthController.cs:24-80 --></code></td>
+              <td><span class="badge verified"><!-- Verified / Partial / Assumed / Inferred --></span></td>
             </tr>
             <tr>
               <td class="flow-id"><!-- PREFIX-FLOW-02 --></td>
               <td><!-- e.g. Invoice creation and submission --></td>
               <td><!-- --></td>
               <td><!-- --></td>
-              <td><!-- --></td>
-              <td><span class="badge medium"><!-- --></span></td>
+              <td><code style="font-size:11px"><!-- --></code></td>
+              <td><span class="badge partial"><!-- --></span></td>
             </tr>
-            <!-- ADD ADDITIONAL FLOW ROWS AS NEEDED -->
+            <!-- ADD ADDITIONAL FLOW ROWS AS NEEDED — badge class must match the status:
+                 verified / partial / assumed / inferred / cannot-determine -->
           </tbody>
         </table>
         </div>
+      </div>
+
+      <div class="diagram-card" style="margin-top: 16px;">
+        <div class="diagram-title">Data Flow — Top Flows</div>
+        <pre class="mermaid">
+flowchart TD
+  %% REPLACE with the data-flow diagram for the top 3-5 flows from the Flow Index.
+  %% Label edges with the flow IDs, e.g.:
+  %% src["Order Entry"] -->|"FLOW-01"| val["Validation"]
+  %% val -->|"FLOW-02"| db[("Orders DB")]
+        </pre>
+        <div class="diagram-caption"><!-- One sentence: how data moves through the system; note the flow the business depends on most. --></div>
       </div>
 
       <div class="info-card" style="margin-top: 4px;">
@@ -1165,8 +1556,8 @@
       <div class="callout confidence-improvement">
         <strong>What would raise confidence:</strong>
         <ul>
-          <li><!-- e.g. Access to infrastructure diagrams or IaC (+12%) --></li>
-          <li><!-- e.g. Interview with DevOps/infrastructure team (+10%) --></li>
+          <li><!-- e.g. Access to infrastructure diagrams or IaC (+N points, computed — PRD § 4.8) --></li>
+          <li><!-- e.g. Interview with DevOps/infrastructure team (+N points, computed — PRD § 4.8) --></li>
         </ul>
       </div>
     </section>
@@ -1193,9 +1584,16 @@
 
       <div class="subsection-title">Known Vulnerability Exposure (CVEs)</div>
       <div class="placeholder">
-        [Table or bullet list of CVEs grouped by severity.
-        For each: library name, current version, CVE ID, CVSS score, brief description.
-        Example: "log4j 1.2.17 — CVE-2019-17571 — CVSS 9.8 — Remote code execution via SocketServer."]
+        [Table or bullet list of potential vulnerability exposure grouped by severity.
+        For each: library name, declared version with file:line citation, severity level
+        (Critical / High / Medium / Low), evidence status, and verification pointer.
+        CVE IDs and CVSS scores may ONLY be stated when confirmed by a tool report in
+        Project/SonarQubeReport/ (cite the tool as the source; evidence status Verified).
+        Otherwise the claim is training knowledge: mark it Assumed with a MUST VERIFY tag and
+        direct the reader to NVD.
+        Example (no tool report): "log4j 1.2.17 (pom.xml:88) — based on training knowledge
+        (may be outdated), this version has a known critical remote-code-execution vulnerability
+        class — Assumed [MUST VERIFY] — verify exact CVE ID and CVSS at nvd.nist.gov."]
       </div>
 
       <div class="two-col" style="margin-top:4px">
@@ -1252,8 +1650,8 @@
       <div class="callout confidence-improvement">
         <strong>What would raise confidence:</strong>
         <ul>
-          <li><!-- e.g. Running a dedicated SAST/DAST tool (+15%) --></li>
-          <li><!-- e.g. Review of access control policies and IAM configuration (+10%) --></li>
+          <li><!-- e.g. Running a dedicated SAST/DAST tool (+N points, computed — PRD § 4.8) --></li>
+          <li><!-- e.g. Review of access control policies and IAM configuration (+N points, computed — PRD § 4.8) --></li>
         </ul>
       </div>
     </section>
@@ -1271,10 +1669,55 @@
         </div>
       </div>
 
-      <div class="placeholder">
-        [INTEGRATION MAP PLACEHOLDER — Insert a Mermaid diagram or table describing all external systems
-        this application connects to. For each: system name, direction of data flow,
-        integration mechanism (REST / SOAP / DB link / file / messaging), frequency, and owner.]
+      <div class="diagram-card">
+        <div class="diagram-title">Integration Map</div>
+        <pre class="mermaid">
+flowchart LR
+  %% REPLACE with the real integration map: this application in the center,
+  %% every external system around it, edge labels = mechanism + direction, e.g.:
+  %% app["This Application"] -->|"REST, outbound"| crm["CRM"]
+  %% erp["ERP"] -->|"nightly file drop"| app
+        </pre>
+        <div class="diagram-caption"><!-- One sentence: integration surface at a glance — count, dominant mechanism, riskiest link. --></div>
+      </div>
+
+      <!-- ── INTEGRATION POINTS TABLE ─────────────────────────── -->
+      <div class="subsection-title">Integration Points</div>
+      <div style="overflow-x:auto">
+      <table class="flow-index-table">
+        <thead>
+          <tr>
+            <th>Integration ID</th>
+            <th>System</th>
+            <th>Direction</th>
+            <th>Mechanism</th>
+            <th>Frequency</th>
+            <th>Confidence</th>
+            <th>Owner</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="flow-id"><!-- PREFIX-INT-01 --></td>
+            <td><!-- e.g. SAP ERP --></td>
+            <td><!-- Inbound / Outbound / Bidirectional --></td>
+            <td><!-- REST / SOAP / DB link / file / messaging --></td>
+            <td><!-- e.g. Nightly batch — [SHOULD VERIFY] if inferred --></td>
+            <td><span class="badge verified"><!-- Verified / Partial / Assumed / Inferred / Cannot Determine --></span></td>
+            <td><!-- Owner if determinable — [SHOULD VERIFY] if inferred --></td>
+          </tr>
+          <tr>
+            <td class="flow-id"><!-- PREFIX-INT-02 --></td>
+            <td><!-- --></td>
+            <td><!-- --></td>
+            <td><!-- --></td>
+            <td><!-- --></td>
+            <td><span class="badge assumed"><!-- --></span></td>
+            <td><!-- --></td>
+          </tr>
+          <!-- ADD ADDITIONAL INTEGRATION ROWS AS NEEDED — badge class must match the status -->
+        </tbody>
+      </table>
       </div>
 
       <div class="two-col">
@@ -1308,8 +1751,8 @@
       <div class="callout confidence-improvement">
         <strong>What would raise confidence:</strong>
         <ul>
-          <li><!-- e.g. Access to database schema export / ERD (+15%) --></li>
-          <li><!-- e.g. Interview with DBA or data steward (+12%) --></li>
+          <li><!-- e.g. Access to database schema export / ERD (+N points, computed — PRD § 4.8) --></li>
+          <li><!-- e.g. Interview with DBA or data steward (+N points, computed — PRD § 4.8) --></li>
         </ul>
       </div>
     </section>
@@ -1327,7 +1770,9 @@
         </div>
       </div>
 
-      <!-- ── DECISION FRAMEWORK SCORE ─────────────────────────── -->
+      <!-- ── DECISION FRAMEWORK SCORE ───────────────────────────
+           Per row: set the score-dots class (s1 / s2 / s3) to match the score,
+           and write the numeric score inside <strong>. -->
       <div class="subsection-title">Decision Framework Score</div>
       <table class="risk-table" style="margin-bottom: 20px;">
         <thead>
@@ -1340,40 +1785,40 @@
         <tbody>
           <tr>
             <td>Code maintainability</td>
-            <td><!-- 1 / 2 / 3 --></td>
+            <td><span class="score-dots s2"><i></i><i></i><i></i></span><strong><!-- 1 / 2 / 3 --></strong></td>
             <td><!-- e.g. High complexity; no tests; large duplicated modules --></td>
           </tr>
           <tr>
             <td>Dependency &amp; runtime risk</td>
-            <td><!-- 1 / 2 / 3 --></td>
+            <td><span class="score-dots s2"><i></i><i></i><i></i></span><strong><!-- 1 / 2 / 3 --></strong></td>
             <td><!-- e.g. Core runtime EOL; 14 open CVEs --></td>
           </tr>
           <tr>
             <td>Architecture fitness</td>
-            <td><!-- 1 / 2 / 3 --></td>
+            <td><span class="score-dots s2"><i></i><i></i><i></i></span><strong><!-- 1 / 2 / 3 --></strong></td>
             <td><!-- e.g. Monolith; not scalable; shared DB --></td>
           </tr>
           <tr>
             <td>Integration complexity</td>
-            <td><!-- 1 / 2 / 3 --></td>
+            <td><span class="score-dots s2"><i></i><i></i><i></i></span><strong><!-- 1 / 2 / 3 --></strong></td>
             <td><!-- e.g. 12 undocumented point-to-point integrations --></td>
           </tr>
           <tr>
             <td>Business logic clarity</td>
-            <td><!-- 1 / 2 / 3 --></td>
+            <td><span class="score-dots s2"><i></i><i></i><i></i></span><strong><!-- 1 / 2 / 3 --></strong></td>
             <td><!-- e.g. Scattered; partially in DB stored procedures --></td>
           </tr>
           <tr>
             <td>Team knowledge &amp; documentation</td>
-            <td><!-- 1 / 2 / 3 --></td>
+            <td><span class="score-dots s2"><i></i><i></i><i></i></span><strong><!-- 1 / 2 / 3 --></strong></td>
             <td><!-- e.g. Key-person dependency; no docs --></td>
           </tr>
           <tr>
             <td>Operational cost &amp; toil</td>
-            <td><!-- 1 / 2 / 3 --></td>
+            <td><span class="score-dots s2"><i></i><i></i><i></i></span><strong><!-- 1 / 2 / 3 --></strong></td>
             <td><!-- e.g. High manual ops overhead; incident frequency rising --></td>
           </tr>
-          <tr style="background: #f0f4ff;">
+          <tr style="background: #F3EEFA;">
             <td><strong>Total Score</strong></td>
             <td><strong><!-- X / 21 --></strong></td>
             <td>
@@ -1384,6 +1829,21 @@
           </tr>
         </tbody>
       </table>
+
+      <!-- Same gauge as the verdict banner: marker left = (score − 7) / 14 × 100%, clamped 2%–98%. -->
+      <div class="gauge" style="margin-bottom: 20px;">
+        <div class="gauge-bands">
+          <div class="gauge-band remediate"></div>
+          <div class="gauge-band hybrid"></div>
+          <div class="gauge-band modernize"></div>
+          <div class="gauge-marker" style="left: 50%;" title="Decision score: X / 21"></div>
+        </div>
+        <div class="gauge-labels">
+          <span>Remediate 7&ndash;11</span>
+          <span>Hybrid 12&ndash;16</span>
+          <span>Modernize 17&ndash;21</span>
+        </div>
+      </div>
 
       <div class="callout warning">
         <strong>Override Rule:</strong> If the core runtime is End-of-Life with no vendor upgrade path,
@@ -1432,10 +1892,7 @@
       <div class="section-header">
         <div class="section-number">10</div>
         <h2>Next Steps</h2>
-        <div class="confidence-badge high">
-          <span class="confidence-score"><!-- NN% --></span>
-          <span class="confidence-tier"><!-- High Confidence --></span>
-        </div>
+        <!-- No confidence badge: this section is a plan, not findings (PRD § 4.4) -->
       </div>
 
       <div class="timeline">
@@ -1537,9 +1994,12 @@
 
     <!-- ══════════════════════════════════════════════════════════
          SECTION 11 — BUSINESS RULES CATALOG (OPTIONAL)
-         Include this section in Business Rules Mapping mode (Mode C)
-         or when >20 distinct business rules are detected.
-         Remove this section entirely for Quick Scan (20h) engagements.
+         Unified inclusion rule (PRD § A.1): include in Business Rules
+         Mapping mode (Mode C), OR when >10 rules were extracted
+         (summary rows — one line per rule); use full per-rule detail
+         when >20 rules or in Deep Discovery (60h). If removed, the
+         complete rule list remains in the Markdown partial reports —
+         the extraction sweep always runs at every tier.
     ══════════════════════════════════════════════════════════════ -->
     <section class="section" id="s11">
       <div class="section-header">
@@ -1553,13 +2013,17 @@
 
       <div class="scope-note">
         <strong>Optional section.</strong> This section is included when the discovery mode is
-        Business Rules Mapping, or when significant business logic (>20 rules) was detected
-        during analysis. For a Quick Scan engagement, this section is omitted.
+        Business Rules Mapping, or when more than 10 business rules were extracted (with full
+        per-rule detail above 20 rules or in Deep Discovery). The extraction sweep itself runs
+        in full at every engagement tier — when this section is omitted, the complete rule list
+        remains in the detailed Markdown reports.
       </div>
 
       <p>
         Business rules extracted from the codebase, organized by domain category.
-        Each rule carries an assurance percentage and evidence status.
+        Each rule carries an evidence citation and evidence status.
+        <!-- Include the ledger-backed coverage statement here, e.g.:
+             "214 of 214 domain-logic files swept (100%); 87 business rules extracted." -->
       </p>
 
       <div style="overflow-x:auto">
@@ -1571,8 +2035,7 @@
             <th>Category</th>
             <th>Scope (Flows)</th>
             <th>Evidence</th>
-            <th>Assurance</th>
-            <th>Status</th>
+            <th>Confidence</th>
           </tr>
         </thead>
         <tbody>
@@ -1588,8 +2051,7 @@
                 <span class="evidence-status">Verified</span>
               </div>
             </td>
-            <td><!-- e.g. 92% --></td>
-            <td><span class="badge medium"><!-- Verified / Partial / Assumed --></span></td>
+            <td><span class="badge verified">Verified</span></td>
           </tr>
           <tr>
             <td class="rule-id"><!-- PREFIX-RULE-FX-01 --></td>
@@ -1603,10 +2065,9 @@
                 <span class="evidence-status">Partial</span>
               </div>
             </td>
-            <td><!-- --></td>
-            <td><span class="badge medium"><!-- --></span></td>
+            <td><span class="badge partial">Partial</span></td>
           </tr>
-          <!-- ADD ADDITIONAL RULE ROWS AS NEEDED -->
+          <!-- ADD ADDITIONAL RULE ROWS AS NEEDED — badge class must match the status -->
         </tbody>
       </table>
       </div>
@@ -1614,8 +2075,8 @@
       <div class="callout confidence-improvement">
         <strong>What would raise confidence:</strong>
         <ul>
-          <li><!-- e.g. Interview with domain expert to validate extracted rules (+20%) --></li>
-          <li><!-- e.g. Access to business requirements documentation (+15%) --></li>
+          <li><!-- e.g. Interview with domain expert to validate extracted rules (+N points, computed — PRD § 4.8) --></li>
+          <li><!-- e.g. Access to business requirements documentation (+N points, computed — PRD § 4.8) --></li>
         </ul>
       </div>
     </section>
@@ -1629,5 +2090,19 @@
 
   </main>
 </div>
+
+<!-- ── Mermaid renderer ─────────────────────────────────────────
+     Renders every <pre class="mermaid"> block to an inline SVG.
+     Requires internet access on first open; offline viewers see the
+     readable diagram source instead — nothing is lost, only unstyled.
+     Pin the major version; theme "neutral" matches the report chrome. -->
+<script type="module">
+  try {
+    const { default: mermaid } = await import('https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs');
+    mermaid.initialize({ startOnLoad: true, theme: 'neutral', securityLevel: 'strict' });
+  } catch (e) {
+    /* Offline or CDN blocked: diagram source stays visible as text. */
+  }
+</script>
 </body>
 </html>

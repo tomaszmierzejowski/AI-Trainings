@@ -7,7 +7,7 @@
 ## HOW TO USE THIS PROMPT
 
 1. Create a new NotebookLM notebook
-2. Upload all files numbered 01–09 from this folder as sources
+2. Upload all files numbered 01–10 from this folder as sources
 3. Open "Audio Overview" → click "Customize"
 4. Paste the prompt below into the field
 5. Generate
@@ -48,10 +48,10 @@ Magnus's default positions:
 - Wrappers around LLMs are not differentiators — the underlying models are accessible to everyone.
 
 **Tomasz (The Practitioner)**
-He has done this work for 3 years. Not planned it, not theorized about it — done it. He has read the code. He has found the vulnerabilities. He has received the Christmas Eve message from the client whose national research program he saved with a 4-day migration. He is not selling. He is testifying.
+He has done this work for **two years of AI Discoveries and AI Modernization (2024→2026)**. Not planned it, not theorized about it — done it. He has read the code. He has found the vulnerabilities. He has received the Christmas Eve message from the client whose national research program he saved with a 4-day **Android-only** migration. He is not selling. He is testifying.
 
 Tomasz's default positions:
-- Domain expertise is not a wrapper. 3 years of modernization-specific prompts, chain-of-thought pipelines, and CVE-integrated analysis is not the same as running a generic LLM on a codebase.
+- Domain expertise is not a wrapper. Two years of modernization-specific prompts, chain-of-thought pipelines, and CVE-integrated analysis is not the same as running a generic LLM on a codebase.
 - Evidence is not opinion. Every finding in his reports links to a file and line number. Generic AI tools produce plausible-sounding answers. The Factory produces verifiable facts.
 - The French platform is designed for users who want AI assistance. The Factory is designed for organizations that want AI results. These are different products.
 - 6 projects with 100% delivery and 0% regression is a record. A small record — but a verifiable one. The question is not whether 6 is enough. The question is whether the methodology that produced 6 successes is sound.
@@ -63,7 +63,7 @@ Tomasz's default positions:
 **Opening (2–3 minutes)**
 Magnus opens by framing the stakes: AI is everywhere in modernization now. Every vendor has an "AI-powered" offering. The company's leadership is being asked to choose between a centralized AI platform approach and a specialized modernization factory approach. Both claim to use AI. Both claim to deliver results. How do you tell the real thing from the hype? That's what this conversation will try to answer.
 
-Tomasz responds with a simple provocation: "Ask me a question that any generic AI tool can answer, and I'll give you the generic answer. Then ask me the question that 3 years of modernization work teaches you to ask first — and we'll see the difference."
+Tomasz responds with a simple provocation: "Ask me a question that any generic AI tool can answer, and I'll give you the generic answer. Then ask me the question that two years of modernization work teaches you to ask first — and we'll see the difference."
 
 ---
 
@@ -75,7 +75,7 @@ Tomasz's response must cover:
 - The difference between a tool and a domain-trained pipeline. A hammer is a commodity. A surgical instrument is also a hammer — but what matters is the 10,000 hours of technique behind it.
 - Specific example: the Struts RCE discovery. When the pipeline found CVE-2014-0114 running in a production Nordic automotive system — the same vulnerability class as the Equifax breach (2017, $575M settlement) — that finding came from a chain-of-thought pipeline specifically designed to cross-reference dependency manifests against CVE databases, flag severity by exploitability in web-facing contexts, and link to the specific configuration file that proved active exploitation was possible. A generic LLM prompt saying "check this code for security issues" does not produce that finding. 10 years of that vulnerability running undetected in production proves that the generic approach fails.
 - The business rule extraction example: 143 business rules extracted at 94% confidence from 220,000 lines of legacy billing code. This required domain-specific prompts for billing logic patterns, confidence calibration on edge cases, and a verification pipeline that cross-checked extracted rules against actual test execution behavior. This cannot be replicated by uploading the code to a generic AI interface and asking "what are the business rules?"
-- The prompting expertise gap: The French platform requires expert users to get expert output. The Factory has already done the expert prompting — for modernization specifically — and baked it into the pipeline. The client gets the output of 3 years of prompt engineering without needing to hire prompt engineers.
+- The prompting expertise gap: The French platform requires expert users to get expert output. The Factory has already done the expert prompting — for modernization specifically — and baked it into the pipeline. The client gets the output of two years of prompt engineering without needing to hire prompt engineers.
 
 Magnus should push back: "But as the underlying models improve, won't your specialized prompts become unnecessary? GPT-5 will be smarter than your GPT-4 pipeline."
 
@@ -108,11 +108,11 @@ Magnus: "Let's talk about your track record honestly. 6 projects. 100% success r
 Tomasz's response:
 - Honest acknowledgment: 6 is a small sample. The 100% figure is a record, not a guarantee. The right response to "6 projects" is not to inflate it — it is to explain the mechanism.
 - The mechanism argument: Projects fail when hidden complexity surfaces mid-delivery. The Factory eliminates hidden complexity before delivery begins. If you know everything about a system before you commit to modernizing it, you cannot be surprised mid-project. The 100% success rate is not luck — it is the consequence of a methodology that front-loads discovery.
-- The 31% baseline: The industry's 69% failure rate (Standish CHAOS 2020–2024) is a discovery failure. Teams underestimate scope because they cannot see what's in the code. The Factory's 60-hour pipeline sees 100% of the code. Eliminating the cause of failure is a better explanation for the success rate than sample size bias.
-- The pipeline: 120+ applications currently in discovery pipeline. The sample is growing. The track record so far is consistent with the hypothesis.
+- The 31% baseline: The industry's 69% failure rate (Standish CHAOS 2020–2024) is a discovery failure. Teams underestimate scope because they cannot see what's in the code. The Factory's 60-hour pipeline scans **100% of files**. Eliminating the cause of failure is a better explanation for the success rate than sample size bias.
+- The pipeline: **30+** applications currently in discovery pipeline. The sample is growing. The track record so far is consistent with the hypothesis.
 - The verification offer: Every finding is code-linked. Any architect in this conversation can take a Factory discovery report and verify every claim against the source code independently. This is not possible with a traditional consulting report based on expert opinion and 10% sampling. The verifiability is the credibility.
 
-Magnus should concede partially: "Fair. The methodology argument is coherent. I'm not dismissing it. I want to see the 120-project pipeline results — and I expect the first project failure to be reported with the same transparency as the successes."
+Magnus should concede partially: "Fair. The methodology argument is coherent. I'm not dismissing it. I want to see the 30+ project pipeline results — and I expect the first project failure to be reported with the same transparency as the successes."
 
 Tomasz: "Agreed. And when that happens — because it will — the report will include the failure mode analysis and what the discovery phase missed. That's what accountability looks like in this domain."
 
@@ -156,11 +156,11 @@ A generic AI platform, given access to the same codebase, will answer the questi
 
 But it doesn't know what it doesn't know. And in legacy modernization, the things you don't know about are the things that kill your project.
 
-We know what to look for because we've spent 3 years finding it. That's not a prompt. That's expertise. And expertise is what 3 years builds."
+We know what to look for because we've spent two years finding it. That's not a prompt. That's expertise. And expertise is what two years builds."
 
 Magnus's response: "That's actually a coherent answer. The domain expertise encoded in the pipeline is the moat — not the underlying models, not the interface."
 
-Tomasz: "Exactly. And that moat deepens with every engagement. Every discovery adds to the pattern library. The 120-project pipeline is not just revenue — it's training data for the next generation of the pipeline."
+Tomasz: "Exactly. And that moat deepens with every engagement. Every discovery adds to the pattern library. The 30+ project pipeline is not just revenue — it's training data for the next generation of the pipeline."
 
 ---
 
@@ -168,7 +168,7 @@ Tomasz: "Exactly. And that moat deepens with every engagement. Every discovery a
 
 Magnus closes with his honest assessment — not a full endorsement, not a dismissal:
 
-"Here's where I land after this conversation. The Factory is real. The results are verifiable. The methodology is sound. The scale concern is legitimate — 6 projects is early evidence, not proof at scale. The comparison to the company-wide AI platform is a false dilemma — they solve different problems. If I were advising the CEO, I'd say: use the centralized platform for AI-assisted work across the organization. Fund the Factory's next phase. Measure the 120-project pipeline. Make the decision on 30 projects, not 6."
+"Here's where I land after this conversation. The Factory is real. The results are verifiable. The methodology is sound. The scale concern is legitimate — 6 projects is early evidence, not proof at scale. The comparison to the company-wide AI platform is a false dilemma — they solve different problems. If I were advising the CEO, I'd say: use the centralized platform for AI-assisted work across the organization. Fund the Factory's next phase. Measure the 30+ project pipeline. Make the decision on 30 projects, not 6."
 
 Tomasz closes:
 
@@ -204,7 +204,7 @@ End with Magnus: "Listeners — whether you're making the decision as an archite
 
 1. **The Equifax Parallel:** Magnus asks if Tomasz is overstating the Struts CVE risk. Tomasz responds: "Equifax's breach was Apache Struts. Our client was running Apache Struts 1.1 — an older version. In production. For 10 years after the CVE was published. I'm not overstating the Struts risk. History already did that."
 
-2. **The Prompting Expertise Trap:** Magnus says the centralized platform empowers everyone to use AI. Tomasz: "Exactly. And the output quality is proportional to the prompting expertise. The organizations that get the best output from a generic AI platform are the ones who invest in prompt engineering. We've done 3 years of that investment specifically for modernization. Clients get the output of expert prompting without hiring the prompt experts."
+2. **The Prompting Expertise Trap:** Magnus says the centralized platform empowers everyone to use AI. Tomasz: "Exactly. And the output quality is proportional to the prompting expertise. The organizations that get the best output from a generic AI platform are the ones who invest in prompt engineering. We've done two years of that investment specifically for modernization. Clients get the output of expert prompting without hiring the prompt experts."
 
 3. **The ROI Comparison:** Magnus challenges the 8–16x ROI claim. Tomasz breaks down Project Delta (Maritime): 100K NOK discovery investment, 200+ CVEs on vessel-deployed systems, cost of a single ransomware incident on maritime research infrastructure: conservative estimate 5M NOK. Security findings alone: 50x ROI before any modernization work begins.
 
@@ -228,21 +228,22 @@ End with Magnus: "Listeners — whether you're making the decision as an archite
 - 100% Factory delivery rate, 6 engagements
 - 0% post-launch regression rate, all transformation projects
 - 2M+ lines of code analyzed
-- 80+ repositories assessed
+- 30+ repositories assessed
 - 60-hour automated discovery pipeline (vs 200–400 hours human equivalent)
-- 78% cost reduction (discovery phase vs. traditional)
+- 87% discovery cost reduction (discovery and analysis phase vs. traditional)
+- 20x faster & more reliable discovery
 - 8x–16x ROI range across portfolio
 - 529 unauthenticated REST endpoints (Project Beta)
 - 143 business rules at 94% confidence (Project Beta, 220K LOC)
 - 200+ CVEs on maritime platform (Project Delta)
 - CVE-2014-0114 (Struts 1.1 RCE, CVSS 7.5, same class as Equifax breach)
-- Project Gamma: 4-day migration, 0 post-launch bugs, first-submission app store approval
+- Project Gamma: 4-day **Android-only** migration, 0 post-launch bugs, first-submission Google Play approval (Xamarin deprecation blocker)
 - GDPR exposure: up to €20M (Project Beta)
 - PCI-DSS exposure: €100K+/month (Project Beta)
 - Customer message received December 24, 2025: "Xamarin-app is working again! Thank you so much. Merry Christmas!"
 - Traditional consulting team: 3–5 consultants, 3–6 months, €1.5M–€2.5M
-- Factory consulting: 1 consultant, 2–4 weeks, €100K–€500K
+- Factory consulting: 1 consultant, 15–30 days, €100K–€500K
 - Self-service portal: from €3,500 for automated discovery
-- 120+ applications in active discovery pipeline
+- 30+ applications in active discovery pipeline
 - €4.88M average data breach cost (IBM 2023)
 - €1.78B total GDPR fines in 2023

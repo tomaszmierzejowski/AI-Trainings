@@ -1,5 +1,5 @@
-Stefan is 47. VP Engineering at a 2,800-person Polish IT company.  
-His platform has been running 
+Stefan is 47. VP Engineering at a 2,800-person Nordic financial 
+services or industrial enterprise. His platform has been running 
 for 20 years. He has a 160-slide consulting deck that describes 
 his legacy system. Nobody actually read all the code.
 

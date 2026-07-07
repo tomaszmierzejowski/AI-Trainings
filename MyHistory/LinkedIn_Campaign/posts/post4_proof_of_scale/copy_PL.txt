@@ -1,4 +1,4 @@
-Dostaliśmy 20 połączonych aplikacji. Nikt nie wiedział, jak wszystkie są ze sobą powiązane.
+Globalny importer motoryzacyjny dał nam 20 repozytoriów — jeden system, którego nikt nie zmapował w całości.
 
 Ani architekci. Ani dostawcy. Ani zespół, który utrzymywał je przez lata.
 
@@ -10,9 +10,9 @@ Oto co znaleźliśmy:
 
 187 endpointów API — odkrytych i sklasyfikowanych w całej platformie.
 98 połączeń integracyjnych — zmapowanych w 7+ różnych protokołach.
-3 tygodnie — od pierwszego skanu kodu do kompletnej mapy drogowej modernizacji.
+3 tygodnie — od pierwszego skanu kodu do kompletnej mapy drogowej modernizacji. Discovery 20x szybsze niż tradycyjny harmonogram 8–14 tygodni.
 
-Dla porównania: tradycyjne discovery dla takiego zakresu zajmuje 8–14 tygodni, z 3–5 starszymi konsultantami pokrywającymi ułamek kodu. Koszt tego podejścia dla tego zakresu: 2,3 mln NOK. Nasze zaangażowanie: 500 tys. NOK.
+Dla porównania: tradycyjne discovery dla takiego zakresu zajmuje 8–14 tygodni, z 3–5 starszymi konsultantami pokrywającymi ułamek kodu. Koszt tego podejścia dla tego zakresu: 2,3 mln NOK. Nasze zaangażowanie: 500 tys. NOK — o 87% mniej, wyłącznie w fazie discovery i analizy.
 
 Pokryliśmy całą platformę. Każdą aplikację. Każde połączenie.
 

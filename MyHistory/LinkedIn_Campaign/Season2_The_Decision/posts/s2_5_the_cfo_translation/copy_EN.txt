@@ -6,7 +6,7 @@ Here is the same request, translated into CFO:
 
 "We are operating an asset nobody has fully inventoried. Last year, a comparable enterprise found 529 API endpoints with no authentication in a platform their audits had covered for years — each one a potential regulatory event. GDPR fines alone reach 4% of global revenue.
 
-The inventory costs 500K NOK — a comparable engagement quoted 2.3M the traditional way. Three weeks, fixed scope. It produces an asset register: every endpoint, every integration, every business rule, with evidence. Whatever we decide afterward — modernize, replace, or do nothing — we decide it on inventory instead of folklore.
+The inventory costs 500K NOK — a comparable engagement quoted 2.3M the traditional way (87% reduction on the discovery and analysis phase only). Three weeks, fixed scope. It produces an asset register: every endpoint, every integration, every business rule, with evidence. Whatever we decide afterward — modernize, replace, or do nothing — we decide it on inventory instead of folklore.
 
 The alternative isn't saving 500K. It's continuing to carry an unpriced liability on infrastructure that runs our revenue."
 

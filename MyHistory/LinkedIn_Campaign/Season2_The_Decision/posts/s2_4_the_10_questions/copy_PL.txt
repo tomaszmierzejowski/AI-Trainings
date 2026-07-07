@@ -2,7 +2,7 @@ Dwa tygodnie temu oferowałem tę listę prywatnie każdemu, kto napisał do mni
 
 10 pytań do każdego dostawcy audytu modernizacyjnego — łącznie z nami:
 
-1. Jaki procent naszej bazy kodu faktycznie przeczytacie? (Nie "przejrzycie". Przeczytacie.)
+1. Jaki procent naszych plików faktycznie przeskanujecie? (Nie "przejrzycie". Przeskanujecie.)
 
 2. Czy każde ustalenie będzie cytować plik i linię, z której pochodzi?
 

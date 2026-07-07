@@ -2,12 +2,12 @@
 
 ## What Is the AI App Modernization Factory?
 
-The AI App Modernization Factory (AMF) is an industrial-grade service offering from a European technology consultancy (Sopra Steria) that applies large-language models, autonomous agent pipelines, and AI-augmented developer workflows to the problem of legacy application modernization.
+The AI App Modernization Factory (AMF) is an industrial-grade service offering from a European technology consultancy (Sopra Steria) that applies large-language models, skilled experienced engineers operating with an AI-mindset using native AI-augmented pipelines, and AI-augmented developer workflows to the problem of legacy application modernization.
 
-It was built over three years (2023–2026) by a small expert team and has evolved through three distinct generations:
+It was built over **two years of AI Discoveries and AI Modernization (2024→2026)** by a small expert team and has evolved through three distinct generations:
 
-- **Factory V1 (2023)**: Consultant-led, AI-assisted discovery. Typical engagement: 2–4 weeks, ~500,000 NOK, 2–3 consultants.
-- **Factory V2 (2024)**: Automated agent pipeline. Typical engagement: 2 weeks, ~200,000 NOK, 1–2 consultants.
+- **Factory V1 (2024)**: Consultant-led, AI-assisted discovery. Typical engagement: 15–30 days, ~500,000 NOK, 2–3 consultants.
+- **Factory V2 (2025)**: AI-augmented pipeline operated by skilled engineers with an AI-mindset. Typical engagement: 15–30 days, ~200,000 NOK, 1–2 consultants.
 - **Factory V3 (2025–2026)**: Fully orchestrated AI pipeline + on-demand self-service portal. Typical engagement: 1–6 days, ~100,000 NOK, 1 consultant. Self-service from €3,500.
 
 For reference, the traditional market benchmark for the same scope: 3–6 months, ~2,300,000 NOK, 3–5 senior consultants.
@@ -24,7 +24,7 @@ According to the Standish CHAOS Report (2020–2024), only **31% of IT projects 
 - Traditional discovery (sampling 5–15% of the code) creates false confidence
 - Migration projects frequently fail mid-delivery when hidden complexity surfaces
 
-The Factory addresses this by doing what was previously impossible: **analyzing 100% of the codebase automatically**, extracting business rules, mapping dependencies, scoring compliance, and producing an evidence-linked discovery report — all within 60 hours of compute time.
+The Factory addresses this by doing what was previously impossible: **scanning 100% of files automatically**, extracting business rules, mapping dependencies, scoring compliance, and producing an evidence-linked discovery report — all within 60 hours of compute time.
 
 ---
 
@@ -47,23 +47,24 @@ Traditional equivalents (manual expert review): 200–400 hours per application.
 
 | Metric | Value |
 |--------|-------|
-| Engagements delivered | 6+ completed, 120+ in pipeline |
+| Engagements delivered | 6+ completed, 30+ in pipeline |
 | Success rate | 100% (all projects delivered within timeline and scope) |
 | Post-launch defect rate | 0% regression on completed transformations |
 | Lines of code analyzed | 2,000,000+ |
-| Average cost reduction vs traditional | 78% |
+| Average discovery cost reduction vs traditional | 87% *(discovery and analysis phase only)* |
+| Discovery speed vs traditional sampling | 20x faster & more reliable discovery |
 | Estimated ROI range across portfolio | 8x–16x |
 | Fastest delivery | 4 days (full mobile app migration) |
 | Business rules extracted | 143 in single engagement at 94% confidence |
 | Security vulnerabilities discovered | 200+ in single codebase (previously unknown) |
-| Repositories analyzed across all projects | 80+ |
+| Repositories analyzed across all projects | 30+ |
 
 ---
 
 ## Service Tiers (2026)
 
 **Consulting-Led:**
-- Discovery Phase: 2–4 weeks, produces full discovery report, risk register, security assessment, business rules documentation
+- Discovery Phase: 15–30 days, produces full discovery report, risk register, security assessment, business rules documentation
 - Architecture Phase: 4–8 weeks, produces modernization blueprint, tech selection, migration roadmap
 - Optional Deep Dive (1B): Extended analysis for complex enterprise systems
 
@@ -78,8 +79,8 @@ Traditional equivalents (manual expert review): 200–400 hours per application.
 
 | Dimension | Traditional | AI Factory |
 |-----------|-------------|------------|
-| Discovery duration | 3–6 months | 2–4 weeks (consulting) or 60 hours (automated) |
-| Code coverage | 5–15% sampling | 100% |
+| Discovery duration | 3–6 months | 15–30 days (consulting) or 60 hours (automated) |
+| Files scanned | 5–15% sampling | 100% of files scanned |
 | Business rules extraction | Manual, expert-dependent | Automated, 94% confidence scored |
 | Security assessment | Separate engagement, manual | Integrated, CVE-linked |
 | Pricing | €1.5M–€2.5M+ | €100K–€500K (consulting) / €3.5K–€25K (portal) |
@@ -100,7 +101,7 @@ The Factory's positioning rests on one core differentiator: **evidence over opin
 ## The Team Philosophy: AI-Augmented, Not AI-Replaced
 
 The Factory is not a fully automated black box. The model is:
-- AI pipelines do the exhaustive, repetitive analysis work (100% coverage)
+- AI-augmented pipelines do the exhaustive, repetitive analysis work (100% of files scanned)
 - Human experts verify, interpret, and communicate findings
 - Clients make all technology and architecture decisions
 

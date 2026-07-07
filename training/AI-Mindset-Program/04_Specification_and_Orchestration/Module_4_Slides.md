@@ -66,7 +66,7 @@ The author's production pipeline for legacy-system discovery: staged, specialize
 Results (from Modules 1–3, now explained): 20 apps in 3 weeks; 4–8× faster understanding (Project Velocity); 143 rules @94% confidence with 312 evidence tags.
 
 **Slide 15 — The economics** *(VERIFIED)*
-Same discovery scope: ~3 weeks orchestrated vs. ~14 weeks traditional; ≈78% cost reduction on the reference engagement.
+Same discovery scope: ~3 weeks orchestrated vs. ~14 weeks traditional; ≈87% cost reduction on the reference engagement (discovery and analysis phase only).
 One line: "This is why the orchestrator role exists: the pipeline doesn't run itself."
 
 **Slide 16 — Where orchestration fails (honesty slide)**

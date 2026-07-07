@@ -2,7 +2,7 @@ Birgit also wrote: "Thank you very much for taking the time to investigate the p
 
 She has generously offered to share this story publicly.
 
-The technical specifics: Xamarin.Forms to .NET 8 MAUI migration. 1,200+ automated transformations. 23 decision points where a senior architect evaluated trade-offs and made explicit choices — documented in the project log. 100% first-submission approval: App Store and Google Play. Zero regressions confirmed post-launch. 15% performance improvement measured.
+The technical specifics: Android-only app. Xamarin.Forms to .NET 8 MAUI migration — four days. 1,200+ automated transformations. 23 decision points where a senior architect evaluated trade-offs and made explicit choices — documented in the project log. 100% first-submission Google Play approval. Zero regressions confirmed post-launch. 15% performance improvement measured.
 
 The industry standard for a migration of this complexity: 4–6 weeks.
 

@@ -23,9 +23,9 @@ This document provides the strongest arguments for both sides, grounded in the a
 
 ### Challenge 2: "AI Hype Is Real and These Claims Are Inflated"
 
-*"The AI industry is full of vendors claiming 10x improvements and 78% cost reductions. These numbers are marketing, not audited results. Where are the independent audits? Where is the third-party verification? You've produced internal reports claiming spectacular results — that's not evidence, that's a sales deck."*
+*"The AI industry is full of vendors claiming 10x improvements and 87% discovery cost reductions. These numbers are marketing, not audited results. Where are the independent audits? Where is the third-party verification? You've produced internal reports claiming spectacular results — that's not evidence, that's a sales deck."*
 
-**Core argument:** Self-reported metrics from vendors selling their own services are inherently biased. The 78% cost reduction, 16x ROI, 8,800+ violations found — all of these come from the team's own reporting. The customers in question are not named, independent auditors haven't reviewed the methodology, and the "traditional" comparison cost is the Factory's own estimate of what traditional consulting would have charged.
+**Core argument:** Self-reported metrics from vendors selling their own services are inherently biased. The 87% discovery cost reduction *(discovery and analysis phase only)*, 16x ROI, 8,800+ violations found — all of these come from the team's own reporting. The customers in question are not named, independent auditors haven't reviewed the methodology, and the "traditional" comparison cost is the Factory's own estimate of what traditional consulting would have charged.
 
 ---
 
@@ -71,7 +71,7 @@ This document provides the strongest arguments for both sides, grounded in the a
 - Every completed engagement delivered on timeline
 - Customer feedback is verifiable (Project Gamma: Christmas Eve message, research program launched January 2)
 - Methodology is documented and reproducible, not dependent on exceptional talent
-- 120+ projects in pipeline — portfolio is scaling
+- 30+ projects in pipeline — portfolio is scaling
 
 ---
 
@@ -81,21 +81,21 @@ This document provides the strongest arguments for both sides, grounded in the a
 
 **The core differentiator:** Evidence-linked reporting means every claim is falsifiable. The customer received a report where every finding has a source citation. That is different from a traditional consulting report where findings are the opinions of the consultants who reviewed 10% of the code.
 
-**On cost comparisons:** The 78% cost reduction is not a Factory estimate of what traditional consulting would have charged — it is based on actual scope (3 weeks vs. 14 weeks quoted by traditional vendors in the same market for the same scope). The comparison is market-calibrated, not self-referential.
+**On cost comparisons:** The 87% discovery cost reduction *(codebase discovery and analysis phase only)* is not a Factory estimate of what traditional consulting would have charged — it is based on actual scope (3 weeks vs. 14 weeks quoted by traditional vendors in the same market for the same scope). The comparison is market-calibrated, not self-referential.
 
 ---
 
 ### Response to Challenge 3: Norwegian Market
 
-*"Norway is not a limitation — it's a proof point. Norway has some of the highest engineering labor costs in Europe, which means the cost reduction percentages look favorable in NOK but are understated in relative terms. If you can achieve 78% cost reduction in the most expensive market, the methodology works harder in less expensive markets. Additionally, Norwegian regulatory requirements (GDPR, sector-specific) are as demanding as anywhere in Europe. The market concentration reflects where the team built relationships — not a limitation of the approach."*
+*"Norway is not a limitation — it's a proof point. Norway has some of the highest engineering labor costs in Europe, which means the cost reduction percentages look favorable in NOK but are understated in relative terms. If you can achieve 87% discovery cost reduction in the most expensive market, the methodology works harder in less expensive markets. Additionally, Norwegian regulatory requirements (GDPR, sector-specific) are as demanding as anywhere in Europe. The market concentration reflects where the team built relationships — not a limitation of the approach."*
 
-**The pipeline:** 120+ applications currently in discovery pipeline across multiple markets. The team has expanded beyond the initial Nordic focus.
+**The pipeline:** 30+ applications currently in discovery pipeline across multiple markets. The team has expanded beyond the initial Nordic focus.
 
 ---
 
 ### Response to Challenge 4: "Just Existing Tools"
 
-*"SonarQube flags code quality issues. GitHub Advanced Security flags known vulnerabilities. Neither tool extracts business rules at 94% confidence. Neither tool produces a decision-ready compliance scorecard with regulatory exposure estimates. Neither tool generates behavioral tests for legacy code with 0% existing coverage. The Factory is not a wrapper around commodity tools — it is an orchestrated agent pipeline that produces outputs those tools cannot produce independently."*
+*"SonarQube flags code quality issues. GitHub Advanced Security flags known vulnerabilities. Neither tool extracts business rules at 94% confidence. Neither tool produces a decision-ready compliance scorecard with regulatory exposure estimates. Neither tool generates behavioral tests for legacy code with 0% existing coverage. The Factory is not a wrapper around commodity tools — it is skilled engineers with an AI-mindset operating native AI-augmented pipelines that produce outputs those tools cannot produce independently."*
 
 **The 143 business rules at 94% confidence** is the clearest differentiator. Commodity SAST/SCA tools do not produce human-readable business rule documentation with confidence scoring. That capability — which prevented regression in the billing system migration — is not available from any existing tool at market price.
 
@@ -111,7 +111,7 @@ This document provides the strongest arguments for both sides, grounded in the a
 
 ### Response to Challenge 6: Regressions and Project Types
 
-*"Project Gamma was a 4-day migration with 0 post-launch bugs across both Android and iOS platforms — first-submission app store approval on both stores. A mobile migration producing 0 bugs in 4 days is not a low bar. The testing framework generated automated behavioral tests before migration began, covering every data collection flow. That is what enabled the zero-regression delivery."*
+*"Project Gamma was a 4-day **Android-only** migration with 0 post-launch bugs — first-submission Google Play approval after **Google Play Store deprecating support for Xamarin**. A mobile migration producing 0 bugs in 4 days is not a low bar. The testing framework generated automated behavioral tests before migration began, covering every data collection flow. That is what enabled the zero-regression delivery."*
 
 **On discovery vs. transformation scope:** Discovery engagements produce deliverables (reports) that do not touch production systems — so regression is not applicable. Transformation engagements (where code changes go to production) include Projects Gamma and Epsilon, both with zero post-launch issues. As the portfolio scales, this track record will continue to be reported transparently.
 
@@ -126,12 +126,12 @@ The Skeptic's challenges are legitimate. The Defender's responses are evidence-g
 - Security findings that were real, verifiable, and previously unknown to clients
 - A 4-day mobile migration with verified zero post-launch defects and a dated customer message celebrating the outcome
 - Cost comparisons tied to actual market quotes, not theoretical estimates
-- A technical methodology (100% code coverage, evidence-linked reporting) that is differentiable from both traditional consulting and commodity tooling
+- A technical methodology (100% of files scanned, evidence-linked reporting) that is differentiable from both traditional consulting and commodity tooling
 
 **What requires more time to prove:**
 - Whether 100% success rate holds at scale (6 projects is early evidence, not proof)
 - Whether the approach scales across markets outside Nordic/Norwegian context
 - Whether the self-service portal economics work at volume
-- Whether the 120-project pipeline converts and delivers at the same quality level
+- Whether the 30+ project pipeline converts and delivers at the same quality level
 
 **The honest position:** The AI App Modernization Factory is a real, delivered, evidence-backed offering in early scaling phase. The claims are substantiated by actual project outcomes. The critics are right that the portfolio is small. The defenders are right that the methodology is sound and the evidence is verifiable. The next 12–18 months of portfolio delivery will determine whether the early track record holds.

@@ -10,7 +10,7 @@ The findings are approximately true.
 
 "Approximately" is doing enormous work in that sentence.
 
-In the last 18 months, we analyzed six enterprise platforms with full codebase coverage. Not samples. Not documentation. Every line. Every endpoint. Every integration. Every data flow.
+Over two years of AI discovery and modernization (2024→2026), we analyzed six enterprise platforms with 100% of files scanned. Not samples. Not documentation. Every line. Every endpoint. Every integration. Every data flow.
 
 Here is a sample of what that found — that traditional assessments had missed:
 

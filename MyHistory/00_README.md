@@ -74,12 +74,17 @@ Sopra Steria pozostaje wymieniona jako organizacja prowadząca projekt (to nasza
 
 *Szerszy kontekst dla podcastu — "dlaczego teraz?" i "czy to już nie istnieje?".*
 
+### 10_PODCAST_PROMPT_CEO_and_Architects.md
+**Dla NotebookLM:** Gotowy prompt do generowania podcastu CEO + architektów — debata o Factory vs. scentralizowana platforma AI.
+
+*Użyj po wgraniu plików 01–09 — wklej prompt z tego pliku w NotebookLM Audio Overview → Customize.*
+
 ---
 
 ## Instrukcja dla NotebookLM
 
 1. Utwórz nowy notebook
-2. Dodaj wszystkie 9 plików .md jako źródła
+2. Dodaj wszystkie 11 plików .md (00–10) jako źródła
 3. Opcjonalnie: dodaj wybrane pliki HTML z folderu Presentations (np. AI_Modernization_Pitch_Deck.html, AI_Factory_CEO_Dashboard.html)
 4. Generuj podcast: *"Create a podcast debate where one side challenges whether the AI App Modernization Factory achievements are real and impressive, while the other defends the evidence and results. Use the debate brief in document 08 as your structure."*
 

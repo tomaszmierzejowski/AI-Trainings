@@ -12,7 +12,7 @@ Wyobraźcie sobie audytora, który sprawdził 12% transakcji i wydał opinię be
 
 Autotest — otwórzcie swój ostatni raport z audytu i poszukajcie:
 
-1. Deklaracji pokrycia (jaki % kodu został PRZECZYTANY, nie "przejrzany")
+1. Deklaracji pokrycia (jaki % plików został PRZESKANOWANY, nie "przejrzany")
 2. Odwołań do źródła (ustalenia cytujące pliki i linie, nie wywiady)
 3. Listy tego, czego NIE zbadano
 

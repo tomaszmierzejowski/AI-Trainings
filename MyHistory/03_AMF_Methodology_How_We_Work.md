@@ -2,8 +2,8 @@
 
 ## The Three-Phase Delivery Model
 
-### Phase 0 — Discovery (2–4 weeks)
-The discovery phase is the Factory's core differentiating capability. It replaces the traditional "assessment" phase that typically takes 3–6 months and covers only 5–15% of a codebase.
+### Phase 0 — Discovery (15–30 days)
+The discovery phase is the Factory's core differentiating capability. It replaces the traditional "assessment" phase that typically takes 3–6 months and covers only 5–15% of a codebase through sampling.
 
 **What happens:**
 1. Codebase ingestion — all repositories, all files, all history
@@ -42,7 +42,7 @@ For complex enterprise systems, an extended analysis phase covering:
 
 ## The 60-Hour Automated Pipeline
 
-The technical core of the Factory is an AI agent pipeline that orchestrates multiple specialized models:
+The technical core of the Factory is operated by **skilled, experienced engineers with an AI-mindset using native AI-augmented pipelines** — not automated AI agents working alone. Engineers orchestrate multiple specialized models:
 
 **Stage 1: Ingestion**
 - Full repository clone and index
@@ -119,7 +119,19 @@ Discovery is not a prerequisite for value — it produces immediate value itself
 Security assessment is integrated into discovery, not sold as a separate engagement. This creates discoveries where the security findings often justify the entire cost independently.
 
 **5. AI-Augmented Teams**
-The Factory replaces headcount multiplication (5 consultants for 5 months) with capability multiplication (1 consultant with AI coverage for 3 weeks). The quality ceiling goes up while the cost floor comes down.
+The Factory replaces headcount multiplication (5 consultants for 5 months) with capability multiplication (1 consultant with AI coverage for 15–30 days). The quality ceiling goes up while the cost floor comes down.
+
+---
+
+## Agile on Steroids
+
+The Factory's accelerated delivery model compresses traditional discovery-and-architecture cycles into **15–30 days** (not 15 days alone, not 2–4 weeks).
+
+**Core pillar:** Skilled, experienced engineers operating with an AI-mindset using native AI-augmented pipelines — **not** automated AI agents working alone.
+
+**De-risking mechanism:** Deliver a **full solution mockup and target architecture early (by Day 15–30)** so stakeholders validate direction before committing to full modernization spend.
+
+**Discovery economics:** Cost and speed metrics cited for this model apply to the **codebase discovery and analysis phase only**.
 
 ---
 
@@ -132,8 +144,8 @@ The Factory replaces headcount multiplication (5 consultants for 5 months) with 
 - Risk assessment (largely qualitative)
 - Modernization recommendation (vendor-dependent)
 
-### Factory Discovery Deliverable (2–4 weeks, €100K–€500K)
-- 100% code coverage (automated analysis)
+### Factory Discovery Deliverable (15–30 days, €100K–€500K)
+- 100% of files scanned (automated analysis)
 - 300+ evidence-tagged findings (every claim verifiable)
 - Dependency graph (complete, machine-generated)
 - Vulnerability report (CVE-linked, severity-classified)
