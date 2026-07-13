@@ -2,6 +2,6 @@ Dlaczego dokładnie ta kolejność, a nie po prostu "czytaj uważnie":
 
 Nazwiska/liczby/daty najpierw, bo tam koncentruje się fabrykacja ORAZ są zerojedynkowe — dobre albo złe, bez osądu, więc kosztują najmniej uwagi. Źródła jako drugie, bo jedna fałszywa referencja przecenia cały dokument. Wniosek kontra dane na końcu, bo wymaga najwięcej mózgu — a do tego momentu już wiecie, czy dokument na niego zasługuje.
 
-Trik z zasłonięciem wniosku to najbardziej użyteczny pojedynczy ruch: zmusza do wyrobienia niezależnego zdania, zanim płynny akapit zdąży Was zakotwiczyć. To też jedyny krok, który łapie odwrócenie — typ błędu, który przetrwał w każdej grupie, z którą robiłem ćwiczenie z podłożonymi błędami.
+Trik z zasłonięciem wniosku to najbardziej użyteczny pojedynczy ruch: zmusza do wyrobienia niezależnego zdania, zanim płynny akapit zdąży Was zakotwiczyć. To też jedyny krok, który łapie odwrócenie — typ błędu, który to ćwiczenie ma najlepiej ukrywać, z założenia.
 
 Dla inżynierów: ta sama zasada, inny artefakt. Podpowiedź AI w kodzie = przegląd każdego fragmentu; funkcja napisana przez agenta = przegląd całego diffa jak wrogiego PR-a. Smycz się wydłuża, przegląd się pogłębia — nigdy odwrotnie.

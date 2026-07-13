@@ -22,4 +22,4 @@ What did your last discovery cover?
 
 Every number verified. Every finding traced to source code.
 
-#LegacyPlatform #EnterpriseDiscovery #ApplicationModernization #SopraSteria #CodeAnalysis
+#LegacyPlatform #EnterpriseDiscovery #SopraSteria

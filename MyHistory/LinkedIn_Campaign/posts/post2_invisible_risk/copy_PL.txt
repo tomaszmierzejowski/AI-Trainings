@@ -22,4 +22,4 @@ Jeśli nie masz pewności, ta niepewność jest warta zbadania.
 
 Każda liczba zweryfikowana. Każde odkrycie powiązane z kodem źródłowym.
 
-#BezpieczeństwoIT #RODO #LegacySystems #SopraSteria #ArchitekturaKorporacyjna
+#BezpieczeństwoIT #RODO #SopraSteria

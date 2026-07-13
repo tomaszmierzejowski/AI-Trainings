@@ -22,6 +22,8 @@ Cost avoided: €80,000+ emergency rewrite. The platform deadline that would hav
 
 Four days.
 
+Has your team ever had four days to save something that mattered more than the code?
+
 Every number verified. Every finding traced to source code.
 
-#AppMigration #XamarinEndOfLife #MobileModernization #SopraSteria #TechForGood
+#AppMigration #XamarinEndOfLife #SopraSteria

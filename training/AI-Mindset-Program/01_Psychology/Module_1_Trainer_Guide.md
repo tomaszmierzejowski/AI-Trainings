@@ -25,7 +25,7 @@ Deliver the Domek story personally and unhurried — it's the emotional anchor o
 **Anonymity discipline:** do not name the non-profit or the country's municipalities beyond what's on the slide.
 
 ### Slides 7–9 (Spectrum)
-The staircase is a mirror, not a judgment. Most rooms cluster at Level 1–2 — say so in advance so nobody feels exposed: "In every group I've run this with, most of the room is at 1 or 2. That's the point of today."
+The staircase is a mirror, not a judgment. Most people cluster at Level 1–2 when they're honest with themselves — say so in advance so nobody feels exposed: "Most professionals land at 1 or 2 when they're honest with themselves. That's the point of today." (Note for early deliveries: once you've actually run this a few times, you can replace this with a real observed split — but don't claim a track record you don't have yet.)
 Slide 9 is the thesis of the module. Spell out the sequence difference concretely: Level 2 = "I finish the draft, then ask AI to polish." Level 3 = "I ask AI for the draft, then apply my judgment." Same tools. Different order. Different economics.
 
 ### Slides 10–11 (Friction map — the heart of the module)

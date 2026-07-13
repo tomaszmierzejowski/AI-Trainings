@@ -1,6 +1,6 @@
-Podkładam trzy kłamstwa w raporcie i daję go mądrym ludziom. Najgroźniejsze kłamstwo przeżywa prawie za każdym razem.
+W raporcie wygenerowanym przez AI ukryłem trzy kłamstwa i poprosiłem mądrych ludzi, żeby je znaleźli. Najgroźniejsze przeżywa prawie każdą próbę.
 
-To ćwiczenie z moich szkoleń. Wygenerowane przez AI streszczenie zarządcze — płynne, pewne siebie, dobrze poukładane. W środku ukryte: trzy podłożone błędy. Uczestnicy mają dziesięć minut.
+To ćwiczenie, które zaprojektowałem właśnie w tym celu i testuję na współpracownikach. Streszczenie zarządcze — płynne, pewne siebie, dobrze poukładane. W środku: trzy podłożone błędy. Na ich znalezienie daję dziesięć minut.
 
 Błąd nr 1 — zła liczba. Tekst mówi o spadku 15%; dane mówią 12%. Znajdowany pierwszy, prawie zawsze. Ludzie ufają swojej arytmetyce.
 
@@ -8,9 +8,9 @@ Błąd nr 2 — zmyślone źródło. Przekonujący branżowy benchmark, który p
 
 Błąd nr 3 — odwrócony wniosek. Streszczenie ogłasza, że proces jest "zdrowszy niż kiedykolwiek", podczas gdy liczby pod spodem pogarszały się co miesiąc. I jest udekorowany PRAWDZIWĄ statystyką jako kamuflażem.
 
-Ten przeżywa. Sala za salą.
+Ten jest najtrudniejszy do złapania — z założenia.
 
-Oto dlaczego: jesteśmy wytrenowani do sprawdzania faktów, nie ram. Zła liczba wygląda na złą. Zły wniosek, owinięty w dobre liczby i pewną siebie prozę, wygląda jak insight.
+Dlaczego? Bo całe życie uczono nas sprawdzać fakty, a nie ramy. Zła liczba wygląda na złą. Zły wniosek, owinięty w dobre liczby i pewny siebie język, wygląda jak trafna analiza.
 
 Płynność maskuje fałsz. Najlepiej napisany akapit niesie najgorszy błąd — właśnie dlatego, że dobre pisanie wyłącza naszą podejrzliwość.
 
@@ -20,4 +20,4 @@ Lekarstwem nie jest paranoja. To 60-sekundowy nawyk — post w przyszły wtorek.
 
 A do tego czasu: czy WASZ zespół złapałby błąd nr 3? A Wy?
 
-#AIMindset #KrytyczneMyslenie #SopraSteria
+#AIMindset #KrytyczneMyslenie #SopraSteriaPolska

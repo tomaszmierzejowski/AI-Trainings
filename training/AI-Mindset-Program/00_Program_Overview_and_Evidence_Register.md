@@ -31,6 +31,8 @@ Optional add-on track: the existing 3-day technical masterclass ("from magic to 
 
 **Handouts (in `Handouts/`):** M2 lab pack · M3 planted-error exercise + answer key (trainer only) · M4 specification template + exercise · M5 30-day contract + team sheet · M5 day-30 review template · PlatformCo pre-training survey. Rules-file templates (CLAUDE.md / AGENTS.md / .cursorrules) are reused from `AI Coaching/` — distribute copies, don't duplicate sources.
 
+**v1.4 first-delivery pass (2026-07-12):** `Handouts/PL/` — Polish versions of all participant-facing handouts (M2 lab, M3 exercise, M4 spec template, M5 contract + day-30 review), RTF localized as R·Z·F per the v1.2 rule. New `First_Delivery_Runbook_PL.md` — operational checklist for the first delivery (tech/logistics prep, live-demo fallback recording, timing safety cuts, post-training survey, day-30 follow-up). Evidence-register note added: never show "87%" next to the 500K/2.3M NOK pair (computes to 78%).
+
 ## 3. Anonymization key (INTERNAL ONLY)
 
 | Name used in materials | Real engagement | Rule |
@@ -55,7 +57,7 @@ Optional add-on track: the existing 3-day technical masterclass ("from magic to 
 - **4-day rescue (anonymized):** Android-only app; Google Play deprecating Xamarin.Forms; Xamarin→.NET MAUI in 4 days vs. 4–8 weeks typical; 92% code preservation; zero regressions; 15% faster app startup; Google Play approval on first submission. ROI: use the conservative **4× estimate**, not the 10×+ marketing figure (per the author's own banned-phrases discipline).
 - **Nordic transaction-processing enterprise:** 529 REST endpoints documented; 143 business rules extracted at 94% confidence from ~220,000 lines; 312 evidence-tagged citations; 3-week delivery vs. ~6 months traditional.
 - **Government research organization:** 200+ known CVEs surfaced; could not update measuring software while ships were out at sea; containerized and deployed; 16× ROI (estimated).
-- **Discovery economics:** ~500,000 NOK vs. ~2,300,000 NOK traditional (≈87% reduction, discovery and analysis phase only) — 3 weeks vs. 14 weeks.
+- **Discovery economics:** ~500,000 NOK vs. ~2,300,000 NOK traditional (discovery and analysis phase only) — 3 weeks vs. 14 weeks. ⚠️ The 500K/2.3M pair computes to ≈78%; the canonical "87%" is the hours-basis cross-engagement average. Never show "87%" next to these two raw numbers — a skeptical participant with a calculator will catch it. Raw pair alone, or "87%" alone.
 - **PresoGen AI:** ~600 automated tests; 3 LLM providers; 3 export formats.
 - **Mana Menu:** ~657 automated tests; 37 controllers; 554 recipes.
 - **Lidka:** non-technical publisher shipped a working audiobook store in days with full owner autonomy (Tpay + InPost integrations).

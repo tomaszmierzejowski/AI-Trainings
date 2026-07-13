@@ -22,4 +22,4 @@ Co objęło Twoje ostatnie discovery?
 
 Każda liczba zweryfikowana. Każde odkrycie powiązane z kodem źródłowym.
 
-#AnalizaKodu #ModernizacjaAplikacji #LegacySystems #SopraSteria #ArchitekturaKorporacyjna
+#AnalizaKodu #ModernizacjaAplikacji #SopraSteria

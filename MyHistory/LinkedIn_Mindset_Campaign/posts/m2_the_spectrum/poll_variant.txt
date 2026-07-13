@@ -1,5 +1,14 @@
 POLL VARIANT — run one week BEFORE the full M2 post (recommended play)
 
+STATUS: OPUBLIKOWANA (lipiec 2026). Faktycznie użyte opcje PL różniły się od pierwotnego draftu:
+1. Całkowicie od zera
+2. AI zrobiło szlif na końcu
+3. Od roboczego szkicu z AI
+4. AI wykonało, ja oceniłem
+Pełny post M2 (copy_PL.txt) otwiera się wynikami tej ankiety — przed publikacją wpisz realne liczby w placeholder.
+
+=== EN ===
+
 QUESTION: Where did your last important piece of work actually START?
 
 OPTIONS (LinkedIn max 4):
@@ -14,6 +23,24 @@ Four ways to start work. Only behavior counts — not aspiration.
 Answer for your LAST important task, not your best one. Results next Tuesday, with the map of what each answer means.
 
 FIRST COMMENT:
-No wrong answers — but there is a pattern. In the training groups I run, the split is roughly: most hands on option 1–2, a confident few on 3, almost nobody honestly on 4. Curious whether LinkedIn skews differently.
+No wrong answers here — but there's usually a pattern. My guess: most votes land on option 1 or 2, a braver few pick 3, and almost nobody honestly picks 4. Curious whether this crowd proves me wrong.
 
-FOLLOW-UP MECHANIC: Next Tuesday's M2 full post opens with YOUR poll numbers ("Last week I asked where your work starts. X% said the blank page…") — self-cited audience data, the single most credible stat a post can carry. Screenshot the poll results for the graphic.
+=== PL ===
+
+PYTANIE: Od czego TAK NAPRAWDĘ zaczęło się Twoje ostatnie ważne zadanie?
+
+OPCJE (max 30 znaków, LinkedIn pozwala na 4):
+1. Kartka papieru i kawa
+2. AI wygładziło to na końcu
+3. Szkic z AI, potem moje zmiany
+4. AI zrobiło, ja zweryfikowałem
+
+PODPIS:
+Cztery sposoby na start pracy. Liczy się tylko zachowanie — nie aspiracja.
+
+Odpowiedz za swoje OSTATNIE ważne zadanie, nie za to najlepsze. Wyniki w przyszły wtorek — razem z mapą tego, co każda odpowiedź oznacza.
+
+PIERWSZY KOMENTARZ:
+Nie ma tu złych odpowiedzi — ale zwykle widać wzorzec. Obstawiam, że większość głosów wyląduje na opcji 1 albo 2, odważniejsza mniejszość wybierze 3, a szczerej "4" prawie nikt. Ciekawy jestem, czy ta społeczność mnie zaskoczy.
+
+FOLLOW-UP MECHANIC: Next Tuesday's M2 full post opens with YOUR poll numbers ("Last week I asked where your work starts. X% said the blank page…") — self-cited audience data, the single most credible stat a post can carry. Screenshot the poll results for the graphic. Note: the first-comment guess above is a prediction, not a claim of prior training-room data — after the poll closes, replace it with the real numbers.

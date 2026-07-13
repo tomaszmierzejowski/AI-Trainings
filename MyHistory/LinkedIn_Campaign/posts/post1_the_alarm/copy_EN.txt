@@ -22,8 +22,8 @@ These are not edge cases. They are typical.
 
 Your platform almost certainly contains findings like this. The question is not whether they are there.
 
-The question is who gets to read them first.
+Have you personally read the whole of the platform you're responsible for — or a sample of it?
 
 [Swipe for the methodology — and the verified results.]
 
-#LegacyModernization #AppModernization #EnterpriseArchitecture #SopraSteria #TechDebt
+#LegacyModernization #EnterpriseArchitecture #SopraSteria

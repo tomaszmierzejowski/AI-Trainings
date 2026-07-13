@@ -1,30 +1,29 @@
-Istnieją cztery poziomy pracy z AI. Większość profesjonalistów jest na poziomie 2 i wierzy, że jest na 3.
+Tydzień temu zapytałem Was w ankiecie, od czego naprawdę zaczęło się Wasze ostatnie ważne zadanie. Obiecałem mapę wyników. Oto ona.
 
-Spektrum, którego używam na każdym szkoleniu:
+[WPISZ REALNE WYNIKI PRZED PUBLIKACJĄ, np.:]
+[XX% — całkowicie od zera]
+[XX% — AI zrobiło szlif na końcu]
+[XX% — od roboczego szkicu z AI]
+[XX% — AI wykonało, ja oceniłem]
 
-POZIOM 1 — AI-Curious.
-"Raz spróbowałem ChatGPT". Może dwa razy. Było ciekawie. Nic się nie zmieniło.
+Te cztery odpowiedzi to cztery poziomy pracy z AI. Każdy z nich ma swoją nazwę i swoją ekonomię:
 
-POZIOM 2 — AI-Assisted.
-"Używam AI, kiedy sobie przypomnę". Szlifuje skończoną pracę. Odpowiada na okazjonalne pytania. Mądrzejsza wyszukiwarka.
+POZIOM 1 — Ciekawość. "Raz spróbowałem ChatGPT". Może dwa razy. Było ciekawie. Nic się nie zmieniło.
 
-POZIOM 3 — AI-Augmented.
-"AI to mój pierwszy krok do wszystkiego". Każdy szkic, każda analiza, każdy plan zaczyna się tam — a każdy wynik przechodzi przez Wasz osąd, zanim się liczy. Nie jedyny krok. Pierwszy.
+POZIOM 2 — Szlif. AI dostaje gotową pracę do poprawienia, o ile sobie o nim przypomnę. Trochę mądrzejsza wyszukiwarka, trochę korektor.
 
-POZIOM 4 — AI-Native.
-"Projektuję pracę, którą AI wykonuje od początku do końca. Ja weryfikuję wyniki". Już nie robicie zadania; projektujecie sposób, w jaki ono się robi.
+POZIOM 3 — Szkic najpierw. Każdy raport, analiza i plan zaczynają się od szkicu AI, a kończą na moim osądzie. AI to pierwszy krok. Nie jedyny. Pierwszy.
 
-Dwie rzeczy widzę w każdej grupie bez wyjątku:
+POZIOM 4 — Projektowanie. Nie wykonuję już zadania. Projektuję proces, który AI prowadzi od początku do końca, a ja weryfikuję wyniki.
 
-1. Ludzie umieszczają się o jeden poziom wyżej niż ich faktyczne poniedziałkowe zachowanie.
-2. Skok, który zmienia kariery, to 2 → 3. Nie wymaga nowych narzędzi, budżetu ani niczyjej zgody. Tylko zmiany domyślnego odruchu.
+Dwa wzorce, które widzę za każdym razem, gdy o tym rozmawiam:
 
-Poziom 4 nie jest celem dla większości. Poziom 3 — tak. I jest w zasięgu miesiąca dla każdego, kto to czyta — badania nad nawykami mówią o ~66 dniach do pełnego automatyzmu (Lally i in., 2010), ale ekonomia widać już w pierwszym tygodniu.
+1. Prawie każdy umieszcza się o poziom wyżej, niż wskazuje jego zachowanie z ostatniego poniedziałku.
 
-Diagnozujcie się po zachowaniu, nie po aspiracji:
+2. Skok, który realnie zmienia ekonomię pracy, to przejście z 2 na 3. Nie wymaga nowych narzędzi, budżetu ani niczyjej zgody. Wymaga zmiany jednego odruchu.
 
-Od czego ZACZĘŁA SIĘ Wasza ostatnia ważna praca?
+Poziom 4 nie jest celem dla większości z nas. Poziom 3 — jak najbardziej. Badania nad nawykami mówią, że nowy odruch automatyzuje się średnio po ok. 66 dniach (Lally i in., 2010), ale różnicę w tempie pracy widać już w pierwszym tygodniu.
 
-Poziom w komentarzu — podpowiem najszybszy skok z tego miejsca. 👇
+Napiszcie w komentarzu, gdzie wylądowaliście — dla każdego poziomu podpowiem najszybszy pierwszy ruch w górę. 👇
 
-#AIMindset #AdopcjaAI #SopraSteria
+#AIMindset #AdopcjaAI #SopraSteriaPolska

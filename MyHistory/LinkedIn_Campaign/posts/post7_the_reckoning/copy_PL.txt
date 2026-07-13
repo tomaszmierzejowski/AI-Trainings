@@ -6,14 +6,14 @@ Każda liczba poniżej pochodzi z realnego projektu dla realnego klienta. Każde
 
 Track record z dwóch lat AI discovery i modernizacji (2024→2026):
 
-→ Ponad 6 projektów enterprise
-→ Ponad 30 przeanalizowanych repozytoriów
+→ 6+ projektów enterprise
+→ 30+ przeanalizowanych repozytoriów
 → Zero regresji we wszystkich transformacjach
 → 100% dostaw w terminie
 → 100% akceptacji Google Play za pierwszym podejściem (migracja tylko na Androida)
-→ 500 tys. NOK vs 2,3 mln NOK — zweryfikowany koszt jednego discovery (87% poniżej tradycyjnej wyceny, wyłącznie faza discovery i analizy)
+→ 500 tys. NOK vs 2,3 mln NOK z tradycyjnej wyceny — zweryfikowany koszt jednego discovery (wyłącznie faza discovery i analizy)
 → 4 dni na migrację platformy, którą standard branżowy wycenia na 4–6 tygodni
-→ 3 tygodnie na inwentaryzację platformy morskiej, której nie można było aktualizować, gdy statki były na morzu
+→ 3 tygodnie na inwentaryzację platformy, której nie można było aktualizować, gdy jej stacje terenowe były wdrożone
 → Discovery 20x szybsze niż tradycyjne oceny oparte na próbkowaniu
 → Szacunkowo 8–10x średniego ROI — "szacunkowo", bo oddzielamy to, co zmierzone, od tego, co prognozowane
 

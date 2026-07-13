@@ -6,4 +6,4 @@ The fastest jump from each level — since I promised:
 
 3 → 4: Stop improving single tasks and write down the whole process — inputs, steps, checks, outputs. What you can specify, AI can increasingly run. What you can't specify, you've just discovered you don't fully understand yet. Valuable either way.
 
-And yes — this spectrum is the opening module of a training program I run. The self-diagnosis is free; it's above. The behavior change is the program.
+And yes — this spectrum is the opening module of a training program I'm building. The self-diagnosis is free; it's above. The behavior change is the program.

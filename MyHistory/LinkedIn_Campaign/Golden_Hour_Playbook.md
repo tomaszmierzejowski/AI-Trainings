@@ -47,6 +47,15 @@
 
 ---
 
+### Reply Like a Human — rules that override every script below
+
+Learned the hard way (July 2026, Mindset campaign): an Engineering Manager publicly reverse-engineered the reply pattern "validation → metaphor → follow-up question" after two consecutive replies followed it. Readers in IT detect LLM-shaped replies fast, and the reputational cost is real.
+
+1. The scripts below are STARTING ANGLES, not templates. Never paste; retype in your own words.
+2. Do NOT end every reply with a question. Vary: sometimes agree and stop, sometimes add one detail, sometimes just thank. A reply chain dies more gracefully than a bot gets exposed.
+3. Vary structure between consecutive replies in the same thread — if the last reply opened with validation, open the next one differently.
+4. If someone calls out the pattern anyway: hands up, honest self-deprecating reply, tie it back to the campaign thesis (human judgment on top of AI output). It worked once; it only works if it's true.
+
 ### Response Scripts by Comment Type
 
 **THE COMPLIMENT ("Great post!" / "Really valuable!")**

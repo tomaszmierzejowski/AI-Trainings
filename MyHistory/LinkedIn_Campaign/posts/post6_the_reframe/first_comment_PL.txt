@@ -1,6 +1,6 @@
 Linki do badań dla każdego, kto chce sprawdzić liczby (proszę, sprawdzajcie — o to chodzi w tej serii):
 
-— Cui, Demirer, Jaffe, Musolff, Peng, Salz. "Generative AI and the Automation of Knowledge Work." Management Science. Recenzowane badanie RCT, 4867 deweloperów: https://pubsonline.informs.org/doi/10.1287/mnsc.2025.00535
+— Cui, Demirer, Jaffe, Musolff, Peng, Salz (2024/2026). "The Effects of Generative AI on High-Skilled Work: Evidence from Three Field Experiments with Software Developers." Management Science. Recenzowane badanie RCT, 4867 deweloperów: https://pubsonline.informs.org/doi/10.1287/mnsc.2025.00535
 — National Australia Bank + Cursor, 6000 deweloperów, modernizacja legacy 3x szybciej: https://cursor.com/blog/nab
 
 Ciekawostka z badania Cui: wzrost produktywności ogromnie różnił się między deweloperami. Korzyści nie przewidywał staż — przewidywało je zachowanie adopcyjne. To nie narzędzie czyniło ludzi lepszymi. Czynił to sposób pracy.

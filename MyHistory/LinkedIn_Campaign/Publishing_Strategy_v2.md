@@ -63,17 +63,19 @@ What was NOT the problem: the strategy, the story arc, the evidence discipline, 
 
 ### Tuesdays — AI Mindset (new campaign)
 
+> **REALITY CHECK (updated Jul 12, 2026):** the campaign ran ahead of this calendar — M1 is PUBLISHED (weak reach; see Mindset README → Lessons Learned) and the M2-POLL is PUBLISHED and closing. Dates below are shifted accordingly; verify against the actual publish dates before each week.
+
 | Date | Post | Note |
 |------|------|------|
-| Jul 14 | **M1 — THE ORDER** | Campaign opener. Week of Jul 7 is prep: generate all graphics, brief colleagues, line up first commenters |
-| Jul 21 | **M2-POLL — Where does your work start?** | Poll = highest organic reach format; collects audience data for M2 |
-| Jul 28 | **M2 — THE SPECTRUM** | Opens with YOUR poll numbers — self-cited data |
-| Aug 4 | **M3 — THE DOMEK** | Use a real photo if at all possible |
-| Aug 11 | **M4 — THE CONFIDENT LIE** | Ends on a cliffhanger for M6 |
-| Aug 18 | **M5 — THE FRICTION MAP** | Leader-targeted; expect reshares |
-| Aug 25 | **M6 — THE SIGNATURE** | Pays off M4's cliffhanger |
-| Sep 1 | **M7 — THE HERO** | Most provocative; watch comments closely, first comment defuses |
-| Sep 8 | **M8 — THE ROD** | Conversion. "DM me ROD" mechanic; every ROD DM = qualified training lead |
+| ~~Jul 14~~ | **M1 — THE ORDER** | ✅ PUBLISHED (early July). Weak reach — diagnosis and remedies logged in Mindset README |
+| ~~Jul 21~~ | **M2-POLL — Where does your work start?** | ✅ PUBLISHED. Screenshot final results before they expire from the UI |
+| Jul 14 | **M2 — THE SPECTRUM** | Opens with YOUR poll numbers — fill the placeholder in copy_PL.txt with real results before publishing |
+| Jul 21 | **M3 — THE DOMEK** | Use a real photo if at all possible |
+| Jul 28 | **M4 — THE CONFIDENT LIE** | Ends on a cliffhanger for M6. PUBLISH GATE: run the exercise with ≥1 real group first |
+| Aug 4 | **M5 — THE FRICTION MAP** | Leader-targeted; expect reshares |
+| Aug 11 | **M6 — THE SIGNATURE** | Pays off M4's cliffhanger |
+| Aug 18 | **M7 — THE HERO** | Most provocative; watch comments closely, first comment defuses |
+| Aug 25 | **M8 — THE ROD** | Conversion. "DM me ROD" mechanic; every ROD DM = qualified training lead |
 
 PL versions follow each EN post per the weekly rhythm above (Mindset: Wednesday; Modernization: Friday, optional).
 
@@ -82,7 +84,7 @@ PL versions follow each EN post per the weekly rhythm above (Mindset: Wednesday;
 1. **Warm-up (day before, 10 min):** 5–8 DMs to people for whom tomorrow's post is personally relevant. Script: "[Name] — tomorrow 08:30 I'm posting about [specific pain]. Thought of you because [specific reason]. Would genuinely value your take in the comments." Personal relevance, never "please support."
 2. **Runway (15 min before posting):** comment substantively on 5 posts by people in the target audience. LinkedIn boosts posts from accounts that were just active in others' threads.
 3. **First comment:** paste within 60 seconds of publishing (it's pre-written in every post folder).
-4. **Golden hour (90 min):** reply to every comment within minutes, and END EVERY REPLY WITH A QUESTION to the commenter. A 2-comment thread counts double; a 10-comment thread changes the post's reach class. Full protocol: `Golden_Hour_Playbook.md`.
+4. **Golden hour (90 min):** reply to every comment within minutes. Reply chains are the strongest ranking signal — but AFTER the July 2026 incident (a reader publicly identified the "validation → metaphor → question" reply pattern), questions are a tool, not a law: use one when it's genuinely interesting, vary reply structure, and never send two same-shaped replies in a row. Full protocol + "Reply Like a Human" rules: `Golden_Hour_Playbook.md`.
 5. **Day after (15 min):** DM engagers matching the target persona (templates: `DM_Templates.md`). This is where posts become pipeline — reach is vanity, DMs are revenue.
 6. **Colleague amplification:** 3–5 colleagues briefed to comment (not just react) within the first hour. Comments from outside your first-degree network are worth the most — prioritize briefing colleagues in other countries' Sopra entities.
 7. **Personal profile always.** Company pages get throttled; people follow people. Ask the Sopra Steria Poland page to reshare ~2 hours after publish, never simultaneously.

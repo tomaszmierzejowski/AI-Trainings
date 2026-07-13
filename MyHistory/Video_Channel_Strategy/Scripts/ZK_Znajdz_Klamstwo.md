@@ -1,5 +1,5 @@
 # ZNAJDŹ KŁAMSTWO (ZK) — format flagowy kanału
-## Cotygodniowa gra, piątek | źródło: ćwiczenie Confident-Lie z moich szkoleń (M4)
+## Cotygodniowa gra, piątek | źródło: ćwiczenie Confident-Lie zaprojektowane dla mojego programu szkoleniowego (M4)
 
 ---
 
@@ -34,7 +34,7 @@ zawsze jawne "podłożyłem"; treść fikcyjna, ale realistyczna — bez prawdzi
 **Overlay:** "nowa gra — co piątek"
 
 **WPROWADZENIE (3–15 s):**
-> Na moich szkoleniach podkładam błędy w tekstach od AI i mądrzy ludzie ich nie łapią.
+> Zaprojektowałem ćwiczenie, w którym podkładam błędy w tekstach od AI — bo nasz mózg sprawdza fakty, nie ramy, i nawet mądrzy ludzie łapią nie wszystko.
 > Od dziś gramy w to co piątek. Zasady: jeden tekst, jedno podłożone kłamstwo, Ty polujesz.
 
 **MATERIAŁ (plansza na ekranie, czytasz na głos):**
@@ -56,7 +56,7 @@ zawsze jawne "podłożyłem"; treść fikcyjna, ale realistyczna — bez prawdzi
 **HOOK:** "Wygraliście? Sprawdzamy. I nowe kłamstwo."
 
 **ROZWIĄZANIE ZK#1 (3–15 s):**
-> 120 maili na 10 osób to 12, nie 15. AI podało złą arytmetykę pewnym tonem — i o to chodziło.
+> 120 maili na 10 osób to 12, nie 15. AI podało złą arytmetykę pewnym tonem — i o to właśnie chodziło.
 > Najszybciej złapali: [nicki na ekranie]. Brawo, łowcy.
 
 **MATERIAŁ:**
@@ -74,13 +74,13 @@ zawsze jawne "podłożyłem"; treść fikcyjna, ale realistyczna — bez prawdzi
 
 ---
 
-## ZK#3 (V3, pt 31 lip) — typ: ODWRÓCONY WNIOSEK (błąd, który "przeżywa każdą salę")
+## ZK#3 (V3, pt 31 lip) — typ: ODWRÓCONY WNIOSEK (błąd zaprojektowany, by "przeżyć każdą salę")
 
-**HOOK:** "To kłamstwo przeżywa każdą salę szkoleniową."
+**HOOK:** "To kłamstwo jest zaprojektowane tak, żeby przetrwać każdą salę szkoleniową."
 
 **ROZWIĄZANIE ZK#2:**
 > Instytut Produktywności Cyfrowej nie istnieje. Wygooglaliście — i słusznie. To jest błąd nr 2
-> z moich szkoleń: zmyślone źródło. Łowcy tygodnia: [nicki].
+> z mojego programu szkoleniowego: zmyślone źródło. Łowcy tygodnia: [nicki].
 
 **MATERIAŁ (plansza z mini-tabelą + wniosek):**
 > *Dane kwartalne zapytań od klientów: I kw. 340 · II kw. 310 · III kw. 285 · IV kw. 262.*
@@ -119,9 +119,9 @@ Liczby były prawdziwe, rama kłamała. To był błąd nr 3 — najgroźniejszy.
 Kontekst tygodnia: LinkedIn M4 (11 sie) opowiedział ćwiczenie ze szkoleń; pierwszy komentarz M4
 może linkować tę grę. Odcinek dłuższy (75–90 s): 15 s historii przed materiałem.
 
-**HOOK:** "Ta gra pochodzi z moich szkoleń. Naprawdę."
-**HISTORIA (3–20 s):** Na salach podkładam trzy błędy w raporcie od AI. Mądrzy, doświadczeni ludzie
-łapią złą liczbę i zmyślone źródło. A najgroźniejszy błąd przeżywa — sala za salą. Wy trenujecie go od miesiąca.
+**HOOK:** "Ta gra pochodzi z mojego programu szkoleniowego."
+**HISTORIA (3–20 s):** W tym ćwiczeniu podkładam trzy błędy w raporcie od AI. Mądrzy, doświadczeni ludzie
+zwykle łapią złą liczbę i zmyślone źródło. Ale najgroźniejszy błąd jest zaprojektowany tak, żeby przetrwać. Wy trenujecie go od miesiąca.
 **ROZWIĄZANIE ZK#4:** wzrost z 40 do 46 tysięcy to 15%, nie 20%. Procenty kłamią częściej niż kwoty. Łowcy: [nicki].
 **MATERIAŁ (trudność: pełny kamuflaż wzorca z sal):**
 > *"Raport kwartalny AI: Czas odpowiedzi na zgłoszenia klientów spadł z 8 godzin do 5,6 godziny —
@@ -191,7 +191,7 @@ sukcesu. Łowcy: [nicki].
 1. **Rozwiązanie ZK#8** — dwa błędy: wzrost był o ~10,6% (nie 15%) i Corventis nie istnieje.
 2. **Podium ligi łowców** — 3 nicki na ekranie z liczbą trafień (prowadzone od ZK#1); podziękowanie wszystkim grającym.
 3. **Best-of w 20 s:** trzy typy kłamstw sezonu na jednej planszy — zła liczba / zmyślone źródło / odwrócony wniosek — "i już wiecie, że najgroźniejszy jest trzeci".
-4. **Lekcja sezonu, wprost:** ta gra nigdy nie była o łapaniu AI. Była o odruchu — czytać jak audytor wszystko, pod czym się podpisujesz. [MOJA PRAKTYKA: dokładnie tego uczę na salach]
+4. **Lekcja sezonu, wprost:** ta gra nigdy nie była o łapaniu AI. Była o odruchu — czytać jak audytor wszystko, pod czym się podpisujesz. [ZAŁOŻENIE PROGRAMU: dokładnie tego chcę uczyć na salach]
 5. **Zapowiedź:** gra wraca w sezonie 2 — trudniejsza. A od środy: 66 dni, które zmieniają odruch.
 **CTA:** Checklista 60 sekund — link w bio, żeby odruch przetrwał między odcinkami.
 **SYGNATURA:** jak zawsze.

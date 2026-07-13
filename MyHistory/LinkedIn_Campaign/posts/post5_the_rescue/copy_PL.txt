@@ -1,10 +1,10 @@
-Instytut badań oceanicznych prowadził oprogramowanie pomiarowe na ponad 20 statkach.
+Państwowa organizacja badawcza prowadziła oprogramowanie pomiarowe na ponad 20 zdalnych stacjach terenowych.
 
-Nie mógł go aktualizować, gdy statki były na morzu.
+Nie mogła go aktualizować, gdy stacje były wdrożone w terenie.
 
-Nie "aktualizował między sezonami". Nie "łatał po powrocie do portu".
+Nie "aktualizowała między sezonami". Nie "łatała po powrocie do sieci".
 
-Nie mógł aktualizować. Gdy flota była w morzu.
+Nie mogła aktualizować. Gdy sprzęt pracował w terenie.
 
 Każde odroczenie utrudniało następne. Nieudokumentowane zależności. Brakujące konfiguracje. Przestarzały stos gromadzący krytyczne CVE. Ekspozycja nie była spójna — więc prawie niemożliwa do wyceny.
 
@@ -23,7 +23,7 @@ Trzy tygodnie później: pełny obraz ekspozycji bezpieczeństwa — po raz pier
 
 Lata odroczonych aktualizacji. Trzy tygodnie systematycznej analizy. Ta proporcja to nie kwestia talentu. To kwestia metody.
 
-Platforma jest krytyczna w dosłownym sensie — gdy nie widać, co działa na statkach badawczych na morzu, zatrzymuje się nauka o zasięgu krajowym. Szacowany zwrot: 16x dzięki zapobiegnięciu awarii. "Szacowany", bo unikniętych strat się nie mierzy, tylko prognozuje. Każda inna liczba w tym poście jest zweryfikowana.
+Platforma jest krytyczna w dosłownym sensie — gdy nie widać, co działa na bezobsługowych stacjach terenowych, zatrzymuje się nauka o zasięgu krajowym. Szacowany zwrot: 16x dzięki zapobiegnięciu awarii. "Szacowany", bo unikniętych strat się nie mierzy, tylko prognozuje. Każda inna liczba w tym poście jest zweryfikowana.
 
 A teraz pytanie do Was:
 

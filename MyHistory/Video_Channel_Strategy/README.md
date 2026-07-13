@@ -40,7 +40,7 @@ Odcinki nadmiarowe → REZERWA w kalendarzu.
 - **Poniedziałek: najlepsze wideo tygodnia → LinkedIn jako natywne wideo** (luka formatu — żaden post kampanii dotąd nie używał wideo).
 - **Niedziela: karuzela IG** (bliźniak odcinka MIND; pełnoprawny post, nie dodatek).
 - YouTube long-form: nie wcześniej niż miesiąc 3; wygrane tematy Shorts dostają wersję 8–12 min.
-- Start: **tydzień 13 lipca 2026** — zsynchronizowany z LinkedIn M1 (14 lip). Mapa dat: Content_Calendar.md.
+- Start: **tydzień 13 lipca 2026**. UWAGA: LinkedIn pojechał ~tydzień przed planem (M1 opublikowany na początku lipca, ankieta M2 zamknięta) — wideo tygodnia 1 (KOLEJNOŚĆ) wchodzi więc TUŻ PO postach M1/M2, co działa na korzyść: wzmacnia temat zamiast go wyprzedzać. Mapa dat: Content_Calendar.md (zweryfikuj daty względem realnych publikacji LinkedIn).
 
 ## 5. Toolstack — minimalna praca manualna
 
@@ -78,6 +78,10 @@ AI-b-roll/grafiki/voiceover w DEMO: tak, zawsze z jawnością.
 5. ZK: błąd jest podłożony JAWNIE ("podłożyłem tu jedno kłamstwo") — to gra, nie manipulacja.
    Nigdy nie publikujemy prawdziwego dokumentu ćwiczenia Confident-Lie — materiał generowany świeżo per odcinek.
 6. Cudzych wyników nie pokazuję jako swoich.
+7. **Odpowiedzi w komentarzach piszę ręcznie i różnicuję strukturę** (lekcja z LinkedIn, lipiec 2026:
+   czytelnik publicznie rozpoznał schemat "walidacja → metafora → pytanie zwrotne" w odpowiedziach
+   generowanych z playbooka). Nie każda odpowiedź kończy się pytaniem. Dwie odpowiedzi pod rząd
+   nie mogą mieć tej samej budowy. Na TikToku wykrycie "bota" jest jeszcze szybsze niż na LinkedIn.
 
 ## 8. Mierniki — patrz zunifikowana tabela w `../Theme_Week_Operating_System.md` §5.
 Warstwa wideo raportuje: retencję 3 s (laboratorium hooków), saves+shares, komentarze pod ZK,

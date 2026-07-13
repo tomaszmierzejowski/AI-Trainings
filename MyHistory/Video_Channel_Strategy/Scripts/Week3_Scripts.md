@@ -9,21 +9,21 @@
 ## 3.1 MIND — "AI kłamie Ci prosto w oczy" (V5, śr 12 sie — dzień po M4 na LinkedIn)
 
 **Format:** talking head + 3 plansze błędów; napięcie rośnie do błędu nr 3.
-**Sync:** LinkedIn M4 (11 sie) może linkować w pierwszym komentarzu trwającą grę ZK — a ten odcinek mówi widzom TT, że gra pochodzi z prawdziwych szkoleń.
+**Sync:** LinkedIn M4 (11 sie) może linkować w pierwszym komentarzu trwającą grę ZK — a ten odcinek mówi widzom TT, skąd pochodzi ta gra.
 
 **HOOK (0–3 s, mówiony):**
 > Podkładam trzy kłamstwa. Mądrzy łapią dwa.
-**Overlay:** "najgroźniejsze przeżywa — sala za salą"
+**Overlay:** "najgroźniejsze jest zaprojektowane, by przetrwać"
 
 **STAKE (3–10 s):**
-> To ćwiczenie z moich szkoleń: raport od AI — płynny, pewny siebie. W środku trzy podłożone błędy. Dziesięć minut na znalezienie.
+> To ćwiczenie, które zaprojektowałem: raport od AI — płynny, pewny siebie. W środku trzy podłożone błędy. Dziesięć minut na znalezienie.
 
 **MEAT (10–48 s):** *(plansza przy każdym błędzie)*
 > Błąd 1 — zła liczba. Tekst mówi 15%, dane mówią 12%. Znajdowany pierwszy, prawie zawsze.
 > Błąd 2 — zmyślone źródło. Przekonujący benchmark, który nie istnieje. Znajduje ten, kto próbuje wygooglać.
 > Błąd 3 — odwrócony wniosek. Raport ogłasza "jest coraz lepiej", a liczby pod spodem pogarszają się co miesiąc. Udekorowany PRAWDZIWĄ statystyką jako kamuflażem.
-> Ten przeżywa. Sala za salą.
-> *(plansza: [MOJA PRAKTYKA] — wynik powtarzalny na moich szkoleniach)*
+> Ten jest najtrudniejszy do złapania — z założenia.
+> *(plansza: [ZAŁOŻENIE PROGRAMU] — błąd zaprojektowany tak, by być najtrudniejszym do złapania)*
 > Dlaczego? Jesteśmy wytrenowani do sprawdzania faktów, nie ram. Zła liczba wygląda na złą. Zły wniosek owinięty w dobre liczby wygląda jak insight.
 > Płynność maskuje fałsz. Najlepiej napisany akapit niesie najgorszy błąd.
 > Jeśli grasz w piątkowe ZNAJDŹ KŁAMSTWO — właśnie poznałeś pełną mapę przeciwnika.
@@ -35,7 +35,7 @@
 **SYGNATURA:** jak zawsze.
 
 **Warianty hooka:** 1. "Podkładam trzy kłamstwa. Mądrzy łapią dwa." 2. "Najładniejszy akapit niesie najgorszy błąd." 3. "To kłamstwo przeżywa każdy audyt."
-**Opisy:** TT/IG: "3 podłożone kłamstwa. Jedno przeżywa każdą salę. Które? 👇" · YT: "Dlaczego nie łapiemy kłamstw AI — eksperyment ze szkoleń".
+**Opisy:** TT/IG: "3 podłożone kłamstwa. Jedno jest zaprojektowane, by przetrwać. Które? 👇" · YT: "Dlaczego nie łapiemy kłamstw AI — eksperyment z podłożonymi błędami".
 **Hashtagi:** #AIMindset #krytycznemyslenie #AIpoPolsku #sztucznainteligencja
 
 ---

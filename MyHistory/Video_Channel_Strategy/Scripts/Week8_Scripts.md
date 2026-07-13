@@ -55,7 +55,7 @@
 > Przeczytaj drugą część jeszcze raz. Poprawka jest sednem.
 > Bo ten wpis mówi każdemu cichemu sceptykowi: szkice AI nawet u doświadczonych nie są idealne — i mówimy to na głos.
 > Strach przed wyjściem na niekompetentnego umiera w świetle kogoś, kto pokazuje własne poprawki.
-> *(plansza: [MOJA PRAKTYKA] — widziałem, jak ten rytuał wygrywa z dużymi budżetami szkoleniowymi)*
+> *(plansza: [OPINIA] — powinno wygrywać z dużymi budżetami szkoleniowymi: tańsze, szybsze, i bardziej wiarygodne dla zespołu)*
 > Nie musisz być szefem. Pierwszy wpis może napisać każdy. Ktoś musi zacząć.
 
 **CTA (48–58 s):**

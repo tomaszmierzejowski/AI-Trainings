@@ -24,6 +24,8 @@ Uniknięty koszt: ponad 80 000 EUR na przepisanie kodu od zera. Termin platformy
 
 Cztery dni.
 
+Czy Wasz zespół miał kiedyś cztery dni, żeby uratować coś, co znaczyło więcej niż kod?
+
 Każda liczba zweryfikowana. Każde odkrycie powiązane z kodem źródłowym.
 
-#MigracjaAplikacji #Xamarin #ModernizacjaMobilna #SopraSteria #TechnologiaDlaLudzi
+#MigracjaAplikacji #Xamarin #SopraSteria

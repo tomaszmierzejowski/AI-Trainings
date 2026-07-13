@@ -1,23 +1,23 @@
-Dwie osoby. Ta sama praca. Te same narzędzia AI. Jedna wyciąga z nich 10x więcej.
+Dwie osoby. Ta sama praca. Te same narzędzia AI. Ale jedna z nich osiąga 10x więcej.
 
-Obserwuję to od dwóch lat na salach szkoleniowych i różnica nigdy nie leży tam, gdzie ludzie się jej spodziewają.
+Obserwuję to od dłuższego czasu w codziennej pracy z zespołami nad modernizacją i wdrażaniem AI — i ta różnica nigdy nie tkwi tam, gdzie wszyscy jej szukają.
 
-To nie umiejętność promptowania. Nie techniczne wykształcenie. Nie wiek.
+To nie jest kwestia magicznych promptów. Ani technicznego wykształcenia. Ani tym bardziej wieku.
 
-To kolejność.
+To kwestia kolejności.
 
-Osoba A kończy szkic, a potem prosi AI o szlif. Raport, oferta, plan — najpierw zbudowane po staremu, AI zaproszone na końcu, jako dekoracja.
+Osoba A samodzielnie tworzy cały materiał, a dopiero na koniec prosi AI o jego poprawienie. Pisze raport, ofertę czy plan „po staremu", a sztuczną inteligencję zaprasza na gotowe – w roli dekoracji.
 
-Osoba B prosi AI o szkic najpierw — a potem przykłada do niego swój osąd, wiedzę i smak.
+Osoba B zaczyna inaczej. Najpierw prosi AI o stworzenie brudnopisu – a dopiero potem przykłada do niego swoją wiedzę, krytyczny osąd i branżowe wyczucie.
 
-Te same narzędzia. Odwrotna sekwencja. Radykalnie inna ekonomia: osoba A oszczędza minuty. Osoba B oszczędza tę część pracy, która nigdy nie była tą wartościową — pustą kartkę.
+Narzędzia są te same. Kolejność działań – odwrotna. Efekt? Zupełnie inna ekonomia pracy. Osoba A oszczędza na końcu zaledwie kilka minut. Osoba B oszczędza to, co od zawsze kosztuje najwięcej czasu i frustracji – wymyślanie od zera i gapienie się w pustą kartkę.
 
-Oto zdanie, którego uczę: AI to Twój pierwszy krok do wszystkiego. Nie jedyny. Pierwszy.
+Zawsze powtarzam jedną zasadę: AI to Twój pierwszy krok do wszystkiego. Nie jedyny. Ale pierwszy.
 
-Badania potwierdzają ten wzorzec. Badanie terenowe na 4867 deweloperach wykazało ~26% więcej ukończonych zadań z AI — ale zyski ogromnie się różniły, a przewidywał je nie staż, tylko zachowanie adopcyjne (Cui i in., Management Science).
+Potwierdzają to twarde dane. Wśród niemal 5 tysięcy deweloperów (Cui i in., Management Science, 2024) o skoku produktywności z AI nie decydował staż pracy, tylko sposób, w jaki ludzie dopasowali narzędzie do swoich nawyków. Podobnie u 758 konsultantów BCG (Dell'Acqua i in., 2023): ci, którzy zachowywali własny osąd nad wynikiem AI, kończyli o 12% więcej zadań, o 25% szybciej i z wyżej ocenianą jakością — ale poza tzw. „poszarpaną granicą" tego, co AI robi dobrze, ich trafność spadała.
 
-Narzędzia znów się zmienią w przyszłym kwartale. Kolejność zostaje Wasza.
+Narzędzia zmienią się znów za kwartał. Ale właściwa kolejność zostanie z Tobą na zawsze.
 
-Więc szczerze: którą osobą jesteście — szkic najpierw czy szlif na końcu?
+Więc bądźmy szczerzy: którym typem wolisz być – tym, który zaczyna od brudnopisu AI, czy tym, który prosi tylko o szlif na końcu?
 
-#AIMindset #PrzyszloscPracy #SopraSteria
+#AIMindset #PrzyszloscPracy #SopraSteriaPolska

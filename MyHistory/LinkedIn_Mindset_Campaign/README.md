@@ -45,16 +45,27 @@ Season 2 candidates (hold for continuation): THE RECOMPILED ROLE (career reframe
 3. Stories start with people, never with technology. The Domek story starts with the kids, not the prompt.
 4. Every post ends with a question answerable in one honest sentence.
 5. Self-deprecating beats self-congratulating. The trainer who shows his own AI corrections outranks the guru who doesn't.
+6. **Authenticity of authority.** Tomasz is an architect and practitioner who is BUILDING a training practice — not a training-room veteran. Never write "na moich szkoleniach", "każda grupa szkoleniowa". Authority comes from daily work with teams (modernization, AI adoption) and from exercises he designed and tests on colleagues. "Program, który buduję" — not "program, który prowadzę" (until it has run at least once).
+7. **Anti-LLM style rules** (a reader publicly reverse-engineered the "validation → metaphor → closing question" reply pattern in week 2 — see Lessons Learned). Before publishing anything, strip: triple-negation runs ("To nie X. Nie Y. Nie Z."), em-dash overload, one-line dramatic paragraphs stacked back-to-back, English calques ("insight", "deliverable", "AI-forward", "chcę być precyzyjny co do"), and any reply that ends with a formulaic engagement question. Read the text aloud; if it sounds like a translation, rewrite it.
+
+### Lessons Learned (live campaign log — update weekly)
+
+- **M1 (published July 2026): weak reach.** Diagnosis: cold audience + abstract hook. Remedies applied: M2 ran as a POLL first (highest-distribution format), full M2 post now opens with the audience's own poll numbers.
+- **The Robert incident (M2 poll week).** An Engineering Manager publicly identified the LLM pattern in comment replies ("walidacja → rozwinięcie z metaforą → pytanie zwrotne"). Saved by an honest, self-deprecating reply that turned it into a live case study of the campaign's own thesis. Standing rule: comment replies are written BY HAND, varied in structure, and do NOT have to end with a question. The Golden Hour playbook's "always end with a question" is now a suggestion, not a law — breaking the pattern is what reads as human.
+- **Polls: self-vote immediately after publishing** (option 3) — breaks the ice and matches the brand.
+- **PL is the primary language** — graphics and copy PL-first; EN versions are secondary assets.
 
 ### Numbers cleared for public use (with badges)
 
 - STUDY: Peng et al. 2023 (GitHub/MIT RCT) — task completed 55.8% faster with AI assistance
-- STUDY: Cui et al. (Management Science, 4,867 developers) — 26% more completed tasks; adoption behavior, not seniority, predicted the benefit
+- STUDY: Cui et al. (Management Science, 2024/2026, 4,867 developers) — 26% more completed tasks; adoption behavior, not seniority, predicted the benefit
+- STUDY: Dell'Acqua et al. (2023, HBS/BCG, 758 consultants) — "jagged technological frontier": +12.2% tasks, +25.1% faster, +40% quality inside the frontier; -19pp accuracy outside it
 - STUDY: McKinsey 2023 — gains materialize only with training and practice; minimal gain on highly complex tasks
 - STUDY: Lally et al. 2010 — new habits take ~66 days on average, not 21
 - STUDY: Gollwitzer & Sheeran 2006 — implementation intentions ("when X, I will Y"), effect size d=0.65
 - FRAMEWORK: Fogg Behavior Model (B=MAP); habit loop; status-quo bias (Kahneman & Tversky)
-- VERIFIED (own work): Domek story; Catch-the-Confident-Lie exercise results from sessions; 4-day migration story (shared asset with Thursday campaign — don't double-book the same week)
+- VERIFIED (own work): Domek story; 4-day migration story (shared asset with Thursday campaign — don't double-book the same week)
+- PUBLISH GATE for M4: the Catch-the-Confident-Lie exercise must have been run with at least one real group of colleagues before M4 goes live — the copy claims "prawie każda próba", which needs actual attempts behind it.
 
 ### Banned / sensitive
 

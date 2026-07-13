@@ -89,12 +89,12 @@ Ostatnie dwa wiersze są jedynymi, które są celem. Reszta to oprzyrządowanie.
 | V10+ | od 14 wrz | sezon 2 wideo | (Mindset LI zakończony) | 66 dni / AI w domu / rekompilacja / agenci |
 
 Cross-pollinacja celowa: post M4 (11 sie) może wskazać na trwającą już grę ZNAJDŹ KŁAMSTWO na TT —
-LinkedIn dostaje dowód, że ćwiczenie żyje publicznie; TT dostaje autorytet „to jest z prawdziwych szkoleń".
+LinkedIn dostaje dowód, że ćwiczenie żyje publicznie; TT dostaje potwierdzenie, że gra jest częścią realnego programu szkoleniowego, który budujesz (nie luźna ciekawostka).
 
 ## 7. Zasady niezmienne (dziedziczone z obu kampanii)
 
 1. Badge przy każdej liczbie, na każdej platformie: [BADANIE] / [MOJA PRAKTYKA] / [OPINIA].
-2. Lista zakazanych twierdzeń z README kampanii obowiązuje w całości (Standish ~31% sukcesu, 4× estymowane, 143@94%, generyczne nazwy klientów). Metryki kanoniczne modernizacji: **87% oszczędności kosztów discovery** *(tylko faza discovery i analizy codebase — nie pełna modernizacja)* · **20x faster & more reliable discovery** · **30+ repos (2024→2026)** · **Two years of AI Discoveries and AI Modernization (2024→2026)** *(nie „three years")* · **scanning 100% of files** *(nigdy „100% Code Coverage" / „100% Code Read")* · fazy discovery **15–30 dni** (skilled engineers with AI-mindset + native AI-augmented pipelines). Case studies: Global Automotive Importer = 20 repos, 460-page report, unified mockup *(bez €120k/WebLogic)* · Oceanic Research = *„Could not update measuring software while ships were out at sea"* · Pediatric Mobile = Android-only, Google Play deprecating Xamarin, .NET MAUI in 4 days.
+2. Lista zakazanych twierdzeń z README kampanii obowiązuje w całości (Standish ~31% sukcesu, 4× estymowane, 143@94%, generyczne nazwy klientów). Metryki kanoniczne modernizacji: **87% oszczędności kosztów discovery** *(tylko faza discovery i analizy codebase — nie pełna modernizacja)* · **20x faster & more reliable discovery** · **30+ repos (2024→2026)** · **Two years of AI Discoveries and AI Modernization (2024→2026)** *(nie „three years")* · **scanning 100% of files** *(nigdy „100% Code Coverage" / „100% Code Read")* · fazy discovery **15–30 dni** (skilled engineers with AI-mindset + native AI-augmented pipelines). Case studies: Global Automotive Importer = 20 repos, 460-page report, unified mockup *(bez €120k/WebLogic)* · Government Research Organization = *„Could not update measuring software while field installations were deployed"* · Pediatric Mobile = Android-only, Google Play deprecating Xamarin, .NET MAUI in 4 days.
 3. Błędów AI nie wolno inscenizować — reguła warunkowa (patrz Video_Script_Template.md §Uczciwość).
 4. Persona wideo = **Paweł (25–40)**. Renata przez LinkedIn, Stefan przez czwartki. Jedna persona na platformę.
 5. Żaden odcinek MIND nie wychodzi bez historii lub artefaktu (zdjęcie, prawdziwy ekran, prawdziwa poprawka).

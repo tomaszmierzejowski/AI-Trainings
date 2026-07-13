@@ -1,6 +1,6 @@
-I plant three lies in a report and hand it to smart people. The most dangerous lie survives almost every time.
+I hid three lies in an AI-generated report and asked smart people to find them. The most dangerous one survives almost every attempt.
 
-It's an exercise from my training sessions. An AI-generated executive summary — fluent, confident, well-structured. Hidden inside: three planted errors. Participants get ten minutes.
+It's an exercise I designed for exactly this purpose and keep testing on colleagues. An executive summary — fluent, confident, well-structured. Hidden inside: three planted errors. Ten minutes to find them.
 
 Error #1 — a wrong number. The text says a 15% decline; the data says 12%. Found first, almost always. People trust their arithmetic.
 
@@ -8,7 +8,7 @@ Error #2 — a fabricated source. A convincing industry benchmark that simply do
 
 Error #3 — an inverted conclusion. The summary declares the process "healthier than ever" while the underlying numbers got worse every single month. It's decorated with a TRUE statistic as camouflage.
 
-That one survives. Room after room.
+That one is the hardest to catch — by design.
 
 Here's why: we're trained to check facts, not framing. A wrong number looks wrong. A wrong conclusion, wrapped in right numbers and confident prose, looks like insight.
 

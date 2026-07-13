@@ -2,7 +2,7 @@ Najbardziej niewygodna część tej historii: zespół miał wszystko, czego pot
 
 Ten wzorzec powtarza się w każdym projekcie ratunkowym, jaki robiliśmy — odpowiedź nigdy nie zaginęła. Była po prostu nieprzeczytana.
 
-Jeśli macie system, którego nie możecie aktualizować, bo okno wdrożeniowe nigdy się nie otwiera — statki badawcze na morzu, sezonowe zamrożenia produkcji, cokolwiek w tym stylu — pierwsze pytanie nie brzmi "kto to naprawi?", tylko "kto naprawdę przeczytał, co tam jest?".
+Jeśli macie system, którego nie możecie aktualizować, bo okno wdrożeniowe nigdy się nie otwiera — zdalne stacje terenowe, sezonowe zamrożenia produkcji, cokolwiek w tym stylu — pierwsze pytanie nie brzmi "kto to naprawi?", tylko "kto naprawdę przeczytał, co tam jest?".
 
 (Dla osób od bezpieczeństwa: ponad 200 podatności to znane CVE w przestarzałych zależnościach — wykryte przy okazji pełnego mapowania zależności, nie w osobnym audycie. To dostajecie "gratis" przy analizie pełnego pokrycia.)
 

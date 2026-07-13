@@ -1,6 +1,6 @@
 Każda firma ma swojego bohatera AI. Bohater jest problemem.
 
-Znacie go. Ta jedna osoba, która "czai". Automatyzuje swoje raporty, szkicuje wszystko w minuty, koledzy przynoszą jej zadania jak ofiary. Zarząd pokazuje ją na spotkaniach firmowych: dowód, że jesteśmy firmą AI-forward.
+Znacie go. Ta jedna osoba, która "czai". Automatyzuje swoje raporty, szkicuje wszystko w minuty, koledzy przynoszą jej zadania jak ofiary. Zarząd pokazuje ją na spotkaniach firmowych: dowód, że u nas AI naprawdę działa.
 
 Oto czym bohater jest naprawdę: pojedynczym punktem awarii w pelerynie.
 
@@ -8,7 +8,7 @@ Bohater czuje się świetnie i wszystkim pomaga. A w dniu, w którym odchodzi, k
 
 (Moi czwartkowi czytelnicy to rozpoznają: to problem zegara emerytalnego z platform legacy, tylko w lepszych butach. Jedna osoba, która wie; organizacja, która zależy.)
 
-Rozwiązanie kosztuje lidera pięć minut tygodniowo i widziałem, jak wygrywa z sześciocyfrowymi budżetami szkoleniowymi:
+Rozwiązanie kosztuje lidera pięć minut tygodniowo — i powinno wygrywać z sześciocyfrowymi budżetami szkoleniowymi, z jednego powodu:
 
 Raz w tygodniu, na kanale, który czytają wszyscy, LIDER — nie bohater — pisze: "Oddałem w tym tygodniu X do AI. Oto co musiałem poprawić".
 
@@ -18,4 +18,4 @@ Bohaterowie centralizują kompetencję. Liderzy pokazujący swoje poprawki ją d
 
 Wasza firma ma bohatera — czy nawyk? Tylko szczere odpowiedzi.
 
-#AIMindset #PrzywodztwoAI #SopraSteria
+#AIMindset #PrzywodztwoAI #SopraSteriaPolska

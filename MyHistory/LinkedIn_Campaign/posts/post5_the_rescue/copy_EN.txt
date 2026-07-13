@@ -1,8 +1,8 @@
-An oceanic research institute ran measuring software across 20+ vessels.
+A government research organization ran measuring software across 20+ remote field installations.
 
-They could not update it while ships were out at sea.
+They could not update it while the installations were deployed.
 
-Not "updated between seasons." Not "patched when back in port."
+Not "updated between seasons." Not "patched when back online."
 
 Could not update. While deployed.
 
@@ -23,7 +23,7 @@ Three weeks later: a complete security exposure picture — for the first time.
 
 Years of deferred updates. Three weeks of systematic analysis. That ratio is not about talent. It's about method.
 
-The platform is mission-critical in the literal sense — when you can't see what's running on research vessels at sea, national science stops. Estimated 16x ROI through prevented failure. "Estimated," because prevented losses are projected, not measured. Every other number in this post is verified.
+The platform is mission-critical in the literal sense — when you can't see what's running on unmanned field installations, national research stops. Estimated 16x ROI through prevented failure. "Estimated," because prevented losses are projected, not measured. Every other number in this post is verified.
 
 Here's my question for you:
 

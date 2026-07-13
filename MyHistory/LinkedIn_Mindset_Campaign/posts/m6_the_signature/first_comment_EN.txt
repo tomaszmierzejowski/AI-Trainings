@@ -2,6 +2,6 @@ Why this exact order and not just "read carefully":
 
 Names/numbers/dates first because fabrication concentrates there AND they're binary — right or wrong, no judgment needed, so they cost the least attention. Sources second because one fake reference reprices the whole document. Conclusion-vs-data last because it needs the most brain, and by then you know whether the document deserves it.
 
-The cover-the-conclusion trick is the single most useful move: it forces you to form an independent view before the fluent paragraph can anchor you. It's also the only step that catches inversion — the error type that survived in every group I've run the planted-error exercise with.
+The cover-the-conclusion trick is the single most useful move: it forces you to form an independent view before the fluent paragraph can anchor you. It's also the only step that catches inversion — the error type this exercise is specifically designed to hide.
 
 For engineers reading this: same principle, different artifact. AI-suggested code edit = review each hunk; agent-written feature = review the whole diff like a hostile PR. The leash gets longer, the review gets deeper — never shorter and shallower.

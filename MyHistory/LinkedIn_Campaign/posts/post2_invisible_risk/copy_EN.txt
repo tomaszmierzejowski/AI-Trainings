@@ -22,4 +22,4 @@ If you're not certain, that uncertainty is worth examining.
 
 Every number verified. Every finding traced to source code.
 
-#CyberSecurity #GDPRCompliance #LegacyCode #SopraSteria #EnterpriseArchitecture
+#CyberSecurity #GDPRCompliance #SopraSteria

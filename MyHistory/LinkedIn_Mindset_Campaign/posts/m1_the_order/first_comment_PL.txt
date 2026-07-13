@@ -1,7 +1,7 @@
-Zastrzeżenie, które słyszę natychmiast: "Ale pierwszy szkic AI jest przeciętny".
+Można mieć zastrzeżenie: „Ale pierwszy szkic AI jest przeciętny". Często to prawda. W tej serii pokażę też, jak już od pierwszego prompta zapewnić sobie lepsze efekty.
 
-Zgadza się. Pierwszy szkic nowego kolegi z zespołu też — a nie zwalniacie go pierwszego dnia. Dajecie feedback i przy trzeciej rundzie szkic niesie już Wasze standardy.
+Pierwszy szkic nowego kolegi z zespołu też bywa przeciętny — a nie zwalniacie go pierwszego dnia. Dajecie feedback i przy trzeciej rundzie szkic niesie już Wasze standardy.
 
-Niczyja tożsamość nie cierpi od oddania pierwszego szkicu juniorowi. I to jest całe przeformułowanie: nigdy nie chodziło o jakość maszyny. Chodziło o to, kto idzie pierwszy.
+Niczyja tożsamość nie cierpi od oddania pierwszego szkicu juniorowi. I to jest cała zmiana perspektywy: nigdy nie chodziło o jakość maszyny. Chodziło o to, kto idzie pierwszy.
 
-Ten post otwiera wtorkową serię o AI mindset — o zmianie zachowań, nie o narzędziach. Za tydzień: 4-poziomowa autodiagnoza, którą każda grupa szkoleniowa rozpoznaje w kilka sekund. Większość ludzi ląduje niżej, niż się spodziewa.
+Ten post otwiera moją serię o AI mindset — o zmianie zachowań, nie o narzędziach. Za tydzień: 4-poziomowa autodiagnoza, z którą identyfikuje się niemal każdy, z kim o tym rozmawiam. Większość ludzi ląduje niżej, niż się spodziewa.

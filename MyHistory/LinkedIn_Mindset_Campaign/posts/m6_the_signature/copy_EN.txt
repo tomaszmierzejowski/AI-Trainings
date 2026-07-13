@@ -11,7 +11,7 @@ SECONDS 20–40 — Sources.
 Every citation: does it exist? One invented benchmark poisons every real one around it.
 
 SECONDS 40–60 — Conclusion vs. data.
-Cover the conclusion paragraph. Look only at the underlying numbers. Now ask: what conclusion would I draw? Uncover. If yours and the document's disagree — you've just caught the error that survives every training room I run.
+Cover the conclusion paragraph. Look only at the underlying numbers. Now ask: what conclusion would I draw? Uncover. If yours and the document's disagree — you've just caught the error that's hardest to catch, by design.
 
 Then one rule on top: no citation, no claim. Truth lives in your systems of record; AI is the understanding layer on top of them. Anything that can't show its receipt doesn't get forwarded.
 

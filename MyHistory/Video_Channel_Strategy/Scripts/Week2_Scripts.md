@@ -24,7 +24,7 @@
 > POZIOM 4 — Native. Projektujesz pracę, którą AI wykonuje od początku do końca. Ty weryfikujesz.
 > I teraz to pytanie: od czego ZACZĘŁA SIĘ Twoja ostatnia ważna praca? Nie: czego używasz. Od czego ZACZĄŁEŚ.
 > Diagnozuj się po zachowaniu, nie po aspiracji.
-> *(plansza: [MOJA PRAKTYKA] — na każdym szkoleniu ludzie lokują się o poziom wyżej niż ich poniedziałkowe zachowanie)*
+> *(plansza: [OPINIA] — przewiduję, że większość ludzi lokuje się o poziom wyżej niż ich poniedziałkowe zachowanie)*
 
 **CTA (48–58 s):**
 > Skok, który zmienia kariery, to 2 → 3. Zero nowych narzędzi, zero budżetu, zero niczyjej zgody.
@@ -96,7 +96,7 @@
 **SYGNATURA:** jak zawsze.
 
 **Warianty hooka:** 1. "Dzieci chciały domek. Nie umiem projektować." 2. "Nie jestem stolarzem. Domek stoi." 3. "»Tata, zbudujesz nam domek?« Nie umiałem."
-**Opisy:** TT/IG: "Historia z każdego mojego szkolenia — zaczyna się od dzieci, nie od AI 🏠" · YT: "AI nie zastępuje wiedzy — odbiera wymówki. Historia domku".
+**Opisy:** TT/IG: "Prawdziwa historia — zaczyna się od dzieci, nie od AI 🏠" · YT: "AI nie zastępuje wiedzy — odbiera wymówki. Historia domku".
 **Hashtagi:** #AIMindset #DIY #tata #AIpoPolsku #poprostuzacznij
 
 ---

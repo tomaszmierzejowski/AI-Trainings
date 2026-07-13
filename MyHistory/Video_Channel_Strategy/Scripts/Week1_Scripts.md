@@ -14,14 +14,14 @@
 **Overlay:** "różnica nie jest tam, gdzie myślisz"
 
 **STAKE (3–10 s):**
-> To nie promptowanie. Nie wykształcenie. Nie wiek. Widzę to od dwóch lat na salach szkoleniowych.
+> To nie promptowanie. Nie wykształcenie. Nie wiek. Widzę to od dłuższego czasu w projektach wdrożeniowych z AI.
 
 **MEAT (10–45 s):**
 > To kolejność.
 > Osoba A kończy raport po staremu i na końcu prosi AI o szlif. AI jako dekoracja.
 > Osoba B prosi AI o szkic NAJPIERW — a potem przykłada do niego swój osąd i swoją wiedzę.
 > Osoba A oszczędza minuty. Osoba B oszczędza pustą kartkę — tę część pracy, która nigdy nie była tą wartościową.
-> *(plansza: [BADANIE] Cui i in., Management Science, 4867 deweloperów — ~26% więcej ukończonych zadań; zysk przewidywało ZACHOWANIE, nie staż)*
+> *(plansza: [BADANIE] Cui i in., Management Science, 2024, ~4800 deweloperów — ~26% więcej ukończonych zadań; zysk przewidywało ZACHOWANIE, nie staż)*
 > Badanie na prawie pięciu tysiącach osób pokazało: o tym, kto zyskuje na AI, decyduje zachowanie. Nie stanowisko.
 
 **CTA (45–58 s):**
@@ -80,7 +80,7 @@
 **Overlay:** "zbudowany metodą, której uczę"
 
 **STAKE (3–12 s):**
-> Od lat uczę firmy pracy z AI. Ale na sali szkoleniowej mieści się ≈20 osób. Tu — nie ma limitu miejsc.
+> Od lat pomagam firmom wdrażać AI jako architekt, przy prawdziwych projektach. Teraz zaczynam też uczyć tego wprost, na szkoleniach. Ale sala szkoleniowa mieści ≈20 osób. Tu — nie ma limitu miejsc.
 
 **MEAT (12–45 s):**
 > Miałem klasyczną wymówkę: "nie umiem robić wideo". Montaż, strategia, algorytmy — nie moja bajka.

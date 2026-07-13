@@ -1,3 +1,5 @@
+NOTE: The poll ran first (see poll_variant.txt), so the full M2 post now OPENS with the poll results — the hook is the callback + the numbers. Variants below are fallbacks if the poll data is too thin to lead with.
+
 VARIANT A (primary):
 There are four levels of working with AI. Most professionals are on Level 2 and believe they're on Level 3.
 

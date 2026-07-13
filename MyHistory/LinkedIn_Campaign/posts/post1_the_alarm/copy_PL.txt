@@ -22,8 +22,8 @@ To nie przypadki brzegowe. To typowe odkrycia.
 
 Twoja platforma prawie na pewno zawiera podobne. Pytanie nie brzmi, czy tam są.
 
-Pytanie brzmi: kto przeczyta je pierwszy.
+Czy osobiście przeczytałeś całą platformę, za którą odpowiadasz — czy tylko jej próbkę?
 
 [Przewiń, żeby zobaczyć metodologię — i zweryfikowane wyniki.]
 
-#ModernizacjaIT #ModernizacjaAplikacji #ArchitekturaKorporacyjna #SopraSteria #DługTechniczny
+#ModernizacjaIT #ArchitekturaKorporacyjna #SopraSteria

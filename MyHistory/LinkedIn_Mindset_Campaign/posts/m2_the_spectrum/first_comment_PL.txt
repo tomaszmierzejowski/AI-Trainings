@@ -6,4 +6,4 @@ Najszybszy skok z każdego poziomu — bo obiecałem:
 
 3 → 4: Przestańcie ulepszać pojedyncze zadania i spiszcie cały proces — wejścia, kroki, kontrole, wyjścia. Co umiecie wyspecyfikować, to AI coraz częściej umie poprowadzić. Czego nie umiecie wyspecyfikować — właśnie odkryliście, że sami jeszcze nie do końca to rozumiecie. Cenne w obie strony.
 
-I tak — to spektrum to otwierający moduł programu szkoleniowego, który prowadzę. Autodiagnoza jest za darmo; macie ją wyżej. Zmiana zachowania to program.
+I tak — to spektrum to otwierający moduł programu szkoleniowego, który właśnie buduję. Autodiagnoza jest za darmo; macie ją wyżej. Zmiana zachowania to program.

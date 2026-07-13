@@ -77,7 +77,7 @@ MoM 2026-06-25: 11 internal retro-doc initiatives across Sopra (incl. my Poland/
 - ❌ Naming anonymized clients (dealer platform/automotive → **Global Automotive Importer**; tolling/billing; maritime/vessels → **Oceanic Research Institute**).
 - ❌ "100% Code Coverage" or "100% Code Read" → use **"100% of files scanned"** / **"scanning 100% of files"**.
 - ❌ Discovery cost savings applied to full modernization → **87% applies to discovery and analysis phase only**.
-- ❌ "78%" or "95%" discovery savings → use **87%**.
+- ❌ "78%" or "95%" discovery savings → use **87%**. ⚠️ BUT never print "87%" in the same sentence as the 500K-vs-2.3M NOK pair — that pair computes to 78%, and any skeptic with a calculator will catch the mismatch (87% is the hours-basis cross-engagement average, a different measurement). When both raw numbers are shown, show NO percentage.
 - ❌ "56+ repos" → use **30+ repos** (2024→2026).
 - ❌ "three years" for factory track record → use **Two years of AI Discoveries and AI Modernization (2024→2026)**.
 - ❌ €120K/WebLogic savings for Global Automotive Importer — removed; deliverables are 20 repos as one system, 460-page report, unified mockup.

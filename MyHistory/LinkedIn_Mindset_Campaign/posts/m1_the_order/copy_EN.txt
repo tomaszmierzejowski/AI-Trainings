@@ -1,23 +1,23 @@
-Two people. Same job. Same AI tools. One gets 10x more out of them.
+Two people. Same job. Same AI tools. One of them gets 10x more out of it.
 
-I've watched this for two years in training rooms, and the difference is never what people expect.
+I've watched this for a while now in day-to-day work on AI modernization and adoption — and the difference is never where everyone looks for it.
 
-It's not prompting skill. Not technical background. Not age.
+It's not magic prompts. Not technical background. Not age, either.
 
 It's the order.
 
-Person A finishes the draft, then asks AI to polish it. The report, the offer, the plan — built the hard way first, AI invited in at the end, as decoration.
+Person A builds the whole thing alone, then asks AI to fix it up at the end. The report, the offer, the plan — built "the hard way," AI invited in only once it's already done, as decoration.
 
-Person B asks AI for the draft first — then applies their judgment, expertise, and taste to it.
+Person B starts differently. They ask AI for a draft first — then apply their own knowledge, judgment, and taste to it.
 
-Same tools. Opposite sequence. Radically different economics: Person A saves minutes. Person B saves the part of the work that was never the valuable part anyway — the blank page.
+Same tools. Opposite sequence. Completely different economics. Person A saves a few minutes at the end. Person B saves the part of the work that always costs the most time and frustration — starting from zero, staring at a blank page.
 
-Here's the phrase I teach: AI is your first step to everything. Not the only step. The first.
+I keep repeating one rule: AI is your first step to everything. Not the only one. But the first.
 
-The research backs the pattern. A field study across 4,867 developers found ~26% more completed tasks with AI — but the gains varied enormously, and what predicted them wasn't seniority. It was adoption behavior (Cui et al., Management Science).
+The data backs it up. Among nearly 5,000 developers (Cui et al., Management Science, 2024), what predicted the productivity jump from AI wasn't seniority — it was how people fit the tool into their habits. A similar pattern shows up with 758 BCG consultants (Dell'Acqua et al., 2023): those who kept their own judgment over AI's output completed ~12% more tasks, ~25% faster, at higher-rated quality — but outside AI's "jagged frontier," their accuracy dropped.
 
-The tools will change again next quarter. The order is yours to keep.
+The tools will change again next quarter. The right order stays with you for good.
 
-So, honestly: which person are you — draft-first, or polish-last?
+So let's be honest: which type are you — the one who starts from an AI draft, or the one who only asks for a polish at the end?
 
 #AIMindset #FutureOfWork #SopraSteria

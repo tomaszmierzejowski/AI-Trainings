@@ -22,7 +22,7 @@
 > TARCIE 2 — Tożsamość. "Jeśli AI robi szkic, to po co właściwie jestem ja?" Im lepszy jesteś w starym sposobie, tym bardziej nowy wygląda jak degradacja.
 > TARCIE 3 — Rozkalibrowane zaufanie. Jedna halucynacja w pierwszym tygodniu i wyrok: "niewiarygodne". Ta sama osoba forwarduje niezweryfikowane łańcuszki. Ale mniejsza.
 > TARCIE 4 — Bezwładność nawyku. Żadnej opinii. Stary sposób po prostu się wykonuje, jak od piętnastu lat. Najsilniejsze tarcie na liście, bo nie przypomina oporu. Przypomina wtorek.
-> *(plansza: [MOJA PRAKTYKA] — mapa z moich szkoleń; żadne z tych tarć nie jest luką w wiedzy)*
+> *(plansza: [OPINIA] — mapa czterech tarć, którą projektuję do programu; żadne z nich nie jest luką w wiedzy)*
 > I dlatego kolejny kurs "funkcje narzędzia X" niczego u Ciebie nie zmieni. Strach nie jest luką w wiedzy.
 
 **CTA (48–58 s):**
