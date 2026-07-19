@@ -16,21 +16,23 @@
 1. **Evidence over opinion — hard standard.** Every claim is badged: VERIFIED (my delivered project), STUDY (named, citable research), FRAMEWORK/OPINION (labeled as such). Numbers without sources get cut. I actively maintain a banned-phrases discipline (see §6).
 2. **I like serious content delivered with dry humor** — jokes in footers/asides, never clownish. ("Nobody ever got promoted for having the most AI tabs open.")
 3. **Languages:** deliverables often dual EN/PL. Training decks for delivery are currently **Polish-first**; trainer knowledge materials in English. My audiences: Polish + Nordic clients.
-4. **Anonymization policy:** client names anonymized; my own products (Antystyki.pl, Lidka, PresoGen AI, Mana Menu) and tomaszmierzejowski.pl may be named. Portfolio codenames (Project Velocity/Axiom/Meridian-Core/Terrain) are public on my site — usable.
+4. **Anonymization policy:** client names anonymized; my own products (Antystyki.pl, Lidka, PresoGen AI, Mana Menu, Domek Dla Dzieci, children's audiobooks, the portfolio website, LifeAutomations) and tomaszmierzejowski.pl may be named. Only 4 Sopra Steria case studies are in active use (Proof of Scale, Invisible Risk, Proof of Speed, The Rescue/Public Institute) — public on my site, usable. Project Velocity, Project Axiom, Project Meridian-Core and Project Terrain are all retired names.
 5. I want Claude to **critically challenge my materials** (play the most hostile customer), leave audiences feeling equipped AND hungry to learn more, and make me "a 0.1% expert" — deep trainer knowledge, Q&A arsenals.
 6. Visual style for decks: light theme, clean, big type, real charts (thin bars, labeled), emoji accents OK, self-contained HTML with no external dependencies.
 
 ## 3. VERIFIED PROOF POINTS (my evidence register — use these instead of generic stats)
 
-- **Project Velocity** (public codename): 20 legacy Java/J2EE apps analyzed as one system, discovery in 3 weeks, 4–8× faster application understanding, 187 endpoints mapped, **460-page main report**, unified mockup. **87% discovery and analysis cost reduction** (discovery phase only).
-- **Project Axiom:** national infrastructure operator, pre-ERP analysis — 97 projects analyzed, 17 modules identified, **zero erroneous conclusions** (human verification gates).
-- **Project Meridian-Core:** global professional-services platform, 5+ years continuous modernization, zero operational interruptions.
-- **Project Terrain:** generative AI in physical playground design — ~200 variants, 8 iterations, 3–4× cost reduction.
-- **"4-day rescue" / Pediatric Mobile (anonymize client):** Norwegian children's-mental-health research non-profit; **Android-only** app blocked by **Google Play deprecating Xamarin** → **.NET MAUI in 4 days** (typical 4–8 weeks), 92% code preserved, zero regressions, 100% first-submission Google Play approval, 15% faster startup. Christmas-Eve gratitude quote from project lead. **ROI: use conservative 4× estimate, never the 10×+ marketing figure.**
-- **"Nordic transaction-processing enterprise" (anonymize):** 529 REST endpoints documented; 143 business rules @ 94% confidence from ~220,000 lines; 312 evidence-tagged citations; 3 weeks vs ~6 months.
-- **"Oceanic Research Institute" (anonymize — Fish2Data/IMR):** **Could not update measuring software while ships were out at sea.** 200+ CVEs mapped; 100,000+ lines documented; 16× ROI (estimated, discovery phase).
+**Consolidated 2026-07-19: only 4 Sopra Steria case studies remain in active use (Proof of Scale,
+Invisible Risk, Proof of Speed, The Rescue) — matching the published LinkedIn campaign exactly.
+Project Meridian-Core and Project Terrain are retired as public case studies; see the Evidence
+Register §4a for the full retirement notes.**
+
+- **Proof of Scale** (was "Project Velocity", then briefly "Project Axiom" — both retired): 20 legacy Java/J2EE apps analyzed as one system, discovery in 3 weeks, 4–8× faster application understanding, 187 endpoints mapped, **460-page main report**, unified mockup. **87% discovery and analysis cost reduction** (discovery phase only, never stated next to the raw NOK pair below).
+- **Invisible Risk** (was separately "Project Axiom" + "a Nordic transaction-processing enterprise," same client, now one story): 529 unauthenticated REST endpoints documented; 100+ business rules extracted; 97 projects analyzed across 17 modules; **zero erroneous conclusions** (human verification gates); 312 evidence-tagged citations; 3 weeks vs ~6 months traditional.
+- **"4-day rescue" / Proof of Speed / Pediatric Mobile (anonymize client):** Norwegian children's-mental-health research non-profit; **Android-only** app blocked by **Google Play deprecating Xamarin** → **.NET MAUI in 4 days** (typical 4–8 weeks), 92% code preserved, zero regressions, 100% first-submission Google Play approval, 15% faster startup. Christmas-Eve gratitude quote from project lead. **ROI: use conservative 4× estimate, never the 10×+ marketing figure.**
+- **The Rescue / "Public Institute"** (anonymize — was "a government research organization" and, elsewhere, the conflicting "Oceanic Research Institute"; both retired): a full discovery run surfaced 200+ known CVEs; the institute could not deploy software to their hardware for 2 years; root cause found by analyzing GitHub — 10 active-looking branches, only 3 actually in production use, each tied to different custom hardware; matched the 3 real branches to their hardware and automated deployment, ending the 2-year block. No ROI multiplier for this one.
 - **Discovery economics:** ~500K vs ~2.3M NOK (**87% cheaper**, discovery and analysis phase only), 3 vs 14 weeks. **20x faster & more reliable discovery.** **30+ repositories** assessed (2024→2026). Two years of AI Discoveries and AI Modernization (2024→2026).
-- **My products:** PresoGen AI (~600 automated tests, 3 LLM providers) · Mana Menu (~657 tests, 37 controllers) · Lidka (non-technical publisher, audiobook store built in days, full owner autonomy, Tpay+InPost) · Antystyki.pl (AI content pipeline, human-in-the-loop governance, 17+ sources, .NET 9 + React 19).
+- **My products:** PresoGen AI (~600 automated tests, 3 LLM providers) · Mana Menu (~657 tests, 37 controllers) · Lidka (non-technical publisher, audiobook store built in days, full owner autonomy, Tpay+InPost) · Antystyki.pl (AI content pipeline, human-in-the-loop governance, 17+ sources, .NET 9 + React 19) · Domek Dla Dzieci (personal project — kids' playhouse planned and materials ordered via Claude in ~1 hour; not a benchmarked case study, no cost-reduction multiplier claimed) · children's audiobooks · the portfolio website itself · LifeAutomations.
 - **External studies I quote (with honesty caveats):** Peng 2023 (55.8% faster, scoped task) · Cui 2024 (~4,800 devs, +26%, gains follow behavior change) · Brynjolfsson 2023 (+14% avg/+34% novices, call centers) · Noy & Zhang 2023 (−40% time/+18% quality, writing) · Dell'Acqua 2023 "jagged frontier" (758 BCG consultants: +40% quality inside frontier, −19 p.p. outside, bottom half +43%) · METR 2025 (experienced devs −19% slower, felt +20% faster) · McKinsey 2023 (gains require practice; near-zero on complex tasks) · Standish CHAOS 2020 (~31% succeed).
 
 ## 4. ACTIVE PROJECTS & STATUS
@@ -72,17 +74,19 @@ MoM 2026-06-25: 11 internal retro-doc initiatives across Sopra (incl. my Poland/
 
 - ❌ "73% of modernization projects fail" — exists in NO Standish report. Standish 2020: ~31% succeed.
 - ❌ 10×+ ROI for the 4-day rescue → use **4× (estimated)**.
-- ❌ "200+ business rules" → use **143 @ 94% confidence** (evidence-tagged figure).
+- ❌ "200+ business rules" or "143 @ 94% confidence" (both retired 2026-07-19) → use **100+**.
 - ❌ Unsourced prompting stats ("RTF solves 80%", "CoT +40%") — cut everywhere; live before/after demo is the evidence.
-- ❌ Naming anonymized clients (dealer platform/automotive → **Global Automotive Importer**; tolling/billing; maritime/vessels → **Oceanic Research Institute**).
+- ❌ Naming anonymized clients (dealer platform/automotive → **Proof of Scale**; tolling/billing → **Invisible Risk**, no vertical named; maritime/vessels/government research → **Public Institute**, no further qualifying detail).
 - ❌ "100% Code Coverage" or "100% Code Read" → use **"100% of files scanned"** / **"scanning 100% of files"**.
 - ❌ Discovery cost savings applied to full modernization → **87% applies to discovery and analysis phase only**.
 - ❌ "78%" or "95%" discovery savings → use **87%**. ⚠️ BUT never print "87%" in the same sentence as the 500K-vs-2.3M NOK pair — that pair computes to 78%, and any skeptic with a calculator will catch the mismatch (87% is the hours-basis cross-engagement average, a different measurement). When both raw numbers are shown, show NO percentage.
 - ❌ "56+ repos" → use **30+ repos** (2024→2026).
 - ❌ "three years" for factory track record → use **Two years of AI Discoveries and AI Modernization (2024→2026)**.
-- ❌ €120K/WebLogic savings for Global Automotive Importer — removed; deliverables are 20 repos as one system, 460-page report, unified mockup.
-- ❌ Oceanic Research "completely offline" → **"Could not update measuring software while ships were out at sea"**.
+- ❌ €120K/WebLogic savings for Proof of Scale — removed; deliverables are 20 repos as one system, 460-page report, unified mockup.
+- ❌ "Project Velocity" or "Project Axiom" as names (both retired 2026-07-19) — the engagement is **Proof of Scale**.
+- ❌ Public Institute "completely offline" / "could not update measuring software while ships were out at sea" / "16× ROI" (all retired 2026-07-19) → use **"200+ CVEs found; couldn't deploy to their hardware for 2 years; root cause was 10 git branches with only 3 actually in production use; matched those to their hardware and automated deployment"**, no ROI figure.
 - ❌ Pediatric Mobile as cross-platform / both stores → **Android-only, Google Play deprecating Xamarin, .NET MAUI in 4 days**.
+- ❌ "Project Meridian-Core" or "Project Terrain" as public case studies (both retired 2026-07-19) — Meridian-Core/Worktime 2.0 is a plain CV work-history line only; Terrain was actually the Domek Dla Dzieci personal project, not a client engagement.
 - ❌ DISC/PRISM presented as science — always "communication lens," psychometrically weak, Big Five is the backbone.
 - ⚠️ Verify all study figures against original papers before print/camera.
 

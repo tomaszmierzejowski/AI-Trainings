@@ -16,7 +16,7 @@ The program opens with three instances of one behavioral pattern — reaching fo
 
 At family scale: the "Domek" story. The author's children wanted a wooden playhouse. One AI working session produced architectural drawings, structural calculations, and a ready shopping cart for the building store — in about an hour, with no architect. This is a hook, not evidence; it carries no badge.
 
-At business scale, VERIFIED: Project Terrain applied generative AI to physical playground design, producing approximately 200 design variants across 8 iteration rounds, at a 3–4× cost reduction compared to the traditional design approach.
+At business scale, VERIFIED: the Proof of Scale engagement applied the same first-step-then-verify behavior to a 20-application legacy Java estate, delivering full discovery in three weeks against an 8–14 week traditional estimate, with 187 API endpoints mapped and a 4–8× acceleration in application understanding.
 
 At mission-critical scale, VERIFIED: a Norwegian children's-research non-profit had its Android-only mobile application stranded on an end-of-life framework (Xamarin.Forms) as Google Play deprecated it, threatening the January start of a national research program on children's self-esteem. The migration to .NET MAUI was completed in 4 days against a typical industry estimate of 4–8 weeks, preserving 92 percent of the existing code, with zero regressions and Google Play approval on first submission, and a 15 percent improvement in app startup time. The project lead's message, received on Christmas Eve, read in part: "It's hard to describe how much relief and joy I felt at that moment." The human stakes — a children's mental-health research program continuing on schedule — illustrate why the behavior of reaching for AI first under pressure matters beyond software economics.
 
@@ -44,7 +44,7 @@ Fourth, habit inertia. The old workflow costs zero willpower; a new workflow cos
 
 The program's teaching contract is called "Daję wędkę" — Polish for "I give a fishing rod." Most consulting economics reward dependency: the consultant is paid to remain needed. This program inverts that: participants leave with habits and self-sufficiency, not with the trainer's phone number as their AI strategy. The trainer will occasionally "build a fish" — deliver a working artifact live — but only to prove the water has fish in it; the deliverable is the rod. This philosophy is the author's public positioning (tomaszmierzejowski.pl, "Edukator & Praktyk AI Mindset"), summarized there as "Nie uczę teorii" — "I don't teach theory": all training content derives from the author's own delivered products and projects.
 
-Credibility basis, VERIFIED: 14 years of engineering practice; Project Meridian-Core, a five-plus-year continuous modernization of a global, mission-critical professional-services platform completed with zero operational interruptions. The relevance to a psychology module is trust: behavioral advice about production work is credible when it comes from someone who carries production risk.
+Credibility basis, VERIFIED: 14 years of engineering practice; a five-plus-year continuous modernization of a global, mission-critical professional-services platform completed with zero operational interruptions. The relevance to a psychology module is trust: behavioral advice about production work is credible when it comes from someone who carries production risk.
 
 ## The reframe and the commitment
 

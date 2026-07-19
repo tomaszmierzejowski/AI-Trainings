@@ -51,7 +51,7 @@ Core workflows: codebase Q&A *before* writing code; inline edits; agent mode for
 
 **Slide 11 — Cursor rule of engagement** *(bridge to Module 3)*
 "The larger the change, the smaller the leash." Inline edit → review each hunk. Agent mode → review the diff like a hostile PR.
-VERIFIED sidebar: this working pattern is how 20 legacy applications were understood in 3 weeks (Project Velocity, 4–8× faster understanding, 187 endpoints mapped).
+VERIFIED sidebar: this working pattern is how 20 legacy applications were understood in 3 weeks (Proof of Scale, 4–8× faster understanding, 187 endpoints mapped).
 
 **Slide 12 — NotebookLM: grounded learning**
 Old behavior → new behavior: "PDF graveyard you'll never read" → "a notebook that answers only from your sources, with citations."

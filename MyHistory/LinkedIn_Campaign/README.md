@@ -111,7 +111,7 @@ Graphics save to: `graphics/`
 ### What NOT to Say (banned phrases)
 
 - "73% of modernization projects fail" — this statistic does not exist in any Standish report
-- "200+ business rules extracted" — pre-deduplication count; use 100
+- "200+ business rules extracted" or "143 business rules @ 94% confidence" (both retired 2026-07-19) — use **100+**
 - "100% code coverage" / "100% code read" — replace with "scanning 100% of files" or "100% of files scanned"
 - "95% cost savings" — use **87% discovery cost savings** (*discovery and analysis phase only*)
 - "56+ repositories" / "120+ codebases" — use **30+ repositories** (2024→2026 track record)
@@ -119,7 +119,7 @@ Graphics save to: `graphics/`
 - Discovery cost or speed claims without disclaimer — add *discovery and analysis phase only* where cost savings apply
 - "dealer platform / tolling / billing" — client identification risk
 - "automotive / Nordic OEM" — client identification risk
-- "maritime / fisheries / vessels" — use "government research organization"
+- "maritime / fisheries / vessels" or "government research organization" or "Oceanic Research Institute" (all retired 2026-07-19) — use **"Public Institute"**, no further qualifying detail
 - "digital transformation journey" — replace with the specific problem
 - "value-add" — replace with the specific value as a number
 - "AI-powered" — replace with "AI-accelerated analysis, senior architect verification"

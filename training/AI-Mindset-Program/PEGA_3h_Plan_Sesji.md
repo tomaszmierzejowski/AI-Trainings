@@ -19,7 +19,7 @@
 | „Model zapomina wytyczne” | Adrian | Nawyk 3: stała instrukcja (16) + licencje (19) |
 | Faktury i płatności | Rafał R. | Demo 4 (26) + warsztat 2 „Faktury na autopilocie” |
 | Wprowadzanie osób do płatności | Rafał R. | tylko warsztat 2 (za mało czasu na sali — powiedz to wprost) |
-| Grafika (Firefly/Gemini/NotebookLM) | Maciej | Demo 3 „Brief zamiast telepatii” (25) + Terrain (8) + warsztat 2 „Linia graficzna” |
+| Grafika (Firefly/Gemini/NotebookLM) | Maciej | Demo 3 „Brief zamiast telepatii” (25) + Domek (8) + warsztat 2 „Linia graficzna” |
 | Niestandaryzowane narzędzia / licencje | wszyscy | Mapa (17), drzewo (18), rekomendacja licencyjna (19) |
 
 ## Timing (180 min) + bezpieczniki
@@ -27,7 +27,7 @@
 | Czas | Blok | Slajdy | Bezpiecznik przy poślizgu |
 |---|---|---|---|
 | 0:00–0:10 | Otwarcie: hak esportowy → ankieta → agenda → zasady gry → kim jestem | 1–5 | nie skracać — tu kupują zaufanie |
-| 0:10–0:45 | Mindset: złe pytanie, Domek, Terrain, wpadki, LVL 1–4, kolejność, granica | 6–12 | tnij Domek+Terrain do 2 min łącznie; wpadek NIE wycinaj |
+| 0:10–0:45 | Mindset: złe pytanie, Domek (historia + slajd), wpadki, LVL 1–4, kolejność, granica | 6–12 | tnij blok Domku do 2 min łącznie; wpadek NIE wycinaj |
 | 0:45–1:20 | 3 nawyki + mapa narzędzi PEGA + drzewo + licencje | 13–19 | licencje skróć do 1 zdania + „szczegóły w mailu” |
 | 1:20–1:35 | ☕ Przerwa | 20 | max 15 min, pilnuj powrotu |
 | 1:35–2:30 | Cztery dema (intro + 1a/1b + 2 + 3 + 4) | 21–26 | kolejność cięcia: najpierw 1b (opowiedz na slajdzie), potem skróć 3 (grafika) do 3 min; **demo 2 i 4 zostają zawsze** |
@@ -59,7 +59,7 @@ intro 2 min · 1a research 12 min · 1b oferta 8 min · 2 plan+copy 15 min · 3 
 ### Demo 3 — brief graficzny (Maciej) · ~6 min
 - Kontynuacja demo 2: z tego samego planu komunikacji poproś o **brief graficzny do jednego posta**: przekaz, tekst na grafice, format na kanał, prompt do Firefly, specyfikacja do Canvy.
 - Oddaj głos Maćkowi: „czego tu brakuje, żebyś usiadł i zrobił?” — jego uwagi to darmowy research pod warsztat 2 „Linia graficzna".
-- Nawiąż do Terrain (slajd 8): warianty są tanie, gust Maćka jest bramką.
+- Nawiąż do domku (slajd 8): warianty są tanie, gust Maćka jest bramką.
 
 ### Demo 4 — faktura → arkusz (Rafał R.) · ~10 min · NIE WYCINAĆ
 - Przygotuj **fikcyjną fakturę PDF/JPG** (wymyślony sprzedawca, NIP 0000000000, realny układ). Miej drugą, „trudną” (zdjęcie pod kątem / słaby skan) na dogrywkę.
@@ -71,7 +71,7 @@ intro 2 min · 1a research 12 min · 1b oferta 8 min · 2 plan+copy 15 min · 3 
 
 ## Autopromocja — jak jest wpleciona (nie dokładaj więcej)
 
-- Dowody z plakietkami ZWERYFIKOWANE: slajd 5 (14 lat / 5+ lat / codziennie), 8 (Terrain), 29 (Lidka). Zero liczb spoza Evidence Register; celowo nie ma pary 500K/2,3M NOK ani „87%” — nie dodawaj ich ustnie.
+- Dowody z plakietkami ZWERYFIKOWANE: slajd 5 (14 lat / 5+ lat / codziennie), 8 (Domek dla dzieci — 1 zdanie, ~1 h, bez metryk kosztowych), 29 (Lidka). Zero liczb spoza Evidence Register; celowo nie ma pary 500K/2,3M NOK ani „87%” — nie dodawaj ich ustnie.
 - Pozycjonowanie: praktyk-architekt („w moich projektach”), trzy wpadki (slajd 9), „Daję wędkę” (33). **Nie mów „na moich szkoleniach”** — zasada z runbooka obowiązuje.
 - Stopki z tomaszmierzejowski.pl tylko na pierwszym i ostatnim slajdzie — wystarczy.
 

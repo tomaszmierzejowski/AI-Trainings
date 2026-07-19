@@ -1,13 +1,13 @@
-A government research organization ran measuring software on 20+ remote field installations — and couldn't update it while the installations were deployed. Every deferral made the next one harder: undocumented dependencies, missing configurations, an end-of-life stack quietly collecting critical CVEs. Nobody could even price the exposure, because nobody could see all of it.
+A public institute couldn't deploy software to its own hardware for 2 years. Nobody on the team could say why with certainty — the deployment pipeline had drifted out of anyone's full understanding.
 
-The team wasn't the problem. They were working without a map, and without a window.
+We ran a full discovery pass first. It surfaced 200+ known CVEs the team hadn't been tracking. Then we went further: we read the git history the same way we read the code. Ten branches looked active. Only three were actually running in production.
 
-We didn't start from the documentation. We read the code. From the source we rebuilt the environment map, traced the dependencies, reconstructed the configurations, and surfaced 200+ known vulnerabilities along the way.
+We matched each of those three real branches to the specific hardware it was meant to deploy to, and automated the pipeline around that mapping.
 
-Three weeks later the organization had a complete picture of its security exposure, for the first time.
+The 2-year block ended. The institute could ship to its own hardware again — automatically, for the first time since the block began.
 
-Years of deferred updates, three weeks of reading. The estimated return is 16x through prevented failure — "estimated", because prevented losses are projected, not measured. Every other number in this post is verified.
+The blocker was never really in the code. It was in which version of the code anyone was actually looking at.
 
-If you're sitting on a system you can't update because the window never opens, start with one question: who has actually read what's in there?
+If your deployment has been stuck for longer than anyone wants to admit, start with one question: has anyone actually read the branch history, not just the current one?
 
 #LegacyModernization #EnterpriseIT #SopraSteria

@@ -16,9 +16,9 @@ The first rule of reliable AI use is architectural: language models understand a
 
 ## Case evidence: protocol beats model
 
-VERIFIED: Project Axiom. A national infrastructure operator serving a multi-million customer base needed a dependable pre-project analysis before committing to a full ERP program. AI-assisted analysis covered 97 projects and identified 17 modules — with zero erroneous conclusions in the delivered result. The decisive design fact is that no AI finding entered the report without passing a human verification gate. The reliability lived in the protocol, not in any assumption of model infallibility.
+VERIFIED: the Invisible Risk engagement. A Nordic transaction-processing operator serving a multi-million customer base needed a dependable pre-project analysis before committing to a full ERP program. AI-assisted analysis covered 97 projects and identified 17 modules — with zero erroneous conclusions in the delivered result. The decisive design fact is that no AI finding entered the report without passing a human verification gate. The reliability lived in the protocol, not in any assumption of model infallibility.
 
-VERIFIED: evidence-tagged discovery at a Nordic transaction-processing enterprise. From roughly 220,000 lines of legacy code, 143 business rules were extracted at 94 percent confidence, supported by 312 evidence-tagged citations — meaning every finding in the report traces to a specific line of source code and can be audited on challenge. The operating principle: discovery you can audit beats discovery you must believe.
+VERIFIED: evidence-tagged discovery on the same engagement. From roughly 220,000 lines of legacy code, over one hundred business rules were extracted, supported by 312 evidence-tagged citations — meaning every finding in the report traces to a specific line of source code and can be audited on challenge. The full scan also surfaced 529 unauthenticated REST endpoints nobody on the client side knew existed. The operating principle: discovery you can audit beats discovery you must believe.
 
 VERIFIED: Antystyki.pl, the author's own AI content pipeline for statistics journalism, draws on more than 17 statistical sources and passes every published item through a human-in-the-loop governance gate. Even a pipeline whose entire subject is statistical accuracy keeps a human on the trigger.
 

@@ -20,4 +20,4 @@ Notice that not one of these is solved by showing more features — fear and ide
 
 Leaders: before booking another feature tour, spend a week watching your quiet non-users and name the friction you're actually looking at. The treatment depends on the diagnosis.
 
-#AIMindset #ChangeManagement #SopraSteria
+#AIMindset #ChangeManagement

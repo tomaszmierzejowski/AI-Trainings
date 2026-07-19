@@ -1,5 +1,5 @@
 # LinkedIn Campaign — THE ORDER
-## AI Mindset | Tuesdays | Tomasz Mierzejowski / Sopra Steria
+## AI Mindset | Tuesdays | Tomasz Mierzejowski — independent AI-Mindset educator
 
 ---
 

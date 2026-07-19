@@ -1,13 +1,13 @@
-Państwowa organizacja badawcza prowadziła oprogramowanie pomiarowe na ponad 20 zdalnych stacjach terenowych — i nie mogła go aktualizować, dopóki stacje pracowały w terenie. Każde odroczenie utrudniało następne: nieudokumentowane zależności, brakujące konfiguracje, przestarzały stos technologiczny po cichu zbierający krytyczne CVE. Nikt nie umiał nawet wycenić tego ryzyka, bo nikt nie widział go w całości.
+Instytut publiczny przez 2 lata nie mógł wdrażać oprogramowania na własny sprzęt. Nikt w zespole nie potrafił z pewnością powiedzieć dlaczego — pipeline wdrożeniowy wymknął się pełnemu zrozumieniu.
 
-Problem nie leżał w zespole. Ten zespół pracował bez mapy i bez okna na aktualizację.
+Najpierw zrobiliśmy pełne discovery. Ujawniło ponad 200 znanych CVE, których zespół nie śledził. Potem poszliśmy dalej: przeczytaliśmy historię gita tak samo uważnie, jak kod. Dziesięć gałęzi wyglądało na aktywne. Tylko trzy faktycznie działały produkcyjnie.
 
-Nie zaczęliśmy od dokumentacji. Przeczytaliśmy kod. Ze źródeł odtworzyliśmy mapę środowiska, prześledziliśmy zależności, zrekonstruowaliśmy konfiguracje, a po drodze wyszło ponad 200 znanych podatności.
+Dopasowaliśmy każdą z tych trzech realnych gałęzi do konkretnego sprzętu, na który miała trafiać, i zautomatyzowaliśmy pipeline wokół tego mapowania.
 
-Trzy tygodnie później organizacja po raz pierwszy miała pełny obraz swojej ekspozycji bezpieczeństwa.
+2-letnia blokada się skończyła. Instytut mógł znów wdrażać na swój sprzęt — automatycznie, po raz pierwszy od jej wystąpienia.
 
-Lata odraczanych aktualizacji, trzy tygodnie czytania. Szacowany zwrot: 16x dzięki zapobiegnięciu awarii — "szacowany", bo unikniętych strat się nie mierzy, tylko prognozuje. Każda inna liczba w tym poście jest zweryfikowana.
+Blokada nigdy tak naprawdę nie siedziała w kodzie. Siedziała w tym, na którą wersję kodu ktokolwiek w ogóle patrzył.
 
-Jeśli macie system, którego nie da się aktualizować, bo okno nigdy się nie otwiera, zacznijcie od jednego pytania: kto naprawdę przeczytał, co tam jest?
+Jeśli Wasze wdrożenie utknęło na dłużej, niż ktokolwiek chce przyznać, zacznijcie od jednego pytania: czy ktoś naprawdę przeczytał historię gałęzi, nie tylko tę aktualną?
 
 #ModernizacjaAplikacji #EnterpriseIT #SopraSteria

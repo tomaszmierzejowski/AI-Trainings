@@ -63,7 +63,7 @@ One line: "You don't manage the typing. You manage the org chart."
 
 **Slide 14 — This is not theory: the discovery pipeline** *(VERIFIED)*
 The author's production pipeline for legacy-system discovery: staged, specialized agents — ingestion → semantic analysis → security scan → compliance mapping → synthesis — with human verification gates between stages.
-Results (from Modules 1–3, now explained): 20 apps in 3 weeks; 4–8× faster understanding (Project Velocity); 143 rules @94% confidence with 312 evidence tags.
+Results (from Modules 1–3, now explained): 20 apps in 3 weeks; 4–8× faster understanding (Proof of Scale); 100+ business rules with 312 evidence tags.
 
 **Slide 15 — The economics** *(VERIFIED)*
 Same discovery scope: ~3 weeks orchestrated vs. ~14 weeks traditional; ≈87% cost reduction on the reference engagement (discovery and analysis phase only).

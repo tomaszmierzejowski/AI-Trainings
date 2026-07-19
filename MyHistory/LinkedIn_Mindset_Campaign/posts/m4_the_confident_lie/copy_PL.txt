@@ -18,4 +18,4 @@ To jest prawdziwy problem zaufania do AI w Waszej firmie. Że AI zmyśla — to 
 
 Lekarstwo istnieje i zajmuje 60 sekund. O nim w przyszły wtorek. A do tego czasu szczery autotest: czy Wasz zespół złapałby błąd nr 3?
 
-#AIMindset #KrytyczneMyslenie #SopraSteriaPolska
+#AIMindset #KrytyczneMyslenie

@@ -25,7 +25,7 @@ Zanim kliknę „opublikuj", czytam tekst na głos. Jeśli brzmi jak tłumaczeni
 
 - Pierwsza linijka mówi wprost, o czym jest post. Bez zagadek.
 - Najwyżej jedno wezwanie na post (napisz, sprawdź, odezwij się) — albo żadne.
-- Maksymalnie 3 hashtagi. Po polsku zawsze #SopraSteriaPolska.
+- Maksymalnie 3 hashtagi. `#SopraSteriaPolska` / `#SopraSteria` tylko w kampanii Modernization (czwartkowej) — to oficjalna oferta Sopra Steria. W kampanii Mindset i wszędzie indziej, co nie jest CV/portfolio, marki Sopra Steria nie używamy — to prywatna praktyka szkoleniowa, nie firmowa (decyzja 2026-07-19, patrz `SOURCE_OF_TRUTH.md`).
 - Prawdziwe historie, prawdziwe liczby, własne zdanie — także wtedy, gdy jest niewygodne. Wpadki zostają w tekście.
 - Krótko, bo wyleciało wypełnienie — nie dlatego, że wyleciała treść.
 

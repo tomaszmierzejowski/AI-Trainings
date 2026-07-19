@@ -26,12 +26,12 @@ LLMs understand and reason; databases, code, and documents hold the facts. The w
 Three grounding behaviors, cheapest first: (1) paste the source into the prompt; (2) use source-grounded tools (NotebookLM, RAG) that cite; (3) demand citations and click them.
 One line: "No citation, no claim — the same standard I'm held to on these slides."
 
-**Slide 6 — Case: Project Axiom** *(VERIFIED)*
-A national infrastructure operator needed a reliable pre-ERP analysis. AI-assisted analysis of **97 projects**, 17 modules identified — **zero erroneous conclusions**.
+**Slide 6 — Case: Invisible Risk** *(VERIFIED)*
+A Nordic transaction-processing operator needed a reliable pre-ERP analysis. AI-assisted analysis of **97 projects**, 17 modules identified — **zero erroneous conclusions**.
 The how: every AI finding passed a human verification gate before entering the report. Not a better model — a better *protocol*.
 
 **Slide 7 — Case: evidence-tagged discovery** *(VERIFIED)*
-A Nordic transaction-processing enterprise: **143 business rules** extracted from ~220,000 lines of legacy code at **94% confidence** — with **312 evidence-tagged citations**, every finding traceable to a line of source code.
+The same engagement: **100+ business rules** extracted from ~220,000 lines of legacy code — with **312 evidence-tagged citations**, every finding traceable to a line of source code. The full scan also surfaced **529 unauthenticated endpoints** nobody knew existed.
 One line: "Discovery you can audit beats discovery you must believe."
 
 **Slide 8 — Why this matters: hidden complexity** *(STUDY)*

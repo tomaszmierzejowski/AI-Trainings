@@ -51,7 +51,7 @@ Constraint matters: the task must be (a) recurring, (b) theirs personally, (c) s
 3. "What's a task where you'd be embarrassed to be seen using AI? Why?"
 
 ## Likely objections & responses
-- **"AI output quality isn't good enough for our domain."** — "Possibly. Which task did you test, with which model, and when? Models from 18 months ago are not evidence about today. In Project Axiom we analyzed 97 projects with zero erroneous conclusions — because verification was designed in, not because the model was perfect." Offer to test their hardest example live in Module 2.
+- **"AI output quality isn't good enough for our domain."** — "Possibly. Which task did you test, with which model, and when? Models from 18 months ago are not evidence about today. In the Invisible Risk engagement we analyzed 97 projects with zero erroneous conclusions — because verification was designed in, not because the model was perfect." Offer to test their hardest example live in Module 2.
 - **"This will make juniors lazy / they'll never learn fundamentals."** — "The field data says the opposite direction: less-tenured people gained the most. The risk is real but it's a *verification-habit* problem — Module 3 — not a reason for abstinence."
 - **"Is this just hype? We've seen tech waves before."** — Agree, then pivot to the badge system: "That's why every claim today carries a badge. Judge the verified projects, not the hype."
 - **"Our data can't go into these tools."** — Park it visibly: "Governance is Module 3, and it's a solvable configuration problem, not a blocker. Write your specific constraint on the parking lot; I'll address it there."

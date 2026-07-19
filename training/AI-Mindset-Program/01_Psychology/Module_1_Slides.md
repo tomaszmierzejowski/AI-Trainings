@@ -25,8 +25,8 @@ Photo-style visual: a wooden playhouse sketch.
 No metrics on this slide — it's the hook.
 
 **Slide 5 — Same pattern, professional scale** *(VERIFIED)*
-Project Terrain: generative AI in physical playground design.
-~200 design variants · 8 iteration rounds · 3–4× cost reduction vs. traditional approach.
+Proof of Scale: 20 legacy Java/J2EE applications understood in 3 weeks.
+20 apps analyzed as one system · 3 weeks of full discovery vs. an 8–14 week estimate · 187 API endpoints mapped.
 One line: "Same behavior as the Domek. Different stakes."
 
 **Slide 6 — Same pattern, highest stakes** *(VERIFIED)*
@@ -74,7 +74,7 @@ Visual: rod motif from slide 1, now handed over.
 
 **Slide 15 — Why you can trust the messenger** *(VERIFIED)*
 "Nie uczę teorii — I don't teach theory."
-14 years of engineering. Project Meridian-Core: 5+ years of continuous modernization of a global mission-critical platform, zero operational interruptions.
+14 years of engineering. 5+ years of continuous modernization of a global mission-critical platform, zero operational interruptions.
 One line: "This advice is written by someone who carries production risk."
 
 **Slide 16 — The reframe**

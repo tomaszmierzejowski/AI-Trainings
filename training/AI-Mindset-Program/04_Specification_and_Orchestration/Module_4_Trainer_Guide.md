@@ -35,7 +35,7 @@ MCP facts you can state with confidence: Anthropic, November 2024, open standard
 Demo risk management: MCP demos are live-demo-fragile. Test the same morning; keep a recording as fallback; a smooth recording beats a broken live demo every time.
 
 ### Slides 14–16 (The production pipeline — your strongest material)
-This is where three modules of metrics get their explanation: the numbers the audience has seen since Module 1 (20 apps/3 weeks, 4–8×, 143 rules @94%) were produced *by the thing this module teaches* — staged specialist agents with human verification gates. Say it explicitly: "You've been looking at orchestration's output for two days. This is the machine."
+This is where three modules of metrics get their explanation: the numbers the audience has seen since Module 1 (20 apps/3 weeks, 4–8×, 100+ business rules) were produced *by the thing this module teaches* — staged specialist agents with human verification gates. Say it explicitly: "You've been looking at orchestration's output for two days. This is the machine."
 Slide 16 (failure modes) is your credibility peak — do not rush it. Field-honest notes: error propagation is the nastiest (one bad extraction quietly poisons everything downstream — which is *why* gates sit between stages, not just at the end); black-box outputs are a real adoption killer — internal enterprise feedback on early discovery tooling was precisely "too technical, too much of a black box" — evidence tagging exists because stakeholders must be able to audit, not believe. Do not attribute that feedback to any named organization.
 
 ### Slide 17 (Career reframe)

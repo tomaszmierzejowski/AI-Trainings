@@ -35,33 +35,41 @@ Optional add-on track: the existing 3-day technical masterclass ("from magic to 
 
 ## 3. Anonymization key (INTERNAL ONLY)
 
+**Consolidated 2026-07-19 (v1.5) — only 4 Sopra Steria case studies remain in active use, matching
+the published LinkedIn campaign exactly (`MyHistory/LinkedIn_Campaign/posts/`). Project
+Meridian-Core, Project Terrain, and the old Alpha-Epsilon NotebookLM scheme are retired — see §4a.**
+
 | Name used in materials | Real engagement | Rule |
 |---|---|---|
-| Project Velocity | Nordic 20-app legacy discovery | Portfolio codename — public on tomaszmierzejowski.pl |
-| Project Axiom | National infrastructure operator pre-ERP analysis | Portfolio codename — public |
-| Project Meridian-Core | Global professional-services platform, 5-year modernization | Portfolio codename — public |
-| Project Terrain | Generative AI playground design | Portfolio codename — public |
-| "the 4-day rescue" / "a Norwegian children's-research non-profit" | Barnas Plattform Xamarin→MAUI migration | Anonymized per author decision 2026-07-03 |
-| "a Nordic transaction-processing enterprise" | Billing/CRM discovery (529 endpoints) | Anonymized; never say industry vertical |
-| "a government research organization" | Maritime research platform rescue (200+ CVEs) | Anonymized per campaign banned-phrases rule |
+| Proof of Scale (was: Project Velocity, then briefly Project Axiom — both retired) | Nordic 20-app automotive dealer-platform discovery | Descriptive name — public on tomaszmierzejowski.pl |
+| Invisible Risk (was separately "Project Axiom" + "a Nordic transaction-processing enterprise" — same client, one story now) | The same Nordic tolling/transaction-processing operator — endpoint risk + business-rule extraction | Anonymized; never say industry vertical |
+| "the 4-day rescue" / Proof of Speed / "a Norwegian children's-research non-profit" | Barnas Plattform Xamarin→MAUI migration | Anonymized per author decision 2026-07-03 |
+| The Rescue / "Public Institute" (was: "a government research organization" and, elsewhere, the conflicting "Oceanic Research Institute" — both retired) | Public-sector institute — CVE discovery + branch/hardware deployment fix | Anonymized as "Public Institute," no further qualifying detail |
 | EventCo | First external training customer — PEGA Sp. z o.o. (pega.gg), esports & gaming events agency, Katowice: education, events, esports, marketing. Non-IT; team uses ChatGPT for public-bid search, document prep, event materials | Anonymized per author decision 2026-07-03 |
-| PresoGen AI, Lidka, Mana Menu, Antystyki.pl | Author's own products | Named — author's decision |
+| PresoGen AI, Lidka, Mana Menu, Antystyki.pl, Domek Dla Dzieci, children's audiobooks, the portfolio website, LifeAutomations | Author's own products | Named — author's decision |
 
 ## 4. Evidence register
 
 ### Tier A — Verified, author's own delivered work (preferred evidence)
-- **Project Velocity:** 4–8× faster application understanding; 20 legacy Java/J2EE applications; 3-week discovery; 187 endpoints mapped.
-- **Project Axiom:** 97 projects analyzed, 17 modules identified, zero erroneous conclusions.
-- **Project Meridian-Core:** 5+ year modernization program, zero operational interruptions.
-- **Project Terrain:** 3–4× cost reduction vs. traditional design; ~200 design variants; 8 iteration rounds.
-- **4-day rescue (anonymized):** Android-only app; Google Play deprecating Xamarin.Forms; Xamarin→.NET MAUI in 4 days vs. 4–8 weeks typical; 92% code preservation; zero regressions; 15% faster app startup; Google Play approval on first submission. ROI: use the conservative **4× estimate**, not the 10×+ marketing figure (per the author's own banned-phrases discipline).
-- **Nordic transaction-processing enterprise:** 529 REST endpoints documented; 143 business rules extracted at 94% confidence from ~220,000 lines; 312 evidence-tagged citations; 3-week delivery vs. ~6 months traditional.
-- **Government research organization:** 200+ known CVEs surfaced; could not update measuring software while ships were out at sea; containerized and deployed; 16× ROI (estimated).
-- **Discovery economics:** ~500,000 NOK vs. ~2,300,000 NOK traditional (discovery and analysis phase only) — 3 weeks vs. 14 weeks. ⚠️ The 500K/2.3M pair computes to ≈78%; the canonical "87%" is the hours-basis cross-engagement average. Never show "87%" next to these two raw numbers — a skeptical participant with a calculator will catch it. Raw pair alone, or "87%" alone.
+- **Proof of Scale (Nordic automotive dealer-platform discovery):** 4–8× faster application understanding; 20 legacy Java/J2EE applications; 3-week discovery; 187 endpoints mapped. Discovery/analysis cost reduction: 87% (never state in the same sentence as the raw NOK pair below).
+- **Invisible Risk (Nordic tolling/transaction-processing operator):** 529 unauthenticated REST endpoints documented; 100+ business rules extracted; 97 projects analyzed across 17 modules; zero erroneous conclusions (human verification gates); 3-week delivery vs. ~6 months traditional.
+- **Proof of Speed / 4-day rescue (anonymized):** Android-only app; Google Play deprecating Xamarin.Forms; Xamarin→.NET MAUI in 4 days vs. 4–8 weeks typical; 92% code preservation; zero regressions; 15% faster app startup; Google Play approval on first submission. ROI: use the conservative **4× estimate**, not the 10×+ marketing figure (per the author's own banned-phrases discipline).
+- **The Rescue / Public Institute:** a full discovery run surfaced 200+ known CVEs; the institute could not deploy software to their hardware for 2 years; root cause found by analyzing GitHub — 10 active-looking branches, only 3 actually in production use, each tied to a different piece of custom hardware; matched the 3 real branches to their hardware and automated deployment, ending the 2-year block. No ROI multiplier — not calculated for this engagement, don't invent one.
+- **Discovery economics (Proof of Scale):** ~500,000 NOK vs. ~2,300,000 NOK traditional (discovery and analysis phase only) — 3 weeks vs. 14 weeks. ⚠️ The 500K/2.3M pair computes to ≈78%; the canonical "87%" is the hours-basis cross-engagement average. Never show "87%" next to these two raw numbers — a skeptical participant with a calculator will catch it. Raw pair alone, or "87%" alone.
 - **PresoGen AI:** ~600 automated tests; 3 LLM providers; 3 export formats.
 - **Mana Menu:** ~657 automated tests; 37 controllers; 554 recipes.
 - **Lidka:** non-technical publisher shipped a working audiobook store in days with full owner autonomy (Tpay + InPost integrations).
 - **Antystyki.pl:** AI content pipeline with human-in-the-loop governance; 17+ statistical sources; .NET 9 + React 19.
+- **Domek Dla Dzieci:** a personal project, not a client engagement — planned the architecture and materials for a children's playhouse and ordered the materials via Claude in about an hour. Demonstrates architectural literacy and time saved; no "traditional design" cost-reduction multiplier — that comparison doesn't apply to a personal project (previously mis-filed as the enterprise case study "Project Terrain"; that framing is retired, see §4a).
+- **Children's audiobooks:** [TOMASZ: add verified specifics — production pipeline, episode count, or a process detail worth citing].
+
+### 4a. Retired (2026-07-19, v1.5) — do not use; kept only so old references can be traced
+- **Project Velocity / Project Axiom** → both superseded by **Proof of Scale** (same engagement renamed twice: Velocity → Axiom on 2026-07-19, then Axiom → Proof of Scale the same day per author decision — the final set uses the campaign-post codenames, no invented "Project X" names). Never use Velocity or Axiom.
+- **Project Meridian-Core / Worktime 2.0** → dropped as a public case study per author decision (it's Sopra Steria's own internal platform, not an anonymized external client, and wasn't one of the 4 approved stories). "Worktime 2.0" may still appear as a plain line in the CV's work-history section — normal résumé content, not a marketed proof point.
+- **Project Terrain** → was actually the Domek Dla Dzieci personal project, mis-framed as a benchmarked case study with invented-sounding precision ("~200 design variants, 8 iteration rounds, 3-4× cost reduction"). Use Domek Dla Dzieci above instead, without the cost-reduction claim.
+- **The old Project Alpha/Beta/Gamma/Delta/Epsilon scheme** (from the NotebookLM package: `MyHistory/00_README.md`, `02_AMF_Case_Studies.md`, etc.) → superseded by the 4-case-study set above: Alpha = Proof of Scale, Gamma = Proof of Speed, Delta = The Rescue/Public Institute. Beta and Epsilon don't map cleanly onto the current set — don't reuse them.
+- **"a government research organization" / "Oceanic Research Institute"** → both retired in favor of "Public Institute." Also retired: the "measuring software / ships were out at sea" framing and the "16× ROI (estimated)" figure for this engagement — replaced by the branch/hardware facts above.
+- **Business rules count** → use **100+** (not 143 @ 94% confidence, and not the stale pre-deduplication "100" some older files carry).
 
 ### Tier B — External studies (use only where they speak to behavior change)
 - **Peng et al. 2023 (GitHub/Microsoft/MIT RCT):** developers with Copilot completed a scoped task 55.8% faster. Behavioral relevance: the gain required accepting a new interaction pattern, not just installing the tool.
@@ -75,7 +83,7 @@ Optional add-on track: the existing 3-day technical masterclass ("from magic to 
 
 ### Known inconsistencies resolved for this program
 - 4-day-rescue ROI: internal docs say both "4×" and "10×+". **Use 4× (estimated).**
-- Business rules count: use **~143 at 94% confidence** (the evidence-tagged figure), not inflated variants.
+- Business rules count (2026-07-19 correction): use **100+**. Earlier drafts used "143 @ 94% confidence"; older ones used a pre-deduplication "100." Both retired — see §4a.
 
 ## 5. First-customer handling (EventCo = pega.gg) — CORRECTED 2026-07-03
 
