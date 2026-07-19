@@ -1,3 +1,5 @@
+[DEPRECATED 2026-07-19] Mechanika algorytmiczna wycofana — obowiązują zasady z MyHistory/CONTENT_RULES.md. Plik zostaje wyłącznie jako archiwum; nie używać przy publikacji (liczby i hooki mogą być nieaktualne).
+
 VARIANT A (primary):
 Ten posts ago I told you nobody had ever read your code. This post is about what happens if you decide someone finally should.
 

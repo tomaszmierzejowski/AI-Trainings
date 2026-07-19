@@ -1,31 +1,22 @@
 I'm about to do something consultants don't do: publish the numbers.
 
-Not "up to." Not "in our experience." Not an industry benchmark with an asterisk.
-
-Every number below comes from a real engagement with a real client. Every finding traces to a line in source code. Where a number is estimated, I say so — and explain why.
+Every number below comes from a real engagement with a real client. Every finding traces to a line in source code. Where a number is an estimate, I say so — and explain why.
 
 The track record, two years of AI discovery and modernization (2024→2026):
 
-→ 6+ enterprise engagements
-→ 30+ repositories analyzed
-→ Zero regressions across every transformation
-→ 100% on-time delivery
-→ 100% first-submission Google Play approval (Android-only migration)
-→ 500K NOK vs. a 2.3M NOK traditional quote — verified cost on one discovery engagement (discovery and analysis phase only)
-→ 4 days for a platform migration the industry standard puts at 4–6 weeks
-→ 3 weeks to inventory a platform that couldn't be updated while its field installations were deployed
-→ 20x faster discovery than traditional sampling-based assessment
-→ Estimated 8–10x average ROI — "estimated," because we separate what is measured from what is projected
+- 30+ repositories analyzed across 6+ enterprise engagements
+- Zero regressions across every transformation
+- 100% on-time delivery
+- 100% first-submission Google Play approval (Android-only migration)
+- 500K NOK vs. a 2.3M NOK traditional quote — verified cost on one discovery engagement (discovery and analysis phase only)
+- 4 days for a platform migration the industry standard puts at 4–6 weeks
+- 3 weeks to inventory a platform that couldn't be updated while its field installations were deployed
+- 20x faster discovery than traditional sampling-based assessment
+- Estimated ROI between 4x and 16x, depending on the engagement — "estimated", because we separate what is measured from what is projected
 
-Why publish this?
+Why publish this? Because every vendor in this market tells a story, and the VP Engineering this series was written for has heard them all. Numbers you're willing to be challenged on are a different kind of claim. So challenge them: ask me in the comments how any number above was measured. That's not a rhetorical invitation.
 
-Because every vendor in this market tells a story, and Stefan — the VP Engineering this series was written for — has heard all of them. Stories are cheap. Numbers you're willing to be challenged on are not.
-
-So challenge them. Ask me in the comments how any number above was measured. That's not a rhetorical invitation.
-
-And if you manage a legacy platform and this series described your situation:
-
-DM me one sentence about your platform. I'll send you the 10 questions we answer before touching any codebase — the same list we use to qualify engagements. If our approach doesn't fit your situation, I'll tell you that in the first reply.
+And if you manage a legacy platform and this series described your situation: DM me one sentence about it. I'll send you the 10 questions we answer before touching any codebase — the same list we use to qualify engagements. If our approach doesn't fit your situation, I'll tell you that in the first reply.
 
 Every number verified. Every finding traced to source code.
 

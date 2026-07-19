@@ -1,4 +1,4 @@
-Your smartest people are the ones quietly not using AI. That's not a paradox. That's the diagnosis.
+Your smartest people are the ones quietly not using AI. It looks like a paradox; it's actually a diagnosis.
 
 Eight months after the licenses arrived, every leader sees the same curve: enthusiasm in week one, silence by month two. The standard explanation — "they need more training on the tools" — buys another feature tour and changes nothing.
 
@@ -16,8 +16,8 @@ One bad hallucination in week one and the verdict is in: "unreliable." (The same
 FRICTION 4 — Habit inertia.
 No opinion at all. The old workflow simply runs, the way it has for fifteen years. The strongest force on this list, because it doesn't feel like resistance. It feels like Tuesday.
 
-Notice: not one of these is solved by showing more features. Fear isn't a knowledge gap. Identity isn't a knowledge gap. Yet "more tool training" is the only lever most organizations pull.
+Notice that not one of these is solved by showing more features — fear and identity aren't knowledge gaps. Yet "more tool training" is the only lever most organizations pull.
 
-Leaders — look at your quiet non-users this week. Which friction are you actually looking at?
+Leaders: before booking another feature tour, spend a week watching your quiet non-users and name the friction you're actually looking at. The treatment depends on the diagnosis.
 
 #AIMindset #ChangeManagement #SopraSteria

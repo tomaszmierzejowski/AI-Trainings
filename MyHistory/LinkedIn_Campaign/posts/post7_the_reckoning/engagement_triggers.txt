@@ -1,3 +1,5 @@
+[DEPRECATED 2026-07-19] Mechanika algorytmiczna wycofana — obowiązują zasady z MyHistory/CONTENT_RULES.md. Plik zostaje wyłącznie jako archiwum; nie używać przy publikacji (liczby i hooki mogą być nieaktualne).
+
 TRIGGER 1 — paste as reply to any comment from a series follower:
 "If you've followed this series: which post was most relevant to your situation? I'm asking because it shapes what I write next. The series continues — the format depends on what landed."
 

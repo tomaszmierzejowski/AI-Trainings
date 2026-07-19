@@ -1,6 +1,6 @@
 Every company has an AI hero. The hero is the problem.
 
-You know them. The one person who "gets it." They automate their reports, they draft everything in minutes, colleagues bring them tasks like offerings. Management points at them in town halls: proof we're an AI-forward company.
+You know them. The one person who "gets it." They automate their reports, they draft everything in minutes, colleagues bring them tasks like offerings. Management points at them in town halls as proof that the company "gets AI".
 
 Here's what the hero actually is: a single point of failure wearing a cape.
 
@@ -16,6 +16,6 @@ Read that last part again. The correction is the point. It tells every fearful s
 
 Heroes centralize capability. Leaders who show their corrections distribute it.
 
-Does your company have a hero — or a habit? Honest answers only.
+One look at your org chart tells you which one your company has: a habit, or a person the habit was outsourced to.
 
 #AIMindset #AILeadership #SopraSteria

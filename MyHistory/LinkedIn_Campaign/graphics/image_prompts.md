@@ -55,18 +55,18 @@ Top-down flat-lay of a 10 by 10 grid of small paper documents on a pale lavender
 
 ## POST 7 — "THE RECKONING" (Thursday slot, carousel cover + share graphic)
 
-**What the post says:** The full verified track record, published openly: 6+ engagements, 100+ codebases, zero regressions, 100% on-time, 4 days vs 4–6 weeks, 78% cost reduction, with an explicit invitation to challenge any number.
+**What the post says:** The full verified track record, published openly: 6+ engagements, 30+ repositories, zero regressions, 100% on-time, 4 days vs 4–6 weeks, 500K vs 2.3M NOK on one discovery, with an explicit invitation to challenge any number.
 
 **The one idea the image must carry:** a consultant publishing real numbers and inviting challenge — receipts, not promises.
 
 **Primary prompt (text-capable model):**
-A dark, authoritative "receipt" poster. Background: deep purple-black (#1A0A2E) with a very subtle texture of out-of-focus source code in dark purple (#4D1D82, barely legible, 10% opacity). Centered: a tall narrow paper receipt, slightly angled, printed in crisp monospaced type, glowing softly white against the dark. Receipt lines, top to bottom: "ENTERPRISE MODERNIZATION — 18 MONTHS", a dotted divider, then line items: "engagements … 6+", "codebases analyzed … 100+", "regressions … 0", "on-time delivery … 100%", "platform migration … 4 days (industry: 4–6 wks)", "discovery cost … −78%", dotted divider, then in orange (#E8640A) bold at the receipt's total position: "EVERY NUMBER VERIFIED". A small orange stamp mark angled across the bottom corner of the receipt reading "CHALLENGE ANY LINE". Moody rim light, shallow depth of field, photorealistic still-life, no people, no logos. 4:5 vertical, 1080×1350.
+A dark, authoritative "receipt" poster. Background: deep purple-black (#1A0A2E) with a very subtle texture of out-of-focus source code in dark purple (#4D1D82, barely legible, 10% opacity). Centered: a tall narrow paper receipt, slightly angled, printed in crisp monospaced type, glowing softly white against the dark. Receipt lines, top to bottom: "AI DISCOVERY & MODERNIZATION — 2024→2026", a dotted divider, then line items: "engagements … 6+", "repositories analyzed … 30+", "regressions … 0", "on-time delivery … 100%", "platform migration … 4 days (industry: 4–6 wks)", "discovery cost … 500K vs 2.3M NOK", dotted divider, then in orange (#E8640A) bold at the receipt's total position: "EVERY NUMBER VERIFIED". A small orange stamp mark angled across the bottom corner of the receipt reading "CHALLENGE ANY LINE". Moody rim light, shallow depth of field, photorealistic still-life, no people, no logos. 4:5 vertical, 1080×1350.
 
 **No-text fallback (Midjourney):**
 A single long paper receipt standing upright on a dark reflective surface, lit dramatically from one side with warm orange rim light against a deep purple-black void, faint blurred code projected in the background, photorealistic product-photography style, moody, minimal, no legible text, no people --ar 4:5 --v 6 --style raw
 *Then overlay the receipt line items in Canva using a monospaced font (JetBrains Mono / Courier), exact copy above.*
 
-**Alt text:** A printed receipt listing the verified 18-month track record — 6+ engagements, 100+ codebases, zero regressions, 4-day migration, 78% cost reduction — stamped "challenge any line".
+**Alt text:** A printed receipt listing the verified 2024→2026 track record — 6+ engagements, 30+ repositories, zero regressions, 4-day migration, 500K vs 2.3M NOK discovery cost — stamped "challenge any line".
 
 ---
 

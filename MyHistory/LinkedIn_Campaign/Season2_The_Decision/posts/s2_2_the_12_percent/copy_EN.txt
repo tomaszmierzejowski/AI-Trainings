@@ -1,25 +1,23 @@
-Here's a question your last assessment vendor hoped you'd never ask:
+[TOMASZ: potwierdź liczbę 12% — post twierdzi "widziałem szczerą odpowiedź: 12%". Ta liczba występuje w pliku persony (fikcja robocza), nie w Evidence Register. Jeśli nie masz jej z realnego projektu, przepisz na "kilkanaście procent, tak wygląda uczciwa odpowiedź w tej branży" albo podaj prawdziwą.]
 
-"What percentage of the codebase did you actually read?"
+Here's a question your last assessment vendor hoped you'd never ask: "What percentage of the codebase did you actually read?"
 
 I've seen the honest answer for a typical 3-week discovery sprint. It was 12%.
 
 Not because the consultants were lazy. Because reading 100% manually is economically impossible — at consultant reading speed, a 2-million-line platform is years of billable time. So the industry standardized on sampling: read the "important" parts, interview the team about the rest, extrapolate.
 
-The problem isn't the 12%. The problem is what the report did next: presented conclusions about 100% of the platform, with no coverage disclosure anywhere in 160 slides.
+The problem isn't the 12%. The problem is what the report did next: it presented conclusions about 100% of the platform, with no coverage disclosure anywhere.
 
-Imagine an auditor who checked 12% of transactions and issued an unqualified opinion on the whole ledger. You wouldn't accept it from finance. IT accepts it every year.
+Imagine an auditor who checked 12% of transactions and issued an unqualified opinion on the whole ledger. You wouldn't accept that from finance. IT accepts it every year.
 
-The self-test — pull up your last assessment report and look for:
+The self-test: pull up your last assessment report and look for three things.
 
-1. A coverage statement (what % of files was scanned, not "reviewed")
+1. A coverage statement (what % of files was scanned — scanned, not "reviewed")
 2. Source references (findings that cite files and lines, not interviews)
 3. A list of what was NOT examined
 
-Zero out of three is the industry standard. That's not an accusation of your vendor. It's the reason we built a different method.
+Zero out of three is the industry standard. That's not an accusation of your vendor — it's the reason we built a different method.
 
-Go look. Then tell me: how many out of three did your last report score?
-
-Every number verified. Every finding traced to source code.
+How many out of three did your last report score?
 
 #TechDueDiligence #EnterpriseArchitecture #SopraSteria

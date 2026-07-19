@@ -83,7 +83,7 @@
 
 **MEAT (10–48 s):**
 > Zaczęło się od jednego zdania: "Moje dzieci chcą mały domek".
-> I chcę być precyzyjny, bo to NIE jest historia, którą zwykle ogłaszają entuzjaści AI.
+> I powiedzmy dokładnie, co się wydarzyło, bo to NIE jest historia, którą zwykle ogłaszają entuzjaści AI.
 > AI nie zbudowało domku. Nie zastąpiło architekta. Zrobiło coś innego: usunęło ścianę, którą zawsze uważałem za nośną — "nie mogę nawet zacząć, bo nie wiem jak".
 > Sugestie konstrukcyjne sprawdziłem zdrowym rozsądkiem, drewno — portfelem. Dwa projekty odrzuciłem. Mój osąd był w pętli cały czas — po prostu wreszcie miał co osądzać.
 > *(wstawka: zdjęcie domku)*

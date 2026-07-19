@@ -1,31 +1,22 @@
 Zrobię coś, czego konsultanci nie robią: opublikuję liczby.
 
-Nie "do". Nie "z naszego doświadczenia". Nie branżowy benchmark z gwiazdką.
-
-Każda liczba poniżej pochodzi z realnego projektu dla realnego klienta. Każde ustalenie prowadzi do linii kodu źródłowego. Tam, gdzie liczba jest szacunkiem — mówię to wprost i wyjaśniam dlaczego.
+Każda liczba poniżej pochodzi z realnego projektu dla realnego klienta. Każde ustalenie prowadzi do linii kodu źródłowego. Tam, gdzie liczba jest szacunkiem, mówię to wprost i wyjaśniam dlaczego.
 
 Track record z dwóch lat AI discovery i modernizacji (2024→2026):
 
-→ 6+ projektów enterprise
-→ 30+ przeanalizowanych repozytoriów
-→ Zero regresji we wszystkich transformacjach
-→ 100% dostaw w terminie
-→ 100% akceptacji Google Play za pierwszym podejściem (migracja tylko na Androida)
-→ 500 tys. NOK vs 2,3 mln NOK z tradycyjnej wyceny — zweryfikowany koszt jednego discovery (wyłącznie faza discovery i analizy)
-→ 4 dni na migrację platformy, którą standard branżowy wycenia na 4–6 tygodni
-→ 3 tygodnie na inwentaryzację platformy, której nie można było aktualizować, gdy jej stacje terenowe były wdrożone
-→ Discovery 20x szybsze niż tradycyjne oceny oparte na próbkowaniu
-→ Szacunkowo 8–10x średniego ROI — "szacunkowo", bo oddzielamy to, co zmierzone, od tego, co prognozowane
+- 30+ przeanalizowanych repozytoriów w 6+ projektach enterprise
+- Zero regresji we wszystkich transformacjach
+- 100% dostaw w terminie
+- 100% akceptacji Google Play za pierwszym podejściem (migracja tylko na Androida)
+- 500 tys. NOK wobec 2,3 mln NOK z tradycyjnej wyceny — zweryfikowany koszt jednego discovery (wyłącznie faza discovery i analizy)
+- 4 dni na migrację platformy, którą standard branżowy wycenia na 4–6 tygodni
+- 3 tygodnie na inwentaryzację platformy, której nie dało się aktualizować, gdy jej stacje terenowe pracowały w terenie
+- Discovery 20x szybsze niż tradycyjne oceny oparte na próbkowaniu
+- Szacowany zwrot między 4x a 16x, zależnie od projektu — "szacowany", bo oddzielamy to, co zmierzone, od tego, co prognozowane
 
-Po co to publikować?
+Po co to publikować? Bo każdy dostawca na tym rynku opowiada historię, a szef inżynierii, dla którego pisałem tę serię, słyszał już wszystkie. Liczby, które można publicznie podważyć, to inna kategoria. Więc podważajcie: zapytajcie w komentarzu, jak zmierzono dowolną liczbę powyżej. To nie jest retoryczne zaproszenie.
 
-Bo każdy dostawca na tym rynku opowiada historię, a Stefan — VP Engineering, dla którego napisałem tę serię — słyszał już wszystkie. Historie są tanie. Liczby, które można podważyć publicznie — nie.
-
-Więc podważajcie. Zapytajcie w komentarzu, jak zmierzono dowolną liczbę powyżej. To nie jest retoryczne zaproszenie.
-
-A jeśli zarządzacie platformą legacy i ta seria opisała Waszą sytuację:
-
-Napiszcie mi w wiadomości jedno zdanie o Waszej platformie. Odeślę 10 pytań, na które odpowiadamy, zanim dotkniemy jakiegokolwiek kodu — tę samą listę, której używamy do kwalifikacji projektów. Jeśli nasze podejście nie pasuje do Waszej sytuacji, powiem to w pierwszej odpowiedzi.
+A jeśli zarządzacie platformą legacy i ta seria opisała Waszą sytuację: napiszcie mi w wiadomości jedno zdanie o niej. Odeślę 10 pytań, na które odpowiadamy, zanim dotkniemy jakiegokolwiek kodu — tę samą listę, której używamy do kwalifikacji projektów. Jeśli nasze podejście nie pasuje do Waszej sytuacji, powiem to w pierwszej odpowiedzi.
 
 Każda liczba zweryfikowana. Każde ustalenie prowadzi do linii kodu.
 

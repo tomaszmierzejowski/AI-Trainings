@@ -5,4 +5,4 @@ Research links for anyone who wants to check the numbers (please do — that's t
 
 Worth noting from the Cui study: the productivity gains varied enormously between developers. What predicted the benefit wasn't seniority — it was adoption behavior. The tool didn't make people better. The workflow did.
 
-"AI-augmented architect" is how I describe what I do because it's literally accurate. The AI amplifies coverage. The architect provides judgment. Neither works without the other.
+"AI-augmented architect" is how I describe what I do because it's literally accurate: the AI amplifies coverage, the architect supplies the judgment.

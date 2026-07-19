@@ -1,3 +1,5 @@
+[DEPRECATED 2026-07-19] Mechanika algorytmiczna wycofana — obowiązują zasady z MyHistory/CONTENT_RULES.md. Plik zostaje wyłącznie jako archiwum; nie używać przy publikacji (liczby i hooki mogą być nieaktualne).
+
 THRESHOLD: Under 250 impressions at hour 6, OR under 4 meaningful comments at hour 8.
 
 ACTION 1 — Add a technical comment at hour 3:

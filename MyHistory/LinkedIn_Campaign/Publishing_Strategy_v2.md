@@ -1,4 +1,6 @@
 # Publishing Strategy v2 — The Two-Track System
+
+> **[NOTE 2026-07-19]** Kalendarz (Part 3) i podział na tory pozostają aktualne. Mechanika algorytmiczna (warm-up choreografia, A/B hooków, rescue, KPI-instrumentacja) jest wycofana — styl i zasady publikacji nadrzędnie określa `MyHistory/CONTENT_RULES.md`.
 ## Tuesdays: AI Mindset (THE ORDER) · Thursdays: AI Modernization (THE CODE NOBODY READ → THE DECISION)
 ### Written 2026-07-05, after Posts 0–4 underperformed
 

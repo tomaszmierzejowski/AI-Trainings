@@ -1,25 +1,23 @@
-Oto pytanie, którego dostawca Waszego ostatniego audytu wolał nigdy nie usłyszeć:
+[TOMASZ: potwierdź liczbę 12% — patrz notatka w copy_EN.txt.]
 
-"Jaki procent bazy kodu faktycznie przeczytaliście?"
+Oto pytanie, którego dostawca Waszego ostatniego audytu wolał nigdy nie usłyszeć: "Jaki procent bazy kodu faktycznie przeczytaliście?"
 
 Widziałem szczerą odpowiedź dla typowego 3-tygodniowego discovery. Brzmiała: 12%.
 
 Nie dlatego, że konsultanci byli leniwi. Dlatego, że ręczne przeczytanie 100% jest ekonomicznie niemożliwe — przy tempie czytania konsultanta platforma z 2 milionami linii to lata billowanego czasu. Branża ustandaryzowała więc próbkowanie: przeczytaj "ważne" fragmenty, o resztę wypytaj zespół, ekstrapoluj.
 
-Problemem nie jest te 12%. Problemem jest to, co raport zrobił dalej: przedstawił wnioski o 100% platformy, bez słowa o pokryciu na żadnym ze 160 slajdów.
+Problemem nie jest te 12%. Problemem jest to, co raport zrobił dalej: przedstawił wnioski o 100% platformy, bez słowa o pokryciu.
 
 Wyobraźcie sobie audytora, który sprawdził 12% transakcji i wydał opinię bez zastrzeżeń o całej księdze. Od finansów byście tego nie przyjęli. IT przyjmuje to co roku.
 
-Autotest — otwórzcie swój ostatni raport z audytu i poszukajcie:
+Autotest: otwórzcie swój ostatni raport z audytu i poszukajcie trzech rzeczy.
 
-1. Deklaracji pokrycia (jaki % plików został PRZESKANOWANY, nie "przejrzany")
+1. Deklaracji pokrycia (jaki % plików został przeskanowany — przeskanowany, nie "przejrzany")
 2. Odwołań do źródła (ustalenia cytujące pliki i linie, nie wywiady)
 3. Listy tego, czego NIE zbadano
 
-Zero na trzy to standard branżowy. To nie zarzut wobec Waszego dostawcy. To powód, dla którego zbudowaliśmy inną metodę.
+Zero na trzy to standard branżowy. To nie zarzut wobec Waszego dostawcy — to powód, dla którego zbudowaliśmy inną metodę.
 
-Sprawdźcie. A potem napiszcie: ile na trzy wyszło w Waszym ostatnim raporcie?
-
-Każda liczba zweryfikowana. Każde ustalenie prowadzi do linii kodu.
+Ile na trzy wyszło w Waszym ostatnim raporcie?
 
 #AudytKodu #ArchitekturaKorporacyjna #SopraSteria

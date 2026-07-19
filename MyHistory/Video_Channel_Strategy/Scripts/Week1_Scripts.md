@@ -80,7 +80,7 @@
 **Overlay:** "zbudowany metodą, której uczę"
 
 **STAKE (3–12 s):**
-> Od lat pomagam firmom wdrażać AI jako architekt, przy prawdziwych projektach. Teraz zaczynam też uczyć tego wprost, na szkoleniach. Ale sala szkoleniowa mieści ≈20 osób. Tu — nie ma limitu miejsc.
+> Od lat pomagam firmom wdrażać AI jako architekt, przy prawdziwych projektach. Teraz buduję z tego program szkoleniowy. Ale sala szkoleniowa mieści ≈20 osób. Tu — nie ma limitu miejsc.
 
 **MEAT (12–45 s):**
 > Miałem klasyczną wymówkę: "nie umiem robić wideo". Montaż, strategia, algorytmy — nie moja bajka.

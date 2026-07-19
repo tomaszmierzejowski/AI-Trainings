@@ -1,4 +1,4 @@
-Wasi najmądrzejsi ludzie to ci, którzy po cichu nie używają AI. To nie paradoks. To diagnoza.
+Wasi najmądrzejsi ludzie to ci, którzy po cichu nie używają AI. Wygląda to na paradoks, a jest diagnozą.
 
 Osiem miesięcy po zakupie licencji każdy lider widzi tę samą krzywą: entuzjazm w pierwszym tygodniu, cisza w drugim miesiącu. Standardowe wyjaśnienie — "potrzebują więcej szkoleń z narzędzi" — kupuje kolejną wycieczkę po funkcjach i nie zmienia nic.
 
@@ -16,8 +16,8 @@ Jedna halucynacja w pierwszym tygodniu i wyrok zapada: "niewiarygodne". (Ta sama
 TARCIE 4 — Bezwładność nawyku.
 Żadnej opinii. Stary sposób pracy po prostu się wykonuje, jak od piętnastu lat. Najsilniejsza pozycja na tej liście, bo nie przypomina oporu. Przypomina wtorek.
 
-Zauważcie: żadnej z tych czterech nie leczy pokazywanie kolejnych funkcji. Strach nie jest luką w wiedzy. Tożsamość nie jest luką w wiedzy. A "więcej szkoleń z narzędzi" to jedyna dźwignia, za którą ciągnie większość organizacji.
+Zauważcie, że żadnej z tych czterech blokad nie leczy pokazywanie kolejnych funkcji — strach ani tożsamość nie są lukami w wiedzy. A "więcej szkoleń z narzędzi" to jedyna dźwignia, za którą ciągnie większość organizacji.
 
-Liderzy — przyjrzyjcie się w tym tygodniu tym, którzy u Was po cichu przestali używać AI. Na które tarcie tak naprawdę patrzycie?
+Liderzy: zanim zamówicie kolejną wycieczkę po funkcjach, przyjrzyjcie się przez tydzień tym, którzy u Was po cichu przestali używać AI, i nazwijcie ich tarcie. Leczenie zależy od diagnozy.
 
 #AIMindset #ZarzadzanieZmiana #SopraSteriaPolska

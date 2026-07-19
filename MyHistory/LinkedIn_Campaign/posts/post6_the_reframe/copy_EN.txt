@@ -1,35 +1,17 @@
-For 14 years, I read maybe 20% of any codebase I assessed.
+For 14 years, I read maybe 20% of any codebase I assessed. Everyone did — that's what an enterprise assessment was: read what you can, sample the rest, estimate from experience. Nobody called it "20% coverage". We called it discovery.
 
-Everyone did. That's what an enterprise assessment was: read what you can, sample the rest, estimate from experience.
+Enterprise architects ask me one question more than any other: "Doesn't AI hallucinate?" Yes. Constantly. And I still use it on every engagement, because of how the work is actually divided.
 
-Nobody called it "20% coverage." We called it "discovery."
+AI reads the code: thousands of files, every endpoint, every connection, every data flow. Work that used to take a team of senior consultants 8–14 weeks now takes days — on our engagements, discovery runs about 20x faster than traditional sampling.
 
-Then the ceiling moved.
+Then I read the findings. I check every line reference, separate signal from artifact, and make every trade-off decision. Nothing reaches a client that I haven't verified against the source.
 
-Enterprise architects ask me one question more than any other: "Doesn't AI hallucinate?"
+The research points the same way: in a peer-reviewed study of 4,867 developers, AI assistance meant 26% more completed tasks (Cui et al., Management Science). National Australia Bank put 6,000 developers on AI tooling and reported legacy modernization running 3x faster.
 
-Yes. Constantly. And I still use it on every engagement.
+But what convinced me wasn't a statistic. It was the first time I finished reading a complete enterprise codebase — not a sample — and understood what was actually in it.
 
-Here is the actual division of labor:
-
-AI reads the code. Thousands of files. Every endpoint. Every connection. Every data flow. Work that took 3–5 senior consultants 8–14 weeks — done in days. On our engagements, discovery runs 20x faster than traditional sampling.
-
-Then I read the findings.
-
-I check every line reference. I separate signal from artifact. I make every trade-off decision. Nothing reaches a client that I haven't verified against the source.
-
-The cognitive requirement didn't decrease. The coverage limit did.
-
-The research agrees: a peer-reviewed study of 4,867 developers measured a 26% increase in completed tasks with AI assistance (Cui et al., Management Science). National Australia Bank put 6,000 developers on AI tooling — legacy modernization 3x faster.
-
-But the moment that convinced me wasn't a statistic. It was the first time I finished reading a complete enterprise codebase — not a sample — and understood what was actually in it.
-
-The expertise matters more now, not less. It's just pointed at 100% of the picture instead of 20%.
-
-Honest question for the architects here:
+The expertise matters more now, not less. It's just pointed at the whole picture instead of a fifth of it.
 
 What percentage of the platform you're responsible for have you personally read?
-
-Every number verified. Every finding traced to source code.
 
 #SoftwareArchitecture #LegacyCode #SopraSteria

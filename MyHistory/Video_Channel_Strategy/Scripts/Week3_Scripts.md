@@ -24,7 +24,7 @@
 > Błąd 3 — odwrócony wniosek. Raport ogłasza "jest coraz lepiej", a liczby pod spodem pogarszają się co miesiąc. Udekorowany PRAWDZIWĄ statystyką jako kamuflażem.
 > Ten jest najtrudniejszy do złapania — z założenia.
 > *(plansza: [ZAŁOŻENIE PROGRAMU] — błąd zaprojektowany tak, by być najtrudniejszym do złapania)*
-> Dlaczego? Jesteśmy wytrenowani do sprawdzania faktów, nie ram. Zła liczba wygląda na złą. Zły wniosek owinięty w dobre liczby wygląda jak insight.
+> Dlaczego? Jesteśmy wytrenowani do sprawdzania faktów, nie ram. Zła liczba wygląda na złą. Zły wniosek owinięty w dobre liczby wygląda jak trafna analiza.
 > Płynność maskuje fałsz. Najlepiej napisany akapit niesie najgorszy błąd.
 > Jeśli grasz w piątkowe ZNAJDŹ KŁAMSTWO — właśnie poznałeś pełną mapę przeciwnika.
 

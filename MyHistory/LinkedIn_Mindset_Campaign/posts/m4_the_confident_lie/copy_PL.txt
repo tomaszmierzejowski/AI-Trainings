@@ -14,10 +14,8 @@ Dlaczego? Bo całe życie uczono nas sprawdzać fakty, a nie ramy. Zła liczba w
 
 Płynność maskuje fałsz. Najlepiej napisany akapit niesie najgorszy błąd — właśnie dlatego, że dobre pisanie wyłącza naszą podejrzliwość.
 
-To jest prawdziwy problem zaufania do AI w Waszej firmie. Nie "AI zmyśla" — to już wiecie. Tylko to, że zmyślenie przychodzi w najbardziej przekonującym akapicie dokumentu, trzymając prawdziwą statystykę jak tarczę.
+To jest prawdziwy problem zaufania do AI w Waszej firmie. Że AI zmyśla — to już wiecie. Mniej oczywiste jest to, że zmyślenie przychodzi w najbardziej przekonującym akapicie dokumentu, trzymając prawdziwą statystykę jak tarczę.
 
-Lekarstwem nie jest paranoja. To 60-sekundowy nawyk — post w przyszły wtorek.
-
-A do tego czasu: czy WASZ zespół złapałby błąd nr 3? A Wy?
+Lekarstwo istnieje i zajmuje 60 sekund. O nim w przyszły wtorek. A do tego czasu szczery autotest: czy Wasz zespół złapałby błąd nr 3?
 
 #AIMindset #KrytyczneMyslenie #SopraSteriaPolska

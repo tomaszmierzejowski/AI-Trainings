@@ -1,4 +1,4 @@
-Last week I asked where your most recent important piece of work actually started. I promised the map of what the answers mean. Here it is.
+Last week I asked where your most recent important piece of work actually started. I promised the map of what the answers mean — here it is.
 
 [INSERT REAL POLL RESULTS BEFORE PUBLISHING, e.g.:]
 [XX% — entirely from scratch]
@@ -6,24 +6,20 @@ Last week I asked where your most recent important piece of work actually starte
 [XX% — from a rough AI draft]
 [XX% — AI ran it; I verified]
 
-Those four answers are the four levels of working with AI. Each has a name and its own economics:
+Those four answers are the four levels of working with AI, and each has its own economics.
 
-LEVEL 1 — Curiosity. "I tried ChatGPT once." Maybe twice. It was interesting. Nothing changed.
+LEVEL 1 — Curiosity. "I tried ChatGPT once." Maybe twice. It was interesting; nothing changed.
 
 LEVEL 2 — Polish. AI gets finished work to improve, whenever I remember it exists. A smarter search box, part-time proofreader.
 
-LEVEL 3 — Draft first. Every report, analysis and plan starts with an AI draft and ends with my judgment. AI is the first step. Not the only step. The first.
+LEVEL 3 — Draft first. Every report, analysis and plan starts with an AI draft and ends with my judgment. AI is the first step — not the only one.
 
 LEVEL 4 — Design. I'm not doing the task anymore. I design a process that AI runs end-to-end, and I verify the results.
 
-Two patterns show up every time I discuss this:
+Two patterns show up every time I discuss this. First: almost everyone places themselves one level higher than their actual behavior last Monday. Second: the jump that really changes the economics of your work is 2 → 3 — and it needs no new tools, no budget, no permission. One changed reflex.
 
-1. Almost everyone places themselves one level higher than their actual behavior last Monday.
+Level 4 isn't the goal for most of us; Level 3 is. Habit research says a new reflex becomes automatic after about 66 days on average (Lally et al., 2010), but the difference in pace shows up in week one.
 
-2. The jump that actually changes the economics of your work is 2 → 3. It needs no new tools, no budget, no permission. It needs one changed reflex.
-
-Level 4 isn't the goal for most of us. Level 3 is. Habit research says a new reflex becomes automatic after ~66 days on average (Lally et al., 2010) — but the difference in pace shows up in week one.
-
-Tell me in the comments where you landed — for each level, I'll suggest the fastest first move up. 👇
+If you write your level in the comments, I'll suggest the fastest first move up from there.
 
 #AIMindset #AIAdoption #SopraSteria

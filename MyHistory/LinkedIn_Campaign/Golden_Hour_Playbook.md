@@ -1,5 +1,8 @@
 # Golden Hour Playbook
-## The 90-minute protocol for every post
+
+> **[DEPRECATED 2026-07-19]** Ta choreografia jest wycofana — obowiązują zasady z `MyHistory/CONTENT_RULES.md`. Plik zostaje jako archiwum. Z tego systemu przeżywają trzy rzeczy: publikacja rano, szybkie odpowiedzi własnymi słowami (sekcja "Reply Like a Human" niżej pozostaje aktualna) i prywatna wiadomość do osób, którym temat naprawdę się przyda.
+
+## The 90-minute protocol for every post (ARCHIWUM)
 
 ---
 

@@ -21,7 +21,7 @@
 ⏱ **40–60 s — WNIOSEK KONTRA DANE**
 ☐ Zasłoń akapit z wnioskiem. Patrz tylko na liczby.
 ☐ Jaki wniosek TY byś wyciągnął? Odsłoń. Różnią się? Złapałeś najgroźniejszy typ błędu.
-*(zły wniosek udekorowany prawdziwą statystyką wygląda jak insight — to on przeżywa audyty)*
+*(zły wniosek udekorowany prawdziwą statystyką wygląda jak trafna analiza — to on przeżywa audyty)*
 
 **Reguła na wierzch: bez źródła nie ma twierdzenia.**
 

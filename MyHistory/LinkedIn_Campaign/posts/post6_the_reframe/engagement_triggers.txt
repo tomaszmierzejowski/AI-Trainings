@@ -1,3 +1,5 @@
+[DEPRECATED 2026-07-19] Mechanika algorytmiczna wycofana — obowiązują zasady z MyHistory/CONTENT_RULES.md. Plik zostaje wyłącznie jako archiwum; nie używać przy publikacji (liczby i hooki mogą być nieaktualne).
+
 TRIGGER 1 — paste as reply to any architect or engineer comment:
 "For architects using AI tools: what's the quality control step you've found most essential? Mine is: every finding must cite the source line before it leaves my desk. Without that, there's no way to distinguish a real finding from a confident hallucination."
 

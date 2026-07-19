@@ -35,7 +35,7 @@
 16. Is there a natural champion candidate — a volunteer enthusiast colleagues already ask for help?
 
 ## F. Logistics
-17. Preferred format: 3 consecutive days / weekly half-days / other. On-site Kraków, remote, or hybrid?
+17. Preferred format: 3 consecutive days / weekly half-days / other. On-site (client's location), remote, or hybrid?
 18. Group size (target: 8–16 for labs).
 19. Anything about your client commitments or busy periods we should schedule around?
 

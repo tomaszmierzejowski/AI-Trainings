@@ -33,7 +33,7 @@ Format shift from Season 1: shorter posts (150–250 words), one idea each, ever
 1. Every impressive sentence is followed by the number that makes it real.
 2. Write to Stefan at 3am. Short declarative sentences.
 3. AI appears once per post, as a tool, never the subject.
-4. **NEW:** Every post ends with a question a VP Engineering could answer from memory, in one sentence, without confessing anything sensitive publicly.
+4. **NEW (revised 2026-07-19):** a closing question only where it's genuine — one a VP Engineering could answer from memory without confessing anything sensitive. Not every post ends with a question; identical endings across a series read as a bot (see `../../CONTENT_RULES.md`).
 5. **NEW:** Never open with context. Open with the wound.
 
 ### Numbers cleared for use (per Evidence Register, 2026-07 reconciliation)

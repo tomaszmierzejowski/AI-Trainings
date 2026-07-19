@@ -4,14 +4,14 @@ Od lat patrzę, jak szefowie inżynierii przegrywają tę samą rozmowę budżet
 
 Oto ta sama prośba, przetłumaczona na język CFO:
 
-"Operujemy aktywem, którego nikt w pełni nie zinwentaryzował. W zeszłym roku porównywalne przedsiębiorstwo znalazło 529 endpointów API bez uwierzytelniania w platformie, którą audyty obejmowały od lat — każdy z nich to potencjalne zdarzenie regulacyjne. Same kary GDPR sięgają 4% globalnego przychodu.
+"Operujemy aktywem, którego nikt w pełni nie zinwentaryzował. W jednej z analizowanych przez nas platform analiza pełnego pokrycia znalazła 529 endpointów API bez uwierzytelniania — pod pokryciem, które audyty podpisywały od lat. Każdy z nich to potencjalne zdarzenie regulacyjne; same kary RODO sięgają 4% globalnego przychodu.
 
-Inwentaryzacja kosztuje 500 tys. NOK — porównywalny projekt wyceniono tradycyjnie na 2,3 mln (redukcja o 87% wyłącznie w fazie discovery i analizy). Trzy tygodnie, stały zakres. Powstaje rejestr aktywów: każdy endpoint, każda integracja, każda reguła biznesowa, z dowodami. Cokolwiek potem zdecydujemy — modernizacja, wymiana czy nic — zdecydujemy to na podstawie inwentarza, a nie folkloru."
+Inwentaryzacja kosztuje 500 tys. NOK — porównywalny projekt wyceniono tradycyjnie na 2,3 mln (wyłącznie faza discovery i analizy). Trzy tygodnie, stały zakres. Powstaje rejestr aktywów: każdy endpoint, każda integracja, każda reguła biznesowa, z dowodami. Cokolwiek potem zdecydujemy — modernizacja, wymiana czy nic — zdecydujemy to na podstawie inwentarza, a nie folkloru.
+
+Alternatywą nie jest zaoszczędzenie 500 tysięcy. Alternatywą jest dalsze noszenie niewycenionego zobowiązania na infrastrukturze, z której żyje nasza firma."
 
 Zauważcie, co robi to tłumaczenie: nigdzie nie prosi CFO o sfinansowanie naprawy. Prosi o wycenę ryzyka — a to jest dosłownie opis jego stanowiska.
 
 Szefowie inżynierii, architekci: jakie sformułowanie naprawdę zadziałało u Was w rozmowie budżetowej?
-
-Każda liczba zweryfikowana. Każde ustalenie prowadzi do linii kodu.
 
 #CIO #EnterpriseIT #SopraSteria

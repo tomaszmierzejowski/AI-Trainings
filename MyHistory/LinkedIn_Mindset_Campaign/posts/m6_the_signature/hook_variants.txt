@@ -1,3 +1,5 @@
+[DEPRECATED 2026-07-19] Mechanika algorytmiczna wycofana — obowiązują zasady z MyHistory/CONTENT_RULES.md. Plik zostaje wyłącznie jako archiwum; nie używać przy publikacji (liczby i hooki mogą być nieaktualne).
+
 VARIANT A (primary):
 Last week I showed you the lie that survives every audit. Here's the 60 seconds that catches it.
 

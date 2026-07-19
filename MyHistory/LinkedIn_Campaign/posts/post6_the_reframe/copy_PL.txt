@@ -1,35 +1,17 @@
-Przez 14 lat czytałem może 20% każdej bazy kodu, którą oceniałem.
+Przez 14 lat czytałem może 20% każdej bazy kodu, którą oceniałem. Wszyscy tak robili — tym właśnie był audyt korporacyjny: przeczytaj, co się da, próbkuj resztę, oszacuj z doświadczenia. Nikt nie nazywał tego "20% pokrycia". Nazywaliśmy to discovery.
 
-Wszyscy tak robili. Tym właśnie był audyt korporacyjny: przeczytaj, co się da, próbkuj resztę, oszacuj z doświadczenia.
+Architekci korporacyjni zadają mi jedno pytanie częściej niż wszystkie inne: "Czy AI nie halucynuje?" Halucynuje. Ciągle. I mimo to używam go w każdym projekcie, bo podział pracy wygląda inaczej, niż się ludziom wydaje.
 
-Nikt nie nazywał tego "20% pokrycia". Nazywaliśmy to "discovery".
+AI czyta kod: tysiące plików, każdy endpoint, każde połączenie, każdy przepływ danych. Praca, która zajmowała zespołowi starszych konsultantów 8–14 tygodni, dziś zajmuje dni — w naszych projektach discovery jest około 20x szybsze niż tradycyjne próbkowanie.
 
-Potem sufit się przesunął.
+Potem ja czytam ustalenia. Sprawdzam każde odwołanie do linii kodu, oddzielam sygnał od artefaktu i podejmuję każdą decyzję o kompromisach. Do klienta nie trafia nic, czego nie zweryfikowałem ze źródłem.
 
-Architekci korporacyjni zadają mi jedno pytanie częściej niż wszystkie inne: "Czy AI nie halucynuje?"
-
-Halucynuje. Ciągle. I mimo to używam go w każdym projekcie.
-
-Oto jak naprawdę wygląda podział pracy:
-
-AI czyta kod. Tysiące plików. Każdy endpoint. Każde połączenie. Każdy przepływ danych. Praca, która zajmowała 3–5 starszym konsultantom 8–14 tygodni — zrobiona w kilka dni. W naszych projektach discovery jest 20x szybsze niż tradycyjne próbkowanie.
-
-Potem ja czytam ustalenia.
-
-Sprawdzam każde odwołanie do linii kodu. Oddzielam sygnał od artefaktu. Podejmuję każdą decyzję o kompromisach. Do klienta nie trafia nic, czego nie zweryfikowałem ze źródłem.
-
-Wymagania poznawcze nie spadły. Spadł limit pokrycia.
-
-Badania to potwierdzają: recenzowane badanie na 4867 deweloperach wykazało 26% wzrost liczby ukończonych zadań przy wsparciu AI (Cui i in., Management Science). National Australia Bank dał narzędzia AI 6000 deweloperów — modernizacja legacy 3x szybciej.
+Badania pokazują to samo: w recenzowanym badaniu na 4867 deweloperach wsparcie AI oznaczało 26% więcej ukończonych zadań (Cui i in., Management Science). National Australia Bank dał narzędzia AI 6000 deweloperów i raportuje modernizację legacy 3x szybszą.
 
 Ale mnie nie przekonała statystyka. Przekonał mnie moment, w którym pierwszy raz skończyłem czytać kompletną korporacyjną bazę kodu — nie próbkę — i zrozumiałem, co naprawdę w niej jest.
 
-Ekspertyza znaczy teraz więcej, nie mniej. Jest po prostu skierowana na 100% obrazu zamiast na 20%.
-
-Szczere pytanie do architektów:
+Ekspertyza znaczy dziś więcej, nie mniej. Jest po prostu skierowana na cały obraz, a nie na jedną piątą.
 
 Jaki procent platformy, za którą odpowiadacie, przeczytaliście osobiście?
-
-Każda liczba zweryfikowana. Każde ustalenie prowadzi do linii kodu.
 
 #ArchitekturaOprogramowania #LegacyCode #SopraSteria

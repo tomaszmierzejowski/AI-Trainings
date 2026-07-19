@@ -2,6 +2,6 @@ The question behind the question, every time: "What if the analysis finds someth
 
 It will. In six engagements we have never delivered a report that said "everything is fine." 529 unauthenticated endpoints, 98 undocumented integrations, years of deferred updates on systems that couldn't be touched while deployed — every platform over ten years old is carrying something.
 
-Here's the reframe that matters: the findings existed before we read the code. The analysis doesn't create the risk. It converts unknown risk — unpriceable, uninsurable, unmanageable — into a list with line numbers. Lists can be triaged. Unknowns can only be feared.
+The reframe that matters: the findings existed before we read the code. The analysis doesn't create the risk — it converts unknown risk into a list with line numbers, and a list can be triaged.
 
 Nobody has ever regretted the list.

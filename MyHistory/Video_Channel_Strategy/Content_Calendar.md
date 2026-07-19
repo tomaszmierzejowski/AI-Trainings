@@ -36,7 +36,7 @@ Numeracja odcinków (1.1, 2.3…) = stałe ID skryptów w `Scripts/` — nie zmi
 | Slot | Odcinek | Hook |
 |---|---|---|
 | śr | **1.2 DEMO** — Trudny mail zanim dopijesz kawę | "Najgorszy typ maila. Zanim dopiję kawę." |
-| pt | **ZK#3** — odwrócony wniosek | "To kłamstwo przeżywa każdą salę szkoleniową." |
+| pt | **ZK#3** — odwrócony wniosek | "To kłamstwo jest zaprojektowane, żeby przetrwać." |
 | sob | **2.4 DEMO** — Drugi mózg na spotkaniach | "Notatki ze spotkania napisały się same." |
 
 ### V4 · 3–9 sie · DOMEK · (LinkedIn: M3, wt 4 sie)
@@ -50,7 +50,7 @@ Numeracja odcinków (1.1, 2.3…) = stałe ID skryptów w `Scripts/` — nie zmi
 | Slot | Odcinek | Hook |
 |---|---|---|
 | śr | **3.1 MIND** — AI kłamie Ci prosto w oczy | "Podkładam trzy kłamstwa. Mądrzy łapią dwa." |
-| pt | **ZK#5 SPECIAL** — wersja rozszerzona, z historią ze szkoleń | "Ta gra pochodzi z moich szkoleń. Naprawdę." |
+| pt | **ZK#5 SPECIAL** — wersja rozszerzona, z historią ćwiczenia | "Tę grę zaprojektowałem do programu, który buduję." |
 | sob | **3.3 LIFE** — Czego AI nauczyło mnie o cierpliwości | "Najwięcej nauczyła mnie o sobie maszyna." |
 
 ### V6 · 17–23 sie · TARCIE · (LinkedIn: M5, wt 18 sie)

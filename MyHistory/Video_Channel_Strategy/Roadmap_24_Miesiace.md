@@ -61,7 +61,7 @@ To NIE jest obietnica — to cel z planem poniżej. Follower count jest wynikiem
 
 1. **Konsystencja bije genialność.** 6/6 slotów tygodniowo przez 24 miesiące = ~750 publikacji. Twórcy nie przegrywają z konkurencją — przegrywają z własnym kalendarzem. [OPINIA]
 2. **Format własny > tematy.** ZK jest Twoim aktywem — chroń rytm, iteruj mechanikę, nigdy nie oddawaj piątku. Ludzie wracają do formatów, nie do tematów.
-3. **Pierwsza godzina po publikacji należy do komentarzy.** Odpowiadaj pytaniem — wątki 5+ komentarzy zmieniają klasę zasięgu filmu. Znasz to z Golden Hour — na TT działa tak samo. [FRAMEWORK/OPINION]
+3. **Pierwsza godzina po publikacji należy do komentarzy.** Odpowiadaj szybko, własnymi słowami i za każdym razem inną strukturą — pytanie zadawaj tylko wtedy, gdy naprawdę chcesz znać odpowiedź (lekcja z LinkedIn, lipiec 2026; zasady: CONTENT_RULES.md). Żywe wątki i tak zmieniają klasę zasięgu filmu. [FRAMEWORK/OPINION]
 4. **Komentuj u dużych.** 10 min/dzień merytorycznych komentarzy pod świeżymi filmami dużych polskich kont tech/biznes = darmowa ekspozycja na cudzą widownię. Merytorycznych — jesteś anty-guru także w cudzych komentarzach.
 5. **Trend-check w poniedziałek (10 min):** przejrzyj trendujące dźwięki/formaty; adaptuj TYLKO te, które da się zagrać w Twoim mundurze (badge, dowody). Trend poza marką = wynajem cudzej tożsamości.
 6. **Wygrane filmy wzmacniaj płatnie** (od fazy 2, budżet 300–500 zł/mies.): boost wyłącznie tego, co już organicznie wygrało, nigdy ratowanie przegranych. Paliwo do ognia, nie do mokrego drewna.

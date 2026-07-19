@@ -1,34 +1,13 @@
-Państwowa organizacja badawcza prowadziła oprogramowanie pomiarowe na ponad 20 zdalnych stacjach terenowych.
+Państwowa organizacja badawcza prowadziła oprogramowanie pomiarowe na ponad 20 zdalnych stacjach terenowych — i nie mogła go aktualizować, dopóki stacje pracowały w terenie. Każde odroczenie utrudniało następne: nieudokumentowane zależności, brakujące konfiguracje, przestarzały stos technologiczny po cichu zbierający krytyczne CVE. Nikt nie umiał nawet wycenić tego ryzyka, bo nikt nie widział go w całości.
 
-Nie mogła go aktualizować, gdy stacje były wdrożone w terenie.
+Problem nie leżał w zespole. Ten zespół pracował bez mapy i bez okna na aktualizację.
 
-Nie "aktualizowała między sezonami". Nie "łatała po powrocie do sieci".
+Nie zaczęliśmy od dokumentacji. Przeczytaliśmy kod. Ze źródeł odtworzyliśmy mapę środowiska, prześledziliśmy zależności, zrekonstruowaliśmy konfiguracje, a po drodze wyszło ponad 200 znanych podatności.
 
-Nie mogła aktualizować. Gdy sprzęt pracował w terenie.
+Trzy tygodnie później organizacja po raz pierwszy miała pełny obraz swojej ekspozycji bezpieczeństwa.
 
-Każde odroczenie utrudniało następne. Nieudokumentowane zależności. Brakujące konfiguracje. Przestarzały stos gromadzący krytyczne CVE. Ekspozycja nie była spójna — więc prawie niemożliwa do wyceny.
+Lata odraczanych aktualizacji, trzy tygodnie czytania. Szacowany zwrot: 16x dzięki zapobiegnięciu awarii — "szacowany", bo unikniętych strat się nie mierzy, tylko prognozuje. Każda inna liczba w tym poście jest zweryfikowana.
 
-Ten zespół nie był niekompetentny. Pracował bez mapy — i bez okna na aktualizację.
-
-Zostaliśmy zaproszeni do pomocy. Oto co zrobiliśmy inaczej:
-
-Nie czytaliśmy dokumentacji. Czytaliśmy kod.
-
-→ Zmapowaliśmy środowisko od kodu źródłowego w górę
-→ Prześledziliśmy każdą zależność
-→ Odtworzyliśmy każdą konfigurację
-→ Po drodze: ponad 200 podatności bezpieczeństwa
-
-Trzy tygodnie później: pełny obraz ekspozycji bezpieczeństwa — po raz pierwszy.
-
-Lata odroczonych aktualizacji. Trzy tygodnie systematycznej analizy. Ta proporcja to nie kwestia talentu. To kwestia metody.
-
-Platforma jest krytyczna w dosłownym sensie — gdy nie widać, co działa na bezobsługowych stacjach terenowych, zatrzymuje się nauka o zasięgu krajowym. Szacowany zwrot: 16x dzięki zapobiegnięciu awarii. "Szacowany", bo unikniętych strat się nie mierzy, tylko prognozuje. Każda inna liczba w tym poście jest zweryfikowana.
-
-A teraz pytanie do Was:
-
-Co Wasza organizacja odwleka, bo okno na aktualizację nigdy się nie otwiera — i ile kosztowałby prawdziwy inwentarz?
-
-Każda liczba zweryfikowana. Każde ustalenie prowadzi do linii kodu.
+Jeśli macie system, którego nie da się aktualizować, bo okno nigdy się nie otwiera, zacznijcie od jednego pytania: kto naprawdę przeczytał, co tam jest?
 
 #ModernizacjaAplikacji #EnterpriseIT #SopraSteria

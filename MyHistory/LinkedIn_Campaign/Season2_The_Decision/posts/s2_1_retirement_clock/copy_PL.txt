@@ -1,25 +1,13 @@
-Gdzieś w Waszej firmie pracuje jeden inżynier, który wie, gdzie są pogrzebane trupy.
+[TOMASZ: przed publikacją potwierdź fakty tej historii — patrz notatka w copy_EN.txt.]
 
-Znacie to nazwisko. Właśnie o nim pomyśleliście.
+Gdzieś w Waszej firmie pracuje jeden inżynier, który wie, gdzie są pogrzebane trupy. Znacie to nazwisko — właśnie o nim pomyśleliście.
 
-W jednym z analizowanych przez nas przedsiębiorstw platforma działała od 20 lat. Logika biznesowa żyła w 17 modułach. Kiedy zapytaliśmy, kto potrafi wymienić, co te moduły robią, odpowiedź brzmiała: jedna osoba.
+W jednym z analizowanych przez nas przedsiębiorstw logika biznesowa żyła w 17 modułach. Kiedy zapytaliśmy, kto potrafi wymienić, co te moduły robią, odpowiedź brzmiała: jedna osoba. A ta osoba nie zamierzała zostać na zawsze.
 
-Nie zamierzał zostać na zawsze.
+Tego ryzyka nie widać na żadnym dashboardzie. Widać je w systemie HR, jako datę przejścia na emeryturę. I dokumentacja go nie naprawi — ta wiedza nigdy nie została spisana, a wywiady utrwalają to, co ludzie pamiętają, nie to, co robi kod.
 
-To ryzyko, którego nikt nie budżetuje, bo nie widać go na żadnym dashboardzie. Widać je w systemie HR — jako datę przejścia na emeryturę.
+Naprawia je przeczytanie kodu, całego. W innym projekcie analiza pełnego pokrycia odtworzyła 143 reguły biznesowe przy 94% pewności z około 220 000 linii — każda reguła powiązana z dokładnie tymi liniami, które ją implementują. Tak wygląda moment, w którym wiedza przestaje mieszkać w jednej głowie: emerytura zmienia się z incydentu czekającego na datę w zwykły wpis w kalendarzu.
 
-Dokumentacja tego nie naprawi — jego wiedza nigdy nie została spisana, a wywiady utrwalają to, co ludzie pamiętają, nie to, co robi kod.
-
-Naprawia to co innego: przeczytanie kodu. Całego. W tamtym projekcie analiza pełnego pokrycia odtworzyła 143 reguły biznesowe przy 94% pewności z około 220 000 linii — każda reguła powiązana z dokładnie tymi liniami, które ją implementują. Wiedza przestała mieszkać w jednej głowie.
-
-Jego emerytura zmieniła się z incydentu czekającego na datę w zwykły wpis w kalendarzu.
-
-Dwa pytania — pierwsze jest retoryczne:
-
-Kto jest Waszą jedną osobą?
-
-I jaki macie plan na dzień, w którym ten wpis pojawi się w kalendarzu?
-
-Każda liczba zweryfikowana. Każde ustalenie prowadzi do linii kodu.
+Kto jest Waszą jedną osobą — i jaki macie plan na dzień, w którym ten wpis pojawi się w kalendarzu?
 
 #ZarzadzanieWiedza #ModernizacjaAplikacji #SopraSteria

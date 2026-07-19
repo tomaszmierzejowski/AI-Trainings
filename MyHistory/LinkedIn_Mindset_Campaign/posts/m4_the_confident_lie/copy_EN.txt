@@ -14,10 +14,8 @@ Here's why: we're trained to check facts, not framing. A wrong number looks wron
 
 Fluency masks falsehood. The best-written paragraph carries the worst error — precisely because good writing switches off our suspicion.
 
-This is the actual AI-trust problem in your company. Not "the AI makes things up" — you already knew that. It's that the making-up arrives in the most persuasive paragraph of the document, holding a real statistic as a shield.
+This is the actual AI-trust problem in your company. You already knew the AI makes things up. What's less obvious is that the making-up arrives in the most persuasive paragraph of the document, holding a real statistic as a shield.
 
-The fix isn't paranoia. It's a 60-second habit — next Tuesday's post.
-
-Until then: would YOUR team catch error #3? Would you?
+There is a fix, and it takes 60 seconds. That's next Tuesday's post. Until then, an honest self-check: would your team catch error #3?
 
 #AIMindset #CriticalThinking #SopraSteria

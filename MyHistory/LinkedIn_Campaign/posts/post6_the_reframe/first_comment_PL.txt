@@ -5,4 +5,4 @@ Linki do badań dla każdego, kto chce sprawdzić liczby (proszę, sprawdzajcie 
 
 Ciekawostka z badania Cui: wzrost produktywności ogromnie różnił się między deweloperami. Korzyści nie przewidywał staż — przewidywało je zachowanie adopcyjne. To nie narzędzie czyniło ludzi lepszymi. Czynił to sposób pracy.
 
-"Architekt wspomagany AI" — tak opisuję swoją pracę, bo to dosłownie precyzyjne. AI zwiększa pokrycie. Architekt dostarcza osąd. Żadne nie działa bez drugiego.
+"Architekt wspomagany AI" — tak opisuję swoją pracę, bo to po prostu dokładny opis: AI zwiększa pokrycie, architekt dokłada osąd.

@@ -1,25 +1,13 @@
-Somewhere in your company there is one engineer who knows where the bodies are buried.
+[TOMASZ: przed publikacją potwierdź fakty tej historii. "17 modułów" pochodzi z Projektu Axiom (register: 97 projektów, 17 modułów). "Platforma działała 20 lat" i "tylko jedna osoba umiała wymienić moduły" NIE występują w Evidence Register — potwierdź, że to prawda z projektu, albo podmień na prawdziwy przykład. Liczby 143/94%/220k są z innego projektu (Nordic) — w tekście oznaczone jako osobny projekt.]
 
-You know the name. You just thought of it.
+Somewhere in your company there is one engineer who knows where the bodies are buried. You know the name — you just thought of it.
 
-At one enterprise we analyzed, the platform had run for 20 years. Business logic lived in 17 modules. When we asked who could enumerate what those modules did, the answer was one person.
+At one enterprise we analyzed, business logic lived in 17 modules. When we asked who could enumerate what those modules did, the answer was one person. He was not planning to stay forever.
 
-He was not planning to stay forever.
+This risk doesn't show up in any dashboard. It shows up in an HR system, as a retirement date. And documentation doesn't fix it — his knowledge was never written down, and interviews capture what people remember, not what the code does.
 
-This is the risk nobody budgets for, because it doesn't appear in any dashboard. It appears in an HR system, as a retirement date.
+What fixes it is reading the code, all of it. On another engagement, full-coverage analysis reconstructed 143 business rules at 94% confidence from roughly 220,000 lines — each rule traced to the exact lines that implement it. That's what it looks like when knowledge stops living in one head: a retirement goes from an incident waiting for a date to a calendar entry.
 
-Documentation doesn't fix it — his knowledge was never written down, and interviews capture what people remember, not what the code does.
-
-Here is what does fix it: reading the code. All of it. In that engagement, full-coverage analysis reconstructed 143 business rules at 94% confidence from roughly 220,000 lines — each rule traced to the exact lines that implement it. The knowledge stopped living in one head.
-
-His retirement went from an incident waiting for a date to a calendar entry.
-
-Two questions, and the first one is rhetorical:
-
-Who is your one person?
-
-And what is your plan for the day their calendar entry appears?
-
-Every number verified. Every finding traced to source code.
+Who is your one person — and what's the plan for the day their calendar entry appears?
 
 #KnowledgeRisk #LegacyModernization #SopraSteria

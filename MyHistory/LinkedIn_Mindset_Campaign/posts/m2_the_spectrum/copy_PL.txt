@@ -1,4 +1,4 @@
-Tydzień temu zapytałem Was w ankiecie, od czego naprawdę zaczęło się Wasze ostatnie ważne zadanie. Obiecałem mapę wyników. Oto ona.
+Tydzień temu zapytałem Was w ankiecie, od czego naprawdę zaczęło się Wasze ostatnie ważne zadanie. Obiecałem mapę wyników — oto ona.
 
 [WPISZ REALNE WYNIKI PRZED PUBLIKACJĄ, np.:]
 [XX% — całkowicie od zera]
@@ -6,24 +6,20 @@ Tydzień temu zapytałem Was w ankiecie, od czego naprawdę zaczęło się Wasze
 [XX% — od roboczego szkicu z AI]
 [XX% — AI wykonało, ja oceniłem]
 
-Te cztery odpowiedzi to cztery poziomy pracy z AI. Każdy z nich ma swoją nazwę i swoją ekonomię:
+Te cztery odpowiedzi to cztery poziomy pracy z AI, a każdy ma swoją ekonomię.
 
-POZIOM 1 — Ciekawość. "Raz spróbowałem ChatGPT". Może dwa razy. Było ciekawie. Nic się nie zmieniło.
+POZIOM 1 — Ciekawość. "Raz spróbowałem ChatGPT". Może dwa razy. Było ciekawie, nic się nie zmieniło.
 
 POZIOM 2 — Szlif. AI dostaje gotową pracę do poprawienia, o ile sobie o nim przypomnę. Trochę mądrzejsza wyszukiwarka, trochę korektor.
 
-POZIOM 3 — Szkic najpierw. Każdy raport, analiza i plan zaczynają się od szkicu AI, a kończą na moim osądzie. AI to pierwszy krok. Nie jedyny. Pierwszy.
+POZIOM 3 — Szkic najpierw. Każdy raport, analiza i plan zaczynają się od szkicu AI, a kończą na moim osądzie. AI jest pierwszym krokiem — nie jedynym.
 
 POZIOM 4 — Projektowanie. Nie wykonuję już zadania. Projektuję proces, który AI prowadzi od początku do końca, a ja weryfikuję wyniki.
 
-Dwa wzorce, które widzę za każdym razem, gdy o tym rozmawiam:
+Dwa wzorce widzę za każdym razem, gdy o tym rozmawiam. Po pierwsze: prawie każdy umieszcza się o poziom wyżej, niż wskazuje jego zachowanie z ostatniego poniedziałku. Po drugie: skok, który realnie zmienia ekonomię pracy, to przejście z 2 na 3 — i nie wymaga nowych narzędzi, budżetu ani niczyjej zgody. Wymaga zmiany jednego odruchu.
 
-1. Prawie każdy umieszcza się o poziom wyżej, niż wskazuje jego zachowanie z ostatniego poniedziałku.
+Poziom 4 nie jest celem dla większości z nas; poziom 3 — jak najbardziej. Badania nad nawykami mówią, że nowy odruch automatyzuje się średnio po ok. 66 dniach (Lally i in., 2010), ale różnicę w tempie pracy widać już w pierwszym tygodniu.
 
-2. Skok, który realnie zmienia ekonomię pracy, to przejście z 2 na 3. Nie wymaga nowych narzędzi, budżetu ani niczyjej zgody. Wymaga zmiany jednego odruchu.
-
-Poziom 4 nie jest celem dla większości z nas. Poziom 3 — jak najbardziej. Badania nad nawykami mówią, że nowy odruch automatyzuje się średnio po ok. 66 dniach (Lally i in., 2010), ale różnicę w tempie pracy widać już w pierwszym tygodniu.
-
-Napiszcie w komentarzu, gdzie wylądowaliście — dla każdego poziomu podpowiem najszybszy pierwszy ruch w górę. 👇
+Jeśli napiszecie w komentarzu swój poziom, podpowiem najszybszy pierwszy ruch w górę z tego miejsca.
 
 #AIMindset #AdopcjaAI #SopraSteriaPolska

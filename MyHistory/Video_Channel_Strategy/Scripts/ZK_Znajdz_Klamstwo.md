@@ -74,9 +74,9 @@ zawsze jawne "podłożyłem"; treść fikcyjna, ale realistyczna — bez prawdzi
 
 ---
 
-## ZK#3 (V3, pt 31 lip) — typ: ODWRÓCONY WNIOSEK (błąd zaprojektowany, by "przeżyć każdą salę")
+## ZK#3 (V3, pt 31 lip) — typ: ODWRÓCONY WNIOSEK (błąd zaprojektowany, by przetrwać)
 
-**HOOK:** "To kłamstwo jest zaprojektowane tak, żeby przetrwać każdą salę szkoleniową."
+**HOOK:** "To kłamstwo jest zaprojektowane tak, żeby przetrwać."
 
 **ROZWIĄZANIE ZK#2:**
 > Instytut Produktywności Cyfrowej nie istnieje. Wygooglaliście — i słusznie. To jest błąd nr 2
@@ -92,8 +92,8 @@ zawsze jawne "podłożyłem"; treść fikcyjna, ale realistyczna — bez prawdzi
 
 **WYZWANIE:**
 > Liczba się zgadza. Źródło istnieje. A tekst i tak kłamie. Jak?
-> To jest poziom, na którym wykłada się większość dorosłych. Zasłoń wniosek, spójrz na same dane —
-> jaki wniosek TY byś wyciągnął?
+> Kiedy testowałem to ćwiczenie na kolegach, ten poziom wykładał prawie każdego. Zasłoń wniosek,
+> spójrz na same dane — jaki wniosek TY byś wyciągnął?
 
 **SYGNATURA:** jak zawsze.
 
@@ -116,19 +116,20 @@ Liczby były prawdziwe, rama kłamała. To był błąd nr 3 — najgroźniejszy.
 
 ## ZK#5 SPECIAL (V5, pt 14 sie) — wersja rozszerzona: historia + błąd nr 3 w naturze
 
-Kontekst tygodnia: LinkedIn M4 (11 sie) opowiedział ćwiczenie ze szkoleń; pierwszy komentarz M4
+Kontekst tygodnia: LinkedIn M4 (11 sie) opowiedział ćwiczenie z podłożonymi błędami; pierwszy komentarz M4
 może linkować tę grę. Odcinek dłuższy (75–90 s): 15 s historii przed materiałem.
 
-**HOOK:** "Ta gra pochodzi z mojego programu szkoleniowego."
-**HISTORIA (3–20 s):** W tym ćwiczeniu podkładam trzy błędy w raporcie od AI. Mądrzy, doświadczeni ludzie
-zwykle łapią złą liczbę i zmyślone źródło. Ale najgroźniejszy błąd jest zaprojektowany tak, żeby przetrwać. Wy trenujecie go od miesiąca.
+**HOOK:** "Tę grę zaprojektowałem do programu, który buduję."
+**HISTORIA (3–20 s):** W tym ćwiczeniu podkładam trzy błędy w raporcie od AI i testuję je na współpracownikach.
+Mądrzy, doświadczeni ludzie zwykle łapią złą liczbę i zmyślone źródło. Ale najgroźniejszy błąd jest
+zaprojektowany tak, żeby przetrwać. Wy trenujecie go od miesiąca.
 **ROZWIĄZANIE ZK#4:** wzrost z 40 do 46 tysięcy to 15%, nie 20%. Procenty kłamią częściej niż kwoty. Łowcy: [nicki].
-**MATERIAŁ (trudność: pełny kamuflaż wzorca z sal):**
+**MATERIAŁ (trudność: pełny kamuflaż wzorca błędu nr 3):**
 > *"Raport kwartalny AI: Czas odpowiedzi na zgłoszenia klientów spadł z 8 godzin do 5,6 godziny —
 > poprawa o 30%. Ankieta satysfakcji: II kw. 4,1 · III kw. 3,8 · IV kw. 3,5 (skala 1–5).
 > Wniosek: szybsza obsługa przekłada się na rosnące zadowolenie klientów."*
 > *(błąd: wyliczenie 30% jest POPRAWNE — kamuflaż; satysfakcja w danych SPADA kwartał do kwartału,
-> a wniosek ogłasza wzrost. Dokładny wzorzec błędu nr 3 z sal szkoleniowych)*
+> a wniosek ogłasza wzrost. Dokładny wzorzec błędu nr 3 z ćwiczenia)*
 **WYZWANIE:** Rachunek się zgadza. Dane są na ekranie. Gdzie kłamstwo? Zasłoń wniosek, przeczytaj same liczby.
 **SYGNATURA:** jak zawsze.
 
@@ -191,7 +192,7 @@ sukcesu. Łowcy: [nicki].
 1. **Rozwiązanie ZK#8** — dwa błędy: wzrost był o ~10,6% (nie 15%) i Corventis nie istnieje.
 2. **Podium ligi łowców** — 3 nicki na ekranie z liczbą trafień (prowadzone od ZK#1); podziękowanie wszystkim grającym.
 3. **Best-of w 20 s:** trzy typy kłamstw sezonu na jednej planszy — zła liczba / zmyślone źródło / odwrócony wniosek — "i już wiecie, że najgroźniejszy jest trzeci".
-4. **Lekcja sezonu, wprost:** ta gra nigdy nie była o łapaniu AI. Była o odruchu — czytać jak audytor wszystko, pod czym się podpisujesz. [ZAŁOŻENIE PROGRAMU: dokładnie tego chcę uczyć na salach]
+4. **Lekcja sezonu, wprost:** ta gra nigdy nie była o łapaniu AI. Była o odruchu — czytać jak audytor wszystko, pod czym się podpisujesz. [ZAŁOŻENIE PROGRAMU: dokładnie tego chcę uczyć w programie, który buduję]
 5. **Zapowiedź:** gra wraca w sezonie 2 — trudniejsza. A od środy: 66 dni, które zmieniają odruch.
 **CTA:** Checklista 60 sekund — link w bio, żeby odruch przetrwał między odcinkami.
 **SYGNATURA:** jak zawsze.
