@@ -27,11 +27,11 @@ Three grounding behaviors, cheapest first: (1) paste the source into the prompt;
 One line: "No citation, no claim — the same standard I'm held to on these slides."
 
 **Slide 6 — Case: Invisible Risk** *(VERIFIED)*
-A Nordic transaction-processing operator needed a reliable pre-ERP analysis. AI-assisted analysis of **97 projects**, 17 modules identified — **zero erroneous conclusions**.
+An anonymized enterprise needed a reliable pre-decision analysis. AI-assisted analysis of **97 projects**, 17 modules identified — **zero erroneous conclusions**.
 The how: every AI finding passed a human verification gate before entering the report. Not a better model — a better *protocol*.
 
 **Slide 7 — Case: evidence-tagged discovery** *(VERIFIED)*
-The same engagement: **100+ business rules** extracted from ~220,000 lines of legacy code — with **312 evidence-tagged citations**, every finding traceable to a line of source code. The full scan also surfaced **529 unauthenticated endpoints** nobody knew existed.
+The same engagement: **100+ business rules** extracted from the codebase, with every finding traceable to source. The full scan also surfaced **529 unauthenticated endpoints** nobody knew existed.
 One line: "Discovery you can audit beats discovery you must believe."
 
 **Slide 8 — Why this matters: hidden complexity** *(STUDY)*
@@ -53,6 +53,12 @@ One line: "Governance is what lets you say yes quickly and safely — it's an en
 **Slide 12 — Case: Antystyki.pl** *(VERIFIED)*
 An AI content pipeline for statistics journalism — 17+ statistical sources, every published item passes a **human-in-the-loop governance gate**.
 One line: "Even a content pipeline about *statistics* keeps a human on the trigger. So can your workflows."
+
+**Slide 12a — Case: the trainer's own scar** *(VERIFIED — the author's own incident, added 2026-07-20)*
+July 2026: a reader on LinkedIn publicly told the author he sounded like a bot and asked to talk to a real human. Cause: too much trust in AI-drafted replies, too many projects at once — the exact over-reliance this module teaches against. The cleanup that followed: purging his own repositories of AI hallucinations and fabricated metrics.
+Say it straight: "Uczę tego — i sam w to wpadłem. Zaufanie do AI usypia czujność szybciej, niż myślicie."
+One line: "Błędy nie są zarezerwowane dla AI — to rzecz ludzka. Ale te związane z AI są bardziej kosztowne, bo publiczność tylko czeka na potknięcie."
+Why this slide exists: people trust trainers with scars more than trainers with slogans.
 
 **Slide 13 — Exercise: catch the confident lie**
 Participants receive a polished AI-generated analysis of a fictional dataset containing **three planted errors** (a wrong number, a fabricated citation, a subtly inverted conclusion). 10 minutes, pairs. Debrief: which error survived longest, and why (it *sounded* right).

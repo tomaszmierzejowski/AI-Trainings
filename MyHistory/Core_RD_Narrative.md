@@ -51,16 +51,16 @@ Our largest-scale validation analyzed **20 legacy repositories as one system**.
     1.  Scanned **100% of files** across all 20 repositories in parallel.
     2.  Synthesized unified target architecture, API maps, and dependency graphs.
     3.  Delivered one cohesive frontend mockup and a **460-page main report** in 3 weeks.
-*   **Outcome:** **87% discovery and analysis cost reduction** vs. traditional consulting (~500K NOK vs. ~2.3M NOK). *Cost savings apply to the codebase discovery and analysis phase only.*
+*   **Outcome:** Completed in **3 weeks** vs. estimated **8–14 weeks** for traditional consulting. *Timeframe comparison applies to the codebase discovery and analysis phase only.*
 
-### Case: Oceanic Research Institute (Fish2Data / IMR)
-Validation with the Institute of Marine Research (IMR) on the **Fish2Data** system.
-*   **Problem:** **Could not update measuring software while ships were out at sea.** 200+ CVEs, 100,000+ lines of undocumented code, 7 years of scientific data at risk across a 20-vessel fleet.
+### Case: The Rescue (Public Institute)
+Validation with a Public Institute on a legacy scientific platform.
+*   **Problem:** 200+ CVEs, 2-year deployment block, 10 git branches with only 3 in active use, deployments matched to specific hardware configurations.
 *   **Execution:**
     1.  Used AI Discovery to map the "As-Is" architecture and operational constraints.
     2.  Identified specific technical debt (security vulnerabilities, outdated dependencies, zero disaster recovery).
-    3.  Produced a risk-prioritized 6–24 month remediation roadmap.
-*   **Outcome:** All vulnerabilities mapped and prioritized; operational risks prevented before transformation began.
+    3.  Produced a risk-prioritized remediation roadmap and automated deployment pipeline.
+*   **Outcome:** All vulnerabilities mapped and prioritized; deployment pipeline automated; branch sprawl reduced.
 
 ### Case: Pediatric Mobile App (Barnas Plattform)
 *   **Problem:** Android-only app blocked by **Google Play deprecating Xamarin**; national children's mental health research program facing cancellation.
@@ -73,16 +73,14 @@ To prove this methodology is not unique to a single domain, we have applied simi
 *   **Coop:** Served as our Proof of Concept (POC) for the BizTalk to Azure research.
 
 ### Current Research: AI-Driven Enterprise Architecture
-We are demonstrating that AI tools are highly effective for identifying enterprise architecture bottlenecks and planning system evolution. This capability allows us to suggest optimal destination architectures and seamlessly execute modernization using our AI-powered framework.
+We are demonstrating that AI tools are highly effective for identifying enterprise architecture bottlenecks and planning system evolution. This capability allows us to suggest optimal destination architectures and plan modernization strategies.
 
 ## 5. Results & Industry Implications
 Our R&D pilots have consistently demonstrated measurable gains across discovery and execution:
 
-*   **Discovery cost savings:** **87%** reduction vs. traditional consulting (discovery and analysis phase only).
-*   **Discovery speed:** **20x faster & more reliable discovery** with **100% of files scanned** (not sample-based review).
+*   **Discovery speed:** Consistently faster and more reliable discovery with **100% of files scanned** (not sample-based review). Primary case delivered in **3 weeks vs. 8–14 weeks** traditional.
 *   **Scale:** **30+ repositories** assessed across 2024→2026 engagements.
-*   **Execution velocity:** **40-100% efficiency gain** in development velocity for modernization tasks.
 
-*   **Implication:** This efficiency leap changes the economic viability of modernization projects. Projects previously deemed "too expensive" to scope can now be assessed within a viable discovery budget — with full mockup and target architecture delivered by Day 15–30.
+*   **Implication:** This speed advantage changes the economic viability of modernization projects. Projects previously deemed "too expensive" to scope can now be assessed within a viable discovery budget — with full mockup and target architecture delivered by Day 15–30.
 *   **Future Outlook:** We are moving from "Pilot" to "Factory," standardizing these workflows to offer a predictable, lower-risk modernization service to the wider market.
 

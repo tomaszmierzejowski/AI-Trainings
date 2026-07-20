@@ -36,10 +36,14 @@ Thursday (Modernization) proves what an AI-augmented expert does at enterprise s
 | M7 | THE HERO | The org-level anti-pattern; the leader's 5-minute fix | "capability leaves in their laptop bag" |
 | M8 | THE ROD | Conversion — the program, the promise, the fishing rod | "Daję wędkę" |
 
-Season 2 candidates (hold for continuation): THE RECOMPILED ROLE (career reframe), THE ORG CHART (MCP/A2A "agents get colleagues"), THE 66 DAYS (habit science), THE FIRST WEEK (30-day plan diary).
+Season 2 candidates (hold for continuation): THE RECOMPILED ROLE (career reframe), THE ORG CHART (MCP/A2A "agents get colleagues"), THE 66 DAYS (habit science), THE FIRST WEEK (30-day plan diary). Added 2026-07-20 from `../AI_MINDSET_POSITIONS.md`: THE JUNIORS ("AI to zespół ambitnych juniorów" — the delegation reframe), THE DICTAPHONE (dyktafon przed promptem — the expert's exception), THE BILL (Domek economics: 700 zł + 3 dni vs 6–10 tys. zł — money makes the story land with Renata).
 
 ### Voice Rules
 
+0. (Added 2026-07-20) The source of truth for WHAT Tomasz thinks and HOW he says it is
+   `../AI_MINDSET_POSITIONS.md` — his own words from a hostile interview. Draft from there
+   (ambitious-juniors metaphor, dictaphone-before-prompt workflow, METR defense, real Domek
+   economics: ~700 zł + 3 days of his work vs 6–10k zł quotes); don't invent positions.
 1. Every claim carries its receipt — a study citation or "from a session I ran." The evidence-badge discipline (VERIFIED / STUDY / OPINION) is itself part of the brand: if a number has no badge, challenge me.
 2. Write to Renata on a Tuesday morning — no AI jargon, no model names in the copy body (tools may appear in comments).
 3. Stories start with people, never with technology. The Domek story starts with the kids, not the prompt.

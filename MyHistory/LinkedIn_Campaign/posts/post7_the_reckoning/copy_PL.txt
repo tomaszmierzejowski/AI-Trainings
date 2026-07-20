@@ -10,9 +10,8 @@ Track record z dwóch lat AI discovery i modernizacji (2024→2026):
 - 100% akceptacji Google Play za pierwszym podejściem (migracja tylko na Androida)
 - 500 tys. NOK wobec 2,3 mln NOK z tradycyjnej wyceny — zweryfikowany koszt jednego discovery (wyłącznie faza discovery i analizy)
 - 4 dni na migrację platformy, którą standard branżowy wycenia na 4–6 tygodni
-- 3 tygodnie na inwentaryzację platformy, której nie dało się aktualizować, gdy jej stacje terenowe pracowały w terenie
-- Discovery 20x szybsze niż tradycyjne oceny oparte na próbkowaniu
-- Szacowany zwrot między 4x a 16x, zależnie od projektu — "szacowany", bo oddzielamy to, co zmierzone, od tego, co prognozowane
+- 3 tygodnie na inwentaryzację platformy zablokowanej od 2 lat — 10 branchy git, tylko 3 w użyciu, każdy przypisany do konkretnego sprzętu
+- Ponad 200 CVE odkrytych przy okazji pełnego mapowania zależności
 
 Po co to publikować? Bo każdy dostawca na tym rynku opowiada historię, a szef inżynierii, dla którego pisałem tę serię, słyszał już wszystkie. Liczby, które można publicznie podważyć, to inna kategoria. Więc podważajcie: zapytajcie w komentarzu, jak zmierzono dowolną liczbę powyżej. To nie jest retoryczne zaproszenie.
 

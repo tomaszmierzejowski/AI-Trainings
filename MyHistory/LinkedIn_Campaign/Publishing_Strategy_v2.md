@@ -125,8 +125,8 @@ Every post in both campaigns was written video-first: each `hook_variants.txt` f
 
 ## PART 5 — OPEN ITEMS (decisions needed from Tomasz)
 
-1. **Oceanic Research deployment timeline** — v2 copy uses **2 years** blocked (consistent with ships-at-sea operational constraint). Resolved: keep 2 years across Post 5, Post 7, and S2 references.
-2. **Business-rules count** — old campaign README said "use 100"; the Evidence Register's reconciliation says **143 at 94% confidence**. v2 copy uses 143. Confirm.
+1. **Public Institute deployment timeline** — v2 copy uses **2 years** blocked (10 git branches → 3 in use, matched to hardware, automated deployment). Resolved: keep 2 years across Post 5, Post 7, and S2 references.
+2. **Business-rules count** — resolved 2026-07-19: use **100+** (not 143, not 94%). All copy updated.
 3. **M3 real photo** — does a publishable photo of the Domek exist (kids not identifiable)? It materially outperforms any generated image.
 4. **Poll timing** — M2-POLL on Jul 21 replaces a regular post; if you'd rather not "spend" a Tuesday on a poll, run it Monday Jul 20 instead and keep M2 on Jul 21.
 5. **Friday PL Modernization** — commit or drop? Recommendation: drop until one EN track hits "Good" KPIs, then add.
@@ -141,5 +141,5 @@ Every post in both campaigns was written video-first: each `hook_variants.txt` f
 | Coverage terminology | **scanning 100% of files** | Never "100% code coverage" or "100% code read" |
 | Discovery timeline | **15–30 days** | Skilled engineers + AI-mindset |
 | Global Automotive Importer | 20 repos, **460-page report**, unified mockup | 3 weeks |
-| Oceanic Research | Could not update measuring software **while ships were out at sea** | 2 years blocked → 1 month fixed |
+| Public Institute | 10 git branches → only 3 in use, each **matched to specific hardware**; automated deployment restored | 2 years blocked → 1 month fixed |
 | Pediatric Mobile | **Android-only**; Google Play deprecating Xamarin; **.NET MAUI in 4 days** | Google Play approval |

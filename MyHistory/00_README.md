@@ -1,3 +1,5 @@
+> **⚠️ DEPRECATION NOTICE (2026-07-19):** The Alpha–Epsilon codename scheme used throughout this package is **retired**. The 4 approved case studies are now: **Proof of Scale**, **Invisible Risk**, **Proof of Speed**, **The Rescue**. See `SOURCE_OF_TRUTH.md` for current names, approved facts, and banned claims. Do NOT use codenames from this file for any new or published content.
+
 # NotebookLM Package — AI App Modernization Factory
 ## Przygotowany: lipiec 2026
 
@@ -13,15 +15,16 @@ oraz do tworzenia prezentacji i innych treści na temat projektu AI App Moderniz
 
 ## Ważne: Anonimizacja
 
-Wszystkie nazwy klientów zostały zastąpione nazwami kodowymi:
+Wszystkie nazwy klientów zostały zastąpione nazwami kodowymi.
+**Nazwy kodowe Alpha–Epsilon są WYCOFANE.** Poniższa tabela pokazuje mapowanie na aktualne, zatwierdzone nazwy case studies (patrz `SOURCE_OF_TRUTH.md`):
 
-| Oryginalna nazwa | Nazwa kodowa | Kontekst |
-|-----------------|--------------|---------|
-| (klient nordycki automotive) | **Project Alpha** | Platforma dealerów samochodowych |
-| (klient tolling/billing) | **Project Beta** | System opłat drogowych i billing |
-| (klient research non-profit) | **Project Gamma** | Platforma badań naukowych (mobilna) |
-| (klient morski) | **Project Delta** | Platforma badań morskich |
-| (klient dane narodowe) | **Project Epsilon** | Infrastruktura danych publicznych |
+| Nazwa kodowa (RETIRED) | Aktualna nazwa | Kontekst |
+|------------------------|----------------|---------|
+| **Project Alpha** → | **Proof of Scale** | 20 legacy apps, 187 endpoints, 3 weeks vs 8–14 |
+| **Project Beta** → | **Invisible Risk** | 529 unauthenticated endpoints, 97 projects, 17 modules, 100+ business rules |
+| **Project Gamma** → | **Proof of Speed** | Xamarin→MAUI in 4 days |
+| **Project Delta** → | **The Rescue** | Public Institute, 200+ CVEs, 2-year deployment block |
+| **Project Epsilon** | *(brak odpowiednika)* | Retired — nie ma odpowiednika w bieżących 4 case studies |
 
 Sopra Steria pozostaje wymieniona jako organizacja prowadząca projekt (to nasza firma).
 

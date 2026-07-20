@@ -461,7 +461,7 @@ def post7_slide05():
         draw_centered(draw, item, y, f, hex_rgb(WHITE))
         y += 60
     draw_centered(draw, "What is estimated:", 720, load_font(48), hex_rgb(ORANGE))
-    draw_centered(draw, "8–10x ROI (projected avoided cost)", 800, load_font(28), hex_rgb(WHITE))
+    draw_centered(draw, "Cost avoidance (projected from traditional quotes)", 800, load_font(28), hex_rgb(WHITE))
     return img
 
 

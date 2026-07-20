@@ -1,3 +1,3 @@
 Dla osób od bezpieczeństwa: te ponad 200 podatności to znane CVE w przestarzałych zależnościach. Wyszły przy okazji pełnego mapowania zależności, nie w osobnym audycie — analiza pełnego pokrycia daje to niejako gratis.
 
-Jeśli to brzmi jak Wasza sytuacja — zdalne stacje, sezonowe zamrożenia produkcji, środowisko, które rozumie już tylko jedna osoba — napiszcie do mnie. Dokładnie dla takiego scenariusza powstało nasze podejście.
+Jeśli to brzmi jak Wasza sytuacja — splątane branche przypisane do sprzętu, proces wdrożenia, który rozumie już tylko jedna osoba, lata zablokowanych aktualizacji — napiszcie do mnie. Dokładnie dla takiego scenariusza powstało nasze podejście.

@@ -69,7 +69,8 @@ AI-b-roll/grafiki/voiceover w DEMO: tak, zawsze z jawnością.
 ## 7. Zasady prawdy (niezbywalne)
 
 1. Badge przy każdej liczbie — jak wyżej.
-2. Zakazy kampanii obowiązują: Standish CHAOS 2020 ~31% sukcesu (nigdy "73% pada"); 4-day rescue = 4x (estymowane); 143 reguły @ 94% confidence; klienci generycznie.
+2. Zakazy kampanii obowiązują: Standish CHAOS 2020 ~31% sukcesu (nigdy "73% pada"); 4-day rescue = 4x (estymowane); reguły biznesowe zawsze "100+" (nie 143, nie 94% — wycofane 2026-07-19); klienci generycznie ("Public Institute" bez dalszych szczegółów).
+2a. Głos i stanowiska: źródłem prawdy o tym, CO myślę i JAK to mówię, jest `../AI_MINDSET_POSITIONS.md` (wywiad 2026-07-20). Scenariusze czerpią stamtąd — metafora ambitnych juniorów, dyktafon-przed-promptem, obrona METR, prawdziwa ekonomia domku (~700 zł + 3 dni pracy vs 6–10 tys. zł wycen).
 3. **Reguła błędu warunkowego (nowa, krytyczna):** halucynacji nie da się zaplanować. Skrypty DEMO
    przewidują DWA zakończenia: (a) AI się myli → pokazujesz błąd i korektę; (b) AI czyste →
    mówisz wprost: *"Dziś czysto. Ale błędy są losowe — dlatego weryfikacja jest stała."*

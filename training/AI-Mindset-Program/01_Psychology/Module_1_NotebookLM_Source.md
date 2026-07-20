@@ -44,7 +44,7 @@ Fourth, habit inertia. The old workflow costs zero willpower; a new workflow cos
 
 The program's teaching contract is called "Daję wędkę" — Polish for "I give a fishing rod." Most consulting economics reward dependency: the consultant is paid to remain needed. This program inverts that: participants leave with habits and self-sufficiency, not with the trainer's phone number as their AI strategy. The trainer will occasionally "build a fish" — deliver a working artifact live — but only to prove the water has fish in it; the deliverable is the rod. This philosophy is the author's public positioning (tomaszmierzejowski.pl, "Edukator & Praktyk AI Mindset"), summarized there as "Nie uczę teorii" — "I don't teach theory": all training content derives from the author's own delivered products and projects.
 
-Credibility basis, VERIFIED: 14 years of engineering practice; a five-plus-year continuous modernization of a global, mission-critical professional-services platform completed with zero operational interruptions. The relevance to a psychology module is trust: behavioral advice about production work is credible when it comes from someone who carries production risk.
+Credibility basis, VERIFIED: 14 years of engineering practice across business-critical systems, emergency migrations, and AI-augmented discovery work. The relevance to a psychology module is trust: behavioral advice about production work is credible when it comes from someone who carries production risk.
 
 ## The reframe and the commitment
 

@@ -32,9 +32,9 @@ Two years of AI Discoveries and AI Modernization · **30+ repositories** assesse
 | 2 | THE INVISIBLE RISK | Text + graphic | Make the consequence of unscanned code viscerally real | 187 endpoints, GDPR €20M exposure |
 | 3 | PROOF OF SPEED | Text + graphic | Emotional proof — feel something, not just agree | 4 days, Pediatric Mobile (Android-only, Xamarin → MAUI) |
 | 4 | PROOF OF SCALE | Carousel | Logical proof — enterprise scale numbers | Global Automotive Importer: 20 repos, 460-page report, 87% discovery savings* |
-| 5 | THE RESCUE | Text | Urgency — Oceanic Research: ships at sea, 2 years blocked, 1 month fixed | 200+ vulnerabilities, 16× ROI |
+| 5 | THE RESCUE | Text | Urgency — Public Institute: 2-year deployment block, 10 git branches → 3 in use, automated deployment | 200+ CVEs |
 | 6 | THE REFRAME | Text/Video | AI's actual role — gets reshared by practitioners | 4,867 developer study |
-| 7 | THE RECKONING | Carousel | Conversion — full track record, DM invitation | 30+ repos, 87% discovery savings*, 20× discovery speed |
+| 7 | THE RECKONING | Carousel | Conversion — full track record, DM invitation | 30+ repos, 6+ engagements, zero regressions |
 
 ---
 

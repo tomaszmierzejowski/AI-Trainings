@@ -32,7 +32,12 @@ picking a winner silently and moving on.
    **`CONTEXT_EXPORT_Claude_Handoff.md`** (this folder) — the facts canon: verified proof points,
    anonymization key, banned/corrected numbers. If a number in a draft doesn't trace back to one
    of these two files, it doesn't ship.
-5. **`AI_SLOP_CLEANUP_PROMPT.md`** (this folder) — the hygiene pass. Run it on any repo (this one
+5. **`AI_MINDSET_POSITIONS.md`** (this folder) — the voice-and-positions canon: Tomasz's actual
+   opinions in his own words, extracted from a hostile interview (2026-07-20). When writing
+   content AS him (posts, training narration, portfolio copy), source positions and phrasing
+   from here — the facts files above say what's true, this file says what he thinks and how he
+   says it.
+6. **`AI_SLOP_CLEANUP_PROMPT.md`** (this folder) — the hygiene pass. Run it on any repo (this one
    or a new campaign/training repo) when content has accumulated and needs a critical, unrushed
    AI-tell removal pass. Generalized from the cleanup this repo went through on 2026-07-19.
 

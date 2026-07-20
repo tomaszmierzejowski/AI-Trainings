@@ -42,6 +42,11 @@ One line: "Treat it like a brilliant new colleague on day one — brief it, don'
 Old behavior → new behavior: "Stare at a blank page" → "Interrogate a draft."
 Core workflows: first drafts of anything; 'explain this document to me'; devil's-advocate review of your plan; multi-step analysis.
 
+**Slide 8a — The expert's exception: dictaphone first, prompt second** *(added 2026-07-20, the author's own workflow)*
+When your head is FULL of expert ideas, a prompt box breaks the flow. The right first step is still AI — but a different kind: record yourself (a monologue or the expert meeting itself) → transcribe → hand the COMPLETE thought to the model with one job: find the gaps, audit the reasoning, sketch it further. Then meet again, react to the sketch, transcribe, iterate.
+Why it works: the more information the model gets, the better it performs — and the expert never had to stop thinking to type.
+One line: "AI-first nie zawsze znaczy prompt-first. Czasem pierwszym narzędziem jest dyktafon."
+
 **Slide 9 — Claude in practice (demo)**
 Live: paste a (fictional) messy meeting transcript → RTF prompt → decision log + action items + risks in 60 seconds. Then one refinement pass.
 

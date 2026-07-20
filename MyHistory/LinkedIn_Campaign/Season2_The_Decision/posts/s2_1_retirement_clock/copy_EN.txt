@@ -1,4 +1,4 @@
-[TOMASZ: przed publikacją potwierdź fakty tej historii. "17 modułów" pochodzi z Projektu Axiom (register: 97 projektów, 17 modułów). "Platforma działała 20 lat" i "tylko jedna osoba umiała wymienić moduły" NIE występują w Evidence Register — potwierdź, że to prawda z projektu, albo podmień na prawdziwy przykład. Liczby 143/94%/220k są z innego projektu (Nordic) — w tekście oznaczone jako osobny projekt.]
+[TOMASZ: przed publikacją potwierdź fakty tej historii. "17 modułów" pochodzi z Invisible Risk (register: 97 projektów, 17 modułów). "Platforma działała 20 lat" i "tylko jedna osoba umiała wymienić moduły" NIE występują w Evidence Register — potwierdź, że to prawda z projektu, albo podmień na prawdziwy przykład.]
 
 Somewhere in your company there is one engineer who knows where the bodies are buried. You know the name — you just thought of it.
 
@@ -6,7 +6,7 @@ At one enterprise we analyzed, business logic lived in 17 modules. When we asked
 
 This risk doesn't show up in any dashboard. It shows up in an HR system, as a retirement date. And documentation doesn't fix it — his knowledge was never written down, and interviews capture what people remember, not what the code does.
 
-What fixes it is reading the code, all of it. On another engagement, full-coverage analysis reconstructed 143 business rules at 94% confidence from roughly 220,000 lines — each rule traced to the exact lines that implement it. That's what it looks like when knowledge stops living in one head: a retirement goes from an incident waiting for a date to a calendar entry.
+What fixes it is reading the code, all of it. On another engagement, full-coverage analysis reconstructed 100+ business rules — each rule traced to the exact lines that implement it. That's what it looks like when knowledge stops living in one head: a retirement goes from an incident waiting for a date to a calendar entry.
 
 Who is your one person — and what's the plan for the day their calendar entry appears?
 

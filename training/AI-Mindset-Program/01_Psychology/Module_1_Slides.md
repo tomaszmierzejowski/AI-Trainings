@@ -38,6 +38,11 @@ Pull-quote (project lead, Christmas Eve): *"It's hard to describe how much relie
 Four ascending levels (staircase visual):
 Level 1 **AI-Curious** → Level 2 **AI-Assisted** → Level 3 **AI-Augmented** → Level 4 **AI-Native**.
 One line: "The target for most people in this room is Level 3."
+Trainer note (added 2026-07-20): the Spectrum is my heuristic from observation [OPINIA], but the
+2→3 jump matches published research — Dell'Acqua et al. 2023 found "Centaurs" (delegate subtasks
+= Level 2) vs "Cyborgs" (integrate AI from the first step = Level 3), with Cyborgs performing
+better [STUDY — verify against the original before print]. Framing for the room: "Nie potrzebujesz
+zespołu ekspertów. AI to zespół ambitnych juniorów — a ty decydujesz, co dostają do zrobienia."
 
 **Slide 8 — Where are you? (self-diagnosis)**
 One behavioral tell per level:
@@ -74,7 +79,7 @@ Visual: rod motif from slide 1, now handed over.
 
 **Slide 15 — Why you can trust the messenger** *(VERIFIED)*
 "Nie uczę teorii — I don't teach theory."
-14 years of engineering. 5+ years of continuous modernization of a global mission-critical platform, zero operational interruptions.
+14 years of engineering. Business-critical systems, emergency migrations, and AI-augmented discovery work.
 One line: "This advice is written by someone who carries production risk."
 
 **Slide 16 — The reframe**

@@ -1,17 +1,17 @@
 [DEPRECATED 2026-07-19] Mechanika algorytmiczna wycofana — obowiązują zasady z MyHistory/CONTENT_RULES.md. Plik zostaje wyłącznie jako archiwum; nie używać przy publikacji (liczby i hooki mogą być nieaktualne).
 
 VARIANT A (primary):
-A government research organization could not update its measuring software while its field installations were deployed. Not "updated slowly." Not "patched between deployments." Could not update. While deployed.
+A Public Institute had 10 git branches but only 3 in use — each matched to specific hardware. Deployments had been blocked for 2 years. Not "delayed." Not "deprioritized." Blocked. For two years.
 
 VARIANT B (test):
 Three weeks blocked by the deployment window. Three weeks to map 200+ CVEs. The difference wasn't talent — it was reading the code instead of the documentation.
 
 VARIANT C (conversation-starter):
-What's the longest an update has been deferred in your organization because the window never opened? For one government research organization, the answer was years. Here's how it ended.
+What's the longest a deployment has been blocked in your organization because nobody could untangle the branches? For one Public Institute, the answer was two years. Here's how it ended.
 
-RECOMMENDATION: Use A. The three-beat escalation ("Not X. Not Y. Could not. While deployed.") reads fully inside LinkedIn's ~210-character above-the-fold cutoff and creates a curiosity gap that the "see more" click resolves. B is the TikTok/video hook — save it for the vertical version. C converts the post into a conversation-starter; use it if Posts 0–4 taught us the audience needs to be asked, not told.
+RECOMMENDATION: Use A. The three-beat escalation ("Not X. Not Y. Blocked. For two years.") reads fully inside LinkedIn's ~210-character above-the-fold cutoff and creates a curiosity gap that the "see more" click resolves. B is the TikTok/video hook — save it for the vertical version. C converts the post into a conversation-starter; use it if Posts 0–4 taught us the audience needs to be asked, not told.
 
 CONVERSION NOTE:
-The original opened with "A government research organization had a mission-critical system…" — 14 words of context before any tension. On mobile, that's the whole visible preview spent on setup. V2 puts the impossibility (field installations deployed, cannot update) in the first 100 characters.
+The original opened with "A government research organization had a mission-critical system…" — 14 words of context before any tension. On mobile, that's the whole visible preview spent on setup. V2 puts the impossibility (2-year deployment block, branches matched to hardware) in the first 100 characters.
 
-NOTE (2026-07-12): earlier drafts of this file used "oceanic research institute" / "ships at sea" — banned client-identifying language per the anonymization key (00_Program_Overview_and_Evidence_Register.md §3). Corrected to "government research organization" / "field installations" throughout. If Post 5 already published with the old wording, edit it on LinkedIn directly.
+NOTE (2026-07-19): earlier drafts used "oceanic research institute" / "ships at sea" / "field installations" / "measuring software" — all banned client-identifying language. Corrected to "Public Institute" with branch/hardware framing throughout.

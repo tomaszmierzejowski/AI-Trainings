@@ -86,6 +86,7 @@
 > I powiedzmy dokładnie, co się wydarzyło, bo to NIE jest historia, którą zwykle ogłaszają entuzjaści AI.
 > AI nie zbudowało domku. Nie zastąpiło architekta. Zrobiło coś innego: usunęło ścianę, którą zawsze uważałem za nośną — "nie mogę nawet zacząć, bo nie wiem jak".
 > Sugestie konstrukcyjne sprawdziłem zdrowym rozsądkiem, drewno — portfelem. Dwa projekty odrzuciłem. Mój osąd był w pętli cały czas — po prostu wreszcie miał co osądzać.
+> Rachunek? Jakieś 700 złotych materiałów i trzy dni roboty. Wykonawcy chcieli za gotowy domek od sześciu do dziesięciu tysięcy. *(overlay: "700 zł + 3 dni vs 6–10 tys. zł")* [MOJA PRAKTYKA]
 > *(wstawka: zdjęcie domku)*
 > Domek stoi. Dzieci przemalowały go na kolor, którego sam bym nigdy nie wybrał. Tego żadne AI nie przewidziało.
 
@@ -95,7 +96,7 @@
 
 **SYGNATURA:** jak zawsze.
 
-**Warianty hooka:** 1. "Dzieci chciały domek. Nie umiem projektować." 2. "Nie jestem stolarzem. Domek stoi." 3. "»Tata, zbudujesz nam domek?« Nie umiałem."
+**Warianty hooka:** 1. "Dzieci chciały domek. Nie umiem projektować." 2. "Nie jestem stolarzem. Domek stoi." 3. "»Tata, zbudujesz nam domek?« Nie umiałem." 4. "Wykonawcy: 6–10 tysięcy. Ja: 700 zł i trzy dni."
 **Opisy:** TT/IG: "Prawdziwa historia — zaczyna się od dzieci, nie od AI 🏠" · YT: "AI nie zastępuje wiedzy — odbiera wymówki. Historia domku".
 **Hashtagi:** #AIMindset #DIY #tata #AIpoPolsku #poprostuzacznij
 

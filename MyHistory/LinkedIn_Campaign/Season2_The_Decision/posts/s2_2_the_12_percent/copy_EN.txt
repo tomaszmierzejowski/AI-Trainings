@@ -1,12 +1,10 @@
-[TOMASZ: potwierdź liczbę 12% — post twierdzi "widziałem szczerą odpowiedź: 12%". Ta liczba występuje w pliku persony (fikcja robocza), nie w Evidence Register. Jeśli nie masz jej z realnego projektu, przepisz na "kilkanaście procent, tak wygląda uczciwa odpowiedź w tej branży" albo podaj prawdziwą.]
-
 Here's a question your last assessment vendor hoped you'd never ask: "What percentage of the codebase did you actually read?"
 
-I've seen the honest answer for a typical 3-week discovery sprint. It was 12%.
+I've seen the honest answer for a typical 3-week discovery sprint. It was a small fraction of the total.
 
 Not because the consultants were lazy. Because reading 100% manually is economically impossible — at consultant reading speed, a 2-million-line platform is years of billable time. So the industry standardized on sampling: read the "important" parts, interview the team about the rest, extrapolate.
 
-The problem isn't the 12%. The problem is what the report did next: it presented conclusions about 100% of the platform, with no coverage disclosure anywhere.
+The problem isn't the low coverage. The problem is what the report did next: it presented conclusions about 100% of the platform, with no coverage disclosure anywhere.
 
 Imagine an auditor who checked 12% of transactions and issued an unqualified opinion on the whole ledger. You wouldn't accept that from finance. IT accepts it every year.
 

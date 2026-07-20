@@ -90,7 +90,7 @@ table.map tr:nth-child(odd) td{background:rgba(11,11,11,.015)}
 <body>
 <header class="hud">
   <div class="brand"><b>AI-Mindset</b> · warsztat dla PEGA</div>
-  <div class="counter" id="ctr">1 / 33</div>
+  <div class="counter" id="ctr">1 / 35</div>
 </header>
 
 <!-- 1 · TYTUŁ (dark) -->
@@ -208,11 +208,11 @@ table.map tr:nth-child(odd) td{background:rgba(11,11,11,.015)}
   <p class="kick">🛝 Ten sam mechanizm poza pracą &nbsp;<span class="badge v">ZWERYFIKOWANE</span></p>
   <h2>Domek dla dzieci: architektura z AI w godzinę</h2>
   <div class="tiles">
-    <div class="tile"><div class="num">1 zdanie</div><div class="lab">na start: „moje dzieci chcą mały domek"</div></div>
-    <div class="tile"><div class="num">~1 h</div><div class="lab">do rysunków, wymiarów i listy zakupów do składu</div></div>
-    <div class="tile"><div class="num">0</div><div class="lab">mojego doświadczenia w projektowaniu budynków</div></div>
+    <div class="tile"><div class="num">~1 h</div><div class="lab">z AI: rysunki, wymiary i lista zakupów do składu</div></div>
+    <div class="tile"><div class="num">~700 zł</div><div class="lab">materiałów + 3 dni własnej pracy przy budowie</div></div>
+    <div class="tile"><div class="num">6–10 tys. zł</div><div class="lab">tyle chcieli wykonawcy za gotowy domek</div></div>
   </div>
-  <div class="foot">Domek stoi w ogrodzie. AI dało plan i warianty, wybrał i sprawdził człowiek. Maciek, zapamiętaj ten mechanizm, wróci przy grafice.</div>
+  <div class="foot">Domek stoi w ogrodzie. AI dało plan i warianty, wybrał i sprawdził człowiek — bez doświadczenia w projektowaniu budynków. Maciek, zapamiętaj ten mechanizm, wróci przy grafice.</div>
 </section>
 
 <!-- 9 · UCZCIWA GWIAZDKA -->
@@ -249,7 +249,7 @@ table.map tr:nth-child(odd) td{background:rgba(11,11,11,.015)}
     <div style="flex:1;background:rgba(82,81,78,.07);border-radius:12px;padding:16px 22px">LVL 2: &nbsp;🧠 Ty piszesz → 🤖 AI poleruje</div>
     <div style="flex:1;background:rgba(42,120,214,.09);border:1.5px solid var(--acc);border-radius:12px;padding:16px 22px">LVL 3: &nbsp;🤖 AI szkicuje → 🧠 Ty oceniasz</div>
   </div>
-  <div class="foot">Te same narzędzia, ta sama subskrypcja, zupełnie inna ekonomia dnia.</div>
+  <div class="foot">Te same narzędzia, ta sama subskrypcja, zupełnie inna ekonomia dnia. AI to nie zespół ekspertów — to zespół ambitnych juniorów. Ty decydujesz, co dostają do zrobienia.</div>
 </section>
 
 <!-- 12 · GRANICA -->
@@ -513,7 +513,7 @@ Każde pole, którego nie jesteś pewien, oznacz ⚠️ i napisz dlaczego.</div>
   <div style="display:flex;gap:40px;margin-bottom:8px;font-size:19px">
     <div style="flex:1;background:rgba(42,120,214,.09);border:1.5px solid var(--acc);border-radius:12px;padding:16px 22px"><b>Nawyk 60 sekund:</b> zanim cokolwiek wyjdzie z firmy, sprawdź u źródła każdą liczbę, nazwisko, datę i link.</div>
   </div>
-  <div class="foot">Podpis pod materiałem składa człowiek i klient rozliczy człowieka. Głupoty się zdarzają; ten nawyk sprawia, że nie wychodzą z firmy.</div>
+  <div class="foot">Podpis pod materiałem składa człowiek i klient rozliczy człowieka. Wiem coś o tym: w lipcu ktoś na LinkedIn napisał mi, że brzmię jak bot — bo za mocno zaufałem AI przy odpowiedziach. Głupoty się zdarzają; ten nawyk sprawia, że nie wychodzą z firmy.</div>
 </section>
 
 <!-- 28 · DANE WRAŻLIWE -->
@@ -541,7 +541,23 @@ Każde pole, którego nie jesteś pewien, oznacz ⚠️ i napisz dlaczego.</div>
   <div class="foot">Tak wygląda wędka. Z tej sali też macie wyjść z własną, a nie z moim numerem telefonu jako strategią AI.</div>
 </section>
 
-<!-- 30 · ĆWICZENIE -->
+<!-- 30 · MASTER PROMPT -->
+<section class="slide">
+  <p class="kick">Skill, który zabierasz do domu</p>
+  <h2>Master Prompt: Twój AI-skill w jednym pliku</h2>
+  <div class="rowcards" style="grid-template-columns:repeat(3,1fr)">
+    <div class="card"><h3>WHY</h3><p>Przestajesz tłumaczyć od nowa przy każdej rozmowie. AI zna Twoją rolę, kontekst i reguły od pierwszego słowa.</p></div>
+    <div class="card"><h3>HOW</h3><p>R·Z·F + persona + stałe zasady + pola do uzupełnienia. Wklejasz raz — działa zawsze.</p></div>
+    <div class="card"><h3>WHAT</h3><p>Budujemy teraz na żywo: master prompt dla marketera. Rafale, zaczynamy od Ciebie.</p></div>
+  </div>
+  <div class="prompt" style="margin-top:16px;font-size:15px"><b>Jesteś</b> [rola — researcherem? copywriterem? asystentem?]
+<b>Pomagasz mi w</b> [zadanie — co robię co tydzień?]
+<b>Dostarczasz jako</b> [format — tabelę? szkielet? brief?]
+Stałe zasady: nie zmyślaj · ⚠️ przy niepewności · pytaj przed startem</div>
+  <div class="foot">Każdy z Was dostanie swój imienny prompt startowy w mailu po sesji. To wersja starter — pełna „maszyna" to warsztat 2.</div>
+</section>
+
+<!-- 31 · ĆWICZENIE -->
 <section class="slide">
   <p class="kick">Ćwiczenie · 10 minut ✍️</p>
   <h2>Jedno zadanie od poniedziałku</h2>
@@ -552,10 +568,10 @@ Każde pole, którego nie jesteś pewien, oznacz ⚠️ i napisz dlaczego.</div>
       <li>Przeczytajcie zobowiązania na głos. Kartki zostają u Was, a ja zapytam o nie za 30 dni.</li>
     </ul>
   </div>
-  <div class="foot">Brakuje pomysłu? Research przed rozmową, posty z banku struktur, brief graficzny, faktury. Ale najlepsze zobowiązania piszecie sami.</div>
+  <div class="foot">Masz master prompt, masz narzędzia — zostaje pytanie: NA CZYM je od poniedziałku użyjesz? Ale najlepsze zobowiązania piszecie sami.</div>
 </section>
 
-<!-- 31 · MAPA -->
+<!-- 32 · MAPA -->
 <section class="slide">
   <p class="kick">Uczciwie o dzisiejszym dniu</p>
   <h2>Zobaczyliście kawałek mapy</h2>
@@ -577,7 +593,21 @@ Każde pole, którego nie jesteś pewien, oznacz ⚠️ i napisz dlaczego.</div>
   <div class="foot">Trzy godziny nie zrobią z nikogo mistrza. Wystarczą, żeby przestać grać na ślepo.</div>
 </section>
 
-<!-- 32 · SESJA 2 -->
+<!-- 33 · DATA IS THE KEY -->
+<section class="slide">
+  <p class="kick">Teaser · pełna wersja na warsztacie 2</p>
+  <h2>Data is the key 🔑</h2>
+  <div class="body">
+    <ul class="big">
+      <li><b>Trzymaj dane robocze w jednym miejscu:</b> briefy, analizy, teksty, historie projektów — w folderach, które AI potrafi przeczytać.</li>
+      <li><b>Im dłużej to robisz, tym lepiej AI rozumie Wasz kontekst</b> — bez tłumaczenia od nowa. Projekt po 3 miesiącach wie o Waszej marce więcej niż nowy pracownik po onboardingu.</li>
+      <li><b>Narzędzia nowej generacji</b> (Cursor, Claude Projects, Gemini z Workspace) zamieniają Wasze pliki w pamięć długoterminową zespołu.</li>
+    </ul>
+  </div>
+  <div class="foot">Jedno repozytorium, cały zespół, zero powtarzania briefów. To temat warsztatu 2.</div>
+</section>
+
+<!-- 34 · SESJA 2 -->
 <section class="slide">
   <p class="kick">Co dalej · konkret, nie chmurka możliwości</p>
   <h2>Warsztat 2: Wasze materiały, do końca</h2>
@@ -587,10 +617,10 @@ Każde pole, którego nie jesteś pewien, oznacz ⚠️ i napisz dlaczego.</div>
     <div class="card"><h3>🧾 Faktury na autopilocie</h3><p>Ze zdjęcia do arkusza bez przepisywania, człowiek tylko przy ⚠️. Plus wprowadzanie osób do płatności. <i>Rafał R.</i></p></div>
     <div class="card"><h3>🎨 Linia graficzna</h3><p>Z briefu do wariantów w Firefly spójnych z copy, z szablonami do Canvy. <i>Maciek.</i></p></div>
   </div>
-  <div class="foot">Format: pół dnia na Waszych prawdziwych materiałach, wychodzicie z działającymi szablonami. W dzisiejszej ankiecie zaznaczycie, który temat gra pierwszy.</div>
+  <div class="foot">Format: pół dnia na Waszych prawdziwych materiałach, wychodzicie z działającymi szablonami. Na koniec powiecie, który temat gra pierwszy.</div>
 </section>
 
-<!-- 33 · ZAMKNIĘCIE (dark) -->
+<!-- 35 · ZAMKNIĘCIE (dark) -->
 <section class="slide dark">
   <p class="kick">Dziękuję</p>
   <svg style="position:absolute;top:58px;right:78px" width="130" height="130" viewBox="0 0 100 100" fill="none" stroke="#7db6f0" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
@@ -602,7 +632,7 @@ Każde pole, którego nie jesteś pewien, oznacz ⚠️ i napisz dlaczego.</div>
   <div class="body">
     <q class="pull" style="color:#d9d8d2">Wychodzicie z trzema nawykami, mapą narzędzi i własnym zobowiązaniem. Za 30 dni zapytam, co z tego przeżyło. To będzie najuczciwsza miara tego warsztatu.</q>
     <ul class="big" style="margin-top:26px;color:#d9d8d2">
-      <li>📋 Ankieta, 2 minuty, jeszcze dziś: co zostaje, co wyciąć, który temat warsztatu 2 pierwszy.</li>
+      <li>📋 Pytania o dziś omówimy teraz — co zostaje, co wyciąć. W mailu do 48 h: materiały, prompty i Wasze imienne master prompty.</li>
       <li>📬 Do 48 godzin: mail z materiałami, promptami z dem i odpowiedziami z flipchartu.</li>
     </ul>
   </div>

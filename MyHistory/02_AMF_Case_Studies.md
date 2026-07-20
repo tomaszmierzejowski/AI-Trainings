@@ -1,3 +1,5 @@
+> **⚠️ DEPRECATED (2026-07-19):** This file uses the retired Alpha–Epsilon codename scheme and contains unverified ROI figures, marine/vessel framing, and other AI-generated content that has not been fact-checked. Do NOT use for any published content. See `SOURCE_OF_TRUTH.md` for the current 4 approved case studies: Proof of Scale, Invisible Risk, Proof of Speed, The Rescue.
+
 # AI App Modernization Factory — Case Studies (Anonymized)
 
 All client names have been replaced with project codenames (Alpha through Epsilon) in accordance with confidentiality policy. Industry and geography references are preserved for context.

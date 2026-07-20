@@ -93,7 +93,7 @@ lingering in an older file; fix that file instead.
 - Invisible Risk (was separately "Project Axiom" + "a Nordic transaction-processing
   enterprise"; confirmed 2026-07-19 to be the same client, now told as one story): 529 unauthenticated REST endpoints discovered; 100+ business rules
   extracted; 97 projects analyzed across 17 modules; zero erroneous conclusions (human
-  verification gates); 312 evidence-tagged citations; 3-week delivery vs. ~6 months traditional.
+  verification gates); 3-week delivery vs. ~6 months traditional.
   Business rules: always "100+", never 143 or the old pre-deduplication "100" — both retired.
 - Proof of Speed / "the 4-day rescue" (anonymized — a Norwegian children's-research non-profit,
   never named): Android-only app; Google Play deprecating Xamarin.Forms; Xamarin to .NET MAUI in
@@ -175,8 +175,8 @@ duplicate the full list here, cross-reference instead.
 2. Write to Stefan at 3am: short declarative sentences, no consulting jargon, no throat-clearing.
 3. AI appears once per post, always as a tool, never as the subject. The story is the platform,
    the risk, the fix — not "how AI changed everything."
-4. Ground every claim in a real case study (Velocity, Meridian-Core, the transaction-processing
-   engagement, etc.) or a concrete example — show, don't tell.
+4. Ground every claim in one of the four approved case studies (Proof of Scale, Invisible Risk,
+   Proof of Speed, The Rescue) or a concrete example — show, don't tell.
 5. No em dashes, no hype vocabulary, no triple negation, no arrow-chain bullets, no algorithm-bait
    hooks, no engagement-bait CTAs, no formulaic closing question on every post — same anti-slop
    baseline as the Mindset track (MyHistory/CONTENT_RULES.md), applied here too. A modernization

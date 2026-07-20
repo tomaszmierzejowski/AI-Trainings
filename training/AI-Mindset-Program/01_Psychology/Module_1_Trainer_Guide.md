@@ -7,7 +7,7 @@
 | Segment | Slides | Time |
 |---|---|---|
 | Opening + ground rules | 1–3 | 10 min |
-| The story arc (Domek → Terrain → 4-day rescue) | 4–6 | 15 min |
+| The story arc (Domek → Proof of Scale → 4-day rescue) | 4–6 | 15 min |
 | The Spectrum + self-diagnosis | 7–9 | 15 min |
 | The friction map (psychology core) | 10–11 | 15 min |
 | Evidence block | 12–13 | 10 min |
@@ -21,7 +21,7 @@
 Open with the anti-promise: "I am not here to show you features. Features will be outdated before your next performance review." Establish the evidence contract early and *invite challenge* — it differentiates you from every AI evangelist they've endured. When you show slide 3, say explicitly: "If I ever show a number without a badge, call it out. That's the standard I hold clients to, so hold me to it."
 
 ### Slides 4–6 (Story arc)
-Deliver the Domek story personally and unhurried — it's the emotional anchor of the whole program. The mechanic: **same pattern, different scale.** Domek (family) → Terrain (business, verified metrics) → 4-day rescue (mission-critical, human stakes). On slide 6, slow down for the Christmas Eve quote; let it sit for three seconds. The point to land: this is not about software — a research program for children's mental health continued because someone had the *behavior* of reaching for AI first under deadline pressure.
+Deliver the Domek story personally and unhurried — it's the emotional anchor of the whole program. The mechanic: **same pattern, different scale.** Domek (family, no metric badge) → Proof of Scale (business, verified metrics) → 4-day rescue (mission-critical, human stakes). On slide 6, slow down for the Christmas Eve quote; let it sit for three seconds. The point to land: this is not about software — a research program for children's mental health continued because someone had the *behavior* of reaching for AI first under deadline pressure.
 **Anonymity discipline:** do not name the non-profit or the country's municipalities beyond what's on the slide.
 
 ### Slides 7–9 (Spectrum)
@@ -60,6 +60,6 @@ Constraint matters: the task must be (a) recurring, (b) theirs personally, (c) s
 - **"This training will be stale in a quarter — models change monthly."** — "Everything feature-shaped will be, which is why there are zero feature screenshots in the whole program. Habits, verification, spec-writing, trust calibration — those outlast model generations. The 2024 study cohort used tools that are already obsolete; the behavioral gap it measured is unchanged."
 
 ## Failure modes for the trainer
-- Don't oversell the Domek story into a productivity claim — it's a hook, not evidence. The evidence badge appears on Terrain, not the Domek.
+- Don't oversell the Domek story into a productivity claim — it's a hook, not evidence. The evidence badge appears on Proof of Scale, not the Domek.
 - Don't let the spectrum become a maturity shaming device. Level 4 is not "better humans," it's a different job design.
 - If the room is senior/skeptical, lead with slide 15 (credibility) right after slide 3 — reordering is allowed.

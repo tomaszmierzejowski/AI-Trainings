@@ -306,7 +306,7 @@ ul.checks li b{color:var(--ink)}
     </div>
   </div>
   <div class="footerbar"><span class="sslogo"></span><span>Our progress</span></div>
-  <aside class="notes">In 2024, a serious code audit needed a board-level budget. Today the same audit — deeper, covering every file — costs one eighth of that. A CTO can sign it directly. This price drop is the whole strategy: discovery stopped being a project and became a product. HUMOR: "We made our own consulting hours 87% cheaper. Our finance team has questions."</aside>
+  <aside class="notes">In 2024, a serious code audit needed a board-level budget. Today the same audit — deeper, covering every file — costs a fraction of that. A CTO can sign it directly. This price drop is the whole strategy: discovery stopped being a project and became a product. HUMOR: "We made our own consulting hours dramatically cheaper. Our finance team has questions."</aside>
 </section>
 
 <!-- ============ SLIDE 3 · METHOD ONE-LINER ============ -->
@@ -519,29 +519,28 @@ ul.checks li b{color:var(--ink)}
   <aside class="notes">How do you find a bug in a system you cannot log into? You prove it cannot be anywhere else. We reconstructed the full journey of the money from the code alone, and gave the client a four-row data request to confirm it in production. HUMOR: "Surprise — we never had a password." Then, serious: we also audit our own findings before we present them. We prefer to weaken a claim than to inflate one. That is our style.</aside>
 </section>
 
-<!-- ============ SLIDE 6 · CS3 OCEANIC ============ -->
+<!-- ============ SLIDE 6 · CS3 PUBLIC INSTITUTE ============ -->
 <section class="slide">
   <div class="blob tr" style="opacity:.16"></div>
   <div class="pad">
     <div class="eyebrow">Case Study 3 · Recovered Knowledge</div>
-    <h2>Oceanic Research Institute: <span class="hl">the app nobody was allowed to touch</span></h2>
-    <p class="sub">Critical research app running on 20+ vessels. Its data supports national fish quota decisions worth billions of NOK. Frozen for ~2 years.</p>
+    <h2>Public Institute: <span class="hl">the app nobody was allowed to touch</span></h2>
+    <p class="sub">Critical data collection platform with 10 git branches (only 3 in use), each matched to specific hardware. 200+ CVEs. Deployment blocked for ~2 years.</p>
     
     <div class="cols" style="grid-template-columns:1fr 1fr;margin-top:20px;gap:20px">
       <!-- Before -->
       <div class="card" style="padding:22px 24px;border-left:5px solid var(--ss-red);display:flex;flex-direction:column;gap:16px">
         <div style="font-family:var(--mono);font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--ss-red)">Before — "do not touch"</div>
         
-        <!-- Malfunctioning ship & sad fish graphic -->
-        <div style="position:relative;width:100%;height:170px;overflow:hidden;border-radius:10px;background:transparent;display:flex;align-items:center;justify-content:center">
-          <img src="../assets/broken_ship_sad_fish.png" style="max-height:100%;max-width:100%;object-fit:contain" alt="Malfunctioning ship and sad fish">
+        <div style="position:relative;width:100%;height:170px;overflow:hidden;border-radius:10px;background:linear-gradient(135deg,#fee2e2,#fff);display:flex;align-items:center;justify-content:center;text-align:center;padding:18px;color:var(--ss-red);font-family:var(--mono);font-size:20px;font-weight:700">
+          10 branches<br>unknown hardware mapping
         </div>
 
         <ul class="checks crosses" style="font-size:15px;display:flex;flex-direction:column;gap:8px">
           <li>Run as a <b>"no-touch legacy system"</b> — if it breaks, the internal team <b>"will not be able to restore it"</b></li>
           <li>Technology without support since 2019 · <b>0% test coverage</b></li>
           <li>Deployment knowledge was lost — <b>no release for ~2 years</b></li>
-          <li>Could not update measuring software while ships were out at sea</li>
+          <li>10 git branches, only 3 in use — each <b>matched to specific hardware</b>, blocking automated deployment</li>
         </ul>
       </div>
 
@@ -549,22 +548,21 @@ ul.checks li b{color:var(--ink)}
       <div class="card" style="padding:22px 24px;border-left:5px solid var(--ss-orange);display:flex;flex-direction:column;gap:16px">
         <div style="font-family:var(--mono);font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--ss-orange)">After — safe to touch again</div>
         
-        <!-- Happy ship graphic -->
-        <div style="position:relative;width:100%;height:170px;overflow:hidden;border-radius:10px;background:transparent;display:flex;align-items:center;justify-content:center">
-          <img src="../assets/happy_ship_happy_fish.png" style="max-height:100%;max-width:100%;object-fit:contain" alt="Happy ship sailing smoothly">
+        <div style="position:relative;width:100%;height:170px;overflow:hidden;border-radius:10px;background:linear-gradient(135deg,#fff7ed,#fff);display:flex;align-items:center;justify-content:center;text-align:center;padding:18px;color:var(--ss-orange-700);font-family:var(--mono);font-size:20px;font-weight:700">
+          3 real branches<br>matched and automated
         </div>
 
         <ul class="checks" style="font-size:15px;display:flex;flex-direction:column;gap:8px">
-          <li>AI read <b>100k+ lines in ~300 files</b>: containerized and made <b>deployable again within the first week</b></li>
-          <li>Found blocker: native modules compiled locally on the ship's hardware</li>
-          <li><b>~50 pages</b> of deployment &amp; architecture documentation rebuilt from zero</li>
-          <li>Modernization is now scoped, prioritized and ready for a decision</li>
+          <li>Found the blocker: 10 active-looking branches, only 3 actually used in production</li>
+          <li>Matched each real branch to the correct custom hardware</li>
+          <li>Automated deployment around the verified branch-to-hardware mapping</li>
+          <li>200+ known CVEs surfaced and prioritized during the discovery</li>
         </ul>
       </div>
     </div>
   </div>
   <div class="footerbar"><span class="sslogo"></span><span>Case studies</span></div>
-  <aside class="notes">The official strategy for a system that supports national quota decisions was: do not touch it. HUMOR: "The deployment documentation was one person. He left the company." After one week of AI-supported analysis, the mystery had nowhere left to hide. SECOND HUMOR: "The system went from 'do not touch' to 'touch it as much as you want'. That is our product in one sentence."</aside>
+  <aside class="notes">The official strategy for a critical custom-hardware platform was: do not touch it. Keep the story generic: 10 branches, 3 actually in use, matched to hardware, deployment automated, 200+ CVEs found. Do not add sector, vessel, device, or ROI details.</aside>
 </section>
 
 <!-- ============ SLIDE 7 · CS4 PEDIATRIC APP ============ -->
@@ -706,14 +704,14 @@ ul.checks li b{color:var(--ink)}
   <aside class="notes">A real message, received the same evening the app went live. This is what the cost reduction on slide 2 actually buys — not a KPI. A research program for children that did not die. (Pause. Then move on.) NOTE: the words are a shortened version of the original client email, with the sender anonymized; confirm permission before customer-facing use.</aside>
 </section>
 
-<!-- ============ SLIDE 10 · AGILE ON STEROIDS (MERGED) ============ -->
+<!-- ============ SLIDE 10 · EARLY DE-RISKING (MERGED) ============ -->
 <section class="slide">
   <!-- Soft brand blobs in corners -->
   <div class="blob tr" style="opacity:.14; background:radial-gradient(circle, var(--ss-red) 0%, transparent 70%)"></div>
   <div class="blob bl" style="opacity:.12; background:radial-gradient(circle, var(--ss-purple-dark) 0%, transparent 70%)"></div>
   <div class="pad">
     <div class="eyebrow">Our Philosophy &amp; Results</div>
-    <h2>Agile on Steroids: <span class="hl">De-Risking with an AI-Mindset</span></h2>
+    <h2>Early De-Risking: <span class="hl">Evidence Before Budget</span></h2>
     <p class="sub">We combine native AI pipelines with senior engineering expertise to deliver complete, de-risked discovery outputs early.</p>
     
     <div class="cols" style="grid-template-columns:1.05fr 1.2fr;align-items:center;gap:35px;margin-top:20px;width:100%">
@@ -825,7 +823,7 @@ ul.checks li b{color:var(--ink)}
       </div>
     </div>
   </div>
-  <div class="footerbar"><span class="sslogo"></span><span>Agile on steroids</span></div>
+  <div class="footerbar"><span class="sslogo"></span><span>Early de-risking</span></div>
   <aside class="notes">AI made code writing faster, but that is just a speed increase. The real power is AI-augmented engineers with an AI-mindset. Explain the car dealer: in 2 weeks we mapped everything, on Day 15-30 we showed a working frontend. This early de-risking avoids the Standish Chaos trap. Our verified outputs on the right show this is a proven method across six different systems.</aside>
 </section>
 

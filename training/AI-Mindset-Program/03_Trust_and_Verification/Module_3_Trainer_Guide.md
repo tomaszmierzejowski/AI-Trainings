@@ -8,7 +8,7 @@
 |---|---|---|
 | Two failure modes + what hallucination is | 1–3 | 15 min |
 | Grounding rules & behaviors | 4–5 | 10 min |
-| Verified cases (Axiom, evidence-tagged discovery) | 6–7 | 15 min |
+| Verified cases (Invisible Risk, evidence-tagged discovery) | 6–7 | 15 min |
 | Hidden complexity + trust matrix | 8–9 | 15 min |
 | Verification habits + governance + Antystyki | 10–12 | 15 min |
 | Exercise: catch the confident lie | 13 | 15 min |
@@ -24,8 +24,8 @@ Slide 3: keep the explanation mechanical, not mystical. "It completes text plaus
 Rule 1 is the single most reusable sentence for leaders in the room: truth lives in systems of record; AI is the understanding layer. On slide 5, land the reflexivity: "No citation, no claim — notice that's the standard these slides hold themselves to. Every number today has a badge. Demand the same from your AI and from your consultants."
 
 ### Slides 6–7 (Cases — the module's spine)
-Axiom's story must be told as *protocol, not model*: "Zero erroneous conclusions across 97 projects did not happen because the model was infallible. It happened because no AI finding entered the report without passing a human gate. The reliability lives in the process design." This is the sentence skeptics quote back later — rehearse it.
-Slide 7: the phrase to land is "discovery you can audit beats discovery you must believe." 312 evidence-tagged citations means a client can challenge any finding and be shown the exact line of code. Anonymity discipline: never name the client, the country, or the industry vertical beyond "Nordic transaction-processing enterprise."
+Invisible Risk must be told as *protocol, not model*: "Zero erroneous conclusions across 97 projects did not happen because the model was infallible. It happened because no AI finding entered the report without passing a human gate. The reliability lives in the process design." This is the sentence skeptics quote back later — rehearse it.
+Slide 7: the phrase to land is "discovery you can audit beats discovery you must believe." Evidence-tagged citations mean a client can challenge any finding and be shown the exact line of code. Anonymity discipline: never name the client, the country, or the industry vertical.
 
 ### Slides 8–9 (Complexity + matrix)
 Standish: quote it honestly — ~31% succeed outright (2020). Do NOT use any "73% of modernization projects fail" formulation; that statistic does not exist and the program's credibility rests on never inventing numbers. The pivot sentence: "Most failed projects didn't lack information. They ran on unverified assumptions."
@@ -48,13 +48,13 @@ Close on identity, not fear: "Verification isn't distrust of AI. It's the thing 
 3. "Who reviews AI-assisted work in your org today? Anyone? Everyone? Randomly?"
 
 ## Likely objections & responses
-- **"Verification eats all the time savings."** — "Only if you verify everything at the same intensity. That's what the matrix is for: calibrated verification. Axiom verified 97 projects' worth of findings and still finished in a fraction of traditional time — gates are cheap, rework is expensive."
+- **"Verification eats all the time savings."** — "Only if you verify everything at the same intensity. That's what the matrix is for: calibrated verification. Invisible Risk verified 97 projects' worth of findings and still finished in a fraction of traditional time — gates are cheap, rework is expensive."
 - **"If it needs checking, it's not ready for real work."** — "Every junior colleague's work needs checking; they're still valuable. And unlike a junior, AI never gets offended by review and never repeats *your* correction reluctantly."
 - **"Our compliance team will never allow any of this."** — "Compliance teams say no to unbounded requests. Bring them slide 11 — scoped tools, least privilege, logging, no personal data — and the conversation changes. Governance done well is precisely what makes compliance comfortable."
 - **"NotebookLM/RAG cites sources, so hallucination is solved."** — "Reduced by design, not solved. The summary of a true source can still be wrong, and a true source can still be outdated. Citations shrink the check; they don't replace it."
 - **"Won't a second-model cross-check just double the cost?"** — "You reserve it for the high-stakes/hard-to-verify quadrant — by definition the smallest slice of your day."
 
 ## Failure modes for the trainer
-- Sliding into fear-based delivery. The module's tone is professional pride, not danger. If the room goes quiet and anxious, return to the Axiom story — competence, not catastrophe.
+- Sliding into fear-based delivery. The module's tone is professional pride, not danger. If the room goes quiet and anxious, return to the Invisible Risk story — competence, not catastrophe.
 - Quoting hallucination-rate statistics. Rates vary wildly by model, task and year; any number you quote will be wrong soon and unverifiable now. The planted-error exercise is your evidence.
 - Letting the governance slide balloon. Four rules, five minutes, point to the client's own policy for the rest.

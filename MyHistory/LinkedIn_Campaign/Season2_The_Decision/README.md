@@ -38,10 +38,10 @@ Format shift from Season 1: shorter posts (150–250 words), one idea each, ever
 
 ### Numbers cleared for use (per Evidence Register, 2026-07 reconciliation)
 
-- 20 applications / 3-week discovery / 187 endpoints (Project Velocity)
-- 97 projects analyzed, 17 modules, zero erroneous conclusions (Project Axiom)
-- 143 business rules at 94% confidence from ~220,000 lines; 312 evidence-tagged citations
+- 20 applications / 3-week discovery / 187 endpoints (Proof of Scale)
+- 97 projects analyzed, 17 modules, zero erroneous conclusions (Invisible Risk)
+- 100+ business rules; 312 evidence-tagged citations
 - 500K vs 2.3M NOK (≈78% reduction); 3 weeks vs ~14 weeks
 - 529 unauthenticated endpoints (established in Season 1 — reference, don't re-explain)
 
-Banned phrases list from `../README.md` applies in full. Note: the Evidence Register supersedes the old "use 100 business rules" rule — the reconciled figure is **143 at 94% confidence**.
+Banned phrases list from `../README.md` applies in full. Use **100+ business rules** (not 143, not 94%).

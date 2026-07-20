@@ -211,7 +211,7 @@ ul.checks li b{color:var(--ink)}
     </div>
   </div>
   <div class="footerbar"><span class="sslogo"></span><span>Nasz postęp</span></div>
-  <aside class="notes">W 2024 poważny audyt kodu wymagał budżetu na poziomie zarządu. Dziś ten sam audyt — głębszy, obejmujący każdy plik — kosztuje około jednej ósmej. CTO może go podpisać samodzielnie. Ten spadek ceny to cała strategia: discovery przestało być projektem, a stało się produktem. HUMOR: „Obniżyliśmy cenę własnych godzin konsultingowych o 87% w fazie discovery i analizy. Nasz dział finansów ma pytania." Uwaga: oszczędności kosztów dotyczą wyłącznie fazy discovery i analizy kodu — nie pełnej modernizacji.</aside>
+  <aside class="notes">W 2024 poważny audyt kodu wymagał budżetu na poziomie zarządu. Dziś ten sam audyt — głębszy, obejmujący każdy plik — kosztuje ułamek tamtej kwoty. CTO może go podpisać samodzielnie. Ten spadek ceny to cała strategia: discovery przestało być projektem, a stało się produktem. HUMOR: „Drastycznie obniżyliśmy cenę własnych godzin konsultingowych w fazie discovery i analizy. Nasz dział finansów ma pytania." Uwaga: oszczędności kosztów dotyczą wyłącznie fazy discovery i analizy kodu — nie pełnej modernizacji.</aside>
 </section>
 
 <!-- ============ SLAJD 3 · METODA ============ -->
@@ -265,7 +265,7 @@ ul.checks li b{color:var(--ink)}
     </div>
   </div>
   <div class="footerbar"><span class="sslogo"></span><span>Nasza metoda</span></div>
-  <aside class="notes">Oficjalna strategia dla systemu wspierającego krajowe decyzje o kwotach połowowych brzmiała: nie dotykać. HUMOR: „Dokumentacją wdrożeniową był jeden człowiek. Odszedł z firmy." Po tygodniu analizy wspieranej przez AI zagadka nie miała się już gdzie schować. DRUGI HUMOR: „System przeszedł ze stanu «nie dotykać» do «dotykaj, ile chcesz». To nasz produkt w jednym zdaniu."</aside>
+  <aside class="notes">Oficjalna strategia dla krytycznego systemu brzmiała: nie dotykać. HUMOR: „Dokumentacją wdrożeniową był jeden człowiek. Odszedł z firmy." Po tygodniu analizy wspieranej przez AI zagadka nie miała się już gdzie schować. DRUGI HUMOR: „System przeszedł ze stanu «nie dotykać» do «dotykaj, ile chcesz». To nasz produkt w jednym zdaniu."</aside>
 </section>
 <!-- ============ SLAJD 4 · BADANIA VS RZECZYWISTOŚĆ ============ -->
 <section class="slide">
@@ -425,29 +425,28 @@ ul.checks li b{color:var(--ink)}
   <aside class="notes">Jak znaleźć błąd w systemie, do którego nie można się zalogować? Udowadniając, że nie może być nigdzie indziej. Odtworzyliśmy pełną drogę pieniądza wyłącznie z kodu i daliśmy klientowi czterowierszowy wyciąg danych do potwierdzenia na produkcji. HUMOR: „Niespodzianka — nigdy nie mieliśmy hasła." Potem poważnie: audytujemy też własne ustalenia, zanim je zaprezentujemy. Wolimy osłabić twierdzenie, niż je napompować. Taki mamy styl.</aside>
 </section>
 
-<!-- ============ SLAJD 6 · CS3 INSTYTUT MORSKI ============ -->
+<!-- ============ SLAJD 6 · CS3 INSTYTUT PUBLICZNY ============ -->
 <section class="slide">
   <div class="blob tr" style="opacity:.16"></div>
   <div class="pad">
     <div class="eyebrow">Case study 3 · Odzyskana wiedza</div>
-    <h2>Instytut badań morskich: <span class="hl">aplikacja, której nikt nie mógł dotknąć</span></h2>
-    <p class="sub">Krytyczny system badawczy na 20+ statkach. Jego dane wspierają decyzje o kwotach połowowych warte miliardy NOK. Zamrożony od ~2 lat.</p>
+    <h2>Instytut publiczny: <span class="hl">aplikacja, której nikt nie mógł dotknąć</span></h2>
+    <p class="sub">Krytyczna platforma do zbierania danych z 10 gałęziami git (tylko 3 w użyciu), każda dopasowana do konkretnego sprzętu. 200+ CVE. Wdrożenia zablokowane od ~2 lat.</p>
     
     <div class="cols" style="grid-template-columns:1fr 1fr;margin-top:20px;gap:20px">
       <!-- Przedtem -->
       <div class="card" style="padding:22px 24px;border-left:5px solid var(--ss-red);display:flex;flex-direction:column;gap:16px">
         <div style="font-family:var(--mono);font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--ss-red)">Przedtem — „nie dotykać"</div>
         
-        <!-- Malfunctioning ship & sad fish graphic -->
-        <div style="position:relative;width:100%;height:170px;overflow:hidden;border-radius:10px;background:transparent;display:flex;align-items:center;justify-content:center">
-          <img src="../assets/broken_ship_sad_fish.png" style="max-height:100%;max-width:100%;object-fit:contain" alt="Malfunctioning ship and sad fish">
+        <div style="position:relative;width:100%;height:170px;overflow:hidden;border-radius:10px;background:linear-gradient(135deg,#fee2e2,#fff);display:flex;align-items:center;justify-content:center;text-align:center;padding:18px;color:var(--ss-red);font-family:var(--mono);font-size:20px;font-weight:700">
+          10 gałęzi<br>nieznane mapowanie sprzętu
         </div>
 
         <ul class="checks crosses" style="font-size:15px;display:flex;flex-direction:column;gap:8px">
           <li>Prowadzony jako <b>system „nie dotykać"</b> — jeśli się zepsuje, zespół wewnętrzny <b>„nie będzie w stanie go przywrócić"</b></li>
           <li>Technologia bez wsparcia od 2019 · <b>0% pokrycia testami</b></li>
           <li>Wiedza o wdrożeniach utracona — <b>brak wydań od ~2 lat</b></li>
-          <li>Nie można było aktualizować oprogramowania pomiarowego, gdy statki były na morzu</li>
+          <li>10 gałęzi git, tylko 3 w użyciu — każda <b>dopasowana do konkretnego sprzętu</b>, blokująca automatyczne wdrożenie</li>
         </ul>
       </div>
 
@@ -455,22 +454,21 @@ ul.checks li b{color:var(--ink)}
       <div class="card" style="padding:22px 24px;border-left:5px solid var(--ss-green-dark);display:flex;flex-direction:column;gap:16px">
         <div style="font-family:var(--mono);font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--ss-green-dark)">Potem — bezpieczny dostęp</div>
         
-        <!-- Happy ship graphic -->
-        <div style="position:relative;width:100%;height:170px;overflow:hidden;border-radius:10px;background:transparent;display:flex;align-items:center;justify-content:center">
-          <img src="../assets/happy_ship_happy_fish.png" style="max-height:100%;max-width:100%;object-fit:contain" alt="Happy ship sailing smoothly">
+        <div style="position:relative;width:100%;height:170px;overflow:hidden;border-radius:10px;background:linear-gradient(135deg,#ecfdf5,#fff);display:flex;align-items:center;justify-content:center;text-align:center;padding:18px;color:var(--ss-green-dark);font-family:var(--mono);font-size:20px;font-weight:700">
+          3 realne gałęzie<br>dopasowane i zautomatyzowane
         </div>
 
         <ul class="checks" style="font-size:15px;display:flex;flex-direction:column;gap:8px">
-          <li>AI przeczytało <b>100 tys.+ linii w ~300 plikach</b>: skonteneryzowane i <b>wdrażalne znów w pierwszym tygodniu</b></li>
-          <li>Znaleziono blokadę: moduły natywne kompilowane lokalnie na statku</li>
-          <li><b>~50 stron</b> dokumentacji wdrożeniowej i architektury odtworzone od zera</li>
-          <li>Modernizacja wyceniona, spriorytetyzowana i gotowa do decyzji</li>
+          <li>Znaleziono blokadę: 10 aktywnie wyglądających gałęzi, tylko 3 faktycznie używane na produkcji</li>
+          <li>Dopasowano każdą realną gałąź do właściwego niestandardowego sprzętu</li>
+          <li>Zautomatyzowano wdrożenia wokół zweryfikowanego mapowania gałąź-sprzęt</li>
+          <li>W discovery ujawniono i spriorytetyzowano 200+ znanych CVE</li>
         </ul>
       </div>
     </div>
   </div>
   <div class="footerbar"><span class="sslogo"></span><span>Case studies</span></div>
-  <aside class="notes">Oficjalna strategia dla systemu wspierającego krajowe decyzje o kwotach połowowych brzmiała: nie dotykać. HUMOR: „Dokumentacją wdrożeniową był jeden człowiek. Odszedł z firmy." Po tygodniu analizy wspieranej przez AI zagadka nie miała się już gdzie schować. DRUGI HUMOR: „System przeszedł ze stanu «nie dotykać» do «dotykaj, ile chcesz». To nasz produkt w jednym zdaniu."</aside>
+  <aside class="notes">Oficjalna strategia dla krytycznej platformy na niestandardowym sprzęcie brzmiała: nie dotykać. Trzymać opis ogólnie: 10 gałęzi, 3 faktycznie używane, dopasowane do sprzętu, wdrożenie zautomatyzowane, 200+ CVE. Bez sektora, jednostek, urządzeń i ROI.</aside>
 </section>
 
 <!-- ============ SLAJD 7 · CS4 APLIKACJA DLA DZIECI ============ -->
@@ -612,14 +610,14 @@ ul.checks li b{color:var(--ink)}
   <aside class="notes">Prawdziwa wiadomość, otrzymana tego samego wieczoru, gdy aplikacja wróciła do życia. To właśnie kupuje redukcja kosztów ze slajdu 2 — nie KPI. Program badawczy dla dzieci, który nie umarł. (Pauza. Dalej.) UWAGA: treść to skrócona wersja oryginalnego maila klienta, nadawca zanonimizowany; przed użyciem u klienta potwierdzić zgodę.</aside>
 </section>
 
-<!-- ============ SLAJD 10 · AGILE NA STEROIDACH (SCALONY) ============ -->
+<!-- ============ SLAJD 10 · WCZESNE ROZBRÓJENIE RYZYKA (SCALONY) ============ -->
 <section class="slide">
   <!-- Soft brand blobs in corners -->
   <div class="blob tr" style="opacity:.14; background:radial-gradient(circle, var(--ss-red) 0%, transparent 70%)"></div>
   <div class="blob bl" style="opacity:.12; background:radial-gradient(circle, var(--ss-purple-dark) 0%, transparent 70%)"></div>
   <div class="pad">
     <div class="eyebrow">Nasza Filozofia i Wyniki</div>
-    <h2>Agile na sterydach: <span class="hl">De-risking z AI-Mindset</span></h2>
+    <h2>Wczesne rozbrójenie ryzyka: <span class="hl">Dowody przed budżetem</span></h2>
     <p class="sub">Łączymy natywne potoki wspierane przez AI ze sprawdzonymi inżynierami z AI-mindsetem — w 15–30 dni dostarczamy pełne analizy discovery na wczesnym etapie.</p>
     
     <div class="cols" style="grid-template-columns:1.05fr 1.2fr;align-items:center;gap:35px;margin-top:20px;width:100%">
@@ -731,7 +729,7 @@ ul.checks li b{color:var(--ink)}
       </div>
     </div>
   </div>
-  <div class="footerbar"><span class="sslogo"></span><span>Agile na sterydach</span></div>
+  <div class="footerbar"><span class="sslogo"></span><span>Wczesne rozbrójenie ryzyka</span></div>
   <aside class="notes">AI przyspieszyło pisanie kodu, ale to tylko szybsza praca. Prawdziwa siła to doświadczeni inżynierowie z AI-mindsetem plus natywne potoki wspierane przez AI. Przykład dealera: w 2 tygodnie rozpisaliśmy architekturę, w dniach 15–30 pokazaliśmy makiety. To wczesne rozbrojenie ryzyka pozwala uniknąć pułapki Chaos Report. Nasze rezultaty po prawej pokazują, że to sprawdzona metoda w sześciu różnych systemach.</aside>
 </section>
 
