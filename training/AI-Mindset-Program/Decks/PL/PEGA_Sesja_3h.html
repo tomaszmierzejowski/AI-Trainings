@@ -1,96 +1,649 @@
 <!doctype html>
 <html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>AI-Mindset · warsztat dla PEGA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--pg:#f9f9f7;--sf:#fcfcfb;--ink:#0b0b0b;--ink2:#52514e;--mut:#898781;--hair:#e1e0d9;--bd:rgba(11,11,11,.10);
---acc:#2a78d6;--accT:#1c5cab;--ok:#1baf7a;--warn:#c94f4e;--s:1}
-*{box-sizing:border-box}html,body{margin:0;height:100%}
-body{background:var(--pg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;overflow:hidden}
-.hud{position:fixed;top:0;left:0;right:0;height:48px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;font-size:13px;color:var(--ink2);z-index:10}
-.hud .brand b{color:var(--ink)}
-.help{position:fixed;bottom:10px;left:0;right:0;text-align:center;font-size:12px;color:var(--mut);z-index:10}
-.slide{display:none;position:fixed;top:50%;left:50%;width:1280px;height:720px;margin-top:8px;transform:translate(-50%,-50%) scale(var(--s));
-background:var(--sf);border:1px solid var(--bd);border-radius:14px;padding:64px 84px;flex-direction:column;box-shadow:0 14px 44px rgba(11,11,11,.07)}
-.slide.on{display:flex}
-.slide.dark{background:#10141b;border-color:rgba(255,255,255,.09);color:#f1f1ec}
-.slide.dark .kick{color:#7db6f0}
-.slide.dark .lead{color:#b9b8b1}
-.slide.dark .foot{border-top-color:rgba(255,255,255,.13);color:#8f8e88}
-.slide.dark .one p{color:#f1f1ec}
-.kick{font-size:15px;font-weight:700;letter-spacing:.12em;color:var(--accT);text-transform:uppercase;margin:0 0 14px}
-h1{font-size:54px;line-height:1.12;margin:0 0 18px;letter-spacing:-.015em}
-h2{font-size:41px;line-height:1.12;margin:0 0 20px;letter-spacing:-.01em}
-.lead{font-size:23px;color:var(--ink2);line-height:1.45;margin:0;max-width:1020px}
-.one{flex:1;display:flex;align-items:center}.one p{font-size:52px;line-height:1.18;font-weight:700;margin:0;letter-spacing:-.015em;max-width:1050px}
-.body{flex:1;display:flex;flex-direction:column;justify-content:center}
-ul.big{font-size:23px;line-height:1.55;margin:0;padding-left:26px}ul.big li{margin:10px 0}ul.big li::marker{color:var(--acc)}
-.cols{display:grid;grid-template-columns:1fr 1fr;gap:30px;flex:1;align-content:center}
-.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:8px}
-.tile{border:1px solid var(--hair);border-radius:12px;padding:20px 22px;background:#fff}
-.tile .num{font-size:46px;font-weight:750;letter-spacing:-.02em;line-height:1}
-.tile .lab{font-size:15px;color:var(--ink2);margin-top:9px;line-height:1.4}
-.badge{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.08em;padding:4px 12px;border-radius:6px;vertical-align:middle}
-.badge.v{color:#006300;background:rgba(12,163,12,.12)}.badge.s{color:#1c5cab;background:rgba(42,120,214,.12)}
-.badge.f{color:#52514e;background:rgba(82,81,78,.12)}.badge.o{color:#3a2d86;background:rgba(74,58,167,.12)}
-.card{border:1px solid var(--hair);border-radius:12px;padding:22px 24px;background:#fff}
-.card h3{margin:0 0 8px;font-size:20px}.card p{margin:0;font-size:17px;color:var(--ink2);line-height:1.5}
-.rowcards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;flex:1;align-content:center}
-.foot{margin-top:auto;padding-top:16px;border-top:1px solid var(--hair);font-size:16.5px;color:var(--ink2)}
-q.pull{display:block;font-size:29px;line-height:1.4;font-style:italic;quotes:"„" "”";max-width:960px}
-table.map{width:100%;border-collapse:collapse;font-size:19px;margin-top:4px}
-table.map th{text-align:left;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);padding:10px 14px;border-bottom:2px solid var(--hair)}
-table.map td{padding:12px 14px;border-bottom:1px solid var(--hair);vertical-align:top;line-height:1.4}
-table.map td:first-child{font-weight:700;white-space:nowrap}
-table.map tr:nth-child(odd) td{background:rgba(11,11,11,.015)}
-.ob{display:grid;grid-template-columns:1fr 56px 1fr;gap:0;align-items:stretch;margin-top:6px}
-.ob .o,.ob .n{border-radius:12px;padding:22px 24px;font-size:20px;line-height:1.45}
-.ob .o{background:rgba(82,81,78,.07);color:var(--ink2)}
-.ob .n{background:rgba(42,120,214,.09);border:1.5px solid var(--acc)}
-.ob .a{display:flex;align-items:center;justify-content:center;font-size:24px;color:var(--mut)}
-.prompt{background:#0b0b0b;color:#e8e8e4;border-radius:12px;padding:20px 24px;font-family:ui-monospace,Consolas,monospace;font-size:16.5px;line-height:1.55;white-space:pre-wrap}
-.prompt b{color:#7db6f0;font-weight:700}
-.vs2{display:grid;grid-template-columns:1fr 1fr;gap:20px;flex:1;align-content:center}
-.vs{display:grid;grid-template-columns:1fr 64px 1fr;align-items:center;gap:0;flex:1}
-.vs .no,.vs .yes{border-radius:14px;padding:32px;font-size:26px;line-height:1.35;font-weight:650}
-.vs .no{background:rgba(82,81,78,.07);color:var(--ink2);text-decoration:line-through;text-decoration-thickness:2px;text-decoration-color:rgba(11,11,11,.35)}
-.vs .yes{background:rgba(42,120,214,.09);color:var(--ink);border:1.5px solid var(--acc)}
-.vs .mid{text-align:center;font-size:26px;color:var(--mut)}
-.tree{display:flex;flex-direction:column;gap:12px;flex:1;justify-content:center}
-.tree .q{display:grid;grid-template-columns:430px 1fr;gap:16px;align-items:center}
-.tree .ask{font-size:21px;font-weight:700}
-.tree .ans{border:1px solid var(--hair);background:#fff;border-radius:10px;padding:13px 18px;font-size:19px}
-.tree .ans b{color:var(--accT)}
-.flow{display:flex;gap:10px;align-items:center;margin-top:14px;flex-wrap:wrap}
-.flow .st{background:rgba(42,120,214,.09);border:1px solid var(--acc);border-radius:999px;padding:8px 18px;font-size:17px;font-weight:650}
-.flow .ar{color:var(--mut);font-size:18px}
-.stepbox{display:flex;align-items:flex-end;gap:14px;flex:1;padding-bottom:8px}
-.step{flex:1;border:1px solid var(--hair);border-radius:12px 12px 0 0;background:#fff;padding:16px;display:flex;flex-direction:column;justify-content:flex-end}
-.step .lv{font-size:12px;font-weight:800;letter-spacing:.1em;color:#fff;background:#52514e;border-radius:5px;padding:3px 9px;align-self:flex-start;font-family:ui-monospace,Consolas,monospace}
-.step h3{margin:9px 0 6px;font-size:21px}.step p{margin:0;font-size:14.5px;color:var(--ink2);line-height:1.45}
-.step .em{font-size:30px;line-height:1;margin-bottom:8px}
-.step .xp{height:7px;background:var(--hair);border-radius:4px;margin-top:11px;overflow:hidden}
-.step .xp i{display:block;height:100%;background:var(--acc)}
-.step.t{border-color:var(--acc);border-width:2px;box-shadow:0 6px 20px rgba(42,120,214,.15)}
-.step.t .tgt{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.1em;color:#fff;background:var(--acc);border-radius:999px;padding:3px 10px;margin-bottom:8px;align-self:flex-start}
-.split{display:grid;grid-template-columns:1.2fr 1fr;gap:36px;flex:1;align-content:center;align-items:center}
-.minitiles{display:flex;flex-direction:column;gap:12px}
-.minitiles .tile{padding:14px 18px}.minitiles .num{font-size:32px}.minitiles .lab{margin-top:4px;font-size:14px}
-.cmp{display:grid;grid-template-columns:1fr 1fr;gap:26px;flex:1;align-content:center}
-.cmp .box{border:1px solid var(--hair);border-radius:14px;background:#fff;padding:26px 30px}
-.cmp .box.win{border:2px solid var(--acc);box-shadow:0 8px 26px rgba(42,120,214,.13)}
-.cmp h3{margin:0 0 14px;font-size:23px}
-.cmp ul{list-style:none;margin:0;padding:0;font-size:19px;line-height:1.5}
-.cmp li{margin:9px 0;padding-left:34px;position:relative}
-.cmp li::before{position:absolute;left:0;top:0;font-weight:800}
-.cmp li.y::before{content:"✓";color:var(--ok)}
-.cmp li.x::before{content:"✗";color:var(--warn)}
-.cmp .price{font-size:15px;color:var(--mut);margin-top:14px}
+:root {
+  --pg: #f1f5f9;
+  --sf: #ffffff;
+  --ink: #0f172a;
+  --ink2: #475569;
+  --mut: #64748b;
+  --hair: #e2e8f0;
+  --bd: rgba(15, 23, 42, 0.06);
+  --acc: #4f46e5;
+  --accT: #312e81;
+  --ok: #10b981;
+  --warn: #ef4444;
+  --s: 1;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body {
+  background: var(--pg);
+  color: var(--ink);
+  font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+.hud {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink2);
+  z-index: 10;
+  background: rgba(241, 245, 249, 0.8);
+  backdrop-filter: blur(8px);
+}
+.hud .brand b { color: var(--acc); font-weight: 700; }
+.help {
+  position: fixed;
+  bottom: 12px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--mut);
+  z-index: 10;
+}
+.slide {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 1280px;
+  height: 720px;
+  transform: translate(-50%, -50%) scale(var(--s));
+  background: var(--sf);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 20px;
+  padding: 64px 84px;
+  flex-direction: column;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.06), 0 1px 3px rgba(15, 23, 42, 0.02);
+  opacity: 0;
+}
+@keyframes slideFadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(var(--s));
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(var(--s));
+  }
+}
+.slide.on {
+  display: flex;
+  animation: slideFadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.slide.dark {
+  background: radial-gradient(120% 120% at 50% 10%, #0f172a 40%, #1e1b4b 100%);
+  border-color: rgba(255, 255, 255, 0.04);
+  color: #f8fafc;
+  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.3), inset 0 1px 0 rgba(255,255,255,0.1);
+}
+.slide.dark .kick { color: #818cf8; }
+.slide.dark .lead { color: #cbd5e1; }
+.slide.dark .foot { border-top-color: rgba(255, 255, 255, 0.1); color: #94a3b8; }
+.slide.dark .one p { color: #f8fafc; }
+.kick {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .15em;
+  color: var(--acc);
+  text-transform: uppercase;
+  margin: 0 0 16px;
+}
+h1 {
+  font-size: 64px;
+  line-height: 1.15;
+  margin: 0 0 20px;
+  font-weight: 800;
+  letter-spacing: -.02em;
+}
+h2 {
+  font-size: 48px;
+  line-height: 1.15;
+  margin: 0 0 24px;
+  font-weight: 700;
+  letter-spacing: -.01em;
+}
+.lead {
+  font-size: 28px;
+  color: var(--ink2);
+  line-height: 1.5;
+  margin: 0;
+  max-width: 1000px;
+}
+.one {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.one p {
+  font-size: 64px;
+  line-height: 1.2;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: -.02em;
+  max-width: 1050px;
+}
+.body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+ul.big {
+  font-size: 28px;
+  line-height: 1.6;
+  margin: 0;
+  padding-left: 28px;
+}
+ul.big li {
+  margin: 12px 0;
+}
+ul.big li::marker {
+  color: var(--acc);
+}
+.cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  flex: 1;
+  align-content: center;
+}
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 10px;
+}
+.tile {
+  border: 1px solid var(--hair);
+  border-radius: 16px;
+  padding: 24px 26px;
+  background: #ffffff;
+  box-shadow: 0 4px 6px rgba(15, 23, 42, 0.02);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.tile:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.05);
+  border-color: var(--acc);
+}
+.tile .num {
+  font-size: 46px;
+  font-weight: 800;
+  letter-spacing: -.025em;
+  line-height: 1;
+  color: var(--acc);
+}
+.slide.dark .tile {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.06);
+}
+.slide.dark .tile:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--acc);
+}
+.slide.dark .tile .num {
+  color: #818cf8;
+}
+.tile .lab {
+  font-size: 18px;
+  color: var(--ink2);
+  margin-top: 10px;
+  line-height: 1.45;
+}
+.slide.dark .tile .lab {
+  color: #cbd5e1;
+}
+.badge {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: .1em;
+  padding: 6px 14px;
+  border-radius: 8px;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+.badge.v { color: #047857; background: #ecfdf5; border: 1px solid #a7f3d0; }
+.badge.s { color: #1d4ed8; background: #eff6ff; border: 1px solid #bfdbfe; }
+.badge.f { color: #475569; background: #f8fafc; border: 1px solid #e2e8f0; }
+.badge.o { color: #6d28d9; background: #f5f3ff; border: 1px solid #ddd6fe; }
+.card {
+  border: 1px solid var(--hair);
+  border-radius: 16px;
+  padding: 24px 26px;
+  background: #ffffff;
+  box-shadow: 0 4px 6px rgba(15, 23, 42, 0.02);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.06);
+  border-color: var(--acc);
+}
+.slide.dark .card {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.06);
+}
+.slide.dark .card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--acc);
+}
+.card h3 {
+  margin: 0 0 10px;
+  font-size: 24px;
+  font-weight: 700;
+}
+.slide.dark .card h3 {
+  color: #f8fafc;
+}
+.card p {
+  margin: 0;
+  font-size: 16px;
+  color: var(--ink2);
+  line-height: 1.55;
+}
+.slide.dark .card p {
+  color: #cbd5e1;
+}
+.rowcards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  flex: 1;
+  align-content: center;
+}
+.foot {
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid var(--hair);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--mut);
+}
+q.pull {
+  display: block;
+  font-size: 32px;
+  line-height: 1.45;
+  font-style: italic;
+  quotes: "„" "”";
+  max-width: 980px;
+  color: var(--ink);
+  font-weight: 500;
+  padding-left: 20px;
+  border-left: 4px solid var(--acc);
+}
+table.map {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 18px;
+  margin-top: 8px;
+}
+table.map th {
+  text-align: left;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--mut);
+  padding: 12px 16px;
+  border-bottom: 2px solid var(--hair);
+}
+table.map td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--hair);
+  vertical-align: middle;
+  line-height: 1.5;
+  color: var(--ink2);
+}
+table.map td:first-child {
+  font-weight: 700;
+  white-space: nowrap;
+  color: var(--ink);
+}
+table.map tr:hover td {
+  background: rgba(79, 70, 229, 0.03);
+}
+.ob {
+  display: grid;
+  grid-template-columns: 1fr 56px 1fr;
+  gap: 0;
+  align-items: stretch;
+  margin-top: 10px;
+}
+.ob .o, .ob .n {
+  border-radius: 16px;
+  padding: 24px 28px;
+  font-size: 20px;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.ob .o {
+  background: #f8fafc;
+  border: 1px solid var(--hair);
+  color: var(--ink2);
+}
+.ob .n {
+  background: rgba(79, 70, 229, 0.04);
+  border: 2px solid var(--acc);
+  color: var(--ink);
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.08);
+}
+.ob .a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  color: var(--mut);
+}
+.prompt {
+  background: #0b0f19;
+  color: #e2e8f0;
+  border-radius: 16px;
+  padding: 22px 26px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  border: 1.5px solid rgba(255,255,255,0.06);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+.prompt b {
+  color: #818cf8;
+  font-weight: 700;
+}
+.vs2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  flex: 1;
+  align-content: center;
+}
+.vs {
+  display: grid;
+  grid-template-columns: 1fr 64px 1fr;
+  align-items: center;
+  gap: 0;
+  flex: 1;
+}
+.vs .no, .vs .yes {
+  border-radius: 20px;
+  padding: 36px;
+  font-size: 26px;
+  line-height: 1.4;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 160px;
+}
+.vs .no {
+  background: #f8fafc;
+  border: 1px solid var(--hair);
+  color: var(--mut);
+  text-decoration: line-through;
+  text-decoration-thickness: 3px;
+  text-decoration-color: rgba(239, 68, 68, 0.4);
+}
+.vs .yes {
+  background: rgba(79, 70, 229, 0.04);
+  color: var(--ink);
+  border: 2px solid var(--acc);
+  box-shadow: 0 10px 25px rgba(79, 70, 229, 0.08);
+}
+.vs .mid {
+  text-align: center;
+  font-size: 32px;
+  color: var(--mut);
+}
+.tree {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex: 1;
+  justify-content: center;
+}
+.tree .q {
+  display: grid;
+  grid-template-columns: 440px 1fr;
+  gap: 20px;
+  align-items: center;
+}
+.tree .ask {
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.tree .ans {
+  border: 1.5px solid var(--hair);
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 14px 20px;
+  font-size: 19px;
+  box-shadow: 0 2px 4px rgba(15, 23, 42, 0.01);
+  transition: border-color 0.2s;
+}
+.tree .ans:hover {
+  border-color: var(--acc);
+}
+.tree .ans b {
+  color: var(--acc);
+  font-weight: 700;
+}
+.flow {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+.flow .st {
+  background: rgba(79, 70, 229, 0.05);
+  border: 1.5px solid var(--acc);
+  border-radius: 999px;
+  padding: 10px 22px;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--accT);
+  box-shadow: 0 4px 6px rgba(79, 70, 229, 0.03);
+}
+.flow .ar {
+  color: var(--mut);
+  font-size: 20px;
+  font-weight: 700;
+}
+.stepbox {
+  display: flex;
+  align-items: flex-end;
+  gap: 18px;
+  flex: 1;
+  padding-bottom: 8px;
+}
+.step {
+  flex: 1;
+  border: 1px solid var(--hair);
+  border-radius: 18px 18px 0 0;
+  background: #ffffff;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.02);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+.step:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.06);
+}
+.step .lv {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  color: #ffffff;
+  background: #475569;
+  border-radius: 6px;
+  padding: 4px 10px;
+  align-self: flex-start;
+  font-family: 'JetBrains Mono', monospace;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.step h3 {
+  margin: 12px 0 8px;
+  font-size: 22px;
+  font-weight: 700;
+}
+.step p {
+  margin: 0;
+  font-size: 18px;
+  color: var(--ink2);
+  line-height: 1.5;
+}
+.step .em {
+  font-size: 32px;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+.step .xp {
+  height: 8px;
+  background: var(--hair);
+  border-radius: 999px;
+  margin-top: 14px;
+  overflow: hidden;
+}
+.step .xp i {
+  display: block;
+  height: 100%;
+  background: var(--acc);
+  border-radius: 999px;
+}
+.step.t {
+  border-color: var(--acc);
+  border-width: 2.5px;
+  box-shadow: 0 12px 30px rgba(79, 70, 229, 0.15);
+}
+.step.t .tgt {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  color: #ffffff;
+  background: var(--acc);
+  border-radius: 999px;
+  padding: 4px 12px;
+  position: absolute;
+  top: -14px;
+  left: 24px;
+  box-shadow: 0 4px 10px rgba(79, 70, 229, 0.2);
+}
+.split {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  flex: 1;
+  align-content: center;
+  align-items: center;
+}
+.minitiles {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.minitiles .tile {
+  padding: 16px 20px;
+}
+.minitiles .num {
+  font-size: 36px;
+}
+.minitiles .lab {
+  margin-top: 6px;
+  font-size: 18px;
+}
+.cmp {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  flex: 1;
+  align-content: center;
+}
+.cmp .box {
+  border: 1.5px solid var(--hair);
+  border-radius: 20px;
+  background: #ffffff;
+  padding: 32px 36px;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.02);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.cmp .box.win {
+  border: 2.5px solid var(--acc);
+  box-shadow: 0 16px 36px rgba(79, 70, 229, 0.12);
+}
+.cmp h3 {
+  margin: 0 0 18px;
+  font-size: 28px;
+  font-weight: 800;
+}
+.cmp ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 22px;
+  line-height: 1.6;
+}
+.cmp li {
+  margin: 12px 0;
+  padding-left: 36px;
+  position: relative;
+}
+.cmp li::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 800;
+  font-size: 18px;
+}
+.cmp li.y::before {
+  content: "+";
+  color: var(--ok);
+}
+.cmp li.x::before {
+  content: "-";
+  color: var(--warn);
+}
+.cmp .price {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--mut);
+  margin-top: 18px;
+  border-top: 1px dashed var(--hair);
+  padding-top: 14px;
+}
 @media print{body{overflow:visible}.hud,.help{display:none}.slide{display:flex;position:static;transform:none;width:1280px;height:720px;margin:8mm auto;page-break-after:always}}
 </style></head>
 <body>
 <header class="hud">
   <div class="brand"><b>AI-Mindset</b> · warsztat dla PEGA</div>
-  <div class="counter" id="ctr">1 / 35</div>
+  <div class="counter" id="ctr">1 / 36</div>
 </header>
 
 <!-- 1 · TYTUŁ (dark) -->
@@ -183,7 +736,7 @@ table.map tr:nth-child(odd) td{background:rgba(11,11,11,.015)}
   <p class="kick">Najpierw wyrzućmy złe pytanie</p>
   <div class="vs">
     <div class="no">„Które narzędzie AI powinniśmy kupić?”</div>
-    <div class="mid">→</div>
+    <div class="mid"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="vertical-align:-6px; opacity:0.6; margin: 0 4px"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
     <div class="yes">„Co zrobimy <b>inaczej</b> w poniedziałek rano?”</div>
   </div>
   <div class="foot">Narzędzia zmieniają się co kwartał. Nawyki zostają i procentują.</div>
@@ -234,10 +787,10 @@ table.map tr:nth-child(odd) td{background:rgba(11,11,11,.015)}
   <p class="kick">Model &nbsp;<span class="badge f">MODEL</span></p>
   <h2>Cztery poziomy gry z AI</h2>
   <div class="stepbox">
-    <div class="step" style="min-height:36%"><div class="em">👀</div><span class="lv">LVL 1</span><h3>Ciekawski</h3><p>Spróbował czatbota. Było dziwnie, wyszedł.</p><div class="xp"><i style="width:12%"></i></div></div>
-    <div class="step" style="min-height:52%"><div class="em">✋</div><span class="lv">LVL 2</span><h3>Dorywczy</h3><p>Używa AI, kiedy sobie przypomni. Zwykle do polerowania gotowej pracy.</p><div class="xp"><i style="width:35%"></i></div></div>
-    <div class="step t" style="min-height:70%"><span class="tgt">CEL NA DZIŚ</span><div class="em">⚡</div><span class="lv" style="background:var(--acc)">LVL 3</span><h3>Systematyczny</h3><p>AI to pierwszy krok do każdego zadania. Nie jedyny. Pierwszy.</p><div class="xp"><i style="width:70%"></i></div></div>
-    <div class="step" style="min-height:88%"><div class="em">🚀</div><span class="lv">LVL 4</span><h3>Projektant</h3><p>Projektuje pracę wykonywaną przez AI od A do Z, sam specyfikuje i weryfikuje.</p><div class="xp"><i style="width:95%"></i></div></div>
+    <div class="step" style="min-height:36%"><div class="em">[?]</div><span class="lv">LVL 1</span><h3>Ciekawski</h3><p>Spróbował czatbota. Było dziwnie, wyszedł.</p><div class="xp"><i style="width:12%"></i></div></div>
+    <div class="step" style="min-height:52%"><div class="em">[_]</div><span class="lv">LVL 2</span><h3>Dorywczy</h3><p>Używa AI, kiedy sobie przypomni. Zwykle do polerowania gotowej pracy.</p><div class="xp"><i style="width:35%"></i></div></div>
+    <div class="step t" style="min-height:70%"><span class="tgt">CEL NA DZIŚ</span><div class="em">[+]</div><span class="lv" style="background:var(--acc)">LVL 3</span><h3>Systematyczny</h3><p>AI to pierwszy krok do każdego zadania. Nie jedyny. Pierwszy.</p><div class="xp"><i style="width:70%"></i></div></div>
+    <div class="step" style="min-height:88%"><div class="em">[!]</div><span class="lv">LVL 4</span><h3>Projektant</h3><p>Projektuje pracę wykonywaną przez AI od A do Z, sam specyfikuje i weryfikuje.</p><div class="xp"><i style="width:95%"></i></div></div>
   </div>
   <div class="foot">Z ankiety wynika, że gracie dziś między LVL 1 a 2. Dobra wiadomość: awans na trójkę to kwestia nawyków, nie talentu.</div>
 </section>
@@ -246,8 +799,8 @@ table.map tr:nth-child(odd) td{background:rgba(11,11,11,.015)}
 <section class="slide">
   <div class="one"><p>Różnica nie leży w narzędziach.<br><span style="color:var(--accT)">Leży w kolejności.</span></p></div>
   <div style="display:flex;gap:40px;margin-bottom:8px;font-size:20px">
-    <div style="flex:1;background:rgba(82,81,78,.07);border-radius:12px;padding:16px 22px">LVL 2: &nbsp;🧠 Ty piszesz → 🤖 AI poleruje</div>
-    <div style="flex:1;background:rgba(42,120,214,.09);border:1.5px solid var(--acc);border-radius:12px;padding:16px 22px">LVL 3: &nbsp;🤖 AI szkicuje → 🧠 Ty oceniasz</div>
+    <div style="flex:1;background:rgba(82,81,78,.07);border-radius:12px;padding:16px 22px">LVL 2: &nbsp;Człowiek pisze <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="vertical-align:-6px; opacity:0.6; margin: 0 4px"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> AI poleruje</div>
+    <div style="flex:1;background:rgba(42,120,214,.09);border:1.5px solid var(--acc);border-radius:12px;padding:16px 22px">LVL 3: &nbsp;AI szkicuje <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="vertical-align:-6px; opacity:0.6; margin: 0 4px"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> człowiek ocenia</div>
   </div>
   <div class="foot">Te same narzędzia, ta sama subskrypcja, zupełnie inna ekonomia dnia. AI to nie zespół ekspertów — to zespół ambitnych juniorów. Ty decydujesz, co dostają do zrobienia.</div>
 </section>
@@ -261,15 +814,15 @@ table.map tr:nth-child(odd) td{background:rgba(11,11,11,.015)}
       <path d="M40,208 L120,178 L185,196 L255,148 L330,168 L400,124 L470,150 L540,110 L600,126" fill="none" stroke="#2a78d6" stroke-width="3"/>
       <path d="M40,208 L120,178 L185,196 L255,148 L330,168 L400,124 L470,150 L540,110 L600,126 L600,300 L40,300 Z" fill="rgba(42,120,214,.08)"/>
       <g font-family="system-ui" font-size="16" fill="#1c5cab" font-weight="700">
-        <text x="60" y="250">✓ szkice i warianty</text>
-        <text x="270" y="235">✓ synteza dokumentów</text>
-        <text x="60" y="283">✓ struktura i format</text>
-        <text x="270" y="268">✓ burza pomysłów</text>
+        <text x="60" y="250">+ szkice i warianty</text>
+        <text x="270" y="235">+ synteza dokumentów</text>
+        <text x="60" y="283">+ struktura i format</text>
+        <text x="270" y="268">+ burza pomysłów</text>
       </g>
       <g font-family="system-ui" font-size="16" fill="#52514e">
-        <text x="70" y="90">✗ liczby i fakty bez źródła</text>
-        <text x="330" y="60">✗ świeże wydarzenia</text>
-        <text x="360" y="93">✗ prawo, umowy, finanse</text>
+        <text x="70" y="90">- liczby i fakty bez źródła</text>
+        <text x="330" y="60">- świeże wydarzenia</text>
+        <text x="360" y="93">- prawo, umowy, finanse</text>
       </g>
       <text x="42" y="36" font-family="system-ui" font-size="14" fill="#898781">nad linią: brzmi równie pewnie, ale bywa zmyślone</text>
     </svg>
@@ -335,7 +888,7 @@ znaczenie dla współpracy · link do źródła.</div>
   <h2>Wytyczne pisze się raz</h2>
   <div class="ob">
     <div class="o"><b>Dziś:</b> w każdej rozmowie od nowa tłumaczysz ton, odbiorców i zakazy. Po dwudziestu wiadomościach model i tak je gubi.</div>
-    <div class="a">→</div>
+    <div class="a"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="vertical-align:-6px; opacity:0.6; margin: 0 4px"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
     <div class="n"><b>Docelowo:</b> głos marki, odbiorcy i zakazane frazy zapisane raz, jako instrukcja projektu. Każdy nowy szkic je dziedziczy.</div>
   </div>
   <ul class="big" style="margin-top:22px">
@@ -365,11 +918,11 @@ znaczenie dla współpracy · link do źródła.</div>
   <p class="kick">„Kiedy który model?” · pytanie Rafała z ankiety</p>
   <h2>Pięć pytań zamiast zgadywania</h2>
   <div class="tree">
-    <div class="q"><span class="ask">Muszę to znaleźć i udowodnić?</span><span class="ans">→ <b>Perplexity</b>, zawsze z linkami</span></div>
-    <div class="q"><span class="ask">Stos moich dokumentów?</span><span class="ans">→ <b>NotebookLM</b>, odpowiada tylko ze źródeł</span></div>
-    <div class="q"><span class="ask">Wideo, audio, ogromny plik?</span><span class="ans">→ <b>Gemini</b></span></div>
-    <div class="q"><span class="ask">Myślenie, pisanie, decyzja?</span><span class="ans">→ <b>Claude / ChatGPT</b>, z R·Z·F</span></div>
-    <div class="q"><span class="ask">Treść gotowa, potrzebna forma?</span><span class="ans">→ <b>Firefly / Canva</b>, brief pisze asystent</span></div>
+    <div class="q"><span class="ask">Muszę to znaleźć i udowodnić?</span><span class="ans"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="vertical-align:-6px; opacity:0.6; margin: 0 4px"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> <b>Perplexity</b>, zawsze z linkami</span></div>
+    <div class="q"><span class="ask">Stos moich dokumentów?</span><span class="ans"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="vertical-align:-6px; opacity:0.6; margin: 0 4px"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> <b>NotebookLM</b>, odpowiada tylko ze źródeł</span></div>
+    <div class="q"><span class="ask">Wideo, audio, ogromny plik?</span><span class="ans"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="vertical-align:-6px; opacity:0.6; margin: 0 4px"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> <b>Gemini</b></span></div>
+    <div class="q"><span class="ask">Myślenie, pisanie, decyzja?</span><span class="ans"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="vertical-align:-6px; opacity:0.6; margin: 0 4px"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> <b>Claude / ChatGPT</b>, z R·Z·F</span></div>
+    <div class="q"><span class="ask">Treść gotowa, potrzebna forma?</span><span class="ans"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="vertical-align:-6px; opacity:0.6; margin: 0 4px"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> <b>Firefly / Canva</b>, brief pisze asystent</span></div>
   </div>
   <div class="foot">A gdy wątpisz: zacznij w asystencie i przenieś się, kiedy specjalista na to zasłuży.</div>
 </section>
@@ -403,6 +956,20 @@ znaczenie dla współpracy · link do źródła.</div>
   <div class="foot">Rekomendacja: jeden płatny asystent na osobę plus to, co już macie. Reszta subskrypcji może poczekać, aż nawyki zaczną je uzasadniać.</div>
 </section>
 
+<!-- 19b · KTO CO DOSTAJE -->
+<section class="slide">
+  <p class="kick">Konkrety · kto co dostaje od poniedziałku</p>
+  <h2>Jeden asystent na osobę, nie dziesięć narzędzi</h2>
+  <table class="map">
+    <tr><th>Kto</th><th>Narzędzie nr 1</th><th>Do czego</th><th>Koszt</th></tr>
+    <tr><td>📣 Adrian</td><td>Claude Pro lub ChatGPT Plus</td><td>Projekt z głosem marki + bank struktur postów</td><td>~100 zł/mies.</td></tr>
+    <tr><td>🎯 Rafał T.</td><td>Perplexity Pro + Claude Pro</td><td>Research ze źródłami + szkielety ofert i koncepcji</td><td>~160 zł/mies.</td></tr>
+    <tr><td>🧾 Rafał R.</td><td>ChatGPT Plus</td><td>Faktura → wiersz w arkuszu (dziś ręcznie, docelowo automat)</td><td>~100 zł/mies.</td></tr>
+    <tr><td>🎨 Maciej</td><td>Ma już: Firefly, Gemini, NotebookLM</td><td>Lepsze briefy z asystenta, spójność z copy</td><td>0 zł</td></tr>
+  </table>
+  <div class="foot">Cały zespół: ~360 zł/miesiąc. Mniej niż godzina pracy agencji. Zero nowych narzędzi do wdrożenia — kupujecie tylko pełne wersje tego, co już znacie.</div>
+</section>
+
 <!-- 20 · PRZERWA (dark) -->
 <section class="slide dark">
   <div class="one"><p>☕ 15 minut przerwy.<br><span style="color:#7db6f0">Potem gramy na Waszych zadaniach.</span></p></div>
@@ -417,7 +984,7 @@ znaczenie dla współpracy · link do źródła.</div>
     <div class="card"><h3>🎯 Research + oferta</h3><p>Brief o kliencie przed rozmową i szkielet prezentacji ofertowej. <i>Zadanie Rafała T.</i></p></div>
     <div class="card"><h3>📣 Plan + copy</h3><p>Plan komunikacji z jednego briefu i posty, które nie brzmią jak klony. <i>Zadanie Adriana.</i></p></div>
     <div class="card"><h3>🎨 Brief graficzny</h3><p>Z tego samego briefu: gotowe wsady do Firefly i Canvy. <i>Dla Maćka.</i></p></div>
-    <div class="card"><h3>🧾 Faktura → arkusz</h3><p>Zdjęcie faktury zamienione w wiersz do arkusza płatności. <i>Zadanie Rafała R.</i></p></div>
+    <div class="card"><h3>🧾 Faktura <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="vertical-align:-6px; opacity:0.6; margin: 0 4px"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> arkusz</h3><p>Zdjęcie faktury zamienione w wiersz do arkusza płatności. <i>Zadanie Rafała R.</i></p></div>
   </div>
   <div class="foot">Wszystko na danych fikcyjnych lub publicznych. Dlaczego to ważne, powiem przy slajdzie o danych wrażliwych.</div>
 </section>
@@ -425,17 +992,17 @@ znaczenie dla współpracy · link do źródła.</div>
 <!-- 22 · DEMO 1A -->
 <section class="slide">
   <p class="kick">Demo 1a · research klienta przed rozmową</p>
-  <h2>Godzina klikania → 10 minut czytania</h2>
+  <h2>Godzina klikania <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="vertical-align:-6px; opacity:0.6; margin: 0 4px"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> 10 minut czytania</h2>
   <div class="ob">
     <div class="o"><b>Dziś:</b> strona klienta, LinkedIn, newsy, notatki na kolanie i nadzieja, że nic nie umknęło.</div>
-    <div class="a">→</div>
+    <div class="a"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="vertical-align:-6px; opacity:0.6; margin: 0 4px"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
     <div class="n"><b>Nowe:</b> AI zbiera wszystko do tabeli z linkami. Ty czytasz pięć minut i weryfikujesz to, co pójdzie do rozmowy.</div>
   </div>
   <ul class="big" style="margin-top:22px">
     <li>Kolumna z linkiem jest obowiązkowa. Brief bez źródeł to plotka.</li>
     <li>Na koniec pytanie, które robi różnicę: <i>„Jakie trzy pytania ten klient zada nam na spotkaniu, a my nie mamy dziś dobrej odpowiedzi?”</i></li>
   </ul>
-  <div class="foot">Zaoszczędzony czas nie idzie w powietrze, tylko w przygotowanie na trudne pytania.</div>
+  <div class="foot">Narzędzie: Perplexity Pro — szuka i cytuje źródła w jednym kroku. ~80 zł/mies. Zaoszczędzony czas nie idzie w powietrze, tylko w przygotowanie na trudne pytania.</div>
 </section>
 
 <!-- 23 · DEMO 1B -->
@@ -443,9 +1010,9 @@ znaczenie dla współpracy · link do źródła.</div>
   <p class="kick">Demo 1b · prezentacja ofertowa</p>
   <h2>Od briefu do szkieletu oferty</h2>
   <div class="flow">
-    <span class="st">1 · brief + research z 1a</span><span class="ar">→</span>
-    <span class="st">2 · szkielet 10 slajdów z notatkami</span><span class="ar">→</span>
-    <span class="st">3 · adwokat kupującego</span><span class="ar">→</span>
+    <span class="st">1 · brief + research z 1a</span><span class="ar"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="vertical-align:-6px; opacity:0.6; margin: 0 4px"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+    <span class="st">2 · szkielet 10 slajdów z notatkami</span><span class="ar"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="vertical-align:-6px; opacity:0.6; margin: 0 4px"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+    <span class="st">3 · adwokat kupującego</span><span class="ar"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="vertical-align:-6px; opacity:0.6; margin: 0 4px"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
     <span class="st">4 · forma: Canva / PowerPoint</span>
   </div>
   <div class="body" style="flex:0;margin-top:26px">
@@ -454,7 +1021,7 @@ znaczenie dla współpracy · link do źródła.</div>
       <li>AI robi pierwsze 70%. Wasze jest ostatnie 30%, czyli to, za co klient faktycznie płaci.</li>
     </ul>
   </div>
-  <div class="foot">Dla koncepcji partnerskich ten sam układ, zmienia się tylko rola w kroku trzecim.</div>
+  <div class="foot">Tip dla Rafała: koncepcja w głowie? Nagraj 2 min mówienia, wklej transkrypcję i każ AI szkicować. AI-first nie zawsze znaczy prompt-first — czasem pierwszym narzędziem jest dyktafon.</div>
 </section>
 
 <!-- 24 · DEMO 2 -->
@@ -462,8 +1029,8 @@ znaczenie dla współpracy · link do źródła.</div>
   <p class="kick">Demo 2 · plan komunikacji i copy bez klonów</p>
   <h2>Głos marki to plik, nie pamięć modelu</h2>
   <div class="flow">
-    <span class="st">plik głosu marki</span><span class="ar">→</span>
-    <span class="st">plan komunikacji (data · kanał · cel · struktura)</span><span class="ar">→</span>
+    <span class="st">plik głosu marki</span><span class="ar"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="vertical-align:-6px; opacity:0.6; margin: 0 4px"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+    <span class="st">plan komunikacji (data · kanał · cel · struktura)</span><span class="ar"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="vertical-align:-6px; opacity:0.6; margin: 0 4px"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
     <span class="st">posty, każdy inną strukturą</span>
   </div>
   <div class="body" style="flex:0;margin-top:24px">
@@ -473,7 +1040,7 @@ znaczenie dla współpracy · link do źródła.</div>
       <li><b>Bank struktur</b> przeciw monotonii: historia zawodnika, pytanie do społeczności, konkret z liczbą, kulisy, zapowiedź-zagadka. Każdy post dostaje w prompcie inną strukturę, jawnie.</li>
     </ul>
   </div>
-  <div class="foot">Powtarzalność to nie pech. To skutek proszenia w kółko o to samo, bez wytycznych, na darmowym koncie.</div>
+  <div class="foot">Powtarzalność to nie pech. To skutek proszenia w kółko o to samo, bez wytycznych, na darmowym koncie. Różnorodność pochodzi z banku struktur, nie z większej liczby modeli. Jeden dobrze poinstruowany model bije trzy źle poinstruowane.</div>
 </section>
 
 <!-- 25 · DEMO 3 GRAFIKA -->
@@ -482,7 +1049,7 @@ znaczenie dla współpracy · link do źródła.</div>
   <h2>Brief zamiast telepatii</h2>
   <div class="ob">
     <div class="o"><b>Dziś:</b> „zrób grafikę do tego posta”. Reszta briefu siedzi w czyjejś głowie, więc są trzy rundy poprawek.</div>
-    <div class="a">→</div>
+    <div class="a"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="vertical-align:-6px; opacity:0.6; margin: 0 4px"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
     <div class="n"><b>Nowe:</b> asystent z planu komunikacji robi komplet: przekaz, tekst na grafice, format na kanał, prompt do Firefly, specyfikację do Canvy.</div>
   </div>
   <ul class="big" style="margin-top:22px">
@@ -494,7 +1061,7 @@ znaczenie dla współpracy · link do źródła.</div>
 <!-- 26 · DEMO 4 FAKTURY -->
 <section class="slide">
   <p class="kick">Demo 4 · faktury i płatności</p>
-  <h2>Faktura → wiersz w arkuszu, wątpliwości na wierzch</h2>
+  <h2>Faktura <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="vertical-align:-6px; opacity:0.6; margin: 0 4px"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> wiersz w arkuszu, wątpliwości na wierzch</h2>
   <div class="prompt" style="margin-top:4px"><b>Jesteś</b> asystentem księgowości.
 <b>Z załączonej faktury wyciągnij:</b> sprzedawca, NIP, nr faktury,
 data wystawienia, termin płatności, netto, VAT, brutto, nr konta.
@@ -504,7 +1071,7 @@ Każde pole, którego nie jesteś pewien, oznacz ⚠️ i napisz dlaczego.</div>
     <li>Ostatnia linijka robi całą różnicę: model, który umie powiedzieć „nie wiem”, jest bezpieczniejszy od modelu nagradzanego za pewność siebie.</li>
     <li>Numer konta i tak sprawdza człowiek, u źródła. To procedura antyfraudowa starsza niż AI i zostaje z nami.</li>
   </ul>
-  <div class="foot">Na sali faktura fikcyjna. Własne faktury dopiero po ustaleniu w firmie, czym wolno karmić które narzędzie. O tym za chwilę.</div>
+  <div class="foot">Na sali faktura fikcyjna. Własne faktury dopiero po ustaleniu w firmie, czym wolno karmić które narzędzie. To co zrobiłem w 3 minuty da się zautomatyzować do zera kliknięć — ale to temat warsztatu 2, nie 10 minut demo.</div>
 </section>
 
 <!-- 27 · WERYFIKACJA -->
@@ -614,7 +1181,7 @@ Stałe zasady: nie zmyślaj · ⚠️ przy niepewności · pytaj przed startem</
   <div class="rowcards">
     <div class="card"><h3>📣 Pakiet social media</h3><p>Głos marki PEGA dopięty do końca, bank struktur i prompty na cały cykl eventu. <i>Adrian + Maciek.</i></p></div>
     <div class="card"><h3>🎯 Maszyna ofertowa</h3><p>Szablon od zapytania do szkieletu prezentacji w godzinę, z adwokatem kupującego. Na prawdziwym zapytaniu. <i>Rafał T.</i></p></div>
-    <div class="card"><h3>🧾 Faktury na autopilocie</h3><p>Ze zdjęcia do arkusza bez przepisywania, człowiek tylko przy ⚠️. Plus wprowadzanie osób do płatności. <i>Rafał R.</i></p></div>
+    <div class="card"><h3>🧾 Faktury na autopilocie</h3><p>Mail z fakturą → wiersz w arkuszu, zero przepisywania. Człowiek tylko przy ⚠️. Plus wprowadzanie osób do płatności. <i>Rafał R.</i></p></div>
     <div class="card"><h3>🎨 Linia graficzna</h3><p>Z briefu do wariantów w Firefly spójnych z copy, z szablonami do Canvy. <i>Maciek.</i></p></div>
   </div>
   <div class="foot">Format: pół dnia na Waszych prawdziwych materiałach, wychodzicie z działającymi szablonami. Na koniec powiecie, który temat gra pierwszy.</div>
@@ -639,7 +1206,7 @@ Stałe zasady: nie zmyślaj · ⚠️ przy niepewności · pytaj przed startem</
   <div class="foot">Tomasz Mierzejowski · tomaszmierzejowski.pl · pytania po warsztacie mile widziane, mail działa bez limitu</div>
 </section>
 
-<footer class="help">← → nawigacja · Ctrl/Cmd+P = wydruk</footer>
+<footer class="help">← <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="vertical-align:-6px; opacity:0.6; margin: 0 4px"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> nawigacja · Ctrl/Cmd+P = wydruk</footer>
 <script>
 const slides=[...document.querySelectorAll('.slide')];let i=0;
 function show(n){i=Math.max(0,Math.min(n,slides.length-1));slides.forEach(s=>s.classList.remove('on'));slides[i].classList.add('on');document.getElementById('ctr').textContent=(i+1)+' / '+slides.length;history.replaceState(null,'','#'+(i+1));}
