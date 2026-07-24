@@ -1,9 +1,9 @@
-Najszybszy skok z każdego poziomu — bo obiecałem:
+Skoki między poziomami:
 
-1 → 2: Wybierzcie JEDNO powtarzalne zadanie (tygodniowy raport, mail do klienta, podsumowanie spotkania) i przepuszczajcie je przez AI za każdym razem. Jedno zadanie, zero wyjątków. Nie "poznawajcie narzędzia" — zwiążcie je z zadaniem.
+Z 1 na 2: Zapomnij o "poznawaniu narzędzia". Wybierz JEDNO nudne, powtarzalne zadanie. Mail do klienta, raport tygodniowy, cokolwiek. Od dziś robisz je TYLKO z AI. Zero wyjątków.
 
-2 → 3: Reguła "kiedy–wtedy", pożyczona z nauki o nawykach (intencje implementacyjne, Gollwitzer i Sheeran — jeden z najsilniejszych efektów w psychologii behawioralnej): "Kiedy otwieram nowy dokument, najpierw proszę AI o szkic". Wyzwalacz robi robotę, której nie zrobi silna wola.
+Z 2 na 3: Skup się na mikronawyku "zanim...". Kiedy otwierasz nowy dokument / zaczynasz nowe zadanie, zanim napiszesz pierwsze słowo, prosisz AI o szkic. Zmiana odruchu otwarcia pliku.
 
-3 → 4: Przestańcie ulepszać pojedyncze zadania i spiszcie cały proces — wejścia, kroki, kontrole, wyjścia. Co umiecie wyspecyfikować, to AI coraz częściej umie poprowadzić. Czego nie umiecie wyspecyfikować — właśnie odkryliście, że sami jeszcze nie do końca to rozumiecie. Cenne w obie strony.
+Z 3 na 4: Przestań myśleć o pojedynczych zadaniach. Spisz proces: wejścia, kroki, wyjścia. Jeśli możesz napisać pełną specyfikację - AI może to prawdopodobnie samo poprowadzić, a przynajmniej szybko znajdziesz w tym procesie zadania, które da się zautomatyzować. A to, czego w procesie nie potrafisz opisać... właśnie odkryłeś, gdzie sam jeszcze nie rozumiesz swojego procesu. Także cenne :).
 
-I tak — to spektrum to otwierający moduł programu szkoleniowego, który właśnie buduję. Autodiagnoza jest za darmo; macie ją wyżej. Zmiana zachowania to program.
+Buduję program oparty o to spektrum, ale autodiagnozę masz wyżej za darmo.
