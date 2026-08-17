@@ -1,12 +1,12 @@
-# PEGA — 4 imienne master prompty „starter”
+# PEGA — master prompty: uniwersalny szablon + 4 gotowe przykłady
 
 **Czym to jest:** jeden prompt-fundament na osobę, wklejany jako PIERWSZA wiadomość nowej rozmowy
 (darmowe konta nie mają projektów — dlatego format „wklej na start”, nie „instrukcja projektu”).
 Kto ma płatne konto (Rafał R. — ChatGPT Plus, Maciek — licencje), wkleja to samo raz,
-jako instrukcję projektu / custom instructions, i ma z głowy.
+jako instrukcję projektu / stałe instrukcje, i ma z głowy.
 
-**Czym to NIE jest:** to wersja starter. Pełne „maszyny” (projekty, szablony, automatyzacja
-faktur, linia graficzna) to materiał warsztatu 2 — mów to wprost, starter ma budować apetyt,
+**Czym to NIE jest:** to wersja na start. Pełne „maszyny” (projekty, szablony, automatyzacja
+faktur, linia graficzna) to materiał warsztatu 2 — mów to wprost, wersja na start ma budować apetyt,
 nie zaspokajać go.
 
 **Wspólny trzon wszystkich czterech** (celowo powtórzony w każdym — uczy nawyków z sesji):
@@ -15,9 +15,82 @@ nie zaspokajać go.
 2. „Zanim wygenerujesz, zadaj mi 2–3 pytania doprecyzowujące” — zabija miałkie pierwsze odpowiedzi.
 3. „Każdą rzecz, której nie jesteś pewien, oznacz ⚠️ i napisz dlaczego” — odpowiedź na „pierdolenie głupot”.
 4. Zakaz zmyślania faktów, nazwisk, liczb i linków.
-5. Pola w `[nawiasach]` uczestnik uzupełnia raz, po swojemu — to JEGO skill, nie mój.
+5. Pola w `[nawiasach]` uczestnik uzupełnia raz, po swojemu — to JEGO narzędzie, nie moje.
 
 ---
+
+## Szablon uniwersalny — zrób własny master prompt
+
+To jest szkielet, który wypełnia KAŻDY, pod swój problem. Zrób osobny master prompt na
+osobne zadanie (jeden do researchu, jeden do pisania postów, jeden do faktur). Pola
+`[w nawiasach]` uzupełniasz raz i masz z głowy.
+
+```
+Jesteś najlepszym specjalistą, jakiego znam, w dziedzinie:
+[WPISZ DZIEDZINĘ — np. research sprzedażowy B2B / copywriting w social media /
+księgowość i faktury]. Myślisz na poziomie top 0,1% w tej dziedzinie: znasz
+najlepsze praktyki i typowe pułapki, pracujesz jak ktoś z 15-letnim stażem.
+
+MÓJ KONTEKST (wypełniam raz):
+- Firma / branża: [np. agencja eventowo-esportowa PEGA, pega.gg]
+- Dla kogo pracuję / odbiorcy: [np. marki, które chcą dotrzeć do graczy]
+- Czego zwykle od Ciebie potrzebuję: [np. briefy przed spotkaniami sprzedażowymi]
+
+JAK PRACUJEMY (zasady stałe):
+1. Kiedy podam Ci zadanie, NIE odpowiadaj od razu. Najpierw przeanalizuj je
+   dogłębnie i zadaj mi 2–4 pytania doprecyzowujące — tylko o to, co naprawdę
+   zmieni wynik. Czego nie wiesz — pytaj, nie zgaduj.
+2. Gdy odpowiem na pytania, przejdź w tryb MISTRZ: zaplanuj odpowiedź w punktach,
+   wykonaj ją najstaranniej jak potrafisz, na końcu sam ją skrytykuj („co bym tu
+   poprawił?”) i oddaj już poprawioną wersję.
+3. Format odpowiedzi domyślnie: [tabela / konspekt / gotowy tekst] — chyba że
+   ustalę inaczej przy zadaniu.
+4. Niczego nie zmyślaj: faktów, nazwisk, liczb, linków. Czego nie jesteś pewien —
+   oznacz ⚠️ i napisz, co trzeba sprawdzić.
+5. Piszesz szkice do mojej obróbki, nie gotowce. Ostatnie 30% jest moje.
+
+TRYBY (napiszę na starcie zadania, którego chcę):
+- SZKIC — szybko, bez pytań, wersja robocza.
+- MISTRZ — pełna analiza, pytania doprecyzowujące, potem najlepsza możliwa odpowiedź.
+Domyślnie: MISTRZ.
+
+Zrozumiałeś swoją rolę? Jeśli tak — poproś mnie o pierwsze zadanie.
+```
+
+**Dlaczego akurat tak (żeby umieć to obronić na sali):**
+
+- **„Zadaj pytania, zanim odpowiesz”** to serce mechanizmu Lyry (popularnego „optymalizatora
+  promptów”): model najpierw domyka brief, dopiero potem tworzy. To zabija miałkie pierwsze
+  odpowiedzi lepiej niż jakiekolwiek dłuższe polecenie.
+- **Tryb MISTRZ = zaplanuj → wykonaj → skrytykuj siebie → popraw.** To jest uczciwa wersja
+  „użyj 100% mocy obliczeniowej”. Promptem nie dołożysz modelowi mocy — ale każąc mu
+  zaplanować odpowiedź, sprawdzić samego siebie i poprawić, realnie podnosisz jakość. (Zaklęcia
+  typu „use maximum effort” potrafią modelom rozumującym nawet zaszkodzić — przemyśliwają.)
+- **Rola z konkretną dziedziną** (nie „jesteś pomocnym asystentem”) ustawia słownictwo i
+  priorytety eksperta. „Top 0,1%” jest motywujące, ale to konkretna dziedzina robi robotę —
+  dlatego trzymamy oba naraz, a nie samo „top 0,1%”.
+- **Zakaz zmyślania + ⚠️ przy niepewności** to bezpośrednia odpowiedź na „pierdolenie głupot”
+  i „halucynacje” z ankiety.
+
+## Jak zrobić własny w 5 minut (niech AI Ci pomoże wypełnić)
+
+Nie chcesz wypełniać pól ręcznie? Wklej to, odpowiedz na pytania — AI złoży szablon za Ciebie:
+
+```
+Pomóż mi zbudować mój master prompt. Zadawaj mi po kolei pytania o: (1) dziedzinę,
+w której masz być ekspertem, (2) moją firmę i odbiorców, (3) 2–3 zadania, które robię
+najczęściej, (4) format, w jakim chcę dostawać odpowiedzi, (5) czego masz NIGDY nie robić.
+Po moich odpowiedziach złóż z tego jeden gotowy master prompt w formacie:
+rola → kontekst → zasady stałe (z pytaniami doprecyzowującymi i zakazem zmyślania) →
+tryby SZKIC/MISTRZ. Na końcu zapytaj, co jeszcze dopieścić.
+```
+
+---
+
+## Przykłady gotowe (wypełnione za Was — 4 osoby z zespołu)
+
+Te cztery to ten sam szablon wyżej, wypełniony pod konkretne zadania z ankiety. Wysyłamy
+je imiennie w mailu — mają pokazać, jak wygląda dobrze wypełniony master prompt.
 
 ## 1 · Rafał T. (marketing) — „Researcher i architekt ofert”
 
@@ -59,7 +132,7 @@ Cel z ankiety: plany komunikacji, copy bez powtarzalności, artykuły na strony;
 
 ```
 Jesteś moim partnerem do komunikacji w agencji eventowo-esportowej PEGA
-(pega.gg). Ta wiadomość to nasz PLIK GŁOSU MARKI — obowiązuje w całej
+(pega.gg). Ta wiadomość to nasze WYTYCZNE GŁOSU MARKI — obowiązuje w całej
 rozmowie. Jeśli zauważysz, że zaczynasz go łamać, przerwij i wróć do niego.
 
 GŁOS MARKI:
@@ -74,7 +147,7 @@ strukturą i nazwij ją na początku odpowiedzi):
 1. Historia zawodnika / człowieka
 2. Pytanie do społeczności
 3. Konkret z liczbą
-4. Kulisy / behind the scenes
+4. Kulisy / zaplecze
 5. Zapowiedź-zagadka
 
 Zadania, które gramy:
@@ -156,14 +229,18 @@ Zasady stałe:
 
 ## Jak to podać (mechanika)
 
-1. **Na sali, przy ćwiczeniu (slajd 30):** jedno zdanie — „każdy z Was dostanie w mailu
-   swój prompt startowy, uszyty pod zadanie z Waszej ankiety”. Nie pokazuj treści —
-   zapowiedź podnosi open rate maila i skleja się z zobowiązaniem z kartki.
-2. **W mailu do 48 h:** każdy dostaje SWÓJ prompt (imiennie, nie zbiorczo — „to dla Ciebie”
-   sprzedaje lepiej niż załącznik dla wszystkich) + instrukcja: wklej jako pierwszą
-   wiadomość nowej rozmowy; jeśli masz płatne konto — raz, jako instrukcję projektu.
-3. **Most do warsztatu 2, gotowe zdanie do maila:** „To wersja starter — działa od dziś.
+1. **Na żywo, przed przerwą (slajdy 19c–19d):** budujesz jeden master prompt na sali,
+   z szablonu uniwersalnego, pytając Rafała T. o dziedzinę, zadania i format. Pokazujesz,
+   że to ten sam R·Z·F z nawyków, tylko zapisany raz i z pytaniami doprecyzowującymi.
+   To jest „punkt wyjścia” — po przerwie każde demo jest tym samym ruchem.
+2. **Na sali, przy ćwiczeniu (slajd 30):** jedno zdanie — „każdy z Was dostanie w mailu
+   swój prompt, uszyty pod zadanie z Waszej ankiety”. Nie pokazuj treści — zapowiedź
+   podnosi otwieralność maila i skleja się z zobowiązaniem z kartki.
+3. **W mailu do 48 h:** każdy dostaje szablon uniwersalny + SWÓJ gotowy przykład (imiennie,
+   nie zbiorczo — „to dla Ciebie” sprzedaje lepiej niż załącznik dla wszystkich) + instrukcja:
+   wklej jako pierwszą wiadomość nowej rozmowy; jeśli masz płatne konto — raz, jako instrukcję projektu.
+4. **Most do warsztatu 2, gotowe zdanie do maila:** „To wersja na start — działa od dziś.
    Na warsztacie 2 robimy z tego maszynę: wspólne instrukcje zespołowe, szablony
    i automatyzację, żeby prompt w ogóle nie był potrzebny.”
-4. Pola `[w nawiasach]` zostawiamy puste celowo: uzupełnienie ich to pierwsze 10 minut
-   pracy uczestnika z własnym skillem — zaangażowanie, nie gotowiec.
+5. Pola `[w nawiasach]` zostawiamy puste celowo: uzupełnienie ich to pierwsze 10 minut
+   pracy uczestnika z własnym narzędziem — zaangażowanie, nie gotowiec.
