@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unified Final Report — Template</title>
+<!--
+  UNIFIED FINAL REPORT TEMPLATE  (implements Unified_Report_PRD.md)
+  One report system for BOTH scopes:
+     report_scope: application  (single app)  — filled by Discovery_Master_Prompt.md
+     report_scope: portfolio    (N repos)     — filled by CrossRepo_Consolidation_Master_Prompt.md
+
+  THIS FILE SHOWS BOTH VARIANTS for demonstration, separated by a scope divider.
+  A REAL report sets <body data-scope="…"> and KEEPS ONLY the matching
+  "SCOPE:application" or "SCOPE:portfolio" block (see the scope divider markers
+  below), deleting the other. (Note: HTML comments cannot nest — do not write
+  literal comment markers inside this header.)
+
+  Self-contained: system fonts + inline CSS (design tokens inlined below). Only external
+  dependency is Mermaid via CDN. ALL CONTENT IS *Example data — not from production*.
+-->
+<style>
+/* ============ DESIGN TOKENS (inlined — single source of truth for this template) ============ */
+:root{
+  /* Sopra Steria CEO-deck palette — warm, red/orange-dominant; purple is a
+     gradient start accent only (see PRD § 7.8) */
+  --brand-primary:#4D1D82; --brand-primary-mid:#8B1D82; --brand-dark:#1D1D1B;
+  --brand-accent:#EF7D00; --brand-accent-ondark:#F5883F; --brand-accent-onlight:#C2410C;
+  --brand-light:#FAF9F7; --brand-secondary:#CF022B;
+  --surface:#fff; --surface-tint:#F8F6F2; --surface-tint-2:#FBF2EA; --border:#ECE9E4; --border-strong:#DCD7CE;
+  --text:#1A1A2E; --text-body:#2C3E50; --text-muted:#6B7280; --text-faint:#5D6B85;
+  --ondark-1:#F4EAE5; --ondark-2:#D8D2CA; --ondark-3:#C9B3A8; --ondark-4:#9C9288;
+  --sev-critical:#d03b3b; --sev-high:#ec835a; --sev-medium:#eda100; --sev-low:#2a78d6;
+  --sev-critical-bg:#fde8e8; --sev-critical-fg:#c0392b; --sev-high-bg:#fef3e2; --sev-high-fg:#b9600f;
+  --sev-medium-bg:#fef9e7; --sev-medium-fg:#8a6d0b; --sev-low-bg:#eaf0fb; --sev-low-fg:#1f5fae;
+  --ev-crossverified:#087a3f; --ev-verified:#0ca30c; --ev-partial:#2a78d6; --ev-assumed:#eda100;
+  --ev-inferred:#7568c9; --ev-discoverysourced:#9aa0b4; --ev-cd:#d03b3b;
+  --tier-very-high:#1e8449; --tier-very-high-bg:#eafaf1; --tier-high:#2471a3; --tier-high-bg:#eaf0fb;
+  --tier-medium:#b7950b; --tier-medium-bg:#fef9e7; --tier-low:#d68910; --tier-low-bg:#fef3e2;
+  --tier-very-low:#c0392b; --tier-very-low-bg:#fde8e8;
+  --rag-good:#1e8449; --rag-good-bg:#eef6ee; --rag-warn:#b7950b; --rag-warn-bg:#fdf4dd;
+  --rag-bad:#c0392b; --rag-bad-bg:#fbe9e9; --rag-info:#2471a3; --rag-info-bg:#eaf0fb;
+  --font-sans:'Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif;
+  --font-mono:'Cascadia Code','Consolas','Fira Code',ui-monospace,monospace;
+  --sp-1:4px;--sp-2:8px;--sp-3:12px;--sp-4:16px;--sp-5:20px;--sp-6:24px;--sp-8:32px;--sp-10:40px;--sp-12:48px;--sp-14:56px;
+  --radius:10px; --radius-pill:20px; --shadow-card:0 2px 8px rgba(77,29,130,.05); --shadow-lift:0 10px 30px rgba(77,29,130,.08);
+  --sidebar-w:248px; --content-max:980px;
+  --cover-gradient:linear-gradient(135deg,var(--brand-primary) 0%,var(--brand-primary-mid) 15%,var(--brand-secondary) 45%,var(--brand-accent) 80%,#FF9E1B 100%);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--font-sans);font-size:15px;line-height:1.7;color:var(--text);background:var(--brand-light)}
+h2,h3,h4{margin:0}
+p{margin:0 0 var(--sp-3)}
+.page-wrapper{display:flex;min-height:100vh}
+
+/* Sidebar */
+.sidebar{width:var(--sidebar-w);min-width:var(--sidebar-w);background:#fff;color:var(--text-body);border-right:1px solid var(--border);position:sticky;top:0;height:100vh;overflow-y:auto;padding:var(--sp-6) 0}
+.sidebar-logo{padding:0 var(--sp-6) var(--sp-5);border-bottom:1px solid var(--border)}
+.sidebar-logo .org{font-weight:800;font-size:15px}
+.sidebar-logo .doc{font-size:11px;color:var(--text-muted);margin-top:2px}
+.sidebar .grp{font-family:var(--font-mono);font-weight:700;font-size:9.5px;text-transform:uppercase;letter-spacing:.12em;color:var(--brand-secondary);padding:var(--sp-4) var(--sp-6) var(--sp-1)}
+.sidebar nav a{display:block;color:var(--text-muted);text-decoration:none;font-size:12.5px;padding:6px var(--sp-6);border-left:3px solid transparent}
+.sidebar nav a:hover{color:var(--text);background:rgba(239,125,0,.07);border-left-color:var(--brand-accent)}
+.sidebar nav a.active{color:var(--text);background:rgba(239,125,0,.12);border-left-color:var(--brand-accent)}
+.side-conf{padding:var(--sp-4) var(--sp-6) 0}
+.side-conf-item{display:flex;justify-content:space-between;align-items:center;font-size:11px;color:var(--text-body);padding:5px 0}
+.side-conf-item .name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:130px}
+.pill{border-radius:var(--radius-pill);padding:1px 9px;font-size:10px;font-weight:700}
+.pill.very-high{background:var(--tier-very-high-bg);color:var(--tier-very-high)}
+.pill.high{background:var(--tier-high-bg);color:var(--tier-high)}
+.pill.medium{background:var(--tier-medium-bg);color:var(--tier-medium)}
+.pill.low{background:var(--tier-low-bg);color:var(--tier-low)}
+
+/* Main + shared */
+.main{flex:1;padding:var(--sp-12) var(--sp-14);max-width:var(--content-max)}
+.micro{font-size:10px;text-transform:uppercase;letter-spacing:.1em;font-weight:700;color:var(--text-muted)}
+.example-flag{background:#fff8e6;border:1px solid #f0d98a;color:#8a6d0b;font-size:11px;padding:8px 14px;border-radius:6px;display:block;margin-bottom:var(--sp-5);font-weight:600}
+.scope-divider{margin:var(--sp-14) 0 var(--sp-10);padding:var(--sp-4) var(--sp-5);border-radius:var(--radius);background:repeating-linear-gradient(45deg,#FDF3EC,#FDF3EC 12px,#FBE9DC 12px,#FBE9DC 24px);border:1px dashed var(--brand-secondary);color:var(--brand-secondary);font-weight:700;text-align:center}
+.scope-tag{display:inline-block;background:linear-gradient(135deg,var(--brand-secondary),var(--brand-accent));color:#fff;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:3px 10px;border-radius:6px;margin-bottom:var(--sp-4)}
+
+/* Cover / hero */
+.cover{background:var(--cover-gradient);color:#fff;border-radius:var(--radius);padding:var(--sp-10) var(--sp-10) 0;overflow:hidden;box-shadow:var(--shadow-lift)}
+.cover .eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:.16em;color:var(--brand-accent-ondark);font-weight:700}
+.cover h1{font-size:32px;font-weight:800;line-height:1.15;margin:var(--sp-2) 0}
+.cover .subtitle{font-size:16px;color:var(--ondark-2);margin:0 0 var(--sp-6);max-width:60ch}
+.cover-meta{display:flex;flex-wrap:wrap;gap:var(--sp-6);padding-bottom:var(--sp-6)}
+.cover-meta .lbl{font-size:9.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--ondark-4)}
+.cover-meta .val{font-size:14px;font-weight:600;color:#fff;margin-top:2px}
+.kpi-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));border-top:1px solid rgba(255,255,255,.12);margin:0 calc(-1 * var(--sp-10));padding:var(--sp-5) var(--sp-10);background:rgba(0,0,0,.18)}
+.kpi{border-left:2px solid var(--brand-accent);padding-left:var(--sp-3)}
+.kpi .v{font-size:27px;font-weight:800;line-height:1.1}
+.kpi .l{font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:var(--ondark-3);margin-top:2px}
+
+/* Verdict + gauge */
+.verdict{display:flex;gap:var(--sp-6);align-items:center;background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow-card);padding:var(--sp-6);margin-top:var(--sp-6);border-left:6px solid var(--rag-warn)}
+.verdict.remediate{border-left-color:var(--rag-good)} .verdict.modernize{border-left-color:var(--rag-bad)}
+.verdict .title{font-size:18px;font-weight:700}
+.verdict .sub{font-size:14px;color:var(--text-body);margin-top:2px}
+.verdict .body{flex:1}
+.gauge{width:280px;min-width:220px}
+.gauge-bands{display:flex;gap:3px;height:14px}
+.gauge-bands span{flex:1;border-radius:7px}
+.gb-good{background:var(--rag-good-bg);border:1px solid var(--rag-good)}
+.gb-warn{background:var(--rag-warn-bg);border:1px solid var(--rag-warn)}
+.gb-bad{background:var(--rag-bad-bg);border:1px solid var(--rag-bad)}
+.gauge-track{position:relative}
+.gauge-marker{position:absolute;top:-4px;width:14px;height:14px;border-radius:50%;background:var(--brand-dark);border:3px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.3);transform:translateX(-50%)}
+.gauge-labels{display:flex;justify-content:space-between;font-size:11px;font-weight:700;margin-top:8px;text-transform:uppercase;letter-spacing:.04em}
+.gauge-labels span:nth-child(1){color:var(--rag-good)}
+.gauge-labels span:nth-child(2){color:#8a6d0b}
+.gauge-labels span:nth-child(3){color:var(--rag-bad)}
+
+/* Callouts */
+.callout-row{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-5);margin-top:var(--sp-6)}
+.callout{border-radius:var(--radius);padding:var(--sp-5);background:var(--surface);box-shadow:var(--shadow-card)}
+.callout.one-thing{border-top:4px solid var(--sev-critical)}
+.callout.inaction{border-top:4px solid var(--brand-accent)}
+.callout .head{font-size:10px;text-transform:uppercase;letter-spacing:.1em;font-weight:700;color:var(--text-muted);display:flex;align-items:center;gap:8px}
+.callout h3{font-size:16px;margin:var(--sp-2) 0 var(--sp-1)}
+.callout p{font-size:13.5px;color:var(--text-body);margin:var(--sp-2) 0 0}
+.note-callout{border-radius:var(--radius);padding:var(--sp-4) var(--sp-5);margin-top:var(--sp-5);font-size:13.5px}
+.note-callout.warning{background:var(--rag-bad-bg);border-left:4px solid var(--rag-bad)}
+.note-callout.success{background:var(--rag-good-bg);border-left:4px solid var(--rag-good)}
+.note-callout.scope{background:var(--surface-tint-2);border-left:4px solid var(--brand-accent)}
+
+/* Section */
+.section{margin-top:var(--sp-10);scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:var(--sp-3);border-bottom:2px solid var(--border);padding-bottom:var(--sp-3)}
+.section-number{width:26px;height:26px;border-radius:6px;background:var(--brand-accent);color:#fff;display:grid;place-items:center;font-weight:800;font-size:13px;flex:none}
+.section h2{font-size:20px;font-weight:700}
+.confidence-badge{display:inline-flex;align-items:center;gap:8px;border-radius:14px;padding:4px 12px;margin-left:auto;flex:none}
+.confidence-badge.very-high{background:var(--tier-very-high-bg);color:var(--tier-very-high)}
+.confidence-badge.high{background:var(--tier-high-bg);color:var(--tier-high)}
+.confidence-badge.medium{background:var(--tier-medium-bg);color:var(--tier-medium)}
+.confidence-badge.low{background:var(--tier-low-bg);color:var(--tier-low)}
+.confidence-badge .score{font-weight:800;font-size:13px}.confidence-badge .tier{font-weight:600;font-size:11px}
+.conf-plain{font-size:12px;color:var(--text-muted);margin:var(--sp-3) 0 0;max-width:74ch}
+.section-lead{font-size:14.5px;color:var(--text-body);margin-top:var(--sp-4)}
+
+/* Grids / cards */
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-5);margin-top:var(--sp-5)}
+.grid-viz{display:grid;grid-template-columns:1.4fr 1fr;gap:var(--sp-6);margin-top:var(--sp-5)}
+.card{background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow-card);padding:var(--sp-5)}
+.card h4{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted);margin-bottom:var(--sp-4)}
+
+/* Scorecards */
+.scorecard-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:var(--sp-4);margin-top:var(--sp-5)}
+.scorecard{background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow-card);padding:var(--sp-4);border-top:4px solid var(--rag-info)}
+.scorecard.green{border-top-color:var(--rag-good)}.scorecard.amber{border-top-color:var(--rag-warn)}.scorecard.red{border-top-color:var(--rag-bad)}
+.scorecard .v{font-size:28px;font-weight:800}
+.scorecard .l{font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--text-muted);margin-top:2px}
+
+/* Distribution bar + legend */
+.dist-bar{display:flex;gap:2px;height:26px;border-radius:6px;overflow:hidden}
+.dist-seg{display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:700;min-width:22px}
+.dist-seg.critical{background:var(--sev-critical)}.dist-seg.high{background:var(--sev-high)}
+.dist-seg.medium{background:var(--sev-medium)}.dist-seg.low{background:var(--sev-low)}
+.dist-legend{display:flex;flex-wrap:wrap;gap:var(--sp-4);margin-top:var(--sp-4)}
+.key{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text-body)}
+.swatch{width:11px;height:11px;border-radius:3px}
+.swatch.critical{background:var(--sev-critical)}.swatch.high{background:var(--sev-high)}
+.swatch.medium{background:var(--sev-medium)}.swatch.low{background:var(--sev-low)}
+.swatch.verified{background:var(--ev-verified)}.swatch.assumed{background:var(--ev-assumed)}.swatch.inferred{background:var(--ev-inferred)}
+
+/* Meters */
+.meter{margin-bottom:var(--sp-4)}
+.meter-head{display:flex;justify-content:space-between;font-size:12.5px;margin-bottom:5px}.meter-head b{font-weight:800}
+.meter-track{height:10px;background:var(--border);border-radius:6px;overflow:hidden}
+.meter-fill{height:100%;border-radius:6px}
+.meter-fill.green{background:var(--ev-verified)}.meter-fill.blue{background:var(--ev-partial)}.meter-fill.amber{background:var(--sev-medium)}
+
+/* Risk heat matrix */
+.heat-matrix{display:grid;grid-template-columns:84px repeat(3,1fr);gap:4px;margin-top:var(--sp-4)}
+.hm-axis{font-size:10px;text-transform:uppercase;letter-spacing:.04em;color:var(--text-muted);display:flex;align-items:center;justify-content:center;text-align:center}
+.hm-cell{min-height:46px;border-radius:6px;padding:5px;display:flex;flex-wrap:wrap;gap:3px;align-content:flex-start}
+.z-low{background:var(--rag-good-bg)}.z-med{background:var(--rag-warn-bg)}.z-high{background:var(--rag-bad-bg)}
+.risk-chip{font-family:var(--font-mono);font-size:10px;font-weight:700;background:var(--brand-dark);color:#fff;border-radius:4px;padding:1px 5px}
+.hm-note{font-size:11px;color:var(--text-muted);margin-top:var(--sp-2)}
+
+/* Finding card */
+.finding-card{background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow-card);padding:var(--sp-5);margin-top:var(--sp-5);border-left:5px solid var(--sev-critical)}
+.finding-card.high{border-left-color:var(--sev-high)}
+.finding-card .fhead{display:flex;align-items:center;gap:var(--sp-3);flex-wrap:wrap}
+.badge{display:inline-block;border-radius:var(--radius-pill);padding:2px 10px;font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.03em}
+.badge.critical{background:var(--sev-critical-bg);color:var(--sev-critical-fg)}
+.badge.high{background:var(--sev-high-bg);color:var(--sev-high-fg)}
+.badge.medium{background:var(--sev-medium-bg);color:var(--sev-medium-fg)}
+.badge.low{background:var(--sev-low-bg);color:var(--sev-low-fg)}
+.finding-id{font-family:var(--font-mono);font-size:12px;color:var(--brand-accent-onlight);font-weight:700}
+.evid-badge{margin-left:auto;font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.03em;padding:2px 10px;border-radius:var(--radius-pill)}
+.evid-badge.assumed{background:var(--sev-medium-bg);color:var(--sev-medium-fg)}
+.evid-badge.verified{background:var(--tier-very-high-bg);color:var(--tier-very-high)}
+.finding-card h4.ft{font-size:16px;margin:var(--sp-3) 0 var(--sp-2)}
+.finding-card .impact{font-size:13.5px;color:var(--text-body)}
+.for-engineer{margin-top:var(--sp-3);border-top:1px dashed var(--border);padding-top:var(--sp-3)}
+.for-engineer summary{cursor:pointer;font-size:11px;text-transform:uppercase;letter-spacing:.06em;font-weight:700;color:var(--brand-accent-onlight);list-style:none}
+.for-engineer summary::-webkit-details-marker{display:none}
+.for-engineer summary::before{content:"\25B8  ";color:var(--brand-accent)}
+.for-engineer[open] summary::before{content:"\25BE  "}
+.for-engineer p{font-size:13px;color:var(--text-body);margin:var(--sp-3) 0 0}
+.for-engineer .lbl{font-weight:700;color:var(--text)}
+.evidence-citation{display:inline-flex;align-items:center;gap:8px;background:var(--surface-tint);border-left:3px solid var(--ev-verified);border-radius:4px;padding:4px 10px;margin-top:var(--sp-3);font-size:12px}
+.evidence-citation.assumed{border-left-color:var(--ev-assumed)}
+.evidence-citation code{font-family:var(--font-mono);font-size:12px}
+.evidence-status{font-size:9.5px;font-weight:700;text-transform:uppercase;padding:1px 7px;border-radius:10px}
+.evidence-status.assumed{background:var(--sev-medium-bg);color:var(--sev-medium-fg)}
+.evidence-status.verified{background:var(--tier-very-high-bg);color:var(--tier-very-high)}
+.verification-badge{display:inline-block;margin-top:var(--sp-3);font-family:var(--font-mono);font-size:10.5px;font-weight:700;padding:2px 8px;border-radius:4px}
+.verification-badge.must-verify{background:var(--sev-critical-bg);color:var(--sev-critical-fg);border:1px dashed var(--sev-critical)}
+.verification-badge.should-verify{background:var(--sev-medium-bg);color:var(--sev-medium-fg);border:1px dashed var(--sev-medium)}
+
+/* Tables */
+.table-scroll{overflow-x:auto;margin-top:var(--sp-5)}
+.data-table{width:100%;border-collapse:collapse;font-size:13px}
+.data-table.compact{font-size:12.5px}
+.data-table th{background:var(--brand-dark);color:#F4EAE5;border-bottom:2px solid var(--brand-accent);text-transform:uppercase;letter-spacing:.03em;font-size:11px;text-align:left;padding:8px 12px}
+.data-table td{padding:8px 12px;border-bottom:1px solid var(--border)}
+.data-table tr:nth-child(even) td{background:var(--surface-tint)}
+.status-badge{font-size:9.5px;font-weight:700;text-transform:uppercase;padding:1px 8px;border-radius:10px}
+.status-badge.verified{background:var(--tier-very-high-bg);color:var(--tier-very-high)}
+.status-badge.assumed{background:var(--sev-medium-bg);color:var(--sev-medium-fg)}
+.status-badge.cross-verified{background:#e3f4ea;color:var(--ev-crossverified)}
+.status-badge.discovery{background:#eef0f4;color:#5c6478}
+
+/* Debt bars */
+.debt-item{margin-top:var(--sp-4)}
+.debt-head{display:flex;justify-content:space-between;font-size:13px;margin-bottom:5px}
+.debt-bar-bg{height:12px;background:var(--border);border-radius:6px;overflow:hidden}
+.debt-bar{height:100%;border-radius:6px}
+.debt-bar.low{background:var(--rag-good)}.debt-bar.medium{background:var(--rag-warn)}.debt-bar.high{background:var(--rag-bad)}
+
+/* Diagram card */
+.diagram-card{background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow-card);padding:var(--sp-5);overflow-x:auto;margin-top:var(--sp-5)}
+.diagram-title{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted)}
+.diagram-card pre.mermaid{font-family:var(--font-mono);text-align:center;margin:var(--sp-4) 0}
+.diagram-caption{font-size:12.5px;color:var(--text-body);margin-top:var(--sp-2)}
+.diagram-note{font-size:11.5px;color:var(--text-muted);margin-top:4px}
+
+/* Path card / pros-cons / score dots */
+.path-card{background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow-card);padding:var(--sp-5);border-left:4px solid var(--brand-accent);margin-top:var(--sp-5)}
+.pros-cons{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-5);margin-top:var(--sp-4)}
+.pros-cons ul{margin:var(--sp-2) 0 0;padding-left:18px;font-size:13px;color:var(--text-body)}
+.score-dots{display:inline-flex;gap:3px}
+.score-dots i{width:9px;height:9px;border-radius:50%;background:var(--border);display:inline-block}
+.score-dots.s1 i:nth-child(1){background:var(--ev-verified)}
+.score-dots.s2 i:nth-child(-n+2){background:var(--sev-medium)}
+.score-dots.s3 i{background:var(--sev-critical)}
+.diagram-render-error{background:#fff8e6;border:1.5px solid #e0a800;color:#7a5b00;border-radius:8px;padding:10px 14px;margin-bottom:10px;font-size:12.5px;font-weight:600}
+
+/* Timeline */
+.timeline{position:relative;margin-top:var(--sp-5);padding-left:var(--sp-6)}
+.timeline::before{content:"";position:absolute;left:6px;top:4px;bottom:4px;width:2px;background:var(--border)}
+.timeline-item{position:relative;margin-bottom:var(--sp-5)}
+.timeline-item::before{content:"";position:absolute;left:calc(-1 * var(--sp-6) + 1px);top:4px;width:11px;height:11px;border-radius:50%;background:var(--brand-accent);border:2px solid #fff}
+.timeline-item h4{font-size:14px}
+.timeline-item p{font-size:13px;color:var(--text-body);margin-top:2px}
+
+/* Business value cards */
+.value-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:var(--sp-4);margin-top:var(--sp-5)}
+.value-card{background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow-card);padding:var(--sp-4);border-top:3px solid var(--brand-accent)}
+.value-card h4{font-size:14px;margin-bottom:var(--sp-2)}
+.value-card p{font-size:12.5px;color:var(--text-body)}
+
+/* Info card */
+.info-card{background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow-card);padding:var(--sp-5);margin-top:var(--sp-5)}
+.info-card h4{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted);margin-bottom:var(--sp-3)}
+.info-card p,.info-card li{font-size:13px;color:var(--text-body)}
+
+/* CTA */
+.cta{background:var(--cover-gradient);color:#fff;border-radius:var(--radius);padding:var(--sp-8);margin-top:var(--sp-8);text-align:center}
+.cta h3{font-size:20px}
+.cta .btn{display:inline-block;margin-top:var(--sp-4);background:var(--brand-accent);color:#fff;font-weight:700;padding:10px 22px;border-radius:8px;text-decoration:none}
+
+.report-footer{margin-top:var(--sp-12);padding-top:var(--sp-5);border-top:1px solid var(--border);font-size:12px;color:var(--text-muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:var(--sp-3)}
+
+/* Responsive */
+@media (max-width:1024px){
+  .main{padding:var(--sp-8)}
+  .grid-viz,.grid-2,.pros-cons{grid-template-columns:1fr}
+  .gauge{width:220px}
+}
+@media (max-width:768px){
+  .page-wrapper{display:block}
+  .sidebar{position:static;width:auto;min-width:0;height:auto}
+  .main{max-width:100%;padding:var(--sp-6) var(--sp-4)}
+  .callout-row{grid-template-columns:1fr}
+  .verdict{flex-direction:column;align-items:stretch}
+  .gauge{width:100%}
+  .cover h1{font-size:26px}
+}
+
+/* Print */
+@media print{
+  body{background:#fff}
+  .page-wrapper{display:block}
+  .sidebar{display:none}
+  .main{max-width:100%;padding:0}
+  .cover,.verdict,.badge,.confidence-badge,.scorecard,.kpi,.kpi-strip,.dist-seg,.swatch,
+  .meter-fill,.gauge-marker,.gauge-bands span,.hm-cell,.risk-chip,.score-dots i,.debt-bar,
+  .callout,.finding-card,.evidence-citation,.verification-badge,.value-card,.cta{
+    -webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .callout,.finding-card,.card,.verdict,.diagram-card,.scorecard,.value-card,.timeline-item,.data-table tr{page-break-inside:avoid}
+  .cover,.cta{border-radius:0}
+  details{display:block} .for-engineer summary{color:var(--text)} details>*{display:revert}
+  .scope-divider{border:1px solid #999}
+}
+</style>
+</head>
+
+<!-- A real report sets data-scope to ONE value and keeps only that block. -->
+<body data-scope="application">
+<div class="page-wrapper">
+
+  <!-- ===================== SIDEBAR (shared shell) ===================== -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <div class="org">[Organization Label]</div>
+      <div class="doc">Modernization Discovery Report</div>
+    </div>
+    <nav>
+      <div class="grp">Single-App Report</div>
+      <a href="#a1" class="active">1 · Executive Summary</a>
+      <a href="#a2">2 · Engagement Overview</a>
+      <a href="#a3">3 · Current State</a>
+      <a href="#a4">4 · Risk Register</a>
+      <a href="#a5">5 · Technical Debt</a>
+      <a href="#a6">6 · Architecture</a>
+      <a href="#a7">7 · Security</a>
+      <a href="#a8">8 · Data &amp; Integrations</a>
+      <a href="#a9">9 · Recommended Path</a>
+      <a href="#a10">10 · Next Steps</a>
+      <div class="grp">Portfolio Report</div>
+      <a href="#p1">1 · Executive Overview</a>
+      <a href="#p2">2 · What We Found</a>
+      <a href="#p2-security" style="padding-left:34px">Security posture</a>
+      <a href="#p2-risks" style="padding-left:34px">Risk register</a>
+      <a href="#p3">3 · Target Architecture</a>
+      <a href="#p4">4 · Partnership</a>
+    </nav>
+    <div class="side-conf">
+      <div class="grp">Confidence</div>
+      <div class="side-conf-item"><span class="name" title="Overall — Critical risks code-verified">Overall</span><span class="pill high">72%</span></div>
+      <div class="side-conf-item"><span class="name">Risk Register</span><span class="pill high">78%</span></div>
+      <div class="side-conf-item"><span class="name">Security</span><span class="pill medium">61%</span></div>
+      <div class="side-conf-item"><span class="name">Architecture</span><span class="pill low">44%</span></div>
+    </div>
+  </aside>
+
+  <!-- ========================= MAIN ========================= -->
+  <main class="main">
+    <span class="example-flag">Example data — not from production. This template shows BOTH scope variants for demonstration; a real report keeps only the block matching <code>data-scope</code>.</span>
+
+    <!-- ============================================================= -->
+    <!-- SCOPE:application — SINGLE-APPLICATION REPORT                  -->
+    <!-- Filled by Discovery_Master_Prompt.md. Delete for portfolio.    -->
+    <!-- ============================================================= -->
+    <span class="scope-tag">Scope: Application (single app)</span>
+
+    <!-- HERO -->
+    <section class="cover">
+      <div class="eyebrow">AI-Powered Legacy Discovery</div>
+      <h1>Customer Portal — Discovery Report</h1>
+      <p class="subtitle">A .NET Framework 4.8 web application assessed against its full source tree, with every finding cited and confidence quantified.</p>
+      <div class="cover-meta">
+        <div><div class="lbl">Client</div><div class="val">[TO FILL — consultant]</div></div>
+        <div><div class="lbl">Prepared by</div><div class="val">[TO FILL — consultant]</div></div>
+        <div><div class="lbl">Date</div><div class="val">2026-07-09</div></div>
+        <div><div class="lbl">Discovery ID</div><div class="val">PORTAL-DISC-2026-07</div></div>
+        <div><div class="lbl">AI Discovery Hours</div><div class="val">40 hrs (configured)</div></div>
+      </div>
+      <div class="kpi-strip">
+        <div class="kpi"><div class="v">1,240</div><div class="l">Files analyzed</div></div>
+        <div class="kpi"><div class="v">100%</div><div class="l">Coverage</div></div>
+        <div class="kpi"><div class="v">184K</div><div class="l">Lines of code</div></div>
+        <div class="kpi"><div class="v">87</div><div class="l">Business rules</div></div>
+        <div class="kpi"><div class="v">14</div><div class="l">Flows</div></div>
+        <div class="kpi"><div class="v">9</div><div class="l">Integrations</div></div>
+      </div>
+    </section>
+
+    <!-- VERDICT -->
+    <div class="verdict">
+      <div class="body">
+        <div class="title">Recommendation: Hybrid Modernization</div>
+        <div class="sub">Decision score <b>14 / 21</b> — refactor the highest-risk components (EOL runtime, credential exposure) while incrementally modernizing the rest on a supported platform.</div>
+      </div>
+      <div class="gauge" title="Decision score: 14 / 21">
+        <div class="gauge-bands"><span class="gb-good"></span><span class="gb-warn"></span><span class="gb-bad"></span></div>
+        <div class="gauge-track"><div class="gauge-marker" style="left:50%"></div></div>
+        <div class="gauge-labels"><span>Remediate</span><span>Hybrid</span><span>Modernize</span></div>
+      </div>
+    </div>
+
+    <!-- ONE THING + COST OF INACTION -->
+    <div class="callout-row">
+      <div class="callout one-thing">
+        <div class="head"><span class="badge critical">Critical</span> The one thing to know</div>
+        <h3>The core runtime is end-of-life with no vendor upgrade path in place</h3>
+        <p>The application targets .NET Framework 4.8 on Windows Server 2012, both past mainstream support. Every month without a migration plan increases the security and hiring risk (<span class="finding-id">PORTAL-RISK-01</span>).</p>
+      </div>
+      <div class="callout inaction">
+        <div class="head">Cost of inaction</div>
+        <h3>Risk compounds; options narrow</h3>
+        <p>If no action is taken, unpatched framework CVEs accumulate, the pool of engineers willing to maintain the stack shrinks, and a forced migration under incident pressure becomes more likely — the most expensive way to modernize.</p>
+      </div>
+    </div>
+
+    <!-- SECTION 1: EXECUTIVE SUMMARY -->
+    <section class="section" id="a1">
+      <div class="section-header"><div class="section-number">1</div><h2>Executive Summary</h2>
+        <div class="confidence-badge high"><span class="score">72%</span><span class="tier">High</span></div></div>
+      <p class="conf-plain"><b>What 72% means for your decision:</b> most Critical and High findings are backed by code-level evidence. The main open items are deployment topology and CVE exactness, which need infrastructure input and a dependency scan to confirm.</p>
+      <p class="section-lead">Customer Portal is a 12-year-old .NET web application handling account self-service for ~40K users. It is functional and actively used, but rests on an end-of-life runtime with credential exposure and no automated tests. The recommended path is Hybrid Modernization.</p>
+
+      <div class="grid-viz">
+        <div class="card">
+          <h4>Findings by severity</h4>
+          <div class="dist-bar" role="img" aria-label="3 Critical, 7 High, 12 Medium, 6 Low">
+            <div class="dist-seg critical" style="flex-grow:3">3</div>
+            <div class="dist-seg high" style="flex-grow:7">7</div>
+            <div class="dist-seg medium" style="flex-grow:12">12</div>
+            <div class="dist-seg low" style="flex-grow:6">6</div>
+          </div>
+          <div class="dist-legend">
+            <span class="key"><span class="swatch critical"></span>Critical — 3</span>
+            <span class="key"><span class="swatch high"></span>High — 7</span>
+            <span class="key"><span class="swatch medium"></span>Medium — 12</span>
+            <span class="key"><span class="swatch low"></span>Low — 6</span>
+          </div>
+        </div>
+        <div class="card">
+          <h4>Evidence &amp; coverage</h4>
+          <div class="meter"><div class="meter-head"><span>Code coverage (ledger)</span><b>100%</b></div><div class="meter-track"><div class="meter-fill green" style="width:100%"></div></div></div>
+          <div class="meter"><div class="meter-head"><span>Findings backed by code evidence</span><b>72%</b></div><div class="meter-track"><div class="meter-fill blue" style="width:72%"></div></div></div>
+          <div class="meter"><div class="meter-head"><span>Critical findings verified</span><b>67%</b></div><div class="meter-track"><div class="meter-fill amber" style="width:67%"></div></div></div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:var(--sp-5)">
+        <h4>Risk landscape (impact × likelihood)</h4>
+        <div class="heat-matrix">
+          <div class="hm-axis"></div><div class="hm-axis">Low likelihood</div><div class="hm-axis">Medium</div><div class="hm-axis">High</div>
+          <div class="hm-axis">High impact</div><div class="hm-cell z-med"></div><div class="hm-cell z-high"><span class="risk-chip">R-01</span><span class="risk-chip">R-02</span></div><div class="hm-cell z-high"><span class="risk-chip">R-03</span></div>
+          <div class="hm-axis">Med impact</div><div class="hm-cell z-low"></div><div class="hm-cell z-med"><span class="risk-chip">R-05</span></div><div class="hm-cell z-med"><span class="risk-chip">R-04</span></div>
+          <div class="hm-axis">Low impact</div><div class="hm-cell z-low"><span class="risk-chip">R-07</span></div><div class="hm-cell z-low"><span class="risk-chip">R-06</span></div><div class="hm-cell z-med"></div>
+        </div>
+        <p class="hm-note">One chip per Risk Register entry (VC-02: chip count = register rows).</p>
+      </div>
+
+      <div class="info-card">
+        <h4>About confidence scores</h4>
+        <p>Confidence uses the Evidence Coverage Index (ECI): <b>50%</b> evidence breadth + <b>35%</b> verification of critical findings + <b>15%</b> analysis coverage. Tiers: Very High 90-100 · High 70-89 · Medium 50-69 · Low 30-49 · Very Low 0-29, rounded to the nearest 10. A score answers "where should further discovery focus?" — the per-finding evidence badge answers "can this finding be believed?"</p>
+      </div>
+    </section>
+
+    <!-- SECTION 2: ENGAGEMENT OVERVIEW (no badge) -->
+    <section class="section" id="a2">
+      <div class="section-header"><div class="section-number">2</div><h2>Engagement Overview</h2></div>
+      <div class="grid-2">
+        <div class="card"><h4>Scope &amp; method</h4><p>40h AI-assisted static discovery over <code>Project/Code/</code>. No runtime access. Findings derive from code, config, and documentation.</p></div>
+        <div class="card"><h4>Coverage &amp; confidence</h4><p>100% of 1,240 files analyzed (12 excluded: generated code — see coverage ledger); 100% of 214 domain-logic files swept for business rules.</p></div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: CURRENT STATE -->
+    <section class="section" id="a3">
+      <div class="section-header"><div class="section-number">3</div><h2>Current State Assessment</h2>
+        <div class="confidence-badge high"><span class="score">80%</span><span class="tier">High</span></div></div>
+      <p class="conf-plain"><b>What 80% means:</b> the technology stack and structure are directly observable from manifests and code; version-currency claims still need vendor-lifecycle confirmation.</p>
+      <div class="scorecard-grid">
+        <div class="scorecard red"><div class="v">EOL</div><div class="l">Technology currency</div></div>
+        <div class="scorecard red"><div class="v">0%</div><div class="l">Automated tests</div></div>
+        <div class="scorecard amber"><div class="v">Poor</div><div class="l">Documentation</div></div>
+        <div class="scorecard amber"><div class="v">Partial</div><div class="l">CI/CD</div></div>
+        <div class="scorecard green"><div class="v">Clean</div><div class="l">Layer separation</div></div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: RISK REGISTER -->
+    <section class="section" id="a4">
+      <div class="section-header"><div class="section-number">4</div><h2>Risk Register</h2>
+        <div class="confidence-badge high"><span class="score">78%</span><span class="tier">High</span></div></div>
+      <p class="conf-plain"><b>What 78% means:</b> critical risks are code-verified; the CVE-based risk remains Assumed pending an external scan.</p>
+
+      <!-- Critical/High rendered as finding cards -->
+      <div class="finding-card">
+        <div class="fhead"><span class="badge critical">Critical</span><span class="finding-id">PORTAL-RISK-01</span><span class="evid-badge verified">Verified</span></div>
+        <h4 class="ft">End-of-life runtime with no upgrade path</h4>
+        <p class="impact"><b>Business impact:</b> the platform can no longer receive security patches through supported channels, raising breach and compliance exposure and making it harder to hire maintainers.</p>
+        <details class="for-engineer"><summary>For the engineer</summary>
+          <p><span class="lbl">What the code shows:</span> <code>web.config</code> targets .NET Framework 4.8; no <code>global.json</code> or .NET (Core) project files present.</p>
+          <p><span class="lbl">What this implies:</span> a migration to a supported runtime (.NET 8+) is required; the size of that effort needs an Architecture &amp; Scoping engagement.</p>
+          <div class="evidence-citation"><span>&#128196;</span><code>src/Web/web.config:3</code><span class="evidence-status verified">Verified</span></div>
+        </details>
+      </div>
+      <div class="finding-card high">
+        <div class="fhead"><span class="badge high">High</span><span class="finding-id">PORTAL-RISK-02</span><span class="evid-badge assumed">Assumed · MUST VERIFY</span></div>
+        <h4 class="ft">Known-vulnerable logging dependency</h4>
+        <p class="impact"><b>Business impact:</b> a widely-exploited class of vulnerability may be reachable; remote code execution cannot be ruled out until confirmed.</p>
+        <details class="for-engineer"><summary>For the engineer</summary>
+          <p><span class="lbl">What the code shows:</span> <code>packages.config</code> declares an old logging library version.</p>
+          <p><span class="lbl">What this implies:</span> likely a known CVE class — verify exact CVE ID and CVSS at nvd.nist.gov; do not treat as confirmed until a dependency scan runs.</p>
+          <div class="evidence-citation assumed"><span>&#128196;</span><code>src/Web/packages.config:22</code><span class="evidence-status assumed">Assumed</span></div>
+          <span class="verification-badge must-verify">MUST VERIFY — run dependency scan (npm audit / dotnet list package --vulnerable / OWASP DC)</span>
+        </details>
+      </div>
+
+      <!-- Full register table (all findings, Ctrl+F-able) -->
+      <div class="table-scroll">
+        <table class="data-table">
+          <thead><tr><th>ID</th><th>Risk</th><th>Severity</th><th>Likelihood</th><th>Business impact</th><th>Confidence</th></tr></thead>
+          <tbody>
+            <tr><td class="finding-id">PORTAL-RISK-01</td><td>EOL runtime</td><td><span class="badge critical">Critical</span></td><td>Medium</td><td>Breach / compliance exposure</td><td><span class="status-badge verified">Verified</span></td></tr>
+            <tr><td class="finding-id">PORTAL-RISK-02</td><td>Vulnerable dependency</td><td><span class="badge high">High</span></td><td>Medium</td><td>Possible RCE</td><td><span class="status-badge assumed">Assumed</span></td></tr>
+            <tr><td class="finding-id">PORTAL-RISK-03</td><td>Plaintext credential in config</td><td><span class="badge critical">Critical</span></td><td>High</td><td>Credential theft</td><td><span class="status-badge verified">Verified</span></td></tr>
+            <tr><td class="finding-id">PORTAL-RISK-06</td><td>No automated tests</td><td><span class="badge low">Low</span></td><td>Low</td><td>Regression risk on change</td><td><span class="status-badge assumed">Inferred</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SECTION 5: TECHNICAL DEBT -->
+    <section class="section" id="a5">
+      <div class="section-header"><div class="section-number">5</div><h2>Technical Debt</h2>
+        <div class="confidence-badge medium"><span class="score">64%</span><span class="tier">Medium</span></div></div>
+      <p class="conf-plain"><b>What 64% means:</b> debt dimensions are scored from observable signals; some rely on sampling rather than full metrics.</p>
+      <div class="debt-item"><div class="debt-head"><span>Automated test coverage</span><b>9 / 10</b></div><div class="debt-bar-bg"><div class="debt-bar high" style="width:90%"></div></div></div>
+      <div class="debt-item"><div class="debt-head"><span>Dependency currency</span><b>8 / 10</b></div><div class="debt-bar-bg"><div class="debt-bar high" style="width:80%"></div></div></div>
+      <div class="debt-item"><div class="debt-head"><span>Code complexity</span><b>5 / 10</b></div><div class="debt-bar-bg"><div class="debt-bar medium" style="width:50%"></div></div></div>
+      <div class="debt-item"><div class="debt-head"><span>Documentation</span><b>7 / 10</b></div><div class="debt-bar-bg"><div class="debt-bar medium" style="width:70%"></div></div></div>
+    </section>
+
+    <!-- SECTION 6: ARCHITECTURE -->
+    <section class="section" id="a6">
+      <div class="section-header"><div class="section-number">6</div><h2>Architecture &amp; Flows</h2>
+        <div class="confidence-badge low"><span class="score">44%</span><span class="tier">Low</span></div></div>
+      <p class="conf-plain"><b>What 44% means:</b> component structure is clear from code, but deployment topology cannot be determined — no infrastructure-as-code was found. DBA/ops input would raise this materially.</p>
+      <div class="diagram-card">
+        <div class="diagram-title">Architecture overview</div>
+        <pre class="mermaid">flowchart LR
+  Browser --> Web["Web Layer (MVC)"]
+  Web --> Svc["Service Layer"]
+  Svc --> Data["Data Access"]
+  Data --> DB[("SQL Server")]
+  Svc --> Ext["Payment Gateway"]</pre>
+        <div class="diagram-caption">The application is a cleanly layered monolith — the business logic is not yet coupled to the UI, which makes incremental extraction feasible.</div>
+        <div class="diagram-note">5 nodes · 5 edges · source: <code>Outputs/.../diagrams/architecture_overview.mmd</code></div>
+      </div>
+      <div class="table-scroll">
+        <table class="data-table compact">
+          <thead><tr><th>Flow ID</th><th>Scenario</th><th>Direction</th><th>Primary modules</th><th>Confidence</th></tr></thead>
+          <tbody>
+            <tr><td class="finding-id">PORTAL-FLOW-01</td><td>Account login</td><td>Inbound</td><td>Web, Auth, Data</td><td><span class="status-badge verified">Verified</span></td></tr>
+            <tr><td class="finding-id">PORTAL-FLOW-02</td><td>Payment submission</td><td>Outbound</td><td>Service, PaymentGateway</td><td><span class="status-badge assumed">Partial</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SECTION 7: SECURITY -->
+    <section class="section" id="a7">
+      <div class="section-header"><div class="section-number">7</div><h2>Security &amp; Compliance</h2>
+        <div class="confidence-badge medium"><span class="score">61%</span><span class="tier">Medium</span></div></div>
+      <p class="conf-plain"><b>What 61% means:</b> code-observable patterns (plaintext credential, missing output encoding) are verified; CVE severity and compliance applicability need external confirmation.</p>
+      <div class="table-scroll">
+        <table class="data-table compact">
+          <thead><tr><th>ID</th><th>Finding</th><th>Type</th><th>Confidence</th><th>Verify</th></tr></thead>
+          <tbody>
+            <tr><td class="finding-id">PORTAL-CVE-01</td><td>Old logging library</td><td>Dependency</td><td><span class="status-badge assumed">Assumed</span></td><td><span class="verification-badge must-verify">MUST VERIFY</span></td></tr>
+            <tr><td class="finding-id">PORTAL-FIND-04</td><td>Plaintext DB credential</td><td>Secret</td><td><span class="status-badge verified">Verified</span></td><td>—</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SECTION 8: DATA & INTEGRATIONS -->
+    <section class="section" id="a8">
+      <div class="section-header"><div class="section-number">8</div><h2>Data &amp; Integrations</h2>
+        <div class="confidence-badge high"><span class="score">74%</span><span class="tier">High</span></div></div>
+      <p class="conf-plain"><b>What 74% means:</b> integration points are observed in code; connection frequency and external-system ownership are inferred and tagged for verification.</p>
+      <div class="table-scroll">
+        <table class="data-table compact">
+          <thead><tr><th>ID</th><th>System</th><th>Direction</th><th>Mechanism</th><th>Confidence</th><th>Owner</th></tr></thead>
+          <tbody>
+            <tr><td class="finding-id">PORTAL-INT-01</td><td>Payment Gateway</td><td>Outbound</td><td>REST/JSON</td><td><span class="status-badge verified">Verified</span></td><td>[SHOULD VERIFY]</td></tr>
+            <tr><td class="finding-id">PORTAL-INT-02</td><td>CRM</td><td>Bidirectional</td><td>SOAP</td><td><span class="status-badge assumed">Partial</span></td><td>[SHOULD VERIFY]</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SECTION 9: RECOMMENDED PATH -->
+    <section class="section" id="a9">
+      <div class="section-header"><div class="section-number">9</div><h2>Recommended Path</h2>
+        <div class="confidence-badge high"><span class="score">76%</span><span class="tier">High</span></div></div>
+      <div class="path-card">
+        <h4 style="font-size:17px">Hybrid Modernization</h4>
+        <p style="margin-top:var(--sp-2);font-size:13.5px;color:var(--text-body)">Decision score 14/21. Override rule applied: EOL runtime forces a minimum of Hybrid Modernization regardless of the base score.</p>
+        <div class="pros-cons">
+          <div><span class="micro">Advantages</span><ul><li>Retires the EOL runtime risk first</li><li>Preserves working business logic</li><li>Spreads cost and risk over phases</li></ul></div>
+          <div><span class="micro">Trade-offs</span><ul><li>Longer total timeline than a rebuild</li><li>Requires interim dual-stack support</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 10: NEXT STEPS (no badge) -->
+    <section class="section" id="a10">
+      <div class="section-header"><div class="section-number">10</div><h2>Next Steps</h2></div>
+      <div class="timeline">
+        <div class="timeline-item"><h4>Immediate (0–2 weeks)</h4><p>Rotate the exposed credential; run a dependency vulnerability scan to confirm CVE severity.</p></div>
+        <div class="timeline-item"><h4>Short-term (1–2 months)</h4><p>Stand up a runtime-migration spike; add a smoke-test harness around the login and payment flows.</p></div>
+        <div class="timeline-item"><h4>Decision gate (6 months)</h4><p>Review migration progress and re-score.</p></div>
+      </div>
+      <div class="cta">
+        <h3>Book the Architecture &amp; Scoping engagement</h3>
+        <p style="color:var(--ondark-2)">Effort, cost, and sequencing require scoping beyond code analysis. One workshop turns this discovery into a costed plan.</p>
+        <a class="btn" href="#">Schedule the workshop</a>
+      </div>
+    </section>
+
+    <!-- METHODOLOGY (moved to end) -->
+    <section class="section">
+      <div class="section-header"><div class="section-number">&#9432;</div><h2>Methodology &amp; Framework Value</h2></div>
+      <div class="table-scroll">
+        <table class="data-table compact">
+          <thead><tr><th>Dimension</th><th>Traditional approach</th><th>AI-powered discovery</th><th>Source</th></tr></thead>
+          <tbody>
+            <tr><td>Timeline</td><td>8–14 weeks</td><td>2–4 weeks</td><td>Framework reference range</td></tr>
+            <tr><td>Code coverage</td><td>5–15% (manual sampling)</td><td>100% (static analysis)</td><td>Engagement-actual</td></tr>
+            <tr><td>Evidence backing</td><td>Selective citations</td><td>Every finding cited file:line</td><td>Engagement-actual</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="diagram-note">Ranges labelled "framework reference" are not measured for this engagement.</p>
+    </section>
+    <!-- /SCOPE:application -->
+
+    <!-- ============================================================= -->
+    <div class="scope-divider">▼ SCOPE DIVIDER — everything below is the PORTFOLIO variant. A real report contains only one scope. ▼</div>
+    <!-- ============================================================= -->
+
+    <!-- ============================================================= -->
+    <!-- SCOPE:portfolio — MULTI-REPOSITORY REPORT                      -->
+    <!-- Filled by CrossRepo_Consolidation_Master_Prompt.md.           -->
+    <!-- ============================================================= -->
+    <span class="scope-tag">Scope: Portfolio (N repositories)</span>
+
+    <!-- HERO -->
+    <section class="cover">
+      <div class="eyebrow">AI-Powered Portfolio Discovery</div>
+      <h1>Dealer Platform — Cross-Repository Consolidation</h1>
+      <p class="subtitle">A 12-application portfolio assessed against source code and per-app discovery outputs, with every finding cited and confidence quantified.</p>
+      <div class="cover-meta">
+        <div><div class="lbl">Client</div><div class="val">[TO FILL — consultant]</div></div>
+        <div><div class="lbl">Prepared by</div><div class="val">[TO FILL — consultant]</div></div>
+        <div><div class="lbl">Date</div><div class="val">2026-07-09</div></div>
+        <div><div class="lbl">Portfolio ID</div><div class="val">TDP-PORT-2026-07</div></div>
+        <div><div class="lbl">AI Discovery Hours</div><div class="val">40 hrs (configured)</div></div>
+      </div>
+      <div class="kpi-strip">
+        <div class="kpi"><div class="v">12</div><div class="l">Applications</div></div>
+        <div class="kpi"><div class="v">187</div><div class="l">Endpoints</div></div>
+        <div class="kpi"><div class="v">64</div><div class="l">Connections</div></div>
+        <div class="kpi"><div class="v">5</div><div class="l">Domain clusters</div></div>
+        <div class="kpi"><div class="v">9</div><div class="l">Duplicates</div></div>
+        <div class="kpi"><div class="v">100%</div><div class="l">Repos discovered</div></div>
+      </div>
+    </section>
+
+    <!-- VERDICT -->
+    <div class="verdict modernize">
+      <div class="body">
+        <div class="title">Recommendation: API Platform Modernization</div>
+        <div class="sub">Integration Landscape Score <b>15 / 21</b> — introduce an API gateway, consolidate duplicated services by domain, and standardize authentication before point-to-point coupling becomes unmaintainable.</div>
+      </div>
+      <div class="gauge" title="Integration Landscape Score: 15 / 21">
+        <div class="gauge-bands"><span class="gb-good"></span><span class="gb-warn"></span><span class="gb-bad"></span></div>
+        <div class="gauge-track"><div class="gauge-marker" style="left:57%"></div></div>
+        <div class="gauge-labels"><span>Targeted</span><span>Modernize</span><span>Rebuild</span></div>
+      </div>
+    </div>
+
+    <div class="callout-row">
+      <div class="callout one-thing">
+        <div class="head"><span class="badge critical">Critical</span> The one thing to know</div>
+        <h3>Eight applications share one database through cross-schema reads</h3>
+        <p>Nine duplicate functions and 23 cross-schema SQL references mean a schema change in one app can silently break seven others (<span class="finding-id">TDP-DUP-01</span>).</p>
+      </div>
+      <div class="callout inaction">
+        <div class="head">Cost of inaction</div>
+        <h3>Coupling compounds with every release</h3>
+        <p>If no action is taken, each new integration is added point-to-point against the shared schema, enlarging the blast radius of every future change and pushing the portfolio toward a full rebuild.</p>
+      </div>
+    </div>
+
+    <!-- PART 1: EXECUTIVE OVERVIEW -->
+    <section class="section" id="p1">
+      <div class="section-header"><div class="section-number">1</div><h2>Executive Overview</h2>
+        <div class="confidence-badge high"><span class="score">78%</span><span class="tier">High</span></div></div>
+      <p class="conf-plain"><b>What 78% means:</b> most Critical findings are cross-verified across repositories; the shared-database topology is the main open item and needs DBA confirmation.</p>
+
+      <!-- Per-repository inventory + verdicts. The Verdict column carries each
+           repository's Stage-1 Recommendation Catalog path (R0-R6) — named,
+           never re-derived (prompt § 6.3 / per-repo verdict rule). -->
+      <div class="table-scroll">
+        <table class="data-table compact">
+          <thead><tr><th>Application</th><th>Tech stack</th><th>Endpoints</th><th>Decision score</th><th>Verdict (per-repo discovery)</th><th>Discovery confidence</th></tr></thead>
+          <tbody>
+            <tr><td>quoteweb</td><td>Java 8 / Struts</td><td>22</td><td>17 / 21</td><td><b>R5 · Full Rebuild</b></td><td><span class="status-badge cross-verified">Cross-verified</span></td></tr>
+            <tr><td>customerWS</td><td>Java 11 / JAX-WS</td><td>14</td><td>12 / 21</td><td><b>R2 · Tech-Stack Upgrade</b></td><td><span class="status-badge verified">Code-verified</span></td></tr>
+            <tr><td>carmaster2</td><td>.NET 4.6</td><td>9</td><td>10 / 21</td><td><b>R1 · Targeted Remediation</b></td><td><span class="status-badge discovery">Discovery-sourced</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- PART 2: WHAT WE FOUND -->
+    <section class="section" id="p2">
+      <div class="section-header"><div class="section-number">2</div><h2>As-Is Analysis — What We Found</h2>
+        <div class="confidence-badge high"><span class="score">74%</span><span class="tier">High</span></div></div>
+
+      <!-- Platform Health Scorecard — one card per § 7.2 dimension you can back
+           with per-repo evidence (words only, never numeric codes). Remove
+           unbackable dimensions. -->
+      <h3>Platform Health Scorecard</h3>
+      <div class="scorecard-grid">
+        <div class="scorecard amber"><div class="v">Mixed</div><div class="l">Technology currency</div></div>
+        <div class="scorecard red"><div class="v">Critical</div><div class="l">Automated testing</div></div>
+        <div class="scorecard amber"><div class="v">Needs attention</div><div class="l">Documentation</div></div>
+        <div class="scorecard amber"><div class="v">Needs attention</div><div class="l">CI/CD &amp; build</div></div>
+        <div class="scorecard red"><div class="v">Critical</div><div class="l">Integration complexity</div></div>
+        <div class="scorecard red"><div class="v">Critical</div><div class="l">Security posture</div></div>
+        <div class="scorecard amber"><div class="v">Mixed</div><div class="l">Application design</div></div>
+      </div>
+
+      <div class="diagram-card">
+        <div class="diagram-title">Application map (service mesh — domain-clustered)</div>
+        <pre class="mermaid">flowchart LR
+  subgraph Sales
+    quoteweb --> customerWS
+  end
+  subgraph Inventory
+    carmaster2 --> stockWS
+  end
+  quoteweb -->|"shared DB"| DB[("Oracle (tks)")]
+  carmaster2 -->|"shared DB"| DB</pre>
+        <div class="diagram-caption">Applications integrate through a shared database rather than APIs — the core constraint on independent modernization.</div>
+        <div class="diagram-note">Clustered view (5 clusters). Full node-level mesh: <code>diagrams/full_service_mesh_detailed.mmd</code>.</div>
+      </div>
+
+      <div class="diagram-card">
+        <div class="diagram-title">Database connectivity (application → schema)</div>
+        <pre class="mermaid">flowchart LR
+  quoteweb --> DEALER[("DEALER schema")]
+  quoteweb --> QUOTE[("QUOTE schema")]
+  customerWS --> DEALER
+  carmaster2 --> DEALER</pre>
+        <div class="diagram-caption">Three applications read the DEALER schema directly — every schema change has a multi-app blast radius.</div>
+        <div class="diagram-note">Source: <code>diagrams/database_connections.mmd</code> · topology detail: <code>Evidence/database_architecture.md</code></div>
+      </div>
+
+      <!-- Endpoint & protocol summary — from 01_Endpoint_Registry.md -->
+      <h3>Endpoint &amp; Protocol Summary</h3>
+      <div class="table-scroll">
+        <table class="data-table compact">
+          <thead><tr><th>Protocol / style</th><th>Endpoints</th><th>Repositories</th><th>Standardization gap</th></tr></thead>
+          <tbody>
+            <tr><td>REST / JSON</td><td>96</td><td>7</td><td>3 naming conventions in use</td></tr>
+            <tr><td>SOAP / XML</td><td>54</td><td>4</td><td>WSDL versions diverge</td></tr>
+            <tr><td>File / batch</td><td>37</td><td>5</td><td>No shared schema or error contract</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Service connections — top rows from 02_Service_Connection_Map.md;
+           full map stays in the Markdown artifact -->
+      <h3>Service Connections (Top)</h3>
+      <div class="table-scroll">
+        <table class="data-table compact">
+          <thead><tr><th>ID</th><th>From → To</th><th>Mechanism</th><th>Direction</th><th>Criticality</th><th>Evidence</th></tr></thead>
+          <tbody>
+            <tr><td><span class="finding-id">TDP-CONN-01</span></td><td>quoteweb → customerWS</td><td>REST / JSON</td><td>Outbound</td><td>High fan-in</td><td><span class="status-badge cross-verified">Cross-verified</span></td></tr>
+            <tr><td><span class="finding-id">TDP-CONN-02</span></td><td>quoteweb → Oracle (tks)</td><td>Shared schema</td><td>Bidirectional</td><td>Portfolio-critical</td><td><span class="status-badge assumed">Assumed · MUST VERIFY</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Duplicate functionality — from 03_API_Modernization_Analysis.md -->
+      <h3>Duplicated Functionality</h3>
+      <div class="table-scroll">
+        <table class="data-table compact">
+          <thead><tr><th>ID</th><th>Capability</th><th>Implemented in</th><th>Consolidation target</th></tr></thead>
+          <tbody>
+            <tr><td><span class="finding-id">TDP-DUP-01</span></td><td>Customer lookup</td><td>quoteweb, customerWS, carmaster2</td><td>Sales domain service</td></tr>
+            <tr><td><span class="finding-id">TDP-DUP-02</span></td><td>VAT calculation</td><td>quoteweb, invoiceWS</td><td>Shared pricing library</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ══ SECURITY & COMPLIANCE POSTURE — from Evidence/portfolio_security_posture.md.
+           This section is MANDATORY whenever the security aggregation ran (§ 5.5):
+           an empty security story in a portfolio report is a delivery blocker. ══ -->
+      <h3 id="p2-security" style="scroll-margin-top:56px">Security &amp; Compliance Posture</h3>
+      <p class="section-lead">Aggregated from the per-repository discoveries and re-verified against source. Severity is always stated in words; CVE claims keep their evidence status and verification pointers.</p>
+      <div class="table-scroll">
+        <table class="data-table compact">
+          <thead><tr><th>Application</th><th>CVE exposure</th><th>Credential findings</th><th>Authentication</th><th>Transport</th></tr></thead>
+          <tbody>
+            <tr><td>quoteweb</td><td>Critical exposure — EOL runtime, 3 vulnerable libs <span class="verification-badge must-verify">MUST VERIFY</span></td><td>2 hardcoded API keys</td><td>Custom session</td><td>No TLS on SMTP</td></tr>
+            <tr><td>customerWS</td><td>Moderate — 1 outdated lib</td><td>None found</td><td>WS-Security</td><td>TLS 1.2</td></tr>
+            <tr><td>carmaster2</td><td>Low — dependencies current</td><td>Connection string in config</td><td>Windows Auth</td><td>Internal only</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="finding-card">
+        <div class="fhead"><span class="badge critical">Critical</span><span class="finding-id">TDP-SEC-01</span><span class="evid-badge cross-verified">Cross-verified</span></div>
+        <h4 class="ft">Same external gateway accessed with three different credential mechanisms</h4>
+        <p class="impact"><b>Business impact:</b> credential rotation requires coordinated changes in three codebases; one forgotten copy keeps the old secret alive.</p>
+      </div>
+      <div class="note-callout scope"><b>What would raise confidence:</b> a dependency vulnerability scan per repository (upgrades CVE findings from Assumed to Verified); IAM/AD configuration review for the authentication landscape.</div>
+
+      <!-- ══ PORTFOLIO RISK REGISTER — cross-repo risks from 04_Modernization_Roadmap.md.
+           Portfolio-LEVEL risks only (patterns spanning repos); per-repo risks stay
+           in their own discovery reports. ══ -->
+      <h3 id="p2-risks" style="scroll-margin-top:56px">Portfolio Risk Register</h3>
+      <div class="table-scroll">
+        <table class="data-table compact">
+          <thead><tr><th>ID</th><th>Risk (business language)</th><th>Severity</th><th>Spans</th><th>Evidence</th></tr></thead>
+          <tbody>
+            <tr><td><span class="finding-id">TDP-GAP-01</span></td><td>A schema change in one application can silently break seven others</td><td><span class="badge critical">Critical</span></td><td>8 repos</td><td><span class="status-badge assumed">Assumed · MUST VERIFY</span></td></tr>
+            <tr><td><span class="finding-id">TDP-GAP-02</span></td><td>Duplicate business logic drifts — the same rule already differs between two implementations</td><td><span class="badge high">High</span></td><td>3 repos</td><td><span class="status-badge cross-verified">Cross-verified</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ══ EVIDENCE & COVERAGE — the report's trust story. Verification stats
+           come from 06_Discovery_Report_Corrections.md; publishing them IS the
+           proof of rigor ("claims re-checked against code"). ══ -->
+      <h3>Evidence &amp; Coverage — Why These Findings Can Be Trusted</h3>
+      <div class="info-card">
+        <div class="meter"><div class="meter-head"><span>Repositories re-verified against source</span><b>12 / 12</b></div><div class="meter-track"><div class="meter-fill" style="width:100%"></div></div></div>
+        <p style="font-size:13px;margin:10px 0 0"><b>Claim re-verification:</b> 199 substantive claims from the per-repo discoveries were re-checked directly against source code — 156 confirmed, 23 corrected, 16 removed as unsubstantiated, 2 refuted. Corrections are logged in <code>06_Discovery_Report_Corrections.md</code>; the source code always wins.</p>
+      </div>
+    </section>
+
+    <!-- PART 3: TARGET ARCHITECTURE -->
+    <section class="section" id="p3">
+      <div class="section-header"><div class="section-number">3</div><h2>Target Architecture — Where To Go</h2></div>
+      <div class="note-callout scope">The following sections present our recommended modernization approach. This architecture and roadmap is our professional recommendation based on the code-level discovery findings. Final architecture decisions should be made collaboratively with the client development team in a follow-on Architecture &amp; Scoping engagement.</div>
+
+      <div class="diagram-card">
+        <div class="diagram-title">Domain consolidation map (current applications → target domain services)</div>
+        <pre class="mermaid">flowchart LR
+  quoteweb --> Sales["Sales Domain Service"]
+  customerWS --> Sales
+  carmaster2 --> Inv["Inventory Domain Service"]
+  stockWS --> Inv</pre>
+        <div class="diagram-caption">Twelve applications consolidate into five domain services; duplicated capabilities merge at the domain boundary.</div>
+        <div class="diagram-note">Source: <code>diagrams/api_domain_clusters.mmd</code></div>
+      </div>
+
+      <div class="diagram-card">
+        <div class="diagram-title">Target architecture</div>
+        <pre class="mermaid">flowchart TD
+  Clients --> GW["API Gateway"]
+  GW --> Sales["Sales Domain Service"]
+  GW --> Inv["Inventory Domain Service"]
+  Sales --> Legacy["Legacy Adapter"]
+  Inv --> Legacy</pre>
+        <div class="diagram-caption">A gateway plus domain services decouples applications from the shared database, enabling independent deployment.</div>
+        <div class="diagram-note">Target state · source: <code>diagrams/target_architecture.mmd</code></div>
+      </div>
+
+      <!-- Modernization roadmap — phases + decision gates from 04_Modernization_Roadmap.md.
+           No specific durations/costs — sequencing and gates only (estimate policy). -->
+      <h3>Modernization Roadmap</h3>
+      <div class="timeline">
+        <div class="timeline-item"><h4>Phase 0 — Foundations</h4><p>API gateway, service registry, shared authentication. Exit gate: first domain service routable through the gateway.</p></div>
+        <div class="timeline-item"><h4>Phase 1 — Pilot domain</h4><p>Extract the Sales domain (highest duplicate density, <span class="finding-id">TDP-DUP-01/02</span>). Exit gate: quoteweb reads customers via API, not schema.</p></div>
+        <div class="timeline-item"><h4>Phase 2 — Progressive extraction</h4><p>Remaining domains by fan-in order; retire cross-schema references as each domain lands.</p></div>
+        <div class="timeline-item"><h4>Decision gate</h4><p>Re-score the portfolio; confirm or adjust the remaining sequence with the client team.</p></div>
+      </div>
+
+      <div class="value-grid">
+        <div class="value-card"><h4>Reduced operational risk</h4><p>Eliminates the shared-schema single point of failure.</p></div>
+        <div class="value-card"><h4>Faster time to market</h4><p>Domain services deploy independently.</p></div>
+        <div class="value-card"><h4>Enhanced security</h4><p>Unified authentication at the gateway.</p></div>
+      </div>
+    </section>
+
+    <!-- PART 4: PARTNERSHIP -->
+    <section class="section" id="p4">
+      <div class="section-header"><div class="section-number">4</div><h2>Partnership, Methodology &amp; Next Steps</h2></div>
+      <div class="table-scroll">
+        <table class="data-table compact">
+          <thead><tr><th>Dimension</th><th>Traditional approach</th><th>AI-powered discovery</th><th>Source</th></tr></thead>
+          <tbody>
+            <tr><td>Timeline</td><td>8–14 weeks</td><td>2–4 weeks</td><td>Framework reference range</td></tr>
+            <tr><td>Code coverage</td><td>5–15%</td><td>100%</td><td>Engagement-actual</td></tr>
+            <tr><td>Claim verification</td><td>Selective citations</td><td>199 claims re-checked against source</td><td>Engagement-actual</td></tr>
+            <tr><td>Confidence scoring</td><td>Subjective</td><td>Deterministic (Portfolio ECI)</td><td>Framework</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note-callout scope"><b>What would raise confidence further:</b> DBA confirmation of the database topology (<span class="finding-id">TDP-GAP-01</span>); dependency vulnerability scans per repository; operations interviews for deployment and incident history.</div>
+      <div class="cta">
+        <h3>Schedule the portfolio stakeholder workshop</h3>
+        <p style="color:var(--ondark-2)">One workshop sequences Phase 0 (gateway, registry, shared auth) and selects the pilot migration.</p>
+        <a class="btn" href="#">Book the workshop</a>
+      </div>
+    </section>
+    <!-- /SCOPE:portfolio -->
+
+    <footer class="report-footer">
+      <span>Example data — not from production · Unified Final Report Template v1.0</span>
+      <span>Spec: Resources/Master_Report_PRD.md</span>
+    </footer>
+  </main>
+</div>
+
+<script>
+/* Scroll-spy — the only JS beyond Mermaid. Dependency-free, guarded. */
+try{
+  const links=[...document.querySelectorAll('.sidebar nav a[href^="#"]')];
+  const byId=Object.fromEntries(links.map(a=>[a.getAttribute('href').slice(1),a]));
+  const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting&&byId[e.target.id]){links.forEach(a=>a.classList.remove('active'));byId[e.target.id].classList.add('active');}});},{rootMargin:'-20% 0px -70% 0px'});
+  document.querySelectorAll('main section[id]').forEach(s=>obs.observe(s));
+}catch(e){/* static nav still works */}
+</script>
+<script type="module">
+/* Renders each Mermaid block INDIVIDUALLY so a syntax error in one diagram
+   cannot fail silently or take the others down: a failed diagram gets a
+   visible amber warning banner (fix or remove before customer delivery). */
+try{
+  const {default:mermaid}=await import('https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs');
+  mermaid.initialize({startOnLoad:false,theme:'neutral',securityLevel:'strict'});
+  for(const el of document.querySelectorAll('pre.mermaid')){
+    try{ await mermaid.run({nodes:[el]}); }
+    catch(err){
+      const warn=document.createElement('div');
+      warn.className='diagram-render-error';
+      warn.textContent='⚠ This diagram failed to render — its source is shown below. Fix the Mermaid syntax before customer delivery. Error: '+((err&&err.message)?err.message.split('
+')[0]:String(err));
+      el.parentNode.insertBefore(warn,el);
+      el.style.display='block';
+    }
+  }
+}catch(e){/* Offline or CDN blocked: diagram source stays visible as text. */}
+</script>
+</body>
+</html>
