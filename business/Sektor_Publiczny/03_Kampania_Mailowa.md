@@ -247,7 +247,7 @@ Miara sukcesu tej fali nie jest w złotówkach. Jest w liczbie osób, które wie
 
 ## 13. Kolejność działań na najbliższe dziesięć tygodni
 
-1. Zgoda pracodawcy. Nic z tej listy nie startuje przed nią, także mail do FRDL
+1. Zgłoszenie do HR wysłane (`06_Mail_do_HR.md`). Przy braku zakazu konkurencji w umowie — sprawdzone 2.09.2026 — nie czekasz na odpowiedź, żeby ruszyć. Czekasz tylko wtedy, gdy dostaniesz konkretne zastrzeżenie
 2. Mail firmowy na domenie plus SPF, DKIM i DMARC. Adres w formie osobowej
 3. Lista 80 podmiotów z BIP z nazwiskami. To można robić przed zgodą
 4. Mail do FRDL i KSAP. Pojedynczy, imienny

@@ -4,6 +4,8 @@ Kolejność ma znaczenie. Krok 0 blokuje wszystko pozostałe.
 
 ## Krok 0. Zgoda pracodawcy
 
+**Rozstrzygnięte 2.09.2026: w umowie o pracę nie ma zakazu konkurencji.** Obowiązuje więc sam art. 100 § 2 pkt 4 Kodeksu pracy plus tajemnica przedsiębiorstwa, czyli łagodniejszy wariant opisany niżej. Zgoda przełożonej plus zgłoszenie mailem do dyrektor HR (`06_Mail_do_HR.md`) wystarczają, a rejestracja JDG nie czeka na niczyją decyzję. Rozważania poniżej zostawiam, bo opisują linię, której trzymasz się niezależnie od zgody — zwłaszcza granicę CV kontra case study.
+
 **Stan na 26.08.2026:** przełożona powiedziała ustnie, że można prowadzić szkolenia po pracy. To dobry punkt wyjścia, ale nie domyka sprawy z dwóch powodów.
 
 **Zakres.** Ustna zgoda dotyczyła „szkoleń po pracy". Prawdopodobnie usłyszała: wykłady wieczorami, poboczne zajęcie. Nie usłyszała: praktyka szkoleniowa z AI kierowana do sektora publicznego, w obszarze, w którym pracodawca sprzedaje doradztwo, opierająca się na doświadczeniu z jego projektów. Zgoda pokrywa tylko to, o czym rozmówca wiedział.
@@ -55,7 +57,7 @@ Najostrzejsze ryzyko to nie same szkolenia, a **wykorzystanie projektów pracoda
 - **Poziom CV, bezpieczny:** „jestem architektem, pracowałem przy modernizacji systemów, w tym w instytucji publicznej". Opis własnego doświadczenia zawodowego jest normalny i nikt go nie kwestionuje.
 - **Poziom case study, ryzykowny:** liczby, wskaźniki, opis przebiegu projektu i efektów u klienta pracodawcy, użyte w materiałach sprzedażowych konkurencyjnej praktyki. Anonimizacja tego nie naprawia, bo problemem jest wykorzystanie informacji, nie nazwa.
 
-Trzymaj się poziomu CV, dopóki nie masz wyraźnej zgody na więcej. Referencje, które są w pełni Twoje i możesz ich używać bez ograniczeń: **PEGA jako pierwszy klient szkoleniowy** oraz Twoje własne produkty — PresoGen AI, Mana Menu, Lidka, Antystyki.pl, LifeAutomations, Domek Dla Dzieci, audiobooki dla dzieci. Szczegóły w `02_Oferta_dla_Sektora_Publicznego.md`, sekcja 3.
+Trzymaj się poziomu CV, dopóki nie masz wyraźnej zgody na więcej. Referencje, które są w pełni Twoje i możesz ich używać bez ograniczeń: **PEGA jako pierwsze wdrożenie programu** oraz Twoje własne produkty — PresoGen AI, Mana Menu, Lidka, Antystyki.pl, LifeAutomations, Domek Dla Dzieci, audiobooki dla dzieci. Szczegóły w `02_Oferta_dla_Sektora_Publicznego.md`, sekcja 3.
 
 ## Krok 1. Przygotowanie danych do wniosku
 

@@ -42,7 +42,7 @@ Z Evidence Register (`training/AI-Mindset-Program/00_*.md`) — tylko rzeczy zwe
 | **Invisible Risk** | 529 nieuwierzytelnionych endpointów REST, ponad 100 reguł biznesowych, 97 projektów w 17 modułach, trzy tygodnie zamiast około pół roku, zero błędnych wniosków przy bramkach weryfikacji ludzkiej. Do modułu 3 o weryfikacji: pokazuje, że mówisz o kontroli jakości z doświadczenia, nie z teorii. |
 | **Proof of Scale** | 4–8× szybsze zrozumienie aplikacji, 20 systemów, 187 endpointów, trzy tygodnie rozpoznania. Ekonomia: około 500 tys. NOK wobec około 2,3 mln NOK w podejściu tradycyjnym, trzy tygodnie wobec czternastu. Pamiętaj o zasadzie z Evidence Register: nigdy „87%" w jednym zdaniu z parą 500K/2,3M. |
 | **Proof of Speed** | Migracja w 4 dni zamiast typowych 4–8 tygodni, 92% kodu zachowane, zero regresji, zatwierdzenie w Google Play przy pierwszym zgłoszeniu. Szacunek ROI podawaj jako 4×, nie wyżej. |
-| **EventCo (PEGA)** | Pierwszy klient szkoleniowy. Zespół nietechniczny, używa ChatGPT do **wyszukiwania przetargów publicznych**, przygotowania dokumentów i materiałów na wydarzenia. To niespodziewanie dobry mostek do administracji: ta sama praca z dokumentem urzędowym, tylko z drugiej strony okienka. Poproś o pisemną referencję i zgodę na powołanie się. |
+| **EventCo (PEGA)** | Pierwsze wdrożenie programu, przysługa koleżeńska bez faktury. To nie klient handlowy, więc nie pisz „klient” ani „realizacja” — pisz „pierwsze wdrożenie programu” albo „pilotaż”. Zespół nietechniczny, używa ChatGPT do **wyszukiwania przetargów publicznych**, przygotowania dokumentów i materiałów na wydarzenia. To niespodziewanie dobry mostek do administracji: ta sama praca z dokumentem urzędowym, tylko z drugiej strony okienka. Poproś o pisemną referencję i zgodę na powołanie się. |
 | **Domek Dla Dzieci** | Projekt własny, nie zlecenie. Około 700 zł materiałów i trzy dni własnej pracy wobec wycen 6–10 tys. zł za wykonanie pod klucz. Świetna historia otwierająca dla odbiorcy nietechnicznego, bo nie mówi o kodzie. Nie prezentuj jako projektu klienckiego. |
 
 **Ostrzeżenie, które trzeba wprost powiedzieć.** Cztery pierwsze pozycje to projekty realizowane u pracodawcy, a ustna zgoda przełożonej na „szkolenia po pracy" ich nie obejmuje. Do czasu wyraźnego potwierdzenia trzymaj się rozróżnienia z `01_Zalozenie_JDG_Krok_po_Kroku.md`, krok 0:
@@ -52,7 +52,7 @@ Z Evidence Register (`training/AI-Mindset-Program/00_*.md`) — tylko rzeczy zwe
 
 W praktyce oznacza to, że w mailu 3 z `03_Kampania_Mailowa.md` zdanie o instytucji publicznej zostaw w wersji ogólnej, bez dwuletniej blokady, CVE i szczegółów. Efekt na odbiorcę jest niemal ten sam, a ryzyko spada do zera.
 
-**Referencje w pełni Twoje, bez żadnych ograniczeń:** PEGA jako pierwszy klient szkoleniowy oraz Twoje własne produkty — PresoGen AI, Mana Menu, Lidka, Antystyki.pl, LifeAutomations, Domek Dla Dzieci, audiobooki dla dzieci. Na starcie zbuduj wiarygodność na nich plus opisie doświadczenia na poziomie CV. To wystarcza, a nie wymaga niczyjej zgody.
+**Referencje w pełni Twoje, bez żadnych ograniczeń:** PEGA jako pierwsze wdrożenie programu oraz Twoje własne produkty — PresoGen AI, Mana Menu, Lidka, Antystyki.pl, LifeAutomations, Domek Dla Dzieci, audiobooki dla dzieci. Na starcie zbuduj wiarygodność na nich plus opisie doświadczenia na poziomie CV. To wystarcza, a nie wymaga niczyjej zgody.
 
 Czego nie robisz: nie mówisz „na moich szkoleniach". Masz jedno zrealizowane. Piszesz „program, który zbudowałem" i „pierwsze wdrożenie u klienta z sektora prywatnego".
 

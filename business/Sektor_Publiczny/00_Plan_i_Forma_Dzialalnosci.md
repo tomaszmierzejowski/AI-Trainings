@@ -6,7 +6,7 @@ Stan na 26 sierpnia 2026. Wszystkie liczby podatkowe do potwierdzenia u księgow
 
 1. **JDG na skali podatkowej, bez ryczałtu do czasu udowodnionego roku.** Ryczałt wyklucza wspólne rozliczenie z żoną za cały rok podatkowy, a poniżej **83 000 zł** przychodu skala jest po prostu lepsza — nie tylko bezpieczniejsza. Na ryczałt przechodzisz dopiero po pierwszym pełnym roku z przychodem powyżej tej granicy, decydując na zamkniętych liczbach, nie na prognozie. Wspólne rozliczenie jest u Was warte około 10 000 zł rocznie, mniej niż typowo, bo Twoje 50% kosztów autorskich zrobiło już większość tej roboty. Cała analiza w sekcji 2.
 2. **Pełny koszt utrzymania JDG to około 430 zł miesięcznie w wariancie minimalnym**, do 850 zł z biurem rachunkowym. Jedynym twardym kosztem jest składka zdrowotna. Zawieszenie działalności zeruje ją w miesiącach bez sprzedaży. Rozpis w `01_Zalozenie_JDG_Krok_po_Kroku.md`.
-2. **Krok zero nie jest podatkowy, a kadrowy.** Umowa o pracę z Sopra Steria. Bez pisemnej zgody pracodawcy nie rejestruj działalności.
+2. **Krok zero, kadrowy, jest zamknięty.** W umowie o pracę nie ma zakazu konkurencji (sprawdzone 2.09.2026), więc obowiązuje sam art. 100 § 2 pkt 4 Kodeksu pracy. Zgoda przełożonej plus zgłoszenie do dyrektor HR wystarczą i rejestracja nie czeka na niczyją decyzję. Szczegóły w `06_Mail_do_HR.md`.
 3. **Największa dźwignia cenowa to nie cena, a VAT.** Szkolenia zawodowe finansowane ze środków publicznych mogą być zwolnione z VAT. Dla urzędu 20 000 zł znaczy wtedy 20 000 zł, nie 24 600 zł. To argument mocniejszy niż każdy rabat.
 4. **Nowy hak prawny: art. 4 AI Act.** Urząd jako podmiot stosujący AI ma obowiązek zapewnić personelowi kompetencje w zakresie AI. Obowiązek działa od 2 lutego 2025, a od 2 sierpnia 2026 doszła kolejna warstwa przepisów. To zamienia szkolenie z miłego dodatku w pozycję compliance.
 5. **Cel 2 × 20 000 zł miesięcznie jest nieosiągalny przy zachowanym etacie, i trzeba to powiedzieć wprost.** Ograniczeniem nie jest popyt ani podatki, a 26 dni urlopu — urzędy szkolą się w godzinach Twojej pracy. Realny pułap to **120 000 – 170 000 zł przychodu rocznie**. Jedyna dźwignia, która to podnosi bez rezygnacji z pensji, to przejście na 4/5 etatu, i tylko wtedy, gdy zaczniesz odmawiać klientom z braku terminów. Sekcja 4.
@@ -21,12 +21,12 @@ To nie formalność. Sopra Steria Polska sprzedaje doradztwo cyfrowe i szkolenia
 
 Do zrobienia przed rejestracją:
 
-- Wyciągnij umowę o pracę i sprawdź: klauzulę zakazu konkurencji w trakcie zatrudnienia, obowiązek zgłaszania dodatkowej działalności, zapisy o własności intelektualnej wytworów pracowniczych.
+- ~~Wyciągnij umowę o pracę i sprawdź klauzulę zakazu konkurencji~~ — zrobione 2.09.2026, klauzuli nie ma. Zapisy o własności intelektualnej wytworów pracowniczych zostają istotne przy materiałach na trenera wewnętrznego.
 - Poproś HR o **pisemną zgodę na prowadzenie działalności szkoleniowej**. Wniosek napisz konkretnie: tematyka (kompetencje AI, warstwa mindsetowa, nie technologiczna), odbiorcy (administracja publiczna), poza godzinami pracy, bez wykorzystania materiałów i klientów pracodawcy. Zaproponuj sam ograniczenie: lista instytucji, do których nie kierujesz ofert, jeśli są klientami Sopra Steria.
 - Sprawdź, czy materiały programu AI Mindset w `training/AI-Mindset-Program/` powstały poza czasem pracy i bez zasobów firmowych. Jeśli cokolwiek jest niejasne, przepisz to.
 - Konsekwencja praktyczna: **nie wystawiaj faktury Sopra Sterii**. Świadczenie usług na rzecz obecnego pracodawcy odpowiadających czynnościom z etatu wyłącza prawo do ryczałtu.
 
-Jeśli zgody nie dostaniesz, cały plan trzeba przemyśleć od nowa. Dlatego to punkt pierwszy.
+Aktualizacja 2.09.2026: zakazu konkurencji w umowie nie ma, więc ten punkt nie jest już blokadą. Został z niego jeden warunek, który trzymasz niezależnie od zgód: granica CV kontra case study z `01_Zalozenie_JDG_Krok_po_Kroku.md`.
 
 ---
 
